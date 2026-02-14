@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEXUS AI Mission Control — Real-time communication monitor for 195 autonomous AI agents">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>NEXUS AI — Mission Control</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/nexus-core.css?v=2">
+    <link rel="stylesheet" href="/static/css/dashboard.css?v=2">
+    <link rel="stylesheet" href="/static/css/components.css?v=3">
+    <link rel="stylesheet" href="/static/css/animations.css?v=2">
+
+    <!-- Favicon (inline SVG data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-family='system-ui' fill='%236366f1'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- ═══════════════════════════════════════════════════════
+             HEADER
+             ═══════════════════════════════════════════════════════ -->
+        <header class="header">
+            <div class="header__logo">
+                <span class="header__title">NEXUS AI</span>
+                <span class="header__subtitle">MISSION CONTROL</span>
+                <span class="header__connection-dot" data-ws-status="disconnected"></span>
+            </div>
+
+            <div class="header__stats" id="stats-bar">
+                <!-- Stats counters populated by StatsBar component -->
+            </div>
+
+            <div class="header__controls">
+                <input type="text" class="search-box__input" placeholder="Search events..." id="search-input" />
+                <button class="teleport-btn" id="teleport-btn" title="Teleport into an agent (Ctrl+K)">
+                    <span class="teleport-btn__icon">&#x26A1;</span>
+                    Teleport
+                    <kbd class="teleport-btn__kbd">&#x2318;K</kbd>
+                </button>
+                <div class="view-tabs">
+                    <button class="tab tab--active" data-view="feed">Live Feed</button>
+                    <button class="tab" data-view="missions">Session</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══════════════════════════════════════════════════════
+             MAIN CONTENT AREA
+             ═══════════════════════════════════════════════════════ -->
+        <div class="main">
+
+            <!-- Sidebar: Department Navigation -->
+            <aside class="sidebar" id="dept-sidebar">
+                <!-- Department list populated by DeptSidebar component -->
+            </aside>
+
+            <!-- Viewport: Main content (feed or missions) -->
+            <main class="viewport">
+                <div id="message-feed" class="view view--active">
+                    <!-- Message cards populated by MessageFeed component -->
+                </div>
+                <div id="mission-board" class="view">
+                    <!-- Mission cards populated by MissionPanel component -->
+                </div>
+                <div id="teleport-view" class="view">
+                    <!-- Teleport first-person view populated by TeleportView component -->
+                </div>
+            </main>
+
+            <!-- Detail Panel: Agent profile, threads -->
+            <aside class="detail-panel" id="detail-panel">
+                <div class="detail-empty">
+                    <div class="detail-empty__icon">&#x25C8;</div>
+                    <p>Select an agent to view their profile</p>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             BOTTOM TICKER
+             ═══════════════════════════════════════════════════════ -->
+        <div class="ticker" id="ticker">
+            <div class="ticker__track" id="ticker-track">
+                <span class="ticker__status">NEXUS AI MISSION CONTROL &#x2014; LIVE</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         COMMAND PALETTE OVERLAY
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="command-palette" id="command-palette-overlay">
+        <!-- Command palette built by CommandPalette component -->
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         JAVASCRIPT
+         ═══════════════════════════════════════════════════════════ -->
+    <script src="/static/js/websocket-client.js?v=2"></script>
+    <script src="/static/js/components/message-feed.js?v=3"></script>
+    <script src="/static/js/components/agent-card.js?v=2"></script>
+    <script src="/static/js/components/mission-panel.js?v=2"></script>
+    <script src="/static/js/components/stats-bar.js?v=2"></script>
+    <script src="/static/js/components/dept-sidebar.js?v=2"></script>
+    <script src="/static/js/components/command-palette.js?v=2"></script>
+    <script src="/static/js/components/teleport-view.js?v=2"></script>
+    <script src="/static/js/components/cost-panel.js?v=2"></script>
+    <script src="/static/js/app.js?v=2"></script>
+</body>
+</html>

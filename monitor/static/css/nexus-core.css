@@ -1,0 +1,289 @@
+/* ================================================================
+   NEXUS AI MISSION CONTROL — Core Design Tokens & Reset
+   ================================================================ */
+
+/* ── Google Fonts ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+/* ── CSS Custom Properties ────────────────────────────────────── */
+:root {
+    /* Surfaces */
+    --bg:           #0a0a0f;
+    --surface:      #12121a;
+    --surface2:     #1a1a26;
+    --surface3:     #222233;
+
+    /* Borders */
+    --border:       #2a2a3a;
+    --border-light: #3a3a4a;
+
+    /* Text */
+    --text:         #e0e0e8;
+    --text-dim:     #8888a0;
+    --text-muted:   #555570;
+
+    /* Accents */
+    --accent:       #6366f1;
+    --accent2:      #22d3ee;
+    --accent-glow:  rgba(99, 102, 241, 0.3);
+
+    /* Semantic */
+    --success:      #10b981;
+    --warning:      #f59e0b;
+    --danger:       #ef4444;
+
+    /* Typography */
+    --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --font-mono:    'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+    --font-body:    'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+    /* Sizing */
+    --header-h:     60px;
+    --ticker-h:     36px;
+    --sidebar-w:    200px;
+    --detail-w:     340px;
+
+    /* Radii */
+    --radius-sm:    4px;
+    --radius-md:    6px;
+    --radius-lg:    10px;
+    --radius-full:  9999px;
+
+    /* Shadows */
+    --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg:    0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-glow:  0 0 20px var(--accent-glow);
+
+    /* Transitions */
+    --transition-fast:   150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow:   400ms ease;
+}
+
+/* ── Reset ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--bg);
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* ── Base Typography ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.375rem; }
+h3 { font-size: 1.125rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 0.875rem; }
+h6 { font-size: 0.75rem; }
+
+p {
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: var(--accent2);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+code, pre, kbd, samp {
+    font-family: var(--font-mono);
+}
+
+pre {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    overflow-x: auto;
+    font-size: 0.8rem;
+}
+
+button {
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: inherit;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+input, textarea, select {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.6rem;
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ── Utility Classes ──────────────────────────────────────────── */
+.text-dim {
+    color: var(--text-dim);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-accent2 {
+    color: var(--accent2);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: 0.5rem;
+}
+
+.gap-md {
+    gap: 1rem;
+}
+
+.gap-lg {
+    gap: 1.5rem;
+}
+
+/* ── Scrollbar Styling ────────────────────────────────────────── */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-light) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--border-light);
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-muted);
+}
+
+*::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* ── Selection ────────────────────────────────────────────────── */
+::selection {
+    background: var(--accent);
+    color: white;
+}

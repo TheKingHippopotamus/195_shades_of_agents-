@@ -1,0 +1,364 @@
+/* ================================================================
+   NEXUS AI MISSION CONTROL — Dashboard Layout
+   ================================================================ */
+
+/* ── Dashboard Shell ──────────────────────────────────────────── */
+.dashboard {
+    display: grid;
+    grid-template-rows: var(--header-h) 1fr var(--ticker-h);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+/* ── Header ───────────────────────────────────────────────────── */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    height: var(--header-h);
+    gap: 1rem;
+}
+
+.header__logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.header__title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header__subtitle {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+/* ── Connection Status Dot ───────────────────────────────────── */
+.header__connection-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ef4444;
+    flex-shrink: 0;
+    transition: background 0.3s;
+}
+
+.header__connection-dot[data-ws-status="connected"] {
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e88;
+}
+
+/* ── Search Box ──────────────────────────────────────────────── */
+.search-box__input {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    width: 180px;
+    font-family: var(--font-mono);
+}
+
+.search-box__input:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.13);
+}
+
+.search-box__input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ── Header Stats ─────────────────────────────────────────────── */
+.header__stats {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* ── Header Controls ──────────────────────────────────────────── */
+.header__controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+/* ── View Tabs ────────────────────────────────────────────────── */
+.view-tabs {
+    display: flex;
+    gap: 2px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2px;
+}
+
+.tab {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-dim);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.tab:hover {
+    color: var(--text);
+    background: var(--surface2);
+}
+
+.tab--active {
+    color: white;
+    background: var(--accent);
+}
+
+
+/* ── Main Content Area ────────────────────────────────────────── */
+.main {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr var(--detail-w);
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────── */
+.sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    min-height: 0;
+}
+
+.sidebar__header {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.75rem 0.85rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 10;
+}
+
+/* ── Viewport ─────────────────────────────────────────────────── */
+.viewport {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.view {
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 0.75rem;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.view--active {
+    display: flex;
+}
+
+/* ── Detail Panel ─────────────────────────────────────────────── */
+.detail-panel {
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 0;
+}
+
+.detail-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2rem;
+}
+
+.detail-empty__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.detail-empty p {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+/* ── Detail Panel Close Button ────────────────────────────────── */
+.detail-panel__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    transition: all var(--transition-fast);
+    z-index: 5;
+}
+
+.detail-panel__close:hover {
+    color: var(--text);
+    background: var(--surface3);
+}
+
+/* ── Bottom Ticker ────────────────────────────────────────────── */
+.ticker {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: var(--ticker-h);
+    position: relative;
+}
+
+.ticker::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, var(--surface), transparent);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.ticker::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to left, var(--surface), transparent);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.ticker__track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    white-space: nowrap;
+    animation: tickerScroll 60s linear infinite;
+    padding: 0 2rem;
+}
+
+.ticker__status {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+}
+
+.ticker__item {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.ticker__item-type {
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+/* ── Responsive: collapse detail panel on smaller screens ──── */
+@media (max-width: 1200px) {
+    .main {
+        grid-template-columns: var(--sidebar-w) 1fr 0;
+    }
+
+    .detail-panel {
+        position: fixed;
+        right: 0;
+        top: var(--header-h);
+        bottom: var(--ticker-h);
+        width: var(--detail-w);
+        z-index: 200;
+        transform: translateX(100%);
+        transition: transform var(--transition-normal);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .detail-panel--open {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 800px) {
+    .main {
+        grid-template-columns: 0 1fr 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: var(--header-h);
+        bottom: var(--ticker-h);
+        width: var(--sidebar-w);
+        z-index: 200;
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+    }
+}
