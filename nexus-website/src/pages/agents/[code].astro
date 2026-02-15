@@ -4,6 +4,10 @@ import DepartmentBadge from "../../components/astro/DepartmentBadge.astro";
 import TierBadge from "../../components/astro/TierBadge.astro";
 import JsonLd from "../../components/astro/JsonLd.astro";
 import { getDepartmentColor } from "../../lib/department-colors";
+import { marked } from "marked";
+
+// Helper to render markdown inline (for lists and text with formatting)
+const renderMd = (text: string) => marked.parseInline(text);
 
 export async function getStaticPaths() {
   let agents: any[] = [];
@@ -102,11 +106,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
         </section>
       )}
 
-      <!-- Personality -->
-      <section class="nexus-card p-6">
-        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Personality</h2>
-        <p class="text-[var(--text-secondary)] leading-relaxed">{agent.personality}</p>
-      </section>
+      <!-- Personality section removed per user request -->
 
       <!-- Core Responsibilities -->
       {agent.core_responsibilities.length > 0 && (
@@ -116,7 +116,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
             {agent.core_responsibilities.map((r: string) => (
               <li class="flex items-start gap-2 text-[var(--text-secondary)]">
                 <span class="text-quantum-blue mt-1 flex-shrink-0">&#x2022;</span>
-                <span>{r}</span>
+                <span set:html={renderMd(r)} />
               </li>
             ))}
           </ul>
@@ -133,7 +133,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
               {agent.decision_authority.can_decide.map((d: string) => (
                 <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
                   <span class="text-emerald-400 mt-0.5 flex-shrink-0">&#10003;</span>
-                  <span>{d}</span>
+                  <span set:html={renderMd(d)} />
                 </li>
               ))}
             </ul>
@@ -144,7 +144,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
               {agent.decision_authority.must_escalate.map((e: string) => (
                 <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
                   <span class="text-amber-400 mt-0.5 flex-shrink-0">&#x2191;</span>
-                  <span>{e}</span>
+                  <span set:html={renderMd(e)} />
                 </li>
               ))}
             </ul>
