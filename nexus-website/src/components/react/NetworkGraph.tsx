@@ -85,8 +85,8 @@ function generateStars(width: number, height: number, count: number): Star[] {
       y: Math.random() * height,
       r: Math.random() * 1.5 + 0.3,
       opacity: Math.random() * 0.8 + 0.2,
-      twinkleSpeed: Math.random() * 0.02 + 0.005,
-      twinklePhase: Math.random() * Math.PI * 2,
+      twinkleSpeed: 0, // No animation
+      twinklePhase: 0,
     });
   }
   return stars;
@@ -102,20 +102,8 @@ interface Particle {
 }
 
 function generateParticles(linkCount: number, perLink: number): Particle[] {
-  const particles: Particle[] = [];
-  for (let i = 0; i < linkCount; i++) {
-    const count = Math.random() < 0.4 ? perLink : Math.ceil(perLink / 2);
-    for (let j = 0; j < count; j++) {
-      particles.push({
-        linkIndex: i,
-        t: Math.random(),
-        speed: Math.random() * 0.004 + 0.001,
-        size: Math.random() * 1.8 + 0.5,
-        opacity: Math.random() * 0.6 + 0.2,
-      });
-    }
-  }
-  return particles;
+  // Disabled particles for performance
+  return [];
 }
 
 export default function NetworkGraph() {
@@ -143,7 +131,7 @@ export default function NetworkGraph() {
         canvas.width = width;
         canvas.height = height;
 
-        const stars = generateStars(width, height, 400);
+        const stars = generateStars(width, height, 100); // Reduced from 400
 
         // Nebula blobs
         const nebulae = [
@@ -154,14 +142,12 @@ export default function NetworkGraph() {
           { x: width * 0.1, y: height * 0.8, rx: 160, ry: 100, color: "rgba(0, 229, 255, 0.03)" },
         ];
 
-        let frameCount = 0;
         function drawBackground() {
-          frameCount++;
           // Deep space background
           ctx.fillStyle = "#030614";
           ctx.fillRect(0, 0, width, height);
 
-          // Nebulae
+          // Static nebulae (no animation)
           for (const n of nebulae) {
             const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, Math.max(n.rx, n.ry));
             grad.addColorStop(0, n.color);
@@ -172,22 +158,12 @@ export default function NetworkGraph() {
             ctx.fill();
           }
 
-          // Stars with twinkling
+          // Static stars (no twinkling)
           for (const s of stars) {
-            const twinkle = Math.sin(frameCount * s.twinkleSpeed + s.twinklePhase) * 0.3 + 0.7;
-            const alpha = s.opacity * twinkle;
             ctx.beginPath();
             ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
             ctx.fill();
-
-            // Tiny glow for brighter stars
-            if (s.r > 1) {
-              ctx.beginPath();
-              ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
-              ctx.fillStyle = `rgba(200, 220, 255, ${alpha * 0.1})`;
-              ctx.fill();
-            }
           }
         }
 
@@ -588,21 +564,10 @@ export default function NetworkGraph() {
             });
         });
 
-        // --- ANIMATION LOOP (stars + dash offset) ---
-        function animate() {
-          drawBackground();
+        // Draw background once (no continuous animation)
+        drawBackground();
 
-          // Animate energy beam dash
-          dashOffset -= 0.5;
-          link.attr("stroke-dashoffset", dashOffset);
-
-          // Pulse orbital rings
-          const pulse = Math.sin(Date.now() * 0.002) * 0.15 + 0.3;
-          orbitalRings.attr("stroke-opacity", pulse);
-
-          animFrameRef.current = requestAnimationFrame(animate);
-        }
-        animFrameRef.current = requestAnimationFrame(animate);
+        // No continuous animation loop for better performance
 
         return () => {
           simulation.stop();
