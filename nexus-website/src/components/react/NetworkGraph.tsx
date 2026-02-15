@@ -67,56 +67,7 @@ function tierRadius(tier: number): number {
   return [22, 17, 14, 12, 11, 10, 9, 8, 11, 12][tier] || 9;
 }
 
-// Star generation for the background
-interface Star {
-  x: number;
-  y: number;
-  r: number;
-  opacity: number;
-  twinkleSpeed: number;
-  twinklePhase: number;
-}
-
-function generateStars(width: number, height: number, count: number): Star[] {
-  const stars: Star[] = [];
-  for (let i = 0; i < count; i++) {
-    stars.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      r: Math.random() * 1.5 + 0.3,
-      opacity: Math.random() * 0.8 + 0.2,
-      twinkleSpeed: Math.random() * 0.02 + 0.005,
-      twinklePhase: Math.random() * Math.PI * 2,
-    });
-  }
-  return stars;
-}
-
-// Particle along a link
-interface Particle {
-  linkIndex: number;
-  t: number;        // 0..1 position along link
-  speed: number;
-  size: number;
-  opacity: number;
-}
-
-function generateParticles(linkCount: number, perLink: number): Particle[] {
-  const particles: Particle[] = [];
-  for (let i = 0; i < linkCount; i++) {
-    const count = Math.random() < 0.4 ? perLink : Math.ceil(perLink / 2);
-    for (let j = 0; j < count; j++) {
-      particles.push({
-        linkIndex: i,
-        t: Math.random(),
-        speed: Math.random() * 0.004 + 0.001,
-        size: Math.random() * 1.8 + 0.5,
-        opacity: Math.random() * 0.6 + 0.2,
-      });
-    }
-  }
-  return particles;
-}
+// Removed heavy space background animations for better performance
 
 export default function NetworkGraph() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -137,58 +88,16 @@ export default function NetworkGraph() {
         const width = containerRef.current.clientWidth;
         const height = Math.max(700, window.innerHeight - 200);
 
-        // --- Canvas starfield + nebula background ---
+        // --- Simple solid background (removed space effects for performance) ---
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d")!;
         canvas.width = width;
         canvas.height = height;
 
-        const stars = generateStars(width, height, 400);
-
-        // Nebula blobs
-        const nebulae = [
-          { x: width * 0.2, y: height * 0.3, rx: 200, ry: 120, color: "rgba(124, 58, 237, 0.06)" },
-          { x: width * 0.75, y: height * 0.2, rx: 250, ry: 150, color: "rgba(0, 217, 255, 0.04)" },
-          { x: width * 0.5, y: height * 0.75, rx: 300, ry: 180, color: "rgba(0, 240, 255, 0.05)" },
-          { x: width * 0.85, y: height * 0.7, rx: 180, ry: 130, color: "rgba(168, 85, 247, 0.05)" },
-          { x: width * 0.1, y: height * 0.8, rx: 160, ry: 100, color: "rgba(0, 229, 255, 0.03)" },
-        ];
-
-        let frameCount = 0;
         function drawBackground() {
-          frameCount++;
-          // Deep space background
-          ctx.fillStyle = "#030614";
+          // Simple solid background
+          ctx.fillStyle = "#0a0e1a";
           ctx.fillRect(0, 0, width, height);
-
-          // Nebulae
-          for (const n of nebulae) {
-            const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, Math.max(n.rx, n.ry));
-            grad.addColorStop(0, n.color);
-            grad.addColorStop(1, "transparent");
-            ctx.fillStyle = grad;
-            ctx.beginPath();
-            ctx.ellipse(n.x, n.y, n.rx, n.ry, 0, 0, Math.PI * 2);
-            ctx.fill();
-          }
-
-          // Stars with twinkling
-          for (const s of stars) {
-            const twinkle = Math.sin(frameCount * s.twinkleSpeed + s.twinklePhase) * 0.3 + 0.7;
-            const alpha = s.opacity * twinkle;
-            ctx.beginPath();
-            ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-            ctx.fill();
-
-            // Tiny glow for brighter stars
-            if (s.r > 1) {
-              ctx.beginPath();
-              ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
-              ctx.fillStyle = `rgba(200, 220, 255, ${alpha * 0.1})`;
-              ctx.fill();
-            }
-          }
         }
 
         // Build nodes
@@ -219,8 +128,7 @@ export default function NetworkGraph() {
             };
           });
 
-        // Particles flowing along links
-        const particles = generateParticles(links.length, 2);
+        // Removed particles for better performance
 
         // Simulation
         const simulation = d3
@@ -359,15 +267,7 @@ export default function NetworkGraph() {
             g.selectAll(".edge-tooltip").remove();
           });
 
-        // --- PARTICLE LAYER ---
-        const particleLayer = g.append("g").attr("class", "particle-layer");
-        const particleCircles = particleLayer
-          .selectAll("circle")
-          .data(particles)
-          .join("circle")
-          .attr("r", (p) => p.size)
-          .attr("fill", "#00E5FF")
-          .attr("opacity", (p) => p.opacity);
+        // Removed particle layer for better performance
 
         // --- COSMIC NODES ---
         const nodeLayer = g.append("g").attr("class", "node-layer");
@@ -569,23 +469,7 @@ export default function NetworkGraph() {
           nodeHalos.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
           orbitalRings.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
 
-          // Update particles
-          particles.forEach((p) => {
-            p.t = (p.t + p.speed) % 1;
-          });
-          particleCircles
-            .attr("cx", (p) => {
-              const l = links[p.linkIndex];
-              const s = l.source as GraphNode;
-              const t = l.target as GraphNode;
-              return (s.x || 0) + ((t.x || 0) - (s.x || 0)) * p.t;
-            })
-            .attr("cy", (p) => {
-              const l = links[p.linkIndex];
-              const s = l.source as GraphNode;
-              const t = l.target as GraphNode;
-              return (s.y || 0) + ((t.y || 0) - (s.y || 0)) * p.t;
-            });
+          // Removed particle animation for better performance
         });
 
         // --- ANIMATION LOOP (stars + dash offset) ---
