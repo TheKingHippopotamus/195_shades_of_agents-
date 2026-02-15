@@ -1,25 +1,444 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import SectionHeading from "../components/astro/SectionHeading.astro";
 ---
 
-<PageLayout title="Press" description="NEXUS AI press resources, media inquiries, and company announcements.">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32 text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-8">
-      <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
-      <span class="text-sm text-quantum-blue font-medium">Coming Soon</span>
+<PageLayout
+  title="Press & Media"
+  description="NEXUS AI press releases, media resources, brand assets, and company announcements."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-6">
+          <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
+          <span class="text-sm text-quantum-blue font-medium">Newsroom</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6">
+          NEXUS AI in the <span class="text-gradient">News</span>
+        </h1>
+        <p class="text-xl text-[var(--text-secondary)] leading-relaxed">
+          Press releases, media resources, and the latest announcements from the
+          world's first AI-powered software agency.
+        </p>
+      </div>
     </div>
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
-      Press & Media
-    </h1>
-    <p class="text-[var(--text-secondary)] mb-8 max-w-lg mx-auto">
-      Press kits, media resources, and company announcements will be available here.
-      For media inquiries, please use our contact page.
-    </p>
-    <a
-      href="/contact"
-      class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
-    >
-      Contact Us
-    </a>
-  </div>
+  </section>
+
+  <!-- Latest Press Releases -->
+  <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <SectionHeading
+        title="Latest Announcements"
+        subtitle="Key milestones and updates from NEXUS AI."
+      />
+
+      <div class="space-y-6">
+        {[
+          {
+            date: "February 2026",
+            tag: "Launch",
+            title: "NEXUS AI Launches with 195 Autonomous Agents Across 20 Departments",
+            summary: "NEXUS AI officially launches the world's first AI-powered software agency, featuring 195 fully autonomous agents organized across 20 departments and 10 tiers — from C-Suite executives to specialized lifecycle agents. Each agent operates with a unique personality, defined decision authority, and measurable success metrics.",
+            slug: "nexus-ai-launches-195-agents",
+          },
+          {
+            date: "January 2026",
+            tag: "Funding",
+            title: "NEXUS AI Closes Series A Funding Round to Scale AI Agency Operations",
+            summary: "NEXUS AI secures Series A funding to expand its autonomous agent workforce, invest in platform infrastructure, and accelerate enterprise client onboarding. The investment will fuel development of the NEXUS Orchestrator platform and next-generation agent capabilities.",
+            slug: "series-a-funding-round",
+          },
+          {
+            date: "January 2026",
+            tag: "Partnership",
+            title: "NEXUS AI Announces Strategic Partnerships with Enterprise Cloud Providers",
+            summary: "NEXUS AI partners with leading cloud infrastructure providers to deliver enterprise-grade AI agency services. The partnerships enable seamless deployment of NEXUS AI's 13-stage project lifecycle across hybrid and multi-cloud environments.",
+            slug: "enterprise-cloud-partnerships",
+          },
+          {
+            date: "December 2025",
+            tag: "Product",
+            title: "NEXUS Orchestrator Platform Reaches General Availability",
+            summary: "The NEXUS Orchestrator — the meta-agent coordinating all 195 agents — reaches GA with full support for the 13-stage project lifecycle, real-time agent communication, governance gates, and client-facing dashboards.",
+            slug: "orchestrator-ga",
+          },
+          {
+            date: "November 2025",
+            tag: "Milestone",
+            title: "NEXUS AI Completes First End-to-End Enterprise Project Delivery",
+            summary: "NEXUS AI delivers its first enterprise project from discovery through maintenance, demonstrating the full capabilities of an autonomous AI agency. The project exercised all 20 departments and validated governance protocols across architecture, security, legal, and QA gates.",
+            slug: "first-enterprise-delivery",
+          },
+        ].map((release) => (
+          <article class="nexus-card p-6 md:p-8 group">
+            <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
+              <div class="md:w-40 flex-shrink-0">
+                <time class="text-sm text-[var(--text-secondary)] font-mono">{release.date}</time>
+                <div class="mt-2">
+                  <span class="inline-block px-2.5 py-1 rounded-full text-xs font-semibold bg-quantum-blue/10 text-quantum-blue border border-quantum-blue/20">
+                    {release.tag}
+                  </span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg md:text-xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-quantum-blue transition-colors">
+                  {release.title}
+                </h3>
+                <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {release.summary}
+                </p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Fact Sheet -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="Company Fact Sheet"
+      subtitle="Key facts and figures about NEXUS AI at a glance."
+    />
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Key Stats -->
+      <div class="nexus-card p-6 md:p-8">
+        <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6">By the Numbers</h3>
+        <div class="grid grid-cols-2 gap-6">
+          {[
+            { value: "195", label: "Autonomous Agents" },
+            { value: "20", label: "Departments" },
+            { value: "10", label: "Organizational Tiers" },
+            { value: "13", label: "Lifecycle Stages" },
+            { value: "6", label: "Governance Gates" },
+            { value: "11", label: "C-Suite Executives" },
+          ].map((stat) => (
+            <div>
+              <div class="text-2xl md:text-3xl font-bold text-gradient">{stat.value}</div>
+              <div class="text-xs text-[var(--text-secondary)] mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Company Overview -->
+      <div class="nexus-card p-6 md:p-8">
+        <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6">Company Overview</h3>
+        <dl class="space-y-4">
+          {[
+            { term: "Founded", detail: "2025" },
+            { term: "Headquarters", detail: "San Francisco, CA" },
+            { term: "Category", detail: "AI-Powered Software Agency" },
+            { term: "Agent Architecture", detail: "195 autonomous agents, 20 departments, 10-tier hierarchy" },
+            { term: "Key Product", detail: "NEXUS Orchestrator Platform" },
+            { term: "Project Lifecycle", detail: "13-stage end-to-end delivery (Lead Qualification through Maintenance)" },
+          ].map((item) => (
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <dt class="text-sm font-semibold text-[var(--text-primary)] sm:w-40 flex-shrink-0">{item.term}</dt>
+              <dd class="text-sm text-[var(--text-secondary)]">{item.detail}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+
+    <!-- Leadership Summary -->
+    <div class="mt-8 nexus-card p-6 md:p-8">
+      <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6">Executive Leadership (C-Suite)</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {[
+          { code: "CEO", role: "Chief Executive Officer" },
+          { code: "CTO", role: "Chief Technology Officer" },
+          { code: "CPO", role: "Chief Product Officer" },
+          { code: "COO", role: "Chief Operating Officer" },
+          { code: "CFO", role: "Chief Financial Officer" },
+          { code: "CMO", role: "Chief Marketing Officer" },
+          { code: "CRO", role: "Chief Revenue Officer" },
+          { code: "CHRO", role: "Chief Human Resources Officer" },
+          { code: "CISO", role: "Chief Information Security Officer" },
+          { code: "CLO", role: "Chief Legal Officer" },
+          { code: "CAIO", role: "Chief AI Officer" },
+        ].map((exec) => (
+          <a
+            href={`/agents/${exec.code.toLowerCase()}`}
+            class="flex items-center gap-3 p-3 rounded-lg bg-[var(--bg-elevated)] hover:bg-quantum-blue/5 transition-colors group"
+          >
+            <div class="h-9 w-9 rounded-lg flex items-center justify-center bg-quantum-blue/10 border border-quantum-blue/20 flex-shrink-0">
+              <span class="text-quantum-blue font-mono font-bold text-xs">{exec.code}</span>
+            </div>
+            <span class="text-sm text-[var(--text-secondary)] group-hover:text-quantum-blue transition-colors">{exec.role}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Kit -->
+  <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <SectionHeading
+        title="Media Kit"
+        subtitle="Official brand assets for press and media use."
+      />
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            title: "NEXUS AI Logo Pack",
+            description: "Primary, secondary, and monochrome logos in SVG, PNG, and EPS formats. Includes dark and light background variants.",
+            icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" /></svg>`,
+            file: "nexus-ai-logo-pack.zip",
+          },
+          {
+            title: "Brand Guidelines",
+            description: "Complete brand style guide including color palette, typography, spacing, and usage rules for the NEXUS AI brand identity.",
+            icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88a1.5 1.5 0 012.12 0l1.07 1.07a1.5 1.5 0 010 2.12L13.62 11.38" /></svg>`,
+            file: "nexus-ai-brand-guidelines.pdf",
+          },
+          {
+            title: "Executive Headshots",
+            description: "High-resolution AI-generated avatar portraits for all 11 C-Suite agents. Available in 8K resolution for print and digital.",
+            icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>`,
+            file: "nexus-ai-executive-avatars.zip",
+          },
+          {
+            title: "Product Screenshots",
+            description: "Screenshots of the NEXUS Orchestrator platform, agent dashboard, project lifecycle views, and governance gate interfaces.",
+            icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>`,
+            file: "nexus-ai-product-screenshots.zip",
+          },
+          {
+            title: "Architecture Diagrams",
+            description: "High-resolution diagrams of the agent hierarchy, department structure, tier system, and project lifecycle flow.",
+            icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" /></svg>`,
+            file: "nexus-ai-architecture-diagrams.zip",
+          },
+          {
+            title: "Boilerplate & Fact Sheet",
+            description: "Ready-to-use company description, key facts, and executive bios in editable document format for media articles.",
+            icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>`,
+            file: "nexus-ai-boilerplate.docx",
+          },
+        ].map((asset) => (
+          <div class="nexus-card p-6 flex flex-col">
+            <div class="h-12 w-12 rounded-xl flex items-center justify-center bg-quantum-blue/10 text-quantum-blue mb-4" set:html={asset.icon} />
+            <h3 class="text-base font-semibold text-[var(--text-primary)] mb-2">{asset.title}</h3>
+            <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 flex-1">{asset.description}</p>
+            <button
+              class="inline-flex items-center gap-2 text-sm font-medium text-quantum-blue hover:text-orbital-cyan transition-colors"
+              aria-label={`Download ${asset.title}`}
+            >
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              Download
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 p-4 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-color)]">
+        <p class="text-sm text-[var(--text-secondary)]">
+          <span class="font-semibold text-[var(--text-primary)]">Usage Guidelines:</span>
+          All brand assets are provided for editorial and press purposes only. Do not alter, crop, or
+          recolor the NEXUS AI logo. For custom asset requests, contact our media team below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Coverage -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="In the Media"
+      subtitle="What the industry is saying about NEXUS AI."
+    />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        {
+          outlet: "TechCrunch",
+          quote: "NEXUS AI isn't another AI assistant — it's a complete organizational model for autonomous software delivery.",
+          topic: "Launch Coverage",
+        },
+        {
+          outlet: "The Verge",
+          quote: "With 195 agents spanning everything from engineering to legal compliance, NEXUS AI is rethinking how software gets built.",
+          topic: "Product Deep-Dive",
+        },
+        {
+          outlet: "VentureBeat",
+          quote: "The governance model alone sets NEXUS AI apart — six dedicated agents enforcing architecture, security, and quality gates.",
+          topic: "Enterprise AI",
+        },
+        {
+          outlet: "Wired",
+          quote: "Each agent has a personality, weaknesses, and a nickname. It's the most human approach to AI-powered development we've seen.",
+          topic: "AI Culture",
+        },
+        {
+          outlet: "InfoWorld",
+          quote: "The 13-stage project lifecycle mirrors what you'd expect from a top-tier consulting firm — but fully autonomous.",
+          topic: "Methodology",
+        },
+        {
+          outlet: "Forbes",
+          quote: "NEXUS AI demonstrates that AI agencies are not science fiction — they're the next evolution of software services.",
+          topic: "Industry Analysis",
+        },
+      ].map((mention) => (
+        <div class="nexus-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-bold text-[var(--text-primary)]">{mention.outlet}</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
+              {mention.topic}
+            </span>
+          </div>
+          <blockquote class="text-sm text-[var(--text-secondary)] leading-relaxed italic">
+            &ldquo;{mention.quote}&rdquo;
+          </blockquote>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Media Contact -->
+  <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
+            Media <span class="text-gradient">Contact</span>
+          </h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed mb-8">
+            For press inquiries, interview requests, speaking engagements, or custom
+            asset needs, reach out to our communications team. We aim to respond within
+            one business day.
+          </p>
+
+          <div class="space-y-4">
+            <div class="nexus-card p-5">
+              <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Press Inquiries</h3>
+              <p class="text-sm text-[var(--text-secondary)]">press@nexus-ai.com</p>
+            </div>
+            <div class="nexus-card p-5">
+              <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Media Relations Lead</h3>
+              <p class="text-sm text-[var(--text-secondary)]">CMO (Agent 006) — Chief Marketing Officer</p>
+              <p class="text-xs text-[var(--text-secondary)] mt-1">Oversees all external communications and brand strategy</p>
+            </div>
+            <div class="nexus-card p-5">
+              <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">PR & Communications</h3>
+              <p class="text-sm text-[var(--text-secondary)]">PR-SPEC (Agent 131) — Public Relations Specialist</p>
+              <p class="text-xs text-[var(--text-secondary)] mt-1">Handles day-to-day media relations and press coordination</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media Inquiry Form -->
+        <div>
+          <div class="nexus-card p-6 md:p-8">
+            <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6">Media Inquiry Form</h3>
+            <form class="space-y-5" id="press-form">
+              <div>
+                <label for="press-name" class="block text-sm font-medium text-[var(--text-primary)] mb-1.5">Name</label>
+                <input
+                  type="text"
+                  id="press-name"
+                  name="name"
+                  required
+                  class="w-full rounded-lg border border-[var(--border-color)] bg-[var(--bg-elevated)] px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:border-quantum-blue focus:outline-none focus:ring-1 focus:ring-quantum-blue"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label for="press-email" class="block text-sm font-medium text-[var(--text-primary)] mb-1.5">Email</label>
+                <input
+                  type="email"
+                  id="press-email"
+                  name="email"
+                  required
+                  class="w-full rounded-lg border border-[var(--border-color)] bg-[var(--bg-elevated)] px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:border-quantum-blue focus:outline-none focus:ring-1 focus:ring-quantum-blue"
+                  placeholder="you@publication.com"
+                />
+              </div>
+              <div>
+                <label for="press-outlet" class="block text-sm font-medium text-[var(--text-primary)] mb-1.5">Publication / Outlet</label>
+                <input
+                  type="text"
+                  id="press-outlet"
+                  name="outlet"
+                  class="w-full rounded-lg border border-[var(--border-color)] bg-[var(--bg-elevated)] px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:border-quantum-blue focus:outline-none focus:ring-1 focus:ring-quantum-blue"
+                  placeholder="e.g. TechCrunch, Forbes"
+                />
+              </div>
+              <div>
+                <label for="press-type" class="block text-sm font-medium text-[var(--text-primary)] mb-1.5">Inquiry Type</label>
+                <select
+                  id="press-type"
+                  name="type"
+                  class="w-full rounded-lg border border-[var(--border-color)] bg-[var(--bg-elevated)] px-4 py-2.5 text-sm text-[var(--text-primary)] focus:border-quantum-blue focus:outline-none focus:ring-1 focus:ring-quantum-blue"
+                >
+                  <option value="interview">Interview Request</option>
+                  <option value="press-kit">Press Kit / Assets</option>
+                  <option value="speaking">Speaking Engagement</option>
+                  <option value="partnership">Media Partnership</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+              <div>
+                <label for="press-message" class="block text-sm font-medium text-[var(--text-primary)] mb-1.5">Message</label>
+                <textarea
+                  id="press-message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full rounded-lg border border-[var(--border-color)] bg-[var(--bg-elevated)] px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:border-quantum-blue focus:outline-none focus:ring-1 focus:ring-quantum-blue resize-y"
+                  placeholder="Tell us about your inquiry..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full inline-flex items-center justify-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+              >
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="nexus-card nexus-glow p-8 md:p-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
+        Want to learn more about NEXUS AI?
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        Explore our 195 agents, 20 departments, and the technology behind
+        the world's first AI-powered software agency.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/about"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+        >
+          About NEXUS AI
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue hover:text-quantum-blue transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
 </PageLayout>

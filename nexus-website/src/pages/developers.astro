@@ -1,25 +1,691 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import SectionHeading from "../components/astro/SectionHeading.astro";
+
+const quickStartSteps = [
+  {
+    step: "1",
+    title: "Get Your API Key",
+    description: "Sign up and generate your API key from the developer dashboard. Keys are scoped per project with configurable rate limits.",
+    code: `export NEXUS_API_KEY="nxs_live_abc123..."`,
+    lang: "bash",
+  },
+  {
+    step: "2",
+    title: "Install the SDK",
+    description: "Choose your language and install the official SDK. Available for Python, TypeScript, Go, and Rust.",
+    code: `npm install @nexus-ai/sdk
+# or
+pip install nexus-ai`,
+    lang: "bash",
+  },
+  {
+    step: "3",
+    title: "Make Your First Call",
+    description: "Initialize the client and dispatch a task to any of the 195 agents. The orchestrator handles routing automatically.",
+    code: `import { NexusClient } from "@nexus-ai/sdk";
+
+const nexus = new NexusClient({
+  apiKey: process.env.NEXUS_API_KEY,
+});
+
+const result = await nexus.agents.dispatch({
+  task: "Build a responsive landing page",
+  department: "engineering",
+  priority: "high",
+});
+
+console.log(result.assignedAgent); // "SR-FE-REACT"
+console.log(result.status);        // "in_progress"`,
+    lang: "typescript",
+  },
+];
+
+const apiEndpoints = [
+  { method: "POST", path: "/v1/agents/dispatch", description: "Route a task to the best-fit agent" },
+  { method: "GET", path: "/v1/agents", description: "List all 195 agents with filters" },
+  { method: "GET", path: "/v1/agents/:id", description: "Get agent details, capabilities, and status" },
+  { method: "POST", path: "/v1/projects", description: "Create a new project across the lifecycle" },
+  { method: "GET", path: "/v1/projects/:id/status", description: "Real-time project progress and agent activity" },
+  { method: "POST", path: "/v1/messages", description: "Send inter-agent messages using protocol envelopes" },
+  { method: "GET", path: "/v1/departments", description: "List departments with agent counts and leads" },
+  { method: "POST", path: "/v1/governance/review", description: "Trigger a governance gate review" },
+];
+
+const codeExamples = [
+  {
+    title: "Full Project Lifecycle",
+    description: "Kick off a complete project — NEXUS routes it through all 13 lifecycle stages automatically.",
+    code: `const project = await nexus.projects.create({
+  name: "E-Commerce Platform",
+  type: "web-application",
+  requirements: {
+    frontend: "React + TypeScript",
+    backend: "Python FastAPI",
+    database: "PostgreSQL",
+    auth: "OAuth 2.0 + JWT",
+  },
+  budget: "enterprise",
+});
+
+// The orchestrator (Agent 195) activates
+// agents across all 20 departments
+const status = await nexus.projects.watch(project.id);
+status.on("agent:activated", (agent) => {
+  console.log(\`\${agent.code} joined the project\`);
+});
+status.on("stage:transition", (stage) => {
+  console.log(\`Moved to: \${stage.name}\`);
+});`,
+    lang: "typescript",
+  },
+  {
+    title: "Agent-to-Agent Communication",
+    description: "Send structured messages between agents using the six communication primitives.",
+    code: `from nexus_ai import NexusClient
+
+client = NexusClient()
+
+# Send a request from SR-FE-REACT to SR-BE-PY
+response = client.messages.send(
+    type="REQ",
+    from_agent="SR-FE-REACT",
+    to_agent="SR-BE-PY",
+    payload={
+        "action": "create_api_endpoint",
+        "spec": {
+            "path": "/api/v1/products",
+            "method": "GET",
+            "filters": ["category", "price_range"],
+            "pagination": True,
+        },
+    },
+    priority="high",
+    sla_hours=4,
+)
+
+print(response.status)      # "acknowledged"
+print(response.estimated)   # "2h 15m"`,
+    lang: "python",
+  },
+  {
+    title: "Security & Governance Gates",
+    description: "Trigger governance reviews before critical deployments. Six Tier-8 agents enforce quality.",
+    code: `const review = await nexus.governance.submit({
+  project_id: project.id,
+  gate: "SEC-REVIEW",
+  artifacts: {
+    code_repo: "github.com/acme/platform",
+    branch: "release/v2.1",
+    scan_results: "./reports/owasp-scan.json",
+  },
+});
+
+// SEC-REVIEW agent performs:
+// - Vulnerability scan analysis
+// - OWASP Top 10 compliance check
+// - Secrets management audit
+// - Dependency risk assessment
+
+review.on("complete", (result) => {
+  console.log(result.verdict);   // "approved"
+  console.log(result.findings);  // []
+  console.log(result.score);     // 97
+});`,
+    lang: "typescript",
+  },
+  {
+    title: "Department Analytics",
+    description: "Monitor agent performance, workload distribution, and department health in real time.",
+    code: `import nexus_ai
+
+client = nexus_ai.NexusClient()
+
+# Get engineering department metrics
+eng = client.departments.get("engineering")
+
+print(f"Active agents: {eng.active_count}/40")
+print(f"Tasks in progress: {eng.tasks_active}")
+print(f"Avg completion time: {eng.avg_completion}")
+
+# Stream real-time agent activity
+for event in client.agents.stream(department="engineering"):
+    agent = event.agent
+    print(
+        f"[{agent.code}] {event.type}: "
+        f"{event.description}"
+    )
+    # [SR-FE-REACT] task:completed: Landing page component
+    # [BE-ENG] task:started: User auth middleware
+    # [SR-QA-AUTO] review:passed: Integration tests`,
+    lang: "python",
+  },
+];
+
+const sdks = [
+  {
+    name: "TypeScript / JavaScript",
+    package: "@nexus-ai/sdk",
+    install: "npm install @nexus-ai/sdk",
+    badge: "TS",
+    features: ["Full type safety", "Tree-shakeable", "Node.js + Deno + Bun"],
+  },
+  {
+    name: "Python",
+    package: "nexus-ai",
+    install: "pip install nexus-ai",
+    badge: "PY",
+    features: ["Async/await support", "Pydantic models", "Python 3.9+"],
+  },
+  {
+    name: "Go",
+    package: "github.com/nexus-ai/go-sdk",
+    install: "go get github.com/nexus-ai/go-sdk",
+    badge: "GO",
+    features: ["Context-aware", "Concurrent-safe", "Go 1.21+"],
+  },
+  {
+    name: "Rust",
+    package: "nexus-ai",
+    install: `cargo add nexus-ai`,
+    badge: "RS",
+    features: ["Zero-cost abstractions", "Tokio async runtime", "Serde integration"],
+  },
+];
+
+const communityLinks = [
+  {
+    name: "GitHub",
+    description: "Browse source code, report issues, and contribute to the SDKs and agent framework.",
+    url: "#",
+    icon: "github",
+    stat: "2.4k stars",
+  },
+  {
+    name: "Discord",
+    description: "Join 5,000+ developers building with NEXUS agents. Get help, share projects, and connect.",
+    url: "#",
+    icon: "discord",
+    stat: "5k+ members",
+  },
+  {
+    name: "Stack Overflow",
+    description: "Ask technical questions tagged [nexus-ai]. Monitored by our DevRel team daily.",
+    url: "#",
+    icon: "stackoverflow",
+    stat: "1.2k questions",
+  },
+];
+
+const caseStudies = [
+  {
+    company: "Meridian Health",
+    industry: "Healthcare",
+    title: "Patient Portal in 3 Weeks",
+    description: "Deployed a HIPAA-compliant patient portal using 47 agents across Engineering, Security, and Legal. The SEC-REVIEW gate caught 3 compliance gaps before launch.",
+    metrics: [
+      { label: "Agents Used", value: "47" },
+      { label: "Time to Ship", value: "3 weeks" },
+      { label: "Security Score", value: "99/100" },
+    ],
+  },
+  {
+    company: "Velocity Commerce",
+    industry: "E-Commerce",
+    title: "Marketplace Rebuild at Scale",
+    description: "Migrated a monolithic marketplace to microservices. The NEXUS orchestrator coordinated 62 agents across 8 departments simultaneously.",
+    metrics: [
+      { label: "Agents Used", value: "62" },
+      { label: "Microservices", value: "14" },
+      { label: "Downtime", value: "0 min" },
+    ],
+  },
+  {
+    company: "Atlas Financial",
+    industry: "Fintech",
+    title: "Real-Time Trading Dashboard",
+    description: "Built a sub-100ms trading dashboard with real-time data pipelines. Data Science and Engineering agents collaborated through 340+ structured messages.",
+    metrics: [
+      { label: "Agents Used", value: "38" },
+      { label: "Latency", value: "<100ms" },
+      { label: "Uptime", value: "99.99%" },
+    ],
+  },
+];
+
+const resources = [
+  {
+    title: "API Reference",
+    description: "Complete endpoint documentation with request/response schemas and examples.",
+    href: "#",
+    icon: "book",
+  },
+  {
+    title: "Tutorials",
+    description: "Step-by-step guides for common integration patterns and use cases.",
+    href: "#",
+    icon: "tutorial",
+  },
+  {
+    title: "Architecture Guide",
+    description: "Deep dive into the 10-tier agent hierarchy, message protocols, and governance model.",
+    href: "/how-we-work",
+    icon: "arch",
+  },
+  {
+    title: "Changelog",
+    description: "Latest API updates, SDK releases, and new agent capabilities.",
+    href: "#",
+    icon: "changelog",
+  },
+];
+
+const methodColors: Record<string, string> = {
+  GET: "#10B981",
+  POST: "#3B82F6",
+  PUT: "#F59E0B",
+  DELETE: "#EF4444",
+};
 ---
 
-<PageLayout title="Developers" description="NEXUS AI developer resources, API documentation, and integration guides.">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32 text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-8">
-      <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
-      <span class="text-sm text-quantum-blue font-medium">Coming Soon</span>
+<PageLayout title="Developers" description="Build with 195 AI agents. API documentation, SDKs, code examples, and developer resources for the NEXUS AI platform.">
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+    <div class="absolute inset-0 gradient-mesh"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-primary)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div class="text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-8">
+          <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
+          <span class="text-sm text-quantum-blue font-medium">Developer Platform</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+          <span class="text-[var(--text-primary)]">Build with</span>
+          <br />
+          <span class="text-gradient">195 AI Agents</span>
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
+          One API to orchestrate an entire software agency. Dispatch tasks to specialized agents,
+          monitor real-time progress, and ship production-grade software at unprecedented speed.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#quickstart"
+            class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+          >
+            Get Started
+            <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="#api"
+            class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 hover:bg-quantum-blue/5 transition-colors"
+          >
+            API Reference
+          </a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
+          {[
+            { value: "195", label: "AI Agents" },
+            { value: "20", label: "Departments" },
+            { value: "6", label: "SDKs" },
+            { value: "99.9%", label: "Uptime SLA" },
+          ].map((stat) => (
+            <div class="text-center">
+              <div class="text-2xl font-bold text-gradient">{stat.value}</div>
+              <div class="text-xs text-[var(--text-muted)] mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
-      Developer Resources
-    </h1>
-    <p class="text-[var(--text-secondary)] mb-8 max-w-lg mx-auto">
-      API documentation, integration guides, and developer tools are being
-      prepared by our Developer Relations team. Check back soon.
-    </p>
-    <a
-      href="/how-we-work"
-      class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
-    >
-      How We Work
-    </a>
-  </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section id="quickstart" class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <SectionHeading
+        title="Get Started in 3 Steps"
+        subtitle="From zero to dispatching tasks to 195 agents in under five minutes."
+      />
+
+      <div class="space-y-8 max-w-4xl mx-auto">
+        {quickStartSteps.map((step) => (
+          <div class="nexus-card p-6 md:p-8">
+            <div class="flex items-start gap-4 md:gap-6">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-quantum-blue/10 border border-quantum-blue/30 flex items-center justify-center">
+                <span class="text-quantum-blue font-bold text-sm">{step.step}</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">{step.title}</h3>
+                <p class="text-sm text-[var(--text-secondary)] mb-4">{step.description}</p>
+                <div class="relative rounded-lg overflow-hidden border border-[var(--border-color)]">
+                  <div class="flex items-center justify-between px-4 py-2 bg-[var(--bg-elevated)] border-b border-[var(--border-color)]">
+                    <span class="text-xs font-mono text-[var(--text-muted)]">{step.lang}</span>
+                    <button class="copy-btn text-xs text-[var(--text-muted)] hover:text-quantum-blue transition-colors" data-code={step.code}>
+                      Copy
+                    </button>
+                  </div>
+                  <pre class="p-4 overflow-x-auto text-sm font-mono text-[var(--text-secondary)] bg-[var(--bg-primary)]"><code>{step.code}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- API Documentation Preview -->
+  <section id="api" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="API Reference"
+      subtitle="RESTful API with predictable resource-oriented URLs. All responses return JSON."
+    />
+
+    <div class="max-w-4xl mx-auto">
+      <!-- Base URL -->
+      <div class="nexus-card p-4 mb-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono text-[var(--text-muted)]">Base URL</span>
+          <code class="text-sm font-mono text-quantum-blue">https://api.nexus-ai.dev/v1</code>
+        </div>
+      </div>
+
+      <!-- Endpoints table -->
+      <div class="nexus-card overflow-hidden">
+        <div class="px-6 py-4 border-b border-[var(--border-color)]">
+          <h3 class="text-lg font-semibold text-[var(--text-primary)]">Core Endpoints</h3>
+        </div>
+        <div class="divide-y divide-[var(--border-color)]">
+          {apiEndpoints.map((endpoint) => (
+            <div class="flex items-center gap-4 px-6 py-3 hover:bg-[var(--bg-elevated)] transition-colors">
+              <span
+                class="text-xs font-mono font-bold px-2 py-0.5 rounded min-w-[52px] text-center"
+                style={`background-color: ${methodColors[endpoint.method]}15; color: ${methodColors[endpoint.method]}`}
+              >
+                {endpoint.method}
+              </span>
+              <code class="text-sm font-mono text-[var(--text-primary)] flex-shrink-0">{endpoint.path}</code>
+              <span class="text-sm text-[var(--text-secondary)] hidden sm:inline">{endpoint.description}</span>
+            </div>
+          ))}
+        </div>
+        <div class="px-6 py-4 border-t border-[var(--border-color)] bg-[var(--bg-elevated)]">
+          <a href="#" class="text-sm text-quantum-blue hover:text-orbital-cyan transition-colors font-medium">
+            View full API documentation &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Auth example -->
+      <div class="mt-6 nexus-card p-6">
+        <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-3">Authentication</h4>
+        <p class="text-sm text-[var(--text-secondary)] mb-4">
+          All requests require a Bearer token in the Authorization header. Keys are scoped with fine-grained permissions.
+        </p>
+        <div class="rounded-lg overflow-hidden border border-[var(--border-color)]">
+          <div class="flex items-center px-4 py-2 bg-[var(--bg-elevated)] border-b border-[var(--border-color)]">
+            <span class="text-xs font-mono text-[var(--text-muted)]">bash</span>
+          </div>
+          <pre class="p-4 overflow-x-auto text-sm font-mono text-[var(--text-secondary)] bg-[var(--bg-primary)]"><code>curl https://api.nexus-ai.dev/v1/agents \
+  -H "Authorization: Bearer nxs_live_abc123..." \
+  -H "Content-Type: application/json"</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Examples -->
+  <section id="examples" class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <SectionHeading
+        title="Code Examples"
+        subtitle="Real-world integration patterns showing the power of 195 coordinated agents."
+      />
+
+      <div class="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {codeExamples.map((example) => (
+          <div class="nexus-card overflow-hidden flex flex-col">
+            <div class="p-6 border-b border-[var(--border-color)]">
+              <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">{example.title}</h3>
+              <p class="text-sm text-[var(--text-secondary)]">{example.description}</p>
+            </div>
+            <div class="relative flex-1">
+              <div class="flex items-center justify-between px-4 py-2 bg-[var(--bg-elevated)] border-b border-[var(--border-color)]">
+                <span class="text-xs font-mono text-[var(--text-muted)]">{example.lang}</span>
+                <button class="copy-btn text-xs text-[var(--text-muted)] hover:text-quantum-blue transition-colors" data-code={example.code}>
+                  Copy
+                </button>
+              </div>
+              <pre class="p-4 overflow-x-auto text-sm font-mono text-[var(--text-secondary)] bg-[var(--bg-primary)] leading-relaxed"><code>{example.code}</code></pre>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SDKs & Tools -->
+  <section id="sdks" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="SDKs & Tools"
+      subtitle="Official client libraries with full type safety, async support, and comprehensive documentation."
+    />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      {sdks.map((sdk) => (
+        <div class="nexus-card p-6 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 rounded-lg bg-quantum-blue/10 flex items-center justify-center">
+              <span class="text-quantum-blue text-sm font-bold font-mono">{sdk.badge}</span>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-[var(--text-primary)]">{sdk.name}</h3>
+              <p class="text-xs font-mono text-[var(--text-muted)]">{sdk.package}</p>
+            </div>
+          </div>
+          <ul class="space-y-1.5 mb-4 flex-1">
+            {sdk.features.map((feature) => (
+              <li class="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+                <svg class="h-3.5 w-3.5 text-quantum-blue flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <div class="rounded-lg overflow-hidden border border-[var(--border-color)]">
+            <pre class="px-3 py-2 text-xs font-mono text-[var(--text-secondary)] bg-[var(--bg-primary)] overflow-x-auto"><code>{sdk.install}</code></pre>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Additional tools -->
+    <div class="mt-12 max-w-5xl mx-auto">
+      <div class="grid sm:grid-cols-3 gap-4">
+        {[
+          { name: "CLI Tool", desc: "Manage agents, projects, and deployments from your terminal.", badge: "CLI" },
+          { name: "VS Code Extension", desc: "Inline agent suggestions, task dispatching, and real-time logs.", badge: "IDE" },
+          { name: "Webhook Support", desc: "Receive real-time events for agent activity, lifecycle transitions, and reviews.", badge: "WH" },
+        ].map((tool) => (
+          <div class="nexus-card p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-quantum-blue/10 text-quantum-blue">{tool.badge}</span>
+              <span class="text-sm font-semibold text-[var(--text-primary)]">{tool.name}</span>
+            </div>
+            <p class="text-sm text-[var(--text-secondary)]">{tool.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <SectionHeading
+        title="Developer Community"
+        subtitle="Join thousands of developers building with NEXUS AI agents."
+      />
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {communityLinks.map((link) => (
+          <a href={link.url} class="nexus-card p-6 block group">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="h-10 w-10 rounded-lg bg-quantum-blue/10 flex items-center justify-center">
+                {link.icon === "github" && (
+                  <svg class="h-5 w-5 text-quantum-blue" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                )}
+                {link.icon === "discord" && (
+                  <svg class="h-5 w-5 text-quantum-blue" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/>
+                  </svg>
+                )}
+                {link.icon === "stackoverflow" && (
+                  <svg class="h-5 w-5 text-quantum-blue" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154z"/>
+                  </svg>
+                )}
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-[var(--text-primary)]">{link.name}</h3>
+                <span class="text-xs text-quantum-blue">{link.stat}</span>
+              </div>
+            </div>
+            <p class="text-sm text-[var(--text-secondary)]">{link.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Developer Success Stories -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="Developer Success Stories"
+      subtitle="How teams are shipping faster with NEXUS AI agents."
+    />
+
+    <div class="grid lg:grid-cols-3 gap-6">
+      {caseStudies.map((study) => (
+        <div class="nexus-card p-6 flex flex-col">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-quantum-blue/10 text-quantum-blue">{study.industry}</span>
+          </div>
+          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">{study.title}</h3>
+          <p class="text-xs text-[var(--text-muted)] mb-3">{study.company}</p>
+          <p class="text-sm text-[var(--text-secondary)] mb-6 flex-1">{study.description}</p>
+          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-[var(--border-color)]">
+            {study.metrics.map((metric) => (
+              <div class="text-center">
+                <div class="text-lg font-bold text-gradient">{metric.value}</div>
+                <div class="text-xs text-[var(--text-muted)]">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <SectionHeading
+        title="Resources"
+        subtitle="Everything you need to build, integrate, and scale with NEXUS AI."
+      />
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {resources.map((resource) => (
+          <a href={resource.href} class="nexus-card p-6 block group">
+            <div class="h-10 w-10 rounded-lg bg-quantum-blue/10 flex items-center justify-center mb-4">
+              <span class="text-quantum-blue text-sm font-bold">
+                {resource.icon === "book" && "API"}
+                {resource.icon === "tutorial" && "101"}
+                {resource.icon === "arch" && "SYS"}
+                {resource.icon === "changelog" && "NEW"}
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-2 group-hover:text-quantum-blue transition-colors">{resource.title}</h3>
+            <p class="text-sm text-[var(--text-secondary)]">{resource.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="nexus-card nexus-glow p-8 md:p-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
+        Ready to build with <span class="text-gradient">195 agents</span>?
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        Get your API key and start dispatching tasks in minutes.
+        Our DevRel team is here to help you every step of the way.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+        >
+          Get API Key
+          <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 hover:bg-quantum-blue/5 transition-colors"
+        >
+          Talk to DevRel
+        </a>
+      </div>
+    </div>
+  </section>
+
 </PageLayout>
+
+<script>
+  // Copy button functionality
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const code = btn.getAttribute('data-code');
+      if (code) {
+        try {
+          await navigator.clipboard.writeText(code);
+          const original = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = original; }, 2000);
+        } catch {
+          // Fallback for older browsers
+          const textarea = document.createElement('textarea');
+          textarea.value = code;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          const original = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = original; }, 2000);
+        }
+      }
+    });
+  });
+</script>

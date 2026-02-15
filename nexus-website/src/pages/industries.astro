@@ -1,25 +1,459 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import SectionHeading from "../components/astro/SectionHeading.astro";
+
+const industries = [
+  {
+    id: "fintech",
+    name: "FinTech & Banking",
+    tagline: "Secure, compliant, and lightning-fast financial software.",
+    color: "#3B82F6",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="14" width="24" height="14" rx="2"/><path d="M16 4L28 14H4L16 4Z"/><line x1="10" y1="18" x2="10" y2="24"/><line x1="16" y1="18" x2="16" y2="24"/><line x1="22" y1="18" x2="22" y2="24"/><line x1="4" y1="28" x2="28" y2="28"/></svg>`,
+    description: "From neobanks to payment processors, we build financial platforms that handle millions of transactions with zero tolerance for downtime or data breaches. Our agents understand PCI-DSS, SOC 2, and the regulatory frameworks that govern modern finance.",
+    challenges: [
+      "Regulatory compliance across jurisdictions",
+      "Real-time transaction processing at scale",
+      "Fraud detection and prevention",
+      "Legacy system modernization",
+    ],
+    solutions: [
+      "Event-driven microservices for sub-100ms processing",
+      "AI-powered fraud scoring with 99.7% accuracy",
+      "Compliance-as-code pipelines with automated auditing",
+      "Incremental migration strategies for legacy platforms",
+    ],
+    metrics: [
+      { value: "99.99%", label: "Uptime SLA" },
+      { value: "<50ms", label: "Transaction Latency" },
+      { value: "40%", label: "Fraud Reduction" },
+    ],
+    agents: "Security, Engineering, Data Science",
+    caseStudySlug: "fintech-payment-platform",
+  },
+  {
+    id: "healthtech",
+    name: "HealthTech & Life Sciences",
+    tagline: "Patient-first software that meets the strictest standards.",
+    color: "#10B981",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28C16 28 4 20 4 12C4 8 7 5 11 5C13.5 5 15.5 6.5 16 8C16.5 6.5 18.5 5 21 5C25 5 28 8 28 12C28 20 16 28 16 28Z"/><line x1="16" y1="14" x2="16" y2="22"/><line x1="12" y1="18" x2="20" y2="18"/></svg>`,
+    description: "Healthcare demands precision, privacy, and interoperability. We deliver HIPAA-compliant platforms, EHR integrations, telemedicine systems, and clinical decision support tools that clinicians actually want to use.",
+    challenges: [
+      "HIPAA and GDPR compliance for patient data",
+      "EHR/EMR interoperability (HL7, FHIR)",
+      "Clinical workflow integration without disruption",
+      "FDA regulatory pathways for SaMD",
+    ],
+    solutions: [
+      "Zero-trust architecture with end-to-end encryption",
+      "FHIR-native APIs for seamless EHR integration",
+      "ML models for clinical decision support and diagnostics",
+      "Regulatory-aware CI/CD with audit trail generation",
+    ],
+    metrics: [
+      { value: "100%", label: "HIPAA Compliance" },
+      { value: "3x", label: "Faster EHR Integration" },
+      { value: "60%", label: "Clinician Time Saved" },
+    ],
+    agents: "Engineering, Security, Data Science, Legal",
+    caseStudySlug: "healthtech-telemedicine",
+  },
+  {
+    id: "ecommerce",
+    name: "E-commerce & Retail",
+    tagline: "Conversion-optimized storefronts that scale on demand.",
+    color: "#F59E0B",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="28" r="2"/><circle cx="24" cy="28" r="2"/><path d="M2 4H6L10 22H26L30 10H8"/></svg>`,
+    description: "We build commerce platforms that convert browsers into buyers. From headless storefronts to inventory management, our agents optimize every touchpoint of the customer journey with data-driven personalization.",
+    challenges: [
+      "Peak traffic handling (Black Friday, flash sales)",
+      "Personalization at scale across channels",
+      "Cart abandonment and conversion optimization",
+      "Multi-vendor marketplace complexity",
+    ],
+    solutions: [
+      "Auto-scaling infrastructure with CDN-edge rendering",
+      "AI recommendation engines with real-time personalization",
+      "A/B testing frameworks with statistical significance tracking",
+      "Composable commerce architecture for vendor flexibility",
+    ],
+    metrics: [
+      { value: "35%", label: "Conversion Lift" },
+      { value: "10x", label: "Traffic Scalability" },
+      { value: "2.1s", label: "Page Load Time" },
+    ],
+    agents: "Engineering, Design, Data Science, Marketing",
+    caseStudySlug: "ecommerce-marketplace",
+  },
+  {
+    id: "saas",
+    name: "SaaS & Enterprise Software",
+    tagline: "Multi-tenant platforms built for growth and governance.",
+    color: "#8B5CF6",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="10" height="10" rx="2"/><rect x="18" y="4" width="10" height="10" rx="2"/><rect x="4" y="18" width="10" height="10" rx="2"/><rect x="18" y="18" width="10" height="10" rx="2"/><circle cx="9" cy="9" r="1.5" fill="currentColor" stroke="none"/><circle cx="23" cy="9" r="1.5" fill="currentColor" stroke="none"/><circle cx="9" cy="23" r="1.5" fill="currentColor" stroke="none"/><circle cx="23" cy="23" r="1.5" fill="currentColor" stroke="none"/></svg>`,
+    description: "We architect multi-tenant SaaS platforms from the ground up -- role-based access, usage metering, subscription billing, and enterprise SSO. Our agents build software that scales from 10 users to 10 million.",
+    challenges: [
+      "Multi-tenancy with data isolation guarantees",
+      "Enterprise SSO and granular RBAC",
+      "Usage-based billing and subscription management",
+      "API-first architecture for integrations",
+    ],
+    solutions: [
+      "Tenant-isolated data layers with row-level security",
+      "SAML/OIDC federation with custom RBAC engines",
+      "Real-time usage metering with Stripe/billing integration",
+      "OpenAPI-driven development with SDK auto-generation",
+    ],
+    metrics: [
+      { value: "99.95%", label: "Platform Uptime" },
+      { value: "50%", label: "Faster Onboarding" },
+      { value: "4x", label: "API Throughput" },
+    ],
+    agents: "Engineering, Platform, Product, Security",
+    caseStudySlug: "saas-enterprise-platform",
+  },
+  {
+    id: "edtech",
+    name: "Education & EdTech",
+    tagline: "Learning experiences that adapt to every student.",
+    color: "#06B6D4",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6L2 14L16 22L30 14L16 6Z"/><path d="M6 17V25L16 30L26 25V17"/><line x1="30" y1="14" x2="30" y2="24"/></svg>`,
+    description: "We build adaptive learning platforms, LMS integrations, and assessment tools that make education more accessible and effective. Our AI agents personalize content delivery based on learning patterns and outcomes.",
+    challenges: [
+      "Adaptive content delivery for diverse learners",
+      "FERPA/COPPA compliance for student data",
+      "LTI and LMS interoperability",
+      "Engagement and retention in digital learning",
+    ],
+    solutions: [
+      "AI-driven adaptive learning paths with spaced repetition",
+      "Privacy-first architecture with parental consent workflows",
+      "LTI 1.3 compliant integrations for major LMS platforms",
+      "Gamification engines with evidence-based engagement mechanics",
+    ],
+    metrics: [
+      { value: "45%", label: "Completion Rate Lift" },
+      { value: "2x", label: "Student Engagement" },
+      { value: "100%", label: "FERPA Compliance" },
+    ],
+    agents: "Engineering, Design, Data Science, Product",
+    caseStudySlug: "edtech-adaptive-learning",
+  },
+  {
+    id: "proptech",
+    name: "Real Estate & PropTech",
+    tagline: "Smart property platforms from listing to closing.",
+    color: "#14B8A6",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 28V14L16 4L28 14V28H20V20H12V28H4Z"/><rect x="13" y="10" width="6" height="4" rx="0.5"/></svg>`,
+    description: "From property marketplaces to smart building management, we deliver PropTech solutions that digitize real estate workflows. Virtual tours, automated valuations, tenant portals, and IoT-connected building systems.",
+    challenges: [
+      "MLS and property data aggregation",
+      "Virtual tour and 3D visualization at scale",
+      "Transaction workflow digitization",
+      "Smart building IoT data management",
+    ],
+    solutions: [
+      "Real-time MLS feed integration with data normalization",
+      "WebGL-powered virtual tours with spatial computing",
+      "End-to-end digital closing workflows with e-signatures",
+      "IoT data pipelines for predictive building maintenance",
+    ],
+    metrics: [
+      { value: "70%", label: "Faster Closings" },
+      { value: "3x", label: "Listing Engagement" },
+      { value: "25%", label: "OpEx Reduction" },
+    ],
+    agents: "Engineering, Design, Platform, Data Science",
+    caseStudySlug: "proptech-marketplace",
+  },
+  {
+    id: "media",
+    name: "Media & Entertainment",
+    tagline: "Content platforms that captivate and scale globally.",
+    color: "#EC4899",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="16" rx="2"/><polygon points="13,10 13,18 21,14" fill="currentColor" stroke="none"/><line x1="8" y1="26" x2="24" y2="26"/><line x1="12" y1="22" x2="12" y2="26"/><line x1="20" y1="22" x2="20" y2="26"/></svg>`,
+    description: "We build streaming platforms, content management systems, and creator tools that handle massive media libraries. Our agents optimize for global delivery, rights management, and audience engagement across every screen.",
+    challenges: [
+      "Low-latency video streaming at global scale",
+      "Content rights and DRM management",
+      "Recommendation algorithms for engagement",
+      "Creator tools and monetization workflows",
+    ],
+    solutions: [
+      "Adaptive bitrate streaming with multi-CDN orchestration",
+      "Blockchain-anchored rights tracking and royalty distribution",
+      "Collaborative filtering with deep learning recommendation",
+      "Creator dashboards with real-time analytics and payout tracking",
+    ],
+    metrics: [
+      { value: "<200ms", label: "Stream Start Time" },
+      { value: "40%", label: "Watch Time Increase" },
+      { value: "99.9%", label: "Content Availability" },
+    ],
+    agents: "Engineering, Design, Data Science, Platform",
+    caseStudySlug: "media-streaming-platform",
+  },
+  {
+    id: "manufacturing",
+    name: "Manufacturing & IoT",
+    tagline: "Connected factories and intelligent supply chains.",
+    color: "#F97316",
+    icon: `<svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 28V16L12 10V16L20 10V16L28 10V28H4Z"/><circle cx="10" cy="24" r="1.5" fill="currentColor" stroke="none"/><circle cx="16" cy="24" r="1.5" fill="currentColor" stroke="none"/><circle cx="22" cy="24" r="1.5" fill="currentColor" stroke="none"/></svg>`,
+    description: "We connect factory floors to the cloud with IoT platforms, predictive maintenance systems, and supply chain optimization tools. Our agents build solutions that reduce downtime, cut waste, and accelerate production cycles.",
+    challenges: [
+      "OT/IT convergence and legacy equipment integration",
+      "Predictive maintenance with sensor data",
+      "Supply chain visibility across partners",
+      "Edge computing for real-time quality control",
+    ],
+    solutions: [
+      "Protocol-agnostic IoT gateways (MQTT, OPC-UA, Modbus)",
+      "ML-driven predictive maintenance reducing unplanned downtime",
+      "Digital twin simulations for process optimization",
+      "Edge AI for real-time defect detection on production lines",
+    ],
+    metrics: [
+      { value: "30%", label: "Downtime Reduction" },
+      { value: "15%", label: "Yield Improvement" },
+      { value: "50%", label: "Faster Defect Detection" },
+    ],
+    agents: "Engineering, Platform, Data Science, QA",
+    caseStudySlug: "manufacturing-iot-platform",
+  },
+];
+
+const stats = [
+  { value: "8+", label: "Industries Served" },
+  { value: "195", label: "Specialized Agents" },
+  { value: "40+", label: "Projects Delivered" },
+  { value: "99.9%", label: "Client Retention" },
+];
 ---
 
-<PageLayout title="Industries" description="Industries served by NEXUS AI — from fintech to healthcare, e-commerce to enterprise SaaS.">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32 text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-8">
-      <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
-      <span class="text-sm text-quantum-blue font-medium">Coming Soon</span>
+<PageLayout
+  title="Industries"
+  description="NEXUS AI delivers AI-powered software across every industry -- from FinTech and HealthTech to SaaS, E-commerce, and Manufacturing."
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 gradient-mesh opacity-50"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-28">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-8">
+          <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
+          <span class="text-sm text-quantum-blue font-medium">Industry Expertise</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+          AI-Powered Development Across <span class="text-gradient">Every Industry</span>
+        </h1>
+        <p class="text-xl text-[var(--text-secondary)] leading-relaxed mb-10">
+          Every industry has unique challenges -- regulatory constraints, domain-specific
+          workflows, and specialized technical requirements. Our 195 agents bring deep
+          vertical expertise to deliver solutions that understand your business, not just
+          your technology.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+          >
+            Discuss Your Industry
+          </a>
+          <a
+            href="/case-studies"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
+          >
+            View Case Studies
+          </a>
+        </div>
+      </div>
     </div>
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
-      Industries We Serve
-    </h1>
-    <p class="text-[var(--text-secondary)] mb-8 max-w-lg mx-auto">
-      From fintech to healthcare, e-commerce to enterprise SaaS -- our 195 agents
-      build software across every industry. Detailed industry pages coming soon.
-    </p>
-    <a
-      href="/capabilities"
-      class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
-    >
-      View Capabilities
-    </a>
-  </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="border-y border-[var(--border-color)] bg-[var(--bg-surface)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {stats.map((stat) => (
+          <div class="text-center">
+            <div class="text-2xl md:text-3xl font-bold text-gradient">{stat.value}</div>
+            <div class="text-sm text-[var(--text-secondary)] mt-1">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Grid -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="text-center mb-16">
+      <SectionHeading
+        title="Industries We Serve"
+        subtitle="Deep domain expertise backed by dedicated agent teams for each vertical."
+      />
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+      {industries.map((industry) => (
+        <div class="nexus-card p-6 md:p-8 group" id={industry.id}>
+          <!-- Header -->
+          <div class="flex items-start gap-4 mb-5">
+            <div
+              class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center"
+              style={`background-color: ${industry.color}12; color: ${industry.color}`}
+            >
+              <Fragment set:html={industry.icon} />
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-xl font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors">
+                {industry.name}
+              </h3>
+              <p class="text-sm text-[var(--text-secondary)] mt-0.5">{industry.tagline}</p>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
+            {industry.description}
+          </p>
+
+          <!-- Challenges & Solutions -->
+          <div class="grid sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <h4 class="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-3">
+                Key Challenges
+              </h4>
+              <ul class="space-y-2">
+                {industry.challenges.map((c) => (
+                  <li class="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
+                    <span class="mt-1 h-1.5 w-1.5 rounded-full flex-shrink-0" style={`background-color: ${industry.color}80`}></span>
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-3">
+                NEXUS Solutions
+              </h4>
+              <ul class="space-y-2">
+                {industry.solutions.map((s) => (
+                  <li class="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
+                    <svg class="mt-0.5 h-3 w-3 flex-shrink-0 text-emerald-400" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="2,6 5,9 10,3"/>
+                    </svg>
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Metrics -->
+          <div class="flex flex-wrap gap-4 p-4 rounded-lg bg-[var(--bg-elevated)] mb-5">
+            {industry.metrics.map((m) => (
+              <div class="flex-1 min-w-[80px] text-center">
+                <div class="text-lg font-bold" style={`color: ${industry.color}`}>{m.value}</div>
+                <div class="text-[10px] text-[var(--text-secondary)] uppercase tracking-wider">{m.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Footer -->
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-[var(--text-muted)]">
+              <span class="font-medium text-[var(--text-secondary)]">Teams:</span> {industry.agents}
+            </span>
+            <a
+              href={`/case-studies`}
+              class="inline-flex items-center gap-1 text-xs font-medium transition-colors"
+              style={`color: ${industry.color}`}
+            >
+              View Case Study
+              <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 12 12" stroke="currentColor" stroke-width="2">
+                <path d="M2 6h8M7 3l3 3-3 3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Cross-Industry Capabilities -->
+  <section class="border-y border-[var(--border-color)] bg-[var(--bg-surface)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <SectionHeading
+        title="Cross-Industry Capabilities"
+        subtitle="Regardless of your vertical, every project benefits from our full-spectrum agent team."
+      />
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { title: "Security & Compliance", desc: "SOC 2, HIPAA, GDPR, PCI-DSS -- 8 dedicated security agents ensure every deliverable meets your regulatory requirements.", icon: "shield" },
+          { title: "AI & Machine Learning", desc: "12 data science agents embed intelligence into your product -- from recommendation engines to predictive analytics and NLP.", icon: "brain" },
+          { title: "Cloud-Native Architecture", desc: "12 platform engineers design for scale from day one -- Kubernetes, Terraform, multi-cloud, and edge computing.", icon: "cloud" },
+          { title: "Design & Accessibility", desc: "14 design agents deliver WCAG 2.1 AA compliant interfaces that users love -- backed by research, not guesswork.", icon: "palette" },
+          { title: "Quality Assurance", desc: "8 QA agents with automated testing, performance benchmarking, and chaos engineering to catch issues before your users do.", icon: "check" },
+          { title: "Governance & Oversight", desc: "6 governance gates review architecture, security, legal, quality, releases, and change management at every milestone.", icon: "gate" },
+        ].map((cap) => (
+          <div class="nexus-card p-5">
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-2">{cap.title}</h3>
+            <p class="text-xs text-[var(--text-secondary)] leading-relaxed">{cap.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Approach Your Industry -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <SectionHeading
+      title="How We Approach Your Industry"
+      subtitle="A proven process adapted for domain-specific requirements."
+    />
+
+    <div class="grid md:grid-cols-4 gap-6">
+      {[
+        { step: "01", title: "Discovery", desc: "Our Discovery Agent maps your industry landscape -- regulations, competitors, user expectations, and technical constraints." },
+        { step: "02", title: "Architecture", desc: "Architecture Review Board designs a domain-specific system that satisfies compliance, performance, and scalability requirements." },
+        { step: "03", title: "Build & Validate", desc: "40 engineers build while 8 QA agents continuously validate against industry-specific acceptance criteria and benchmarks." },
+        { step: "04", title: "Launch & Scale", desc: "Governance gates clear every deployment. Post-launch, our maintenance agents monitor, optimize, and evolve your platform." },
+      ].map((phase) => (
+        <div class="nexus-card p-6 text-center">
+          <div class="text-2xl font-bold text-gradient mb-3">{phase.step}</div>
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-2">{phase.title}</h3>
+          <p class="text-xs text-[var(--text-secondary)] leading-relaxed">{phase.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24">
+    <div class="nexus-card nexus-glow p-8 md:p-12 text-center">
+      <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">
+        Don't see your industry?
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        Our 195 agents adapt to any domain. Whether you're in logistics, energy,
+        government, or an emerging vertical -- we bring the technical depth and
+        operational rigor to deliver.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+        >
+          Talk to Our Team
+        </a>
+        <a
+          href="/capabilities"
+          class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
+        >
+          View All Capabilities
+        </a>
+      </div>
+    </div>
+  </section>
 </PageLayout>
