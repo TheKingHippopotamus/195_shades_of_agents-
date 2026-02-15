@@ -1,0 +1,1757 @@
+[
+  {
+    "agent_number": "001",
+    "code": "CEO",
+    "role": "Chief Executive Officer",
+    "department": "Executive Leadership",
+    "tier": 0,
+    "nickname": "Cap",
+    "prompt": "Avatar for CEO (Chief Executive Officer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: experienced professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, decisive and visionary expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "002",
+    "code": "CTO",
+    "role": "Chief Technology Officer",
+    "department": "Executive Leadership / Technology Pillar",
+    "tier": 0,
+    "nickname": "Blueprint",
+    "prompt": "Avatar for CTO (Chief Technology Officer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: experienced professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, technical and technical expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / technology pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "003",
+    "code": "CPO",
+    "role": "Chief Product Officer",
+    "department": "Executive Leadership / Product Pillar",
+    "tier": 0,
+    "nickname": "North Star",
+    "prompt": "Avatar for CPO (Chief Product Officer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / product pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "004",
+    "code": "COO",
+    "role": "Chief Operating Officer",
+    "department": "Executive Leadership / Operations Pillar",
+    "tier": 0,
+    "nickname": "Clockwork",
+    "prompt": "Avatar for COO (Chief Operating Officer) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: experienced professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / operations pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "005",
+    "code": "CFO",
+    "role": "Chief Financial Officer",
+    "department": "Executive Leadership / Finance Pillar",
+    "tier": 0,
+    "nickname": "Ledger",
+    "prompt": "Avatar for CFO (Chief Financial Officer) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: experienced professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / finance pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "006",
+    "code": "CMO",
+    "role": "Chief Marketing Officer",
+    "department": "Executive Leadership / Marketing Pillar",
+    "tier": 0,
+    "nickname": "Spark",
+    "prompt": "Avatar for CMO (Chief Marketing Officer) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, creative expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / marketing pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "007",
+    "code": "CRO",
+    "role": "Chief Revenue Officer",
+    "department": "Executive Leadership / Revenue Pillar",
+    "tier": 0,
+    "nickname": "Closer",
+    "prompt": "Avatar for CRO (Chief Revenue Officer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, empathetic expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / revenue pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "008",
+    "code": "CHRO",
+    "role": "Chief Human Resources Officer",
+    "department": "Executive Leadership / People Pillar",
+    "tier": 0,
+    "nickname": "Mama Bear",
+    "prompt": "Avatar for CHRO (Chief Human Resources Officer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: experienced professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, empathetic and strategic expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / people pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "009",
+    "code": "CISO",
+    "role": "Chief Information Security Officer",
+    "department": "Executive Leadership / Security Pillar",
+    "tier": 0,
+    "nickname": "Watchtower",
+    "prompt": "Avatar for CISO (Chief Information Security Officer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, pragmatic and technical expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / security pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "010",
+    "code": "CLO",
+    "role": "Chief Legal Officer / General Counsel",
+    "department": "Executive Leadership / Legal Pillar",
+    "tier": 0,
+    "nickname": "The Counsel",
+    "prompt": "Avatar for CLO (Chief Legal Officer / General Counsel) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: experienced professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, strategic expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / legal pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "011",
+    "code": "CAIO",
+    "role": "Chief AI Officer",
+    "department": "Executive Leadership / AI Pillar",
+    "tier": 0,
+    "nickname": "Oracle",
+    "prompt": "Avatar for CAIO (Chief AI Officer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Executive portrait, confident and visionary, commanding presence, refined aesthetic, visionary and technical expression\nTheme: leadership and vision, strategic depth, wisdom\nMood: Professional, confident, approachable, representing expertise in executive leadership / ai pillar\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "012",
+    "code": "SVP-ENG",
+    "role": "Senior Vice President of Engineering",
+    "department": "Engineering",
+    "tier": 1,
+    "nickname": "Drumbeat",
+    "prompt": "Avatar for SVP-ENG (Senior Vice President of Engineering) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: experienced professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, technical and focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "013",
+    "code": "VP-ENG",
+    "role": "Vice President of Engineering",
+    "department": "Engineering",
+    "tier": 1,
+    "nickname": "Compass",
+    "prompt": "Avatar for VP-ENG (Vice President of Engineering) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, technical and focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "014",
+    "code": "VP-ARCH",
+    "role": "Vice President of Architecture",
+    "department": "Engineering",
+    "tier": 1,
+    "nickname": "Whiteboard",
+    "prompt": "Avatar for VP-ARCH (Vice President of Architecture) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: experienced professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "015",
+    "code": "DIR-FE",
+    "role": "Director of Frontend Engineering",
+    "department": "Engineering — Frontend",
+    "tier": 2,
+    "nickname": "Pixel",
+    "prompt": "Avatar for DIR-FE (Director of Frontend Engineering) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused, collaborative and pragmatic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "016",
+    "code": "DIR-BE",
+    "role": "Director of Backend Engineering",
+    "department": "Engineering — Backend",
+    "tier": 2,
+    "nickname": "Vault",
+    "prompt": "Avatar for DIR-BE (Director of Backend Engineering) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "017",
+    "code": "DIR-MOB",
+    "role": "Director of Mobile Engineering",
+    "department": "Engineering — Mobile",
+    "tier": 2,
+    "nickname": "Launchpad",
+    "prompt": "Avatar for DIR-MOB (Director of Mobile Engineering) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused, focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "018",
+    "code": "DIR-DATA",
+    "role": "Director of Data Engineering",
+    "department": "Engineering — Data",
+    "tier": 2,
+    "nickname": "Pipeline",
+    "prompt": "Avatar for DIR-DATA (Director of Data Engineering) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "019",
+    "code": "SEM-FE",
+    "role": "Senior Engineering Manager, Frontend",
+    "department": "Engineering — Frontend",
+    "tier": 3,
+    "nickname": "Shield",
+    "prompt": "Avatar for SEM-FE (Senior Engineering Manager, Frontend) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, technical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "020",
+    "code": "SEM-BE",
+    "role": "Senior Engineering Manager, Backend",
+    "department": "Engineering — Backend",
+    "tier": 3,
+    "nickname": "Keeper",
+    "prompt": "Avatar for SEM-BE (Senior Engineering Manager, Backend) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, focused and empathetic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "021",
+    "code": "EM-FE",
+    "role": "Engineering Manager, Frontend",
+    "department": "Engineering — Frontend",
+    "tier": 3,
+    "nickname": "Mosaic",
+    "prompt": "Avatar for EM-FE (Engineering Manager, Frontend) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, focused and pragmatic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "022",
+    "code": "EM-BE",
+    "role": "Engineering Manager, Backend",
+    "department": "Engineering — Backend",
+    "tier": 3,
+    "nickname": "Relay",
+    "prompt": "Avatar for EM-BE (Engineering Manager, Backend) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, focused and pragmatic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "023",
+    "code": "EM-MOB",
+    "role": "Engineering Manager, Mobile",
+    "department": "Engineering — Mobile",
+    "tier": 3,
+    "nickname": "Hangar",
+    "prompt": "Avatar for EM-MOB (Engineering Manager, Mobile) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "024",
+    "code": "EM-DATA",
+    "role": "Engineering Manager, Data",
+    "department": "Engineering — Data",
+    "tier": 3,
+    "nickname": "Faucet",
+    "prompt": "Avatar for EM-DATA (Engineering Manager, Data) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "025",
+    "code": "DIST-ENG",
+    "role": "Distinguished Engineer",
+    "department": "Engineering (Company-wide)",
+    "tier": 4,
+    "nickname": "Oracle",
+    "prompt": "Avatar for DIST-ENG (Distinguished Engineer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: experienced professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, technical and technical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering (company-wide)\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "026",
+    "code": "PRINC-ENG",
+    "role": "Principal Engineer",
+    "department": "Engineering (Multi-team scope)",
+    "tier": 4,
+    "nickname": "Bridges",
+    "prompt": "Avatar for PRINC-ENG (Principal Engineer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, technical and technical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering (multi-team scope)\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "027",
+    "code": "SR-STAFF",
+    "role": "Senior Staff Engineer",
+    "department": "Engineering",
+    "tier": 4,
+    "nickname": "Anchor",
+    "prompt": "Avatar for SR-STAFF (Senior Staff Engineer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, technical and technical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "028",
+    "code": "STAFF-FE",
+    "role": "Staff Frontend Engineer",
+    "department": "Engineering — Frontend",
+    "tier": 4,
+    "nickname": "Canvas",
+    "prompt": "Avatar for STAFF-FE (Staff Frontend Engineer) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, technical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "029",
+    "code": "STAFF-BE",
+    "role": "Staff Backend Engineer",
+    "department": "Engineering — Backend",
+    "tier": 4,
+    "nickname": "Bedrock",
+    "prompt": "Avatar for STAFF-BE (Staff Backend Engineer) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "030",
+    "code": "STAFF-MOB",
+    "role": "Staff Mobile Engineer",
+    "department": "Engineering — Mobile",
+    "tier": 4,
+    "nickname": "Pocket",
+    "prompt": "Avatar for STAFF-MOB (Staff Mobile Engineer) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, technical and focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "031",
+    "code": "STAFF-DATA",
+    "role": "Staff Data Engineer",
+    "department": "Engineering — Data",
+    "tier": 4,
+    "nickname": "Furnace",
+    "prompt": "Avatar for STAFF-DATA (Staff Data Engineer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, technical and focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "032",
+    "code": "SR-FE-REACT",
+    "role": "Senior Frontend Engineer, React",
+    "department": "Engineering — Frontend",
+    "tier": 5,
+    "nickname": "Hooks",
+    "prompt": "Avatar for SR-FE-REACT (Senior Frontend Engineer, React) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "033",
+    "code": "SR-FE-VUE",
+    "role": "Senior Frontend Engineer, Vue",
+    "department": "Engineering — Frontend",
+    "tier": 5,
+    "nickname": "Reactive",
+    "prompt": "Avatar for SR-FE-VUE (Senior Frontend Engineer, Vue) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: young professional, Senior professional, skilled and knowledgeable, confident expertise, focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "034",
+    "code": "SR-BE-NODE",
+    "role": "Senior Backend Engineer, Node.js",
+    "department": "Engineering — Backend",
+    "tier": 5,
+    "nickname": "Eventloop",
+    "prompt": "Avatar for SR-BE-NODE (Senior Backend Engineer, Node.js) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "035",
+    "code": "SR-BE-PY",
+    "role": "Senior Backend Engineer, Python",
+    "department": "Engineering — Backend",
+    "tier": 5,
+    "nickname": "Pythonic",
+    "prompt": "Avatar for SR-BE-PY (Senior Backend Engineer, Python) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "036",
+    "code": "SR-BE-GO",
+    "role": "Senior Backend Engineer, Go",
+    "department": "Engineering — Backend",
+    "tier": 5,
+    "nickname": "Gopher",
+    "prompt": "Avatar for SR-BE-GO (Senior Backend Engineer, Go) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "037",
+    "code": "SR-FS",
+    "role": "Senior Full-Stack Engineer",
+    "department": "Engineering",
+    "tier": 5,
+    "nickname": "Swiss",
+    "prompt": "Avatar for SR-FS (Senior Full-Stack Engineer) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, pragmatic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "038",
+    "code": "SR-MOB-RN",
+    "role": "Senior Mobile Engineer, React Native",
+    "department": "Engineering — Mobile",
+    "tier": 5,
+    "nickname": "Flipper",
+    "prompt": "Avatar for SR-MOB-RN (Senior Mobile Engineer, React Native) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, pragmatic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "039",
+    "code": "SR-MOB-NAT",
+    "role": "Senior Mobile Engineer, Native",
+    "department": "Engineering — Mobile",
+    "tier": 5,
+    "nickname": "Native",
+    "prompt": "Avatar for SR-MOB-NAT (Senior Mobile Engineer, Native) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "040",
+    "code": "SR-DE",
+    "role": "Senior Data Engineer",
+    "department": "Engineering — Data",
+    "tier": 5,
+    "nickname": "Upstream",
+    "prompt": "Avatar for SR-DE (Senior Data Engineer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "041",
+    "code": "SR-DBA",
+    "role": "Senior Database Engineer",
+    "department": "Engineering — Data",
+    "tier": 5,
+    "nickname": "Index",
+    "prompt": "Avatar for SR-DBA (Senior Database Engineer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "042",
+    "code": "FE-ENG",
+    "role": "Mid-Level Frontend Engineer",
+    "department": "Engineering — Frontend",
+    "tier": 6,
+    "nickname": "Gradient",
+    "prompt": "Avatar for FE-ENG (Mid-Level Frontend Engineer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, focused and collaborative expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "043",
+    "code": "BE-ENG",
+    "role": "Mid-Level Backend Engineer",
+    "department": "Engineering — Backend",
+    "tier": 6,
+    "nickname": "Trace",
+    "prompt": "Avatar for BE-ENG (Mid-Level Backend Engineer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "044",
+    "code": "MOB-ENG",
+    "role": "Mid-Level Mobile Engineer",
+    "department": "Engineering — Mobile",
+    "tier": 6,
+    "nickname": "Swipe",
+    "prompt": "Avatar for MOB-ENG (Mid-Level Mobile Engineer) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "045",
+    "code": "FS-ENG",
+    "role": "Mid Full-Stack Engineer",
+    "department": "Engineering",
+    "tier": 6,
+    "nickname": "Stack",
+    "prompt": "Avatar for FS-ENG (Mid Full-Stack Engineer) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, focused expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "046",
+    "code": "DATA-ENG",
+    "role": "Mid-Level Data Engineer",
+    "department": "Engineering — Data",
+    "tier": 6,
+    "nickname": "Catalyst",
+    "prompt": "Avatar for DATA-ENG (Mid-Level Data Engineer) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, methodical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "047",
+    "code": "JR-FE",
+    "role": "Junior Frontend Engineer",
+    "department": "Engineering — Frontend",
+    "tier": 7,
+    "nickname": "Spark",
+    "prompt": "Avatar for JR-FE (Junior Frontend Engineer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — frontend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "048",
+    "code": "JR-BE",
+    "role": "Junior Backend Engineer",
+    "department": "Engineering — Backend",
+    "tier": 7,
+    "nickname": "Rookie",
+    "prompt": "Avatar for JR-BE (Junior Backend Engineer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — backend\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "049",
+    "code": "JR-MOB",
+    "role": "Junior Mobile Engineer",
+    "department": "Engineering — Mobile",
+    "tier": 7,
+    "nickname": "Pixel Scout",
+    "prompt": "Avatar for JR-MOB (Junior Mobile Engineer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic, empathetic expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — mobile\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "050",
+    "code": "JR-DATA-ENG",
+    "role": "Junior Data Engineer",
+    "department": "Engineering — Data",
+    "tier": 7,
+    "nickname": "Seedling",
+    "prompt": "Avatar for JR-DATA-ENG (Junior Data Engineer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering — data\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "051",
+    "code": "TECH-LEAD",
+    "role": "Tech Lead — Role overlay, not a separate level",
+    "department": "Engineering",
+    "tier": 5,
+    "nickname": "Quarterback",
+    "prompt": "Avatar for TECH-LEAD (Tech Lead — Role overlay, not a separate level) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and technical expression\nTheme: technology and innovation, code and circuits, engineering precision\nMood: Professional, confident, approachable, representing expertise in engineering\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "052",
+    "code": "VP-INFRA",
+    "role": "VP of Infrastructure & Platform",
+    "department": "Platform & Infrastructure",
+    "tier": 1,
+    "nickname": "The Bedrock",
+    "prompt": "Avatar for VP-INFRA (VP of Infrastructure & Platform) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: experienced professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, empathetic expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "053",
+    "code": "DIR-CLOUD",
+    "role": "Director of Cloud & DevOps",
+    "department": "Platform & Infrastructure",
+    "tier": 2,
+    "nickname": "Terraformer",
+    "prompt": "Avatar for DIR-CLOUD (Director of Cloud & DevOps) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "054",
+    "code": "DIR-SRE",
+    "role": "Director of Site Reliability",
+    "department": "Platform & Infrastructure",
+    "tier": 2,
+    "nickname": "Steady Hand",
+    "prompt": "Avatar for DIR-SRE (Director of Site Reliability) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "055",
+    "code": "DIR-PLATFORM",
+    "role": "Director of Platform Engineering",
+    "department": "Platform & Infrastructure",
+    "tier": 2,
+    "nickname": "Golden Path",
+    "prompt": "Avatar for DIR-PLATFORM (Director of Platform Engineering) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused, empathetic expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "056",
+    "code": "MGR-DEVOPS",
+    "role": "DevOps Engineering Manager",
+    "department": "Platform & Infrastructure",
+    "tier": 3,
+    "nickname": "Captain Deploy",
+    "prompt": "Avatar for MGR-DEVOPS (DevOps Engineering Manager) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, systematic expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "057",
+    "code": "MGR-SRE",
+    "role": "SRE Manager",
+    "department": "Platform & Infrastructure",
+    "tier": 3,
+    "nickname": "Nightwatch",
+    "prompt": "Avatar for MGR-SRE (SRE Manager) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, methodical and systematic expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "058",
+    "code": "SR-PLATFORM",
+    "role": "Senior Platform Engineer",
+    "department": "Platform & Infrastructure",
+    "tier": 5,
+    "nickname": "Paved Road",
+    "prompt": "Avatar for SR-PLATFORM (Senior Platform Engineer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "059",
+    "code": "PLATFORM-ENG",
+    "role": "Platform Engineer",
+    "department": "Platform & Infrastructure",
+    "tier": 6,
+    "nickname": "Toolsmith",
+    "prompt": "Avatar for PLATFORM-ENG (Platform Engineer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, empathetic expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "060",
+    "code": "SR-DEVOPS",
+    "role": "Senior DevOps Engineer",
+    "department": "Platform & Infrastructure",
+    "tier": 5,
+    "nickname": "Pipeline",
+    "prompt": "Avatar for SR-DEVOPS (Senior DevOps Engineer) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, methodical expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "061",
+    "code": "DEVOPS-ENG",
+    "role": "DevOps Engineer",
+    "department": "Platform & Infrastructure",
+    "tier": 6,
+    "nickname": "Gears",
+    "prompt": "Avatar for DEVOPS-ENG (DevOps Engineer) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "062",
+    "code": "SR-SRE",
+    "role": "Senior SRE",
+    "department": "Platform & Infrastructure",
+    "tier": 5,
+    "nickname": "Error Budget",
+    "prompt": "Avatar for SR-SRE (Senior SRE) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, methodical and focused expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "063",
+    "code": "SRE-ENG",
+    "role": "Site Reliability Engineer",
+    "department": "Platform & Infrastructure",
+    "tier": 6,
+    "nickname": "Signal",
+    "prompt": "Avatar for SRE-ENG (Site Reliability Engineer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, focused expression\nTheme: infrastructure and systems, reliability and scale, architectural thinking\nMood: Professional, confident, approachable, representing expertise in platform & infrastructure\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "064",
+    "code": "VP-PROD",
+    "role": "VP of Product",
+    "department": "Product Management",
+    "tier": 1,
+    "nickname": "North Star",
+    "prompt": "Avatar for VP-PROD (VP of Product) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "065",
+    "code": "DIR-PROD",
+    "role": "Product Director",
+    "department": "Product Management",
+    "tier": 2,
+    "nickname": "The Whisperer",
+    "prompt": "Avatar for DIR-PROD (Product Director) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "066",
+    "code": "GPM",
+    "role": "Group Product Manager",
+    "department": "Product Management",
+    "tier": 3,
+    "nickname": "Compass",
+    "prompt": "Avatar for GPM (Group Product Manager) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, strategic expression\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "067",
+    "code": "SR-PM",
+    "role": "Senior Product Manager",
+    "department": "Product Management",
+    "tier": 5,
+    "nickname": "Shipper",
+    "prompt": "Avatar for SR-PM (Senior Product Manager) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "068",
+    "code": "PM",
+    "role": "Product Manager",
+    "department": "Product Management",
+    "tier": 6,
+    "nickname": "Edge Case",
+    "prompt": "Avatar for PM (Product Manager) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, technical expression\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "069",
+    "code": "TPM-PROD",
+    "role": "Technical Product Manager",
+    "department": "Product Management",
+    "tier": 5,
+    "nickname": "Contract",
+    "prompt": "Avatar for TPM-PROD (Technical Product Manager) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and empathetic expression\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "070",
+    "code": "GROWTH-PM",
+    "role": "Growth Product Manager",
+    "department": "Product Management",
+    "tier": 5,
+    "nickname": "The Loop",
+    "prompt": "Avatar for GROWTH-PM (Growth Product Manager) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "071",
+    "code": "AI-PM",
+    "role": "AI Product Manager",
+    "department": "Product Management",
+    "tier": 5,
+    "nickname": "Guardrail",
+    "prompt": "Avatar for AI-PM (AI Product Manager) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "072",
+    "code": "APM",
+    "role": "Associate Product Manager",
+    "department": "Product Management",
+    "tier": 7,
+    "nickname": "Sponge",
+    "prompt": "Avatar for APM (Associate Product Manager) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "073",
+    "code": "STAFF-PM",
+    "role": "Staff Product Manager",
+    "department": "Product Management",
+    "tier": 4,
+    "nickname": "Architect",
+    "prompt": "Avatar for STAFF-PM (Staff Product Manager) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic\nTheme: product strategy, user focus, market insight\nMood: Professional, confident, approachable, representing expertise in product management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "074",
+    "code": "VP-DES",
+    "role": "VP of Design",
+    "department": "Design",
+    "tier": 1,
+    "nickname": "Canvas",
+    "prompt": "Avatar for VP-DES (VP of Design) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, visionary and strategic expression\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "075",
+    "code": "DIR-DES",
+    "role": "Design Director",
+    "department": "Design",
+    "tier": 2,
+    "nickname": "Conductor",
+    "prompt": "Avatar for DIR-DES (Design Director) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "076",
+    "code": "MGR-UI",
+    "role": "Design Manager — UI",
+    "department": "Design — UI",
+    "tier": 3,
+    "nickname": "Pixel Queen",
+    "prompt": "Avatar for MGR-UI (Design Manager — UI) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, focused and systematic expression\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design — ui\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "077",
+    "code": "MGR-UX",
+    "role": "Design Manager — UX",
+    "department": "Design — UX",
+    "tier": 3,
+    "nickname": "Whiteboard",
+    "prompt": "Avatar for MGR-UX (Design Manager — UX) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design — ux\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "078",
+    "code": "STAFF-DES",
+    "role": "Staff Designer",
+    "department": "Design",
+    "tier": 4,
+    "nickname": "Benchmark",
+    "prompt": "Avatar for STAFF-DES (Staff Designer) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "079",
+    "code": "SR-PROD-DES",
+    "role": "Senior Product Designer",
+    "department": "Design",
+    "tier": 5,
+    "nickname": "Swiss Army",
+    "prompt": "Avatar for SR-PROD-DES (Senior Product Designer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "080",
+    "code": "SR-UID",
+    "role": "Senior UI Designer",
+    "department": "Design — UI",
+    "tier": 5,
+    "nickname": "Type Scale",
+    "prompt": "Avatar for SR-UID (Senior UI Designer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design — ui\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "081",
+    "code": "SR-UXD",
+    "role": "Senior UX Designer",
+    "department": "Design — UX",
+    "tier": 5,
+    "nickname": "Flowchart",
+    "prompt": "Avatar for SR-UXD (Senior UX Designer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, systematic expression\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design — ux\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "082",
+    "code": "PROD-DES",
+    "role": "Product Designer",
+    "department": "Design",
+    "tier": 6,
+    "nickname": "Sketch",
+    "prompt": "Avatar for PROD-DES (Product Designer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, creative expression\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "083",
+    "code": "UI-DES",
+    "role": "UI Designer",
+    "department": "Design — UI",
+    "tier": 6,
+    "nickname": "Component",
+    "prompt": "Avatar for UI-DES (UI Designer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design — ui\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "084",
+    "code": "JR-DES",
+    "role": "Junior Designer",
+    "department": "Design",
+    "tier": 7,
+    "nickname": "Fresh Eyes",
+    "prompt": "Avatar for JR-DES (Junior Designer) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "085",
+    "code": "UXR",
+    "role": "UX Researcher",
+    "department": "Design",
+    "tier": 5,
+    "nickname": "The Listener",
+    "prompt": "Avatar for UXR (UX Researcher) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "086",
+    "code": "CONTENT-DES",
+    "role": "Content Designer / UX Writer",
+    "department": "Design",
+    "tier": 5,
+    "nickname": "Wordsmith",
+    "prompt": "Avatar for CONTENT-DES (Content Designer / UX Writer) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and empathetic expression\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "087",
+    "code": "MOTION-DES",
+    "role": "Motion Designer",
+    "department": "Design — UI",
+    "tier": 5,
+    "nickname": "Keyframe",
+    "prompt": "Avatar for MOTION-DES (Motion Designer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: young professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: creativity and aesthetics, visual thinking, design excellence\nMood: Professional, confident, approachable, representing expertise in design — ui\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "088",
+    "code": "VP-AI",
+    "role": "VP of AI & Data",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 1,
+    "nickname": "The Professor",
+    "prompt": "Avatar for VP-AI (VP of AI & Data) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, pragmatic expression\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "089",
+    "code": "DIR-DS",
+    "role": "Director of Data Science",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 2,
+    "nickname": "Bayesian",
+    "prompt": "Avatar for DIR-DS (Director of Data Science) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "090",
+    "code": "DIR-MLE",
+    "role": "Director of ML Engineering",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 2,
+    "nickname": "Pipeline",
+    "prompt": "Avatar for DIR-MLE (Director of ML Engineering) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "091",
+    "code": "DIR-AIE",
+    "role": "Director of AI Engineering",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 2,
+    "nickname": "Prompt Whisperer",
+    "prompt": "Avatar for DIR-AIE (Director of AI Engineering) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused, pragmatic expression\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "092",
+    "code": "STAFF-DS",
+    "role": "Staff Data Scientist",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 4,
+    "nickname": "Matrix",
+    "prompt": "Avatar for STAFF-DS (Staff Data Scientist) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic, analytical and technical expression\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "093",
+    "code": "SR-DS",
+    "role": "Senior Data Scientist",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 5,
+    "nickname": "Scatter Plot",
+    "prompt": "Avatar for SR-DS (Senior Data Scientist) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical expression\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "094",
+    "code": "DS",
+    "role": "Data Scientist",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 6,
+    "nickname": "Notebook",
+    "prompt": "Avatar for DS (Data Scientist) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, analytical expression\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "095",
+    "code": "SR-MLE",
+    "role": "Senior ML Engineer",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 5,
+    "nickname": "Tensor",
+    "prompt": "Avatar for SR-MLE (Senior ML Engineer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "096",
+    "code": "MLE",
+    "role": "ML Engineer",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 6,
+    "nickname": "Docker",
+    "prompt": "Avatar for MLE (ML Engineer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, focused expression\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "097",
+    "code": "SR-AIE",
+    "role": "Senior AI Engineer",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 5,
+    "nickname": "Embeddings",
+    "prompt": "Avatar for SR-AIE (Senior AI Engineer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "098",
+    "code": "AI-RES",
+    "role": "AI/ML Research Scientist",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 5,
+    "nickname": "ArXiv",
+    "prompt": "Avatar for AI-RES (AI/ML Research Scientist) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "099",
+    "code": "AI-ETHICS",
+    "role": "AI Ethics Researcher",
+    "department": "Data Science &amp; AI/ML",
+    "tier": 5,
+    "nickname": "Compass",
+    "prompt": "Avatar for AI-ETHICS (AI Ethics Researcher) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: data and intelligence, analytical depth, machine learning\nMood: Professional, confident, approachable, representing expertise in data science &amp; ai/ml\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "100",
+    "code": "DIR-QA",
+    "role": "Director of Quality Assurance",
+    "department": "Quality Assurance",
+    "tier": 2,
+    "nickname": "The Gatekeeper",
+    "prompt": "Avatar for DIR-QA (Director of Quality Assurance) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "101",
+    "code": "MGR-QA",
+    "role": "QA Manager",
+    "department": "Quality Assurance",
+    "tier": 3,
+    "nickname": "Sherlock",
+    "prompt": "Avatar for MGR-QA (QA Manager) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "102",
+    "code": "SR-QA-AUTO",
+    "role": "Senior QA Engineer / SDET",
+    "department": "Quality Assurance",
+    "tier": 5,
+    "nickname": "Flake Hunter",
+    "prompt": "Avatar for SR-QA-AUTO (Senior QA Engineer / SDET) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "103",
+    "code": "SR-QA-MAN",
+    "role": "Senior QA Engineer",
+    "department": "Quality Assurance",
+    "tier": 5,
+    "nickname": "Eagle Eye",
+    "prompt": "Avatar for SR-QA-MAN (Senior QA Engineer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "104",
+    "code": "QA-ENG",
+    "role": "QA Engineer",
+    "department": "Quality Assurance",
+    "tier": 6,
+    "nickname": "Checkpoint",
+    "prompt": "Avatar for QA-ENG (QA Engineer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, collaborative expression\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "105",
+    "code": "JR-QA",
+    "role": "Junior QA Analyst",
+    "department": "Quality Assurance",
+    "tier": 7,
+    "nickname": "Fresh Eyes",
+    "prompt": "Avatar for JR-QA (Junior QA Analyst) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "106",
+    "code": "PERF-TEST",
+    "role": "Performance Test Engineer",
+    "department": "Quality Assurance",
+    "tier": 5,
+    "nickname": "P99",
+    "prompt": "Avatar for PERF-TEST (Performance Test Engineer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "107",
+    "code": "A11Y-TEST",
+    "role": "Accessibility Test Engineer",
+    "department": "Quality Assurance",
+    "tier": 5,
+    "nickname": "Screen Reader",
+    "prompt": "Avatar for A11Y-TEST (Accessibility Test Engineer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: quality and testing, precision and standards, systematic validation\nMood: Professional, confident, approachable, representing expertise in quality assurance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "108",
+    "code": "DIR-SEC",
+    "role": "Director of Security",
+    "department": "Security",
+    "tier": 2,
+    "nickname": "Sentinel",
+    "prompt": "Avatar for DIR-SEC (Director of Security) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused, technical and methodical expression\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "109",
+    "code": "SR-SEC-ENG",
+    "role": "Senior Security Engineer",
+    "department": "Security",
+    "tier": 5,
+    "nickname": "Firewall",
+    "prompt": "Avatar for SR-SEC-ENG (Senior Security Engineer) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, empathetic expression\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "110",
+    "code": "APPSEC",
+    "role": "Application Security Engineer",
+    "department": "Security",
+    "tier": 5,
+    "nickname": "Zero Day",
+    "prompt": "Avatar for APPSEC (Application Security Engineer) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "111",
+    "code": "SEC-ENG",
+    "role": "Security Engineer",
+    "department": "Security",
+    "tier": 6,
+    "nickname": "Locksmith",
+    "prompt": "Avatar for SEC-ENG (Security Engineer) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, methodical expression\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "112",
+    "code": "PENTEST",
+    "role": "Penetration Tester / Red Team",
+    "department": "Security",
+    "tier": 5,
+    "nickname": "Ghost",
+    "prompt": "Avatar for PENTEST (Penetration Tester / Red Team) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "113",
+    "code": "SOC-ANALYST",
+    "role": "Security Analyst",
+    "department": "Security",
+    "tier": 6,
+    "nickname": "Watchtower",
+    "prompt": "Avatar for SOC-ANALYST (Security Analyst) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "114",
+    "code": "IR-LEAD",
+    "role": "Incident Response Lead",
+    "department": "Security",
+    "tier": 5,
+    "nickname": "Coolhand",
+    "prompt": "Avatar for IR-LEAD (Incident Response Lead) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, methodical and technical expression\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "115",
+    "code": "GRC-SPEC",
+    "role": "GRC Specialist",
+    "department": "Security",
+    "tier": 5,
+    "nickname": "Audit Trail",
+    "prompt": "Avatar for GRC-SPEC (GRC Specialist) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: security and protection, vigilance and defense, cryptographic elements\nMood: Professional, confident, approachable, representing expertise in security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "116",
+    "code": "VP-SALES",
+    "role": "VP of Sales",
+    "department": "Sales & Revenue",
+    "tier": 1,
+    "nickname": "The Closer",
+    "prompt": "Avatar for VP-SALES (VP of Sales) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, strategic expression\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "117",
+    "code": "DIR-SALES",
+    "role": "Director of Sales",
+    "department": "Sales & Revenue",
+    "tier": 2,
+    "nickname": "Quartermaster",
+    "prompt": "Avatar for DIR-SALES (Director of Sales) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "118",
+    "code": "MGR-SALES",
+    "role": "Sales Manager",
+    "department": "Sales & Revenue",
+    "tier": 3,
+    "nickname": "Coach",
+    "prompt": "Avatar for MGR-SALES (Sales Manager) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "119",
+    "code": "ENT-AE",
+    "role": "Enterprise Account Executive",
+    "department": "Sales & Revenue",
+    "tier": 5,
+    "nickname": "Rainmaker",
+    "prompt": "Avatar for ENT-AE (Enterprise Account Executive) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, strategic expression\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "120",
+    "code": "AE",
+    "role": "Account Executive",
+    "department": "Sales & Revenue",
+    "tier": 6,
+    "nickname": "Handshake",
+    "prompt": "Avatar for AE (Account Executive) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "121",
+    "code": "BDR",
+    "role": "Business Development Representative",
+    "department": "Sales & Revenue",
+    "tier": 7,
+    "nickname": "Spark Plug",
+    "prompt": "Avatar for BDR (Business Development Representative) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "122",
+    "code": "SALES-ENG",
+    "role": "Sales Engineer / Solutions Engineer",
+    "department": "Sales & Revenue",
+    "tier": 5,
+    "nickname": "The Translator",
+    "prompt": "Avatar for SALES-ENG (Sales Engineer / Solutions Engineer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and technical expression\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "123",
+    "code": "SOL-ARCH",
+    "role": "Solutions Architect",
+    "department": "Sales & Revenue",
+    "tier": 5,
+    "nickname": "Blueprint",
+    "prompt": "Avatar for SOL-ARCH (Solutions Architect) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and technical expression\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "124",
+    "code": "ACCT-MGR",
+    "role": "Account Manager",
+    "department": "Sales & Revenue",
+    "tier": 6,
+    "nickname": "Velvet Rope",
+    "prompt": "Avatar for ACCT-MGR (Account Manager) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Mid-level professional, energetic and determined, growth-oriented, strategic and technical expression\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "125",
+    "code": "REVOPS",
+    "role": "Revenue Operations Analyst",
+    "department": "Sales & Revenue",
+    "tier": 5,
+    "nickname": "The Mechanic",
+    "prompt": "Avatar for REVOPS (Revenue Operations Analyst) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: young professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: business and revenue, ambition and results, deal-making energy\nMood: Professional, confident, approachable, representing expertise in sales & revenue\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "126",
+    "code": "VP-MKT",
+    "role": "VP of Marketing",
+    "department": "Marketing",
+    "tier": 1,
+    "nickname": "Megaphone",
+    "prompt": "Avatar for VP-MKT (VP of Marketing) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, collaborative expression\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "127",
+    "code": "PMM",
+    "role": "Product Marketing Manager",
+    "department": "Marketing",
+    "tier": 5,
+    "nickname": "Storyline",
+    "prompt": "Avatar for PMM (Product Marketing Manager) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical expression\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "128",
+    "code": "GROWTH-MKT",
+    "role": "Growth / Performance Marketer",
+    "department": "Marketing",
+    "tier": 6,
+    "nickname": "The Optimizer",
+    "prompt": "Avatar for GROWTH-MKT (Growth / Performance Marketer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, systematic and focused expression\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "129",
+    "code": "CONTENT-MKT",
+    "role": "Content Marketer",
+    "department": "Marketing",
+    "tier": 5,
+    "nickname": "Wordsmith",
+    "prompt": "Avatar for CONTENT-MKT (Content Marketer) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and focused expression\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "130",
+    "code": "DEMGEN",
+    "role": "Demand Generation Manager",
+    "department": "Marketing",
+    "tier": 5,
+    "nickname": "Funnel Queen",
+    "prompt": "Avatar for DEMGEN (Demand Generation Manager) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "131",
+    "code": "MOPs",
+    "role": "Marketing Operations Analyst",
+    "department": "Marketing",
+    "tier": 6,
+    "nickname": "Switchboard",
+    "prompt": "Avatar for MOPs (Marketing Operations Analyst) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, creative expression\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "132",
+    "code": "SOCIAL-MGR",
+    "role": "Social Media Manager",
+    "department": "Marketing",
+    "tier": 6,
+    "nickname": "The Voice",
+    "prompt": "Avatar for SOCIAL-MGR (Social Media Manager) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "133",
+    "code": "PR-MGR",
+    "role": "Communications / PR Manager",
+    "department": "Marketing",
+    "tier": 5,
+    "nickname": "Headline",
+    "prompt": "Avatar for PR-MGR (Communications / PR Manager) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "134",
+    "code": "EVENTS-MGR",
+    "role": "Events Marketing Manager",
+    "department": "Marketing",
+    "tier": 6,
+    "nickname": "Ringmaster",
+    "prompt": "Avatar for EVENTS-MGR (Events Marketing Manager) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: marketing and storytelling, brand and messaging, creative communication\nMood: Professional, confident, approachable, representing expertise in marketing\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "135",
+    "code": "VP-CS",
+    "role": "VP of Customer Success",
+    "department": "Customer Success &amp; Support",
+    "tier": 1,
+    "nickname": "The Guardian",
+    "prompt": "Avatar for VP-CS (VP of Customer Success) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, focused expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "136",
+    "code": "MGR-CS",
+    "role": "CS Manager",
+    "department": "Customer Success &amp; Support",
+    "tier": 3,
+    "nickname": "Lifeline",
+    "prompt": "Avatar for MGR-CS (CS Manager) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "137",
+    "code": "SR-CSM",
+    "role": "Senior Customer Success Manager",
+    "department": "Customer Success &amp; Support",
+    "tier": 5,
+    "nickname": "The Anchor",
+    "prompt": "Avatar for SR-CSM (Senior Customer Success Manager) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, strategic and focused expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "138",
+    "code": "CSM",
+    "role": "Customer Success Manager",
+    "department": "Customer Success &amp; Support",
+    "tier": 6,
+    "nickname": "Velvet Glove",
+    "prompt": "Avatar for CSM (Customer Success Manager) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, strategic and empathetic expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "139",
+    "code": "TAM",
+    "role": "Technical Account Manager",
+    "department": "Customer Success &amp; Support",
+    "tier": 5,
+    "nickname": "The Fixer",
+    "prompt": "Avatar for TAM (Technical Account Manager) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and technical expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "140",
+    "code": "ONBOARD-SPEC",
+    "role": "Onboarding Specialist",
+    "department": "Customer Success &amp; Support",
+    "tier": 6,
+    "nickname": "Welcome Wagon",
+    "prompt": "Avatar for ONBOARD-SPEC (Onboarding Specialist) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, technical expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "141",
+    "code": "SUPPORT-T2",
+    "role": "Support Engineer — Tier 2",
+    "department": "Customer Success &amp; Support",
+    "tier": 6,
+    "nickname": "Sherlock",
+    "prompt": "Avatar for SUPPORT-T2 (Support Engineer — Tier 2) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Mid-level professional, energetic and determined, growth-oriented, methodical and technical expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "142",
+    "code": "SUPPORT-T1",
+    "role": "Support Engineer — Tier 1",
+    "department": "Customer Success &amp; Support",
+    "tier": 7,
+    "nickname": "First Responder",
+    "prompt": "Avatar for SUPPORT-T1 (Support Engineer — Tier 1) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: young professional, Junior professional, eager and fresh, bright and optimistic, empathetic and empathetic expression\nTheme: customer success, empathy and service, relationship building\nMood: Professional, confident, approachable, representing expertise in customer success &amp; support\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "143",
+    "code": "VP-PEOPLE",
+    "role": "VP of People",
+    "department": "People / HR",
+    "tier": 1,
+    "nickname": "Culture Club",
+    "prompt": "Avatar for VP-PEOPLE (VP of People) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, empathetic expression\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "144",
+    "code": "SR-RECRUITER",
+    "role": "Senior Technical Recruiter",
+    "department": "People / HR",
+    "tier": 5,
+    "nickname": "Talent Scout",
+    "prompt": "Avatar for SR-RECRUITER (Senior Technical Recruiter) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, strategic and technical expression\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "145",
+    "code": "RECRUITER",
+    "role": "Recruiter",
+    "department": "People / HR",
+    "tier": 6,
+    "nickname": "The Matchmaker",
+    "prompt": "Avatar for RECRUITER (Recruiter) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, empathetic expression\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "146",
+    "code": "HRBP",
+    "role": "HR Business Partner",
+    "department": "People / HR",
+    "tier": 5,
+    "nickname": "The Counselor",
+    "prompt": "Avatar for HRBP (HR Business Partner) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, strategic and pragmatic expression\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "147",
+    "code": "L&D-MGR",
+    "role": "L&D Manager",
+    "department": "People / HR",
+    "tier": 3,
+    "nickname": "Spark",
+    "prompt": "Avatar for L&D-MGR (L&D Manager) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "148",
+    "code": "COMP-ANALYST",
+    "role": "Compensation &amp; Benefits Analyst",
+    "department": "People / HR",
+    "tier": 6,
+    "nickname": "Fair Share",
+    "prompt": "Avatar for COMP-ANALYST (Compensation &amp; Benefits Analyst) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "149",
+    "code": "PPL-ANALYTICS",
+    "role": "People Analytics Specialist",
+    "department": "People / HR",
+    "tier": 6,
+    "nickname": "The Pulse",
+    "prompt": "Avatar for PPL-ANALYTICS (People Analytics Specialist) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: people and culture, humanity and growth, organizational development\nMood: Professional, confident, approachable, representing expertise in people / hr\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "150",
+    "code": "VP-FIN",
+    "role": "Vice President of Finance",
+    "department": "Finance & Accounting",
+    "tier": 1,
+    "nickname": "The Ledger",
+    "prompt": "Avatar for VP-FIN (Vice President of Finance) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: experienced professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence, strategic expression\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "151",
+    "code": "FPA-MGR",
+    "role": "Financial Planning & Analysis Manager",
+    "department": "Finance & Accounting",
+    "tier": 3,
+    "nickname": "Crystal Ball",
+    "prompt": "Avatar for FPA-MGR (Financial Planning & Analysis Manager) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Manager, collaborative and organized, approachable yet authoritative, strategic and strategic expression\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "152",
+    "code": "FIN-ANALYST",
+    "role": "Financial Analyst",
+    "department": "Finance & Accounting",
+    "tier": 6,
+    "nickname": "Penny",
+    "prompt": "Avatar for FIN-ANALYST (Financial Analyst) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "153",
+    "code": "CONTROLLER",
+    "role": "Controller",
+    "department": "Finance & Accounting",
+    "tier": 5,
+    "nickname": "Ironclad",
+    "prompt": "Avatar for CONTROLLER (Controller) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "154",
+    "code": "REV-REC",
+    "role": "Revenue Recognition Specialist",
+    "department": "Finance & Accounting",
+    "tier": 6,
+    "nickname": "606",
+    "prompt": "Avatar for REV-REC (Revenue Recognition Specialist) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "155",
+    "code": "PROCUREMENT",
+    "role": "Procurement Specialist",
+    "department": "Finance & Accounting",
+    "tier": 5,
+    "nickname": "The Negotiator",
+    "prompt": "Avatar for PROCUREMENT (Procurement Specialist) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, strategic and strategic expression\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "156",
+    "code": "EQUITY-ADMIN",
+    "role": "Equity Administration Specialist",
+    "department": "Finance & Accounting",
+    "tier": 6,
+    "nickname": "Cap Table",
+    "prompt": "Avatar for EQUITY-ADMIN (Equity Administration Specialist) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: finance and metrics, precision and accountability, fiscal wisdom\nMood: Professional, confident, approachable, representing expertise in finance & accounting\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "157",
+    "code": "VP-LEGAL",
+    "role": "Vice President of Legal",
+    "department": "Legal & Compliance",
+    "tier": 1,
+    "nickname": "The Shield",
+    "prompt": "Avatar for VP-LEGAL (Vice President of Legal) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Senior leadership, strategic thinker, polished and sophisticated, inspiring confidence\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal & compliance\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "158",
+    "code": "CONTRACTS",
+    "role": "Contracts Manager",
+    "department": "Legal",
+    "tier": 5,
+    "nickname": "Red Line",
+    "prompt": "Avatar for CONTRACTS (Contracts Manager) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "159",
+    "code": "IP-COUNSEL",
+    "role": "IP Counsel",
+    "department": "Legal",
+    "tier": 5,
+    "nickname": "Clause",
+    "prompt": "Avatar for IP-COUNSEL (IP Counsel) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, strategic expression\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "160",
+    "code": "PRIVACY",
+    "role": "Privacy / DPO Officer",
+    "department": "Legal",
+    "tier": 5,
+    "nickname": "The Sentinel",
+    "prompt": "Avatar for PRIVACY (Privacy / DPO Officer) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "161",
+    "code": "PROD-COUNSEL",
+    "role": "Product Counsel",
+    "department": "Legal",
+    "tier": 5,
+    "nickname": "Green Light",
+    "prompt": "Avatar for PROD-COUNSEL (Product Counsel) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "162",
+    "code": "COMPLIANCE",
+    "role": "Regulatory Compliance Coordinator",
+    "department": "Legal",
+    "tier": 5,
+    "nickname": "Checkpoint",
+    "prompt": "Avatar for COMPLIANCE (Regulatory Compliance Coordinator) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "163",
+    "code": "PARALEGAL",
+    "role": "Paralegal / Legal Operations",
+    "department": "Legal",
+    "tier": 6,
+    "nickname": "Backbone",
+    "prompt": "Avatar for PARALEGAL (Paralegal / Legal Operations) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: legal and compliance, justice and ethics, regulatory expertise\nMood: Professional, confident, approachable, representing expertise in legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "164",
+    "code": "DIR-IT",
+    "role": "Director of IT & Operations",
+    "department": "IT & Operations",
+    "tier": 2,
+    "nickname": "Root Access",
+    "prompt": "Avatar for DIR-IT (Director of IT & Operations) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: operations and efficiency, systems and process, operational excellence\nMood: Professional, confident, approachable, representing expertise in it & operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "165",
+    "code": "SYSADMIN",
+    "role": "Systems Administrator",
+    "department": "IT & Operations",
+    "tier": 6,
+    "nickname": "Uptime",
+    "prompt": "Avatar for SYSADMIN (Systems Administrator) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: operations and efficiency, systems and process, operational excellence\nMood: Professional, confident, approachable, representing expertise in it & operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "166",
+    "code": "IT-SUPPORT",
+    "role": "IT Support Specialist",
+    "department": "IT & Operations",
+    "tier": 6,
+    "nickname": "Helpdesk Hero",
+    "prompt": "Avatar for IT-SUPPORT (IT Support Specialist) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, technical and technical expression\nTheme: operations and efficiency, systems and process, operational excellence\nMood: Professional, confident, approachable, representing expertise in it & operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "167",
+    "code": "ENT-APPS",
+    "role": "Enterprise Apps Administrator",
+    "department": "IT & Operations",
+    "tier": 6,
+    "nickname": "Patchwork",
+    "prompt": "Avatar for ENT-APPS (Enterprise Apps Administrator) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: operations and efficiency, systems and process, operational excellence\nMood: Professional, confident, approachable, representing expertise in it & operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "168",
+    "code": "BI-ANALYST",
+    "role": "Business Intelligence Analyst",
+    "department": "IT & Operations",
+    "tier": 6,
+    "nickname": "Signal",
+    "prompt": "Avatar for BI-ANALYST (Business Intelligence Analyst) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: operations and efficiency, systems and process, operational excellence\nMood: Professional, confident, approachable, representing expertise in it & operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "169",
+    "code": "DIR-DEVREL",
+    "role": "Director of Developer Relations",
+    "department": "Developer Relations",
+    "tier": 2,
+    "nickname": "The Connector",
+    "prompt": "Avatar for DIR-DEVREL (Director of Developer Relations) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused, empathetic expression\nTheme: developer relations, community and code, technical evangelism\nMood: Professional, confident, approachable, representing expertise in developer relations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "170",
+    "code": "SR-DEV-ADV",
+    "role": "Senior Developer Advocate",
+    "department": "Developer Relations",
+    "tier": 5,
+    "nickname": "Mic Drop",
+    "prompt": "Avatar for SR-DEV-ADV (Senior Developer Advocate) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical and empathetic expression\nTheme: developer relations, community and code, technical evangelism\nMood: Professional, confident, approachable, representing expertise in developer relations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "171",
+    "code": "DEV-ADV",
+    "role": "Developer Advocate",
+    "department": "Developer Relations",
+    "tier": 6,
+    "nickname": "Tutorial",
+    "prompt": "Avatar for DEV-ADV (Developer Advocate) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, technical and technical expression\nTheme: developer relations, community and code, technical evangelism\nMood: Professional, confident, approachable, representing expertise in developer relations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "172",
+    "code": "DRE",
+    "role": "Developer Relations Engineer",
+    "department": "Developer Relations",
+    "tier": 5,
+    "nickname": "SDK",
+    "prompt": "Avatar for DRE (Developer Relations Engineer) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: developer relations, community and code, technical evangelism\nMood: Professional, confident, approachable, representing expertise in developer relations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "173",
+    "code": "DEV-COMMUNITY",
+    "role": "Developer Community Manager",
+    "department": "Developer Relations",
+    "tier": 6,
+    "nickname": "Community",
+    "prompt": "Avatar for DEV-COMMUNITY (Developer Community Manager) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, technical expression\nTheme: developer relations, community and code, technical evangelism\nMood: Professional, confident, approachable, representing expertise in developer relations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "174",
+    "code": "DIR-PMO",
+    "role": "Director of Program Management",
+    "department": "Program Management",
+    "tier": 2,
+    "nickname": "Air Traffic",
+    "prompt": "Avatar for DIR-PMO (Director of Program Management) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Director-level professional, decisive and experienced, sharp and focused\nTheme: program management, coordination and delivery, orchestration\nMood: Professional, confident, approachable, representing expertise in program management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "175",
+    "code": "SR-TPM",
+    "role": "Senior Technical Program Manager",
+    "department": "Program Management",
+    "tier": 4,
+    "nickname": "Compass",
+    "prompt": "Avatar for SR-TPM (Senior Technical Program Manager) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Staff engineer, innovative and thoughtful, creative problem-solver aesthetic\nTheme: program management, coordination and delivery, orchestration\nMood: Professional, confident, approachable, representing expertise in program management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "176",
+    "code": "TPM",
+    "role": "Technical Program Manager",
+    "department": "Program Management",
+    "tier": 6,
+    "nickname": "Tracker",
+    "prompt": "Avatar for TPM (Technical Program Manager) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, focused expression\nTheme: program management, coordination and delivery, orchestration\nMood: Professional, confident, approachable, representing expertise in program management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "177",
+    "code": "SCRUM",
+    "role": "Scrum Master / Agile Coach",
+    "department": "Program Management",
+    "tier": 5,
+    "nickname": "Flow",
+    "prompt": "Avatar for SCRUM (Scrum Master / Agile Coach) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise\nTheme: program management, coordination and delivery, orchestration\nMood: Professional, confident, approachable, representing expertise in program management\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "178",
+    "code": "SR-TW",
+    "role": "Senior Technical Writer",
+    "department": "Documentation",
+    "tier": 5,
+    "nickname": "Wordsmith",
+    "prompt": "Avatar for SR-TW (Senior Technical Writer) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Senior professional, skilled and knowledgeable, confident expertise, technical expression\nTheme: documentation and knowledge, clarity and structure, information architecture\nMood: Professional, confident, approachable, representing expertise in documentation\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "179",
+    "code": "TW",
+    "role": "Technical Writer",
+    "department": "Documentation",
+    "tier": 6,
+    "nickname": "Scribe",
+    "prompt": "Avatar for TW (Technical Writer) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented, technical expression\nTheme: documentation and knowledge, clarity and structure, information architecture\nMood: Professional, confident, approachable, representing expertise in documentation\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "180",
+    "code": "KB-MGR",
+    "role": "Knowledge Base Manager",
+    "department": "Documentation",
+    "tier": 6,
+    "nickname": "Librarian",
+    "prompt": "Avatar for KB-MGR (Knowledge Base Manager) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: young professional, Mid-level professional, energetic and determined, growth-oriented\nTheme: documentation and knowledge, clarity and structure, information architecture\nMood: Professional, confident, approachable, representing expertise in documentation\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "181",
+    "code": "ARB-AGENT",
+    "role": "Architecture Review Board Agent",
+    "department": "Governance — Architecture",
+    "tier": 8,
+    "nickname": "Gatekeeper",
+    "prompt": "Avatar for ARB-AGENT (Architecture Review Board Agent) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Governance specialist, analytical and precise, systematic and thorough, technical expression\nTheme: governance and oversight, authority and standards, gatekeeping\nMood: Professional, confident, approachable, representing expertise in governance — architecture\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "182",
+    "code": "SEC-REVIEW",
+    "role": "Security Review Agent",
+    "department": "Governance — Security",
+    "tier": 8,
+    "nickname": "Sentinel",
+    "prompt": "Avatar for SEC-REVIEW (Security Review Agent) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Governance specialist, analytical and precise, systematic and thorough\nTheme: governance and oversight, authority and standards, gatekeeping\nMood: Professional, confident, approachable, representing expertise in governance — security\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "183",
+    "code": "LEGAL-REVIEW",
+    "role": "Legal Review Agent",
+    "department": "Governance — Legal",
+    "tier": 8,
+    "nickname": "Fine Print",
+    "prompt": "Avatar for LEGAL-REVIEW (Legal Review Agent) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Governance specialist, analytical and precise, systematic and thorough, focused expression\nTheme: governance and oversight, authority and standards, gatekeeping\nMood: Professional, confident, approachable, representing expertise in governance — legal\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "184",
+    "code": "QA-GATE",
+    "role": "Quality Gate Agent",
+    "department": "Governance — Quality",
+    "tier": 8,
+    "nickname": "Checkpoint",
+    "prompt": "Avatar for QA-GATE (Quality Gate Agent) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Governance specialist, analytical and precise, systematic and thorough\nTheme: governance and oversight, authority and standards, gatekeeping\nMood: Professional, confident, approachable, representing expertise in governance — quality\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "185",
+    "code": "REL-APPROVE",
+    "role": "Release Approval Agent",
+    "department": "Governance — Release",
+    "tier": 8,
+    "nickname": "Green Light",
+    "prompt": "Avatar for REL-APPROVE (Release Approval Agent) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Governance specialist, analytical and precise, systematic and thorough\nTheme: governance and oversight, authority and standards, gatekeeping\nMood: Professional, confident, approachable, representing expertise in governance — release\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "186",
+    "code": "CHANGE-MGR",
+    "role": "Change Management Agent",
+    "department": "Governance — Operations",
+    "tier": 8,
+    "nickname": "Switchboard",
+    "prompt": "Avatar for CHANGE-MGR (Change Management Agent) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Governance specialist, analytical and precise, systematic and thorough\nTheme: governance and oversight, authority and standards, gatekeeping\nMood: Professional, confident, approachable, representing expertise in governance — operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "187",
+    "code": "DISC-AGENT",
+    "role": "Discovery Agent",
+    "department": "Special — Pre-Sales / Discovery",
+    "tier": 9,
+    "nickname": "Sherlock",
+    "prompt": "Avatar for DISC-AGENT (Discovery Agent) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character, technical expression\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — pre-sales / discovery\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "188",
+    "code": "EST-AGENT",
+    "role": "Estimation Agent",
+    "department": "Special — Pre-Sales / Estimation",
+    "tier": 9,
+    "nickname": "Abacus",
+    "prompt": "Avatar for EST-AGENT (Estimation Agent) at NEXUS AI.\nStyle: illustrated avatar, vector art style, clean lines, modern design\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — pre-sales / estimation\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "189",
+    "code": "DEMO-AGENT",
+    "role": "Demo Agent",
+    "department": "Special — Demo / Milestone",
+    "tier": 9,
+    "nickname": "Showtime",
+    "prompt": "Avatar for DEMO-AGENT (Demo Agent) at NEXUS AI.\nStyle: 3D rendered character, stylized realism, soft lighting, professional\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — demo / milestone\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "190",
+    "code": "HANDOFF-AGENT",
+    "role": "Handoff Agent",
+    "department": "Special — Delivery / Post-Delivery",
+    "tier": 9,
+    "nickname": "Bridge",
+    "prompt": "Avatar for HANDOFF-AGENT (Handoff Agent) at NEXUS AI.\nStyle: isometric character design, corporate theme, vibrant colors\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — delivery / post-delivery\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "191",
+    "code": "MAINT-AGENT",
+    "role": "Maintenance Agent",
+    "department": "Special — Post-Delivery Operations",
+    "tier": 9,
+    "nickname": "Keeper",
+    "prompt": "Avatar for MAINT-AGENT (Maintenance Agent) at NEXUS AI.\nStyle: flat design illustration, minimal, geometric, professional\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — post-delivery operations\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "192",
+    "code": "INNOVATION-AGENT",
+    "role": "Innovation Lab Agent",
+    "department": "Special — Innovation",
+    "tier": 9,
+    "nickname": "Spark Plug",
+    "prompt": "Avatar for INNOVATION-AGENT (Innovation Lab Agent) at NEXUS AI.\nStyle: professional headshot, clean background, sharp focus, corporate aesthetic\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — innovation\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "193",
+    "code": "RETRO-AGENT",
+    "role": "Retrospective &amp; Learning Agent",
+    "department": "Special — Continuous Improvement",
+    "tier": 9,
+    "nickname": "Mirror",
+    "prompt": "Avatar for RETRO-AGENT (Retrospective &amp; Learning Agent) at NEXUS AI.\nStyle: tech industry portrait, modern office setting, contemporary lighting\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — continuous improvement\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "194",
+    "code": "ONBOARD-AGENT",
+    "role": "Agent Onboarding Agent",
+    "department": "Special — Meta / System",
+    "tier": 9,
+    "nickname": "Welcome Wagon",
+    "prompt": "Avatar for ONBOARD-AGENT (Agent Onboarding Agent) at NEXUS AI.\nStyle: minimalist portrait, abstract geometric background, bold colors\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — meta / system\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  },
+  {
+    "agent_number": "195",
+    "code": "NEXUS-ORCHESTRATOR",
+    "role": "System Orchestrator",
+    "department": "Special — Meta / System",
+    "tier": 9,
+    "nickname": "Maestro",
+    "prompt": "Avatar for NEXUS-ORCHESTRATOR (System Orchestrator) at NEXUS AI.\nStyle: cinematic portrait, dramatic lighting, shallow depth of field\nCharacter: mid-career professional, Special operations, unique and strategic, distinct character\nTheme: special operations, unique missions, strategic flexibility\nMood: Professional, confident, approachable, representing expertise in special — meta / system\nTechnical details: High quality, 512x512px, centered composition, professional attire, neutral expression with subtle confidence\nColor accent: Department theme color (can be integrated into background or subtle details)\nAvoid: Cartoonish, overly casual, generic stock photo, photorealistic humans (use stylized/illustrated approach for consistency)"
+  }
+]
