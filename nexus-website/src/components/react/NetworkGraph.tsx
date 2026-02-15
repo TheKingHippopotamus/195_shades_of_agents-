@@ -159,32 +159,8 @@ export default function NetworkGraph() {
           });
         svg.call(zoomBehavior);
 
-        // SVG Defs: filters + gradients
+        // SVG Defs: gradients only (removed filters for performance)
         const defs = svg.append("defs");
-
-        // Glow filter for nodes
-        const nodeGlow = defs.append("filter")
-          .attr("id", "node-glow")
-          .attr("x", "-80%").attr("y", "-80%")
-          .attr("width", "260%").attr("height", "260%");
-        nodeGlow.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "4").attr("result", "blur");
-        nodeGlow.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
-
-        // Strong glow for hover
-        const nodeGlowStrong = defs.append("filter")
-          .attr("id", "node-glow-strong")
-          .attr("x", "-120%").attr("y", "-120%")
-          .attr("width", "340%").attr("height", "340%");
-        nodeGlowStrong.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "8").attr("result", "blur");
-        nodeGlowStrong.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
-
-        // Line glow filter
-        const lineGlow = defs.append("filter")
-          .attr("id", "line-glow")
-          .attr("x", "-20%").attr("y", "-20%")
-          .attr("width", "140%").attr("height", "140%");
-        lineGlow.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "2").attr("result", "blur");
-        lineGlow.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
 
         // Edge gradients
         links.forEach((l, i) => {
@@ -218,20 +194,7 @@ export default function NetworkGraph() {
           return `url(#edge-grad-${i})`;
         }
 
-        // --- ENERGY BEAM CONNECTIONS ---
-        // Background glow layer (wider, more transparent)
-        const linkGlowLayer = g.append("g").attr("class", "link-glow-layer");
-        const linkGlow = linkGlowLayer
-          .selectAll("line")
-          .data(links)
-          .join("line")
-          .attr("stroke", (l, i) => edgeColor(l, i))
-          .attr("stroke-opacity", (l) => edgeOpacity(l) * 0.4)
-          .attr("stroke-width", (l) => edgeWidth(l) + 3)
-          .attr("stroke-linecap", "round")
-          .attr("filter", "url(#line-glow)");
-
-        // Core beam layer
+        // --- SIMPLE CONNECTIONS (single layer for performance) ---
         const linkLayer = g.append("g").attr("class", "link-layer");
         const link = linkLayer
           .selectAll("line")
@@ -241,7 +204,6 @@ export default function NetworkGraph() {
           .attr("stroke-opacity", (l) => edgeOpacity(l))
           .attr("stroke-width", (l) => edgeWidth(l))
           .attr("stroke-linecap", "round")
-          .attr("stroke-dasharray", "6 4")
           .on("mouseover", function (_event, d) {
             d3.select(this)
               .attr("stroke-opacity", 0.9)
@@ -269,55 +231,27 @@ export default function NetworkGraph() {
 
         // Removed particle layer for better performance
 
-        // --- COSMIC NODES ---
+        // --- SIMPLE NODES (no heavy effects) ---
         const nodeLayer = g.append("g").attr("class", "node-layer");
 
-        // Outer orbital ring (subtle pulsing ring around each node)
-        const orbitalRings = nodeLayer
-          .selectAll<SVGCircleElement, GraphNode>("circle.orbital")
-          .data(nodes)
-          .join("circle")
-          .attr("class", "orbital")
-          .attr("r", (d) => d.radius + 6)
-          .attr("fill", "none")
-          .attr("stroke", (d) => d.color)
-          .attr("stroke-width", 0.5)
-          .attr("stroke-opacity", 0.3)
-          .attr("stroke-dasharray", "3 3");
-
-        // Node glow halo
-        const nodeHalos = nodeLayer
-          .selectAll<SVGCircleElement, GraphNode>("circle.halo")
-          .data(nodes)
-          .join("circle")
-          .attr("class", "halo")
-          .attr("r", (d) => d.radius + 2)
-          .attr("fill", (d) => d.color)
-          .attr("fill-opacity", 0.15)
-          .attr("filter", "url(#node-glow)");
-
-        // Core planet/star node
+        // Simple node circles (no filters for performance)
         const node = nodeLayer
-          .selectAll<SVGCircleElement, GraphNode>("circle.core-node")
+          .selectAll<SVGCircleElement, GraphNode>("circle.node")
           .data(nodes)
           .join("circle")
-          .attr("class", "core-node")
+          .attr("class", "node")
           .attr("r", (d) => d.radius)
-          .attr("fill", (d) => {
-            // Radial gradient feel via CSS
-            return d.color;
-          })
-          .attr("fill-opacity", 0.85)
-          .attr("stroke", (d) => d.color)
+          .attr("fill", (d) => d.color)
+          .attr("fill-opacity", 0.9)
+          .attr("stroke", "#ffffff")
           .attr("stroke-width", 1.5)
-          .attr("stroke-opacity", 0.6)
+          .attr("stroke-opacity", 0.4)
           .attr("cursor", "pointer")
-          .attr("filter", "url(#node-glow)")
           .on("click", (_event, d) => {
             const agent = agents.find((a) => a.code === d.id);
             if (agent) setSelectedAgent(agent);
 
-            // Ripple effect
+            // Simple ripple effect (single wave for performance)
             const ripple = nodeLayer.append("circle")
               .attr("cx", d.x!).attr("cy", d.y!)
               .attr("r", d.radius)
@@ -325,38 +259,21 @@ export default function NetworkGraph() {
               .attr("stroke", d.color)
               .attr("stroke-width", 2)
               .attr("stroke-opacity", 0.8);
-            ripple.transition().duration(800).ease(d3.easeCubicOut)
-              .attr("r", d.radius + 40)
+            ripple.transition().duration(600).ease(d3.easeCubicOut)
+              .attr("r", d.radius + 30)
               .attr("stroke-opacity", 0)
-              .attr("stroke-width", 0.5)
-              .remove();
-            // Second ripple wave
-            const ripple2 = nodeLayer.append("circle")
-              .attr("cx", d.x!).attr("cy", d.y!)
-              .attr("r", d.radius)
-              .attr("fill", "none")
-              .attr("stroke", d.color)
-              .attr("stroke-width", 1.5)
-              .attr("stroke-opacity", 0.5);
-            ripple2.transition().delay(150).duration(800).ease(d3.easeCubicOut)
-              .attr("r", d.radius + 60)
-              .attr("stroke-opacity", 0)
-              .attr("stroke-width", 0.3)
               .remove();
           })
           .on("mouseover", function (_event, d) {
-            // Brighten hovered node
+            // Brighten hovered node (no filters for performance)
             d3.select(this)
               .attr("fill-opacity", 1)
-              .attr("stroke-opacity", 1)
-              .attr("stroke-width", 3)
-              .attr("filter", "url(#node-glow-strong)");
+              .attr("stroke-width", 2.5);
 
             // Highlight same department - fade others
             node
-              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.95 : 0.15)
-              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.8 : 0.05);
-            nodeHalos
+              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.95 : 0.2)
+              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.6 : 0.1);
               .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.2 : 0.02);
             orbitalRings
               .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.5 : 0.03);
@@ -372,12 +289,6 @@ export default function NetworkGraph() {
                 const t = l.target as GraphNode;
                 return s.deptNum === d.deptNum || t.deptNum === d.deptNum
                   ? edgeWidth(l) + 1.5 : edgeWidth(l) * 0.3;
-              });
-            linkGlow
-              .attr("stroke-opacity", (l) => {
-                const s = l.source as GraphNode;
-                const t = l.target as GraphNode;
-                return s.deptNum === d.deptNum || t.deptNum === d.deptNum ? 0.3 : 0.01;
               });
 
             // Cosmic tooltip with glow
@@ -404,17 +315,12 @@ export default function NetworkGraph() {
           })
           .on("mouseout", function () {
             node
-              .attr("fill-opacity", 0.85)
-              .attr("stroke-opacity", 0.6)
-              .attr("stroke-width", 1.5)
-              .attr("filter", "url(#node-glow)");
-            nodeHalos.attr("fill-opacity", 0.15);
-            orbitalRings.attr("stroke-opacity", 0.3);
+              .attr("fill-opacity", 0.9)
+              .attr("stroke-opacity", 0.4)
+              .attr("stroke-width", 1.5);
             link
               .attr("stroke-opacity", (l) => edgeOpacity(l))
               .attr("stroke-width", (l) => edgeWidth(l));
-            linkGlow
-              .attr("stroke-opacity", (l) => edgeOpacity(l) * 0.4);
             g.selectAll(".tooltip-group").remove();
           })
           .call(
@@ -435,19 +341,10 @@ export default function NetworkGraph() {
               })
           );
 
-        // --- ANIMATED DASH OFFSET for energy beams ---
-        let dashOffset = 0;
-
         // --- TICK ---
         simulation.on("tick", () => {
           // Update link positions
           link
-            .attr("x1", (d) => (d.source as GraphNode).x!)
-            .attr("y1", (d) => (d.source as GraphNode).y!)
-            .attr("x2", (d) => (d.target as GraphNode).x!)
-            .attr("y2", (d) => (d.target as GraphNode).y!);
-
-          linkGlow
             .attr("x1", (d) => (d.source as GraphNode).x!)
             .attr("y1", (d) => (d.source as GraphNode).y!)
             .attr("x2", (d) => (d.target as GraphNode).x!)
@@ -466,27 +363,12 @@ export default function NetworkGraph() {
 
           // Update node positions
           node.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
-          nodeHalos.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
-          orbitalRings.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
 
           // Removed particle animation for better performance
         });
 
-        // --- ANIMATION LOOP (stars + dash offset) ---
-        function animate() {
-          drawBackground();
-
-          // Animate energy beam dash
-          dashOffset -= 0.5;
-          link.attr("stroke-dashoffset", dashOffset);
-
-          // Pulse orbital rings
-          const pulse = Math.sin(Date.now() * 0.002) * 0.15 + 0.3;
-          orbitalRings.attr("stroke-opacity", pulse);
-
-          animFrameRef.current = requestAnimationFrame(animate);
-        }
-        animFrameRef.current = requestAnimationFrame(animate);
+        // Draw background once (no continuous animation for performance)
+        drawBackground();
 
         return () => {
           simulation.stop();
