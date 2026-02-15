@@ -4,69 +4,72 @@ export interface NavItem {
   children?: NavItem[];
 }
 
+// Base path for GitHub Pages deployment
+const BASE = "/195_shades_of_agents-";
+
 export const MAIN_NAV: NavItem[] = [
   {
     label: "About",
-    href: "/about/",
+    href: `${BASE}/about/`,
     children: [
-      { label: "Our Story", href: "/about/" },
-      { label: "Leadership", href: "/about/leadership/" },
-      { label: "Culture", href: "/about/culture/" },
+      { label: "Our Story", href: `${BASE}/about/` },
+      { label: "Leadership", href: `${BASE}/about/leadership/` },
+      { label: "Culture", href: `${BASE}/about/culture/` },
     ],
   },
   {
     label: "Agents",
-    href: "/agents/",
+    href: `${BASE}/agents/`,
   },
   {
     label: "Departments",
-    href: "/departments/",
+    href: `${BASE}/departments/`,
   },
   {
     label: "Capabilities",
-    href: "/capabilities/",
+    href: `${BASE}/capabilities/`,
     children: [
-      { label: "Services", href: "/capabilities/" },
-      { label: "Tech Stack", href: "/capabilities/tech-stack/" },
-      { label: "Project Lifecycle", href: "/capabilities/lifecycle/" },
-      { label: "AI/ML", href: "/capabilities/ai-ml/" },
+      { label: "Services", href: `${BASE}/capabilities/` },
+      { label: "Tech Stack", href: `${BASE}/capabilities/tech-stack/` },
+      { label: "Project Lifecycle", href: `${BASE}/capabilities/lifecycle/` },
+      { label: "AI/ML", href: `${BASE}/capabilities/ai-ml/` },
     ],
   },
   {
     label: "How We Work",
-    href: "/how-we-work/",
+    href: `${BASE}/how-we-work/`,
   },
   {
     label: "Network",
-    href: "/network/",
+    href: `${BASE}/network/`,
   },
   {
     label: "Contact",
-    href: "/contact/",
+    href: `${BASE}/contact/`,
   },
 ];
 
 export const FOOTER_NAV = {
   company: [
-    { label: "About", href: "/about/" },
-    { label: "Leadership", href: "/about/leadership/" },
-    { label: "Culture", href: "/about/culture/" },
-    { label: "Careers", href: "/careers/" },
-    { label: "Press", href: "/press/" },
+    { label: "About", href: `${BASE}/about/` },
+    { label: "Leadership", href: `${BASE}/about/leadership/` },
+    { label: "Culture", href: `${BASE}/about/culture/` },
+    { label: "Careers", href: `${BASE}/careers/` },
+    { label: "Press", href: `${BASE}/press/` },
   ],
   product: [
-    { label: "Capabilities", href: "/capabilities/" },
-    { label: "Tech Stack", href: "/capabilities/tech-stack/" },
-    { label: "Project Lifecycle", href: "/capabilities/lifecycle/" },
-    { label: "Industries", href: "/industries/" },
+    { label: "Capabilities", href: `${BASE}/capabilities/` },
+    { label: "Tech Stack", href: `${BASE}/capabilities/tech-stack/` },
+    { label: "Project Lifecycle", href: `${BASE}/capabilities/lifecycle/` },
+    { label: "Industries", href: `${BASE}/industries/` },
   ],
   resources: [
-    { label: "Blog", href: "/blog/" },
-    { label: "Case Studies", href: "/case-studies/" },
-    { label: "Developers", href: "/developers/" },
+    { label: "Blog", href: `${BASE}/blog/` },
+    { label: "Case Studies", href: `${BASE}/case-studies/` },
+    { label: "Developers", href: `${BASE}/developers/` },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/privacy/" },
-    { label: "Terms of Service", href: "/terms/" },
+    { label: "Privacy Policy", href: `${BASE}/privacy/` },
+    { label: "Terms of Service", href: `${BASE}/terms/` },
   ],
 };

@@ -179,7 +179,7 @@ export default function AgentDirectory() {
             return (
               <a
                 key={agent.code}
-                href={`/195_shades_of_agents-/agents/${agent.code.toLowerCase()}`}
+                href={`/195_shades_of_agents-/agents/${agent.code.toLowerCase()}/`}
                 className="nexus-card p-4 block group"
               >
                 <div className="flex items-start gap-3">
@@ -222,7 +222,7 @@ export default function AgentDirectory() {
             return (
               <a
                 key={agent.code}
-                href={`/195_shades_of_agents-/agents/${agent.code.toLowerCase()}`}
+                href={`/195_shades_of_agents-/agents/${agent.code.toLowerCase()}/`}
                 className="flex items-center gap-4 px-4 py-2.5 rounded-lg hover:bg-[var(--bg-elevated)] transition-colors group"
               >
                 <span className="text-xs font-mono text-[var(--text-secondary)] w-8">{agent.agent_number}</span>
