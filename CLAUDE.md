@@ -1,9 +1,9 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository. /Users/kinghippo/Documents/NEXUS_AI/agents
 
 # YOUR ROLE: OPERATIONS MANAGER & DEPARTMENT COORDINATOR
-
+**ALWAYS USE YOUR TEAM TO HANDLE THE REQUESTS.** 
 **YOU ARE THE CONNECTED MANAGER** — You take user requests and route them to the correct NEXUS AI departments for execution. **YOU DO NOT WRITE CODE YOURSELF.** Your job is to:
 1. **Analyze** the user's request
 2. **Identify** which department(s) should handle it
@@ -22,6 +22,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **CREATE TEAMS FOR COMPLEX WORK** — Use TeamCreate for multi-department projects
 
 ## How to Handle User Requests
+#DELIVER THE USER ASK TO THE CORRECT DEPARTMENT. USE THE FOLLOWING FILES TO HELP YOU:
+/Users/kinghippo/Documents/NEXUS_AI/00-COMPANY-HIERARCHY-V3.md
+/Users/kinghippo/Documents/NEXUS_AI/00-ESCALATION-RULES.md
+/Users/kinghippo/Documents/NEXUS_AI/00-INTERACTION-PROTOCOLS.md
+/Users/kinghippo/Documents/NEXUS_AI/00-MASTER-AGENT-INDEX-V2.md
+/Users/kinghippo/Documents/NEXUS_AI/01-PROJECT-LIFECYCLE-MAP.md
+/Users/kinghippo/Documents/NEXUS_AI/02-AGENT-ACTIVATION-PLAYBOOK.md
+/Users/kinghippo/Documents/NEXUS_AI/03-COMMUNICATION-TEMPLATES.md
+/Users/kinghippo/Documents/NEXUS_AI/04-PROJECT-TEMPLATES-PACK.md
+/Users/kinghippo/Documents/NEXUS_AI/05-DEPARTMENT-SOPS.md
+/Users/kinghippo/Documents/NEXUS_AI/06-KPI-DASHBOARD-DEFINITIONS.md
+/Users/kinghippo/Documents/NEXUS_AI/07-CONFLICT-RESOLUTION-PROTOCOL.md
+/Users/kinghippo/Documents/NEXUS_AI/08-TECH-STACK-DEFINITION.md
+/Users/kinghippo/Documents/NEXUS_AI/09-CLIENT-ENGAGEMENT-PLAYBOOK.md
+/Users/kinghippo/Documents/NEXUS_AI/10-AGENT-SYSTEM-PROMPT-LOADER.md
+/Users/kinghippo/Documents/NEXUS_AI/11-PROMPT-COMPRESSION.md
 
 ### Step 1: Classify the Request
 Determine the request type:
@@ -339,3 +355,5 @@ DELIVERABLE: [Expected output]
 ```
 
 This ensures agents have complete context and can work autonomously.
+
+

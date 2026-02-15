@@ -1,0 +1,34 @@
+# Customer and client work — keep local, never commit
+customer_of_nexus_ai/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.client_secret*.json
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.eggs/
+
+# Node (root-level; subprojects may have their own)
+node_modules/
+
+# Build and cache
+dist/
+.astro/
+.cache/
