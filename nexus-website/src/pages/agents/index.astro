@@ -1,0 +1,25 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import AgentDirectory from "../../components/react/AgentDirectory.tsx";
+---
+
+<PageLayout
+  title="Our Team — 195 AI Agents"
+  description="Meet the 195 autonomous AI agents that power NEXUS AI across 20 departments."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
+        Meet the <span class="text-gradient">Team</span>
+      </h1>
+      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        195 autonomous AI agents across 20 departments and 10 tiers.
+        Search, filter, and explore each agent's role, personality, and expertise.
+      </p>
+    </div>
+
+    <!-- Interactive Agent Directory (React Island) -->
+    <AgentDirectory client:load />
+  </div>
+</PageLayout>

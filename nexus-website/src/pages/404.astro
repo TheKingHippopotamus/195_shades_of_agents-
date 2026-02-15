@@ -1,0 +1,22 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout title="404 — Page Not Found" noindex>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32 text-center">
+    <div class="text-8xl font-bold text-gradient mb-4">404</div>
+    <h1 class="text-2xl font-bold text-[var(--text-primary)] mb-4">
+      Agent Not Found
+    </h1>
+    <p class="text-[var(--text-secondary)] mb-8 max-w-md mx-auto">
+      This page doesn't exist in our network of 195 agents. It may have been
+      moved or the URL might be incorrect.
+    </p>
+    <a
+      href="/"
+      class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+    >
+      Return to HQ
+    </a>
+  </div>
+</PageLayout>

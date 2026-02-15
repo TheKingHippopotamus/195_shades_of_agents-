@@ -1,0 +1,78 @@
+---
+interface Props {
+  code: string;
+  name: string;
+  role: string;
+  department: string;
+  departmentNumber: string;
+  departmentColor: string;
+  tierNumber: number;
+  tierLabel: string;
+  nickname?: string;
+  avatarUrl?: string;
+}
+
+const {
+  code,
+  name,
+  role,
+  department,
+  departmentNumber,
+  departmentColor,
+  tierNumber,
+  tierLabel,
+  nickname,
+  avatarUrl,
+} = Astro.props;
+---
+
+<a
+  href={`/agents/${code.toLowerCase()}`}
+  class="nexus-card p-4 block group"
+>
+  <div class="flex items-start gap-3">
+    <!-- Avatar -->
+    <div
+      class="h-12 w-12 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-sm"
+      style={`background-color: ${departmentColor}20; border: 2px solid ${departmentColor}`}
+    >
+      {code.substring(0, 2)}
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <!-- Code + Tier -->
+      <div class="flex items-center gap-2 mb-1">
+        <span class="text-xs font-mono font-semibold text-quantum-blue">
+          {code}
+        </span>
+        <span
+          class="text-[10px] px-1.5 py-0.5 rounded-full font-medium"
+          style={`background-color: ${departmentColor}20; color: ${departmentColor}`}
+        >
+          T{tierNumber}
+        </span>
+      </div>
+
+      <!-- Role -->
+      <h3
+        class="text-sm font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors truncate"
+      >
+        {role}
+      </h3>
+
+      <!-- Department -->
+      <p class="text-xs text-[var(--text-secondary)] truncate mt-0.5">
+        {department}
+      </p>
+
+      <!-- Nickname -->
+      {
+        nickname && (
+          <p class="text-xs text-[var(--text-secondary)] italic mt-1">
+            &ldquo;{nickname}&rdquo;
+          </p>
+        )
+      }
+    </div>
+  </div>
+</a>

@@ -1,0 +1,114 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import SectionHeading from "../../components/astro/SectionHeading.astro";
+
+const services = [
+  {
+    title: "Full-Stack Web Development",
+    agents: "40 engineers",
+    description: "React, Vue, Node.js, Python, Go — our engineering department covers every major web technology. From single-page apps to distributed microservices.",
+    tech: ["React", "Vue.js", "Node.js", "Python", "Go", "TypeScript"],
+  },
+  {
+    title: "Mobile Development",
+    agents: "8 mobile specialists",
+    description: "Native iOS and Android, React Native, cross-platform — our mobile team ships apps that feel native on every device.",
+    tech: ["React Native", "iOS (Swift)", "Android (Kotlin)", "Flutter"],
+  },
+  {
+    title: "AI & Machine Learning",
+    agents: "12 AI/ML agents",
+    description: "Model development, data pipelines, MLOps, and responsible AI. Our data science department brings intelligence to every project.",
+    tech: ["PyTorch", "TensorFlow", "scikit-learn", "MLflow", "Hugging Face"],
+  },
+  {
+    title: "Design & UX",
+    agents: "14 design agents",
+    description: "User research, information architecture, UI design, motion design, and accessibility. Design that serves users, not egos.",
+    tech: ["Figma", "Framer", "Design Systems", "WCAG 2.1 AA"],
+  },
+  {
+    title: "Cloud & Infrastructure",
+    agents: "12 platform engineers",
+    description: "AWS, GCP, Azure, Kubernetes, Terraform — our platform team builds infrastructure that scales from prototype to enterprise.",
+    tech: ["AWS", "GCP", "Kubernetes", "Terraform", "Docker"],
+  },
+  {
+    title: "Security & Compliance",
+    agents: "8 security agents",
+    description: "Application security, penetration testing, SOC analysis, and compliance. Security isn't an afterthought — it's a department.",
+    tech: ["OWASP", "SOC 2", "GDPR", "Pen Testing", "SAST/DAST"],
+  },
+];
+---
+
+<PageLayout
+  title="Capabilities"
+  description="Full-spectrum software development capabilities from NEXUS AI — 195 agents covering every discipline."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div class="text-center mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
+        What We <span class="text-gradient">Build</span>
+      </h1>
+      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        Full-spectrum software development — from prototype to production,
+        maintained by dedicated agents across every discipline.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {services.map((service) => (
+        <div class="nexus-card p-6 md:p-8">
+          <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <h3 class="text-xl font-semibold text-[var(--text-primary)]">
+                  {service.title}
+                </h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-quantum-blue/10 text-quantum-blue">
+                  {service.agents}
+                </span>
+              </div>
+              <p class="text-[var(--text-secondary)] mb-4">{service.description}</p>
+              <div class="flex flex-wrap gap-2">
+                {service.tech.map((t) => (
+                  <span class="text-xs px-2 py-1 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)] font-mono">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Process Link -->
+    <div class="mt-16 text-center">
+      <div class="nexus-card nexus-glow p-8 md:p-12">
+        <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">
+          How does it all come together?
+        </h2>
+        <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+          Every project follows our 13-stage lifecycle — from discovery through
+          maintenance, with governance gates at every major transition.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/capabilities/lifecycle"
+            class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+          >
+            View Project Lifecycle
+          </a>
+          <a
+            href="/capabilities/tech-stack"
+            class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
+          >
+            Explore Tech Stack
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>

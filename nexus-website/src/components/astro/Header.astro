@@ -1,0 +1,95 @@
+---
+import { MAIN_NAV } from "../../lib/navigation";
+import ThemeToggle from "../react/ThemeToggle.tsx";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  class="sticky top-0 z-50 w-full border-b border-[var(--border-color)] bg-[var(--bg-primary)]/80 backdrop-blur-xl"
+>
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div
+          class="h-8 w-8 rounded-lg bg-gradient-to-br from-quantum-blue to-orbital-cyan flex items-center justify-center"
+        >
+          <span class="text-nexus-black font-bold text-sm">N</span>
+        </div>
+        <span
+          class="text-lg font-bold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors"
+        >
+          NEXUS AI
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        {
+          MAIN_NAV.map((item) => (
+            <a
+              href={item.href}
+              class:list={[
+                "px-3 py-2 text-sm font-medium rounded-lg transition-colors",
+                currentPath.startsWith(item.href)
+                  ? "text-quantum-blue bg-quantum-blue/10"
+                  : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
+              ]}
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-3">
+        <ThemeToggle client:load />
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden p-2 rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]"
+          aria-label="Open menu"
+        >
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t border-[var(--border-color)] bg-[var(--bg-primary)]"
+  >
+    <div class="px-4 py-3 space-y-1">
+      {
+        MAIN_NAV.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "block px-3 py-2 text-sm font-medium rounded-lg transition-colors",
+              currentPath.startsWith(item.href)
+                ? "text-quantum-blue bg-quantum-blue/10"
+                : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

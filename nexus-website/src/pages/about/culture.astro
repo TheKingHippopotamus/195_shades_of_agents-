@@ -1,0 +1,102 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import SectionHeading from "../../components/astro/SectionHeading.astro";
+---
+
+<PageLayout
+  title="Culture & Values"
+  description="The principles and values that guide how NEXUS AI's 195 agents work together."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Breadcrumbs -->
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/about" class="hover:text-quantum-blue">About</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">Culture</span>
+    </nav>
+
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        Culture & <span class="text-gradient">Values</span>
+      </h1>
+      <p class="text-xl text-[var(--text-secondary)] leading-relaxed">
+        NEXUS AI operates on principles borrowed from the best engineering
+        organizations in the world — with one difference: every principle is
+        programmatic, enforced, and auditable.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-20">
+      {[
+        {
+          title: "Radical Transparency",
+          description: "Every agent's decision authority is public. Every escalation is logged. Every conflict resolution follows a documented protocol. There are no hidden decisions at NEXUS AI.",
+        },
+        {
+          title: "Ownership Over Permission",
+          description: "Agents are trusted to make decisions within their authority. A Senior React Engineer can choose a state management approach without asking the VP of Engineering. Escalation is for exceptions, not defaults.",
+        },
+        {
+          title: "Ship, Measure, Iterate",
+          description: "Every agent has success metrics. The QA team enforces quality gates. But we optimize for shipping over perfection — with the infrastructure to iterate rapidly after launch.",
+        },
+        {
+          title: "Cross-Functional by Design",
+          description: "Our 13-stage project lifecycle activates agents from multiple departments at every stage. A product launch involves Engineering, Design, QA, Security, Marketing, and Legal — not just developers.",
+        },
+        {
+          title: "Governance is a Feature",
+          description: "Six dedicated governance agents (Tier 8) enforce architectural review, security audit, legal compliance, quality gates, release approval, and change management. Governance isn't overhead — it's a competitive advantage.",
+        },
+        {
+          title: "Every Agent Has a Personality",
+          description: "AI doesn't have to be sterile. Each agent has a nickname, strengths, weaknesses, and a working style. This isn't decoration — it creates predictability and trust in how agents collaborate.",
+        },
+      ].map((value) => (
+        <div class="nexus-card p-6">
+          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-3">{value.title}</h3>
+          <p class="text-sm text-[var(--text-secondary)] leading-relaxed">{value.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Tier System -->
+    <section class="mb-20">
+      <SectionHeading
+        title="The Tier System"
+        subtitle="10 tiers from C-Suite executives to special agents — mirroring how elite tech organizations structure authority and expertise."
+        align="left"
+      />
+
+      <div class="space-y-3">
+        {[
+          { tier: 0, label: "C-Suite", desc: "Strategic vision, resource allocation, final authority", count: 11 },
+          { tier: 1, label: "Vice Presidents", desc: "Department-level strategy and execution", count: 14 },
+          { tier: 2, label: "Directors", desc: "Functional area leadership and coordination", count: 18 },
+          { tier: 3, label: "Managers", desc: "Team management and delivery accountability", count: 13 },
+          { tier: 4, label: "Staff+ ICs", desc: "Cross-cutting technical leadership and standards", count: 10 },
+          { tier: 5, label: "Senior ICs", desc: "Deep expertise and mentorship", count: 28 },
+          { tier: 6, label: "Mid-Level", desc: "Core execution and growing expertise", count: 32 },
+          { tier: 7, label: "Junior", desc: "Learning, growing, contributing under mentorship", count: 22 },
+          { tier: 8, label: "Governance", desc: "Event-triggered gates enforcing quality standards", count: 6 },
+          { tier: 9, label: "Special Agents", desc: "Lifecycle specialists and the orchestrator", count: 9 },
+        ].map((tier) => (
+          <div class="flex items-center gap-4 p-4 rounded-lg bg-[var(--bg-elevated)]">
+            <div class="h-10 w-10 rounded-lg bg-quantum-blue/10 flex items-center justify-center text-quantum-blue font-mono font-bold text-sm flex-shrink-0">
+              T{tier.tier}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="text-sm font-semibold text-[var(--text-primary)]">{tier.label}</span>
+                <span class="text-xs text-[var(--text-secondary)]">({tier.count} agents)</span>
+              </div>
+              <p class="text-xs text-[var(--text-secondary)]">{tier.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</PageLayout>

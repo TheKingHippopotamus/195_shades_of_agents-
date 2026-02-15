@@ -1,0 +1,72 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import AgentCard from "../../components/astro/AgentCard.astro";
+import { getDepartmentColor } from "../../lib/department-colors";
+import { getTierLabel } from "../../lib/tier-labels";
+
+let agents: any[] = [];
+try {
+  const data = await import("../../data/agents.json");
+  agents = data.default;
+} catch {}
+
+const leadersByTier = [
+  { tier: 0, label: "C-Suite", agents: agents.filter((a: any) => a.tier.number === 0) },
+  { tier: 1, label: "Vice Presidents", agents: agents.filter((a: any) => a.tier.number === 1) },
+  { tier: 2, label: "Directors", agents: agents.filter((a: any) => a.tier.number === 2) },
+];
+---
+
+<PageLayout
+  title="Leadership — NEXUS AI"
+  description="Meet the executive leadership of NEXUS AI — C-Suite, VPs, and Directors guiding 195 agents."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Breadcrumbs -->
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/about" class="hover:text-quantum-blue">About</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">Leadership</span>
+    </nav>
+
+    <div class="text-center mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
+        <span class="text-gradient">Leadership</span> Team
+      </h1>
+      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        The executives, VPs, and directors who set strategy and guide our
+        195 agents toward world-class software delivery.
+      </p>
+    </div>
+
+    {leadersByTier.map((group) => (
+      group.agents.length > 0 && (
+        <section class="mb-16">
+          <h2 class="text-xl font-bold text-[var(--text-primary)] mb-2">
+            Tier {group.tier} — {group.label}
+          </h2>
+          <p class="text-sm text-[var(--text-secondary)] mb-6">
+            {group.agents.length} agents
+          </p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {group.agents.map((agent: any) => (
+              <AgentCard
+                code={agent.code}
+                name={agent.code}
+                role={agent.role}
+                department={agent.department}
+                departmentNumber={agent.department_number}
+                departmentColor={getDepartmentColor(agent.department_number)}
+                tierNumber={agent.tier.number}
+                tierLabel={agent.tier.label}
+                nickname={agent.personal?.nickname}
+              />
+            ))}
+          </div>
+        </section>
+      )
+    ))}
+  </div>
+</PageLayout>

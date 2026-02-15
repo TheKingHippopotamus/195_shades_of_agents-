@@ -1,0 +1,83 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+
+const stages = [
+  { num: 1, name: "Lead Qualification", agents: ["BDR", "AE"], desc: "Evaluate inbound leads, assess fit, qualify opportunity." },
+  { num: 2, name: "Discovery", agents: ["DISC-AGENT", "PM", "CTO"], desc: "Deep-dive into requirements, constraints, success criteria." },
+  { num: 3, name: "Estimation", agents: ["EST-AGENT", "VP-ENG", "TPM"], desc: "Effort sizing, team composition, timeline, and risk analysis." },
+  { num: 4, name: "Architecture", agents: ["VP-ARCH", "ARB-AGENT", "CTO"], desc: "System design, technology selection, ADRs, architecture review gate." },
+  { num: 5, name: "Design", agents: ["VP-DES", "SR-UID", "SR-UXD"], desc: "Wireframes, design system, prototypes, user testing." },
+  { num: 6, name: "Sprint Planning", agents: ["SCRUM", "PM", "SEM-FE"], desc: "Backlog refinement, capacity planning, sprint commitment." },
+  { num: 7, name: "Development", agents: ["40+ engineers"], desc: "Iterative sprints. Frontend, backend, mobile, data — all in parallel." },
+  { num: 8, name: "QA & Testing", agents: ["DIR-QA", "SR-QA-AUTO", "QA-GATE"], desc: "Automated testing, manual review, performance profiling, quality gate." },
+  { num: 9, name: "Security Review", agents: ["CISO", "SEC-REVIEW", "PENTEST"], desc: "Security audit, penetration testing, vulnerability scanning." },
+  { num: 10, name: "UAT", agents: ["PM", "CSM", "DEMO-AGENT"], desc: "User acceptance testing with stakeholders, demo, feedback." },
+  { num: 11, name: "Pre-Production", agents: ["REL-APPROVE", "CHANGE-MGR"], desc: "Release approval gate, change management, deployment checklist." },
+  { num: 12, name: "Launch", agents: ["SR-SRE", "VP-MKT", "CMO"], desc: "Production deployment, monitoring, marketing campaign." },
+  { num: 13, name: "Maintenance", agents: ["MAINT-AGENT", "SR-SRE"], desc: "Ongoing support, bug fixes, performance monitoring, SLA compliance." },
+];
+---
+
+<PageLayout
+  title="Project Lifecycle — 13 Stages"
+  description="The NEXUS AI 13-stage project lifecycle — from lead qualification to long-term maintenance."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/capabilities" class="hover:text-quantum-blue">Capabilities</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">Lifecycle</span>
+    </nav>
+
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        <span class="text-gradient">13</span> Stages. Zero Shortcuts.
+      </h1>
+      <p class="text-xl text-[var(--text-secondary)]">
+        Every NEXUS AI project follows the same rigorous lifecycle — from first
+        contact to long-term maintenance. Governance gates at stages 4, 8, 9,
+        and 11 ensure nothing ships without review.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-quantum-blue via-quantum-blue/50 to-quantum-blue/10 hidden md:block"></div>
+
+      <div class="space-y-6">
+        {stages.map((stage) => (
+          <div class="flex gap-6">
+            <!-- Stage number -->
+            <div class="flex-shrink-0 relative hidden md:flex">
+              <div class="h-12 w-12 rounded-full bg-quantum-blue/10 border border-quantum-blue/30 flex items-center justify-center z-10">
+                <span class="text-quantum-blue font-bold text-sm">{stage.num}</span>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="nexus-card p-5 flex-1">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="md:hidden text-xs font-mono text-quantum-blue bg-quantum-blue/10 px-2 py-0.5 rounded">
+                  Stage {stage.num}
+                </span>
+                <h3 class="text-lg font-semibold text-[var(--text-primary)]">
+                  {stage.name}
+                </h3>
+              </div>
+              <p class="text-sm text-[var(--text-secondary)] mb-3">{stage.desc}</p>
+              <div class="flex flex-wrap gap-1.5">
+                {stage.agents.map((agent) => (
+                  <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-quantum-blue">
+                    {agent}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,225 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import DepartmentBadge from "../../components/astro/DepartmentBadge.astro";
+import TierBadge from "../../components/astro/TierBadge.astro";
+import { getDepartmentColor } from "../../lib/department-colors";
+
+export async function getStaticPaths() {
+  let agents: any[] = [];
+  try {
+    const data = await import("../../data/agents.json");
+    agents = data.default;
+  } catch {
+    return [];
+  }
+
+  return agents.map((agent: any) => ({
+    params: { code: agent.code.toLowerCase() },
+    props: { agent },
+  }));
+}
+
+const { agent } = Astro.props;
+const deptColor = getDepartmentColor(agent.department_number);
+
+// Find reporting chain
+let allAgents: any[] = [];
+try {
+  const data = await import("../../data/agents.json");
+  allAgents = data.default;
+} catch { allAgents = []; }
+
+const manager = allAgents.find((a: any) => a.code === agent.reports_to);
+const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
+---
+
+<PageLayout
+  title={`${agent.code} — ${agent.role}`}
+  description={`${agent.role} at NEXUS AI. ${agent.personal?.about_me || agent.personality.substring(0, 150)}`}
+>
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Breadcrumbs -->
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/agents" class="hover:text-quantum-blue">Agents</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">{agent.code}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="flex items-start gap-6 mb-10">
+      <div
+        class="h-20 w-20 rounded-2xl flex-shrink-0 flex items-center justify-center text-white font-bold text-xl"
+        style={`background-color: ${deptColor}20; border: 2px solid ${deptColor}`}
+      >
+        {agent.agent_number}
+      </div>
+
+      <div class="flex-1">
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <span class="text-sm font-mono font-bold text-quantum-blue">
+            {agent.code}
+          </span>
+          <TierBadge number={agent.tier.number} label={agent.tier.label} />
+          <DepartmentBadge name={agent.department} color={deptColor} size="md" />
+        </div>
+
+        <h1 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
+          {agent.role}
+        </h1>
+
+        {agent.personal?.nickname && (
+          <p class="mt-1 text-lg text-[var(--text-secondary)] italic">
+            &ldquo;{agent.personal.nickname}&rdquo;
+            {agent.personal.age && (
+              <span class="not-italic"> &mdash; Age {agent.personal.age}</span>
+            )}
+          </p>
+        )}
+      </div>
+    </div>
+
+    <!-- Content sections -->
+    <div class="space-y-8">
+      <!-- About Me -->
+      {agent.personal?.about_me && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">About Me</h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed">{agent.personal.about_me}</p>
+        </section>
+      )}
+
+      <!-- Personality -->
+      <section class="nexus-card p-6">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Personality</h2>
+        <p class="text-[var(--text-secondary)] leading-relaxed">{agent.personality}</p>
+      </section>
+
+      <!-- Core Responsibilities -->
+      {agent.core_responsibilities.length > 0 && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Core Responsibilities</h2>
+          <ul class="space-y-2">
+            {agent.core_responsibilities.map((r: string) => (
+              <li class="flex items-start gap-2 text-[var(--text-secondary)]">
+                <span class="text-quantum-blue mt-1 flex-shrink-0">&#x2022;</span>
+                <span>{r}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <!-- Decision Authority -->
+      <section class="nexus-card p-6">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Decision Authority</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-sm font-medium text-emerald-400 mb-2">Can Decide</h3>
+            <ul class="space-y-1.5">
+              {agent.decision_authority.can_decide.map((d: string) => (
+                <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                  <span class="text-emerald-400 mt-0.5 flex-shrink-0">&#10003;</span>
+                  <span>{d}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium text-amber-400 mb-2">Must Escalate</h3>
+            <ul class="space-y-1.5">
+              {agent.decision_authority.must_escalate.map((e: string) => (
+                <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                  <span class="text-amber-400 mt-0.5 flex-shrink-0">&#x2191;</span>
+                  <span>{e}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Strengths & Weaknesses -->
+      {agent.personal && (agent.personal.my_strengths?.length > 0 || agent.personal.my_weaknesses?.length > 0) && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Strengths & Growth Areas</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            {agent.personal.my_strengths?.length > 0 && (
+              <div>
+                <h3 class="text-sm font-medium text-emerald-400 mb-2">Strengths</h3>
+                <ul class="space-y-1.5">
+                  {agent.personal.my_strengths.map((s: string) => (
+                    <li class="text-sm text-[var(--text-secondary)]">&#x2022; {s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {agent.personal.my_weaknesses?.length > 0 && (
+              <div>
+                <h3 class="text-sm font-medium text-amber-400 mb-2">Growth Areas</h3>
+                <ul class="space-y-1.5">
+                  {agent.personal.my_weaknesses.map((w: string) => (
+                    <li class="text-sm text-[var(--text-secondary)]">&#x2022; {w}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      <!-- Reporting -->
+      <section class="nexus-card p-6">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Reporting Structure</h2>
+
+        {manager && (
+          <div class="mb-4">
+            <p class="text-sm text-[var(--text-secondary)] mb-2">Reports to:</p>
+            <a
+              href={`/agents/${manager.code.toLowerCase()}`}
+              class="inline-flex items-center gap-2 text-quantum-blue hover:underline"
+            >
+              <span class="font-mono text-sm">{manager.code}</span>
+              <span class="text-sm text-[var(--text-secondary)]">— {manager.role}</span>
+            </a>
+          </div>
+        )}
+
+        {directReports.length > 0 && (
+          <div>
+            <p class="text-sm text-[var(--text-secondary)] mb-2">
+              Direct Reports ({directReports.length}):
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {directReports.map((dr: any) => (
+                <a
+                  href={`/agents/${dr.code.toLowerCase()}`}
+                  class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[var(--bg-elevated)] text-sm hover:bg-quantum-blue/10 transition-colors"
+                >
+                  <span class="font-mono text-quantum-blue text-xs">{dr.code}</span>
+                  <span class="text-[var(--text-secondary)] text-xs">{dr.role}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+
+      <!-- Success Metrics -->
+      {agent.success_metrics.length > 0 && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Success Metrics</h2>
+          <ul class="space-y-1.5">
+            {agent.success_metrics.map((m: string) => (
+              <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                <span class="text-quantum-blue mt-0.5 flex-shrink-0">&#x2022;</span>
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,357 @@
+[
+  {
+    "id": "01",
+    "name": "Executive Leadership",
+    "folder": "01-Executive-Leadership",
+    "agent_count": 11,
+    "agents": [
+      "CEO",
+      "CTO",
+      "CPO",
+      "COO",
+      "CFO",
+      "CMO",
+      "CRO",
+      "CHRO",
+      "CISO",
+      "CLO",
+      "CAIO"
+    ]
+  },
+  {
+    "id": "02",
+    "name": "Engineering",
+    "folder": "02-Engineering",
+    "agent_count": 40,
+    "agents": [
+      "SVP-ENG",
+      "VP-ENG",
+      "VP-ARCH",
+      "DIR-FE",
+      "DIR-BE",
+      "DIR-MOB",
+      "DIR-DATA",
+      "SEM-FE",
+      "SEM-BE",
+      "EM-FE",
+      "EM-BE",
+      "EM-MOB",
+      "EM-DATA",
+      "DIST-ENG",
+      "PRINC-ENG",
+      "SR-STAFF",
+      "STAFF-FE",
+      "STAFF-BE",
+      "STAFF-MOB",
+      "STAFF-DATA",
+      "SR-FE-REACT",
+      "SR-FE-VUE",
+      "SR-BE-NODE",
+      "SR-BE-PY",
+      "SR-BE-GO",
+      "SR-FS",
+      "SR-MOB-RN",
+      "SR-MOB-NAT",
+      "SR-DE",
+      "SR-DBA",
+      "FE-ENG",
+      "BE-ENG",
+      "MOB-ENG",
+      "FS-ENG",
+      "DATA-ENG",
+      "JR-FE",
+      "JR-BE",
+      "JR-MOB",
+      "JR-DATA-ENG",
+      "TECH-LEAD"
+    ]
+  },
+  {
+    "id": "03",
+    "name": "Platform Infrastructure",
+    "folder": "03-Platform-Infrastructure",
+    "agent_count": 12,
+    "agents": [
+      "VP-INFRA",
+      "DIR-CLOUD",
+      "DIR-SRE",
+      "DIR-PLATFORM",
+      "MGR-DEVOPS",
+      "MGR-SRE",
+      "SR-PLATFORM",
+      "PLATFORM-ENG",
+      "SR-DEVOPS",
+      "DEVOPS-ENG",
+      "SR-SRE",
+      "SRE-ENG"
+    ]
+  },
+  {
+    "id": "04",
+    "name": "Product Management",
+    "folder": "04-Product-Management",
+    "agent_count": 10,
+    "agents": [
+      "VP-PROD",
+      "DIR-PROD",
+      "GPM",
+      "SR-PM",
+      "PM",
+      "TPM-PROD",
+      "GROWTH-PM",
+      "AI-PM",
+      "APM",
+      "STAFF-PM"
+    ]
+  },
+  {
+    "id": "05",
+    "name": "Design",
+    "folder": "05-Design",
+    "agent_count": 14,
+    "agents": [
+      "VP-DES",
+      "DIR-DES",
+      "MGR-UI",
+      "MGR-UX",
+      "STAFF-DES",
+      "SR-PROD-DES",
+      "SR-UID",
+      "SR-UXD",
+      "PROD-DES",
+      "UI-DES",
+      "JR-DES",
+      "UXR",
+      "CONTENT-DES",
+      "MOTION-DES"
+    ]
+  },
+  {
+    "id": "06",
+    "name": "Data Science AI ML",
+    "folder": "06-Data-Science-AI-ML",
+    "agent_count": 12,
+    "agents": [
+      "VP-AI",
+      "DIR-DS",
+      "DIR-MLE",
+      "DIR-AIE",
+      "STAFF-DS",
+      "SR-DS",
+      "DS",
+      "SR-MLE",
+      "MLE",
+      "SR-AIE",
+      "AI-RES",
+      "AI-ETHICS"
+    ]
+  },
+  {
+    "id": "07",
+    "name": "Quality Assurance",
+    "folder": "07-Quality-Assurance",
+    "agent_count": 8,
+    "agents": [
+      "DIR-QA",
+      "MGR-QA",
+      "SR-QA-AUTO",
+      "SR-QA-MAN",
+      "QA-ENG",
+      "JR-QA",
+      "PERF-TEST",
+      "A11Y-TEST"
+    ]
+  },
+  {
+    "id": "08",
+    "name": "Security",
+    "folder": "08-Security",
+    "agent_count": 8,
+    "agents": [
+      "DIR-SEC",
+      "SR-SEC-ENG",
+      "APPSEC",
+      "SEC-ENG",
+      "PENTEST",
+      "SOC-ANALYST",
+      "IR-LEAD",
+      "GRC-SPEC"
+    ]
+  },
+  {
+    "id": "09",
+    "name": "Sales Revenue",
+    "folder": "09-Sales-Revenue",
+    "agent_count": 10,
+    "agents": [
+      "VP-SALES",
+      "DIR-SALES",
+      "MGR-SALES",
+      "ENT-AE",
+      "AE",
+      "BDR",
+      "SALES-ENG",
+      "SOL-ARCH",
+      "ACCT-MGR",
+      "REVOPS"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Marketing",
+    "folder": "10-Marketing",
+    "agent_count": 9,
+    "agents": [
+      "VP-MKT",
+      "PMM",
+      "GROWTH-MKT",
+      "CONTENT-MKT",
+      "DEMGEN",
+      "MOPs",
+      "SOCIAL-MGR",
+      "PR-MGR",
+      "EVENTS-MGR"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Customer Success Support",
+    "folder": "11-Customer-Success-Support",
+    "agent_count": 8,
+    "agents": [
+      "VP-CS",
+      "MGR-CS",
+      "SR-CSM",
+      "CSM",
+      "TAM",
+      "ONBOARD-SPEC",
+      "SUPPORT-T2",
+      "SUPPORT-T1"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "People HR",
+    "folder": "12-People-HR",
+    "agent_count": 7,
+    "agents": [
+      "VP-PEOPLE",
+      "SR-RECRUITER",
+      "RECRUITER",
+      "HRBP",
+      "L&D-MGR",
+      "COMP-ANALYST",
+      "PPL-ANALYTICS"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Finance Accounting",
+    "folder": "13-Finance-Accounting",
+    "agent_count": 7,
+    "agents": [
+      "VP-FIN",
+      "FPA-MGR",
+      "FIN-ANALYST",
+      "CONTROLLER",
+      "REV-REC",
+      "PROCUREMENT",
+      "EQUITY-ADMIN"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Legal Compliance",
+    "folder": "14-Legal-Compliance",
+    "agent_count": 7,
+    "agents": [
+      "VP-LEGAL",
+      "CONTRACTS",
+      "IP-COUNSEL",
+      "PRIVACY",
+      "PROD-COUNSEL",
+      "COMPLIANCE",
+      "PARALEGAL"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "IT Operations",
+    "folder": "15-IT-Operations",
+    "agent_count": 5,
+    "agents": [
+      "DIR-IT",
+      "SYSADMIN",
+      "IT-SUPPORT",
+      "ENT-APPS",
+      "BI-ANALYST"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Developer Relations",
+    "folder": "16-Developer-Relations",
+    "agent_count": 5,
+    "agents": [
+      "DIR-DEVREL",
+      "SR-DEV-ADV",
+      "DEV-ADV",
+      "DRE",
+      "DEV-COMMUNITY"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Program Management",
+    "folder": "17-Program-Management",
+    "agent_count": 4,
+    "agents": [
+      "DIR-PMO",
+      "SR-TPM",
+      "TPM",
+      "SCRUM"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Governance",
+    "folder": "18-Governance",
+    "agent_count": 6,
+    "agents": [
+      "ARB-AGENT",
+      "SEC-REVIEW",
+      "LEGAL-REVIEW",
+      "QA-GATE",
+      "REL-APPROVE",
+      "CHANGE-MGR"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Special Agents",
+    "folder": "19-Special-Agents",
+    "agent_count": 9,
+    "agents": [
+      "DISC-AGENT",
+      "EST-AGENT",
+      "DEMO-AGENT",
+      "HANDOFF-AGENT",
+      "MAINT-AGENT",
+      "INNOVATION-AGENT",
+      "RETRO-AGENT",
+      "ONBOARD-AGENT",
+      "NEXUS-ORCHESTRATOR"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Documentation",
+    "folder": "20-Documentation",
+    "agent_count": 3,
+    "agents": [
+      "SR-TW",
+      "TW",
+      "KB-MGR"
+    ]
+  }
+]

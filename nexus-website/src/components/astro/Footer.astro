@@ -1,0 +1,114 @@
+---
+import { FOOTER_NAV } from "../../lib/navigation";
+---
+
+<footer class="border-t border-[var(--border-color)] bg-[var(--bg-surface)]">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-4 lg:col-span-1">
+        <a href="/" class="flex items-center gap-3 mb-4">
+          <div
+            class="h-8 w-8 rounded-lg bg-gradient-to-br from-quantum-blue to-orbital-cyan flex items-center justify-center"
+          >
+            <span class="text-nexus-black font-bold text-sm">N</span>
+          </div>
+          <span class="text-lg font-bold text-[var(--text-primary)]">NEXUS AI</span>
+        </a>
+        <p class="text-sm text-[var(--text-secondary)] max-w-xs">
+          195 autonomous AI agents across 20 departments, building software like
+          a real company.
+        </p>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3">Company</h3>
+        <ul class="space-y-2">
+          {
+            FOOTER_NAV.company.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-sm text-[var(--text-secondary)] hover:text-quantum-blue transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3">Product</h3>
+        <ul class="space-y-2">
+          {
+            FOOTER_NAV.product.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-sm text-[var(--text-secondary)] hover:text-quantum-blue transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3">Resources</h3>
+        <ul class="space-y-2">
+          {
+            FOOTER_NAV.resources.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-sm text-[var(--text-secondary)] hover:text-quantum-blue transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3">Legal</h3>
+        <ul class="space-y-2">
+          {
+            FOOTER_NAV.legal.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-sm text-[var(--text-secondary)] hover:text-quantum-blue transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div
+      class="mt-12 pt-8 border-t border-[var(--border-color)] flex flex-col sm:flex-row items-center justify-between gap-4"
+    >
+      <p class="text-sm text-[var(--text-secondary)]">
+        &copy; {new Date().getFullYear()} NEXUS AI. All rights reserved.
+      </p>
+      <p class="text-sm text-[var(--text-secondary)]">
+        Built by <span class="text-quantum-blue font-medium">195 AI agents</span> across{" "}
+        <span class="text-quantum-blue font-medium">20 departments</span>
+      </p>
+    </div>
+  </div>
+</footer>

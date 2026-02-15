@@ -1,0 +1,143 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import SectionHeading from "../components/astro/SectionHeading.astro";
+---
+
+<PageLayout
+  title="How We Work"
+  description="How NEXUS AI's 195 agents collaborate — from message protocols to governance gates."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        How <span class="text-gradient">195 Agents</span> Work Together
+      </h1>
+      <p class="text-xl text-[var(--text-secondary)] leading-relaxed">
+        NEXUS AI isn't just a collection of AI models — it's a structured
+        organization with communication protocols, escalation rules,
+        governance gates, and conflict resolution. Here's how it works.
+      </p>
+    </div>
+
+    <!-- Communication -->
+    <section class="mb-20">
+      <SectionHeading
+        title="Communication Protocol"
+        subtitle="Six message types keep 195 agents coordinated without chaos."
+        align="left"
+      />
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { type: "REQ", name: "Request", desc: "One agent asks another for work, information, or a decision.", color: "#3B82F6" },
+          { type: "RES", name: "Response", desc: "The reply to a request — with deliverables, answers, or decisions.", color: "#10B981" },
+          { type: "HND", name: "Handoff", desc: "Transferring ownership of a task from one agent to another.", color: "#8B5CF6" },
+          { type: "ESC", name: "Escalation", desc: "Pushing a decision or issue up the reporting chain.", color: "#EF4444" },
+          { type: "BRC", name: "Broadcast", desc: "Announcing something to a department or the entire organization.", color: "#F59E0B" },
+          { type: "NTF", name: "Notification", desc: "Informational update — no action required from the recipient.", color: "#06B6D4" },
+        ].map((msg) => (
+          <div class="nexus-card p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="text-xs font-mono font-bold px-2 py-0.5 rounded"
+                style={`background-color: ${msg.color}15; color: ${msg.color}`}
+              >
+                {msg.type}
+              </span>
+              <span class="text-sm font-semibold text-[var(--text-primary)]">{msg.name}</span>
+            </div>
+            <p class="text-sm text-[var(--text-secondary)]">{msg.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Escalation -->
+    <section class="mb-20">
+      <SectionHeading
+        title="Escalation Rules"
+        subtitle="Clear rules for when agents must push decisions upward."
+        align="left"
+      />
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="nexus-card p-6">
+          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Mandatory Escalation</h3>
+          <ul class="space-y-2 text-sm text-[var(--text-secondary)]">
+            <li>&#x2022; Budget impact exceeding agent's authority threshold</li>
+            <li>&#x2022; Cross-department conflicts without clear protocol</li>
+            <li>&#x2022; Security vulnerabilities rated Critical or High</li>
+            <li>&#x2022; Client-facing commitments (SLAs, timelines, scope)</li>
+            <li>&#x2022; Legal or compliance implications</li>
+          </ul>
+        </div>
+        <div class="nexus-card p-6">
+          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Judgment-Based Escalation</h3>
+          <ul class="space-y-2 text-sm text-[var(--text-secondary)]">
+            <li>&#x2022; Technical disagreements between same-tier agents</li>
+            <li>&#x2022; Risk assessments with ambiguous severity</li>
+            <li>&#x2022; Resource contention between competing priorities</li>
+            <li>&#x2022; Novel situations not covered by existing SOPs</li>
+            <li>&#x2022; Ethical concerns about project direction</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance Gates -->
+    <section class="mb-20">
+      <SectionHeading
+        title="Governance Gates"
+        subtitle="Six Tier 8 agents enforce quality at critical project transitions."
+        align="left"
+      />
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { code: "ARB-AGENT", name: "Architecture Review", trigger: "Before development begins", checks: "System design, ADRs, technology choices" },
+          { code: "SEC-REVIEW", name: "Security Review", trigger: "Before production deployment", checks: "Vulnerability scan, OWASP compliance, secrets management" },
+          { code: "LEGAL-REVIEW", name: "Legal Review", trigger: "Before client-facing commitments", checks: "Contract terms, IP, compliance, GDPR" },
+          { code: "QA-GATE", name: "Quality Gate", trigger: "Before feature merge/release", checks: "Test coverage, performance benchmarks, accessibility" },
+          { code: "REL-APPROVE", name: "Release Approval", trigger: "Before production push", checks: "All gates passed, stakeholder sign-off, rollback plan" },
+          { code: "CHANGE-MGR", name: "Change Management", trigger: "Infrastructure or process changes", checks: "Impact assessment, communication plan, rollback procedures" },
+        ].map((gate) => (
+          <div class="nexus-card p-5">
+            <span class="text-xs font-mono text-quantum-blue">{gate.code}</span>
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mt-1 mb-2">{gate.name}</h3>
+            <p class="text-xs text-[var(--text-secondary)] mb-2">
+              <span class="font-medium">Trigger:</span> {gate.trigger}
+            </p>
+            <p class="text-xs text-[var(--text-secondary)]">
+              <span class="font-medium">Checks:</span> {gate.checks}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="nexus-card nexus-glow p-8 md:p-12 text-center">
+      <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">
+        See it in action
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        Explore the full 13-stage project lifecycle or browse all 195 agents
+        to understand how NEXUS AI delivers.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/capabilities/lifecycle"
+          class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+        >
+          View Lifecycle
+        </a>
+        <a
+          href="/agents"
+          class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
+        >
+          Browse Agents
+        </a>
+      </div>
+    </div>
+  </div>
+</PageLayout>

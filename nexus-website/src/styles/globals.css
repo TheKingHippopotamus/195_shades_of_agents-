@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --nexus-black: #0A0E27;
+    --nexus-void: #060918;
+    --quantum-blue: #00D9FF;
+    --orbital-cyan: #00F0FF;
+    --signal-white: #E8ECF4;
+    --mist: #94A3B8;
+
+    /* Light mode defaults */
+    --bg-primary: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-elevated: #F1F5F9;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --border-color: #E2E8F0;
+  }
+
+  .dark {
+    --bg-primary: #060918;
+    --bg-surface: #0A0E27;
+    --bg-elevated: #1E293B;
+    --text-primary: #E8ECF4;
+    --text-secondary: #94A3B8;
+    --border-color: #334155;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(0, 217, 255, 0.3);
+    color: var(--signal-white);
+  }
+}
+
+@layer components {
+  .nexus-glow {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.15),
+                0 0 60px rgba(0, 217, 255, 0.05);
+  }
+
+  .nexus-glow-strong {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.3),
+                0 0 60px rgba(0, 217, 255, 0.15),
+                0 0 100px rgba(0, 217, 255, 0.05);
+  }
+
+  .nexus-border {
+    border: 1px solid var(--border-color);
+  }
+
+  .nexus-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+  }
+
+  .nexus-card:hover {
+    border-color: rgba(0, 217, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--quantum-blue), var(--orbital-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}

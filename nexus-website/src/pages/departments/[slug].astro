@@ -1,0 +1,109 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import AgentCard from "../../components/astro/AgentCard.astro";
+import { getDepartmentColor } from "../../lib/department-colors";
+
+export async function getStaticPaths() {
+  let departments: any[] = [];
+  let agents: any[] = [];
+  try {
+    const deptData = await import("../../data/departments.json");
+    departments = deptData.default;
+    const agentData = await import("../../data/agents.json");
+    agents = agentData.default;
+  } catch {
+    return [];
+  }
+
+  return departments.map((dept: any) => ({
+    params: { slug: dept.slug },
+    props: {
+      department: dept,
+      deptAgents: agents.filter((a: any) => a.department_number === dept.number),
+    },
+  }));
+}
+
+const { department, deptAgents } = Astro.props;
+const color = department.color;
+---
+
+<PageLayout
+  title={department.name}
+  description={`${department.name} department at NEXUS AI — ${department.agent_count} agents from ${department.agents[0]} to ${department.agents[department.agents.length - 1]}.`}
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Breadcrumbs -->
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/departments" class="hover:text-quantum-blue">Departments</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">{department.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="flex items-center gap-4 mb-10">
+      <div
+        class="h-14 w-14 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+        style={`background-color: ${color}`}
+      >
+        {department.number}
+      </div>
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
+          {department.name}
+        </h1>
+        <p class="text-[var(--text-secondary)]">
+          {department.agent_count} agents &middot; Agents {department.agent_range.start}–{department.agent_range.end}
+        </p>
+      </div>
+    </div>
+
+    <!-- Leadership -->
+    {department.leadership.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-4">Leadership</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {deptAgents
+            .filter((a: any) => a.tier.number <= 2)
+            .map((agent: any) => (
+              <AgentCard
+                code={agent.code}
+                name={agent.code}
+                role={agent.role}
+                department={agent.department}
+                departmentNumber={agent.department_number}
+                departmentColor={color}
+                tierNumber={agent.tier.number}
+                tierLabel={agent.tier.label}
+                nickname={agent.personal?.nickname}
+              />
+            ))}
+        </div>
+      </section>
+    )}
+
+    <!-- All Agents -->
+    <section>
+      <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-4">
+        All Agents ({deptAgents.length})
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {deptAgents.map((agent: any) => (
+          <AgentCard
+            code={agent.code}
+            name={agent.code}
+            role={agent.role}
+            department={agent.department}
+            departmentNumber={agent.department_number}
+            departmentColor={color}
+            tierNumber={agent.tier.number}
+            tierLabel={agent.tier.label}
+            nickname={agent.personal?.nickname}
+          />
+        ))}
+      </div>
+    </section>
+  </div>
+</PageLayout>

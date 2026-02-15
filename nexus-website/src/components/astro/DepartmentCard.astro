@@ -1,0 +1,53 @@
+---
+interface Props {
+  number: string;
+  name: string;
+  slug: string;
+  agentCount: number;
+  color: string;
+  leadership: { code: string; role: string }[];
+}
+
+const { number, name, slug, agentCount, color, leadership } = Astro.props;
+---
+
+<a
+  href={`/departments/${slug}`}
+  class="nexus-card p-5 block group"
+>
+  <div class="flex items-center gap-3 mb-3">
+    <div
+      class="h-10 w-10 rounded-lg flex items-center justify-center text-white font-bold text-sm"
+      style={`background-color: ${color}`}
+    >
+      {number}
+    </div>
+    <div>
+      <h3
+        class="text-sm font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors"
+      >
+        {name}
+      </h3>
+      <p class="text-xs text-[var(--text-secondary)]">
+        {agentCount} agents
+      </p>
+    </div>
+  </div>
+
+  {
+    leadership.length > 0 && (
+      <div class="space-y-1">
+        {leadership.slice(0, 3).map((lead) => (
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-mono text-quantum-blue">
+              {lead.code}
+            </span>
+            <span class="text-[10px] text-[var(--text-secondary)] truncate">
+              {lead.role}
+            </span>
+          </div>
+        ))}
+      </div>
+    )
+  }
+</a>

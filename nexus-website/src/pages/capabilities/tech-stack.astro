@@ -1,0 +1,139 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+
+const categories = [
+  {
+    name: "Frontend",
+    items: [
+      { tech: "React", status: "ADOPT", notes: "Primary UI framework" },
+      { tech: "Vue.js", status: "ADOPT", notes: "Alternative for specific use cases" },
+      { tech: "TypeScript", status: "ADOPT", notes: "Mandatory for all new code" },
+      { tech: "Next.js", status: "ADOPT", notes: "React meta-framework" },
+      { tech: "Astro", status: "TRIAL", notes: "Content-heavy sites" },
+      { tech: "Tailwind CSS", status: "ADOPT", notes: "Utility-first styling" },
+    ],
+  },
+  {
+    name: "Backend",
+    items: [
+      { tech: "Node.js", status: "ADOPT", notes: "Primary JS runtime" },
+      { tech: "Python", status: "ADOPT", notes: "AI/ML, data pipelines, automation" },
+      { tech: "Go", status: "ADOPT", notes: "High-performance services" },
+      { tech: "PostgreSQL", status: "ADOPT", notes: "Primary relational database" },
+      { tech: "Redis", status: "ADOPT", notes: "Caching, queues, real-time" },
+      { tech: "GraphQL", status: "ADOPT", notes: "API layer for complex data" },
+    ],
+  },
+  {
+    name: "Infrastructure",
+    items: [
+      { tech: "AWS", status: "ADOPT", notes: "Primary cloud provider" },
+      { tech: "GCP", status: "ADOPT", notes: "AI/ML workloads" },
+      { tech: "Kubernetes", status: "ADOPT", notes: "Container orchestration" },
+      { tech: "Terraform", status: "ADOPT", notes: "Infrastructure as code" },
+      { tech: "Docker", status: "ADOPT", notes: "Containerization standard" },
+      { tech: "GitHub Actions", status: "ADOPT", notes: "CI/CD pipelines" },
+    ],
+  },
+  {
+    name: "AI & Machine Learning",
+    items: [
+      { tech: "PyTorch", status: "ADOPT", notes: "Primary ML framework" },
+      { tech: "Hugging Face", status: "ADOPT", notes: "Pre-trained models, transformers" },
+      { tech: "LangChain", status: "TRIAL", notes: "LLM orchestration" },
+      { tech: "MLflow", status: "ADOPT", notes: "Experiment tracking, model registry" },
+      { tech: "scikit-learn", status: "ADOPT", notes: "Classical ML" },
+      { tech: "OpenAI API", status: "ADOPT", notes: "GPT integration" },
+    ],
+  },
+  {
+    name: "Quality & Security",
+    items: [
+      { tech: "Jest / Vitest", status: "ADOPT", notes: "Unit testing" },
+      { tech: "Playwright", status: "ADOPT", notes: "E2E testing" },
+      { tech: "SonarQube", status: "ADOPT", notes: "Code quality analysis" },
+      { tech: "Snyk", status: "ADOPT", notes: "Dependency vulnerability scanning" },
+      { tech: "OWASP ZAP", status: "ADOPT", notes: "Security testing" },
+      { tech: "Datadog", status: "ADOPT", notes: "Monitoring and observability" },
+    ],
+  },
+];
+
+const statusColors: Record<string, string> = {
+  ADOPT: "#10B981",
+  TRIAL: "#F59E0B",
+  ASSESS: "#3B82F6",
+  HOLD: "#EF4444",
+};
+---
+
+<PageLayout
+  title="Technology Stack"
+  description="The technologies NEXUS AI agents use to build world-class software — from frontend to AI/ML."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/capabilities" class="hover:text-quantum-blue">Capabilities</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">Tech Stack</span>
+    </nav>
+
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        Tech <span class="text-gradient">Stack</span>
+      </h1>
+      <p class="text-xl text-[var(--text-secondary)]">
+        Our technology choices follow a radar model: ADOPT (production default),
+        TRIAL (approved for specific projects), ASSESS (evaluating), and HOLD
+        (deprecated).
+      </p>
+    </div>
+
+    <!-- Legend -->
+    <div class="flex flex-wrap gap-4 mb-10">
+      {Object.entries(statusColors).map(([status, color]) => (
+        <div class="flex items-center gap-2">
+          <span
+            class="h-3 w-3 rounded-full"
+            style={`background-color: ${color}`}
+          />
+          <span class="text-sm text-[var(--text-secondary)]">{status}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="space-y-10">
+      {categories.map((cat) => (
+        <section>
+          <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">{cat.name}</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {cat.items.map((item) => (
+              <div class="nexus-card p-4 flex items-center gap-3">
+                <span
+                  class="h-2.5 w-2.5 rounded-full flex-shrink-0"
+                  style={`background-color: ${statusColors[item.status]}`}
+                />
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-semibold text-[var(--text-primary)]">
+                      {item.tech}
+                    </span>
+                    <span
+                      class="text-[10px] px-1.5 py-0.5 rounded font-medium"
+                      style={`background-color: ${statusColors[item.status]}15; color: ${statusColors[item.status]}`}
+                    >
+                      {item.status}
+                    </span>
+                  </div>
+                  <p class="text-xs text-[var(--text-secondary)] truncate">{item.notes}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</PageLayout>

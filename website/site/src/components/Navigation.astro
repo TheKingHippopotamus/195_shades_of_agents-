@@ -1,0 +1,139 @@
+---
+import ThemeToggle from './ThemeToggle.tsx';
+
+const navLinks = [
+  { label: 'About', href: `${import.meta.env.BASE_URL}` },
+  { label: 'Our Team', href: `${import.meta.env.BASE_URL}` },
+  { label: 'How We Work', href: `${import.meta.env.BASE_URL}` },
+  { label: 'Services', href: `${import.meta.env.BASE_URL}` },
+];
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-[30] transition-all duration-300"
+>
+  <div class="container-content flex items-center justify-between h-16">
+    <!-- Logo -->
+    <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 font-extrabold text-xl tracking-wider">
+      <span class="text-[var(--text-primary)]">NEXUS</span>
+      <span class="text-quantum">AI</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-[var(--text-secondary)] hover:text-quantum transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Right side -->
+    <div class="flex items-center gap-4">
+      <ThemeToggle client:load />
+
+      <!-- Contact CTA (desktop) -->
+      <a
+        href={import.meta.env.BASE_URL}
+        class="hidden lg:inline-flex items-center px-5 py-2 rounded-md bg-quantum text-nexus-black font-semibold text-sm hover:bg-orbital transition-colors duration-150"
+      >
+        Contact
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-toggle"
+        class="lg:hidden p-2 text-[var(--text-primary)]"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-[40] bg-[var(--bg-primary)] transform translate-x-full transition-transform duration-300 lg:hidden"
+    aria-hidden="true"
+  >
+    <div class="flex justify-end p-4">
+      <button id="mobile-menu-close" class="p-2 text-[var(--text-primary)]" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-start px-6 gap-6" aria-label="Mobile navigation">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="text-h3 font-bold text-[var(--text-primary)] hover:text-quantum transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={import.meta.env.BASE_URL}
+        class="mt-4 w-full text-center px-6 py-3 rounded-md bg-quantum text-nexus-black font-semibold text-lg"
+      >
+        Contact Us
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Scroll-based header background
+  const header = document.getElementById('site-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        header.style.backgroundColor = 'color-mix(in srgb, var(--bg-primary) 80%, transparent)';
+        header.style.backdropFilter = 'blur(12px)';
+        header.style.borderBottom = '1px solid var(--border)';
+      } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.borderBottom = 'none';
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('mobile-menu-close');
+  const menu = document.getElementById('mobile-menu');
+
+  function openMenu() {
+    menu?.classList.remove('translate-x-full');
+    menu?.classList.add('translate-x-0');
+    menu?.setAttribute('aria-hidden', 'false');
+    toggle?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu?.classList.remove('translate-x-0');
+    menu?.classList.add('translate-x-full');
+    menu?.setAttribute('aria-hidden', 'true');
+    toggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', openMenu);
+  closeBtn?.addEventListener('click', closeMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

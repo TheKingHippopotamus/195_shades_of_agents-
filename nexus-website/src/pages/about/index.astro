@@ -1,0 +1,199 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import SectionHeading from "../../components/astro/SectionHeading.astro";
+
+let agents: any[] = [];
+let departments: any[] = [];
+try {
+  const agentData = await import("../../data/agents.json");
+  agents = agentData.default;
+  const deptData = await import("../../data/departments.json");
+  departments = deptData.default;
+} catch {}
+
+const cSuite = agents.filter((a: any) => a.tier.number === 0);
+const totalAgents = agents.length;
+const totalDepts = departments.length;
+---
+
+<PageLayout
+  title="About NEXUS AI"
+  description="NEXUS AI is the world's first AI-powered software agency with 195 autonomous agents across 20 departments."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6">
+          Not a tool.<br />
+          <span class="text-gradient">A company.</span>
+        </h1>
+        <p class="text-xl text-[var(--text-secondary)] leading-relaxed">
+          NEXUS AI is the world's first AI-powered software agency. {totalAgents} autonomous
+          agents across {totalDepts} departments don't just assist — they plan, design, develop,
+          test, and ship production software. Every agent has a role, a personality, strengths,
+          and weaknesses. Together, they operate like a real tech company.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Our Mission</h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed">
+            To prove that AI can operate with the depth, rigor, and
+            accountability of a world-class software organization — not as a
+            chatbot, but as a fully-staffed agency with real structure,
+            governance, and craft.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Our Vision</h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed">
+            A future where AI agencies are the standard for software
+            development — transparent, accountable, and capable of delivering
+            enterprise-grade projects from first contact to long-term
+            maintenance, with every decision traceable to a named agent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We're Different -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="How We're Different"
+      subtitle="Most AI tools help individuals. NEXUS AI replaces the entire agency."
+    />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        {
+          title: "Real Organizational Structure",
+          description: "20 departments, 10 tiers, clear reporting chains. Every agent has a manager, direct reports, and defined decision authority.",
+        },
+        {
+          title: "Named, Accountable Agents",
+          description: "Each of our 195 agents has a code, personality, strengths, weaknesses, and success metrics. No black boxes.",
+        },
+        {
+          title: "13-Stage Project Lifecycle",
+          description: "From Lead Qualification through Maintenance — the same lifecycle stages used by top-tier consulting firms.",
+        },
+        {
+          title: "Governance Gates",
+          description: "Architecture review, security review, legal review, QA gate, and release approval — all enforced by dedicated Tier 8 governance agents.",
+        },
+        {
+          title: "Full-Spectrum Departments",
+          description: "Engineering, Design, QA, Security, Sales, Marketing, Legal, Finance, HR, DevRel — we have departments most AI tools don't even consider.",
+        },
+        {
+          title: "Transparent Decision-Making",
+          description: "Every agent publishes what they can decide independently and what they must escalate. Conflict resolution protocols handle disagreements.",
+        },
+      ].map((item) => (
+        <div class="nexus-card p-6">
+          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
+            {item.title}
+          </h3>
+          <p class="text-sm text-[var(--text-secondary)]">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- C-Suite Leadership -->
+  {cSuite.length > 0 && (
+    <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <SectionHeading
+          title="Leadership"
+          subtitle="The C-Suite — 11 executive agents steering NEXUS AI's vision, strategy, and operations."
+        />
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {cSuite.map((agent: any) => (
+            <a
+              href={`/agents/${agent.code.toLowerCase()}`}
+              class="nexus-card p-5 block group"
+            >
+              <div class="flex items-center gap-3 mb-3">
+                <div class="h-12 w-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-quantum-blue/20 to-orbital-cyan/20 border border-quantum-blue/30">
+                  <span class="text-quantum-blue font-bold text-sm">{agent.code}</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors">
+                    {agent.role}
+                  </h3>
+                  {agent.personal?.nickname && (
+                    <p class="text-xs text-[var(--text-secondary)] italic">
+                      &ldquo;{agent.personal.nickname}&rdquo;
+                    </p>
+                  )}
+                </div>
+              </div>
+              <p class="text-xs text-[var(--text-secondary)] line-clamp-2">
+                {agent.personal?.about_me || agent.personality.substring(0, 120) + "..."}
+              </p>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-8 text-center">
+          <a
+            href="/about/leadership"
+            class="text-sm text-quantum-blue hover:underline"
+          >
+            View full leadership profiles &#x2192;
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- By the Numbers -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading title="By the Numbers" />
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {[
+        { value: "195", label: "AI Agents", detail: "Each with unique personality" },
+        { value: "20", label: "Departments", detail: "Full organizational coverage" },
+        { value: "10", label: "Tier Levels", detail: "C-Suite to Special Agents" },
+        { value: "13", label: "Lifecycle Stages", detail: "Discovery to Maintenance" },
+      ].map((stat) => (
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-gradient">{stat.value}</div>
+          <div class="mt-1 text-sm font-medium text-[var(--text-primary)]">{stat.label}</div>
+          <div class="text-xs text-[var(--text-secondary)]">{stat.detail}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28">
+    <div class="nexus-card nexus-glow p-8 md:p-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
+        Meet the team behind the agency
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        Explore all 195 agents — their roles, personalities, decision authority,
+        and how they work together.
+      </p>
+      <a
+        href="/agents"
+        class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+      >
+        Browse All Agents
+      </a>
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,215 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import SectionHeading from "../components/astro/SectionHeading.astro";
+import DepartmentCard from "../components/astro/DepartmentCard.astro";
+
+let agents: any[] = [];
+let departments: any[] = [];
+
+try {
+  const agentData = await import("../data/agents.json");
+  agents = agentData.default;
+} catch { agents = []; }
+
+try {
+  const deptData = await import("../data/departments.json");
+  departments = deptData.default;
+} catch { departments = []; }
+
+const stats = [
+  { value: "195", label: "AI Agents" },
+  { value: "20", label: "Departments" },
+  { value: "10", label: "Tier Levels" },
+  { value: "13", label: "Lifecycle Stages" },
+];
+
+const capabilities = [
+  {
+    title: "Full-Stack Development",
+    description: "40 engineering agents across frontend, backend, mobile, and data — from React to Python, iOS to DevOps.",
+    icon: "code",
+  },
+  {
+    title: "AI & Machine Learning",
+    description: "12 dedicated AI/ML agents for model development, data pipelines, and intelligent features.",
+    icon: "brain",
+  },
+  {
+    title: "Design & UX",
+    description: "14 design agents creating world-class user experiences, from research to pixel-perfect implementation.",
+    icon: "palette",
+  },
+  {
+    title: "Security & Compliance",
+    description: "8 security agents ensuring every line of code meets enterprise-grade security standards.",
+    icon: "shield",
+  },
+  {
+    title: "Quality Assurance",
+    description: "8 QA agents with automated testing, performance profiling, and quality gate enforcement.",
+    icon: "check",
+  },
+  {
+    title: "Project Management",
+    description: "End-to-end project lifecycle management across 13 stages, from discovery to maintenance.",
+    icon: "workflow",
+  },
+];
+---
+
+<PageLayout title="NEXUS AI" description="195 autonomous AI agents across 20 departments, building software like a real company. Not a tool. A team.">
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--bg-primary)]/50 to-[var(--bg-primary)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-quantum-blue/30 bg-quantum-blue/5 mb-8">
+          <span class="h-2 w-2 rounded-full bg-quantum-blue animate-pulse"></span>
+          <span class="text-sm text-quantum-blue font-medium">195 Agents Online</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+          <span class="text-[var(--text-primary)]">We don't just build</span>
+          <br />
+          <span class="text-gradient">software.</span>
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
+          195 AI agents plan, design, develop, test, and ship it — like a real
+          company, because we are one. 20 departments. 10 tiers. One mission.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/agents"
+            class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+          >
+            Meet the Team
+            <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="/capabilities"
+            class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 hover:bg-quantum-blue/5 transition-colors"
+          >
+            View Capabilities
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="border-y border-[var(--border-color)] bg-[var(--bg-surface)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {
+          stats.map((stat) => (
+            <div class="text-center">
+              <div class="text-3xl md:text-4xl font-bold text-gradient">
+                {stat.value}
+              </div>
+              <div class="mt-1 text-sm text-[var(--text-secondary)]">
+                {stat.label}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <SectionHeading
+      title="What We Build"
+      subtitle="A full-spectrum software agency powered by AI — every department you'd find at a top-tier tech company."
+    />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        capabilities.map((cap) => (
+          <div class="nexus-card p-6">
+            <div class="h-10 w-10 rounded-lg bg-quantum-blue/10 flex items-center justify-center mb-4">
+              <span class="text-quantum-blue text-lg font-bold">
+                {cap.icon === "code" && "</>"}
+                {cap.icon === "brain" && "AI"}
+                {cap.icon === "palette" && "UX"}
+                {cap.icon === "shield" && "Sec"}
+                {cap.icon === "check" && "QA"}
+                {cap.icon === "workflow" && "PM"}
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
+              {cap.title}
+            </h3>
+            <p class="text-sm text-[var(--text-secondary)]">
+              {cap.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Departments -->
+  {departments.length > 0 && (
+    <section class="bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <SectionHeading
+          title="20 Departments"
+          subtitle="Every department you'd find at a world-class tech company — from Engineering to Legal, Security to Marketing."
+        />
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {departments.map((dept: any) => (
+            <DepartmentCard
+              number={dept.number}
+              name={dept.name}
+              slug={dept.slug}
+              agentCount={dept.agent_count}
+              color={dept.color}
+              leadership={dept.leadership}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="nexus-card nexus-glow p-8 md:p-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
+        Ready to see what 195 agents can build?
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        From discovery to deployment, our agents handle every stage of the
+        software development lifecycle.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+        >
+          Start a Project
+        </a>
+        <a
+          href="/how-we-work"
+          class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
+        >
+          How We Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
