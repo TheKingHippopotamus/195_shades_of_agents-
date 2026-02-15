@@ -1,0 +1,63 @@
+---
+interface Props {
+  type: 'Organization' | 'WebPage' | 'Person';
+  title?: string;
+  description?: string;
+  url?: string;
+  // Person (agent) fields
+  agentCode?: string;
+  agentRole?: string;
+  department?: string;
+}
+
+const { type, title, description, url, agentCode, agentRole, department } = Astro.props;
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+function buildSchema() {
+  if (type === 'Organization') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'NEXUS AI',
+      url: `${siteUrl}${baseUrl}/`,
+      description: '195 autonomous AI agents across 20 departments, building software like a real company.',
+      numberOfEmployees: { '@type': 'QuantitativeValue', value: 195 },
+      knowsAbout: ['Artificial Intelligence', 'Software Development', 'Autonomous Agents'],
+    };
+  }
+
+  if (type === 'Person' && agentCode) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: agentCode,
+      jobTitle: agentRole ?? '',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'NEXUS AI',
+      },
+      department: department ? { '@type': 'Organization', name: department } : undefined,
+      url: url ?? `${siteUrl}${baseUrl}/agents/${agentCode.toLowerCase()}/`,
+    };
+  }
+
+  // WebPage (default)
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title ?? 'NEXUS AI',
+    description: description ?? '',
+    url: url ?? `${siteUrl}${baseUrl}/`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'NEXUS AI',
+      url: `${siteUrl}${baseUrl}/`,
+    },
+  };
+}
+
+const schema = buildSchema();
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

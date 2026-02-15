@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thekinghampopotamus.github.io/195_shades_of_agents-/sitemap-index.xml

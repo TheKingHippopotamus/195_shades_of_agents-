@@ -48,13 +48,13 @@ const featuredAgents = [
         <!-- CTAs -->
         <div class="flex flex-wrap gap-4" style="animation: fade-in 0.5s ease-out 0.8s both">
           <a
-            href={`${import.meta.env.BASE_URL}`}
+            href={`${import.meta.env.BASE_URL}about/`}
             class="inline-flex items-center px-8 py-4 rounded-md bg-quantum text-nexus-black font-semibold text-base hover:bg-orbital hover:scale-[1.02] transition-all duration-150 shadow-glow-sm hover:shadow-glow-md"
           >
-            Request Demo
+            Learn More
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}`}
+            href={`${import.meta.env.BASE_URL}team/`}
             class="inline-flex items-center px-8 py-4 rounded-md border border-quantum text-quantum font-semibold text-base hover:bg-quantum/10 transition-all duration-150"
           >
             Meet the Team &rarr;
@@ -88,15 +88,17 @@ const featuredAgents = [
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {featuredAgents.map((agent) => (
-          <AgentCard
-            agentNumber={agent.agentNumber}
-            code={agent.code}
-            name={agent.name}
-            department={agent.department}
-            tier={agent.tier}
-            nickname={agent.nickname}
-            reportsTo={agent.reportsTo}
-          />
+          <a href={`${import.meta.env.BASE_URL}team/${agent.code.toLowerCase()}/`} class="block no-underline">
+            <AgentCard
+              agentNumber={agent.agentNumber}
+              code={agent.code}
+              name={agent.name}
+              department={agent.department}
+              tier={agent.tier}
+              nickname={agent.nickname}
+              reportsTo={agent.reportsTo}
+            />
+          </a>
         ))}
       </div>
     </div>
@@ -125,7 +127,7 @@ const featuredAgents = [
 
       <div class="text-center mt-10">
         <a
-          href={`${import.meta.env.BASE_URL}`}
+          href={`${import.meta.env.BASE_URL}departments/`}
           class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-[var(--border)] text-[var(--accent-text)] hover:text-quantum hover:border-quantum/30 font-medium transition-all duration-200"
         >
           View All 20 Departments &rarr;
@@ -143,10 +145,10 @@ const featuredAgents = [
         Experience the future of software development with our autonomous AI agency.
       </p>
       <a
-        href={`${import.meta.env.BASE_URL}`}
+        href={`${import.meta.env.BASE_URL}team/`}
         class="inline-flex items-center px-8 py-4 rounded-md bg-quantum text-nexus-black font-semibold text-base hover:bg-orbital hover:scale-[1.02] transition-all duration-150 shadow-glow-sm hover:shadow-glow-md"
       >
-        Get Started
+        Explore All 195 Agents
       </a>
     </div>
   </section>

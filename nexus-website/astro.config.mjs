@@ -5,6 +5,10 @@ export default defineConfig({
   site: "https://thekinghampopotamus.github.io",
   base: "/195_shades_of_agents-",
   output: "static",
+  trailingSlash: "always",
+  build: {
+    format: "directory",
+  },
   integrations: [
     react(),
     tailwind(),

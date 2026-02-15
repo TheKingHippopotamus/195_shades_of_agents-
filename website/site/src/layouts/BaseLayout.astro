@@ -2,13 +2,25 @@
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import JsonLd from '../components/JsonLd.astro';
 
 interface Props {
   title: string;
   description?: string;
+  jsonLdType?: 'Organization' | 'WebPage' | 'Person';
+  agentCode?: string;
+  agentRole?: string;
+  department?: string;
 }
 
-const { title, description = '195 AI Agents. 20 Departments. One Autonomous Agency.' } = Astro.props;
+const {
+  title,
+  description = '195 AI Agents. 20 Departments. One Autonomous Agency.',
+  jsonLdType = 'WebPage',
+  agentCode,
+  agentRole,
+  department,
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -22,6 +34,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | NEXUS AI</title>
+
+    <!-- JSON-LD Structured Data -->
+    <JsonLd type="Organization" />
+    <JsonLd
+      type={jsonLdType}
+      title={title}
+      description={description}
+      url={canonicalURL.toString()}
+      agentCode={agentCode}
+      agentRole={agentRole}
+      department={department}
+    />
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline>

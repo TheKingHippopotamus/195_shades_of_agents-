@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { DEPARTMENT_COLORS, TIER_COLORS, TIER_LABELS } from '../../lib/constants';
+import agents from '../../data/agents.json';
+
+export function getStaticPaths() {
+  return agents.map(agent => ({
+    params: { slug: agent.slug },
+    props: { agent },
+  }));
+}
+
+const { agent } = Astro.props;
+const deptColor = DEPARTMENT_COLORS[agent.department] ?? '#94A3B8';
+const tierColor = TIER_COLORS[agent.tier] ?? '#94A3B8';
+const tierLabel = TIER_LABELS[agent.tier] ?? `Tier ${agent.tier}`;
+const paddedNum = String(agent.agentNumber).padStart(3, '0');
+const initials = agent.code.slice(0, 2).toUpperCase();
+
+// Find direct reports from the data
+const directReports = agents.filter(a => {
+  const reports = a.reportsTo.toUpperCase();
+  return reports === agent.code.toUpperCase() || reports.includes(agent.code.toUpperCase());
+});
+---
+
+<BaseLayout title={`${agent.role} — Agent ${paddedNum}`} description={`Meet ${agent.nickname || agent.code}, ${agent.role} at NEXUS AI. ${agent.department}, ${agent.tierLabel}.`} jsonLdType="Person" agentCode={agent.code} agentRole={agent.role} department={agent.department}>
+  <!-- Hero Banner -->
+  <section class="gradient-hero relative overflow-hidden pt-28 pb-12">
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+    <div class="relative container-content">
+      <!-- Breadcrumb -->
+      <nav class="mb-6 text-body-sm" aria-label="Breadcrumb">
+        <a href={`${import.meta.env.BASE_URL}team/`} class="text-mist hover:text-quantum transition-colors">Our Team</a>
+        <span class="text-mist mx-2">/</span>
+        <span class="text-signal">{agent.code}</span>
+      </nav>
+
+      <div class="flex flex-col md:flex-row items-start gap-6">
+        <!-- Avatar -->
+        <div
+          class="w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold ring-4 shrink-0"
+          style={`background-color: ${deptColor}20; color: ${deptColor}; --tw-ring-color: ${deptColor}`}
+        >
+          {initials}
+        </div>
+
+        <div>
+          <p class="font-mono text-body-sm text-mist mb-1">Agent #{paddedNum}</p>
+          <h1 class="text-h2 font-bold text-signal mb-1">{agent.role}</h1>
+          {agent.nickname && (
+            <p class="text-body-lg text-quantum mb-3">"{agent.nickname}" — {agent.code}</p>
+          )}
+          {!agent.nickname && (
+            <p class="text-body-lg text-quantum mb-3">{agent.code}</p>
+          )}
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2">
+            <a
+              href={`${import.meta.env.BASE_URL}departments/${agent.department.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')}/`}
+              class="inline-flex items-center px-3 py-1 rounded-full text-badge font-semibold text-white uppercase tracking-wider hover:opacity-80 transition-opacity"
+              style={`background-color: ${deptColor}`}
+            >
+              {agent.department}
+            </a>
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-full text-badge font-semibold uppercase tracking-wider"
+              style={`background-color: ${tierColor}; color: ${agent.tier <= 2 ? '#0F172A' : '#FFFFFF'}`}
+            >
+              {tierLabel}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-content">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-10">
+          {/* About Me */}
+          {agent.aboutMe && (
+            <div>
+              <h2 class="text-h3 font-bold text-[var(--text-primary)] mb-4">About</h2>
+              <p class="text-body text-[var(--text-secondary)] leading-relaxed">{agent.aboutMe}</p>
+            </div>
+          )}
+
+          {/* What I Bring */}
+          {agent.whatIBring && (
+            <div>
+              <h2 class="text-h3 font-bold text-[var(--text-primary)] mb-4">What I Bring</h2>
+              <p class="text-body text-[var(--text-secondary)] leading-relaxed">{agent.whatIBring}</p>
+            </div>
+          )}
+
+          {/* Core Responsibilities */}
+          {agent.responsibilities.length > 0 && (
+            <div>
+              <h2 class="text-h3 font-bold text-[var(--text-primary)] mb-4">Core Responsibilities</h2>
+              <div class="space-y-4">
+                {agent.responsibilities.map((r: {title: string; description: string}, i: number) => (
+                  <div class="flex gap-3">
+                    <span class="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-quantum/10 text-quantum">{i + 1}</span>
+                    <div>
+                      <p class="font-semibold text-[var(--text-primary)]">{r.title}</p>
+                      {r.description && <p class="text-body-sm text-[var(--text-secondary)] mt-1">{r.description}</p>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Working With Me */}
+          {agent.workingWithMe && (
+            <div class="rounded-lg border border-quantum/20 bg-quantum/5 p-6">
+              <h2 class="text-h4 font-bold text-quantum mb-3">Working With Me</h2>
+              <p class="text-body text-[var(--text-secondary)] leading-relaxed">{agent.workingWithMe}</p>
+            </div>
+          )}
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+          {/* Agent Details Card */}
+          <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
+            <h3 class="text-h4 font-bold text-[var(--text-primary)] mb-4">Details</h3>
+            <dl class="space-y-3 text-body-sm">
+              <div>
+                <dt class="text-[var(--text-muted)]">Agent Number</dt>
+                <dd class="font-mono text-[var(--text-primary)]">#{paddedNum}</dd>
+              </div>
+              <div>
+                <dt class="text-[var(--text-muted)]">Code</dt>
+                <dd class="font-mono text-[var(--text-primary)]">{agent.code}</dd>
+              </div>
+              <div>
+                <dt class="text-[var(--text-muted)]">Department</dt>
+                <dd class="text-[var(--text-primary)]">{agent.department}</dd>
+              </div>
+              <div>
+                <dt class="text-[var(--text-muted)]">Tier</dt>
+                <dd class="text-[var(--text-primary)]">{agent.tierLabel}</dd>
+              </div>
+              <div>
+                <dt class="text-[var(--text-muted)]">Reports To</dt>
+                <dd class="text-[var(--text-primary)]">{agent.reportsTo}</dd>
+              </div>
+              {agent.age && (
+                <div>
+                  <dt class="text-[var(--text-muted)]">Age</dt>
+                  <dd class="text-[var(--text-primary)]">{agent.age}</dd>
+                </div>
+              )}
+            </dl>
+          </div>
+
+          {/* Strengths */}
+          {agent.strengths.length > 0 && (
+            <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
+              <h3 class="text-h4 font-bold text-success mb-4">Strengths</h3>
+              <ul class="space-y-2">
+                {agent.strengths.map((s: string) => (
+                  <li class="flex gap-2 text-body-sm text-[var(--text-secondary)]">
+                    <span class="text-success shrink-0 mt-0.5">+</span>
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Weaknesses */}
+          {agent.weaknesses.length > 0 && (
+            <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
+              <h3 class="text-h4 font-bold text-warning mb-4">Growth Areas</h3>
+              <ul class="space-y-2">
+                {agent.weaknesses.map((w: string) => (
+                  <li class="flex gap-2 text-body-sm text-[var(--text-secondary)]">
+                    <span class="text-warning shrink-0 mt-0.5">~</span>
+                    <span>{w}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Decision Authority */}
+          {agent.canDecide.length > 0 && (
+            <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
+              <h3 class="text-h4 font-bold text-[var(--text-primary)] mb-4">Decision Authority</h3>
+              <p class="text-caption text-quantum font-semibold mb-2 uppercase tracking-wider">Can Decide</p>
+              <ul class="space-y-1.5 mb-4">
+                {agent.canDecide.map((d: string) => (
+                  <li class="text-body-sm text-[var(--text-secondary)] pl-3 border-l-2 border-quantum/30">{d}</li>
+                ))}
+              </ul>
+              {agent.mustEscalate.length > 0 && (
+                <>
+                  <p class="text-caption text-warning font-semibold mb-2 uppercase tracking-wider">Must Escalate</p>
+                  <ul class="space-y-1.5">
+                    {agent.mustEscalate.map((e: string) => (
+                      <li class="text-body-sm text-[var(--text-secondary)] pl-3 border-l-2 border-warning/30">{e}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          )}
+
+          {/* Direct Reports */}
+          {directReports.length > 0 && (
+            <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
+              <h3 class="text-h4 font-bold text-[var(--text-primary)] mb-4">Direct Reports ({directReports.length})</h3>
+              <div class="space-y-2">
+                {directReports.slice(0, 12).map(r => (
+                  <a
+                    href={`${import.meta.env.BASE_URL}team/${r.slug}/`}
+                    class="flex items-center gap-2 text-body-sm text-[var(--text-secondary)] hover:text-quantum transition-colors"
+                  >
+                    <span class="font-mono text-caption text-[var(--text-muted)]">#{String(r.agentNumber).padStart(3, '0')}</span>
+                    <span>{r.code}</span>
+                    <span class="text-[var(--text-muted)]">—</span>
+                    <span class="truncate">{r.role}</span>
+                  </a>
+                ))}
+                {directReports.length > 12 && (
+                  <p class="text-body-sm text-[var(--text-muted)]">+ {directReports.length - 12} more</p>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
