@@ -9,7 +9,7 @@ on:
 
 defaults:
   run:
-    working-directory: website/site
+    working-directory: nexus-website
 
 jobs:
   typecheck:
@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: website/site/package-lock.json
+          cache-dependency-path: nexus-website/package-lock.json
       - run: npm ci
       - run: npx astro check
 
@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: website/site/package-lock.json
+          cache-dependency-path: nexus-website/package-lock.json
       - run: npm ci
       - run: npx eslint src --max-warnings 0
       - run: npx prettier --check .
@@ -45,7 +45,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: website/site/package-lock.json
+          cache-dependency-path: nexus-website/package-lock.json
       - run: npm ci
       - run: npx vitest run --coverage --passWithNoTests
 
@@ -58,7 +58,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: website/site/package-lock.json
+          cache-dependency-path: nexus-website/package-lock.json
       - run: npm ci
       - name: Fetch Sanity CMS content
         run: npx tsx scripts/fetch-sanity-content.ts
@@ -110,7 +110,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: website/site/package-lock.json
+          cache-dependency-path: nexus-website/package-lock.json
       - run: npm ci
       - name: Fetch Sanity CMS content
         run: npx tsx scripts/fetch-sanity-content.ts

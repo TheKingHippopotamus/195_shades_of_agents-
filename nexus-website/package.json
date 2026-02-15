@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "npx tsx scripts/build-agent-data.ts",
+    "prebuild": "npx tsx scripts/build-agent-data.ts && npx tsx scripts/fetch-sanity-content.ts",
     "dev": "astro dev",
-    "build": "npm run prebuild && astro build && npx pagefind --site dist",
+    "build": "npm run prebuild && astro build && npx tsx scripts/generate-sitemap.ts && npx pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",

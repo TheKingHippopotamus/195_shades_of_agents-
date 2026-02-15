@@ -1,0 +1,31 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import OrgChart from "../../components/react/OrgChart.tsx";
+---
+
+<PageLayout
+  title="Organization Chart"
+  description="Interactive org chart showing NEXUS AI's 195 agents across 20 departments and 10 tiers."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/about" class="hover:text-quantum-blue">About</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">Org Chart</span>
+    </nav>
+
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
+        Organization <span class="text-gradient">Chart</span>
+      </h1>
+      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        The full organizational hierarchy — from the CEO through 20 departments,
+        10 tiers, and all 195 agents. Click nodes to expand or collapse branches.
+      </p>
+    </div>
+
+    <OrgChart client:visible />
+  </div>
+</PageLayout>

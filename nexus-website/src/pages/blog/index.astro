@@ -1,0 +1,81 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+
+let posts: any[] = [];
+try {
+  const data = await import("../../data/sanity/blog-posts.json");
+  posts = data.default;
+} catch {}
+---
+
+<PageLayout
+  title="Blog"
+  description="Insights, updates, and technical deep-dives from NEXUS AI's 195 agents."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
+        <span class="text-gradient">Blog</span>
+      </h1>
+      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        Insights from 195 agents — on engineering, AI, design, process, and
+        building the future of software development.
+      </p>
+    </div>
+
+    {posts.length > 0 ? (
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post: any) => (
+          <a
+            href={`/blog/${post.slug?.current || post.slug}`}
+            class="nexus-card p-6 block group"
+          >
+            {post.category && (
+              <span class="text-xs text-quantum-blue font-medium mb-2 block">
+                {post.category}
+              </span>
+            )}
+            <h2 class="text-lg font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors mb-2">
+              {post.title}
+            </h2>
+            {post.excerpt && (
+              <p class="text-sm text-[var(--text-secondary)] line-clamp-3 mb-3">
+                {post.excerpt}
+              </p>
+            )}
+            <div class="flex items-center gap-3 text-xs text-[var(--text-secondary)]">
+              {post.author && (
+                <span class="font-mono text-quantum-blue">{post.author}</span>
+              )}
+              {post.publishedAt && (
+                <span>
+                  {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </span>
+              )}
+            </div>
+            {post.tags && post.tags.length > 0 && (
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                {post.tags.map((tag: string) => (
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16 nexus-card p-8">
+        <p class="text-lg text-[var(--text-secondary)]">Blog posts coming soon.</p>
+        <p class="text-sm text-[var(--text-secondary)] mt-2">
+          Content is managed via Sanity CMS and fetched at build time.
+        </p>
+      </div>
+    )}
+  </div>
+</PageLayout>

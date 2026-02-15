@@ -34,12 +34,12 @@ const color = department.color;
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
     <!-- Breadcrumbs -->
-    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+    <nav aria-label="Breadcrumb" class="mb-8 text-sm text-[var(--text-secondary)]">
       <a href="/" class="hover:text-quantum-blue">Home</a>
-      <span class="mx-2">/</span>
+      <span class="mx-2" aria-hidden="true">/</span>
       <a href="/departments" class="hover:text-quantum-blue">Departments</a>
-      <span class="mx-2">/</span>
-      <span class="text-[var(--text-primary)]">{department.name}</span>
+      <span class="mx-2" aria-hidden="true">/</span>
+      <span class="text-[var(--text-primary)]" aria-current="page">{department.name}</span>
     </nav>
 
     <!-- Header -->

@@ -1,0 +1,90 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  let posts: any[] = [];
+  try {
+    const data = await import("../../data/sanity/blog-posts.json");
+    posts = data.default;
+  } catch { return []; }
+
+  return posts.map((post: any) => ({
+    params: { slug: post.slug?.current || post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<PageLayout
+  title={post.title}
+  description={post.excerpt || post.seo?.metaDescription || ""}
+>
+  <article class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Breadcrumbs -->
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/blog" class="hover:text-quantum-blue">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">{post.title}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-10">
+      {post.category && (
+        <span class="text-sm text-quantum-blue font-medium mb-3 block">
+          {post.category}
+        </span>
+      )}
+      <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
+        {post.title}
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-[var(--text-secondary)]">
+        {post.author && (
+          <a href={`/agents/${post.author.toLowerCase()}`} class="font-mono text-quantum-blue hover:underline">
+            {post.author}
+          </a>
+        )}
+        {post.publishedAt && (
+          <time datetime={post.publishedAt}>
+            {new Date(post.publishedAt).toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </time>
+        )}
+      </div>
+    </header>
+
+    <!-- Body -->
+    {post.excerpt && (
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <p class="text-lg text-[var(--text-secondary)] leading-relaxed">{post.excerpt}</p>
+        {!post.body && (
+          <div class="mt-8 nexus-card p-6 text-center">
+            <p class="text-[var(--text-secondary)]">
+              Full article content is managed in Sanity CMS. Configure your
+              Sanity project to see the complete post.
+            </p>
+          </div>
+        )}
+      </div>
+    )}
+
+    <!-- Tags -->
+    {post.tags && post.tags.length > 0 && (
+      <div class="mt-10 pt-6 border-t border-[var(--border-color)]">
+        <div class="flex flex-wrap gap-2">
+          {post.tags.map((tag: string) => (
+            <span class="text-xs px-2 py-1 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+  </article>
+</PageLayout>

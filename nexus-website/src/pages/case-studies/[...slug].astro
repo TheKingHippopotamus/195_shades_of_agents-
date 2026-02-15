@@ -1,0 +1,127 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import AgentCard from "../../components/astro/AgentCard.astro";
+import { getDepartmentColor } from "../../lib/department-colors";
+
+export async function getStaticPaths() {
+  let caseStudies: any[] = [];
+  try {
+    const data = await import("../../data/sanity/case-studies.json");
+    caseStudies = data.default;
+  } catch { return []; }
+
+  let agents: any[] = [];
+  try {
+    const data = await import("../../data/agents.json");
+    agents = data.default;
+  } catch {}
+
+  return caseStudies.map((cs: any) => ({
+    params: { slug: cs.slug?.current || cs.slug },
+    props: { caseStudy: cs, agents },
+  }));
+}
+
+const { caseStudy, agents } = Astro.props;
+const teamAgents = (caseStudy.teamAgents || [])
+  .map((code: string) => agents.find((a: any) => a.code === code))
+  .filter(Boolean);
+---
+
+<PageLayout
+  title={caseStudy.title}
+  description={`Case study: ${caseStudy.title} — ${caseStudy.industry || "Software Development"}`}
+>
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+      <a href="/" class="hover:text-quantum-blue">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/case-studies" class="hover:text-quantum-blue">Case Studies</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--text-primary)]">{caseStudy.title}</span>
+    </nav>
+
+    <header class="mb-10">
+      {caseStudy.industry && (
+        <span class="text-sm text-quantum-blue font-medium mb-3 block">
+          {caseStudy.industry}
+        </span>
+      )}
+      <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-3">
+        {caseStudy.title}
+      </h1>
+      {caseStudy.client && (
+        <p class="text-lg text-[var(--text-secondary)]">Client: {caseStudy.client}</p>
+      )}
+    </header>
+
+    <!-- Metrics -->
+    {caseStudy.metrics && caseStudy.metrics.length > 0 && (
+      <section class="nexus-card p-6 mb-8">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-4">Results</h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+          {caseStudy.metrics.map((m: any) => (
+            <div class="text-center">
+              <div class="text-2xl font-bold text-gradient">{m.value}</div>
+              <div class="text-sm text-[var(--text-primary)] font-medium">{m.label}</div>
+              {m.improvement && (
+                <div class="text-xs text-emerald-400 mt-1">{m.improvement}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Testimonial -->
+    {caseStudy.testimonial && (
+      <section class="nexus-card nexus-glow p-6 mb-8">
+        <blockquote class="text-lg text-[var(--text-secondary)] italic mb-4">
+          &ldquo;{caseStudy.testimonial.quote}&rdquo;
+        </blockquote>
+        <div>
+          <p class="text-sm text-[var(--text-primary)] font-semibold">{caseStudy.testimonial.author}</p>
+          <p class="text-sm text-[var(--text-secondary)]">{caseStudy.testimonial.title}</p>
+        </div>
+      </section>
+    )}
+
+    <!-- Technologies -->
+    {caseStudy.technologies && caseStudy.technologies.length > 0 && (
+      <section class="nexus-card p-6 mb-8">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Technologies Used</h2>
+        <div class="flex flex-wrap gap-2">
+          {caseStudy.technologies.map((t: string) => (
+            <span class="text-sm px-3 py-1 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-secondary)] font-mono">
+              {t}
+            </span>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Team Agents -->
+    {teamAgents.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-4">
+          Team ({teamAgents.length} agents)
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {teamAgents.map((agent: any) => (
+            <AgentCard
+              code={agent.code}
+              name={agent.code}
+              role={agent.role}
+              department={agent.department}
+              departmentNumber={agent.department_number}
+              departmentColor={getDepartmentColor(agent.department_number)}
+              tierNumber={agent.tier.number}
+              tierLabel={agent.tier.label}
+              nickname={agent.personal?.nickname}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</PageLayout>

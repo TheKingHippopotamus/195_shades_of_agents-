@@ -1,0 +1,91 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+
+let caseStudies: any[] = [];
+try {
+  const data = await import("../../data/sanity/case-studies.json");
+  caseStudies = data.default;
+} catch {}
+---
+
+<PageLayout
+  title="Case Studies"
+  description="Real projects delivered by NEXUS AI's 195 agents — from FinTech MVPs to enterprise platforms."
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
+        Case <span class="text-gradient">Studies</span>
+      </h1>
+      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+        See what 195 agents can deliver. Real projects, real results, real
+        accountability.
+      </p>
+    </div>
+
+    {caseStudies.length > 0 ? (
+      <div class="space-y-6">
+        {caseStudies.map((cs: any) => (
+          <a
+            href={`/case-studies/${cs.slug?.current || cs.slug}`}
+            class="nexus-card p-6 md:p-8 block group"
+          >
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex-1">
+                {cs.industry && (
+                  <span class="text-xs text-quantum-blue font-medium mb-2 block">
+                    {cs.industry}
+                  </span>
+                )}
+                <h2 class="text-xl font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors mb-2">
+                  {cs.title}
+                </h2>
+                {cs.client && (
+                  <p class="text-sm text-[var(--text-secondary)] mb-4">Client: {cs.client}</p>
+                )}
+
+                {cs.metrics && cs.metrics.length > 0 && (
+                  <div class="flex flex-wrap gap-4">
+                    {cs.metrics.map((m: any) => (
+                      <div>
+                        <div class="text-lg font-bold text-gradient">{m.value}</div>
+                        <div class="text-xs text-[var(--text-secondary)]">{m.label}</div>
+                        {m.improvement && (
+                          <div class="text-[10px] text-emerald-400">{m.improvement}</div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {cs.technologies && cs.technologies.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5 mt-4">
+                    {cs.technologies.map((t: string) => (
+                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)] font-mono">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {cs.testimonial && (
+                <div class="md:w-72 p-4 rounded-lg bg-[var(--bg-elevated)]">
+                  <p class="text-sm text-[var(--text-secondary)] italic mb-3">
+                    &ldquo;{cs.testimonial.quote}&rdquo;
+                  </p>
+                  <p class="text-xs text-[var(--text-primary)] font-medium">{cs.testimonial.author}</p>
+                  <p class="text-xs text-[var(--text-secondary)]">{cs.testimonial.title}</p>
+                </div>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16 nexus-card p-8">
+        <p class="text-lg text-[var(--text-secondary)]">Case studies coming soon.</p>
+      </div>
+    )}
+  </div>
+</PageLayout>

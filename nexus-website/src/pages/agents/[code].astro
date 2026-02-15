@@ -2,6 +2,7 @@
 import PageLayout from "../../layouts/PageLayout.astro";
 import DepartmentBadge from "../../components/astro/DepartmentBadge.astro";
 import TierBadge from "../../components/astro/TierBadge.astro";
+import JsonLd from "../../components/astro/JsonLd.astro";
 import { getDepartmentColor } from "../../lib/department-colors";
 
 export async function getStaticPaths() {
@@ -37,14 +38,25 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
   title={`${agent.code} — ${agent.role}`}
   description={`${agent.role} at NEXUS AI. ${agent.personal?.about_me || agent.personality.substring(0, 150)}`}
 >
+  <JsonLd data={{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": agent.role,
+    "alternateName": agent.code,
+    "jobTitle": agent.role,
+    "description": agent.personal?.about_me || agent.personality?.substring(0, 200),
+    "worksFor": { "@type": "Organization", "name": "NEXUS AI" },
+    "memberOf": { "@type": "OrganizationRole", "roleName": agent.department },
+  }} />
+
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
     <!-- Breadcrumbs -->
-    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+    <nav aria-label="Breadcrumb" class="mb-8 text-sm text-[var(--text-secondary)]">
       <a href="/" class="hover:text-quantum-blue">Home</a>
-      <span class="mx-2">/</span>
+      <span class="mx-2" aria-hidden="true">/</span>
       <a href="/agents" class="hover:text-quantum-blue">Agents</a>
-      <span class="mx-2">/</span>
-      <span class="text-[var(--text-primary)]">{agent.code}</span>
+      <span class="mx-2" aria-hidden="true">/</span>
+      <span class="text-[var(--text-primary)]" aria-current="page">{agent.code}</span>
     </nav>
 
     <!-- Header -->
