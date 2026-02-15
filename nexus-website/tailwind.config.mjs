@@ -8,6 +8,7 @@ export default {
         nexus: {
           black: "#0A0E27",
           void: "#060918",
+          deep: "#030108",
         },
         quantum: {
           DEFAULT: "#00D9FF",
@@ -33,11 +34,25 @@ export default {
         },
         mist: "#94A3B8",
 
+        // 2999 Neon palette
+        neon: {
+          magenta: "#FF00E5",
+          purple: "#B026FF",
+          pink: "#FF2D95",
+          green: "#00FF88",
+          blue: "#00B4FF",
+          yellow: "#FFE600",
+        },
+        plasma: {
+          violet: "#7B2FFF",
+          blue: "#4361EE",
+        },
+
         // Semantic
-        success: "#10B981",
-        warning: "#F59E0B",
-        error: "#EF4444",
-        info: "#3B82F6",
+        success: "#00FF88",
+        warning: "#FFE600",
+        error: "#FF2D55",
+        info: "#00B4FF",
 
         // Department colors
         dept: {
@@ -110,10 +125,14 @@ export default {
 
       boxShadow: {
         "subtle": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-        "glow-sm": "0 0 15px rgba(0, 217, 255, 0.15)",
-        "glow-md": "0 0 30px rgba(0, 217, 255, 0.2)",
-        "glow-lg": "0 0 60px rgba(0, 217, 255, 0.25)",
-        "card-dark": "0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05)",
+        "glow-sm": "0 0 15px rgba(0, 217, 255, 0.2), 0 0 30px rgba(0, 217, 255, 0.05)",
+        "glow-md": "0 0 30px rgba(0, 217, 255, 0.25), 0 0 60px rgba(0, 217, 255, 0.1)",
+        "glow-lg": "0 0 60px rgba(0, 217, 255, 0.3), 0 0 120px rgba(0, 217, 255, 0.1)",
+        "glow-neon": "0 0 10px rgba(0, 217, 255, 0.4), 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.1)",
+        "glow-magenta": "0 0 15px rgba(255, 0, 229, 0.3), 0 0 30px rgba(255, 0, 229, 0.1)",
+        "glow-purple": "0 0 15px rgba(176, 38, 255, 0.3), 0 0 30px rgba(176, 38, 255, 0.1)",
+        "card-dark": "0 4px 24px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 217, 255, 0.05)",
+        "hologram": "0 0 20px rgba(0, 217, 255, 0.3), 0 0 40px rgba(176, 38, 255, 0.15), 0 0 80px rgba(255, 0, 229, 0.05)",
       },
 
       screens: {
@@ -162,12 +181,25 @@ export default {
           "100%": { opacity: "1", transform: "scale(1)" },
         },
         glowPulse: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(0, 217, 255, 0.1)" },
-          "50%": { boxShadow: "0 0 40px rgba(0, 217, 255, 0.3)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(0, 217, 255, 0.15), 0 0 40px rgba(0, 217, 255, 0.05)" },
+          "50%": { boxShadow: "0 0 30px rgba(0, 217, 255, 0.35), 0 0 60px rgba(0, 217, 255, 0.15), 0 0 100px rgba(176, 38, 255, 0.05)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-6px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        neonFlicker: {
+          "0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%": { opacity: "1" },
+          "20%, 24%, 55%": { opacity: "0.6" },
+        },
+        borderRotate: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+        textGlow: {
+          "0%, 100%": { textShadow: "0 0 10px rgba(0, 217, 255, 0.3), 0 0 20px rgba(0, 217, 255, 0.1)" },
+          "50%": { textShadow: "0 0 20px rgba(0, 217, 255, 0.5), 0 0 40px rgba(0, 217, 255, 0.2), 0 0 80px rgba(176, 38, 255, 0.1)" },
         },
       },
       animation: {
@@ -176,8 +208,11 @@ export default {
         "slide-up": "slideUp 0.5s ease-out",
         "slide-in-right": "slideInRight 0.5s ease-out forwards",
         "scale-in": "scaleIn 0.4s ease-out forwards",
-        "glow-pulse": "glowPulse 2s ease-in-out infinite",
+        "glow-pulse": "glowPulse 3s ease-in-out infinite",
         "float": "float 4s ease-in-out infinite",
+        "neon-flicker": "neonFlicker 4s linear infinite",
+        "border-rotate": "borderRotate 4s ease infinite",
+        "text-glow": "textGlow 3s ease-in-out infinite",
       },
 
       transitionDuration: {
@@ -188,6 +223,11 @@ export default {
       transitionTimingFunction: {
         "smooth": "cubic-bezier(0.4, 0, 0.2, 1)",
         "bounce": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      },
+
+      backdropBlur: {
+        "xs": "2px",
+        "glass": "20px",
       },
     },
   },

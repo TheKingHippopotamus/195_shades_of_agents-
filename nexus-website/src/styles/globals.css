@@ -11,29 +11,38 @@
     --signal-white: #E8ECF4;
     --mist: #94A3B8;
 
-    /* Light mode defaults */
-    --bg-primary: #F8FAFC;
-    --bg-surface: #FFFFFF;
-    --bg-elevated: #F1F5F9;
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --text-muted: #94A3B8;
-    --border-color: #E2E8F0;
+    /* 2999 Neon Palette */
+    --neon-magenta: #FF00E5;
+    --neon-purple: #B026FF;
+    --neon-pink: #FF2D95;
+    --neon-green: #00FF88;
+    --hologram-blue: #00B4FF;
+    --plasma-violet: #7B2FFF;
+    --starfield-dim: #0D1117;
+
+    /* Dark mode only -- 2999 is always dark */
+    --bg-primary: #030108;
+    --bg-surface: rgba(10, 14, 39, 0.6);
+    --bg-elevated: rgba(30, 41, 59, 0.4);
+    --text-primary: #E8ECF4;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border-color: rgba(0, 217, 255, 0.12);
     --ring-color: #00D9FF;
     --accent: #00D9FF;
-    --accent-hover: #00C4E6;
-    --accent-text: #0891B2;
+    --accent-hover: #00F0FF;
+    --accent-text: #00D9FF;
     --accent-muted: rgba(0, 217, 255, 0.1);
   }
 
   .dark {
-    --bg-primary: #060918;
-    --bg-surface: #0A0E27;
-    --bg-elevated: #1E293B;
+    --bg-primary: #030108;
+    --bg-surface: rgba(10, 14, 39, 0.6);
+    --bg-elevated: rgba(30, 41, 59, 0.4);
     --text-primary: #E8ECF4;
     --text-secondary: #94A3B8;
     --text-muted: #64748B;
-    --border-color: #334155;
+    --border-color: rgba(0, 217, 255, 0.12);
     --ring-color: #00D9FF;
     --accent: #00D9FF;
     --accent-hover: #00F0FF;
@@ -77,44 +86,189 @@
 
   /* Selection */
   ::selection {
-    background-color: rgba(0, 217, 255, 0.2);
-    color: inherit;
+    background-color: rgba(0, 217, 255, 0.3);
+    color: #fff;
   }
 }
 
 @layer components {
-  /* ── Glow Effects ──────────────────────────────── */
+  /* ============================================================
+     2999 COSMIC BACKGROUND SYSTEM
+     ============================================================ */
+
+  /* Deep space background applied to body via layout */
+  .cosmic-bg {
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(176, 38, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 85% 80%, rgba(0, 217, 255, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(255, 0, 229, 0.04) 0%, transparent 60%),
+      linear-gradient(180deg, #030108 0%, #060918 30%, #0A0420 60%, #030108 100%);
+    background-attachment: fixed;
+  }
+
+  /* Animated star field */
+  .starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .starfield::before,
+  .starfield::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.6), transparent),
+      radial-gradient(1px 1px at 30% 65%, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1.5px 1.5px at 50% 10%, rgba(0, 217, 255, 0.8), transparent),
+      radial-gradient(1px 1px at 70% 40%, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 90% 75%, rgba(255, 255, 255, 0.6), transparent),
+      radial-gradient(1.5px 1.5px at 15% 80%, rgba(176, 38, 255, 0.7), transparent),
+      radial-gradient(1px 1px at 45% 50%, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(1px 1px at 60% 90%, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 80% 15%, rgba(0, 240, 255, 0.6), transparent),
+      radial-gradient(1px 1px at 25% 45%, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1.5px 1.5px at 95% 55%, rgba(255, 0, 229, 0.5), transparent),
+      radial-gradient(1px 1px at 5% 95%, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 35% 30%, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(1px 1px at 55% 70%, rgba(0, 217, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 75% 5%, rgba(255, 255, 255, 0.6), transparent);
+    animation: starDrift 120s linear infinite;
+  }
+
+  .starfield::after {
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1.5px 1.5px at 40% 80%, rgba(0, 217, 255, 0.6), transparent),
+      radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 80% 60%, rgba(176, 38, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 10% 50%, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(1px 1px at 90% 10%, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1.5px 1.5px at 50% 40%, rgba(0, 240, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 30% 90%, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 70% 70%, rgba(255, 0, 229, 0.3), transparent),
+      radial-gradient(1px 1px at 15% 15%, rgba(255, 255, 255, 0.6), transparent);
+    animation: starDrift 180s linear infinite reverse;
+  }
+
+  /* ============================================================
+     GLOW EFFECTS
+     ============================================================ */
   .nexus-glow {
-    box-shadow: 0 0 30px rgba(0, 217, 255, 0.15),
-                0 0 60px rgba(0, 217, 255, 0.05);
+    box-shadow:
+      0 0 20px rgba(0, 217, 255, 0.2),
+      0 0 40px rgba(0, 217, 255, 0.1),
+      0 0 80px rgba(0, 217, 255, 0.05),
+      inset 0 0 20px rgba(0, 217, 255, 0.03);
   }
 
   .nexus-glow-strong {
-    box-shadow: 0 0 30px rgba(0, 217, 255, 0.3),
-                0 0 60px rgba(0, 217, 255, 0.15),
-                0 0 100px rgba(0, 217, 255, 0.05);
+    box-shadow:
+      0 0 20px rgba(0, 217, 255, 0.4),
+      0 0 40px rgba(0, 217, 255, 0.2),
+      0 0 80px rgba(0, 217, 255, 0.1),
+      0 0 120px rgba(0, 217, 255, 0.05),
+      inset 0 0 30px rgba(0, 217, 255, 0.05);
   }
 
-  /* ── Card System ──────────────────────────────── */
+  .glow-magenta {
+    box-shadow:
+      0 0 20px rgba(255, 0, 229, 0.3),
+      0 0 40px rgba(255, 0, 229, 0.15),
+      0 0 80px rgba(255, 0, 229, 0.05);
+  }
+
+  .glow-purple {
+    box-shadow:
+      0 0 20px rgba(176, 38, 255, 0.3),
+      0 0 40px rgba(176, 38, 255, 0.15),
+      0 0 80px rgba(176, 38, 255, 0.05);
+  }
+
+  /* ============================================================
+     GLASSMORPHISM CARD SYSTEM
+     ============================================================ */
   .nexus-border {
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 217, 255, 0.12);
   }
 
   .nexus-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
+    background: rgba(10, 14, 39, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 217, 255, 0.1);
     border-radius: 0.75rem;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle animated border gradient on cards */
+  .nexus-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 217, 255, 0.15),
+      transparent 40%,
+      transparent 60%,
+      rgba(176, 38, 255, 0.1)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: all 0.4s ease;
   }
 
   .nexus-card:hover {
     border-color: rgba(0, 217, 255, 0.3);
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
-    transform: translateY(-2px);
+    box-shadow:
+      0 0 30px rgba(0, 217, 255, 0.15),
+      0 0 60px rgba(0, 217, 255, 0.05),
+      0 8px 32px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px) scale(1.01);
+    background: rgba(10, 14, 39, 0.7);
   }
 
-  /* ── Gradients ─────────────────────────────────── */
+  .nexus-card:hover::before {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 217, 255, 0.3),
+      rgba(176, 38, 255, 0.1) 40%,
+      rgba(255, 0, 229, 0.05) 60%,
+      rgba(0, 240, 255, 0.2)
+    );
+  }
+
+  /* ============================================================
+     GRADIENTS
+     ============================================================ */
   .text-gradient {
+    background: linear-gradient(135deg, #00D9FF 0%, #00F0FF 30%, #B026FF 70%, #FF00E5 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 4s ease-in-out infinite;
+  }
+
+  .text-gradient-static {
     background: linear-gradient(135deg, var(--quantum-blue), var(--orbital-cyan));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -122,28 +276,188 @@
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, #060918 0%, #0A0E27 40%, #0F172A 100%);
+    background: linear-gradient(135deg, #030108 0%, #060918 30%, #0A0420 60%, #030108 100%);
   }
 
   .gradient-quantum {
-    background: linear-gradient(135deg, #00D9FF 0%, #00F0FF 100%);
+    background: linear-gradient(135deg, #00D9FF 0%, #00F0FF 50%, #B026FF 100%);
   }
 
   .gradient-mesh {
     background:
-      radial-gradient(ellipse at 20% 50%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 80%, rgba(0, 240, 255, 0.04) 0%, transparent 50%);
+      radial-gradient(ellipse at 20% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(176, 38, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(255, 0, 229, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 30%, rgba(0, 240, 255, 0.05) 0%, transparent 40%);
   }
 
+  /* Holographic shimmer gradient for buttons and badges */
+  .gradient-hologram {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 217, 255, 0.9) 0%,
+      rgba(0, 240, 255, 0.8) 25%,
+      rgba(176, 38, 255, 0.7) 50%,
+      rgba(255, 0, 229, 0.8) 75%,
+      rgba(0, 217, 255, 0.9) 100%
+    );
+    background-size: 300% 300%;
+    animation: hologramShift 6s ease-in-out infinite;
+  }
+
+  /* ============================================================
+     GRID PATTERNS
+     ============================================================ */
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(0, 217, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 217, 255, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
+    animation: gridPulse 8s ease-in-out infinite;
   }
 
-  /* ── Container System ──────────────────────────── */
+  /* Perspective grid for hero sections */
+  .bg-grid-perspective {
+    background-image:
+      linear-gradient(rgba(0, 217, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 217, 255, 0.06) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 80%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 80%);
+  }
+
+  /* Scan line overlay */
+  .scanlines {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 217, 255, 0.015) 2px,
+      rgba(0, 217, 255, 0.015) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* ============================================================
+     FUTURISTIC HEADING GLOW
+     ============================================================ */
+  .heading-glow {
+    text-shadow:
+      0 0 10px rgba(0, 217, 255, 0.3),
+      0 0 20px rgba(0, 217, 255, 0.15),
+      0 0 40px rgba(0, 217, 255, 0.05);
+  }
+
+  .heading-glow-magenta {
+    text-shadow:
+      0 0 10px rgba(255, 0, 229, 0.3),
+      0 0 20px rgba(255, 0, 229, 0.15),
+      0 0 40px rgba(255, 0, 229, 0.05);
+  }
+
+  /* ============================================================
+     HOLOGRAPHIC BUTTONS
+     ============================================================ */
+  .btn-hologram {
+    position: relative;
+    background: linear-gradient(135deg, #00D9FF 0%, #00F0FF 40%, #B026FF 100%);
+    border: none;
+    color: #030108;
+    font-weight: 700;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-hologram::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.15) 50%,
+      transparent 70%
+    );
+    animation: hologramSweep 3s ease-in-out infinite;
+  }
+
+  .btn-hologram:hover {
+    box-shadow:
+      0 0 20px rgba(0, 217, 255, 0.5),
+      0 0 40px rgba(0, 217, 255, 0.2),
+      0 0 60px rgba(176, 38, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Ghost button with glow border */
+  .btn-ghost-glow {
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    background: rgba(0, 217, 255, 0.05);
+    color: var(--quantum-blue);
+    transition: all 0.3s ease;
+  }
+
+  .btn-ghost-glow:hover {
+    border-color: rgba(0, 217, 255, 0.6);
+    background: rgba(0, 217, 255, 0.1);
+    box-shadow:
+      0 0 15px rgba(0, 217, 255, 0.2),
+      0 0 30px rgba(0, 217, 255, 0.1);
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+  }
+
+  /* ============================================================
+     ENERGY BORDER ANIMATION
+     ============================================================ */
+  .energy-border {
+    position: relative;
+  }
+
+  .energy-border::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--energy-angle, 0deg),
+      transparent 0%,
+      rgba(0, 217, 255, 0.5) 10%,
+      transparent 20%,
+      transparent 50%,
+      rgba(176, 38, 255, 0.3) 60%,
+      transparent 70%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: energyRotate 4s linear infinite;
+    pointer-events: none;
+  }
+
+  /* ============================================================
+     PULSING DOT (status indicator)
+     ============================================================ */
+  .pulse-dot {
+    position: relative;
+  }
+
+  .pulse-dot::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0;
+    animation: pulseRing 2s ease-out infinite;
+  }
+
+  /* ============================================================
+     CONTAINER SYSTEM
+     ============================================================ */
   .container-content {
     max-width: 72rem;
     margin: 0 auto;
@@ -184,17 +498,43 @@
     }
   }
 
-  /* ── Skeleton Loading ──────────────────────────── */
+  /* ============================================================
+     SKELETON LOADING
+     ============================================================ */
   .skeleton {
     background: linear-gradient(
       90deg,
-      var(--bg-elevated) 0%,
-      var(--bg-surface) 50%,
-      var(--bg-elevated) 100%
+      rgba(0, 217, 255, 0.05) 0%,
+      rgba(0, 217, 255, 0.1) 50%,
+      rgba(0, 217, 255, 0.05) 100%
     );
     background-size: 200% 100%;
     animation: skeleton-shimmer 1.5s ease-in-out infinite;
     border-radius: 4px;
+  }
+
+  /* ============================================================
+     NEBULA EFFECTS
+     ============================================================ */
+  .nebula {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 0;
+    animation: nebulaDrift 30s ease-in-out infinite;
+  }
+
+  .nebula-cyan {
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+  }
+
+  .nebula-purple {
+    background: radial-gradient(circle, rgba(176, 38, 255, 0.06) 0%, transparent 70%);
+  }
+
+  .nebula-magenta {
+    background: radial-gradient(circle, rgba(255, 0, 229, 0.05) 0%, transparent 70%);
   }
 }
 
@@ -203,9 +543,72 @@
   .animate-delay-200 { animation-delay: 200ms; }
   .animate-delay-300 { animation-delay: 300ms; }
   .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-700 { animation-delay: 700ms; }
+  .animate-delay-1000 { animation-delay: 1000ms; }
+
+  /* Letter spacing for futuristic type */
+  .tracking-nexus { letter-spacing: 0.15em; }
+  .tracking-wide-nexus { letter-spacing: 0.25em; }
 }
 
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
 @keyframes skeleton-shimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
+}
+
+@keyframes starDrift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-30px, -20px); }
+}
+
+@keyframes shimmerText {
+  0% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+  100% { background-position: 0% center; }
+}
+
+@keyframes hologramShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes hologramSweep {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes energyRotate {
+  0% { --energy-angle: 0deg; transform: rotate(0deg); }
+  100% { --energy-angle: 360deg; transform: rotate(360deg); }
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes nebulaDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -15px) scale(1.05); }
+  66% { transform: translate(-15px, 10px) scale(0.95); }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(0, 217, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.05);
+  }
+  50% {
+    border-color: rgba(0, 217, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
+  }
 }

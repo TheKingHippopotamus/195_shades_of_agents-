@@ -26,23 +26,103 @@ interface GraphNode extends d3.SimulationNodeDatum {
 interface GraphLink extends d3.SimulationLinkDatum<GraphNode> {
   source: string | GraphNode;
   target: string | GraphNode;
+  tierDiff: number;
+  sameDept: boolean;
 }
 
+// Neon cosmic department colors
 const DEPT_COLORS: Record<string, string> = {
-  "01": "#6366F1", "02": "#8B5CF6", "03": "#22D3EE", "04": "#F59E0B",
-  "05": "#F97316", "06": "#06B6D4", "07": "#10B981", "08": "#EF4444",
-  "09": "#3B82F6", "10": "#EC4899", "11": "#14B8A6", "12": "#A855F7",
-  "13": "#84CC16", "14": "#F43F5E", "15": "#94A3B8", "16": "#D946EF",
-  "17": "#0EA5E9", "18": "#78716C", "19": "#FBBF24", "20": "#2DD4BF",
+  "01": "#7C3AED", // Deep violet - Executive
+  "02": "#A855F7", // Purple - Engineering
+  "03": "#00E5FF", // Bright cyan - Platform
+  "04": "#FFB800", // Gold - Product
+  "05": "#FF6B2B", // Neon orange - Design
+  "06": "#00BFFF", // Deep sky blue - Data Science
+  "07": "#00FF88", // Neon green - QA
+  "08": "#FF1744", // Neon red - Security
+  "09": "#448AFF", // Bright blue - Sales
+  "10": "#FF4081", // Hot pink - Marketing
+  "11": "#1DE9B6", // Teal - Customer Success
+  "12": "#B388FF", // Light purple - HR
+  "13": "#76FF03", // Lime green - Finance
+  "14": "#FF5252", // Red accent - Legal
+  "15": "#90A4AE", // Steel - IT Ops
+  "16": "#E040FB", // Magenta - DevRel
+  "17": "#40C4FF", // Light blue - Program Mgmt
+  "18": "#8D6E63", // Warm grey - Governance
+  "19": "#FFD740", // Amber - Special Agents
+  "20": "#64FFDA", // Aqua - Documentation
+};
+
+// Department names for the legend
+const DEPT_NAMES: Record<string, string> = {
+  "01": "Executive", "02": "Engineering", "03": "Platform", "04": "Product",
+  "05": "Design", "06": "Data/AI/ML", "07": "QA", "08": "Security",
+  "09": "Sales", "10": "Marketing", "11": "Customer", "12": "HR",
+  "13": "Finance", "14": "Legal", "15": "IT Ops", "16": "DevRel",
+  "17": "Programs", "18": "Governance", "19": "Special", "20": "Docs",
 };
 
 function tierRadius(tier: number): number {
-  return [18, 14, 12, 10, 9, 8, 7, 6, 9, 10][tier] || 7;
+  return [22, 17, 14, 12, 11, 10, 9, 8, 11, 12][tier] || 9;
+}
+
+// Star generation for the background
+interface Star {
+  x: number;
+  y: number;
+  r: number;
+  opacity: number;
+  twinkleSpeed: number;
+  twinklePhase: number;
+}
+
+function generateStars(width: number, height: number, count: number): Star[] {
+  const stars: Star[] = [];
+  for (let i = 0; i < count; i++) {
+    stars.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 1.5 + 0.3,
+      opacity: Math.random() * 0.8 + 0.2,
+      twinkleSpeed: Math.random() * 0.02 + 0.005,
+      twinklePhase: Math.random() * Math.PI * 2,
+    });
+  }
+  return stars;
+}
+
+// Particle along a link
+interface Particle {
+  linkIndex: number;
+  t: number;        // 0..1 position along link
+  speed: number;
+  size: number;
+  opacity: number;
+}
+
+function generateParticles(linkCount: number, perLink: number): Particle[] {
+  const particles: Particle[] = [];
+  for (let i = 0; i < linkCount; i++) {
+    const count = Math.random() < 0.4 ? perLink : Math.ceil(perLink / 2);
+    for (let j = 0; j < count; j++) {
+      particles.push({
+        linkIndex: i,
+        t: Math.random(),
+        speed: Math.random() * 0.004 + 0.001,
+        size: Math.random() * 1.8 + 0.5,
+        opacity: Math.random() * 0.6 + 0.2,
+      });
+    }
+  }
+  return particles;
 }
 
 export default function NetworkGraph() {
   const svgRef = useRef<SVGSVGElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const animFrameRef = useRef<number>(0);
   const [loading, setLoading] = useState(true);
   const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null);
   const [hoveredDept, setHoveredDept] = useState<string | null>(null);
@@ -52,10 +132,64 @@ export default function NetworkGraph() {
       .then((r) => r.json())
       .then((agents: Agent[]) => {
         setLoading(false);
-        if (!svgRef.current || !containerRef.current) return;
+        if (!svgRef.current || !containerRef.current || !canvasRef.current) return;
 
         const width = containerRef.current.clientWidth;
-        const height = Math.max(600, window.innerHeight - 300);
+        const height = Math.max(700, window.innerHeight - 200);
+
+        // --- Canvas starfield + nebula background ---
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext("2d")!;
+        canvas.width = width;
+        canvas.height = height;
+
+        const stars = generateStars(width, height, 400);
+
+        // Nebula blobs
+        const nebulae = [
+          { x: width * 0.2, y: height * 0.3, rx: 200, ry: 120, color: "rgba(124, 58, 237, 0.06)" },
+          { x: width * 0.75, y: height * 0.2, rx: 250, ry: 150, color: "rgba(0, 217, 255, 0.04)" },
+          { x: width * 0.5, y: height * 0.75, rx: 300, ry: 180, color: "rgba(0, 240, 255, 0.05)" },
+          { x: width * 0.85, y: height * 0.7, rx: 180, ry: 130, color: "rgba(168, 85, 247, 0.05)" },
+          { x: width * 0.1, y: height * 0.8, rx: 160, ry: 100, color: "rgba(0, 229, 255, 0.03)" },
+        ];
+
+        let frameCount = 0;
+        function drawBackground() {
+          frameCount++;
+          // Deep space background
+          ctx.fillStyle = "#030614";
+          ctx.fillRect(0, 0, width, height);
+
+          // Nebulae
+          for (const n of nebulae) {
+            const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, Math.max(n.rx, n.ry));
+            grad.addColorStop(0, n.color);
+            grad.addColorStop(1, "transparent");
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.ellipse(n.x, n.y, n.rx, n.ry, 0, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          // Stars with twinkling
+          for (const s of stars) {
+            const twinkle = Math.sin(frameCount * s.twinkleSpeed + s.twinklePhase) * 0.3 + 0.7;
+            const alpha = s.opacity * twinkle;
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.fill();
+
+            // Tiny glow for brighter stars
+            if (s.r > 1) {
+              ctx.beginPath();
+              ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
+              ctx.fillStyle = `rgba(200, 220, 255, ${alpha * 0.1})`;
+              ctx.fill();
+            }
+          }
+        }
 
         // Build nodes
         const nodes: GraphNode[] = agents.map((a) => ({
@@ -69,23 +203,36 @@ export default function NetworkGraph() {
           radius: tierRadius(a.tier.number),
         }));
 
-        // Build links (reporting chain)
+        // Build links
         const nodeIds = new Set(nodes.map((n) => n.id));
+        const nodeMap = new Map(nodes.map((n) => [n.id, n]));
         const links: GraphLink[] = agents
           .filter((a) => a.reports_to && nodeIds.has(a.reports_to))
-          .map((a) => ({ source: a.reports_to, target: a.code }));
+          .map((a) => {
+            const srcNode = nodeMap.get(a.reports_to)!;
+            const tgtNode = nodeMap.get(a.code)!;
+            return {
+              source: a.reports_to,
+              target: a.code,
+              tierDiff: Math.abs(srcNode.tier - tgtNode.tier),
+              sameDept: srcNode.deptNum === tgtNode.deptNum,
+            };
+          });
 
-        // Create simulation
+        // Particles flowing along links
+        const particles = generateParticles(links.length, 2);
+
+        // Simulation
         const simulation = d3
           .forceSimulation(nodes)
-          .force("link", d3.forceLink<GraphNode, GraphLink>(links).id((d) => d.id).distance(40).strength(0.3))
-          .force("charge", d3.forceManyBody().strength(-60).distanceMax(200))
+          .force("link", d3.forceLink<GraphNode, GraphLink>(links).id((d) => d.id).distance(50).strength(0.25))
+          .force("charge", d3.forceManyBody().strength(-70).distanceMax(250))
           .force("center", d3.forceCenter(width / 2, height / 2))
-          .force("collision", d3.forceCollide<GraphNode>().radius((d) => d.radius + 2))
-          .force("x", d3.forceX(width / 2).strength(0.05))
-          .force("y", d3.forceY(height / 2).strength(0.05));
+          .force("collision", d3.forceCollide<GraphNode>().radius((d) => d.radius + 3))
+          .force("x", d3.forceX(width / 2).strength(0.04))
+          .force("y", d3.forceY(height / 2).strength(0.04));
 
-        // Set up SVG
+        // SVG setup
         const svg = d3.select(svgRef.current)
           .attr("width", width)
           .attr("height", height)
@@ -95,72 +242,280 @@ export default function NetworkGraph() {
 
         // Zoom
         const g = svg.append("g");
-        const zoom = d3.zoom<SVGSVGElement, unknown>()
-          .scaleExtent([0.3, 4])
-          .on("zoom", (event) => g.attr("transform", event.transform));
-        svg.call(zoom);
+        let currentTransform = d3.zoomIdentity;
+        const zoomBehavior = d3.zoom<SVGSVGElement, unknown>()
+          .scaleExtent([0.2, 5])
+          .on("zoom", (event) => {
+            g.attr("transform", event.transform);
+            currentTransform = event.transform;
+          });
+        svg.call(zoomBehavior);
 
-        // Links
-        const link = g
-          .append("g")
+        // SVG Defs: filters + gradients
+        const defs = svg.append("defs");
+
+        // Glow filter for nodes
+        const nodeGlow = defs.append("filter")
+          .attr("id", "node-glow")
+          .attr("x", "-80%").attr("y", "-80%")
+          .attr("width", "260%").attr("height", "260%");
+        nodeGlow.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "4").attr("result", "blur");
+        nodeGlow.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
+
+        // Strong glow for hover
+        const nodeGlowStrong = defs.append("filter")
+          .attr("id", "node-glow-strong")
+          .attr("x", "-120%").attr("y", "-120%")
+          .attr("width", "340%").attr("height", "340%");
+        nodeGlowStrong.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "8").attr("result", "blur");
+        nodeGlowStrong.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
+
+        // Line glow filter
+        const lineGlow = defs.append("filter")
+          .attr("id", "line-glow")
+          .attr("x", "-20%").attr("y", "-20%")
+          .attr("width", "140%").attr("height", "140%");
+        lineGlow.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "2").attr("result", "blur");
+        lineGlow.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
+
+        // Edge gradients
+        links.forEach((l, i) => {
+          const sNode = nodeMap.get(typeof l.source === "string" ? l.source : (l.source as GraphNode).id)!;
+          const tNode = nodeMap.get(typeof l.target === "string" ? l.target : (l.target as GraphNode).id)!;
+          if (sNode.deptNum !== tNode.deptNum) {
+            const grad = defs.append("linearGradient")
+              .attr("id", `edge-grad-${i}`)
+              .attr("gradientUnits", "userSpaceOnUse");
+            grad.append("stop").attr("offset", "0%").attr("stop-color", sNode.color).attr("stop-opacity", "0.8");
+            grad.append("stop").attr("offset", "100%").attr("stop-color", tNode.color).attr("stop-opacity", "0.8");
+          }
+        });
+
+        // Edge helpers
+        function edgeWidth(l: GraphLink): number {
+          if (l.tierDiff <= 1) return 2;
+          if (l.tierDiff === 2) return 1.5;
+          return 1;
+        }
+
+        function edgeOpacity(l: GraphLink): number {
+          return l.sameDept ? 0.4 : 0.2;
+        }
+
+        function edgeColor(l: GraphLink, i: number): string {
+          if (l.sameDept) {
+            const sNode = nodeMap.get(typeof l.source === "string" ? l.source : (l.source as GraphNode).id)!;
+            return sNode.color;
+          }
+          return `url(#edge-grad-${i})`;
+        }
+
+        // --- ENERGY BEAM CONNECTIONS ---
+        // Background glow layer (wider, more transparent)
+        const linkGlowLayer = g.append("g").attr("class", "link-glow-layer");
+        const linkGlow = linkGlowLayer
           .selectAll("line")
           .data(links)
           .join("line")
-          .attr("stroke", "var(--border-color)")
-          .attr("stroke-opacity", 0.3)
-          .attr("stroke-width", 0.5);
+          .attr("stroke", (l, i) => edgeColor(l, i))
+          .attr("stroke-opacity", (l) => edgeOpacity(l) * 0.4)
+          .attr("stroke-width", (l) => edgeWidth(l) + 3)
+          .attr("stroke-linecap", "round")
+          .attr("filter", "url(#line-glow)");
 
-        // Nodes
-        const node = g
-          .append("g")
-          .selectAll<SVGCircleElement, GraphNode>("circle")
+        // Core beam layer
+        const linkLayer = g.append("g").attr("class", "link-layer");
+        const link = linkLayer
+          .selectAll("line")
+          .data(links)
+          .join("line")
+          .attr("stroke", (l, i) => edgeColor(l, i))
+          .attr("stroke-opacity", (l) => edgeOpacity(l))
+          .attr("stroke-width", (l) => edgeWidth(l))
+          .attr("stroke-linecap", "round")
+          .attr("stroke-dasharray", "6 4")
+          .on("mouseover", function (_event, d) {
+            d3.select(this)
+              .attr("stroke-opacity", 0.9)
+              .attr("stroke-width", edgeWidth(d) + 2);
+            const s = d.source as GraphNode;
+            const t = d.target as GraphNode;
+            const mx = ((s.x || 0) + (t.x || 0)) / 2;
+            const my = ((s.y || 0) + (t.y || 0)) / 2;
+            g.append("text")
+              .attr("class", "edge-tooltip")
+              .attr("x", mx).attr("y", my - 8)
+              .attr("text-anchor", "middle")
+              .attr("fill", "#00E5FF")
+              .attr("font-size", "10px")
+              .attr("font-family", "'JetBrains Mono', monospace")
+              .attr("filter", "url(#line-glow)")
+              .text(`${s.code} -> ${t.code}`);
+          })
+          .on("mouseout", function (_event, d) {
+            d3.select(this)
+              .attr("stroke-opacity", edgeOpacity(d))
+              .attr("stroke-width", edgeWidth(d));
+            g.selectAll(".edge-tooltip").remove();
+          });
+
+        // --- PARTICLE LAYER ---
+        const particleLayer = g.append("g").attr("class", "particle-layer");
+        const particleCircles = particleLayer
+          .selectAll("circle")
+          .data(particles)
+          .join("circle")
+          .attr("r", (p) => p.size)
+          .attr("fill", "#00E5FF")
+          .attr("opacity", (p) => p.opacity);
+
+        // --- COSMIC NODES ---
+        const nodeLayer = g.append("g").attr("class", "node-layer");
+
+        // Outer orbital ring (subtle pulsing ring around each node)
+        const orbitalRings = nodeLayer
+          .selectAll<SVGCircleElement, GraphNode>("circle.orbital")
           .data(nodes)
           .join("circle")
-          .attr("r", (d) => d.radius)
+          .attr("class", "orbital")
+          .attr("r", (d) => d.radius + 6)
+          .attr("fill", "none")
+          .attr("stroke", (d) => d.color)
+          .attr("stroke-width", 0.5)
+          .attr("stroke-opacity", 0.3)
+          .attr("stroke-dasharray", "3 3");
+
+        // Node glow halo
+        const nodeHalos = nodeLayer
+          .selectAll<SVGCircleElement, GraphNode>("circle.halo")
+          .data(nodes)
+          .join("circle")
+          .attr("class", "halo")
+          .attr("r", (d) => d.radius + 2)
           .attr("fill", (d) => d.color)
-          .attr("fill-opacity", 0.8)
+          .attr("fill-opacity", 0.15)
+          .attr("filter", "url(#node-glow)");
+
+        // Core planet/star node
+        const node = nodeLayer
+          .selectAll<SVGCircleElement, GraphNode>("circle.core-node")
+          .data(nodes)
+          .join("circle")
+          .attr("class", "core-node")
+          .attr("r", (d) => d.radius)
+          .attr("fill", (d) => {
+            // Radial gradient feel via CSS
+            return d.color;
+          })
+          .attr("fill-opacity", 0.85)
           .attr("stroke", (d) => d.color)
           .attr("stroke-width", 1.5)
-          .attr("stroke-opacity", 0.3)
+          .attr("stroke-opacity", 0.6)
           .attr("cursor", "pointer")
+          .attr("filter", "url(#node-glow)")
           .on("click", (_event, d) => {
             const agent = agents.find((a) => a.code === d.id);
             if (agent) setSelectedAgent(agent);
+
+            // Ripple effect
+            const ripple = nodeLayer.append("circle")
+              .attr("cx", d.x!).attr("cy", d.y!)
+              .attr("r", d.radius)
+              .attr("fill", "none")
+              .attr("stroke", d.color)
+              .attr("stroke-width", 2)
+              .attr("stroke-opacity", 0.8);
+            ripple.transition().duration(800).ease(d3.easeCubicOut)
+              .attr("r", d.radius + 40)
+              .attr("stroke-opacity", 0)
+              .attr("stroke-width", 0.5)
+              .remove();
+            // Second ripple wave
+            const ripple2 = nodeLayer.append("circle")
+              .attr("cx", d.x!).attr("cy", d.y!)
+              .attr("r", d.radius)
+              .attr("fill", "none")
+              .attr("stroke", d.color)
+              .attr("stroke-width", 1.5)
+              .attr("stroke-opacity", 0.5);
+            ripple2.transition().delay(150).duration(800).ease(d3.easeCubicOut)
+              .attr("r", d.radius + 60)
+              .attr("stroke-opacity", 0)
+              .attr("stroke-width", 0.3)
+              .remove();
           })
           .on("mouseover", function (_event, d) {
+            // Brighten hovered node
             d3.select(this)
               .attr("fill-opacity", 1)
               .attr("stroke-opacity", 1)
-              .attr("stroke-width", 3);
+              .attr("stroke-width", 3)
+              .attr("filter", "url(#node-glow-strong)");
 
-            // Highlight same department
+            // Highlight same department - fade others
             node
-              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.9 : 0.2)
-              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.6 : 0.1);
+              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.95 : 0.15)
+              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.8 : 0.05);
+            nodeHalos
+              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.2 : 0.02);
+            orbitalRings
+              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.5 : 0.03);
+
             link
               .attr("stroke-opacity", (l) => {
                 const s = l.source as GraphNode;
                 const t = l.target as GraphNode;
-                return s.deptNum === d.deptNum || t.deptNum === d.deptNum ? 0.5 : 0.05;
+                return s.deptNum === d.deptNum || t.deptNum === d.deptNum ? 0.7 : 0.04;
+              })
+              .attr("stroke-width", (l) => {
+                const s = l.source as GraphNode;
+                const t = l.target as GraphNode;
+                return s.deptNum === d.deptNum || t.deptNum === d.deptNum
+                  ? edgeWidth(l) + 1.5 : edgeWidth(l) * 0.3;
+              });
+            linkGlow
+              .attr("stroke-opacity", (l) => {
+                const s = l.source as GraphNode;
+                const t = l.target as GraphNode;
+                return s.deptNum === d.deptNum || t.deptNum === d.deptNum ? 0.3 : 0.01;
               });
 
-            // Tooltip
-            g.append("text")
-              .attr("class", "tooltip-text")
-              .attr("x", d.x! + d.radius + 5)
+            // Cosmic tooltip with glow
+            const tooltipG = g.append("g").attr("class", "tooltip-group");
+            // Background pill
+            const label = `${d.code} -- ${d.role}`;
+            tooltipG.append("rect")
+              .attr("x", d.x! + d.radius + 8)
+              .attr("y", d.y! - 10)
+              .attr("width", label.length * 6.2 + 16)
+              .attr("height", 22)
+              .attr("rx", 4)
+              .attr("fill", "rgba(3, 6, 20, 0.85)")
+              .attr("stroke", d.color)
+              .attr("stroke-width", 0.5)
+              .attr("stroke-opacity", 0.6);
+            tooltipG.append("text")
+              .attr("x", d.x! + d.radius + 16)
               .attr("y", d.y! + 4)
-              .attr("fill", "var(--text-primary)")
-              .attr("font-size", "11px")
-              .attr("font-family", "monospace")
-              .text(`${d.code} — ${d.role}`);
+              .attr("fill", d.color)
+              .attr("font-size", "10px")
+              .attr("font-family", "'JetBrains Mono', monospace")
+              .text(label);
           })
           .on("mouseout", function () {
             node
-              .attr("fill-opacity", 0.8)
-              .attr("stroke-opacity", 0.3)
-              .attr("stroke-width", 1.5);
-            link.attr("stroke-opacity", 0.3);
-            g.selectAll(".tooltip-text").remove();
+              .attr("fill-opacity", 0.85)
+              .attr("stroke-opacity", 0.6)
+              .attr("stroke-width", 1.5)
+              .attr("filter", "url(#node-glow)");
+            nodeHalos.attr("fill-opacity", 0.15);
+            orbitalRings.attr("stroke-opacity", 0.3);
+            link
+              .attr("stroke-opacity", (l) => edgeOpacity(l))
+              .attr("stroke-width", (l) => edgeWidth(l));
+            linkGlow
+              .attr("stroke-opacity", (l) => edgeOpacity(l) * 0.4);
+            g.selectAll(".tooltip-group").remove();
           })
           .call(
             d3.drag<SVGCircleElement, GraphNode>()
@@ -180,20 +535,79 @@ export default function NetworkGraph() {
               })
           );
 
-        // Tick
+        // --- ANIMATED DASH OFFSET for energy beams ---
+        let dashOffset = 0;
+
+        // --- TICK ---
         simulation.on("tick", () => {
+          // Update link positions
           link
             .attr("x1", (d) => (d.source as GraphNode).x!)
             .attr("y1", (d) => (d.source as GraphNode).y!)
             .attr("x2", (d) => (d.target as GraphNode).x!)
             .attr("y2", (d) => (d.target as GraphNode).y!);
 
-          node
-            .attr("cx", (d) => d.x!)
-            .attr("cy", (d) => d.y!);
+          linkGlow
+            .attr("x1", (d) => (d.source as GraphNode).x!)
+            .attr("y1", (d) => (d.source as GraphNode).y!)
+            .attr("x2", (d) => (d.target as GraphNode).x!)
+            .attr("y2", (d) => (d.target as GraphNode).y!);
+
+          // Update gradient endpoints
+          links.forEach((l, i) => {
+            const s = l.source as GraphNode;
+            const t = l.target as GraphNode;
+            if (!l.sameDept) {
+              defs.select(`#edge-grad-${i}`)
+                .attr("x1", s.x!).attr("y1", s.y!)
+                .attr("x2", t.x!).attr("y2", t.y!);
+            }
+          });
+
+          // Update node positions
+          node.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
+          nodeHalos.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
+          orbitalRings.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
+
+          // Update particles
+          particles.forEach((p) => {
+            p.t = (p.t + p.speed) % 1;
+          });
+          particleCircles
+            .attr("cx", (p) => {
+              const l = links[p.linkIndex];
+              const s = l.source as GraphNode;
+              const t = l.target as GraphNode;
+              return (s.x || 0) + ((t.x || 0) - (s.x || 0)) * p.t;
+            })
+            .attr("cy", (p) => {
+              const l = links[p.linkIndex];
+              const s = l.source as GraphNode;
+              const t = l.target as GraphNode;
+              return (s.y || 0) + ((t.y || 0) - (s.y || 0)) * p.t;
+            });
         });
 
-        return () => simulation.stop();
+        // --- ANIMATION LOOP (stars + dash offset) ---
+        function animate() {
+          drawBackground();
+
+          // Animate energy beam dash
+          dashOffset -= 0.5;
+          link.attr("stroke-dashoffset", dashOffset);
+
+          // Pulse orbital rings
+          const pulse = Math.sin(Date.now() * 0.002) * 0.15 + 0.3;
+          orbitalRings.attr("stroke-opacity", pulse);
+
+          animFrameRef.current = requestAnimationFrame(animate);
+        }
+        animFrameRef.current = requestAnimationFrame(animate);
+
+        return () => {
+          simulation.stop();
+          cancelAnimationFrame(animFrameRef.current);
+        };
       })
       .catch(() => setLoading(false));
   }, []);
@@ -202,63 +616,123 @@ export default function NetworkGraph() {
     <div className="relative">
       {loading && (
         <div className="flex items-center justify-center py-20">
-          <div className="h-8 w-8 border-2 border-[#00D9FF] border-t-transparent rounded-full animate-spin" />
-          <span className="ml-3 text-[var(--text-secondary)]">Loading 195 agents...</span>
+          <div className="relative">
+            <div className="h-10 w-10 border-2 border-[#00E5FF] border-t-transparent rounded-full animate-spin" />
+            <div className="absolute inset-0 h-10 w-10 border-2 border-[#7C3AED] border-b-transparent rounded-full animate-spin" style={{ animationDirection: "reverse", animationDuration: "1.5s" }} />
+          </div>
+          <span className="ml-4 text-[#94A3B8] font-mono text-sm tracking-wider">
+            Initializing 195 agents across the cosmos...
+          </span>
         </div>
       )}
 
-      <div ref={containerRef} className="w-full overflow-hidden rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)]">
-        <svg ref={svgRef} className="w-full" />
+      <div
+        ref={containerRef}
+        className="w-full overflow-hidden rounded-xl relative"
+        style={{
+          border: "1px solid rgba(0, 229, 255, 0.15)",
+          boxShadow: "0 0 40px rgba(0, 229, 255, 0.06), 0 0 80px rgba(124, 58, 237, 0.04), inset 0 0 60px rgba(0, 0, 0, 0.3)",
+        }}
+      >
+        {/* Canvas starfield (behind SVG) */}
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full"
+          style={{ zIndex: 0 }}
+        />
+        {/* SVG network (on top) */}
+        <svg
+          ref={svgRef}
+          className="w-full relative"
+          style={{ zIndex: 1, background: "transparent" }}
+        />
       </div>
 
-      {/* Department Legend */}
-      <div className="mt-4 flex flex-wrap gap-2">
+      {/* Cosmic Department Legend */}
+      <div className="mt-4 flex flex-wrap gap-1.5 justify-center">
         {Object.entries(DEPT_COLORS).map(([num, color]) => (
           <button
             key={num}
-            className="flex items-center gap-1.5 px-2 py-1 rounded text-[10px] hover:bg-[var(--bg-elevated)] transition-colors"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-mono transition-all duration-200"
+            style={{
+              background: hoveredDept === num ? `${color}20` : "rgba(3, 6, 20, 0.6)",
+              border: `1px solid ${hoveredDept === num ? color : "rgba(255,255,255,0.06)"}`,
+              boxShadow: hoveredDept === num ? `0 0 12px ${color}40` : "none",
+            }}
             onMouseEnter={() => setHoveredDept(num)}
             onMouseLeave={() => setHoveredDept(null)}
           >
-            <span className="h-2.5 w-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-            <span className="text-[var(--text-secondary)]">{num}</span>
+            <span
+              className="h-2 w-2 rounded-full flex-shrink-0"
+              style={{
+                backgroundColor: color,
+                boxShadow: `0 0 6px ${color}80`,
+              }}
+            />
+            <span style={{ color: hoveredDept === num ? color : "#64748B" }}>
+              {DEPT_NAMES[num] || num}
+            </span>
           </button>
         ))}
       </div>
 
-      {/* Selected agent detail */}
+      {/* Selected Agent Detail Card - Cosmic Glass */}
       {selectedAgent && (
-        <div className="absolute top-4 right-4 nexus-card p-4 max-w-xs shadow-xl z-10">
+        <div
+          className="absolute top-4 right-4 p-4 max-w-xs z-10 rounded-xl"
+          style={{
+            background: "rgba(3, 6, 20, 0.9)",
+            backdropFilter: "blur(20px)",
+            border: `1px solid ${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}40`,
+            boxShadow: `0 0 30px ${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}15, 0 8px 32px rgba(0, 0, 0, 0.4)`,
+          }}
+        >
           <div className="flex items-start justify-between mb-2">
             <div>
-              <span className="text-xs font-mono text-[#00D9FF] font-bold">{selectedAgent.code}</span>
-              <h3 className="text-sm font-semibold text-[var(--text-primary)]">{selectedAgent.role}</h3>
+              <span
+                className="text-xs font-mono font-bold tracking-wider"
+                style={{ color: DEPT_COLORS[selectedAgent.department_number] || "#00E5FF" }}
+              >
+                {selectedAgent.code}
+              </span>
+              <h3 className="text-sm font-semibold text-[#E8ECF4]">{selectedAgent.role}</h3>
             </div>
             <button
               onClick={() => setSelectedAgent(null)}
-              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-lg leading-none"
+              className="text-[#64748B] hover:text-[#E8ECF4] text-lg leading-none transition-colors"
             >
               &times;
             </button>
           </div>
-          <p className="text-xs text-[var(--text-secondary)] mb-2">{selectedAgent.department}</p>
-          <p className="text-xs text-[var(--text-secondary)] mb-3">
-            Tier {selectedAgent.tier.number} — {selectedAgent.tier.label}
+          <p className="text-xs text-[#94A3B8] mb-1.5 font-mono">{selectedAgent.department}</p>
+          <p className="text-xs text-[#64748B] mb-3">
+            <span
+              className="inline-block px-1.5 py-0.5 rounded text-[9px] font-mono mr-1"
+              style={{
+                background: `${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}15`,
+                color: DEPT_COLORS[selectedAgent.department_number] || "#00E5FF",
+                border: `1px solid ${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}30`,
+              }}
+            >
+              Tier {selectedAgent.tier.number}
+            </span>
+            {selectedAgent.tier.label}
             {selectedAgent.personal?.nickname && (
-              <span className="italic"> &middot; &ldquo;{selectedAgent.personal.nickname}&rdquo;</span>
+              <span className="italic text-[#94A3B8]"> &middot; &ldquo;{selectedAgent.personal.nickname}&rdquo;</span>
             )}
           </p>
           <a
             href={`/195_shades_of_agents-/agents/${selectedAgent.code.toLowerCase()}`}
-            className="text-xs text-[#00D9FF] hover:underline"
+            className="text-xs font-mono hover:underline transition-colors"
+            style={{ color: DEPT_COLORS[selectedAgent.department_number] || "#00E5FF" }}
           >
             View full profile &rarr;
           </a>
         </div>
       )}
 
-      <p className="mt-3 text-xs text-[var(--text-secondary)] text-center">
-        Drag to reposition nodes. Scroll to zoom. Click an agent for details. Hover to highlight department.
+      <p className="mt-3 text-[10px] text-[#475569] text-center font-mono tracking-wider uppercase">
+        Drag to reposition celestial bodies &middot; Scroll to traverse the cosmos &middot; Click to inspect agents
       </p>
     </div>
   );

@@ -77,9 +77,23 @@ const fullTitle = title === "NEXUS AI" ? title : `${title} | NEXUS AI`;
     </script>
   </head>
   <body
-    class="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans antialiased"
+    class="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans antialiased cosmic-bg"
   >
-    <slot />
+    <!-- Starfield background -->
+    <div class="starfield" aria-hidden="true"></div>
+
+    <!-- Nebula effects -->
+    <div class="nebula nebula-cyan" style="width: 600px; height: 600px; top: 10%; left: -5%;" aria-hidden="true"></div>
+    <div class="nebula nebula-purple" style="width: 500px; height: 500px; top: 60%; right: -10%; animation-delay: -10s;" aria-hidden="true"></div>
+    <div class="nebula nebula-magenta" style="width: 400px; height: 400px; top: 30%; left: 40%; animation-delay: -20s;" aria-hidden="true"></div>
+
+    <!-- Scanline overlay -->
+    <div class="fixed inset-0 scanlines z-[1] pointer-events-none" aria-hidden="true"></div>
+
+    <!-- Main content above the effects -->
+    <div class="relative z-[2]">
+      <slot />
+    </div>
   </body>
 </html>
 
