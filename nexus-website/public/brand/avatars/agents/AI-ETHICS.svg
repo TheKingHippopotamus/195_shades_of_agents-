@@ -1,63 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-
-  
-  <defs>
-    <filter id="ai-ethics" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <radialGradient id="bg-ai-ethics" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0a1a0f"/>
-      <stop offset="100%" stop-color="#040c07"/>
-    </radialGradient>
-  </defs>
-  <rect width="100" height="100" fill="url(#bg-ai-ethics)" rx="8"/>
-  <g filter="url(#ai-ethics)">
-    <line x1="24" y1="30" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="18" y1="50" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="24" y1="70" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="36" y1="40" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="36" y1="60" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="76" y1="30" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="82" y1="50" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="76" y1="70" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="64" y1="40" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="64" y1="60" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
-    <line x1="50" y1="22" x2="50" y2="50" stroke="#EAB308" stroke-width="0.8" opacity="0.5"/>
-    <line x1="50" y1="78" x2="50" y2="50" stroke="#EAB308" stroke-width="0.8" opacity="0.5"/>
-    <line x1="24" y1="30" x2="36" y2="40" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-    <line x1="36" y1="40" x2="36" y2="60" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-    <line x1="36" y1="60" x2="24" y2="70" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-    <line x1="18" y1="50" x2="24" y2="30" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
-    <line x1="18" y1="50" x2="24" y2="70" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
-    <line x1="76" y1="30" x2="64" y2="40" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-    <line x1="64" y1="40" x2="64" y2="60" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-    <line x1="64" y1="60" x2="76" y2="70" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-    <line x1="82" y1="50" x2="76" y2="30" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
-    <line x1="82" y1="50" x2="76" y2="70" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
-    <circle cx="24" cy="30" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="18" cy="50" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="24" cy="70" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="36" cy="40" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="36" cy="60" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="76" cy="30" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="82" cy="50" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="76" cy="70" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="64" cy="40" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="64" cy="60" r="2.5" fill="#00FF88" opacity="0.8"/>
-    <circle cx="50" cy="22" r="3" fill="#00FF88" opacity="0.9"/>
-    <circle cx="50" cy="50" r="4" fill="#EAB308" opacity="0.9"/>
-    <circle cx="50" cy="78" r="3" fill="#00FF88" opacity="0.9"/>
-    
-    <line x1="30" y1="50" x2="70" y2="50" stroke="#EAB308" stroke-width="1" opacity="0.6"/>
-    <circle cx="50" cy="50" r="1.5" fill="#EAB308" opacity="0.9"/>
-    <!-- Left scale pan -->
-    <line x1="30" y1="50" x2="22" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
-    <line x1="22" y1="62" x2="30" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
-    <!-- Right scale pan -->
-    <line x1="70" y1="50" x2="78" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
-    <line x1="70" y1="62" x2="78" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
-  </g>
-  <rect x="24" y="4" width="52" height="8" rx="2" fill="#001a0a" stroke="#EAB308" stroke-width="0.7"/>
-  <text x="50" y="9.8" font-family="monospace" font-size="4" fill="#EAB308" text-anchor="middle" letter-spacing="0.3">AI · ETHICS</text>
+<defs>
+  <linearGradient id="eth-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#050505"/>
+    <stop offset="100%" stop-color="#0a0a0a"/>
+  </linearGradient>
+  <linearGradient id="eth-skin" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#1a1a1a"/>
+    <stop offset="50%" stop-color="#f0f0f0"/>
+    <stop offset="100%" stop-color="#f0f0f0"/>
+  </linearGradient>
+  <filter id="eth-glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="eth-face-clip">
+    <ellipse cx="50" cy="46" rx="24" ry="27"/>
+  </clipPath>
+</defs>
+<!-- Background -->
+<rect width="100" height="100" fill="url(#eth-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="44" y="70" width="12" height="9" rx="2">
+  <animate attributeName="fill" values="#1a1a1a;#f0f0f0" dur="0s" fill="freeze"/>
+</rect>
+<rect x="44" y="70" width="6" height="9" rx="0" fill="#1a1a1a"/>
+<rect x="50" y="70" width="6" height="9" rx="0" fill="#f0f0f0"/>
+<!-- Head shape (yin-yang split skin) -->
+<ellipse cx="50" cy="46" rx="24" ry="27" fill="url(#eth-skin)"/>
+<!-- Hard vertical split line through center -->
+<line x1="50" y1="19" x2="50" y2="73" stroke="#555555" stroke-width="0.4" opacity="0.5"/>
+<!-- Left eye (black) -->
+<g filter="url(#eth-glow)">
+  <ellipse cx="38" cy="44" rx="6.5" ry="6.5" fill="#1a1a1a" stroke="#ffffff" stroke-width="0.8"/>
+  <ellipse cx="38" cy="44" rx="2.5" ry="2.5" fill="#000000"/>
+  <ellipse cx="36.5" cy="42.5" rx="1" ry="1" fill="#333333" opacity="0.7"/>
+</g>
+<!-- Right eye (white) -->
+<g filter="url(#eth-glow)">
+  <ellipse cx="62" cy="44" rx="6.5" ry="6.5" fill="#f5f5f5" stroke="#1a1a1a" stroke-width="0.8"/>
+  <ellipse cx="62" cy="44" rx="2.5" ry="2.5" fill="#ffffff"/>
+  <ellipse cx="60.5" cy="42.5" rx="1" ry="1" fill="#cccccc" opacity="0.7"/>
+</g>
+<!-- Scale/balance forehead mark -->
+<g opacity="0.9">
+  <!-- Balance beam -->
+  <line x1="42" y1="26" x2="58" y2="26" stroke="#999999" stroke-width="1"/>
+  <!-- Center post -->
+  <line x1="50" y1="22" x2="50" y2="26" stroke="#999999" stroke-width="1"/>
+  <circle cx="50" cy="22" r="1.2" fill="#999999"/>
+  <!-- Left pan -->
+  <line x1="42" y1="26" x2="40" y2="30" stroke="#777777" stroke-width="0.6"/>
+  <ellipse cx="40" cy="31" rx="3" ry="1" fill="none" stroke="#777777" stroke-width="0.6"/>
+  <!-- Right pan -->
+  <line x1="58" y1="26" x2="60" y2="30" stroke="#777777" stroke-width="0.6"/>
+  <ellipse cx="60" cy="31" rx="3" ry="1" fill="none" stroke="#777777" stroke-width="0.6"/>
+</g>
+<!-- Solemn thin mouth -->
+<path d="M43,62 L57,62" fill="none" stroke="#777777" stroke-width="0.9" opacity="0.8"/>
+<!-- Subtle nose -->
+<ellipse cx="50" cy="55" rx="2" ry="1.2" fill="#555555" opacity="0.3"/>
+<!-- Label -->
+<rect x="22" y="88" width="56" height="8" rx="2" fill="#0d0d0d" stroke="#888888" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="3.8" fill="#aaaaaa" text-anchor="middle">AI · ETHICS</text>
 </svg>

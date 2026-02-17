@@ -1,84 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+  <radialGradient id="csa-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0A0A2E"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="csa-skin" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#0D0D20"/><stop offset="100%" stop-color="#050510"/></radialGradient>
+  <filter id="csa-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="csa-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-
-<defs>
-  <radialGradient id="csa-core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="30%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#1E1B4B"/></radialGradient>
-  <radialGradient id="csa-bg" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#1E1B4B"/><stop offset="100%" stop-color="#030108"/></radialGradient>
-  <filter id="csa-glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="csa-glow2"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<!-- 5 large spikes with spectrum colors -->
-<polygon points="24,38 29,38 26.5,6" fill="#FFD700" opacity="1" filter="url(#csa-glow2)"/>
-<polygon points="36,37 41,37 38.5,14" fill="#FF6B35" opacity="0.95"/>
-<polygon points="47.5,36 52.5,36 50,4" fill="#FFFFFF" opacity="1" filter="url(#csa-glow)"/>
-<polygon points="59,37 64,37 61.5,14" fill="#00FF88" opacity="0.95"/>
-<polygon points="71,38 76,38 73.5,6" fill="#00D9FF" opacity="1" filter="url(#csa-glow2)"/>
-<!-- spectrum tips -->
-<circle cx="26.5" cy="6"  r="2" fill="#FFD700" filter="url(#csa-glow)"/>
-<circle cx="50"   cy="4"  r="2.5" fill="white" filter="url(#csa-glow)"/>
-<circle cx="73.5" cy="6"  r="2" fill="#00D9FF" filter="url(#csa-glow)"/>
-<!-- hex head with cosmic background -->
-<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="url(#csa-bg)" stroke="url(#csa-core)" stroke-width="2"/>
-<rect x="32" y="34" width="36" height="5" rx="1" fill="rgba(255,255,255,0.8)"/>
-<!-- 24 tiny orbiting dots arranged in 3 rings around hex -->
-<!-- ring 1: 8 dots close -->
-<circle cx="50"    cy="30.5" r="1.2" fill="#FFD700"/>
-<circle cx="56.8"  cy="31.8" r="1"   fill="#FF6B35"/>
-<circle cx="61.5"  cy="36.5" r="1"   fill="#EC4899"/>
-<circle cx="63.5"  cy="43.2" r="1.2" fill="#A855F7" filter="url(#csa-glow2)"/>
-<circle cx="61.5"  cy="50"   r="1"   fill="#6366F1"/>
-<circle cx="56.8"  cy="55.8" r="1"   fill="#00D9FF"/>
-<circle cx="50"    cy="58.5" r="1.2" fill="#00FF88"/>
-<circle cx="43.2"  cy="55.8" r="1"   fill="#84CC16"/>
-<circle cx="38.5"  cy="50"   r="1"   fill="#EAB308"/>
-<circle cx="36.5"  cy="43.2" r="1.2" fill="#F97316" filter="url(#csa-glow2)"/>
-<circle cx="38.5"  cy="36.5" r="1"   fill="#EF4444"/>
-<circle cx="43.2"  cy="31.8" r="1"   fill="#FFD700"/>
-<!-- ring 2: 8 dots farther -->
-<circle cx="50"    cy="23"   r="0.9" fill="#00D9FF" opacity="0.8"/>
-<circle cx="61"    cy="26"   r="0.8" fill="#FF6B35" opacity="0.7"/>
-<circle cx="68"    cy="34"   r="0.9" fill="#EC4899" opacity="0.8"/>
-<circle cx="70.5"  cy="44"   r="0.8" fill="#A855F7" opacity="0.7"/>
-<circle cx="69"    cy="55"   r="0.9" fill="#00FF88" opacity="0.8"/>
-<circle cx="62"    cy="63"   r="0.8" fill="#00D9FF" opacity="0.7"/>
-<circle cx="50"    cy="67"   r="0.9" fill="#FFD700" opacity="0.8"/>
-<circle cx="38"    cy="63"   r="0.8" fill="#EF4444" opacity="0.7"/>
-<circle cx="31"    cy="55"   r="0.9" fill="#F97316" opacity="0.8"/>
-<circle cx="29.5"  cy="44"   r="0.8" fill="#A855F7" opacity="0.7"/>
-<circle cx="32"    cy="34"   r="0.9" fill="#84CC16" opacity="0.8"/>
-<circle cx="39"    cy="26"   r="0.8" fill="#EAB308" opacity="0.7"/>
-<!-- central radiant eye (single all-seeing) -->
-<circle cx="50" cy="53" r="10" fill="url(#csa-core)" opacity="0.15"/>
-<circle cx="50" cy="53" r="7" fill="url(#csa-core)" opacity="0.2"/>
-<circle cx="50" cy="53" r="4.5" fill="url(#csa-core)" filter="url(#csa-glow)"/>
-<circle cx="50" cy="53" r="2" fill="white"/>
-<!-- radiant lines from center -->
-<line x1="50" y1="44" x2="50" y2="46" stroke="white" stroke-width="0.6" opacity="0.7"/>
-<line x1="50" y1="60" x2="50" y2="62" stroke="white" stroke-width="0.6" opacity="0.7"/>
-<line x1="41" y1="53" x2="43" y2="53" stroke="white" stroke-width="0.6" opacity="0.7"/>
-<line x1="57" y1="53" x2="59" y2="53" stroke="white" stroke-width="0.6" opacity="0.7"/>
-<line x1="43.6" y1="46.6" x2="44.9" y2="47.9" stroke="white" stroke-width="0.5" opacity="0.6"/>
-<line x1="55.1" y1="58.1" x2="56.4" y2="59.4" stroke="white" stroke-width="0.5" opacity="0.6"/>
-<line x1="55.1" y1="46.6" x2="56.4" y2="47.9" stroke="white" stroke-width="0.5" opacity="0.6"/>
-<line x1="43.6" y1="58.1" x2="44.9" y2="59.4" stroke="white" stroke-width="0.5" opacity="0.6"/>
-<!-- two small flanking eyes above prism -->
-<circle cx="40" cy="38" r="3" fill="#0A0A1A" stroke="white" stroke-width="0.8"/>
-<circle cx="60" cy="38" r="3" fill="#0A0A1A" stroke="white" stroke-width="0.8"/>
-<circle cx="40" cy="38" r="1.5" fill="white" filter="url(#csa-glow2)"/>
-<circle cx="60" cy="38" r="1.5" fill="white" filter="url(#csa-glow2)"/>
-<!-- omniscient expression -->
-<path d="M44,66 Q50,69 56,66" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-<!-- body: cosmic conductor with all colors -->
-<path d="M32,75 L26,91 L50,88 L74,91 L68,75 Z" fill="url(#csa-bg)" stroke="white" stroke-width="1.2"/>
-<!-- spectrum line on body -->
-<line x1="30" y1="82" x2="36" y2="82" stroke="#FFD700" stroke-width="1.2"/>
-<line x1="37" y1="82" x2="43" y2="82" stroke="#FF6B35" stroke-width="1.2"/>
-<line x1="44" y1="82" x2="50" y2="82" stroke="#EC4899" stroke-width="1.2"/>
-<line x1="51" y1="82" x2="57" y2="82" stroke="#00D9FF" stroke-width="1.2"/>
-<line x1="58" y1="82" x2="64" y2="82" stroke="#00FF88" stroke-width="1.2"/>
-<line x1="65" y1="82" x2="70" y2="82" stroke="#A855F7" stroke-width="1.2"/>
-<ellipse cx="50" cy="96" rx="24" ry="3.5" fill="rgba(167,139,250,0.2)"/>
+<rect width="100" height="100" rx="18" fill="url(#csa-bg)"/>
+<!-- Floating geometric shapes orbiting head -->
+<polygon points="14,18 18,12 22,18" fill="none" stroke="#FF4444" stroke-width="0.8" opacity="0.8"/>
+<circle cx="82" cy="22" r="3.5" fill="none" stroke="#4444FF" stroke-width="0.8" opacity="0.8"/>
+<polygon points="85,55 89,49 93,55" fill="none" stroke="#44FF44" stroke-width="0.8" opacity="0.8"/>
+<rect x="6" y="55" width="6" height="6" rx="0.5" fill="none" stroke="#FFFF44" stroke-width="0.8" opacity="0.8"/>
+<circle cx="20" cy="80" r="2.5" fill="none" stroke="#FF44FF" stroke-width="0.8" opacity="0.7"/>
+<polygon points="78,80 82,74 86,80" fill="none" stroke="#44FFFF" stroke-width="0.8" opacity="0.8"/>
+<!-- Large sphere head with flat bottom -->
+<ellipse cx="50" cy="48" rx="30" ry="36" fill="url(#csa-skin)" stroke="#1A1A3E" stroke-width="0.6"/>
+<!-- Galaxy spiral pattern across face -->
+<path d="M50,48 C45,42 38,40 36,44 C34,48 37,54 42,55 C47,56 54,52 56,46 C58,40 54,34 48,33 C42,32 36,36 34,43" stroke="#3333AA" stroke-width="0.5" fill="none" opacity="0.5"/>
+<path d="M50,48 C55,42 62,40 64,44 C66,48 63,54 58,55" stroke="#3333AA" stroke-width="0.4" fill="none" opacity="0.3"/>
+<!-- Ring of 6 eyes around center, each different color -->
+<circle cx="50" cy="30" r="4.5" fill="#CC0000" filter="url(#csa-glow)"/><circle cx="50" cy="30" r="2" fill="#660000"/>
+<circle cx="64" cy="38" r="4.5" fill="#0044CC" filter="url(#csa-glow)"/><circle cx="64" cy="38" r="2" fill="#001166"/>
+<circle cx="64" cy="54" r="4.5" fill="#00AA00" filter="url(#csa-glow)"/><circle cx="64" cy="54" r="2" fill="#004400"/>
+<circle cx="50" cy="62" r="4.5" fill="#AAAA00" filter="url(#csa-glow)"/><circle cx="50" cy="62" r="2" fill="#555500"/>
+<circle cx="36" cy="54" r="4.5" fill="#00AAAA" filter="url(#csa-glow)"/><circle cx="36" cy="54" r="2" fill="#004444"/>
+<circle cx="36" cy="38" r="4.5" fill="#AA00AA" filter="url(#csa-glow)"/><circle cx="36" cy="38" r="2" fill="#440044"/>
+<!-- 4-part mandible structure -->
+<path d="M38,72 L32,80 L38,84" fill="none" stroke="#2A2A5A" stroke-width="1.5"/>
+<path d="M44,74 L40,82 L46,84" fill="none" stroke="#2A2A5A" stroke-width="1.5"/>
+<path d="M56,74 L60,82 L54,84" fill="none" stroke="#2A2A5A" stroke-width="1.5"/>
+<path d="M62,72 L68,80 L62,84" fill="none" stroke="#2A2A5A" stroke-width="1.5"/>
 </svg>

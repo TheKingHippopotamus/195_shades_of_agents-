@@ -1,45 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+  <radialGradient id="ciso-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#100000"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="ciso-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#2A2A2A"/><stop offset="100%" stop-color="#1A1A1A"/></radialGradient>
+  <radialGradient id="ciso-eye" cx="40%" cy="35%" r="55%"><stop offset="0%" stop-color="#FF4444"/><stop offset="100%" stop-color="#880000"/></radialGradient>
+  <filter id="ciso-glow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="ciso-glow-sm"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-
-<defs>
-  <linearGradient id="ciso-visor" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7F1D1D"/><stop offset="30%" stop-color="#EF4444"/><stop offset="50%" stop-color="#FCA5A5"/><stop offset="70%" stop-color="#EF4444"/><stop offset="100%" stop-color="#7F1D1D"/></linearGradient>
-  <radialGradient id="ciso-dark" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1A0000"/><stop offset="100%" stop-color="#050000"/></radialGradient>
-  <filter id="ciso-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="ciso-visor-blur"><feGaussianBlur stdDeviation="0.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<!-- 4 dark, menacing spikes with jagged edges -->
-<polygon points="29,38 34,38 31.5,10" fill="#4B0000" opacity="0.95"/>
-<polygon points="29,38 34,38 31.5,10 30,18 33,22" fill="#6B0000" opacity="0.7"/>
-<polygon points="41,37 46,37 43.5,16" fill="#4B0000" opacity="0.9"/>
-<polygon points="54,37 59,37 56.5,16" fill="#4B0000" opacity="0.9"/>
-<polygon points="66,38 71,38 68.5,10" fill="#4B0000" opacity="0.95"/>
-<polygon points="66,38 71,38 68.5,10 67,18 70,22" fill="#6B0000" opacity="0.7"/>
-<!-- hex head: very dark -->
-<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="url(#ciso-dark)" stroke="#EF4444" stroke-width="1.5"/>
-<rect x="32" y="34" width="36" height="4" rx="0" fill="#3B0000" opacity="0.9"/>
-<!-- red visor slit INSTEAD of normal eyes -->
-<rect x="33" y="48" width="34" height="5" rx="1" fill="#0A0000"/>
-<rect x="33" y="48" width="34" height="5" rx="1" fill="url(#ciso-visor)" filter="url(#ciso-visor-blur)"/>
-<!-- visor edge glare -->
-<line x1="33" y1="48.5" x2="67" y2="48.5" stroke="rgba(255,200,200,0.3)" stroke-width="0.5"/>
-<!-- lock symbol in hex face lower area -->
-<!-- lock shackle (U-shape) -->
-<path d="M44,60 L44,56 Q44,52 50,52 Q56,52 56,56 L56,60" fill="none" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
-<!-- lock body -->
-<rect x="41.5" y="60" width="17" height="12" rx="2" fill="#1A0000" stroke="#EF4444" stroke-width="1.4"/>
-<!-- keyhole -->
-<circle cx="50" cy="65.5" r="2.2" fill="#EF4444" opacity="0.8"/>
-<rect x="49" y="65.5" width="2" height="4" rx="0.5" fill="#EF4444" opacity="0.8"/>
-<!-- warning: hex face background -->
-<line x1="33" y1="55" x2="67" y2="55" stroke="#3B0000" stroke-width="0.5" opacity="0.5"/>
-<!-- body: armored -->
-<path d="M32,75 L26,91 L50,87 L74,91 L68,75 Z" fill="url(#ciso-dark)" stroke="#EF4444" stroke-width="1.2"/>
-<!-- armor plating lines -->
-<line x1="32" y1="79" x2="50" y2="79" stroke="#3B0000" stroke-width="1" opacity="0.8"/>
-<line x1="50" y1="79" x2="68" y2="79" stroke="#3B0000" stroke-width="1" opacity="0.8"/>
-<polygon points="50,75 46,79 50,83 54,79" fill="#EF4444" opacity="0.2"/>
-<ellipse cx="50" cy="96" rx="22" ry="3" fill="rgba(239,68,68,0.2)"/>
+<rect width="100" height="100" rx="18" fill="url(#ciso-bg)"/>
+<!-- Angular armored head -->
+<polygon points="50,10 75,25 78,60 65,75 35,75 22,60 25,25" fill="url(#ciso-skin)" stroke="#333333" stroke-width="0.7"/>
+<!-- Honeycomb armor pattern on skin -->
+<path d="M40,20 L45,17 L50,20 L50,26 L45,29 L40,26 Z" fill="none" stroke="#3A3A3A" stroke-width="0.5" opacity="0.8"/>
+<path d="M50,20 L55,17 L60,20 L60,26 L55,29 L50,26 Z" fill="none" stroke="#3A3A3A" stroke-width="0.5" opacity="0.8"/>
+<path d="M30,32 L35,29 L40,32 L40,38 L35,41 L30,38 Z" fill="none" stroke="#3A3A3A" stroke-width="0.5" opacity="0.8"/>
+<path d="M60,32 L65,29 L70,32 L70,38 L65,41 L60,38 Z" fill="none" stroke="#3A3A3A" stroke-width="0.5" opacity="0.8"/>
+<path d="M28,55 L33,52 L38,55 L38,61 L33,64 L28,61 Z" fill="none" stroke="#3A3A3A" stroke-width="0.5" opacity="0.6"/>
+<path d="M62,55 L67,52 L72,55 L72,61 L67,64 L62,61 Z" fill="none" stroke="#3A3A3A" stroke-width="0.5" opacity="0.6"/>
+<!-- Scar marks instead of antennae -->
+<line x1="38" y1="18" x2="44" y2="28" stroke="#444" stroke-width="1.5" opacity="0.7"/>
+<line x1="56" y1="18" x2="62" y2="28" stroke="#444" stroke-width="1.5" opacity="0.7"/>
+<!-- Single large cyclops eye in center -->
+<circle cx="50" cy="38" r="13" fill="url(#ciso-eye)" filter="url(#ciso-glow)"/>
+<!-- Hexagonal facets in iris -->
+<path d="M50,28 L56,31 L59,37 L56,43 L50,46 L44,43 L41,37 L44,31 Z" fill="none" stroke="#FF0040" stroke-width="0.6" opacity="0.8"/>
+<path d="M50,31 L54,33 L56,37 L54,41 L50,43 L46,41 L44,37 L46,33 Z" fill="#660000" opacity="0.7"/>
+<circle cx="50" cy="37" r="4" fill="#CC0020"/>
+<circle cx="47" cy="35" r="1.5" fill="#FF8888" opacity="0.8"/>
+<!-- Armored plate covering lower face -->
+<rect x="28" y="57" width="44" height="18" rx="3" fill="#222222" stroke="#333333" stroke-width="0.7"/>
+<line x1="28" y1="63" x2="72" y2="63" stroke="#333333" stroke-width="0.5"/>
+<line x1="28" y1="68" x2="72" y2="68" stroke="#333333" stroke-width="0.5"/>
+<rect x="35" y="60" width="8" height="3" rx="0.5" fill="#1A1A1A"/>
+<rect x="45" y="60" width="10" height="3" rx="0.5" fill="#1A1A1A"/>
+<rect x="57" y="60" width="8" height="3" rx="0.5" fill="#1A1A1A"/>
 </svg>

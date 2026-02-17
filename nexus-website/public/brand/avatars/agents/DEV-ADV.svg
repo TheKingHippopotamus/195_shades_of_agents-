@@ -1,16 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="60" r="28" fill="#0a0f1f" stroke="#8B5CF6" stroke-width="1.5"/>
-<ellipse cx="50" cy="60" rx="15" ry="28" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.4"/>
-<line x1="22" y1="60" x2="78" y2="60" stroke="#8B5CF6" stroke-width="0.5" opacity="0.4"/>
-<path d="M22,48 Q50,44 78,48" stroke="#8B5CF6" stroke-width="0.5" opacity="0.4" fill="none"/>
-<path d="M30,20 Q50,10 70,20 Q60,35 50,38 Q40,35 30,20 Z" fill="#1a1530" stroke="#8B5CF6" stroke-width="2"/>
-<line x1="50" y1="38" x2="50" y2="50" stroke="#8B5CF6" stroke-width="1.5"/>
-<path d="M50,15 Q40,8 30,12" stroke="#8B5CF6" stroke-width="1.5" fill="none" opacity="0.5"/>
-<path d="M50,15 Q60,8 70,12" stroke="#8B5CF6" stroke-width="1.5" fill="none" opacity="0.5"/>
-<rect x="34" y="50" width="32" height="20" rx="3" fill="#0d1230" stroke="#8B5CF6" stroke-width="1"/>
-<text x="50" y="58" text-anchor="middle" fill="#8B5CF6" font-size="5" font-family="monospace">fn dev()</text>
-<circle cx="28" cy="52" r="3" fill="#8B5CF6" opacity="0.7"/>
-<circle cx="72" cy="52" r="3" fill="#8B5CF6" opacity="0.7"/>
-<circle cx="50" cy="85" r="3" fill="#8B5CF6" opacity="0.7"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Community-orange head — rounder, more approachable than SR-DEV-ADV -->
+  <circle cx="50" cy="48" r="28" fill="#130800" stroke="#fb923c" stroke-width="1.4"/>
+  <!-- Brow: approachable soft arc -->
+  <path d="M25,40 Q38,33 50,35 Q62,33 75,40" fill="none" stroke="#fb923c" stroke-width="1"/>
+  <!-- Left eye: presentation bubble (rounder version) -->
+  <circle cx="36" cy="49" r="8" fill="#0e0400" stroke="#fb923c" stroke-width="1.1"/>
+  <path d="M29,47 Q36,43 43,47 Q43,53 36,53 Q29,53 29,47 Z" fill="none" stroke="#fb923c" stroke-width="0.8"/>
+  <path d="M33,53 L31,57 L36,53" fill="none" stroke="#fb923c" stroke-width="0.7"/>
+  <line x1="32" y1="49" x2="40" y2="49" stroke="#fb923c" stroke-width="0.6" opacity="0.6"/>
+  <line x1="32" y1="51" x2="39" y2="51" stroke="#fb923c" stroke-width="0.6" opacity="0.4"/>
+  <circle cx="36" cy="49" r="1.2" fill="#fb923c" opacity="0.9"/>
+  <!-- Right eye: presentation bubble -->
+  <circle cx="64" cy="49" r="8" fill="#0e0400" stroke="#fb923c" stroke-width="1.1"/>
+  <path d="M57,47 Q64,43 71,47 Q71,53 64,53 Q57,53 57,47 Z" fill="none" stroke="#fb923c" stroke-width="0.8"/>
+  <path d="M61,53 L59,57 L64,53" fill="none" stroke="#fb923c" stroke-width="0.7"/>
+  <line x1="60" y1="49" x2="68" y2="49" stroke="#fb923c" stroke-width="0.6" opacity="0.6"/>
+  <line x1="60" y1="51" x2="67" y2="51" stroke="#fb923c" stroke-width="0.6" opacity="0.4"/>
+  <circle cx="64" cy="49" r="1.2" fill="#fb923c" opacity="0.9"/>
+  <!-- Nose: rounder -->
+  <path d="M47,57 Q50,62 53,57" stroke="#fb923c" stroke-width="0.9" fill="none" opacity="0.5"/>
+  <!-- Mouth: approachable friendly smile -->
+  <path d="M36,67 Q50,75 64,67" stroke="#fb923c" stroke-width="1.3" fill="none"/>
+  <!-- Cheek dots: community warmth -->
+  <circle cx="27" cy="57" r="3" fill="#fb923c" opacity="0.12"/>
+  <circle cx="73" cy="57" r="3" fill="#fb923c" opacity="0.12"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#fb923c" opacity="0.9">DEV-ADV</text>
+</svg>

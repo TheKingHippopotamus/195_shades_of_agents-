@@ -1,65 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-
-  
   <defs>
-    <filter id="dir-aie" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+    <radialGradient id="daie-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#040818"/>
+      <stop offset="100%" stop-color="#02040C"/>
+    </radialGradient>
+    <radialGradient id="daie-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#3050A0"/>
+      <stop offset="55%" stop-color="#102060"/>
+      <stop offset="100%" stop-color="#060E30"/>
+    </radialGradient>
+    <radialGradient id="daie-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#C0D8FF"/>
+      <stop offset="45%" stop-color="#5080D0"/>
+      <stop offset="100%" stop-color="#182858"/>
+    </radialGradient>
+    <filter id="daie-glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <radialGradient id="bg-dir-aie" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0a1a0f"/>
-      <stop offset="100%" stop-color="#040c07"/>
-    </radialGradient>
   </defs>
-  <rect width="100" height="100" fill="url(#bg-dir-aie)" rx="8"/>
-  <g filter="url(#dir-aie)">
-    <line x1="50" y1="88" x2="25" y2="68" stroke="#00FF88" stroke-width="1.2" opacity="0.7"/>
-    <line x1="50" y1="88" x2="50" y2="68" stroke="#00FF88" stroke-width="1.2" opacity="0.7"/>
-    <line x1="50" y1="88" x2="75" y2="68" stroke="#00FF88" stroke-width="1.2" opacity="0.7"/>
-    <line x1="25" y1="68" x2="12" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="25" y1="68" x2="25" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="50" y1="68" x2="38" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="50" y1="68" x2="44" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="75" y1="68" x2="56" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="75" y1="68" x2="62" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="75" y1="68" x2="75" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="75" y1="68" x2="88" y2="46" stroke="#00FF88" stroke-width="0.9" opacity="0.55"/>
-    <line x1="12" y1="46" x2="8" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="12" y1="46" x2="16" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="25" y1="46" x2="24" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="38" y1="46" x2="32" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="44" y1="46" x2="40" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="56" y1="46" x2="50" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="56" y1="46" x2="60" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="62" y1="46" x2="68" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="75" y1="46" x2="76" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="75" y1="46" x2="84" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <line x1="88" y1="46" x2="92" y2="25" stroke="#00CC66" stroke-width="0.6" opacity="0.4"/>
-    <circle cx="50" cy="88" r="5" fill="#00FF88" opacity="1"/>
-    <circle cx="50" cy="88" r="7" fill="none" stroke="#00FF88" stroke-width="0.8" opacity="0.4"/>
-    <circle cx="25" cy="68" r="3.5" fill="#00FF88" opacity="0.9"/>
-    <circle cx="50" cy="68" r="3.5" fill="#00FF88" opacity="0.9"/>
-    <circle cx="75" cy="68" r="3.5" fill="#00FF88" opacity="0.9"/>
-    <circle cx="12" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="25" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="38" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="44" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="56" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="62" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="75" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="88" cy="46" r="2.5" fill="#00FF88" opacity="0.75"/>
-    <circle cx="8" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="16" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="24" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="32" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="40" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="50" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="60" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="68" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="76" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="84" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-    <circle cx="92" cy="25" r="1.5" fill="#00CC66" opacity="0.6"/>
-  </g>
-  <rect x="26" y="4" width="48" height="8" rx="2" fill="#001a0a" stroke="#00FF88" stroke-width="0.7"/>
-  <text x="50" y="9.8" font-family="monospace" font-size="4" fill="#00FF88" text-anchor="middle" letter-spacing="0.3">DIR · AI ENG</text>
+  <rect width="100" height="100" fill="url(#daie-bg)" rx="10"/>
+  <circle cx="8" cy="9" r="0.7" fill="#3050A0" opacity="0.5"/>
+  <circle cx="91" cy="11" r="0.6" fill="#5080D0" opacity="0.4"/>
+  <!-- Commanding deep space-blue face -->
+  <ellipse cx="50" cy="54" rx="23" ry="27" fill="url(#daie-skin)"/>
+  <!-- Circuit-trace antennae -->
+  <path d="M 43 28 L 36 28 L 36 12" stroke="#5080D0" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+  <path d="M 57 28 L 64 28 L 64 12" stroke="#5080D0" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+  <!-- Junction dots on circuit traces -->
+  <circle cx="36" cy="28" r="1.5" fill="#5080D0"/>
+  <circle cx="64" cy="28" r="1.5" fill="#5080D0"/>
+  <circle cx="36" cy="12" r="2.2" fill="#C0D8FF" filter="url(#daie-glow)"/>
+  <circle cx="64" cy="12" r="2.2" fill="#C0D8FF" filter="url(#daie-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8" fill="#02040C"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8" fill="#02040C"/>
+  <!-- AI brain-circuit iris left -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#daie-iris)"/>
+  <!-- Circuit inside iris -->
+  <circle cx="40" cy="51" r="2.5" fill="none" stroke="#182858" stroke-width="0.7" opacity="0.9"/>
+  <line x1="37.5" y1="51" x2="35.5" y2="51" stroke="#182858" stroke-width="0.5" opacity="0.8"/>
+  <line x1="42.5" y1="51" x2="44.5" y2="51" stroke="#182858" stroke-width="0.5" opacity="0.8"/>
+  <line x1="40" y1="48.5" x2="40" y2="46.5" stroke="#182858" stroke-width="0.5" opacity="0.8"/>
+  <!-- AI brain-circuit iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#daie-iris)"/>
+  <circle cx="60" cy="51" r="2.5" fill="none" stroke="#182858" stroke-width="0.7" opacity="0.9"/>
+  <line x1="57.5" y1="51" x2="55.5" y2="51" stroke="#182858" stroke-width="0.5" opacity="0.8"/>
+  <line x1="62.5" y1="51" x2="64.5" y2="51" stroke="#182858" stroke-width="0.5" opacity="0.8"/>
+  <line x1="60" y1="48.5" x2="60" y2="46.5" stroke="#182858" stroke-width="0.5" opacity="0.8"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#010306"/>
+  <circle cx="61" cy="50" r="2" fill="#010306"/>
+  <circle cx="42" cy="49" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="62" cy="49" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#060E30" opacity="0.6"/>
+  <!-- Commanding authoritative expression -->
+  <path d="M 42 69 L 58 69" fill="none" stroke="#5080D0" stroke-width="1.8" stroke-linecap="round"/>
 </svg>

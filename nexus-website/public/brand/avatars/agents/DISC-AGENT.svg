@@ -1,4 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/><circle cx="50" cy="50" r="12" fill="none" stroke="#FF4444" stroke-width="0.5" opacity="0.20"/><circle cx="50.0" cy="38.0" r="1.2" fill="#FF4444" opacity="0.40"/><circle cx="60.4" cy="44.0" r="1.2" fill="#FF4444" opacity="0.40"/><circle cx="60.4" cy="56.0" r="1.2" fill="#FF4444" opacity="0.40"/><circle cx="50.0" cy="62.0" r="1.2" fill="#FF4444" opacity="0.40"/><circle cx="39.6" cy="56.0" r="1.2" fill="#FF4444" opacity="0.40"/><circle cx="39.6" cy="44.0" r="1.2" fill="#FF4444" opacity="0.40"/><circle cx="50" cy="50" r="22" fill="none" stroke="#FF4444" stroke-width="0.5" opacity="0.32"/><circle cx="50.0" cy="28.0" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="62.9" cy="32.2" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="70.9" cy="43.2" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="70.9" cy="56.8" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="62.9" cy="67.8" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="50.0" cy="72.0" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="37.1" cy="67.8" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="29.1" cy="56.8" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="29.1" cy="43.2" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="37.1" cy="32.2" r="1.2" fill="#FF4444" opacity="0.55"/><circle cx="50" cy="50" r="32" fill="none" stroke="#FF4444" stroke-width="0.5" opacity="0.44"/><circle cx="50.0" cy="18.0" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="63.9" cy="21.2" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="75.0" cy="30.0" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="81.2" cy="42.9" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="81.2" cy="57.1" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="75.0" cy="70.0" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="63.9" cy="78.8" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="50.0" cy="82.0" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="36.1" cy="78.8" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="25.0" cy="70.0" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="18.8" cy="57.1" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="18.8" cy="42.9" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="25.0" cy="30.0" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="36.1" cy="21.2" r="1.2" fill="#FF4444" opacity="0.70"/><circle cx="50" cy="50" r="12" fill="rgba(255,68,68,0.2)" stroke="#FF4444" stroke-width="1.5"/><circle cx="50" cy="50" r="6" fill="rgba(255,68,68,0.4)" stroke="#FF4444" stroke-width="1"/><circle cx="48" cy="48" r="6" fill="none" stroke="#FF4444" stroke-width="2"/>
-       <line x1="53" y1="53" x2="58" y2="58" stroke="#FF4444" stroke-width="2.5" stroke-linecap="round"/>
-       <circle cx="47" cy="47" r="3" fill="rgba(255,68,68,0.15)"/>
-       <text x="50" y="87" text-anchor="middle" font-family="monospace" font-size="3.5" fill="#FF4444" opacity="0.8">DISCOVERY</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="16" fill="url(#bg)"/>
+
+<defs>
+  <radialGradient id="disc-skin" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#0d1440"/><stop offset="100%" stop-color="#030820"/></radialGradient>
+  <radialGradient id="disc-iris" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f0f4ff"/><stop offset="20%" stop-color="#818cf8"/><stop offset="60%" stop-color="#3730a3"/><stop offset="100%" stop-color="#030820"/></radialGradient>
+</defs>
+<!-- starmap head -->
+<ellipse cx="50" cy="49" rx="27" ry="31" fill="url(#disc-skin)"/>
+<!-- tiny star dots on skin -->
+<circle cx="28" cy="35" r="0.7" fill="white" opacity="0.8"/>
+<circle cx="33" cy="28" r="0.5" fill="white" opacity="0.6"/>
+<circle cx="72" cy="33" r="0.7" fill="white" opacity="0.8"/>
+<circle cx="67" cy="27" r="0.5" fill="white" opacity="0.6"/>
+<circle cx="22" cy="50" r="0.6" fill="white" opacity="0.5"/>
+<circle cx="78" cy="48" r="0.6" fill="white" opacity="0.5"/>
+<circle cx="26" cy="62" r="0.5" fill="white" opacity="0.6"/>
+<circle cx="74" cy="60" r="0.5" fill="white" opacity="0.6"/>
+<circle cx="40" cy="72" r="0.6" fill="white" opacity="0.5"/>
+<circle cx="60" cy="70" r="0.6" fill="white" opacity="0.5"/>
+<!-- compass-rose forehead marking -->
+<circle cx="50" cy="28" r="5" fill="none" stroke="#818cf8" stroke-width="0.8" opacity="0.7"/>
+<line x1="50" y1="23" x2="50" y2="33" stroke="#818cf8" stroke-width="0.8" opacity="0.8"/>
+<line x1="45" y1="28" x2="55" y2="28" stroke="#818cf8" stroke-width="0.8" opacity="0.8"/>
+<polygon points="50,23 49,25.5 50,24.5 51,25.5" fill="#818cf8" opacity="0.9"/>
+<!-- massive left eye -->
+<ellipse cx="36" cy="46" rx="11" ry="9" fill="#030820" stroke="#818cf8" stroke-width="1.5"/>
+<ellipse cx="36" cy="46" rx="9" ry="7" fill="url(#disc-iris)"/>
+<!-- galaxy spiral iris left -->
+<path d="M36,46 Q39,43 39,46 Q39,50 36,51 Q33,51 33,46 Q33,41 38,41" fill="none" stroke="#030820" stroke-width="0.8" opacity="0.7"/>
+<circle cx="36" cy="46" r="2.5" fill="#030820"/>
+<circle cx="35" cy="45" r="0.8" fill="white" opacity="0.95"/>
+<!-- massive right eye -->
+<ellipse cx="64" cy="46" rx="11" ry="9" fill="#030820" stroke="#818cf8" stroke-width="1.5"/>
+<ellipse cx="64" cy="46" rx="9" ry="7" fill="url(#disc-iris)"/>
+<path d="M64,46 Q67,43 67,46 Q67,50 64,51 Q61,51 61,46 Q61,41 66,41" fill="none" stroke="#030820" stroke-width="0.8" opacity="0.7"/>
+<circle cx="64" cy="46" r="2.5" fill="#030820"/>
+<circle cx="63" cy="45" r="0.8" fill="white" opacity="0.95"/>
+<!-- adventurous raised brows -->
+<path d="M24,36 Q36,31 47,36" fill="none" stroke="#818cf8" stroke-width="2"/>
+<path d="M53,36 Q64,31 76,36" fill="none" stroke="#818cf8" stroke-width="2"/>
+<!-- telescope antenna -->
+<line x1="62" y1="20" x2="72" y2="10" stroke="#818cf8" stroke-width="1.5"/>
+<rect x="70" y="6" width="8" height="6" rx="2" fill="none" stroke="#818cf8" stroke-width="1.2" transform="rotate(-30,74,9)"/>
+<line x1="72" y1="6" x2="68" y2="4" stroke="#818cf8" stroke-width="0.8"/>
+<!-- nose -->
+<path d="M47,55 Q50,59 53,55" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.6"/>
+<!-- excited open mouth -->
+<path d="M39,66 Q50,72 61,66" fill="none" stroke="#818cf8" stroke-width="1.5"/>
+<!-- label -->
+<text x="50" y="91" text-anchor="middle" font-family="monospace" font-size="3.5" fill="#818cf8" opacity="0.9">DISC-AGENT</text>
+
+</svg>

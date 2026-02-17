@@ -1,37 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <defs>
-    <radialGradient id="mguxBlobGrad" cx="40%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#FF8EB5"/>
-      <stop offset="55%" stop-color="#FF2D78"/>
-      <stop offset="100%" stop-color="#A8004F"/>
+    <radialGradient id="mgux-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#5C1A2E"/>
+      <stop offset="100%" stop-color="#1A0810"/>
     </radialGradient>
-    <clipPath id="mguxBlobClip">
-      <path d="M 77.5 50.0 Q 66.6 66.6 72.1 58.3 Q 50.0 78.9 58.3 72.7 Q 32.4 67.6 41.2 73.2 Q 23.0 50.0 27.7 58.8 Q 33.2 33.2 28.1 41.6 Q 50.0 21.4 41.6 27.3 Q 67.8 32.2 58.9 26.8 Q 77.5 50.0 72.6 41.1 Z"/>
-    </clipPath>
-    <marker id="arrowMGUX" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-      <polygon points="0 0, 6 3, 0 6" fill="#FFD1B8"/>
-    </marker>
+    <radialGradient id="mgux-skin" cx="45%" cy="38%" r="58%">
+      <stop offset="0%" stop-color="#FFB8C8"/>
+      <stop offset="60%" stop-color="#E8788A"/>
+      <stop offset="100%" stop-color="#C04060"/>
+    </radialGradient>
+    <radialGradient id="mgux-iris" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#FFE0D0"/>
+      <stop offset="40%" stop-color="#FF8060"/>
+      <stop offset="100%" stop-color="#8B2000"/>
+    </radialGradient>
+    <filter id="mgux-glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
-  <circle cx="14" cy="21" r="2.5" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="84" cy="19" r="2.5" fill="#FF8EB5" opacity="0.45"/>
-  <circle cx="13" cy="71" r="2" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="83" cy="73" r="2.5" fill="#FF6B35" opacity="0.4"/>
-  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.38"/>
-  <path d="M 77.5 50.0 Q 66.6 66.6 72.1 58.3 Q 50.0 78.9 58.3 72.7 Q 32.4 67.6 41.2 73.2 Q 23.0 50.0 27.7 58.8 Q 33.2 33.2 28.1 41.6 Q 50.0 21.4 41.6 27.3 Q 67.8 32.2 58.9 26.8 Q 77.5 50.0 72.6 41.1 Z" fill="url(#mguxBlobGrad)"/>
-  <!-- USER JOURNEY: start icon → path → end icon -->
-  <g clip-path="url(#mguxBlobClip)">
-    <!-- Journey path (curved S-curve) -->
-    <path d="M 33 56 Q 42 48 50 54 Q 58 60 67 48" fill="none" stroke="#FFD1B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2,1.5" marker-end="url(#arrowMGUX)"/>
-    <!-- Start: person icon -->
-    <circle cx="33" cy="54" r="3" fill="#FF8EB5"/>
-    <line x1="33" y1="57" x2="33" y2="62" stroke="#FF8EB5" stroke-width="1.2"/>
-    <line x1="29" y1="59" x2="37" y2="59" stroke="#FF8EB5" stroke-width="1"/>
-    <!-- End: flag / goal -->
-    <line x1="67" y1="44" x2="67" y2="54" stroke="#FFD700" stroke-width="1.2"/>
-    <polygon points="67,44 74,47 67,50" fill="#FFD700"/>
-    <!-- Milestone dots along path -->
-    <circle cx="42" cy="51" r="1.5" fill="#FFD1B8"/>
-    <circle cx="58" cy="57" r="1.5" fill="#FFD1B8"/>
-  </g>
+  <!-- Background -->
+  <rect width="100" height="100" fill="url(#mgux-bg)" rx="10"/>
+  <!-- Soft ambient stars -->
+  <circle cx="10" cy="12" r="0.8" fill="#FF9AB0" opacity="0.5"/>
+  <circle cx="88" cy="9" r="0.6" fill="#FFD0E0" opacity="0.4"/>
+  <circle cx="92" cy="82" r="0.7" fill="#FF9AB0" opacity="0.4"/>
+  <!-- Head — warm rose oval -->
+  <ellipse cx="50" cy="54" rx="24" ry="28" fill="url(#mgux-skin)"/>
+  <!-- Flowing antennae like hair — left -->
+  <path d="M 34 32 Q 22 18 28 8 Q 30 4 33 7 Q 31 14 36 24 Q 40 30 38 35" fill="none" stroke="#FFB8C8" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Flowing antennae — right -->
+  <path d="M 66 32 Q 78 18 72 8 Q 70 4 67 7 Q 69 14 64 24 Q 60 30 62 35" fill="none" stroke="#FFB8C8" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Antennae tips (empathy orbs) -->
+  <circle cx="31" cy="7" r="3" fill="#FF6080" filter="url(#mgux-glow)"/>
+  <circle cx="69" cy="7" r="3" fill="#FF6080" filter="url(#mgux-glow)"/>
+  <!-- Left eye socket -->
+  <ellipse cx="40" cy="50" rx="8" ry="9" fill="#2A0818"/>
+  <!-- Right eye socket -->
+  <ellipse cx="60" cy="50" rx="8" ry="9" fill="#2A0818"/>
+  <!-- Left iris — user journey path -->
+  <circle cx="40" cy="50" r="6" fill="url(#mgux-iris)"/>
+  <path d="M 35 50 Q 38 47 40 50 Q 42 53 45 50" fill="none" stroke="#FFE0D0" stroke-width="0.9" stroke-linecap="round"/>
+  <circle cx="40" cy="50" r="6" fill="none" stroke="#FF9AB0" stroke-width="0.5" opacity="0.6"/>
+  <!-- Right iris -->
+  <circle cx="60" cy="50" r="6" fill="url(#mgux-iris)"/>
+  <path d="M 55 50 Q 58 47 60 50 Q 62 53 65 50" fill="none" stroke="#FFE0D0" stroke-width="0.9" stroke-linecap="round"/>
+  <!-- Eye pupils -->
+  <circle cx="41" cy="49" r="2.5" fill="#1A0408"/>
+  <circle cx="61" cy="49" r="2.5" fill="#1A0408"/>
+  <!-- Eye highlight -->
+  <circle cx="42" cy="48" r="1" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="62" cy="48" r="1" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Empathetic small smile -->
+  <path d="M 42 66 Q 50 72 58 66" fill="none" stroke="#FF8090" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Nose hint -->
+  <ellipse cx="50" cy="61" rx="3" ry="2" fill="#C04060" opacity="0.5"/>
+  <!-- Cheek blush marks -->
+  <ellipse cx="34" cy="58" rx="5" ry="3" fill="#FF6080" opacity="0.25"/>
+  <ellipse cx="66" cy="58" rx="5" ry="3" fill="#FF6080" opacity="0.25"/>
 </svg>

@@ -1,54 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-
-  
-  <defs>
-    <filter id="soc" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <radialGradient id="secbg-soc" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#1a0000"/>
-      <stop offset="100%" stop-color="#060000"/>
-    </radialGradient>
-  </defs>
-  <rect width="100" height="100" fill="url(#secbg-soc)" rx="8"/>
-  <g filter="url(#soc)">
-    
-  <!-- Cloak body -->
-  <path d="M28,42 L20,95 L80,95 L72,42 Z"
-        fill="#0d0000" stroke="#B91C1C" stroke-width="0.5"/>
-  <!-- Inner cloak shadow -->
-  <path d="M36,44 L32,95 L68,95 L64,44 Z"
-        fill="#050000" opacity="0.7"/>
-  <!-- Neck -->
-  <rect x="45" y="36" width="10" height="8" fill="#080000"/>
-  <!-- Hood outer -->
-  <ellipse cx="50" cy="31" rx="11.700000000000001" ry="9.9" fill="#0d0000" stroke="#B91C1C" stroke-width="0.6"/>
-  <!-- Hood inner shadow -->
-  <ellipse cx="50" cy="33" rx="7.6499999999999995" ry="6.3" fill="#020000"/>
-  <!-- Visor glow -->
-  <ellipse cx="50" cy="31.9" rx="4.95" ry="1.98" fill="#EF4444" opacity="0.9"/>
-  <ellipse cx="50" cy="31.9" rx="4.95" ry="1.98" fill="none" stroke="#EF4444" stroke-width="0.5" opacity="0.5"/>
-  <!-- Chest area -->
-  
-    <!-- Radar circles -->
-    <circle cx="50" cy="62" r="2" fill="#EF4444" opacity="0.8"/>
-    <circle cx="50" cy="62" r="4.5" fill="none" stroke="#EF4444" stroke-width="0.6" opacity="0.6"/>
-    <circle cx="50" cy="62" r="7" fill="none" stroke="#EF4444" stroke-width="0.5" opacity="0.4"/>
-    <!-- Radar sweep -->
-    <line x1="50" y1="62" x2="56" y2="56" stroke="#EF4444" stroke-width="0.8" opacity="0.7"/>
-    <!-- Radar blip -->
-    <circle cx="54" cy="57" r="1" fill="#FCA5A5" opacity="0.9"/>
-  <!-- Tool -->
-  
-    <!-- Eye surveillance tool -->
-    <ellipse cx="76" cy="60" rx="7" ry="4" fill="none" stroke="#EF4444" stroke-width="0.8"/>
-    <circle cx="76" cy="60" r="2.5" fill="#B91C1C" opacity="0.6"/>
-    <circle cx="76" cy="60" r="1.2" fill="#EF4444" opacity="0.9"/>
-    <line x1="76" y1="64" x2="76" y2="85" stroke="#B91C1C" stroke-width="0.9"/>
-  <!-- Extras -->
-  
-  </g>
-  <rect x="22" y="4" width="56" height="8" rx="2" fill="#1a0000" stroke="#EF4444" stroke-width="0.7"/>
-  <text x="50" y="9.8" font-family="monospace" font-size="4" fill="#EF4444" text-anchor="middle" letter-spacing="0.2">SOC ANALYST</text>
+<defs>
+  <radialGradient id="soc-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#001a08"/>
+    <stop offset="100%" stop-color="#000804"/>
+  </radialGradient>
+  <radialGradient id="soc-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#14532d"/>
+    <stop offset="100%" stop-color="#052e16"/>
+  </radialGradient>
+  <radialGradient id="soc-eye" cx="30%" cy="30%" r="65%">
+    <stop offset="0%" stop-color="#bbf7d0"/>
+    <stop offset="50%" stop-color="#16a34a"/>
+    <stop offset="100%" stop-color="#052e16"/>
+  </radialGradient>
+  <filter id="soc-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" fill="url(#soc-bg)" rx="8"/>
+<!-- Headset arc (on-call) -->
+<path d="M24,44 Q22,24 50,22 Q78,24 76,44" fill="none" stroke="#4ade80" stroke-width="1.2"/>
+<circle cx="24" cy="44" r="3" fill="#052e16" stroke="#4ade80" stroke-width="0.8"/>
+<circle cx="76" cy="44" r="3" fill="#052e16" stroke="#4ade80" stroke-width="0.8"/>
+<line x1="24" y1="44" x2="22" y2="48" stroke="#4ade80" stroke-width="0.8"/>
+<!-- Radar sweep on forehead -->
+<circle cx="50" cy="27" r="6.5" fill="#052e16" stroke="#22c55e" stroke-width="0.7"/>
+<line x1="50" y1="27" x2="55" y2="23" stroke="#4ade80" stroke-width="0.8" opacity="0.9"/>
+<circle cx="50" cy="27" r="4" fill="none" stroke="#22c55e" stroke-width="0.4" opacity="0.6"/>
+<circle cx="50" cy="27" r="2" fill="none" stroke="#22c55e" stroke-width="0.4" opacity="0.4"/>
+<!-- Vigilant round face - night-vision green -->
+<ellipse cx="50" cy="50" rx="24" ry="23" fill="url(#soc-skin)"/>
+<!-- 4 eyes (2 pairs stacked) - all alert and scanning -->
+<!-- Upper pair -->
+<g filter="url(#soc-glow)">
+  <ellipse cx="36" cy="44" rx="5.5" ry="5" fill="url(#soc-eye)"/>
+  <ellipse cx="36" cy="44" rx="2" ry="2" fill="#052e16"/>
+  <ellipse cx="36" cy="44" rx="5.5" ry="5" fill="none" stroke="#4ade80" stroke-width="0.7"/>
+  <ellipse cx="34.8" cy="42.8" rx="0.7" ry="0.7" fill="#bbf7d0" opacity="0.6"/>
+</g>
+<g filter="url(#soc-glow)">
+  <ellipse cx="64" cy="44" rx="5.5" ry="5" fill="url(#soc-eye)"/>
+  <ellipse cx="64" cy="44" rx="2" ry="2" fill="#052e16"/>
+  <ellipse cx="64" cy="44" rx="5.5" ry="5" fill="none" stroke="#4ade80" stroke-width="0.7"/>
+  <ellipse cx="62.8" cy="42.8" rx="0.7" ry="0.7" fill="#bbf7d0" opacity="0.6"/>
+</g>
+<!-- Lower pair -->
+<g filter="url(#soc-glow)">
+  <ellipse cx="36" cy="56" rx="5.5" ry="5" fill="url(#soc-eye)"/>
+  <ellipse cx="36" cy="56" rx="2" ry="2" fill="#052e16"/>
+  <ellipse cx="36" cy="56" rx="5.5" ry="5" fill="none" stroke="#4ade80" stroke-width="0.7"/>
+  <ellipse cx="34.8" cy="54.8" rx="0.7" ry="0.7" fill="#bbf7d0" opacity="0.6"/>
+</g>
+<g filter="url(#soc-glow)">
+  <ellipse cx="64" cy="56" rx="5.5" ry="5" fill="url(#soc-eye)"/>
+  <ellipse cx="64" cy="56" rx="2" ry="2" fill="#052e16"/>
+  <ellipse cx="64" cy="56" rx="5.5" ry="5" fill="none" stroke="#4ade80" stroke-width="0.7"/>
+  <ellipse cx="62.8" cy="54.8" rx="0.7" ry="0.7" fill="#bbf7d0" opacity="0.6"/>
+</g>
+<!-- Alert focused expression -->
+<path d="M40,68 L60,68" fill="none" stroke="#052e16" stroke-width="1" opacity="0.7"/>
+<!-- Nose -->
+<ellipse cx="50" cy="62" rx="2" ry="1.2" fill="#052e16" opacity="0.4"/>
+<!-- Label -->
+<rect x="22" y="88" width="56" height="8" rx="2" fill="#000804" stroke="#4ade80" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="3.8" fill="#4ade80" text-anchor="middle">SOC · ANALYST</text>
 </svg>

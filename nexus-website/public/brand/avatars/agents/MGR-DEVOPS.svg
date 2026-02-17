@@ -1,37 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <defs>
-      <radialGradient id="md-cg" cx="50%" cy="40%" r="55%">
-        <stop offset="0%" stop-color="#8B5CF6"/>
-        <stop offset="100%" stop-color="#4C1D95"/>
-      </radialGradient>
-    </defs>
-    <!-- Uplink beam -->
-    <line x1="50" y1="12" x2="50" y2="28" stroke="#7C3AED" stroke-width="1.2" opacity="0.7"/>
-    <circle cx="50" cy="10" r="2" fill="#A78BFA"/>
-    <!-- Cloud body -->
-    <ellipse cx="50" cy="52" rx="27" ry="12.5" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1.4"/>
-    <ellipse cx="37" cy="46" rx="12.5" ry="9" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1.2"/>
-    <ellipse cx="60" cy="45" rx="13" ry="9.5" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1.2"/>
-    <ellipse cx="50" cy="41" rx="9.5" ry="7" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1"/>
-    <!-- Infinity / DevOps cycle inside cloud -->
-    <!-- Left loop -->
-    <path d="M37,52 C34,48 28,48 28,52 C28,56 34,56 37,52" fill="none" stroke="#EDE9FE" stroke-width="2" stroke-linecap="round"/>
-    <!-- Right loop -->
-    <path d="M37,52 C40,56 46,56 46,52 C46,48 40,48 37,52" fill="none" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round"/>
-    <!-- Actually draw the ∞ symbol centered -->
-    <!-- Redrawn: true infinity sign centered at 50,50 -->
-    <path d="M42,50 C42,45.5 36,43 33,47 C30,51 33,55 38,53 C43,51 47,49 52,49 C57,49 62,53 59,57 C56,61 50,58 50,54" fill="none" stroke="#EDE9FE" stroke-width="2.2" stroke-linecap="round"/>
-    <path d="M42,50 C42,54.5 36,57 33,53 C30,49 33,45 38,47 C43,49 47,51 52,51 C57,51 62,47 59,43 C56,39 50,42 50,46" fill="none" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round"/>
-    <!-- Arrow tips on the loops -->
-    <polygon points="50,53.5 53,50 50,47" fill="#F59E0B" opacity="0.8"/>
-    <!-- DevOps label -->
-    <text x="50" y="66" font-family="monospace" font-size="5" fill="#DDD6FE" text-anchor="middle" font-weight="bold">DEVOPS</text>
-    <!-- Server rack -->
-    <rect x="36" y="70" width="28" height="18" rx="3" fill="#1e1b4b" stroke="#7C3AED" stroke-width="1"/>
-    <rect x="39" y="73" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
-    <rect x="39" y="78" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
-    <rect x="39" y="83" width="22" height="2" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
-    <circle cx="58" cy="74.5" r="1" fill="#22C55E"/>
-    <circle cx="58" cy="79.5" r="1" fill="#22C55E"/>
-    <circle cx="58" cy="84" r="1" fill="#F59E0B"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="mdo-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0C1008"/>
+      <stop offset="100%" stop-color="#060803"/>
+    </radialGradient>
+    <radialGradient id="mdo-skin" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#6B7A4A"/>
+      <stop offset="100%" stop-color="#3D4A26"/>
+    </radialGradient>
+    <filter id="mdo-glow">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="url(#mdo-bg)"/>
+  <!-- Pipeline tubes wrapping from antennae around head -->
+  <!-- Left pipeline tube -->
+  <path d="M36,23 Q28,16 20,20 Q12,24 14,35 Q16,46 20,50" stroke="#6B7A4A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M36,23 Q28,16 20,20 Q12,24 14,35 Q16,46 20,50" stroke="#8FA362" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Right pipeline tube -->
+  <path d="M64,23 Q72,16 80,20 Q88,24 86,35 Q84,46 80,50" stroke="#6B7A4A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M64,23 Q72,16 80,20 Q88,24 86,35 Q84,46 80,50" stroke="#8FA362" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Connector dots on pipeline -->
+  <circle cx="14" cy="35" r="2" fill="#8FA362" filter="url(#mdo-glow)"/>
+  <circle cx="86" cy="35" r="2" fill="#8FA362" filter="url(#mdo-glow)"/>
+  <!-- Rugged face -->
+  <ellipse cx="50" cy="54" rx="26" ry="29" fill="url(#mdo-skin)" stroke="#6B7A4A" stroke-width="1.8"/>
+  <!-- Left eye socket -->
+  <ellipse cx="37" cy="50" rx="8.5" ry="8" fill="#080A04" stroke="#6B7A4A" stroke-width="1.2"/>
+  <!-- Left iris - infinity loop symbol -->
+  <circle cx="37" cy="50" r="6.5" fill="#121A08"/>
+  <!-- Infinity symbol approximation -->
+  <path d="M31,50 Q33,47 36,50 Q38,52 41,50 Q38,48 36,50 Q33,53 31,50Z" fill="#8FA362" opacity="0.8"/>
+  <path d="M41,50 Q39,47 36,50 Q34,52 31,50 Q34,48 36,50 Q39,53 41,50Z" fill="#6B7A4A" opacity="0.6"/>
+  <circle cx="37" cy="50" r="1.3" fill="#A8C475" opacity="0.9"/>
+  <circle cx="37" cy="50" r="0.5" fill="#080A04"/>
+  <!-- Right eye socket -->
+  <ellipse cx="63" cy="50" rx="8.5" ry="8" fill="#080A04" stroke="#6B7A4A" stroke-width="1.2"/>
+  <!-- Right iris - infinity loop -->
+  <circle cx="63" cy="50" r="6.5" fill="#121A08"/>
+  <path d="M57,50 Q59,47 62,50 Q64,52 67,50 Q64,48 62,50 Q59,53 57,50Z" fill="#8FA362" opacity="0.8"/>
+  <path d="M67,50 Q65,47 62,50 Q60,52 57,50 Q60,48 62,50 Q65,53 67,50Z" fill="#6B7A4A" opacity="0.6"/>
+  <circle cx="63" cy="50" r="1.3" fill="#A8C475" opacity="0.9"/>
+  <circle cx="63" cy="50" r="0.5" fill="#080A04"/>
+  <!-- Tough expression -->
+  <path d="M38,67 Q50,65 62,67" stroke="#3D4A26" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Rugged brow -->
+  <line x1="29" y1="42" x2="45" y2="44" stroke="#2A3018" stroke-width="3" stroke-linecap="round"/>
+  <line x1="55" y1="44" x2="71" y2="42" stroke="#2A3018" stroke-width="3" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="60" rx="2.2" ry="1.4" fill="#3D4A26" opacity="0.6"/>
+  <!-- Jaw scar/mark -->
+  <line x1="42" y1="73" x2="46" y2="76" stroke="#3D4A26" stroke-width="1.5" opacity="0.6"/>
+</svg>

@@ -1,28 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <defs>
-      <linearGradient id="at-sg" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#4ADE80"/>
-        <stop offset="100%" stop-color="#14532D"/>
-      </linearGradient>
-    </defs>
-    <!-- Shield -->
-    <path d="M50,15 L70,23 L70,51 Q70,67 50,79 Q30,67 30,51 L30,23 Z" fill="url(#at-sg)" stroke="#22C55E" stroke-width="1.7"/>
-    <!-- Orange accent ring around accessibility symbol -->
-    <circle cx="50" cy="50" r="20" fill="#052e16" stroke="#F97316" stroke-width="1.5" opacity="0.9"/>
-    <!-- Universal accessibility icon (person in circle with extending arms) -->
-    <!-- Person head -->
-    <circle cx="50" cy="35" r="4" fill="#F97316"/>
-    <!-- Person body -->
-    <line x1="50" y1="39" x2="50" y2="55" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Extended arms (universal access style) -->
-    <line x1="50" y1="43" x2="35" y2="39" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="50" y1="43" x2="65" y2="39" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Legs -->
-    <line x1="50" y1="55" x2="41" y2="65" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="50" y1="55" x2="59" y2="65" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Outer accessibility circle ring -->
-    <circle cx="50" cy="50" r="18" fill="none" stroke="#F97316" stroke-width="1.2" opacity="0.6"/>
-    <!-- A11Y tag -->
-    <rect x="27" y="82" width="46" height="9" rx="3" fill="#052e16" stroke="#F97316" stroke-width="0.9"/>
-    <text x="50" y="88.5" font-family="monospace" font-size="5" fill="#F97316" text-anchor="middle" font-weight="bold">A11Y-TEST</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="a11y-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#001a20"/>
+    <stop offset="100%" stop-color="#000a10"/>
+  </radialGradient>
+  <radialGradient id="a11y-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#bfdbfe"/>
+    <stop offset="100%" stop-color="#7dd3fc"/>
+  </radialGradient>
+  <radialGradient id="a11y-eye" cx="30%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="50%" stop-color="#60a5fa"/>
+    <stop offset="100%" stop-color="#1e3a5f"/>
+  </radialGradient>
+  <filter id="a11y-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" fill="url(#a11y-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="43" y="70" width="14" height="8" rx="3" fill="#7dd3fc"/>
+<!-- Open kind face -->
+<ellipse cx="50" cy="46" rx="24" ry="25" fill="url(#a11y-skin)"/>
+<!-- Universal access symbol on forehead -->
+<circle cx="50" cy="26" r="5.5" fill="none" stroke="#1d4ed8" stroke-width="1"/>
+<circle cx="50" cy="23" r="1.5" fill="#1d4ed8"/>
+<!-- Person body in symbol -->
+<line x1="50" y1="24.5" x2="50" y2="29" stroke="#1d4ed8" stroke-width="1.2"/>
+<line x1="47" y1="26.5" x2="53" y2="26.5" stroke="#1d4ed8" stroke-width="1"/>
+<line x1="50" y1="29" x2="47.5" y2="32" stroke="#1d4ed8" stroke-width="1"/>
+<line x1="50" y1="29" x2="52.5" y2="32" stroke="#1d4ed8" stroke-width="1"/>
+<!-- Left eye - magnifying circle (accessibility check) -->
+<g filter="url(#a11y-glow)">
+  <ellipse cx="36" cy="45" rx="7.5" ry="7.5" fill="url(#a11y-eye)"/>
+  <!-- Magnifying ring -->
+  <circle cx="36" cy="44" r="4" fill="none" stroke="#1e40af" stroke-width="1.2"/>
+  <line x1="39" y1="47" x2="42" y2="50" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+  <ellipse cx="36" cy="45" rx="7.5" ry="7.5" fill="none" stroke="#60a5fa" stroke-width="0.7"/>
+  <ellipse cx="34.5" cy="43" rx="0.8" ry="0.8" fill="#ffffff" opacity="0.6"/>
+</g>
+<!-- Right eye - magnifying circle -->
+<g filter="url(#a11y-glow)">
+  <ellipse cx="64" cy="45" rx="7.5" ry="7.5" fill="url(#a11y-eye)"/>
+  <circle cx="64" cy="44" r="4" fill="none" stroke="#1e40af" stroke-width="1.2"/>
+  <line x1="67" y1="47" x2="70" y2="50" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+  <ellipse cx="64" cy="45" rx="7.5" ry="7.5" fill="none" stroke="#60a5fa" stroke-width="0.7"/>
+  <ellipse cx="62.5" cy="43" rx="0.8" ry="0.8" fill="#ffffff" opacity="0.6"/>
+</g>
+<!-- Extra expressive brow lines (warm expression) -->
+<path d="M28,37 Q36,34 44,37" fill="none" stroke="#1e40af" stroke-width="0.8" opacity="0.5"/>
+<path d="M56,37 Q64,34 72,37" fill="none" stroke="#1e40af" stroke-width="0.8" opacity="0.5"/>
+<!-- Friendly open mouth -->
+<path d="M40,64 Q50,70 60,64" fill="none" stroke="#1e40af" stroke-width="1.2" opacity="0.7"/>
+<!-- Slight nose -->
+<ellipse cx="50" cy="57" rx="2" ry="1.2" fill="#5b8fa8" opacity="0.4"/>
+<!-- Label -->
+<rect x="22" y="88" width="56" height="8" rx="2" fill="#000a10" stroke="#60a5fa" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="3.8" fill="#60a5fa" text-anchor="middle">A11Y · TEST</text>
+</svg>

@@ -1,38 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#1a1f3a"/>
+  <radialGradient id="sm-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1a000e"/>
     <stop offset="100%" stop-color="#030108"/>
   </radialGradient>
+  <radialGradient id="sm-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FF70B0"/>
+    <stop offset="55%" stop-color="#CC2080"/>
+    <stop offset="100%" stop-color="#600040"/>
+  </radialGradient>
+  <radialGradient id="sm-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="40%" stop-color="#FF80C0"/>
+    <stop offset="100%" stop-color="#300020"/>
+  </radialGradient>
+  <filter id="sm-glow">
+    <feGaussianBlur stdDeviation="1.4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<path d="M20,41.6 Q8.799999999999999,50 20,58.4"
-      fill="none" stroke="#A855F7" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
-  <path d="M20,35.6 Q0.7999999999999972,50 20,64.4"
-      fill="none" stroke="#A855F7" stroke-width="1.4000000000000001" opacity="0.45000000000000007" stroke-linecap="round"/>
-  <path d="M20,29.6 Q-7.200000000000003,50 20,70.4"
-      fill="none" stroke="#A855F7" stroke-width="1.2000000000000002" opacity="0.35000000000000003" stroke-linecap="round"/>
-  
-  <!-- megaphone bell -->
-  <path d="M20,26.0 L55,40 L55,60 L20,74.0 Z"
-        fill="#0f0a1f" stroke="#A855F7" stroke-width="2"/>
-  <!-- body/barrel -->
-  <rect x="55" y="40" width="23" height="20" rx="3"
-        fill="#0f0a1f" stroke="#A855F7" stroke-width="1.5"/>
-  <!-- speaker ring on body -->
-  <circle cx="78" cy="50" r="5" fill="#0f0a1f" stroke="#A855F7" stroke-width="1.5"/>
-  <circle cx="78" cy="50" r="2.5" fill="#A855F7" opacity="0.8"/>
-  <circle cx="36" cy="50" r="8" fill="#0f0a1f" stroke="#A855F7" stroke-width="1.3"/>
-  <!-- heart -->
-  <path d="M36,53 Q33,49 36,46 Q39,43 36,48 Q33,43 36,46 Q39,49 36,53"
-        fill="#A855F7" opacity="0.95"/>
-  <path d="M33,47 Q30,43.5 33,47 Q36,43.5 33,47" fill="#A855F7" opacity="0.95"/>
-  <!-- heart shape, cleaner -->
-  <path d="M36,54 L30,49 Q28,44 33,44 Q36,44 36,47 Q36,44 39,44 Q44,44 42,49 Z"
-        fill="#A855F7" opacity="0.9"/>
-  <!-- share dots -->
-  <circle cx="44" cy="46" r="1.5" fill="#A855F7" opacity="0.7"/>
-  <circle cx="44" cy="54" r="1.5" fill="#A855F7" opacity="0.7"/>
-  <line x1="37" y1="49" x2="43.5" y2="46.5" stroke="#A855F7" stroke-width="0.9" opacity="0.6"/>
-  <line x1="37" y1="51" x2="43.5" y2="53.5" stroke="#A855F7" stroke-width="0.9" opacity="0.6"/>
+<rect width="100" height="100" rx="18" fill="url(#sm-bg)"/>
+<!-- notification bell antenna -->
+<line x1="50" y1="26" x2="50" y2="10" stroke="#FF70B0" stroke-width="2" stroke-linecap="round"/>
+<path d="M44,8 Q50,4 56,8 L56,13 Q50,10 44,13 Z" fill="#FF70B0" filter="url(#sm-glow)"/>
+<circle cx="50" cy="14" r="1.5" fill="#FFD700"/>
+<!-- side antennae trending outward -->
+<line x1="38" y1="29" x2="28" y2="16" stroke="#CC2080" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="28" cy="15" r="2" fill="#CC2080" filter="url(#sm-glow)"/>
+<line x1="62" y1="29" x2="72" y2="16" stroke="#CC2080" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="72" cy="15" r="2" fill="#CC2080" filter="url(#sm-glow)"/>
+<!-- trendy face -->
+<ellipse cx="50" cy="55" rx="25" ry="26" fill="url(#sm-skin)" stroke="#CC2080" stroke-width="1.3"/>
+<!-- brow ridges -->
+<path d="M30,44 Q38,39 44,42" fill="none" stroke="#600040" stroke-width="1.9" stroke-linecap="round"/>
+<path d="M56,42 Q63,39 71,44" fill="none" stroke="#600040" stroke-width="1.9" stroke-linecap="round"/>
+<!-- eyes with hashtag iris -->
+<circle cx="39" cy="50" r="6.5" fill="#300020" stroke="#FF70B0" stroke-width="1.2"/>
+<circle cx="61" cy="50" r="6.5" fill="#300020" stroke="#FF70B0" stroke-width="1.2"/>
+<circle cx="39" cy="50" r="5" fill="url(#sm-eye)"/>
+<circle cx="61" cy="50" r="5" fill="url(#sm-eye)"/>
+<!-- hashtag in iris -->
+<line x1="37" y1="47" x2="37" y2="53" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="41" y1="47" x2="41" y2="53" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="35.5" y1="49" x2="42.5" y2="49" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="35.5" y1="51" x2="42.5" y2="51" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="59" y1="47" x2="59" y2="53" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="63" y1="47" x2="63" y2="53" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="57.5" y1="49" x2="64.5" y2="49" stroke="#CC2080" stroke-width="0.8"/>
+<line x1="57.5" y1="51" x2="64.5" y2="51" stroke="#CC2080" stroke-width="0.8"/>
+<circle cx="37" cy="47" r="0.9" fill="white" opacity="0.9"/>
+<circle cx="59" cy="47" r="0.9" fill="white" opacity="0.9"/>
+<!-- perpetually online expression -->
+<path d="M34,67 Q50,78 66,67" fill="#600040" stroke="#CC2080" stroke-width="1.2"/>
+<path d="M34,67 Q50,73 66,67" fill="white" opacity="0.9"/>
+<path d="M41,67 L41,72" stroke="#CC2080" stroke-width="0.6" opacity="0.5"/>
+<path d="M50,67 L50,73" stroke="#CC2080" stroke-width="0.6" opacity="0.5"/>
+<path d="M59,67 L59,72" stroke="#CC2080" stroke-width="0.6" opacity="0.5"/>
+<!-- notification dot -->
+<circle cx="72" cy="50" r="3" fill="#FF0040" opacity="0.9"/>
+<text x="70.5" y="52" font-size="4" fill="white" font-family="sans-serif" font-weight="bold">1</text>
 </svg>

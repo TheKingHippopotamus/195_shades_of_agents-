@@ -1,36 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <defs>
-      <linearGradient id="mq-sg" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#4ADE80"/>
-        <stop offset="100%" stop-color="#14532D"/>
-      </linearGradient>
-    </defs>
-    <!-- Shield (large, management) -->
-    <path d="M50,14 L70,22 L70,50 Q70,66 50,78 Q30,66 30,50 L30,22 Z" fill="url(#mq-sg)" stroke="#22C55E" stroke-width="1.8"/>
-    <!-- Inner shield -->
-    <path d="M50,19 L65,26 L65,50 Q65,62 50,72 Q35,62 35,50 L35,26 Z" fill="none" stroke="#86EFAC" stroke-width="0.7" opacity="0.4"/>
-    <!-- Clipboard inside shield -->
-    <!-- Clipboard board -->
-    <rect x="39" y="30" width="22" height="30" rx="2" fill="#052e16" stroke="#86EFAC" stroke-width="0.8"/>
-    <!-- Clipboard clip top -->
-    <rect x="45" y="27" width="10" height="5" rx="2" fill="#166534" stroke="#86EFAC" stroke-width="0.7"/>
-    <rect x="47" y="28.5" width="6" height="3" rx="1" fill="#052e16" stroke="#86EFAC" stroke-width="0.5"/>
-    <!-- Checklist items -->
-    <!-- Item 1: checked -->
-    <rect x="42" y="35" width="4" height="4" rx="0.8" fill="none" stroke="#86EFAC" stroke-width="0.8"/>
-    <polyline points="43,37 44.5,38.5 47,36" fill="none" stroke="#4ADE80" stroke-width="1.2" stroke-linecap="round"/>
-    <line x1="48" y1="37" x2="58" y2="37" stroke="#86EFAC" stroke-width="0.7"/>
-    <!-- Item 2: checked -->
-    <rect x="42" y="41" width="4" height="4" rx="0.8" fill="none" stroke="#86EFAC" stroke-width="0.8"/>
-    <polyline points="43,43 44.5,44.5 47,42" fill="none" stroke="#4ADE80" stroke-width="1.2" stroke-linecap="round"/>
-    <line x1="48" y1="43" x2="58" y2="43" stroke="#86EFAC" stroke-width="0.7"/>
-    <!-- Item 3: in progress -->
-    <rect x="42" y="47" width="4" height="4" rx="0.8" fill="none" stroke="#F59E0B" stroke-width="0.8"/>
-    <line x1="48" y1="49" x2="55" y2="49" stroke="#86EFAC" stroke-width="0.7"/>
-    <!-- Item 4: empty -->
-    <rect x="42" y="53" width="4" height="4" rx="0.8" fill="none" stroke="#6B7280" stroke-width="0.8"/>
-    <line x1="48" y1="55" x2="53" y2="55" stroke="#4B5563" stroke-width="0.7"/>
-    <!-- Management diamond badge -->
-    <polygon points="74,18 78,22 74,26 70,22" fill="#A78BFA" stroke="#7C3AED" stroke-width="0.5"/>
-    <text x="50" y="87" font-family="monospace" font-size="4.5" fill="#86EFAC" text-anchor="middle" font-weight="bold">MGR-QA</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="qa-mgr-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#180d00"/>
+    <stop offset="100%" stop-color="#070400"/>
+  </radialGradient>
+  <radialGradient id="qa-mgr-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#d97706"/>
+    <stop offset="100%" stop-color="#92400e"/>
+  </radialGradient>
+  <radialGradient id="qa-mgr-eye" cx="35%" cy="35%" r="60%">
+    <stop offset="0%" stop-color="#fde68a"/>
+    <stop offset="55%" stop-color="#d97706"/>
+    <stop offset="100%" stop-color="#1a0800"/>
+  </radialGradient>
+  <filter id="qa-mgr-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<!-- Background -->
+<rect width="100" height="100" fill="url(#qa-mgr-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="43" y="70" width="14" height="9" rx="3" fill="#92400e"/>
+<!-- Wide face -->
+<ellipse cx="50" cy="46" rx="28" ry="22" fill="url(#qa-mgr-skin)"/>
+<!-- 3 eyes in horizontal row (left, center, right) -->
+<!-- Left eye -->
+<g filter="url(#qa-mgr-glow)">
+  <ellipse cx="32" cy="46" rx="5.5" ry="5.5" fill="url(#qa-mgr-eye)"/>
+  <ellipse cx="32" cy="46" rx="2" ry="2" fill="#7c2d12"/>
+  <ellipse cx="32" cy="46" rx="5.5" ry="5.5" fill="none" stroke="#fbbf24" stroke-width="0.8"/>
+  <ellipse cx="30.8" cy="44.8" rx="0.8" ry="0.8" fill="#ffffff" opacity="0.6"/>
+</g>
+<!-- Center eye -->
+<g filter="url(#qa-mgr-glow)">
+  <ellipse cx="50" cy="46" rx="5.5" ry="5.5" fill="url(#qa-mgr-eye)"/>
+  <ellipse cx="50" cy="46" rx="2" ry="2" fill="#7c2d12"/>
+  <ellipse cx="50" cy="46" rx="5.5" ry="5.5" fill="none" stroke="#fbbf24" stroke-width="0.8"/>
+  <ellipse cx="48.8" cy="44.8" rx="0.8" ry="0.8" fill="#ffffff" opacity="0.6"/>
+</g>
+<!-- Right eye -->
+<g filter="url(#qa-mgr-glow)">
+  <ellipse cx="68" cy="46" rx="5.5" ry="5.5" fill="url(#qa-mgr-eye)"/>
+  <ellipse cx="68" cy="46" rx="2" ry="2" fill="#7c2d12"/>
+  <ellipse cx="68" cy="46" rx="5.5" ry="5.5" fill="none" stroke="#fbbf24" stroke-width="0.8"/>
+  <ellipse cx="66.8" cy="44.8" rx="0.8" ry="0.8" fill="#ffffff" opacity="0.6"/>
+</g>
+<!-- Checklist marks on cheeks -->
+<!-- Left cheek -->
+<text x="22" y="52" font-family="monospace" font-size="5" fill="#fbbf24" opacity="0.6">v</text>
+<text x="22" y="57" font-family="monospace" font-size="5" fill="#fbbf24" opacity="0.4">v</text>
+<!-- Right cheek -->
+<text x="73" y="52" font-family="monospace" font-size="5" fill="#fbbf24" opacity="0.6">v</text>
+<text x="73" y="57" font-family="monospace" font-size="5" fill="#fbbf24" opacity="0.4">v</text>
+<!-- Methodical flat mouth -->
+<path d="M40,62 L60,62" fill="none" stroke="#78350f" stroke-width="1.2" opacity="0.8"/>
+<!-- Subtle nose -->
+<ellipse cx="50" cy="56" rx="2" ry="1.2" fill="#78350f" opacity="0.4"/>
+<!-- Label -->
+<rect x="28" y="88" width="44" height="8" rx="2" fill="#1a0800" stroke="#fbbf24" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="4" fill="#fbbf24" text-anchor="middle">MGR · QA</text>
+</svg>

@@ -1,36 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<rect width="100" height="100" rx="16" fill="url(#bg)"/>
 
 <defs>
-  <linearGradient id="sec-gate" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#991B1B"/></linearGradient>
-  <filter id="sec-glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <radialGradient id="sec-skin" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#1a0505"/><stop offset="100%" stop-color="#050000"/></radialGradient>
+  <radialGradient id="sec-iris" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff4444"/><stop offset="40%" stop-color="#8b0000"/><stop offset="100%" stop-color="#000"/></radialGradient>
+  <filter id="sec-glow"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<!-- hexagonal portal frame -->
-<path d="M50,10 L75,25 L75,55 L50,70 L25,55 L25,25 Z" fill="#0A0000" stroke="#EF4444" stroke-width="2.5"/>
-<path d="M50,7 L78,23 L78,57 L50,73 L22,57 L22,23 Z" fill="none" stroke="#EF4444" stroke-width="0.8" opacity="0.25"/>
-<!-- gate bars: red accent -->
-<rect x="32" y="25" width="5" height="30" rx="1.5" fill="url(#sec-gate)" opacity="0.9"/>
-<rect x="41" y="25" width="5" height="30" rx="1.5" fill="url(#sec-gate)" opacity="0.9"/>
-<rect x="54" y="25" width="5" height="30" rx="1.5" fill="url(#sec-gate)" opacity="0.9"/>
-<rect x="63" y="25" width="5" height="30" rx="1.5" fill="url(#sec-gate)" opacity="0.9"/>
-<rect x="30" y="24" width="40" height="4" rx="1" fill="#EF4444" opacity="0.8"/>
-<rect x="30" y="52" width="40" height="4" rx="1" fill="#EF4444" opacity="0.8"/>
-<!-- center lock: magnifying glass -->
-<circle cx="50" cy="40" r="9" fill="#0A0000" stroke="#EF4444" stroke-width="1.5" filter="url(#sec-glow)"/>
-<!-- magnifying glass circle -->
-<circle cx="48" cy="38" r="5" fill="none" stroke="#EF4444" stroke-width="1.5"/>
-<circle cx="48" cy="38" r="3" fill="#1A0000" stroke="#F87171" stroke-width="0.6" opacity="0.5"/>
-<!-- lens cross-hairs -->
-<line x1="48" y1="35" x2="48" y2="41" stroke="#EF4444" stroke-width="0.5" opacity="0.6"/>
-<line x1="45" y1="38" x2="51" y2="38" stroke="#EF4444" stroke-width="0.5" opacity="0.6"/>
-<!-- handle -->
-<line x1="51.5" y1="42" x2="56" y2="47" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
-<!-- alert triangle on glass -->
-<polygon points="48,35.5 46.5,38.5 49.5,38.5" fill="#F87171" opacity="0.9"/>
+<!-- void-black head -->
+<ellipse cx="50" cy="48" rx="27" ry="31" fill="url(#sec-skin)" stroke="#ff0000" stroke-width="0.5" opacity="0.6"/>
+<!-- scanning grid across entire face -->
+<line x1="25" y1="30" x2="75" y2="30" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="25" y1="40" x2="75" y2="40" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="25" y1="50" x2="75" y2="50" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="25" y1="60" x2="75" y2="60" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="25" y1="70" x2="75" y2="70" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="35" y1="20" x2="35" y2="78" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="50" y1="18" x2="50" y2="80" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<line x1="65" y1="20" x2="65" y2="78" stroke="#ff0000" stroke-width="0.4" opacity="0.2"/>
+<!-- left eye — spider-web iris -->
+<ellipse cx="37" cy="45" rx="9" ry="7" fill="#050000" stroke="#ff4444" stroke-width="1.5" filter="url(#sec-glow)"/>
+<ellipse cx="37" cy="45" rx="7" ry="5.5" fill="url(#sec-iris)"/>
+<!-- web pattern -->
+<circle cx="37" cy="45" r="5.5" fill="none" stroke="#ff0000" stroke-width="0.5" opacity="0.5"/>
+<circle cx="37" cy="45" r="3" fill="none" stroke="#ff0000" stroke-width="0.4" opacity="0.6"/>
+<line x1="33" y1="41" x2="41" y2="49" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<line x1="41" y1="41" x2="33" y2="49" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<line x1="37" y1="39.5" x2="37" y2="50.5" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<line x1="31.5" y1="45" x2="42.5" y2="45" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<circle cx="37" cy="45" r="1.8" fill="#050000"/>
+<circle cx="36" cy="44" r="0.6" fill="#ff4444" opacity="0.9"/>
+<!-- right eye -->
+<ellipse cx="63" cy="45" rx="9" ry="7" fill="#050000" stroke="#ff4444" stroke-width="1.5" filter="url(#sec-glow)"/>
+<ellipse cx="63" cy="45" rx="7" ry="5.5" fill="url(#sec-iris)"/>
+<circle cx="63" cy="45" r="5.5" fill="none" stroke="#ff0000" stroke-width="0.5" opacity="0.5"/>
+<circle cx="63" cy="45" r="3" fill="none" stroke="#ff0000" stroke-width="0.4" opacity="0.6"/>
+<line x1="59" y1="41" x2="67" y2="49" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<line x1="67" y1="41" x2="59" y2="49" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<line x1="63" y1="39.5" x2="63" y2="50.5" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<line x1="57.5" y1="45" x2="68.5" y2="45" stroke="#ff0000" stroke-width="0.4" opacity="0.7"/>
+<circle cx="63" cy="45" r="1.8" fill="#050000"/>
+<circle cx="62" cy="44" r="0.6" fill="#ff4444" opacity="0.9"/>
+<!-- vigilant flat brows -->
+<line x1="28" y1="36" x2="46" y2="37" stroke="#ff4444" stroke-width="2" opacity="0.8"/>
+<line x1="54" y1="37" x2="72" y2="36" stroke="#ff4444" stroke-width="2" opacity="0.8"/>
+<!-- nose -->
+<path d="M48,53 Q50,57 52,53" fill="none" stroke="#ff4444" stroke-width="0.8" opacity="0.5"/>
+<!-- thin alert mouth -->
+<line x1="40" y1="65" x2="60" y2="65" stroke="#ff4444" stroke-width="1.2" opacity="0.7"/>
+<!-- scan beam indicator -->
+<rect x="24" y="43" width="4" height="2" rx="1" fill="#ff4444" opacity="0.8"/>
+<rect x="72" y="43" width="4" height="2" rx="1" fill="#ff4444" opacity="0.8"/>
 <!-- label -->
-<text x="50" y="87" font-size="4.5" fill="#EF4444" font-family="monospace" font-weight="bold" text-anchor="middle">SEC-REVIEW</text>
-<ellipse cx="50" cy="78" rx="20" ry="2.5" fill="rgba(239,68,68,0.2)"/>
+<text x="50" y="91" text-anchor="middle" font-family="monospace" font-size="3.5" fill="#ff4444" opacity="0.9">SEC-REVIEW</text>
+
 </svg>

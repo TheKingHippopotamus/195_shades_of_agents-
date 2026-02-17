@@ -1,6 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/><ellipse cx="14" cy="63" rx="18" ry="9" fill="none" stroke="#8B5CF6" stroke-width="1.8"/><ellipse cx="14" cy="63" rx="10.799999999999999" ry="5.3999999999999995" fill="none" stroke="#8B5CF6" stroke-width="0.8" opacity="0.5"/><line x1="14" y1="63" x2="22" y2="76" stroke="#8B5CF6" stroke-width="2"/><line x1="22" y1="76" x2="14" y2="76" stroke="#8B5CF6" stroke-width="1.5"/><line x1="22" y1="76" x2="30" y2="76" stroke="#8B5CF6" stroke-width="1.5"/><path d="M26.6,60 Q36,53 42,48" stroke="#8B5CF6" stroke-width="1" fill="none" opacity="0.5" stroke-dasharray="2,2"/><path d="M23,58 Q34,50 40,43" stroke="#8B5CF6" stroke-width="0.8" fill="none" opacity="0.35" stroke-dasharray="1.5,2.5"/><circle cx="34" cy="46" r="14" fill="#1a0a2e" stroke="#8B5CF6" stroke-width="1.5"/><ellipse cx="34" cy="46" rx="7" ry="14" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/><line x1="20" y1="46" x2="48" y2="46" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/><ellipse cx="34" cy="46" rx="14" ry="5.6000000000000005" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.35"/><circle cx="62" cy="32" r="14" fill="#1a0a2e" stroke="#8B5CF6" stroke-width="1.5"/>
-       <ellipse cx="62" cy="32" rx="7" ry="14" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/>
-       <line x1="48" y1="32" x2="76" y2="32" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/><path d="M10,62 L16,58 L16,70 L10,66 Z" fill="none" stroke="#8B5CF6" stroke-width="1.2"/>
-       <path d="M16,58 Q24,54 26,64 Q24,74 16,70" stroke="#8B5CF6" stroke-width="1" fill="rgba(139,92,246,0.2)"/>
-       <line x1="6" y1="61" x2="10" y2="62" stroke="#8B5CF6" stroke-width="1"/>
-       <line x1="6" y1="65" x2="10" y2="64.5" stroke="#8B5CF6" stroke-width="1"/><rect x="6" y="80" width="32" height="7" rx="2" fill="#8B5CF6" opacity="0.2" stroke="#8B5CF6" stroke-width="0.5"/><text x="22" y="85.5" text-anchor="middle" font-family="monospace" font-size="4" fill="#8B5CF6" opacity="0.9">SR-DEV-ADV</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Electric orange head — engaging, speaker presence -->
+  <ellipse cx="50" cy="46" rx="26" ry="27" fill="#170900" stroke="#fb923c" stroke-width="1.5"/>
+  <!-- Microphone antenna on top right -->
+  <line x1="65" y1="19" x2="65" y2="10" stroke="#fb923c" stroke-width="1.5"/>
+  <ellipse cx="65" cy="8" rx="4" ry="5" fill="none" stroke="#fb923c" stroke-width="1.2"/>
+  <line x1="62" y1="13" x2="68" y2="13" stroke="#fb923c" stroke-width="0.7" opacity="0.6"/>
+  <!-- Signal waves from mic -->
+  <path d="M70,9 Q74,9 74,8 Q74,7 70,7" stroke="#fb923c" stroke-width="0.7" fill="none" opacity="0.6"/>
+  <path d="M71,11 Q76,11 76,9 Q76,7 71,7" stroke="#fb923c" stroke-width="0.5" fill="none" opacity="0.4"/>
+  <!-- Brow: confident raised -->
+  <path d="M24,38 Q36,32 50,34 Q64,32 76,38" fill="none" stroke="#fb923c" stroke-width="1.1"/>
+  <!-- Left eye: talk/presentation-bubble iris -->
+  <ellipse cx="35" cy="48" rx="8.5" ry="7" fill="#100500" stroke="#fb923c" stroke-width="1.2"/>
+  <!-- Speech bubble shape in iris -->
+  <rect x="28" y="44" width="14" height="8" rx="3" fill="none" stroke="#fb923c" stroke-width="0.8"/>
+  <path d="M32,52 L30,55 L35,52" fill="none" stroke="#fb923c" stroke-width="0.7"/>
+  <circle cx="32" cy="48" r="0.8" fill="#fb923c" opacity="0.8"/>
+  <circle cx="35" cy="48" r="0.8" fill="#fb923c" opacity="0.8"/>
+  <circle cx="38" cy="48" r="0.8" fill="#fb923c" opacity="0.8"/>
+  <!-- Right eye: talk-bubble iris -->
+  <ellipse cx="65" cy="48" rx="8.5" ry="7" fill="#100500" stroke="#fb923c" stroke-width="1.2"/>
+  <rect x="58" y="44" width="14" height="8" rx="3" fill="none" stroke="#fb923c" stroke-width="0.8"/>
+  <path d="M62,52 L60,55 L65,52" fill="none" stroke="#fb923c" stroke-width="0.7"/>
+  <circle cx="62" cy="48" r="0.8" fill="#fb923c" opacity="0.8"/>
+  <circle cx="65" cy="48" r="0.8" fill="#fb923c" opacity="0.8"/>
+  <circle cx="68" cy="48" r="0.8" fill="#fb923c" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M47,56 Q50,61 53,56" stroke="#fb923c" stroke-width="0.8" fill="none" opacity="0.6"/>
+  <!-- Mouth: presenting wide smile -->
+  <path d="M36,66 Q50,74 64,66" stroke="#fb923c" stroke-width="1.4" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="3.5" fill="#fb923c" opacity="0.9">SR-DEV-ADV</text>
+</svg>

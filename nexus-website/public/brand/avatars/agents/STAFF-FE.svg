@@ -1,37 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <!-- Antenna -->
-    <line x1="50" y1="22" x2="50" y2="10" stroke="#00FF88" stroke-width="1.5"/>
-    <circle cx="50" cy="9" r="2" fill="#00FF88"/>
-
-    <!-- Rect head -->
-    <rect x="22" y="22" width="56" height="54" rx="4" fill="#071410" stroke="#00D9FF" stroke-width="2"/>
-
-    <!-- Display: layered frontend bars (HTML/CSS/JS) -->
-    <rect x="27" y="27" width="46" height="36" rx="2" fill="#030D08" stroke="#00D9FF" stroke-width="1"/>
-    <!-- HTML layer -->
-    <rect x="30" y="30" width="40" height="9" rx="2" fill="#0F2010" stroke="#FF6B35" stroke-width="1.2"/>
-    <text x="39" y="36.5" text-anchor="middle" fill="#FF6B35" font-size="5" font-family="monospace" font-weight="bold">HTML</text>
-    <text x="62" y="36.5" text-anchor="middle" fill="#FF6B35" font-size="4" font-family="monospace" opacity="0.6">&lt;/&gt;</text>
-    <!-- CSS layer -->
-    <rect x="30" y="41" width="40" height="9" rx="2" fill="#0F2018" stroke="#7C3AED" stroke-width="1.2"/>
-    <text x="38" y="47.5" text-anchor="middle" fill="#7C3AED" font-size="5" font-family="monospace" font-weight="bold">CSS</text>
-    <text x="62" y="47.5" text-anchor="middle" fill="#7C3AED" font-size="4" font-family="monospace" opacity="0.6">{}</text>
-    <!-- JS layer -->
-    <rect x="30" y="52" width="40" height="9" rx="2" fill="#101F0A" stroke="#22C55E" stroke-width="1.2"/>
-    <text x="35" y="58.5" text-anchor="middle" fill="#22C55E" font-size="5" font-family="monospace" font-weight="bold">JS</text>
-    <text x="62" y="58.5" text-anchor="middle" fill="#22C55E" font-size="4" font-family="monospace" opacity="0.6">()</text>
-
-    <!-- Label -->
-    <rect x="27" y="66" width="46" height="7" rx="2" fill="#00FF88" opacity="0.12" stroke="#00FF88" stroke-width="0.8"/>
-    <text x="50" y="71.5" text-anchor="middle" fill="#00FF88" font-size="4.5" font-family="monospace">STAFF FE</text>
-
-    <!-- Side ports -->
-    <rect x="16" y="42" width="6" height="4" rx="1" fill="#030108" stroke="#00D9FF" stroke-width="0.8"/>
-    <rect x="78" y="42" width="6" height="4" rx="1" fill="#030108" stroke="#00D9FF" stroke-width="0.8"/>
-
-    <!-- Bottom traces -->
-    <path d="M34,76 V84 H42 V80" stroke="#00FF88" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <circle cx="42" cy="80" r="1.2" fill="#00FF88" opacity="0.7"/>
-    <path d="M66,76 V82 H58 V78" stroke="#00FF88" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <circle cx="58" cy="78" r="1.2" fill="#00FF88" opacity="0.7"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-staff-fe" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1a30"/>
+      <stop offset="100%" stop-color="#040c18"/>
+    </radialGradient>
+    <radialGradient id="face-staff-fe" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#1E88E5"/>
+      <stop offset="60%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#0d3d7a"/>
+    </radialGradient>
+    <filter id="glow-staff-fe">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-staff-fe)" rx="12"/>
+  <!-- Short bouncy antennae -->
+  <path d="M38,24 C36,18 34,15 36,12" stroke="#64B5F6" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="36" cy="12" r="2.5" fill="#64B5F6" filter="url(#glow-staff-fe)"/>
+  <path d="M62,24 C64,18 66,15 64,12" stroke="#64B5F6" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="64" cy="12" r="2.5" fill="#64B5F6" filter="url(#glow-staff-fe)"/>
+  <!-- Friendly oval face -->
+  <ellipse cx="50" cy="56" rx="31" ry="32" fill="url(#face-staff-fe)" stroke="#42A5F5" stroke-width="1.5"/>
+  <!-- Raised curious brows -->
+  <path d="M24,44 Q34,39 44,43" stroke="#0d3d7a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M56,43 Q66,39 76,44" stroke="#0d3d7a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Wide curious eyes -->
+  <circle cx="35" cy="52" r="10" fill="#081d3a" stroke="#42A5F5" stroke-width="1.3"/>
+  <circle cx="65" cy="52" r="10" fill="#081d3a" stroke="#42A5F5" stroke-width="1.3"/>
+  <!-- Box-model iris: nested boxes -->
+  <rect x="27" y="44" width="16" height="16" rx="1" fill="none" stroke="#64B5F6" stroke-width="0.8" opacity="0.8"/>
+  <rect x="30" y="47" width="10" height="10" rx="1" fill="#0d2860" stroke="#64B5F6" stroke-width="0.6" opacity="0.7"/>
+  <rect x="32.5" y="49.5" width="5" height="5" rx="0.5" fill="#1565C0" stroke="#64B5F6" stroke-width="0.5" opacity="0.9"/>
+  <rect x="57" y="44" width="16" height="16" rx="1" fill="none" stroke="#64B5F6" stroke-width="0.8" opacity="0.8"/>
+  <rect x="60" y="47" width="10" height="10" rx="1" fill="#0d2860" stroke="#64B5F6" stroke-width="0.6" opacity="0.7"/>
+  <rect x="62.5" y="49.5" width="5" height="5" rx="0.5" fill="#1565C0" stroke="#64B5F6" stroke-width="0.5" opacity="0.9"/>
+  <!-- Pupils -->
+  <circle cx="35" cy="52" r="2.5" fill="#020c1a"/>
+  <circle cx="65" cy="52" r="2.5" fill="#020c1a"/>
+  <circle cx="36.2" cy="50.8" r="1.1" fill="#ffffff" opacity="0.8"/>
+  <circle cx="66.2" cy="50.8" r="1.1" fill="#ffffff" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M46,62 Q50,66 54,62" stroke="#1E88E5" stroke-width="1.2" fill="none"/>
+  <!-- Friendly open smile -->
+  <path d="M32,71 Q50,82 68,71" stroke="#42A5F5" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Label -->
+  <rect x="18" y="90" width="64" height="8" rx="3" fill="#040c18" stroke="#64B5F6" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#64B5F6">STAFF-FE</text>
+</svg>

@@ -1,1 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/><line x1="50" y1="26" x2="50" y2="15" stroke="#00D9FF" stroke-width="1.2"/><rect x="47" y="13" width="6" height="4" rx="1" fill="#00D9FF" opacity="0.8"/><rect x="22" y="26" width="56" height="50" rx="4" fill="#0D1526" stroke="#00D9FF" stroke-width="1.8"/><rect x="28" y="31" width="44" height="28" rx="2.5" fill="#030B18" stroke="#00D9FF" stroke-width="0.7" opacity="0.9"/><text x="36" y="53" text-anchor="middle" fill="#00D9FF" font-size="18" font-family="monospace" font-weight="bold">&lt;</text><text x="65" y="53" text-anchor="middle" fill="#00D9FF" font-size="18" font-family="monospace" font-weight="bold">&gt;</text><line x1="47" y1="33" x2="53" y2="57" stroke="#00D9FF" stroke-width="2" opacity="0.8"/><rect x="32" y="63" width="36" height="6" rx="2.5" fill="#030B18" stroke="#00D9FF" stroke-width="0.6"/><circle cx="39" cy="66" r="1" fill="#00D9FF" opacity="0.6"/><circle cx="45" cy="66" r="1" fill="#00D9FF" opacity="0.6"/><circle cx="51" cy="66" r="1" fill="#00D9FF" opacity="0.6"/><circle cx="57" cy="66" r="1" fill="#00D9FF" opacity="0.6"/><rect x="18" y="38" width="4" height="6" rx="2" fill="#00D9FF" opacity="0.5"/><rect x="78" y="38" width="4" height="6" rx="2" fill="#00D9FF" opacity="0.5"/><path d="M22,52 H18 V58 H22" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.4"/><path d="M78,52 H82 V58 H78" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="fe-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071828"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+    <radialGradient id="fe-skin" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#4AAED9"/>
+    </radialGradient>
+    <radialGradient id="fe-iris-l" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </radialGradient>
+    <radialGradient id="fe-iris-r" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#7B2FBE"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </radialGradient>
+    <filter id="fe-glow">
+      <feGaussianBlur stdDeviation="1.3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="url(#fe-bg)"/>
+  <!-- Bouncy left antenna - curved springy -->
+  <path d="M37,24 Q30,16 35,9" stroke="#87CEEB" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="8" r="2.5" fill="#FFD700" filter="url(#fe-glow)"/>
+  <!-- Bouncy right antenna - curved springy -->
+  <path d="M63,24 Q70,16 65,9" stroke="#87CEEB" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="65" cy="8" r="2.5" fill="#00E5FF" filter="url(#fe-glow)"/>
+  <!-- Cheerful oval face -->
+  <ellipse cx="50" cy="53" rx="27" ry="29" fill="url(#fe-skin)" stroke="#4AAED9" stroke-width="1.8"/>
+  <!-- Left eye socket - wide and energetic -->
+  <ellipse cx="37" cy="50" rx="9" ry="9.5" fill="#071828" stroke="#87CEEB" stroke-width="1.2"/>
+  <!-- Left iris - gradient -->
+  <circle cx="37" cy="50" r="6.5" fill="url(#fe-iris-l)"/>
+  <circle cx="37" cy="50" r="2" fill="#071828"/>
+  <circle cx="35" cy="48" r="1.2" fill="white" opacity="0.7"/>
+  <!-- Right eye socket - wide and energetic -->
+  <ellipse cx="63" cy="50" rx="9" ry="9.5" fill="#071828" stroke="#87CEEB" stroke-width="1.2"/>
+  <!-- Right iris - gradient -->
+  <circle cx="63" cy="50" r="6.5" fill="url(#fe-iris-r)"/>
+  <circle cx="63" cy="50" r="2" fill="#071828"/>
+  <circle cx="61" cy="48" r="1.2" fill="white" opacity="0.7"/>
+  <!-- Excited big smile -->
+  <path d="M36,68 Q50,80 64,68" stroke="#2E86AB" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Teeth shine -->
+  <path d="M39,70 Q50,77 61,70" fill="white" opacity="0.5"/>
+  <!-- Cheek blush -->
+  <circle cx="29" cy="60" r="4" fill="#87CEEB" opacity="0.4"/>
+  <circle cx="71" cy="60" r="4" fill="#87CEEB" opacity="0.4"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="61" rx="2" ry="1.2" fill="#4AAED9" opacity="0.5"/>
+</svg>

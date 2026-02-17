@@ -1,59 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-
-  
-  <defs>
-    <filter id="ai-res" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <radialGradient id="bg-ai-res" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0a1a0f"/>
-      <stop offset="100%" stop-color="#040c07"/>
-    </radialGradient>
-  </defs>
-  <rect width="100" height="100" fill="url(#bg-ai-res)" rx="8"/>
-  <g filter="url(#ai-res)">
-    <line x1="50" y1="50" x2="26" y2="32" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="50" y1="50" x2="74" y2="32" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="50" y1="50" x2="20" y2="65" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="50" y1="50" x2="80" y2="65" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="50" y1="50" x2="50" y2="82" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="50" y1="50" x2="40" y2="18" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="50" y1="50" x2="60" y2="18" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="26" y1="32" x2="40" y2="18" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="74" y1="32" x2="60" y2="18" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="26" y1="32" x2="20" y2="65" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="74" y1="32" x2="80" y2="65" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="20" y1="65" x2="50" y2="82" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    <line x1="80" y1="65" x2="50" y2="82" stroke="#00FF88" stroke-width="0.65" opacity="0.4" stroke-dasharray="2,2"/>
-    
-      <circle cx="50" cy="50" r="7" fill="#001a0a" stroke="#00FF88" stroke-width="1.2" opacity="0.9"/>
-      <text x="50" y="53.15" font-family="monospace" font-size="6.3" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="26" cy="32" r="5" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="26" y="34.25" font-family="monospace" font-size="4.5" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="74" cy="32" r="5" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="74" y="34.25" font-family="monospace" font-size="4.5" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="20" cy="65" r="4" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="20" y="66.8" font-family="monospace" font-size="3.6" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="80" cy="65" r="4" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="80" y="66.8" font-family="monospace" font-size="3.6" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="50" cy="82" r="4.5" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="50" y="84.025" font-family="monospace" font-size="4.05" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="40" cy="18" r="3" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="40" y="19.35" font-family="monospace" font-size="2.7" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-      <circle cx="60" cy="18" r="3" fill="#001a0a" stroke="#00FF88" stroke-width="0.9" opacity="0.9"/>
-      <text x="60" y="19.35" font-family="monospace" font-size="2.7" fill="#00FF88" text-anchor="middle" opacity="0.9">?</text>
-    
-  </g>
-  <!-- Starburst for "hypothesis confirmed" -->
-  <line x1="59" y1="50" x2="63" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="56.36396103067893" y1="56.36396103067893" x2="59.19238815542512" y2="59.19238815542512" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="50" y1="59" x2="50" y2="63" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="43.63603896932107" y1="56.36396103067893" x2="40.80761184457488" y2="59.19238815542512" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="41" y1="50" x2="37" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="43.63603896932107" y1="43.63603896932107" x2="40.80761184457488" y2="40.80761184457488" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="50" y1="41" x2="50" y2="37" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/><line x1="56.36396103067892" y1="43.63603896932107" x2="59.192388155425114" y2="40.80761184457488" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
-  <rect x="29" y="4" width="42" height="8" rx="2" fill="#001a0a" stroke="#00FF88" stroke-width="0.7"/>
-  <text x="50" y="9.8" font-family="monospace" font-size="4.5" fill="#00FF88" text-anchor="middle">AI · RES</text>
+<defs>
+  <radialGradient id="res-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1a0a30"/>
+    <stop offset="100%" stop-color="#080215"/>
+  </radialGradient>
+  <radialGradient id="res-skin" cx="50%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#6b35a0" stop-opacity="1"/>
+    <stop offset="40%" stop-color="#4a1880"/>
+    <stop offset="100%" stop-color="#2a0850"/>
+  </radialGradient>
+  <radialGradient id="res-nebula" cx="30%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#9b3fc8" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#1a0040" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="res-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<!-- Background with nebula hint -->
+<rect width="100" height="100" fill="url(#res-bg)" rx="8"/>
+<ellipse cx="30" cy="30" rx="35" ry="30" fill="url(#res-nebula)"/>
+<!-- Neck -->
+<rect x="43" y="70" width="14" height="9" rx="3" fill="#2a0850"/>
+<!-- Head shape - otherworldly elongated oval -->
+<ellipse cx="50" cy="46" rx="25" ry="30" fill="url(#res-skin)"/>
+<!-- Nebula texture on face -->
+<ellipse cx="40" cy="38" rx="12" ry="8" fill="#7b2fbe" opacity="0.2"/>
+<ellipse cx="62" cy="52" rx="10" ry="7" fill="#a855f7" opacity="0.12"/>
+<!-- Three eyes in triangle formation -->
+<!-- Top eye (apex of triangle) - white glowing -->
+<g filter="url(#res-glow)">
+  <ellipse cx="50" cy="36" rx="6" ry="6" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="50" cy="36" rx="3" ry="3" fill="#e8d4ff"/>
+  <ellipse cx="50" cy="36" rx="1.5" ry="1.5" fill="#000010"/>
+  <ellipse cx="50" cy="36" rx="6" ry="6" fill="none" stroke="#e8d4ff" stroke-width="1" opacity="0.8"/>
+</g>
+<!-- Bottom left eye -->
+<g filter="url(#res-glow)">
+  <ellipse cx="37" cy="52" rx="6" ry="6" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="37" cy="52" rx="3" ry="3" fill="#e8d4ff"/>
+  <ellipse cx="37" cy="52" rx="1.5" ry="1.5" fill="#000010"/>
+  <ellipse cx="37" cy="52" rx="6" ry="6" fill="none" stroke="#e8d4ff" stroke-width="1" opacity="0.8"/>
+</g>
+<!-- Bottom right eye -->
+<g filter="url(#res-glow)">
+  <ellipse cx="63" cy="52" rx="6" ry="6" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="63" cy="52" rx="3" ry="3" fill="#e8d4ff"/>
+  <ellipse cx="63" cy="52" rx="1.5" ry="1.5" fill="#000010"/>
+  <ellipse cx="63" cy="52" rx="6" ry="6" fill="none" stroke="#e8d4ff" stroke-width="1" opacity="0.8"/>
+</g>
+<!-- Research paper glyph floating near head (right side) -->
+<g opacity="0.8">
+  <rect x="72" y="22" width="10" height="13" rx="1" fill="#1a0040" stroke="#a78bfa" stroke-width="0.7"/>
+  <line x1="74" y1="26" x2="80" y2="26" stroke="#a78bfa" stroke-width="0.5" opacity="0.8"/>
+  <line x1="74" y1="28" x2="80" y2="28" stroke="#a78bfa" stroke-width="0.5" opacity="0.8"/>
+  <line x1="74" y1="30" x2="78" y2="30" stroke="#a78bfa" stroke-width="0.5" opacity="0.8"/>
+  <text x="77" y="24.5" font-family="monospace" font-size="2.5" fill="#a78bfa" text-anchor="middle">R</text>
+</g>
+<!-- Subtle nose -->
+<ellipse cx="50" cy="62" rx="2" ry="1.2" fill="#2a0850" opacity="0.4"/>
+<!-- Thin serene mouth -->
+<path d="M44,68 Q50,70 56,68" fill="none" stroke="#7b2fbe" stroke-width="0.8" opacity="0.5"/>
+<!-- Label -->
+<rect x="28" y="88" width="44" height="8" rx="2" fill="#1a0040" stroke="#a78bfa" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="4" fill="#a78bfa" text-anchor="middle">AI · RES</text>
 </svg>

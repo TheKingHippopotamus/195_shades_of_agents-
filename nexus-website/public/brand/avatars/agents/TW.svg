@@ -1,2 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/><path d="M31,38 Q48,36 50,38 L50,66 Q48,64 31,66 Z" fill="#1a0a00" stroke="#D97706" stroke-width="1.5"/><path d="M50,38 Q52,36 69,38 L69,66 Q52,64 50,66 Z" fill="#1a0800" stroke="#D97706" stroke-width="1.5"/><line x1="50" y1="37" x2="50" y2="67" stroke="#D97706" stroke-width="2"/><line x1="34" y1="42" x2="48" y2="42" stroke="#D97706" stroke-width="0.9" opacity="0.7"/><line x1="34" y1="46" x2="45" y2="46" stroke="#D97706" stroke-width="0.9" opacity="0.62"/><line x1="34" y1="50" x2="44" y2="50" stroke="#D97706" stroke-width="0.9" opacity="0.5399999999999999"/><line x1="34" y1="54" x2="43" y2="54" stroke="#D97706" stroke-width="0.9" opacity="0.45999999999999996"/><line x1="53" y1="42" x2="66" y2="42" stroke="#D97706" stroke-width="0.9" opacity="0.7"/><line x1="53" y1="46" x2="63" y2="46" stroke="#D97706" stroke-width="0.9" opacity="0.62"/><line x1="53" y1="50" x2="62" y2="50" stroke="#D97706" stroke-width="0.9" opacity="0.5399999999999999"/><line x1="53" y1="54" x2="61" y2="54" stroke="#D97706" stroke-width="0.9" opacity="0.45999999999999996"/><path d="M62,24 Q70,16 72,12 Q68,18 63,26 Q65,23 68,21 Q64,28 60,32 L58,36 L57,34 Z" fill="#D97706" opacity="0.8"/>
-       <path d="M58,36 Q57,39 56,41" stroke="#D97706" stroke-width="1" fill="none"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="16" fill="url(#bg)"/>
+
+<defs>
+  <radialGradient id="tw-skin" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#c8956b"/><stop offset="100%" stop-color="#7a4e28"/></radialGradient>
+  <radialGradient id="tw-iris" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#e8d5b0"/><stop offset="60%" stop-color="#c8956b"/><stop offset="100%" stop-color="#5a2800"/></radialGradient>
+</defs>
+<!-- head -->
+<ellipse cx="50" cy="50" rx="24" ry="28" fill="url(#tw-skin)"/>
+<!-- brow ridge -->
+<path d="M30,40 Q50,35 70,40" fill="none" stroke="#5a2800" stroke-width="1.2" opacity="0.5"/>
+<!-- left eye -->
+<ellipse cx="39" cy="47" rx="7" ry="5.5" fill="#1a0800" stroke="#c8956b" stroke-width="1"/>
+<ellipse cx="39" cy="47" rx="4.5" ry="3.5" fill="url(#tw-iris)"/>
+<!-- pen cursor iris left -->
+<line x1="37" y1="45" x2="41" y2="49" stroke="#5a2800" stroke-width="1" opacity="0.9"/>
+<circle cx="41" cy="49" r="1" fill="#c8956b" opacity="0.8"/>
+<circle cx="39" cy="47" r="1.4" fill="#1a0800"/>
+<circle cx="38" cy="46" r="0.5" fill="white" opacity="0.8"/>
+<!-- right eye -->
+<ellipse cx="61" cy="47" rx="7" ry="5.5" fill="#1a0800" stroke="#c8956b" stroke-width="1"/>
+<ellipse cx="61" cy="47" rx="4.5" ry="3.5" fill="url(#tw-iris)"/>
+<!-- pen cursor iris right -->
+<line x1="59" y1="45" x2="63" y2="49" stroke="#5a2800" stroke-width="1" opacity="0.9"/>
+<circle cx="63" cy="49" r="1" fill="#c8956b" opacity="0.8"/>
+<circle cx="61" cy="47" r="1.4" fill="#1a0800"/>
+<circle cx="60" cy="46" r="0.5" fill="white" opacity="0.8"/>
+<!-- brows helpful angle -->
+<path d="M32,40 Q39,37 46,40" fill="none" stroke="#5a2800" stroke-width="1.5"/>
+<path d="M54,40 Q61,37 68,40" fill="none" stroke="#5a2800" stroke-width="1.5"/>
+<!-- nose -->
+<path d="M48,53 Q50,57 52,53" fill="none" stroke="#5a2800" stroke-width="0.9" opacity="0.6"/>
+<!-- friendly smile -->
+<path d="M41,63 Q50,68 59,63" fill="none" stroke="#5a2800" stroke-width="1.4"/>
+<!-- documentation marks on cheeks -->
+<line x1="25" y1="48" x2="31" y2="48" stroke="#c8956b" stroke-width="0.7" opacity="0.5"/>
+<line x1="25" y1="51" x2="30" y2="51" stroke="#c8956b" stroke-width="0.5" opacity="0.4"/>
+<line x1="69" y1="48" x2="75" y2="48" stroke="#c8956b" stroke-width="0.7" opacity="0.5"/>
+<line x1="70" y1="51" x2="75" y2="51" stroke="#c8956b" stroke-width="0.5" opacity="0.4"/>
+<!-- small antenna -->
+<line x1="50" y1="22" x2="50" y2="14" stroke="#c8956b" stroke-width="1.2"/>
+<circle cx="50" cy="13" r="2" fill="none" stroke="#c8956b" stroke-width="1"/>
+<!-- label -->
+<text x="50" y="91" text-anchor="middle" font-family="monospace" font-size="4" fill="#c8956b" opacity="0.9">TW</text>
+
+</svg>

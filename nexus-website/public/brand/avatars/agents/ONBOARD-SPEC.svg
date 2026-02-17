@@ -1,44 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
   <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#1a1f3a"/>
-    <stop offset="100%" stop-color="#030108"/>
+    <stop offset="0%" stop-color="#0a2218"/>
+    <stop offset="100%" stop-color="#020c08"/>
+  </radialGradient>
+  <radialGradient id="faceGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
   </radialGradient>
 </defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<path d="M38.0,33.0 A12,12 0 0,1 62.0,33.0"
-      fill="none" stroke="#06B6D4" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
-  <path d="M28.0,33.0 A22,22 0 0,1 72.0,33.0"
-      fill="none" stroke="#06B6D4" stroke-width="1.3" opacity="0.4" stroke-linecap="round"/>
-  <path d="M18.0,33.0 A32,32 0 0,1 82.0,33.0"
-      fill="none" stroke="#06B6D4" stroke-width="1.1" opacity="0.3" stroke-linecap="round"/>
-  
-  <!-- tower body -->
-  <polygon points="46,42 54,42 57,78 43,78"
-           fill="#041218" stroke="#06B6D4" stroke-width="1.5"/>
-  <line x1="45.3" y1="51.0" x2="54.8" y2="51.0" stroke="#06B6D4" stroke-width="1" opacity="0.3"/>
-  <line x1="44.5" y1="60.0" x2="55.5" y2="60.0" stroke="#06B6D4" stroke-width="1" opacity="0.3"/>
-  <line x1="43.8" y1="69.0" x2="56.3" y2="69.0" stroke="#06B6D4" stroke-width="1" opacity="0.3"/>
-  <rect x="36" y="78" width="28" height="4" rx="2" fill="#041218" stroke="#06B6D4" stroke-width="1.3"/>
-  <rect x="40" y="82" width="20" height="3" rx="1.5" fill="#041218" stroke="#06B6D4" stroke-width="1"/>
-  <path d="M44.2,61.8 Q35.0,53.8 29.0,65.8"
-        stroke="#06B6D4" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
-  <circle cx="29.0" cy="65.8" r="2.5" fill="#06B6D4" opacity="0.6"/>
-  <path d="M55.8,61.8 Q65.0,53.8 71.0,65.8"
-        stroke="#06B6D4" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
-  <circle cx="71.0" cy="65.8" r="2.5" fill="#06B6D4" opacity="0.6"/>
-  <!-- lantern gallery railing -->
-  <rect x="43" y="38" width="14" height="4" rx="1.5" fill="#041218" stroke="#06B6D4" stroke-width="1.3"/>
-  <!-- lantern dome -->
-  <circle cx="50" cy="33" r="11" fill="rgba(6,182,212,0.15)" stroke="#06B6D4" stroke-width="1.5"/>
-  <!-- door frame -->
-  <rect x="46" y="29" width="9" height="10" rx="1" fill="#06B6D4" opacity="0.3" stroke="#06B6D4" stroke-width="1"/>
-  <!-- door arch top -->
-  <path d="M46,32 Q50.5,27 55,32"
-        fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.8"/>
-  <!-- doorknob -->
-  <circle cx="54" cy="35" r="1" fill="#06B6D4" opacity="0.9"/>
-  <!-- welcome arrow into door -->
-  <line x1="43" y1="36" x2="47" y2="36" stroke="#06B6D4" stroke-width="1.3" opacity="0.7"/>
-  <polygon points="47,36 45,34.5 45,37.5" fill="#06B6D4" opacity="0.7"/>
+<ellipse cx="50" cy="53" rx="30" ry="28" fill="url(#faceGlow)"/>
+<!-- welcoming energetic mint-green head -->
+<ellipse cx="50" cy="53" rx="21" ry="23" fill="#04180e" stroke="#34d399" stroke-width="1.8"/>
+<!-- progress-bar step iris left -->
+<circle cx="39" cy="47" r="8" fill="#021008" stroke="#34d399" stroke-width="1.3"/>
+<rect x="33" y="45" width="12" height="4" rx="1" fill="#031a0a" stroke="#34d399" stroke-width="0.7"/>
+<rect x="33" y="45" width="4" height="4" rx="1" fill="#34d399" opacity="0.9"/>
+<rect x="37.5" y="45" width="4" height="4" rx="1" fill="#10b981" opacity="0.7"/>
+<rect x="42" y="45" width="3" height="4" rx="1" fill="#059669" opacity="0.5"/>
+<!-- progress-bar step iris right -->
+<circle cx="61" cy="47" r="8" fill="#021008" stroke="#34d399" stroke-width="1.3"/>
+<rect x="55" y="45" width="12" height="4" rx="1" fill="#031a0a" stroke="#34d399" stroke-width="0.7"/>
+<rect x="55" y="45" width="4" height="4" rx="1" fill="#34d399" opacity="0.9"/>
+<rect x="59.5" y="45" width="4" height="4" rx="1" fill="#10b981" opacity="0.7"/>
+<rect x="64" y="45" width="3" height="4" rx="1" fill="#059669" opacity="0.5"/>
+<!-- welcome mat forehead glyph — doorway arch -->
+<path d="M44,36 Q50,29 56,36" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="44" y="36" width="12" height="1.5" rx="0.5" fill="#34d399" opacity="0.7"/>
+<!-- outstretched antennae arms -->
+<path d="M29,47 Q22,36 28,28" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+<circle cx="28" cy="28" r="2.5" fill="#34d399" opacity="0.7"/>
+<path d="M71,47 Q78,36 72,28" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+<circle cx="72" cy="28" r="2.5" fill="#34d399" opacity="0.7"/>
+<!-- big energetic smile -->
+<path d="M40,63 Q50,72 60,63" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round"/>
+<!-- nose -->
+<path d="M48,55 Q50,57 52,55" fill="none" stroke="#34d399" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+<!-- cheek energizer dots -->
+<circle cx="31" cy="56" r="2.5" fill="#34d399" opacity="0.25"/>
+<circle cx="69" cy="56" r="2.5" fill="#34d399" opacity="0.25"/>
 </svg>

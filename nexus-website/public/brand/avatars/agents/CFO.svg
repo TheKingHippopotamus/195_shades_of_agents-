@@ -1,50 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+  <radialGradient id="cfo-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0F1419"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <linearGradient id="cfo-skin" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#AAB8C8"/><stop offset="100%" stop-color="#8898AA"/></linearGradient>
+  <radialGradient id="cfo-eye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C8D8E8"/><stop offset="100%" stop-color="#7090AA"/></radialGradient>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-
-<defs>
-  <radialGradient id="cfo-vault" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1A2E1A"/><stop offset="100%" stop-color="#0A0F0A"/></radialGradient>
-  <filter id="cfo-glow"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<!-- 3 spikes: solid and conservative -->
-<polygon points="35,37 40,37 37.5,14" fill="#FFD700" opacity="0.9"/>
-<polygon points="47,36 53,36 50,10"   fill="#FFD700" opacity="0.95"/>
-<polygon points="60,37 65,37 62.5,14" fill="#FFD700" opacity="0.9"/>
-<!-- hex head -->
-<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="#0A1A0A" stroke="#84CC16" stroke-width="2"/>
-<rect x="32" y="34" width="36" height="5" rx="1" fill="#84CC16" opacity="0.75"/>
-<!-- vault dial in hex face center -->
-<circle cx="50" cy="53" r="11" fill="url(#cfo-vault)" stroke="#84CC16" stroke-width="1.2"/>
-<circle cx="50" cy="53" r="9" fill="none" stroke="#84CC16" stroke-width="0.6" opacity="0.5"/>
-<circle cx="50" cy="53" r="6.5" fill="none" stroke="#84CC16" stroke-width="0.8" opacity="0.7"/>
-<circle cx="50" cy="53" r="3.5" fill="none" stroke="#84CC16" stroke-width="0.6" opacity="0.6"/>
-<!-- dial tick marks (12 positions) -->
-<line x1="50" y1="42.5" x2="50" y2="44.5" stroke="#84CC16" stroke-width="0.8"/>
-<line x1="50" y1="61.5" x2="50" y2="63.5" stroke="#84CC16" stroke-width="0.8"/>
-<line x1="39.5" y1="53" x2="41.5" y2="53" stroke="#84CC16" stroke-width="0.8"/>
-<line x1="58.5" y1="53" x2="60.5" y2="53" stroke="#84CC16" stroke-width="0.8"/>
-<line x1="42.3" y1="45.3" x2="43.7" y2="46.7" stroke="#84CC16" stroke-width="0.6" opacity="0.7"/>
-<line x1="56.3" y1="45.3" x2="57.7" y2="46.7" stroke="#84CC16" stroke-width="0.6" opacity="0.7"/>
-<line x1="42.3" y1="60.7" x2="43.7" y2="59.3" stroke="#84CC16" stroke-width="0.6" opacity="0.7"/>
-<line x1="56.3" y1="60.7" x2="57.7" y2="59.3" stroke="#84CC16" stroke-width="0.6" opacity="0.7"/>
-<!-- vault dial hand pointing to ~2 o'clock (profitable) -->
-<line x1="50" y1="53" x2="55" y2="46" stroke="#84CC16" stroke-width="1.2" stroke-linecap="round" filter="url(#cfo-glow)"/>
-<line x1="50" y1="53" x2="48" y2="56" stroke="#FFD700" stroke-width="0.8" stroke-linecap="round"/>
-<circle cx="50" cy="53" r="1.2" fill="#84CC16"/>
-<!-- vault center lock dot -->
-<circle cx="50" cy="53" r="0.5" fill="#FFD700"/>
-<!-- eyes: calculating, narrow -->
-<rect x="37" y="38" width="7" height="3.5" rx="1.2" fill="#0A1A0A" stroke="#84CC16" stroke-width="0.8"/>
-<rect x="56" y="38" width="7" height="3.5" rx="1.2" fill="#0A1A0A" stroke="#84CC16" stroke-width="0.8"/>
-<rect x="38.5" y="39" width="4" height="1.5" rx="0.6" fill="#84CC16" opacity="0.9"/>
-<rect x="57.5" y="39" width="4" height="1.5" rx="0.6" fill="#84CC16" opacity="0.9"/>
-<!-- neutral precise mouth -->
-<path d="M44,67 L56,67" stroke="#84CC16" stroke-width="1.2" stroke-linecap="round"/>
-<!-- body: suit + tie detail -->
-<path d="M32,75 L28,91 L50,88 L72,91 L68,75 Z" fill="#0A1A0A" stroke="#84CC16" stroke-width="1"/>
-<line x1="50" y1="76" x2="50" y2="88" stroke="#84CC16" stroke-width="0.8" opacity="0.7"/>
-<polygon points="50,76 47,80 50,86 53,80" fill="#84CC16" opacity="0.3"/>
-<ellipse cx="50" cy="96" rx="22" ry="3" fill="rgba(132,204,22,0.15)"/>
+<rect width="100" height="100" rx="18" fill="url(#cfo-bg)"/>
+<!-- Pentagon head shape -->
+<polygon points="50,12 74,28 70,68 30,68 26,28" fill="url(#cfo-skin)" stroke="#99AABB" stroke-width="0.6"/>
+<!-- Math grid overlay on skin (very faint) -->
+<line x1="30" y1="30" x2="70" y2="30" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="40" x2="70" y2="40" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="50" x2="70" y2="50" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="60" x2="70" y2="60" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="36" y1="20" x2="36" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="44" y1="15" x2="44" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="52" y1="13" x2="52" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="60" y1="15" x2="60" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<!-- Left rectangular eye with data lines inside -->
+<rect x="28" y="33" width="14" height="9" rx="1.5" fill="url(#cfo-eye)"/>
+<line x1="28" y1="35.5" x2="42" y2="35.5" stroke="#445566" stroke-width="0.5"/>
+<line x1="28" y1="38" x2="42" y2="38" stroke="#445566" stroke-width="0.5"/>
+<line x1="28" y1="40.5" x2="42" y2="40.5" stroke="#445566" stroke-width="0.5"/>
+<!-- Right rectangular eye with data lines -->
+<rect x="58" y="33" width="14" height="9" rx="1.5" fill="url(#cfo-eye)"/>
+<line x1="58" y1="35.5" x2="72" y2="35.5" stroke="#445566" stroke-width="0.5"/>
+<line x1="58" y1="38" x2="72" y2="38" stroke="#445566" stroke-width="0.5"/>
+<line x1="58" y1="40.5" x2="72" y2="40.5" stroke="#445566" stroke-width="0.5"/>
+<!-- Monocle ring around right eye -->
+<rect x="56.5" y="31.5" width="17" height="12" rx="2.5" fill="none" stroke="#BBCCDD" stroke-width="1.2"/>
+<line x1="73.5" y1="37.5" x2="76" y2="40" stroke="#BBCCDD" stroke-width="0.9"/>
+<!-- Compressed thin mouth -->
+<line x1="39" y1="57" x2="61" y2="57" stroke="#556677" stroke-width="1.2"/>
+<line x1="41" y1="59" x2="59" y2="59" stroke="#445566" stroke-width="0.5" opacity="0.5"/>
+<!-- Neck -->
+<rect x="44" y="67" width="12" height="6" rx="2" fill="#8898AA" stroke="#99AABB" stroke-width="0.5"/>
 </svg>

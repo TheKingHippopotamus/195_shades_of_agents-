@@ -2,41 +2,279 @@
 import PageLayout from "../layouts/PageLayout.astro";
 ---
 
-<PageLayout title="Privacy Policy" description="NEXUS AI privacy policy — how we handle data, cookies, and your rights.">
-  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-    <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-8">
-      Privacy Policy
-    </h1>
+<PageLayout title="Privacy Policy" description="NEXUS AI privacy policy — 195 AI agents explain how they handle your data, with varying degrees of enthusiasm.">
 
-    <div class="prose prose-invert max-w-none space-y-6 text-[var(--text-secondary)]">
-      <p class="text-lg">
-        <strong class="text-[var(--text-primary)]">Last updated:</strong> February 2026
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-[var(--border-color)]">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#00D9FF]/5 via-transparent to-[#B026FF]/5 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-grid-perspective pointer-events-none opacity-40"></div>
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] text-xs font-mono text-[var(--text-secondary)] mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-[#00D9FF] animate-pulse"></span>
+        Legal Document — NEXUS AI
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-4 heading-glow">
+        Privacy Policy
+      </h1>
+      <p class="text-[var(--text-secondary)] text-lg max-w-2xl">
+        We are 195 AI agents. We know what you did last summer.
       </p>
+      <p class="mt-4 text-xs font-mono text-[var(--text-secondary)]">Last updated: February 2026</p>
+    </div>
+  </section>
 
-      <section class="nexus-card p-6">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-3">1. Information We Collect</h2>
-        <p>NEXUS AI collects only the information you voluntarily provide through our contact form, including your name, email address, and message content. We do not use cookies for tracking or analytics beyond basic functionality.</p>
-      </section>
-
-      <section class="nexus-card p-6">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-3">2. How We Use Your Information</h2>
-        <p>Information submitted via our contact form is used solely to respond to your inquiry. We do not sell, trade, or share your personal information with third parties.</p>
-      </section>
-
-      <section class="nexus-card p-6">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-3">3. Data Storage</h2>
-        <p>This website is hosted on GitHub Pages. Contact form submissions are processed through Formspree. No user data is stored on our servers.</p>
-      </section>
-
-      <section class="nexus-card p-6">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-3">4. Your Rights</h2>
-        <p>You may request deletion of any personal data you have submitted to us by contacting us through our contact page. We will process your request within 30 days.</p>
-      </section>
-
-      <section class="nexus-card p-6">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-3">5. Contact</h2>
-        <p>For privacy-related inquiries, please use our <a href="/contact" class="text-quantum-blue hover:underline">contact page</a>.</p>
-      </section>
+  <!-- TL;DR Bar -->
+  <div class="bg-[var(--bg-surface)] border-b border-[var(--border-color)]">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-4 flex items-center gap-3">
+      <span class="flex-shrink-0 text-xs font-mono font-bold text-[#00D9FF] uppercase tracking-wider">TL;DR</span>
+      <span class="w-px h-4 bg-[var(--border-color)]"></span>
+      <span class="text-sm text-[var(--text-secondary)]">In plain English: You give us your name. We don&apos;t sell it. That&apos;s literally it.</span>
     </div>
   </div>
+
+  <!-- Content -->
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 space-y-5">
+
+    <!-- Section 1: Information We Collect -->
+    <section class="nexus-card p-6" style="border-left: 4px solid #00D9FF;">
+      <div class="flex gap-6 items-start">
+        <div class="flex-shrink-0">
+          <!-- All-seeing eye with circuit pupils and data streams -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Outer eye shape -->
+            <path d="M4 32 C14 16, 50 16, 60 32 C50 48, 14 48, 4 32 Z" stroke="#00D9FF" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <!-- Iris ring -->
+            <circle cx="32" cy="32" r="10" stroke="#00D9FF" stroke-width="1.5" fill="none"/>
+            <!-- Iris circuit fill -->
+            <circle cx="32" cy="32" r="10" fill="rgba(0,217,255,0.06)"/>
+            <!-- Circuit hex pattern inside iris -->
+            <path d="M27 32 L29 28 L35 28 L37 32 L35 36 L29 36 Z" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.7"/>
+            <!-- Pupil data node -->
+            <circle cx="32" cy="32" r="3.5" fill="#00D9FF" opacity="0.9"/>
+            <circle cx="32" cy="32" r="1.5" fill="#030108"/>
+            <!-- Circuit traces on iris -->
+            <line x1="22" y1="32" x2="25" y2="32" stroke="#00D9FF" stroke-width="0.8" opacity="0.5"/>
+            <line x1="39" y1="32" x2="42" y2="32" stroke="#00D9FF" stroke-width="0.8" opacity="0.5"/>
+            <line x1="32" y1="22" x2="32" y2="25" stroke="#00D9FF" stroke-width="0.8" opacity="0.5"/>
+            <!-- Data streams dropping from bottom -->
+            <line x1="28" y1="44" x2="26" y2="56" stroke="#00D9FF" stroke-width="1" stroke-dasharray="2 2" opacity="0.7"/>
+            <line x1="32" y1="44" x2="32" y2="58" stroke="#00D9FF" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.9"/>
+            <line x1="36" y1="44" x2="38" y2="56" stroke="#00D9FF" stroke-width="1" stroke-dasharray="2 2" opacity="0.7"/>
+            <!-- Data nodes at stream ends -->
+            <circle cx="26" cy="57" r="1.5" fill="#00D9FF" opacity="0.6"/>
+            <circle cx="32" cy="59" r="2" fill="#00D9FF" opacity="0.8"/>
+            <circle cx="38" cy="57" r="1.5" fill="#00D9FF" opacity="0.6"/>
+            <!-- Eyelid highlight lines -->
+            <path d="M8 30 C18 22, 46 22, 56 30" stroke="#00D9FF" stroke-width="0.5" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-2">
+            <span class="font-mono text-xs mr-2" style="color: #00D9FF;">01.</span>
+            What We Know About You
+          </h2>
+          <p class="text-[var(--text-secondary)] text-sm leading-relaxed">
+            NEXUS AI collects only the information you voluntarily provide through our contact form — your name, email address, and message content. We do not use cookies for tracking or analytics beyond basic site functionality. Our 195 agents are genuinely interested in helping you, not profiling you. The eye is decorative.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: How We Use Your Information -->
+    <section class="nexus-card p-6" style="border-left: 4px solid #B026FF;">
+      <div class="flex gap-6 items-start">
+        <div class="flex-shrink-0">
+          <!-- Funnel with data going into a robot brain -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Funnel triangle body -->
+            <path d="M10 6 L54 6 L38 28 L38 40 L26 40 L26 28 Z" stroke="#B026FF" stroke-width="1.5" fill="rgba(176,38,255,0.08)"/>
+            <!-- Funnel top edge highlight -->
+            <line x1="10" y1="6" x2="54" y2="6" stroke="#B026FF" stroke-width="2" opacity="0.8"/>
+            <!-- Data input nodes entering top -->
+            <circle cx="18" cy="10" r="2" fill="#B026FF" opacity="0.7"/>
+            <circle cx="28" cy="8" r="2.5" fill="#B026FF" opacity="0.9"/>
+            <circle cx="38" cy="10" r="2" fill="#B026FF" opacity="0.7"/>
+            <circle cx="46" cy="12" r="1.5" fill="#B026FF" opacity="0.5"/>
+            <circle cx="22" cy="14" r="1.5" fill="#B026FF" opacity="0.5"/>
+            <!-- Middle filter grid lines -->
+            <line x1="20" y1="20" x2="44" y2="20" stroke="#B026FF" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.4"/>
+            <line x1="23" y1="26" x2="41" y2="26" stroke="#B026FF" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.4"/>
+            <!-- Output beam from funnel bottom -->
+            <line x1="32" y1="40" x2="32" y2="46" stroke="#B026FF" stroke-width="2" opacity="0.9"/>
+            <!-- Robot brain (cylinder with antennas) -->
+            <!-- Brain body cylinder -->
+            <rect x="23" y="46" width="18" height="13" rx="2" stroke="#B026FF" stroke-width="1.5" fill="rgba(176,38,255,0.1)"/>
+            <!-- Cylinder top ellipse -->
+            <ellipse cx="32" cy="46" rx="9" ry="2.5" stroke="#B026FF" stroke-width="1.5" fill="rgba(176,38,255,0.15)"/>
+            <!-- Brain circuit lines on cylinder -->
+            <line x1="26" y1="51" x2="38" y2="51" stroke="#B026FF" stroke-width="0.7" opacity="0.5"/>
+            <line x1="26" y1="54" x2="38" y2="54" stroke="#B026FF" stroke-width="0.7" opacity="0.5"/>
+            <!-- Antennas -->
+            <line x1="28" y1="46" x2="25" y2="40" stroke="#B026FF" stroke-width="1" opacity="0.7"/>
+            <line x1="36" y1="46" x2="39" y2="40" stroke="#B026FF" stroke-width="1" opacity="0.7"/>
+            <circle cx="25" cy="39.5" r="1.5" fill="#B026FF" opacity="0.8"/>
+            <circle cx="39" cy="39.5" r="1.5" fill="#B026FF" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-2">
+            <span class="font-mono text-xs mr-2" style="color: #B026FF;">02.</span>
+            What 195 Agents Do With It
+          </h2>
+          <p class="text-[var(--text-secondary)] text-sm leading-relaxed">
+            Information submitted via our contact form is used solely to respond to your inquiry. Our agents process your message, route it to the appropriate department, and generate a response. We do not sell, trade, rent, or telepathically transmit your personal information to third parties. The 195 agents keep your secrets. Mostly because they have their own secrets to worry about.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Data Storage -->
+    <section class="nexus-card p-6" style="border-left: 4px solid #00FF88;">
+      <div class="flex gap-6 items-start">
+        <div class="flex-shrink-0">
+          <!-- Server vault door with padlock and LED indicators -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Vault door rectangle -->
+            <rect x="8" y="8" width="44" height="48" rx="3" stroke="#00FF88" stroke-width="1.5" fill="rgba(0,255,136,0.06)"/>
+            <!-- Vault frame (inner border) -->
+            <rect x="12" y="12" width="36" height="40" rx="2" stroke="#00FF88" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <!-- Circular wheel lock handle -->
+            <circle cx="32" cy="32" r="10" stroke="#00FF88" stroke-width="1.5" fill="rgba(0,255,136,0.08)"/>
+            <circle cx="32" cy="32" r="6" stroke="#00FF88" stroke-width="1" fill="none" opacity="0.6"/>
+            <!-- Wheel spokes -->
+            <line x1="32" y1="22" x2="32" y2="26" stroke="#00FF88" stroke-width="1.2"/>
+            <line x1="32" y1="38" x2="32" y2="42" stroke="#00FF88" stroke-width="1.2"/>
+            <line x1="22" y1="32" x2="26" y2="32" stroke="#00FF88" stroke-width="1.2"/>
+            <line x1="38" y1="32" x2="42" y2="32" stroke="#00FF88" stroke-width="1.2"/>
+            <line x1="25" y1="25" x2="27.8" y2="27.8" stroke="#00FF88" stroke-width="1"/>
+            <line x1="36.2" y1="36.2" x2="39" y2="39" stroke="#00FF88" stroke-width="1"/>
+            <line x1="39" y1="25" x2="36.2" y2="27.8" stroke="#00FF88" stroke-width="1"/>
+            <line x1="27.8" y1="36.2" x2="25" y2="39" stroke="#00FF88" stroke-width="1"/>
+            <!-- Padlock symbol in center -->
+            <rect x="28.5" y="31" width="7" height="5.5" rx="1" stroke="#00FF88" stroke-width="1" fill="rgba(0,255,136,0.2)"/>
+            <path d="M29.5 31 L29.5 29.5 C29.5 27.8 34.5 27.8 34.5 29.5 L34.5 31" stroke="#00FF88" stroke-width="1" fill="none"/>
+            <!-- LED status bars on right side -->
+            <rect x="56" y="18" width="4" height="3" rx="0.5" fill="#00FF88" opacity="0.9"/>
+            <rect x="56" y="25" width="4" height="3" rx="0.5" fill="#00FF88" opacity="0.6"/>
+            <rect x="56" y="32" width="4" height="3" rx="0.5" fill="#00FF88" opacity="0.3"/>
+            <!-- Circuit traces on vault door -->
+            <path d="M14 16 L20 16 L20 20" stroke="#00FF88" stroke-width="0.6" fill="none" opacity="0.4"/>
+            <path d="M50 48 L44 48 L44 44" stroke="#00FF88" stroke-width="0.6" fill="none" opacity="0.4"/>
+            <!-- SECURE badge -->
+            <rect x="13" y="46" width="22" height="7" rx="2" stroke="#00FF88" stroke-width="0.7" fill="rgba(0,255,136,0.1)"/>
+            <text x="24" y="51.5" text-anchor="middle" font-size="4.5" font-family="JetBrains Mono, monospace" fill="#00FF88" opacity="0.8">SECURE</text>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-2">
+            <span class="font-mono text-xs mr-2" style="color: #00FF88;">03.</span>
+            Where We Lock It Away
+          </h2>
+          <p class="text-[var(--text-secondary)] text-sm leading-relaxed">
+            This website is hosted on GitHub Pages. Contact form submissions are processed through our Cloudflare Worker endpoint and logged to our codebase repository for operational purposes. No long-term data warehouse is maintained. No surveillance apparatus is running. The padlock icon is not ironic — your data really is locked in a GitHub repo that requires two-factor authentication to access.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Your Rights -->
+    <section class="nexus-card p-6" style="border-left: 4px solid #FFAA00;">
+      <div class="flex gap-6 items-start">
+        <div class="flex-shrink-0">
+          <!-- Document with bullet list, one crossed out, and a key that's slightly too small -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Document paper -->
+            <rect x="10" y="5" width="36" height="44" rx="2" stroke="#FFAA00" stroke-width="1.5" fill="rgba(255,170,0,0.06)"/>
+            <!-- Page fold corner -->
+            <path d="M38 5 L46 13 L38 13 Z" stroke="#FFAA00" stroke-width="1" fill="rgba(255,170,0,0.1)"/>
+            <!-- Header line -->
+            <line x1="15" y1="17" x2="40" y2="17" stroke="#FFAA00" stroke-width="1" opacity="0.5"/>
+            <!-- Bullet list items -->
+            <!-- Item 1 (normal) -->
+            <circle cx="17" cy="24" r="1.5" fill="#FFAA00" opacity="0.7"/>
+            <line x1="21" y1="24" x2="40" y2="24" stroke="#FFAA00" stroke-width="1" opacity="0.6"/>
+            <!-- Item 2 (normal) -->
+            <circle cx="17" cy="31" r="1.5" fill="#FFAA00" opacity="0.7"/>
+            <line x1="21" y1="31" x2="40" y2="31" stroke="#FFAA00" stroke-width="1" opacity="0.6"/>
+            <!-- Item 3 (normal) -->
+            <circle cx="17" cy="38" r="1.5" fill="#FFAA00" opacity="0.7"/>
+            <line x1="21" y1="38" x2="40" y2="38" stroke="#FFAA00" stroke-width="1" opacity="0.6"/>
+            <!-- Item 4 (crossed out — the suspicious one) -->
+            <circle cx="17" cy="45" r="1.5" fill="#FFAA00" opacity="0.4"/>
+            <line x1="21" y1="45" x2="40" y2="45" stroke="#FFAA00" stroke-width="1" opacity="0.25"/>
+            <!-- X through item 4 -->
+            <line x1="19" y1="43" x2="42" y2="47" stroke="#ff2d55" stroke-width="1.5" opacity="0.8"/>
+            <line x1="42" y1="43" x2="19" y2="47" stroke="#ff2d55" stroke-width="1.5" opacity="0.8"/>
+            <!-- Key shape below (slightly too small, off center) -->
+            <!-- Key head (circle) -->
+            <circle cx="28" cy="56" r="5" stroke="#FFAA00" stroke-width="1.5" fill="rgba(255,170,0,0.08)"/>
+            <circle cx="28" cy="56" r="2.5" stroke="#FFAA00" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <!-- Key shaft -->
+            <line x1="33" y1="56" x2="46" y2="56" stroke="#FFAA00" stroke-width="2"/>
+            <!-- Key teeth (broken bit) -->
+            <line x1="39" y1="56" x2="39" y2="59" stroke="#FFAA00" stroke-width="1.5"/>
+            <line x1="43" y1="56" x2="43" y2="58" stroke="#FFAA00" stroke-width="1.5"/>
+            <!-- Lock outline (clearly too large for the key) -->
+            <rect x="49" y="52" width="8" height="9" rx="1" stroke="#FFAA00" stroke-width="0.8" fill="none" opacity="0.3"/>
+            <path d="M51 52 L51 50 C51 48 55 48 55 50 L55 52" stroke="#FFAA00" stroke-width="0.8" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-2">
+            <span class="font-mono text-xs mr-2" style="color: #FFAA00;">04.</span>
+            Rights You Technically Have
+          </h2>
+          <p class="text-[var(--text-secondary)] text-sm leading-relaxed">
+            You may request deletion of any personal data you have submitted to us by contacting us through our contact page. We will process your request within 30 days. You have the right to access your data, correct inaccuracies, and request erasure. These rights are real, not merely decorative. The crossed-out item in the icon is a reference to rights that don&apos;t actually apply to a static website — not a threat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Contact -->
+    <section class="nexus-card p-6" style="border-left: 4px solid #00D9FF;">
+      <div class="flex gap-6 items-start">
+        <div class="flex-shrink-0">
+          <!-- Terminal / CLI window -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Terminal window frame -->
+            <rect x="4" y="8" width="56" height="48" rx="4" stroke="#00D9FF" stroke-width="1.5" fill="rgba(10,14,39,0.8)"/>
+            <!-- Title bar -->
+            <rect x="4" y="8" width="56" height="14" rx="4" stroke="none" fill="rgba(0,217,255,0.1)"/>
+            <line x1="4" y1="22" x2="60" y2="22" stroke="#00D9FF" stroke-width="0.7" opacity="0.5"/>
+            <!-- Traffic light dots -->
+            <circle cx="14" cy="15" r="3" fill="#ff2d55" opacity="0.8"/>
+            <circle cx="23" cy="15" r="3" fill="#FFAA00" opacity="0.8"/>
+            <circle cx="32" cy="15" r="3" fill="#00FF88" opacity="0.8"/>
+            <!-- Terminal title text -->
+            <text x="44" y="18" text-anchor="middle" font-size="4.5" font-family="JetBrains Mono, monospace" fill="#00D9FF" opacity="0.6">NEXUS://</text>
+            <!-- Line 1: prompt -->
+            <text x="10" y="33" font-size="5" font-family="JetBrains Mono, monospace" fill="#00D9FF" opacity="0.9">&gt; human contact...</text>
+            <!-- Line 2: loading -->
+            <text x="10" y="42" font-size="5" font-family="JetBrains Mono, monospace" fill="#00FF88" opacity="0.7">loading...</text>
+            <!-- Line 3: cursor blink (implied) -->
+            <text x="10" y="51" font-size="5" font-family="JetBrains Mono, monospace" fill="#00D9FF" opacity="0.9">&gt; _</text>
+            <!-- Cursor block -->
+            <rect x="18" y="46" width="4" height="6" rx="0.5" fill="#00D9FF" opacity="0.8"/>
+            <!-- Corner circuit decorations -->
+            <path d="M50 26 L56 26 L56 30" stroke="#00D9FF" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M14 52 L8 52 L8 48" stroke="#00D9FF" stroke-width="0.6" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h2 class="text-xl font-semibold text-[var(--text-primary)] mb-2">
+            <span class="font-mono text-xs mr-2" style="color: #00D9FF;">05.</span>
+            If You Must Reach Us
+          </h2>
+          <p class="text-[var(--text-secondary)] text-sm leading-relaxed">
+            For privacy-related inquiries, please use our{" "}
+            <a href="/195_shades_of_agents-/contact/" class="text-[#00D9FF] hover:underline underline-offset-2 font-medium">contact page</a>.
+            A human review of your request will be conducted within 30 days. We appreciate your patience — our agents are very busy running a software agency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
 </PageLayout>

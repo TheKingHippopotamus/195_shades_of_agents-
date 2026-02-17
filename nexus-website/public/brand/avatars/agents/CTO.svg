@@ -1,56 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+  <radialGradient id="cto-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0A1628"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="cto-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#2A3F5A"/><stop offset="100%" stop-color="#1C2E4A"/></radialGradient>
+  <radialGradient id="cto-eye" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#66F0FF"/><stop offset="100%" stop-color="#0099BB"/></radialGradient>
+  <filter id="cto-glow"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="cto-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-
-<defs>
-  <radialGradient id="cto-eye" cx="40%" cy="40%" r="55%"><stop offset="0%" stop-color="#00FFFF"/><stop offset="100%" stop-color="#0066AA"/></radialGradient>
-  <filter id="cto-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<!-- antenna top-right -->
-<line x1="67" y1="34" x2="75" y2="18" stroke="#00D9FF" stroke-width="1.2"/>
-<circle cx="75" cy="17" r="2.5" fill="#00D9FF" filter="url(#cto-glow)"/>
-<rect x="73" y="15" width="4" height="4" rx="0.5" fill="none" stroke="#00D9FF" stroke-width="0.8"/>
-<!-- 3 circuit-traced spikes -->
-<polygon points="36,36 42,36 39,10" fill="#FFD700" opacity="0.9"/>
-<polygon points="47,36 53,36 50,20" fill="#FFD700" opacity="0.85"/>
-<polygon points="59,36 65,36 62,10" fill="#FFD700" opacity="0.9"/>
-<!-- circuit trace lines on spike faces -->
-<line x1="39" y1="28" x2="39" y2="22" stroke="#00D9FF" stroke-width="0.7"/>
-<line x1="37" y1="25" x2="41" y2="25" stroke="#00D9FF" stroke-width="0.5"/>
-<line x1="50" y1="30" x2="50" y2="24" stroke="#00D9FF" stroke-width="0.7"/>
-<circle cx="39" cy="22" r="0.9" fill="#00D9FF"/>
-<circle cx="50" cy="24" r="0.9" fill="#00D9FF"/>
-<circle cx="62" cy="22" r="0.9" fill="#00D9FF"/>
-<line x1="62" y1="28" x2="62" y2="22" stroke="#00D9FF" stroke-width="0.7"/>
-<!-- hex head -->
-<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="#0D1220" stroke="#FFD700" stroke-width="1.8"/>
-<rect x="32" y="34" width="36" height="5" rx="1" fill="#FFD700" opacity="0.75"/>
-<!-- circuit traces ON the hex face -->
-<line x1="36" y1="55" x2="42" y2="55" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
-<line x1="42" y1="55" x2="42" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
-<line x1="42" y1="60" x2="48" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
-<line x1="58" y1="55" x2="64" y2="55" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
-<line x1="58" y1="55" x2="58" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
-<line x1="52" y1="60" x2="58" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
-<!-- small circuit nodes -->
-<rect x="35" y="54.2" width="1.6" height="1.6" fill="#00D9FF" opacity="0.9"/>
-<rect x="63.4" y="54.2" width="1.6" height="1.6" fill="#00D9FF" opacity="0.9"/>
-<!-- square LED eyes -->
-<rect x="38" y="47" width="8" height="8" rx="1" fill="#0A0A1A" stroke="#00D9FF" stroke-width="1.2"/>
-<rect x="54" y="47" width="8" height="8" rx="1" fill="#0A0A1A" stroke="#00D9FF" stroke-width="1.2"/>
-<rect x="40.5" y="49.5" width="3" height="3" rx="0.3" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
-<rect x="56.5" y="49.5" width="3" height="3" rx="0.3" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
-<!-- LED scan line -->
-<line x1="39.5" y1="51" x2="45.5" y2="51" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
-<line x1="55.5" y1="51" x2="61.5" y2="51" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
-<!-- flat mouth / terminal line -->
-<line x1="44" y1="64" x2="56" y2="64" stroke="#00D9FF" stroke-width="1.2" stroke-linecap="round"/>
-<rect x="48" y="62.5" width="4" height="3" rx="0.5" fill="none" stroke="#00D9FF" stroke-width="0.6"/>
-<!-- body: tech chassis -->
-<path d="M32,75 L28,90 L50,87 L72,90 L68,75 Z" fill="#0D1220" stroke="#FFD700" stroke-width="1"/>
-<line x1="38" y1="80" x2="62" y2="80" stroke="#00D9FF" stroke-width="0.6" opacity="0.6"/>
-<rect x="46" y="82" width="8" height="3" rx="0.5" fill="none" stroke="#00D9FF" stroke-width="0.6" opacity="0.7"/>
-<ellipse cx="50" cy="96" rx="22" ry="3" fill="rgba(0,217,255,0.15)"/>
+<rect width="100" height="100" rx="18" fill="url(#cto-bg)"/>
+<!-- Wide rounded rectangle head -->
+<rect x="18" y="15" width="64" height="60" rx="14" fill="url(#cto-skin)" stroke="#2A4A70" stroke-width="0.6"/>
+<!-- 4 antennae in arc with circuit node tips -->
+<line x1="32" y1="18" x2="28" y2="5" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="25.5" y="3" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<line x1="42" y1="16" x2="40" y2="4" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="37.5" y="2" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<line x1="58" y1="16" x2="60" y2="4" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="57.5" y="2" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<line x1="68" y1="18" x2="72" y2="5" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="69.5" y="3" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<!-- Left eye -->
+<ellipse cx="35" cy="38" rx="7" ry="6" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<ellipse cx="35" cy="38" rx="3" ry="3" fill="#003344"/>
+<ellipse cx="33.5" cy="36.5" rx="1" ry="1" fill="#AAFFFF" opacity="0.8"/>
+<!-- Right eye -->
+<ellipse cx="65" cy="38" rx="7" ry="6" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<ellipse cx="65" cy="38" rx="3" ry="3" fill="#003344"/>
+<ellipse cx="63.5" cy="36.5" rx="1" ry="1" fill="#AAFFFF" opacity="0.8"/>
+<!-- Center forehead eye -->
+<ellipse cx="50" cy="26" rx="5.5" ry="4.5" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<ellipse cx="50" cy="26" rx="2.2" ry="2.2" fill="#003344"/>
+<ellipse cx="49" cy="25" rx="0.8" ry="0.8" fill="#AAFFFF" opacity="0.8"/>
+<!-- Circuit board traces on face -->
+<path d="M20,35 L25,35 L25,32 L28,32" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M20,45 L26,45 L26,48 L30,48" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M80,35 L75,35 L75,32 L72,32" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M80,45 L74,45 L74,48 L70,48" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M40,55 L45,55 L45,58 L55,58 L55,55 L60,55" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.4"/>
+<path d="M35,48 L38,48 L38,52 L42,52" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.4"/>
+<path d="M65,48 L62,48 L62,52 L58,52" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.4"/>
+<!-- Neural glyph on chin (no mouth) -->
+<path d="M44,63 L50,66 L56,63" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.7"/>
+<circle cx="50" cy="66" r="1.2" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<!-- Neck -->
+<rect x="44" y="73" width="12" height="5" rx="2" fill="#1C2E4A" stroke="#2A4A70" stroke-width="0.5"/>
 </svg>

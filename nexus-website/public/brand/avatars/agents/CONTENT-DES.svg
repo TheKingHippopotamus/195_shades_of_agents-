@@ -1,30 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <defs>
-    <radialGradient id="ctdesBlobGrad" cx="40%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#FF8EB5"/>
-      <stop offset="55%" stop-color="#FF2D78"/>
-      <stop offset="100%" stop-color="#A8004F"/>
+    <radialGradient id="cdes-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#28200A"/>
+      <stop offset="100%" stop-color="#100C04"/>
     </radialGradient>
-    <clipPath id="ctdesBlobClip">
-      <path d="M 78.1 50.0 Q 67.0 67.0 72.5 58.5 Q 50.0 78.6 58.5 72.8 Q 32.6 67.4 41.3 73.0 Q 22.2 50.0 27.4 58.7 Q 33.2 33.2 27.7 41.6 Q 50.0 21.1 41.6 27.2 Q 67.2 32.8 58.6 27.0 Q 78.1 50.0 72.6 41.4 Z"/>
-    </clipPath>
+    <radialGradient id="cdes-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#FFE870"/>
+      <stop offset="55%" stop-color="#D4A800"/>
+      <stop offset="100%" stop-color="#7A5C00"/>
+    </radialGradient>
+    <radialGradient id="cdes-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#C0D8FF"/>
+      <stop offset="100%" stop-color="#304880"/>
+    </radialGradient>
+    <filter id="cdes-glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
-  <circle cx="14" cy="20" r="2.5" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="83" cy="18" r="2" fill="#FF8EB5" opacity="0.45"/>
-  <circle cx="12" cy="70" r="2" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="84" cy="72" r="2.5" fill="#FF6B35" opacity="0.45"/>
-  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.38"/>
-  <path d="M 78.1 50.0 Q 67.0 67.0 72.5 58.5 Q 50.0 78.6 58.5 72.8 Q 32.6 67.4 41.3 73.0 Q 22.2 50.0 27.4 58.7 Q 33.2 33.2 27.7 41.6 Q 50.0 21.1 41.6 27.2 Q 67.2 32.8 58.6 27.0 Q 78.1 50.0 72.6 41.4 Z" fill="url(#ctdesBlobGrad)"/>
-  <!-- LARGE SERIF LETTER "A" inside blob (editorial typography) -->
-  <g clip-path="url(#ctdesBlobClip)">
-    <!-- The letter A in a large editorial serif style -->
-    <text x="50" y="61" font-size="28" fill="#FFD1B8" text-anchor="middle"
-      font-family="Georgia, 'Times New Roman', serif" font-weight="bold" opacity="0.95">A</text>
-    <!-- Decorative underline rule -->
-    <line x1="35" y1="64" x2="65" y2="64" stroke="#FF8EB5" stroke-width="1" opacity="0.7"/>
-    <!-- Tiny secondary text lines (editorial layout feel) -->
-    <line x1="36" y1="67" x2="60" y2="67" stroke="#FF8EB5" stroke-width="0.5" opacity="0.5"/>
-    <line x1="36" y1="70" x2="52" y2="70" stroke="#FF8EB5" stroke-width="0.5" opacity="0.4"/>
-  </g>
+  <rect width="100" height="100" fill="url(#cdes-bg)" rx="10"/>
+  <circle cx="9" cy="11" r="0.8" fill="#FFE870" opacity="0.5"/>
+  <circle cx="89" cy="9" r="0.6" fill="#D4A800" opacity="0.4"/>
+  <!-- Expressive face — golden-yellow -->
+  <ellipse cx="50" cy="54" rx="23" ry="27" fill="url(#cdes-skin)"/>
+  <!-- Expressive antennae -->
+  <path d="M 39 29 Q 32 16 36 9" fill="none" stroke="#FFE870" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 61 29 Q 68 16 64 9" fill="none" stroke="#FFE870" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="36" cy="9" r="2.5" fill="#C0D8FF" filter="url(#cdes-glow)"/>
+  <circle cx="64" cy="9" r="2.5" fill="#C0D8FF" filter="url(#cdes-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8.5" fill="#180E00"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8.5" fill="#180E00"/>
+  <!-- Text/type letterform iris left — "A" serif -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#cdes-iris)"/>
+  <text x="40" y="54" font-size="7" font-family="Georgia,serif" fill="#304880" text-anchor="middle" opacity="0.9">A</text>
+  <!-- Text/type letterform iris right — "g" -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#cdes-iris)"/>
+  <text x="60" y="54" font-size="7" font-family="Georgia,serif" fill="#304880" text-anchor="middle" opacity="0.9">g</text>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="1.8" fill="#0A0804"/>
+  <circle cx="61" cy="50" r="1.8" fill="#0A0804"/>
+  <circle cx="42" cy="49" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="62" cy="49" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#7A5C00" opacity="0.5"/>
+  <!-- Open expressive mouth -->
+  <path d="M 41 68 Q 50 77 59 68" fill="#7A5C00" opacity="0.4"/>
+  <path d="M 41 68 Q 50 77 59 68" fill="none" stroke="#D4A800" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Cheek dimples -->
+  <circle cx="34" cy="61" r="1.5" fill="#D4A800" opacity="0.3"/>
+  <circle cx="66" cy="61" r="1.5" fill="#D4A800" opacity="0.3"/>
 </svg>

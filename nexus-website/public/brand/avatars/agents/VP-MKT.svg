@@ -1,43 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#1a1f3a"/>
+  <radialGradient id="vm-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#200010"/>
     <stop offset="100%" stop-color="#030108"/>
   </radialGradient>
+  <radialGradient id="vm-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FF60C0"/>
+    <stop offset="55%" stop-color="#C0108080"/>
+    <stop offset="100%" stop-color="#600050"/>
+  </radialGradient>
+  <radialGradient id="vm-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="40%" stop-color="#FF80FF"/>
+    <stop offset="100%" stop-color="#400040"/>
+  </radialGradient>
+  <filter id="vm-glow">
+    <feGaussianBlur stdDeviation="1.8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<path d="M20,41.6 Q8.799999999999999,50 20,58.4"
-      fill="none" stroke="#A855F7" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
-  <path d="M20,35.6 Q0.7999999999999972,50 20,64.4"
-      fill="none" stroke="#A855F7" stroke-width="1.4000000000000001" opacity="0.45000000000000007" stroke-linecap="round"/>
-  <path d="M20,29.6 Q-7.200000000000003,50 20,70.4"
-      fill="none" stroke="#A855F7" stroke-width="1.2000000000000002" opacity="0.35000000000000003" stroke-linecap="round"/>
-  <path d="M20,23.6 Q-15.200000000000003,50 20,76.4"
-      fill="none" stroke="#A855F7" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
-  <line x1="26.0" y1="50.0" x2="34.0" y2="50.0" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="24.2" y1="54.2" x2="29.9" y2="59.9" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="20.0" y1="56.0" x2="20.0" y2="64.0" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="15.8" y1="54.2" x2="10.1" y2="59.9" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="14.0" y1="50.0" x2="6.0" y2="50.0" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="15.8" y1="45.8" x2="10.1" y2="40.1" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="20.0" y1="44.0" x2="20.0" y2="36.0" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  <line x1="24.2" y1="45.8" x2="29.9" y2="40.1" stroke="#A855F7" stroke-width="1.2" opacity="0.45"/>
-  
-  <!-- megaphone bell -->
-  <path d="M20,22.4 L55,40 L55,60 L20,77.6 Z"
-        fill="#0f0a1f" stroke="#A855F7" stroke-width="2"/>
-  <!-- body/barrel -->
-  <rect x="55" y="40" width="23" height="20" rx="3"
-        fill="#0f0a1f" stroke="#A855F7" stroke-width="1.5"/>
-  <!-- speaker ring on body -->
-  <circle cx="78" cy="50" r="5" fill="#0f0a1f" stroke="#A855F7" stroke-width="1.5"/>
-  <circle cx="78" cy="50" r="2.5" fill="#A855F7" opacity="0.8"/>
-  <circle cx="36" cy="50" r="9" fill="#0f0a1f" stroke="#A855F7" stroke-width="1.3"/>
-  <!-- crown in eye -->
-  <polygon points="30,55 30,46 33,50 36,45 39,50 42,46 42,55"
-           fill="#A855F7" opacity="0.9"/>
-  <!-- crown jewels -->
-  <circle cx="33" cy="48.5" r="1" fill="#FFD700"/>
-  <circle cx="36" cy="46.5" r="1.2" fill="#FFD700"/>
-  <circle cx="39" cy="48.5" r="1" fill="#FFD700"/>
+<rect width="100" height="100" rx="18" fill="url(#vm-bg)"/>
+<!-- megaphone antennae -->
+<line x1="38" y1="28" x2="26" y2="13" stroke="#FF60C0" stroke-width="2" stroke-linecap="round"/>
+<polygon points="22,9 22,17 30,13" fill="#FF60C0" filter="url(#vm-glow)"/>
+<line x1="62" y1="28" x2="74" y2="13" stroke="#FF60C0" stroke-width="2" stroke-linecap="round"/>
+<polygon points="78,9 78,17 70,13" fill="#FF60C0" filter="url(#vm-glow)"/>
+<!-- stunning face -->
+<ellipse cx="50" cy="54" rx="26" ry="28" fill="#FF1080" stroke="#FF60C0" stroke-width="1.4"/>
+<ellipse cx="50" cy="54" rx="25" ry="27" fill="#B01060" opacity="0.7"/>
+<!-- broadcast-signal iris: concentric circles emanating -->
+<circle cx="39" cy="49" r="7" fill="#200010" stroke="#FF60C0" stroke-width="1.3"/>
+<circle cx="61" cy="49" r="7" fill="#200010" stroke="#FF60C0" stroke-width="1.3"/>
+<circle cx="39" cy="49" r="5.5" fill="url(#vm-eye)"/>
+<circle cx="61" cy="49" r="5.5" fill="url(#vm-eye)"/>
+<!-- concentric signal rings in eyes -->
+<circle cx="39" cy="49" r="4.2" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.8"/>
+<circle cx="39" cy="49" r="2.8" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.9"/>
+<circle cx="39" cy="49" r="1.4" fill="#FF60C0" opacity="0.95"/>
+<circle cx="61" cy="49" r="4.2" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.8"/>
+<circle cx="61" cy="49" r="2.8" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.9"/>
+<circle cx="61" cy="49" r="1.4" fill="#FF60C0" opacity="0.95"/>
+<!-- brow ridges bold -->
+<path d="M28,41 Q37,35 45,39" fill="none" stroke="#600050" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M55,39 Q63,35 72,41" fill="none" stroke="#600050" stroke-width="2.2" stroke-linecap="round"/>
+<!-- nose -->
+<ellipse cx="50" cy="58" rx="2.5" ry="1.8" fill="#600050" opacity="0.7"/>
+<!-- bold charismatic expression -->
+<path d="M31,67 Q50,82 69,67" fill="#600050" stroke="#FF60C0" stroke-width="1.4"/>
+<path d="M31,67 Q50,74 69,67" fill="white" opacity="0.95"/>
+<path d="M38,67 L38,73" stroke="#FF60C0" stroke-width="0.7" opacity="0.5"/>
+<path d="M50,67 L50,74" stroke="#FF60C0" stroke-width="0.7" opacity="0.5"/>
+<path d="M62,67 L62,73" stroke="#FF60C0" stroke-width="0.7" opacity="0.5"/>
+<!-- glow cheeks -->
+<circle cx="26" cy="58" r="6" fill="#FF60C0" opacity="0.18"/>
+<circle cx="74" cy="58" r="6" fill="#FF60C0" opacity="0.18"/>
 </svg>

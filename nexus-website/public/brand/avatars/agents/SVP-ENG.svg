@@ -1,72 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <!-- Fork antenna (dual prong) -->
-    <line x1="50" y1="18" x2="50" y2="8" stroke="#00D9FF" stroke-width="1.5"/>
-    <line x1="44" y1="8" x2="56" y2="8" stroke="#00D9FF" stroke-width="1.5"/>
-    <circle cx="44" cy="8" r="2" fill="#00D9FF"/>
-    <circle cx="56" cy="8" r="2" fill="#00D9FF"/>
-
-    <!-- Tall rect head -->
-    <rect x="18" y="18" width="64" height="62" rx="4" fill="#0D1B2E" stroke="#00D9FF" stroke-width="2.2"/>
-    <!-- Blueprint grid lines on face (faint) -->
-    <line x1="18" y1="28" x2="82" y2="28" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="18" y1="38" x2="82" y2="38" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="18" y1="48" x2="82" y2="48" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="18" y1="58" x2="82" y2="58" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="18" y1="68" x2="82" y2="68" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="32" y1="18" x2="32" y2="80" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="46" y1="18" x2="46" y2="80" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="60" y1="18" x2="60" y2="80" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-    <line x1="74" y1="18" x2="74" y2="80" stroke="#00D9FF" stroke-width="0.4" opacity="0.3"/>
-
-    <!-- LED eyes -->
-    <rect x="28" y="25" width="12" height="8" rx="2" fill="#030108" stroke="#00D9FF" stroke-width="1"/>
-    <rect x="60" y="25" width="12" height="8" rx="2" fill="#030108" stroke="#00D9FF" stroke-width="1"/>
-    <rect x="30" y="27" width="8" height="4" rx="1" fill="#00D9FF" opacity="0.9"/>
-    <rect x="62" y="27" width="8" height="4" rx="1" fill="#00D9FF" opacity="0.9"/>
-
-    <!-- 3-chip board design in center display -->
-    <rect x="24" y="38" width="52" height="26" rx="2" fill="#060F1C" stroke="#00D9FF" stroke-width="0.8"/>
-    <!-- Chip 1 -->
-    <rect x="28" y="41" width="13" height="10" rx="1" fill="#112233" stroke="#00D9FF" stroke-width="1"/>
-    <text x="34.5" y="48.5" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace">CPU</text>
-    <!-- Chip 2 -->
-    <rect x="44" y="41" width="13" height="10" rx="1" fill="#112233" stroke="#00D9FF" stroke-width="1"/>
-    <text x="50.5" y="48.5" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace">GPU</text>
-    <!-- Chip 3 -->
-    <rect x="60" y="41" width="13" height="10" rx="1" fill="#112233" stroke="#00D9FF" stroke-width="1"/>
-    <text x="66.5" y="48.5" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace">MEM</text>
-    <!-- Inter-chip traces -->
-    <line x1="41" y1="46" x2="44" y2="46" stroke="#00D9FF" stroke-width="0.8"/>
-    <line x1="57" y1="46" x2="60" y2="46" stroke="#00D9FF" stroke-width="0.8"/>
-    <!-- Connector dots below chips -->
-    <circle cx="34.5" cy="54" r="1" fill="#00D9FF" opacity="0.7"/>
-    <circle cx="50.5" cy="54" r="1" fill="#00D9FF" opacity="0.7"/>
-    <circle cx="66.5" cy="54" r="1" fill="#00D9FF" opacity="0.7"/>
-
-    <!-- SVP badge -->
-    <rect x="24" y="67" width="16" height="8" rx="2" fill="#00D9FF" opacity="0.9"/>
-    <text x="32" y="73.5" text-anchor="middle" fill="#030108" font-size="5.5" font-weight="bold" font-family="monospace">SVP</text>
-
-    <!-- PCB traces on all 4 sides (complex) -->
-    <!-- Left side traces -->
-    <path d="M18,35 H10 V42 H14" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <circle cx="14" cy="42" r="1.2" fill="#00D9FF" opacity="0.7"/>
-    <path d="M18,52 H8 V60 H14" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <circle cx="14" cy="60" r="1.2" fill="#00D9FF" opacity="0.7"/>
-    <path d="M18,65 H10 V70" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <!-- Right side traces -->
-    <path d="M82,35 H90 V42 H86" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <circle cx="86" cy="42" r="1.2" fill="#00D9FF" opacity="0.7"/>
-    <path d="M82,52 H92 V60 H86" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <circle cx="86" cy="60" r="1.2" fill="#00D9FF" opacity="0.7"/>
-    <path d="M82,65 H90 V70" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <!-- Bottom traces -->
-    <path d="M30,80 V88 H38 V84" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <circle cx="38" cy="84" r="1.2" fill="#00D9FF" opacity="0.7"/>
-    <path d="M50,80 V92 H58 V88" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <circle cx="58" cy="88" r="1.2" fill="#00D9FF" opacity="0.7"/>
-    <path d="M70,80 V86 H62" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <!-- Top traces -->
-    <path d="M30,18 V12 H22" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <path d="M70,18 V12 H78" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="svpe-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#060E1A"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="svpe-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#12264A"/><stop offset="100%" stop-color="#0A1628"/></radialGradient>
+  <radialGradient id="svpe-eye" cx="35%" cy="30%" r="60%"><stop offset="0%" stop-color="#44FFFF"/><stop offset="100%" stop-color="#008899"/></radialGradient>
+  <filter id="svpe-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="svpe-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#svpe-bg)"/>
+<!-- Wide angular face -->
+<polygon points="20,18 80,18 76,72 24,72" fill="url(#svpe-skin)" stroke="#1A3A60" stroke-width="0.6"/>
+<!-- 2 square-tip antennae -->
+<line x1="38" y1="18" x2="36" y2="6" stroke="#00CCDD" stroke-width="1.1"/>
+<rect x="33" y="3.5" width="6" height="4" rx="0.5" fill="#00CCDD" filter="url(#svpe-glow-sm)"/>
+<line x1="62" y1="18" x2="64" y2="6" stroke="#00CCDD" stroke-width="1.1"/>
+<rect x="61" y="3.5" width="6" height="4" rx="0.5" fill="#00CCDD" filter="url(#svpe-glow-sm)"/>
+<!-- Left eye (cyan) -->
+<ellipse cx="35" cy="36" rx="7" ry="5.5" fill="url(#svpe-eye)" filter="url(#svpe-glow)"/>
+<ellipse cx="35" cy="36" rx="3" ry="3" fill="#001A22"/>
+<circle cx="33.5" cy="34.5" r="1" fill="#AAFFFF" opacity="0.9"/>
+<!-- Right eye (cyan) -->
+<ellipse cx="65" cy="36" rx="7" ry="5.5" fill="url(#svpe-eye)" filter="url(#svpe-glow)"/>
+<ellipse cx="65" cy="36" rx="3" ry="3" fill="#001A22"/>
+<circle cx="63.5" cy="34.5" r="1" fill="#AAFFFF" opacity="0.9"/>
+<!-- Third-eye forehead -->
+<ellipse cx="50" cy="24" rx="5" ry="4" fill="url(#svpe-eye)" filter="url(#svpe-glow)"/>
+<ellipse cx="50" cy="24" rx="2" ry="2" fill="#001A22"/>
+<circle cx="49" cy="23" r="0.7" fill="#AAFFFF" opacity="0.9"/>
+<!-- Technical grid / circuit pattern mouth -->
+<rect x="35" y="53" width="30" height="8" rx="1" fill="#0A1E3A" stroke="#00CCDD" stroke-width="0.5"/>
+<line x1="40" y1="53" x2="40" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="47" y1="53" x2="47" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="53" y1="53" x2="53" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="60" y1="53" x2="60" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="35" y1="57" x2="65" y2="57" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<!-- Neck -->
+<rect x="44" y="72" width="12" height="5" rx="2" fill="#0A1628" stroke="#1A3A60" stroke-width="0.5"/>
+</svg>

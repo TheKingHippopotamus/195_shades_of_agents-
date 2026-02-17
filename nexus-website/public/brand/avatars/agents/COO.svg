@@ -1,57 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+  <radialGradient id="coo-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0A1400"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="coo-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#3D6428"/><stop offset="100%" stop-color="#2D4A1E"/></radialGradient>
+  <radialGradient id="coo-eye" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#FFAA44"/><stop offset="100%" stop-color="#CC5500"/></radialGradient>
+  <filter id="coo-glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-
-<defs>
-  <radialGradient id="coo-gear" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#9CA3AF"/><stop offset="100%" stop-color="#374151"/></radialGradient>
-  <filter id="coo-glow"><feGaussianBlur stdDeviation="0.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<!-- 3 spikes: solid, mechanical style -->
-<polygon points="35,37 40,37 37.5,13" fill="#9CA3AF" opacity="0.9"/>
-<polygon points="47,36 53,36 50,8"   fill="#FFD700" opacity="0.95"/>
-<polygon points="60,37 65,37 62.5,13" fill="#9CA3AF" opacity="0.9"/>
-<!-- hex head -->
-<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="#111827" stroke="#9CA3AF" stroke-width="2"/>
-<rect x="32" y="34" width="36" height="5" rx="1" fill="#9CA3AF" opacity="0.8"/>
-<!-- center accent line gold -->
-<rect x="47" y="34" width="6" height="5" rx="1" fill="#FFD700" opacity="0.9"/>
-<!-- large gear left -->
-<circle cx="42" cy="52" r="8" fill="none" stroke="#9CA3AF" stroke-width="1.2"/>
-<circle cx="42" cy="52" r="5" fill="url(#coo-gear)"/>
-<circle cx="42" cy="52" r="2" fill="#1F2937"/>
-<!-- gear teeth left (8 teeth) -->
-<rect x="40.5" y="42.5" width="3" height="2" rx="0.4" fill="#9CA3AF"/>
-<rect x="40.5" y="59.5" width="3" height="2" rx="0.4" fill="#9CA3AF"/>
-<rect x="33.5" y="50.5" width="2" height="3" rx="0.4" fill="#9CA3AF"/>
-<rect x="49.5" y="50.5" width="2" height="3" rx="0.4" fill="#9CA3AF"/>
-<rect x="36" y="44.5" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 37 45.5)"/>
-<rect x="46.5" y="44.5" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 47.5 45.5)"/>
-<rect x="36" y="58" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 37 59)"/>
-<rect x="46.5" y="58" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 47.5 59)"/>
-<!-- small gear right (interlocking) -->
-<circle cx="58" cy="52" r="5.5" fill="none" stroke="#FFD700" stroke-width="1"/>
-<circle cx="58" cy="52" r="3.5" fill="#2A2F20"/>
-<circle cx="58" cy="52" r="1.4" fill="#1F2937"/>
-<!-- small gear teeth -->
-<rect x="56.7" y="45.5" width="2.6" height="1.8" rx="0.3" fill="#FFD700"/>
-<rect x="56.7" y="57" width="2.6" height="1.8" rx="0.3" fill="#FFD700"/>
-<rect x="51.2" y="50.6" width="1.8" height="2.6" rx="0.3" fill="#FFD700"/>
-<rect x="63" y="50.6" width="1.8" height="2.6" rx="0.3" fill="#FFD700"/>
-<!-- gear mesh contact indicator -->
-<circle cx="50.5" cy="52" r="0.7" fill="#FFD700" opacity="0.8"/>
-<!-- mechanical eyes (visor slits) -->
-<rect x="38" y="48" width="5" height="2" rx="0.8" fill="#4B5563"/>
-<rect x="57" y="48" width="5" height="2" rx="0.8" fill="#4B5563"/>
-<rect x="39" y="48.3" width="3" height="1.4" rx="0.5" fill="#FFD700" opacity="0.7"/>
-<rect x="58" y="48.3" width="3" height="1.4" rx="0.5" fill="#FFD700" opacity="0.7"/>
-<!-- flat operational mouth -->
-<line x1="44" y1="65" x2="56" y2="65" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
-<!-- body: mechanical chassis -->
-<path d="M32,75 L28,90 L50,87 L72,90 L68,75 Z" fill="#111827" stroke="#9CA3AF" stroke-width="1"/>
-<!-- bolt detail -->
-<circle cx="36" cy="82" r="1.5" fill="none" stroke="#9CA3AF" stroke-width="0.8"/>
-<circle cx="64" cy="82" r="1.5" fill="none" stroke="#9CA3AF" stroke-width="0.8"/>
-<ellipse cx="50" cy="96" rx="22" ry="3" fill="rgba(156,163,175,0.15)"/>
+<rect width="100" height="100" rx="18" fill="url(#coo-bg)"/>
+<!-- Perfect circle head -->
+<circle cx="50" cy="47" r="30" fill="url(#coo-skin)" stroke="#3D6428" stroke-width="0.7"/>
+<!-- 2x2 grid of 4 scanning eyes (orange) -->
+<ellipse cx="38" cy="38" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="38" cy="38" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<ellipse cx="62" cy="38" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="62" cy="38" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<ellipse cx="38" cy="48" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="38" cy="48" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<ellipse cx="62" cy="48" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="62" cy="48" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<!-- Straight horizontal mouth -->
+<line x1="40" y1="60" x2="60" y2="60" stroke="#1A2E0A" stroke-width="1.5"/>
+<!-- Mandible extensions from jaw -->
+<path d="M35,63 L28,68 L32,72 L38,66" fill="#2D4A1E" stroke="#3D6428" stroke-width="0.5"/>
+<path d="M65,63 L72,68 L68,72 L62,66" fill="#2D4A1E" stroke="#3D6428" stroke-width="0.5"/>
+<!-- Tactical crosshair on forehead -->
+<circle cx="50" cy="26" r="4" fill="none" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="50" y1="20" x2="50" y2="23" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="50" y1="29" x2="50" y2="32" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="44" y1="26" x2="47" y2="26" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="53" y1="26" x2="56" y2="26" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<!-- Ridge marks on skull -->
+<path d="M30,25 Q50,18 70,25" stroke="#1E3A14" stroke-width="1" fill="none" opacity="0.7"/>
+<path d="M34,22 Q50,16 66,22" stroke="#1E3A14" stroke-width="0.6" fill="none" opacity="0.4"/>
+<!-- Neck -->
+<rect x="44" y="75" width="12" height="5" rx="2" fill="#2D4A1E" stroke="#3D6428" stroke-width="0.5"/>
 </svg>

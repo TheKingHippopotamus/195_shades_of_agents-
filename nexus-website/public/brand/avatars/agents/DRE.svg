@@ -1,6 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/><ellipse cx="14" cy="63" rx="16" ry="8" fill="none" stroke="#8B5CF6" stroke-width="1.8"/><ellipse cx="14" cy="63" rx="9.6" ry="4.8" fill="none" stroke="#8B5CF6" stroke-width="0.8" opacity="0.5"/><line x1="14" y1="63" x2="22" y2="76" stroke="#8B5CF6" stroke-width="2"/><line x1="22" y1="76" x2="14" y2="76" stroke="#8B5CF6" stroke-width="1.5"/><line x1="22" y1="76" x2="30" y2="76" stroke="#8B5CF6" stroke-width="1.5"/><path d="M25.2,60 Q34,53 40,48" stroke="#8B5CF6" stroke-width="1" fill="none" opacity="0.5" stroke-dasharray="2,2"/><path d="M22,58 Q32,50 38,43" stroke="#8B5CF6" stroke-width="0.8" fill="none" opacity="0.35" stroke-dasharray="1.5,2.5"/><circle cx="34" cy="46" r="14" fill="#1a0a2e" stroke="#8B5CF6" stroke-width="1.5"/><ellipse cx="34" cy="46" rx="7" ry="14" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/><line x1="20" y1="46" x2="48" y2="46" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/><ellipse cx="34" cy="46" rx="14" ry="5.6000000000000005" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.35"/><circle cx="62" cy="32" r="14" fill="#1a0a2e" stroke="#8B5CF6" stroke-width="1.5"/>
-       <ellipse cx="62" cy="32" rx="7" ry="14" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/>
-       <line x1="48" y1="32" x2="76" y2="32" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/>
-       <rect x="55" y="28" width="14" height="10" rx="1" fill="none" stroke="#8B5CF6" stroke-width="1"/>
-       <rect x="57" y="26" width="10" height="3" rx="1" fill="none" stroke="#8B5CF6" stroke-width="0.8"/>
-       <line x1="55" y1="32" x2="69" y2="32" stroke="#8B5CF6" stroke-width="0.7"/><rect x="6" y="80" width="32" height="7" rx="2" fill="#8B5CF6" opacity="0.2" stroke="#8B5CF6" stroke-width="0.5"/><text x="22" y="85.5" text-anchor="middle" font-family="monospace" font-size="4" fill="#8B5CF6" opacity="0.9">DRE</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Orange-green hybrid head — hacker-friendly -->
+  <ellipse cx="50" cy="47" rx="25" ry="27" fill="#0d1208" stroke="#84cc16" stroke-width="1.4"/>
+  <!-- Second tone: orange tint overlay on one side -->
+  <path d="M50,20 Q75,20 75,47 Q75,74 50,74" fill="#1a0c04" opacity="0.4"/>
+  <!-- Brow: hacker angled -->
+  <path d="M25,39 Q36,34 50,36 Q60,34 75,39" fill="none" stroke="#84cc16" stroke-width="1"/>
+  <!-- Left eye: code iris (brackets + cursor) -->
+  <ellipse cx="35" cy="48" rx="8" ry="6.5" fill="#050c04" stroke="#84cc16" stroke-width="1.1"/>
+  <text x="27" y="51" font-family="monospace" font-size="7" fill="#84cc16" opacity="0.9">&lt;</text>
+  <text x="38" y="51" font-family="monospace" font-size="7" fill="#f97316" opacity="0.8">/&gt;</text>
+  <circle cx="35" cy="48" r="1.2" fill="#84cc16" opacity="0.9"/>
+  <!-- Right eye: community nodes iris -->
+  <ellipse cx="65" cy="48" rx="8" ry="6.5" fill="#050c04" stroke="#f97316" stroke-width="1.1"/>
+  <circle cx="65" cy="44" r="1.5" fill="#f97316" opacity="0.7"/>
+  <circle cx="60" cy="49" r="1.5" fill="#f97316" opacity="0.7"/>
+  <circle cx="70" cy="49" r="1.5" fill="#f97316" opacity="0.7"/>
+  <line x1="65" y1="44" x2="60" y2="49" stroke="#f97316" stroke-width="0.6" opacity="0.5"/>
+  <line x1="65" y1="44" x2="70" y2="49" stroke="#f97316" stroke-width="0.6" opacity="0.5"/>
+  <line x1="60" y1="49" x2="70" y2="49" stroke="#f97316" stroke-width="0.6" opacity="0.5"/>
+  <circle cx="65" cy="48" r="1" fill="#f97316" opacity="0.85"/>
+  <!-- Terminal brackets on cheeks -->
+  <text x="15" y="54" font-family="monospace" font-size="8" fill="#84cc16" opacity="0.6">{</text>
+  <text x="77" y="54" font-family="monospace" font-size="8" fill="#84cc16" opacity="0.6">}</text>
+  <!-- Nose -->
+  <line x1="49" y1="55" x2="49" y2="60" stroke="#84cc16" stroke-width="0.7" opacity="0.4"/>
+  <line x1="51" y1="55" x2="51" y2="60" stroke="#84cc16" stroke-width="0.7" opacity="0.4"/>
+  <!-- Mouth: hacker grin -->
+  <path d="M37,66 Q50,72 63,66" stroke="#84cc16" stroke-width="1.2" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#84cc16" opacity="0.9">DRE</text>
+</svg>

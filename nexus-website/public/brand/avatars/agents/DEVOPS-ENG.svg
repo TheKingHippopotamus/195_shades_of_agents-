@@ -1,38 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <defs>
-      <radialGradient id="de-cg" cx="50%" cy="40%" r="55%">
-        <stop offset="0%" stop-color="#7C3AED"/>
-        <stop offset="100%" stop-color="#3B0764"/>
-      </radialGradient>
-    </defs>
-    <!-- Uplink -->
-    <line x1="50" y1="11" x2="50" y2="27" stroke="#7C3AED" stroke-width="0.9" opacity="0.5"/>
-    <circle cx="50" cy="10" r="1.2" fill="#A78BFA"/>
-    <!-- Cloud body (standard size) -->
-    <ellipse cx="50" cy="48" rx="23" ry="11" fill="url(#de-cg)" stroke="#7C3AED" stroke-width="1.2"/>
-    <ellipse cx="38" cy="43" rx="11" ry="8" fill="url(#de-cg)" stroke="#7C3AED" stroke-width="1"/>
-    <ellipse cx="58" cy="43" rx="11.5" ry="8.5" fill="url(#de-cg)" stroke="#7C3AED" stroke-width="1"/>
-    <ellipse cx="50" cy="39" rx="8.5" ry="6" fill="url(#de-cg)" stroke="#7C3AED" stroke-width="0.8"/>
-    <!-- Smaller pipeline flow inside cloud -->
-    <!-- Stage dots connected by arrows -->
-    <circle cx="32" cy="47" r="3.5" fill="#2e1065" stroke="#A78BFA" stroke-width="0.7"/>
-    <text x="32" y="48.3" font-family="monospace" font-size="3" fill="#EDE9FE" text-anchor="middle">CI</text>
-    <line x1="35.5" y1="47" x2="43.5" y2="47" stroke="#F59E0B" stroke-width="1"/>
-    <polygon points="43.5,45.8 46,47 43.5,48.2" fill="#F59E0B"/>
-    <circle cx="50" cy="47" r="3.5" fill="#2e1065" stroke="#A78BFA" stroke-width="0.7"/>
-    <text x="50" y="48.3" font-family="monospace" font-size="3" fill="#EDE9FE" text-anchor="middle">QA</text>
-    <line x1="53.5" y1="47" x2="61.5" y2="47" stroke="#F59E0B" stroke-width="1"/>
-    <polygon points="61.5,45.8 64,47 61.5,48.2" fill="#F59E0B"/>
-    <circle cx="68" cy="47" r="3.5" fill="#2e1065" stroke="#22C55E" stroke-width="0.7"/>
-    <text x="68" y="48.3" font-family="monospace" font-size="3" fill="#22C55E" text-anchor="middle">CD</text>
-    <!-- Label -->
-    <text x="50" y="62" font-family="monospace" font-size="4.5" fill="#DDD6FE" text-anchor="middle">DEVOPS-ENG</text>
-    <!-- Server rack standard -->
-    <rect x="36" y="66" width="28" height="20" rx="3" fill="#1e1b4b" stroke="#7C3AED" stroke-width="1"/>
-    <rect x="39" y="69" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
-    <rect x="39" y="74" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
-    <rect x="39" y="79" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
-    <circle cx="57" cy="70.5" r="1" fill="#22C55E"/>
-    <circle cx="57" cy="75.5" r="1" fill="#22C55E"/>
-    <circle cx="57" cy="80.5" r="1" fill="#22C55E"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<defs>
+  <radialGradient id="dev-skin" cx="45%" cy="35%" r="58%">
+    <stop offset="0%" stop-color="#81A96E"/>
+    <stop offset="60%" stop-color="#4A7036"/>
+    <stop offset="100%" stop-color="#283D1D"/>
+  </radialGradient>
+  <radialGradient id="dev-iris" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#A8C890"/>
+    <stop offset="100%" stop-color="#2E4A1E"/>
+  </radialGradient>
+  <filter id="dev-glow"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- Short straight antennae (working class) -->
+<line x1="43" y1="26" x2="41" y2="14" stroke="#81A96E" stroke-width="1.3"/>
+<circle cx="41" cy="13" r="2" fill="#4A7036" stroke="#81A96E" stroke-width="0.8"/>
+<line x1="57" y1="26" x2="59" y2="14" stroke="#81A96E" stroke-width="1.3"/>
+<circle cx="59" cy="13" r="2" fill="#4A7036" stroke="#81A96E" stroke-width="0.8"/>
+<!-- Furrowed competent brow marks -->
+<line x1="34" y1="38" x2="46" y2="36" stroke="#81A96E" stroke-width="1.5" opacity="0.7"/>
+<line x1="54" y1="36" x2="66" y2="38" stroke="#81A96E" stroke-width="1.5" opacity="0.7"/>
+<!-- Working-class oval head -->
+<ellipse cx="50" cy="48" rx="25" ry="23" fill="url(#dev-skin)" stroke="#6A9058" stroke-width="1.3"/>
+<!-- Left eye: gear-cog iris -->
+<circle cx="39" cy="45" r="7.5" fill="#142008" stroke="#6A9058" stroke-width="1.2"/>
+<circle cx="39" cy="45" r="5" fill="url(#dev-iris)"/>
+<!-- Gear cog teeth -->
+<rect x="37.5" y="39.5" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="37.5" y="48" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="33.5" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="42" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<circle cx="39" cy="45" r="2.5" fill="#1E3010" stroke="#A8C890" stroke-width="0.6"/>
+<circle cx="39" cy="44" r="1" fill="#C8E0B0" filter="url(#dev-glow)"/>
+<!-- Right eye: gear-cog iris -->
+<circle cx="61" cy="45" r="7.5" fill="#142008" stroke="#6A9058" stroke-width="1.2"/>
+<circle cx="61" cy="45" r="5" fill="url(#dev-iris)"/>
+<rect x="59.5" y="39.5" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="59.5" y="48" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="55.5" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="64" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<circle cx="61" cy="45" r="2.5" fill="#1E3010" stroke="#A8C890" stroke-width="0.6"/>
+<circle cx="61" cy="44" r="1" fill="#C8E0B0" filter="url(#dev-glow)"/>
+<!-- Competent slight smile -->
+<path d="M42,57 Q50,61 58,57" fill="none" stroke="#81A96E" stroke-width="1.3" stroke-linecap="round"/>
+<!-- Body: sleeves-rolled-up look (wider shoulders) -->
+<path d="M28,68 L22,86 L50,84 L78,86 L72,68 Z" fill="#283D1D" stroke="#6A9058" stroke-width="1"/>
+<line x1="34" y1="74" x2="66" y2="74" stroke="#81A96E" stroke-width="0.7" opacity="0.5"/>
+<!-- Rolled sleeve marks -->
+<line x1="28" y1="70" x2="28" y2="76" stroke="#6A9058" stroke-width="1.5" opacity="0.6"/>
+<line x1="72" y1="70" x2="72" y2="76" stroke="#6A9058" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="50" cy="93" rx="22" ry="2.5" fill="rgba(129,169,110,0.12)"/>
+</svg>

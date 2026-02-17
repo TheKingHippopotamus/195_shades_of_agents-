@@ -1,43 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <defs>
-    <radialGradient id="motdesBlobGrad" cx="40%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#FF8EB5"/>
-      <stop offset="55%" stop-color="#FF2D78"/>
-      <stop offset="100%" stop-color="#A8004F"/>
+    <radialGradient id="mdes-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#2A1000"/>
+      <stop offset="100%" stop-color="#100600"/>
     </radialGradient>
-    <filter id="motBlur">
-      <feGaussianBlur stdDeviation="1.5" in="SourceGraphic" result="blur"/>
+    <radialGradient id="mdes-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#FFA050"/>
+      <stop offset="55%" stop-color="#E06010"/>
+      <stop offset="100%" stop-color="#803000"/>
+    </radialGradient>
+    <radialGradient id="mdes-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#FFE0C0"/>
+      <stop offset="45%" stop-color="#C08040"/>
+      <stop offset="100%" stop-color="#503010"/>
+    </radialGradient>
+    <filter id="mdes-glow">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="motdesBlobClip">
-      <path d="M 78.3 50.0 Q 66.8 66.8 72.6 58.4 Q 50.0 79.4 58.4 73.1 Q 33.6 66.4 41.8 72.9 Q 21.9 50.0 27.8 58.2 Q 32.6 32.6 27.3 41.3 Q 50.0 21.1 41.3 26.9 Q 66.6 33.4 58.3 27.3 Q 78.3 50.0 72.5 41.7 Z"/>
-    </clipPath>
+    <filter id="mdes-blur">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
-  <circle cx="14" cy="20" r="3" fill="#FF2D78" opacity="0.55"/>
-  <circle cx="83" cy="18" r="2.5" fill="#FF8EB5" opacity="0.5"/>
-  <circle cx="12" cy="70" r="2.5" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="84" cy="72" r="3" fill="#FF6B35" opacity="0.5"/>
-  <circle cx="30" cy="86" r="2" fill="#FF2D78" opacity="0.4"/>
-  <!-- Dynamic brush tail (wider) -->
-  <path d="M 62 68 Q 78 76 83 90 Q 86 97 81 96 Q 76 95 71 83 Q 67 73 62 68 Z" fill="#FF2D78" opacity="0.42"/>
-  <path d="M 78.3 50.0 Q 66.8 66.8 72.6 58.4 Q 50.0 79.4 58.4 73.1 Q 33.6 66.4 41.8 72.9 Q 21.9 50.0 27.8 58.2 Q 32.6 32.6 27.3 41.3 Q 50.0 21.1 41.3 26.9 Q 66.6 33.4 58.3 27.3 Q 78.3 50.0 72.5 41.7 Z" fill="url(#motdesBlobGrad)"/>
-  <!-- ANIMATION FRAMES: 3 sequential keyframe boxes with motion trail -->
-  <g clip-path="url(#motdesBlobClip)">
-    <!-- Motion trail (ghost frame 1 — leftmost, most faded) -->
-    <rect x="28" y="43" width="12" height="14" rx="1.5" fill="#FF2D78" opacity="0.15" filter="url(#motBlur)"/>
-    <!-- Ghost frame 2 (middle) -->
-    <rect x="40" y="43" width="12" height="14" rx="1.5" fill="#FF2D78" opacity="0.35" filter="url(#motBlur)"/>
-    <!-- Current/active frame 3 (rightmost, crisp) -->
-    <rect x="52" y="40" width="16" height="18" rx="1.5" fill="#FF2D78" opacity="0.8" stroke="#FFD1B8" stroke-width="0.9"/>
-    <!-- Play triangle inside active frame -->
-    <polygon points="57,47 66,49 57,51" fill="#FFD1B8"/>
-    <!-- Motion lines connecting frames -->
-    <line x1="40" y1="50" x2="42" y2="50" stroke="#FFD1B8" stroke-width="0.7" opacity="0.6"/>
-    <line x1="52" y1="50" x2="54" y2="50" stroke="#FFD1B8" stroke-width="0.7" opacity="0.4"/>
-    <!-- Speed lines (horizontal dashes for velocity feel) -->
-    <line x1="26" y1="46" x2="30" y2="46" stroke="#FF8EB5" stroke-width="0.6" opacity="0.5"/>
-    <line x1="26" y1="50" x2="29" y2="50" stroke="#FF8EB5" stroke-width="0.6" opacity="0.4"/>
-    <line x1="26" y1="54" x2="30" y2="54" stroke="#FF8EB5" stroke-width="0.6" opacity="0.5"/>
-  </g>
+  <rect width="100" height="100" fill="url(#mdes-bg)" rx="10"/>
+  <circle cx="10" cy="10" r="0.8" fill="#FFA050" opacity="0.5"/>
+  <circle cx="90" cy="12" r="0.6" fill="#E06010" opacity="0.4"/>
+  <!-- Dynamic face — bright orange -->
+  <ellipse cx="50" cy="54" rx="23" ry="26" fill="url(#mdes-skin)"/>
+  <!-- Antennae in motion blur — multiple ghost lines -->
+  <line x1="43" y1="29" x2="36" y2="10" stroke="#FFA050" stroke-width="2.5" stroke-linecap="round" opacity="0.25" filter="url(#mdes-blur)"/>
+  <line x1="43" y1="29" x2="38" y2="10" stroke="#FFA050" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="43" y1="29" x2="40" y2="10" stroke="#FFA050" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+  <line x1="57" y1="29" x2="64" y2="10" stroke="#FFA050" stroke-width="2.5" stroke-linecap="round" opacity="0.25" filter="url(#mdes-blur)"/>
+  <line x1="57" y1="29" x2="62" y2="10" stroke="#FFA050" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="57" y1="29" x2="60" y2="10" stroke="#FFA050" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+  <!-- Antennae tips -->
+  <circle cx="40" cy="10" r="2.5" fill="#FFE0C0" filter="url(#mdes-glow)"/>
+  <circle cx="60" cy="10" r="2.5" fill="#FFE0C0" filter="url(#mdes-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8.5" fill="#180800"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8.5" fill="#180800"/>
+  <!-- Film-frame iris left (timeline strips) -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#mdes-iris)"/>
+  <!-- Film frame markers -->
+  <rect x="35" y="47" width="10" height="8" rx="0.5" fill="none" stroke="#FFE0C0" stroke-width="0.6" opacity="0.7"/>
+  <rect x="35" y="47" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <rect x="35" y="53" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <rect x="43.5" y="47" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <rect x="43.5" y="53" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <!-- Film-frame iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#mdes-iris)"/>
+  <rect x="55" y="47" width="10" height="8" rx="0.5" fill="none" stroke="#FFE0C0" stroke-width="0.6" opacity="0.7"/>
+  <rect x="55" y="47" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <rect x="55" y="53" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <rect x="63.5" y="47" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <rect x="63.5" y="53" width="1.5" height="2" fill="#FFE0C0" opacity="0.6"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#0A0400"/>
+  <circle cx="61" cy="50" r="2" fill="#0A0400"/>
+  <circle cx="42" cy="49" r="0.9" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="62" cy="49" r="0.9" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#803000" opacity="0.55"/>
+  <!-- Energetic wide grin -->
+  <path d="M 40 67 Q 50 77 60 67" fill="none" stroke="#E06010" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Cheek energy marks -->
+  <path d="M 28 52 Q 31 50 28 48" fill="none" stroke="#FFA050" stroke-width="0.8" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 72 52 Q 69 50 72 48" fill="none" stroke="#FFA050" stroke-width="0.8" opacity="0.6" stroke-linecap="round"/>
 </svg>

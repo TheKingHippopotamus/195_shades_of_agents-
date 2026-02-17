@@ -1,62 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <defs>
-    <radialGradient id="uidesBlobGrad" cx="40%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#FF8EB5"/>
-      <stop offset="55%" stop-color="#FF2D78"/>
-      <stop offset="100%" stop-color="#A8004F"/>
+    <radialGradient id="uides-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#0A0828"/>
+      <stop offset="100%" stop-color="#040310"/>
     </radialGradient>
-    <clipPath id="uidesBlobClip">
-      <path d="M 76.0 50.0 Q 66.7 66.7 71.4 58.4 Q 50.0 77.6 58.4 72.1 Q 34.0 66.0 42.0 71.8 Q 23.2 50.0 28.6 58.0 Q 33.1 33.1 28.2 41.5 Q 50.0 22.7 41.5 27.9 Q 66.4 33.6 58.2 28.2 Q 76.0 50.0 71.2 41.8 Z"/>
-    </clipPath>
+    <radialGradient id="uides-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#8090FF"/>
+      <stop offset="55%" stop-color="#4850C8"/>
+      <stop offset="100%" stop-color="#18206A"/>
+    </radialGradient>
+    <radialGradient id="uides-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#F0F8FF"/>
+      <stop offset="45%" stop-color="#80A8D8"/>
+      <stop offset="100%" stop-color="#203050"/>
+    </radialGradient>
+    <filter id="uides-glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
-  <circle cx="14" cy="20" r="2" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="83" cy="18" r="2" fill="#FF8EB5" opacity="0.4"/>
-  <circle cx="12" cy="70" r="2" fill="#FF2D78" opacity="0.5"/>
-  <circle cx="84" cy="72" r="2" fill="#FF6B35" opacity="0.4"/>
-  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.36"/>
-  <path d="M 76.0 50.0 Q 66.7 66.7 71.4 58.4 Q 50.0 77.6 58.4 72.1 Q 34.0 66.0 42.0 71.8 Q 23.2 50.0 28.6 58.0 Q 33.1 33.1 28.2 41.5 Q 50.0 22.7 41.5 27.9 Q 66.4 33.6 58.2 28.2 Q 76.0 50.0 71.2 41.8 Z" fill="url(#uidesBlobGrad)"/>
-  <!-- PIXEL GRID: 5x5 grid of small squares -->
-  <g clip-path="url(#uidesBlobClip)">
-    <!-- Grid squares arranged 5x5, some filled to form a heart shape -->
-    <!-- Row 1 (top) -->
-    <rect x="35" y="37" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <rect x="40" y="37" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
-    <rect x="45" y="37" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <rect x="50" y="37" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
-    <rect x="55" y="37" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <!-- Row 2 -->
-    <rect x="35" y="42" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
-    <rect x="40" y="42" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
-    <rect x="45" y="42" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
-    <rect x="50" y="42" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
-    <rect x="55" y="42" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
-    <!-- Row 3 -->
-    <rect x="35" y="47" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <rect x="40" y="47" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
-    <rect x="45" y="47" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.9"/>
-    <rect x="50" y="47" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
-    <rect x="55" y="47" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <!-- Row 4 -->
-    <rect x="35" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.2"/>
-    <rect x="40" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <rect x="45" y="52" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
-    <rect x="50" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <rect x="55" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.2"/>
-    <!-- Row 5 (bottom) -->
-    <rect x="35" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
-    <rect x="40" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
-    <rect x="45" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
-    <rect x="50" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
-    <rect x="55" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
-    <!-- Grid lines overlay -->
-    <line x1="39" y1="36" x2="39" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="44" y1="36" x2="44" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="49" y1="36" x2="49" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="54" y1="36" x2="54" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="34" y1="41" x2="60" y2="41" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="34" y1="46" x2="60" y2="46" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="34" y1="51" x2="60" y2="51" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-    <line x1="34" y1="56" x2="60" y2="56" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
-  </g>
+  <rect width="100" height="100" fill="url(#uides-bg)" rx="10"/>
+  <circle cx="9" cy="9" r="0.7" fill="#8090FF" opacity="0.5"/>
+  <circle cx="91" cy="12" r="0.5" fill="#80A8D8" opacity="0.4"/>
+  <!-- Geometric angular head — bright blue-violet -->
+  <path d="M 27 38 L 30 28 L 50 25 L 70 28 L 73 38 L 73 65 Q 73 79 50 80 Q 27 79 27 65 Z" fill="url(#uides-skin)"/>
+  <!-- Sharp geometric antennae -->
+  <path d="M 42 26 L 38 9" stroke="#8090FF" stroke-width="1.8" stroke-linecap="square"/>
+  <path d="M 58 26 L 62 9" stroke="#8090FF" stroke-width="1.8" stroke-linecap="square"/>
+  <!-- Diamond tips -->
+  <polygon points="38,6 40.5,9 38,12 35.5,9" fill="#80A8D8" filter="url(#uides-glow)"/>
+  <polygon points="62,6 64.5,9 62,12 59.5,9" fill="#80A8D8" filter="url(#uides-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8" fill="#08061A"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8" fill="#08061A"/>
+  <!-- Layout-grid iris left -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#uides-iris)"/>
+  <line x1="36" y1="49" x2="44" y2="49" stroke="#8090FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="36" y1="51" x2="44" y2="51" stroke="#8090FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="36" y1="53" x2="44" y2="53" stroke="#8090FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="38.5" y1="47" x2="38.5" y2="55" stroke="#8090FF" stroke-width="0.5" opacity="0.6"/>
+  <line x1="41.5" y1="47" x2="41.5" y2="55" stroke="#8090FF" stroke-width="0.5" opacity="0.6"/>
+  <!-- Layout-grid iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#uides-iris)"/>
+  <line x1="56" y1="49" x2="64" y2="49" stroke="#8090FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="56" y1="51" x2="64" y2="51" stroke="#8090FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="56" y1="53" x2="64" y2="53" stroke="#8090FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="58.5" y1="47" x2="58.5" y2="55" stroke="#8090FF" stroke-width="0.5" opacity="0.6"/>
+  <line x1="61.5" y1="47" x2="61.5" y2="55" stroke="#8090FF" stroke-width="0.5" opacity="0.6"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#040312"/>
+  <circle cx="61" cy="50" r="2" fill="#040312"/>
+  <circle cx="42" cy="49" r="0.9" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="62" cy="49" r="0.9" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Sharp artful forehead mark -->
+  <path d="M 46 34 L 50 30 L 54 34" fill="none" stroke="#80A8D8" stroke-width="0.9" stroke-linecap="square" opacity="0.7"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#18206A" opacity="0.6"/>
+  <!-- Confident straight expression -->
+  <path d="M 43 69 L 57 69" fill="none" stroke="#8090FF" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

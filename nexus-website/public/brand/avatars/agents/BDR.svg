@@ -1,44 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#1a1f3a"/>
+  <radialGradient id="bdr-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1a1000"/>
     <stop offset="100%" stop-color="#030108"/>
   </radialGradient>
+  <radialGradient id="bdr-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FFB840"/>
+    <stop offset="55%" stop-color="#D07800"/>
+    <stop offset="100%" stop-color="#7a4200"/>
+  </radialGradient>
+  <radialGradient id="bdr-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFE0A0"/>
+    <stop offset="50%" stop-color="#FF8800"/>
+    <stop offset="100%" stop-color="#1a0800"/>
+  </radialGradient>
+  <filter id="bdr-glow">
+    <feGaussianBlur stdDeviation="1.2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 </defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<!-- ambient ring -->
-  <circle cx="50" cy="50" r="35" fill="rgba(249,115,22,0.07)" stroke="#F97316" stroke-width="0.4" opacity="0.35"/>
-  <!-- U arch body -->
-  <path d="M34,26 L34,56 Q34,76 50,76 Q66,76 66,56 L66,26"
-        stroke="#F97316" stroke-width="3.8" fill="none" stroke-linecap="round"/>
-  <!-- N cap -->
-  <rect x="27" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
-  <text x="34" y="28.5" text-anchor="middle" fill="#0d0800"
-        font-size="5.5" font-weight="bold" font-family="monospace">N</text>
-  <!-- S cap -->
-  <rect x="59" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
-  <text x="66" y="28.5" text-anchor="middle" fill="#0d0800"
-        font-size="5.5" font-weight="bold" font-family="monospace">S</text>
-  <circle cx="50" cy="50" r="13" fill="#0d0800" stroke="#F97316" stroke-width="1.5"/>
-  <!-- phone handset -->
-  <path d="M43,44 Q43,41 46,41 L48,43 Q48,45 46,46 Q48,50 54,52 Q55,50 57,50 L59,52 Q59,55 56,55 Q50,55 46,51 Q42,47 43,44 Z"
-        fill="#F97316" opacity="0.95"/>
-  <!-- call arc -->
-  <path d="M58,44 Q64,50 58,56" stroke="#F97316" stroke-width="1.3" fill="none" opacity="0.6" stroke-linecap="round"/>
-  <line x1="67.0" y1="50.0" x2="82.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="78.0,52.0 78.0,48.0 82.0,50.0" fill="#F97316" opacity="0.75"/>
-<line x1="62.0" y1="62.0" x2="72.6" y2="72.6" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="68.4,71.2 71.2,68.4 72.6,72.6" fill="#F97316" opacity="0.75"/>
-<line x1="50.0" y1="67.0" x2="50.0" y2="82.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="48.0,78.0 52.0,78.0 50.0,82.0" fill="#F97316" opacity="0.75"/>
-<line x1="38.0" y1="62.0" x2="27.4" y2="72.6" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="28.8,68.4 31.6,71.2 27.4,72.6" fill="#F97316" opacity="0.75"/>
-<line x1="33.0" y1="50.0" x2="18.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="22.0,48.0 22.0,52.0 18.0,50.0" fill="#F97316" opacity="0.75"/>
-<line x1="38.0" y1="38.0" x2="27.4" y2="27.4" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="31.6,28.8 28.8,31.6 27.4,27.4" fill="#F97316" opacity="0.75"/>
-<line x1="50.0" y1="33.0" x2="50.0" y2="18.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="52.0,22.0 48.0,22.0 50.0,18.0" fill="#F97316" opacity="0.75"/>
-<line x1="62.0" y1="38.0" x2="72.6" y2="27.4" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
-<polygon points="71.2,31.6 68.4,28.8 72.6,27.4" fill="#F97316" opacity="0.75"/>
+<rect width="100" height="100" rx="18" fill="url(#bdr-bg)"/>
+<!-- young eager antennae pointing outward -->
+<line x1="40" y1="28" x2="30" y2="14" stroke="#FFB840" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="30" cy="13" r="2.2" fill="#FFB840" filter="url(#bdr-glow)"/>
+<line x1="60" y1="28" x2="70" y2="14" stroke="#FFB840" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="70" cy="13" r="2.2" fill="#FFB840" filter="url(#bdr-glow)"/>
+<!-- young round head -->
+<circle cx="50" cy="54" r="26" fill="url(#bdr-skin)" stroke="#D07800" stroke-width="1.2"/>
+<!-- eager raised brows -->
+<path d="M30,43 Q37,37 44,41" fill="none" stroke="#7a4200" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M56,41 Q63,37 70,43" fill="none" stroke="#7a4200" stroke-width="1.6" stroke-linecap="round"/>
+<!-- wide eager eyes with phone iris -->
+<circle cx="39" cy="50" r="7.5" fill="#1a0800" stroke="#FFB840" stroke-width="1.3"/>
+<circle cx="61" cy="50" r="7.5" fill="#1a0800" stroke="#FFB840" stroke-width="1.3"/>
+<circle cx="39" cy="50" r="6" fill="url(#bdr-eye)"/>
+<circle cx="61" cy="50" r="6" fill="url(#bdr-eye)"/>
+<!-- phone/handset shape in iris -->
+<path d="M37,47 Q36,48 36,50 Q36,52 37,53 Q38,53 38,52 Q38,51 39,51 Q40,51 40,52 Q40,53 41,53 Q42,52 42,50 Q42,48 41,47 Q40,47 40,48 Q40,49 39,49 Q38,49 38,48 Z" fill="#D07800" opacity="0.8" stroke="#FFB840" stroke-width="0.3"/>
+<path d="M59,47 Q58,48 58,50 Q58,52 59,53 Q60,53 60,52 Q60,51 61,51 Q62,51 62,52 Q62,53 63,53 Q64,52 64,50 Q64,48 63,47 Q62,47 62,48 Q62,49 61,49 Q60,49 60,48 Z" fill="#D07800" opacity="0.8" stroke="#FFB840" stroke-width="0.3"/>
+<circle cx="37" cy="47" r="1" fill="white" opacity="0.9"/>
+<circle cx="59" cy="47" r="1" fill="white" opacity="0.9"/>
+<!-- nose -->
+<ellipse cx="50" cy="58" rx="2" ry="1.5" fill="#7a4200" opacity="0.6"/>
+<!-- determined expression -->
+<path d="M35,67 Q50,74 65,67" fill="#7a4200" stroke="#D07800" stroke-width="1"/>
+<path d="M35,67 Q50,71 65,67" fill="white" opacity="0.85"/>
+<path d="M41,67 L41,71" stroke="#D07800" stroke-width="0.6" opacity="0.5"/>
+<path d="M50,67 L50,71" stroke="#D07800" stroke-width="0.6" opacity="0.5"/>
+<path d="M59,67 L59,71" stroke="#D07800" stroke-width="0.6" opacity="0.5"/>
+<!-- hunger marks on forehead -->
+<path d="M46,34 L47,37" stroke="#FFB840" stroke-width="0.8" opacity="0.6"/>
+<path d="M50,33 L50,36" stroke="#FFB840" stroke-width="0.8" opacity="0.6"/>
+<path d="M54,34 L53,37" stroke="#FFB840" stroke-width="0.8" opacity="0.6"/>
 </svg>

@@ -1,32 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-  <defs>
-    <radialGradient id="pmDiamondGrad" cx="45%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#FFD1B8"/>
-      <stop offset="50%" stop-color="#FF6B35"/>
-      <stop offset="100%" stop-color="#CC3D00"/>
-    </radialGradient>
-    <radialGradient id="pmCenterGrad" cx="40%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#FFE0CC"/>
-      <stop offset="100%" stop-color="#FF5200"/>
-    </radialGradient>
-  </defs>
-  <circle cx="50" cy="50" r="42" fill="#1A0A00"/>
-  <!-- Standard 8 rays -->
-  <g opacity="0.2" stroke="#FF6B35" stroke-width="0.5">
-    <line x1="50" y1="8" x2="50" y2="0"/>
-    <line x1="50" y1="92" x2="50" y2="100"/>
-    <line x1="8" y1="50" x2="0" y2="50"/>
-    <line x1="92" y1="50" x2="100" y2="50"/>
-    <line x1="21" y1="21" x2="14" y2="14"/>
-    <line x1="79" y1="21" x2="86" y2="14"/>
-    <line x1="21" y1="79" x2="14" y2="86"/>
-    <line x1="79" y1="79" x2="86" y2="86"/>
-  </g>
-  <path d="M 50 23 L 74 50 L 50 74 L 26 50 Z" fill="url(#pmDiamondGrad)" stroke="#FFD1B8" stroke-width="0.8"/>
-  <path d="M 50 23 L 66 50 L 50 45 L 34 50 Z" fill="#FFB085" opacity="0.35"/>
-  <!-- Solid gem center: concentric diamond shapes -->
-  <path d="M 50 39 L 60 50 L 50 60 L 40 50 Z" fill="url(#pmCenterGrad)"/>
-  <path d="M 50 44 L 55 50 L 50 55 L 45 50 Z" fill="#FFE0CC" opacity="0.8"/>
-  <!-- Center sparkle dot -->
-  <circle cx="50" cy="48" r="1.5" fill="white" opacity="0.9"/>
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<defs>
+  <radialGradient id="pm-skin" cx="45%" cy="35%" r="58%">
+    <stop offset="0%" stop-color="#5888C8"/>
+    <stop offset="60%" stop-color="#2058A0"/>
+    <stop offset="100%" stop-color="#0C1E40"/>
+  </radialGradient>
+  <radialGradient id="pm-iris" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#90C8F0"/>
+    <stop offset="50%" stop-color="#2068A8"/>
+    <stop offset="100%" stop-color="#081828"/>
+  </radialGradient>
+  <filter id="pm-glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- Standard 2 antennae -->
+<line x1="42" y1="26" x2="38" y2="13" stroke="#5080B0" stroke-width="1.2"/>
+<circle cx="37" cy="12" r="2.2" fill="#2058A0" stroke="#6898C8" stroke-width="0.8"/>
+<line x1="58" y1="26" x2="62" y2="13" stroke="#5080B0" stroke-width="1.2"/>
+<circle cx="63" cy="12" r="2.2" fill="#2058A0" stroke="#6898C8" stroke-width="0.8"/>
+<!-- Friendly oval head -->
+<ellipse cx="50" cy="49" rx="24" ry="24" fill="url(#pm-skin)" stroke="#4070A8" stroke-width="1.3"/>
+<!-- Open friendly brow -->
+<path d="M32,38 Q40,35 47,37" fill="none" stroke="#2058A0" stroke-width="1.2" opacity="0.8"/>
+<path d="M53,37 Q60,35 68,38" fill="none" stroke="#2058A0" stroke-width="1.2" opacity="0.8"/>
+<!-- Left eye: user-journey map iris -->
+<circle cx="38" cy="47" r="8" fill="#081428" stroke="#4070A8" stroke-width="1.2"/>
+<circle cx="38" cy="47" r="5.5" fill="url(#pm-iris)"/>
+<!-- Curved user path in iris -->
+<path d="M33.5,50 Q36,45 38,47 Q40,50 42.5,46" fill="none" stroke="#C0E0FF" stroke-width="0.8" opacity="0.9"/>
+<!-- Path waypoints -->
+<circle cx="33.5" cy="50" r="0.8" fill="#F59E0B" opacity="0.9"/>
+<circle cx="38" cy="47" r="0.8" fill="#22C55E" opacity="0.9"/>
+<circle cx="42.5" cy="46" r="0.8" fill="#60A8FF" opacity="0.9"/>
+<circle cx="38" cy="46" r="0.9" fill="#C8EAFF" filter="url(#pm-glow)"/>
+<!-- Right eye: user-journey map iris -->
+<circle cx="62" cy="47" r="8" fill="#081428" stroke="#4070A8" stroke-width="1.2"/>
+<circle cx="62" cy="47" r="5.5" fill="url(#pm-iris)"/>
+<path d="M57.5,50 Q60,45 62,47 Q64,50 66.5,46" fill="none" stroke="#C0E0FF" stroke-width="0.8" opacity="0.9"/>
+<circle cx="57.5" cy="50" r="0.8" fill="#F59E0B" opacity="0.9"/>
+<circle cx="62" cy="47" r="0.8" fill="#22C55E" opacity="0.9"/>
+<circle cx="66.5" cy="46" r="0.8" fill="#60A8FF" opacity="0.9"/>
+<circle cx="62" cy="46" r="0.9" fill="#C8EAFF" filter="url(#pm-glow)"/>
+<!-- Open friendly smile -->
+<path d="M39,59 Q50,66 61,59" fill="none" stroke="#5888C8" stroke-width="1.5" stroke-linecap="round"/>
+<!-- Body -->
+<path d="M30,70 L26,86 L50,84 L74,86 L70,70 Z" fill="#0C1E40" stroke="#4070A8" stroke-width="1"/>
+<line x1="35" y1="77" x2="65" y2="77" stroke="#2058A0" stroke-width="0.7" opacity="0.6"/>
+<ellipse cx="50" cy="93" rx="20" ry="2.5" fill="rgba(88,136,200,0.15)"/>
 </svg>

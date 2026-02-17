@@ -1,47 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <!-- Single straight antenna -->
-    <line x1="50" y1="20" x2="50" y2="8" stroke="#00D9FF" stroke-width="1.8"/>
-    <circle cx="50" cy="7" r="2.5" fill="#00D9FF"/>
-    <circle cx="50" cy="7" r="1" fill="#030108"/>
-
-    <!-- Clean rect head -->
-    <rect x="22" y="20" width="56" height="54" rx="5" fill="#080E1E" stroke="#00D9FF" stroke-width="2"/>
-
-    <!-- Single large chip center -->
-    <rect x="30" y="28" width="40" height="28" rx="3" fill="#0F1F35" stroke="#00D9FF" stroke-width="1.5"/>
-    <!-- chip pins left -->
-    <rect x="24" y="32" width="6" height="3" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="24" y="38" width="6" height="3" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="24" y="44" width="6" height="3" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <!-- chip pins right -->
-    <rect x="70" y="32" width="6" height="3" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="70" y="38" width="6" height="3" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="70" y="44" width="6" height="3" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <!-- chip pins top -->
-    <rect x="36" y="22" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="43" y="22" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="50" y="22" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="57" y="22" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <!-- chip pins bottom -->
-    <rect x="36" y="56" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="43" y="56" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="50" y="56" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <rect x="57" y="56" width="3" height="6" rx="1" fill="#00D9FF" opacity="0.7"/>
-    <!-- VP text inside chip -->
-    <text x="50" y="45" text-anchor="middle" fill="#00D9FF" font-size="10" font-weight="bold" font-family="monospace" opacity="0.9">VP</text>
-
-    <!-- VP badge corner (top-right) -->
-    <rect x="65" y="22" width="11" height="7" rx="2" fill="#00D9FF"/>
-    <text x="70.5" y="27.5" text-anchor="middle" fill="#030108" font-size="4.5" font-weight="bold" font-family="monospace">VP</text>
-
-    <!-- 2 side ports (minimal) -->
-    <rect x="16" y="48" width="6" height="8" rx="2" fill="#0F1F35" stroke="#00D9FF" stroke-width="1"/>
-    <rect x="78" y="48" width="6" height="8" rx="2" fill="#0F1F35" stroke="#00D9FF" stroke-width="1"/>
-    <line x1="19" y1="52" x2="22" y2="52" stroke="#00D9FF" stroke-width="0.8"/>
-    <line x1="78" y1="52" x2="81" y2="52" stroke="#00D9FF" stroke-width="0.8"/>
-
-    <!-- Status bar bottom -->
-    <rect x="28" y="62" width="44" height="7" rx="2" fill="#0F1F35" stroke="#00D9FF" stroke-width="0.7"/>
-    <rect x="30" y="63.5" width="28" height="4" rx="1.5" fill="#00D9FF" opacity="0.6"/>
-    <circle cx="68" cy="65.5" r="2" fill="#22C55E" opacity="0.9"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="vpe-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0D1117"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="vpe-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#3A4E64"/><stop offset="100%" stop-color="#2C3E50"/></radialGradient>
+  <radialGradient id="vpe-eye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7ABACC"/><stop offset="100%" stop-color="#2A5A70"/></radialGradient>
+  <filter id="vpe-glow-sm"><feGaussianBlur stdDeviation="0.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#vpe-bg)"/>
+<!-- Square jaw face -->
+<rect x="22" y="16" width="56" height="60" rx="8" fill="url(#vpe-skin)" stroke="#3A5070" stroke-width="0.6"/>
+<!-- Gear-cog outline on forehead -->
+<circle cx="50" cy="28" r="6" fill="none" stroke="#5A8AAA" stroke-width="1"/>
+<circle cx="50" cy="28" r="3.5" fill="none" stroke="#5A8AAA" stroke-width="0.7"/>
+<!-- Gear teeth -->
+<rect x="48.5" y="21" width="3" height="2" rx="0.3" fill="#5A8AAA"/>
+<rect x="48.5" y="33" width="3" height="2" rx="0.3" fill="#5A8AAA"/>
+<rect x="43" y="26.5" width="2" height="3" rx="0.3" fill="#5A8AAA"/>
+<rect x="55" y="26.5" width="2" height="3" rx="0.3" fill="#5A8AAA"/>
+<!-- 2 antennae with blinking square nodes -->
+<line x1="38" y1="18" x2="36" y2="6" stroke="#5A8AAA" stroke-width="1"/>
+<rect x="33.5" y="3.5" width="5" height="4" rx="0.3" fill="#7ABACC" filter="url(#vpe-glow-sm)"/>
+<line x1="62" y1="18" x2="64" y2="6" stroke="#5A8AAA" stroke-width="1"/>
+<rect x="61.5" y="3.5" width="5" height="4" rx="0.3" fill="#7ABACC" filter="url(#vpe-glow-sm)"/>
+<!-- Left rectangular eye with scanning bars -->
+<rect x="27" y="38" width="18" height="10" rx="1.5" fill="url(#vpe-eye)"/>
+<line x1="27" y1="41" x2="45" y2="41" stroke="#1A3A4A" stroke-width="1.2"/>
+<line x1="27" y1="44" x2="45" y2="44" stroke="#1A3A4A" stroke-width="0.6" opacity="0.5"/>
+<!-- Right rectangular eye -->
+<rect x="55" y="38" width="18" height="10" rx="1.5" fill="url(#vpe-eye)"/>
+<line x1="55" y1="41" x2="73" y2="41" stroke="#1A3A4A" stroke-width="1.2"/>
+<line x1="55" y1="44" x2="73" y2="44" stroke="#1A3A4A" stroke-width="0.6" opacity="0.5"/>
+<!-- Neutral expression -->
+<line x1="36" y1="60" x2="64" y2="60" stroke="#2A3E52" stroke-width="1.3"/>
+<!-- Neck -->
+<rect x="44" y="74" width="12" height="5" rx="2" fill="#2C3E50" stroke="#3A5070" stroke-width="0.5"/>
+</svg>

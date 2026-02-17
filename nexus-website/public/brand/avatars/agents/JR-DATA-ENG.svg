@@ -1,1 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/><path d="M50,27 L50,18 L54,14" stroke="#FF6B35" stroke-width="1" fill="none"/><circle cx="54" cy="13" r="2" fill="#FF6B35" opacity="0.6"/><rect x="24" y="27" width="52" height="48" rx="4" fill="#0D1526" stroke="#FF6B35" stroke-width="1.5"/><rect x="30" y="32" width="40" height="26" rx="2" fill="#030B18" stroke="#FF6B35" stroke-width="0.6" opacity="0.85"/><circle cx="36" cy="55" r="2" fill="#FF6B35" opacity="0.8"/><circle cx="41" cy="50" r="2" fill="#FF6B35" opacity="0.7"/><circle cx="46" cy="52" r="2" fill="#FF6B35" opacity="0.8"/><circle cx="51" cy="46" r="2" fill="#FF6B35" opacity="0.9"/><circle cx="56" cy="48" r="2" fill="#FF6B35" opacity="0.7"/><circle cx="61" cy="43" r="2" fill="#FF6B35" opacity="0.85"/><circle cx="64" cy="45" r="2" fill="#00D9FF" opacity="0.7"/><line x1="33" y1="35" x2="33" y2="58" stroke="#00D9FF" stroke-width="0.8" opacity="0.5"/><line x1="33" y1="58" x2="67" y2="58" stroke="#00D9FF" stroke-width="0.8" opacity="0.5"/><rect x="58" y="35" width="8" height="8" rx="1" fill="#FFD43B" opacity="0.7"/><line x1="62" y1="35" x2="62" y2="43" stroke="#030B18" stroke-width="0.8"/><line x1="59" y1="38" x2="65" y2="38" stroke="#030B18" stroke-width="0.6" opacity="0.6"/><line x1="59" y1="40" x2="65" y2="40" stroke="#030B18" stroke-width="0.6" opacity="0.6"/><rect x="33" y="62" width="34" height="5.5" rx="2" fill="#030B18" stroke="#FF6B35" stroke-width="0.6"/><circle cx="40" cy="64.5" r="0.9" fill="#FF6B35" opacity="0.5"/><circle cx="46" cy="64.5" r="0.9" fill="#FF6B35" opacity="0.5"/><circle cx="52" cy="64.5" r="0.9" fill="#FF6B35" opacity="0.5"/><circle cx="58" cy="64.5" r="0.9" fill="#FF6B35" opacity="0.5"/><rect x="20" y="40" width="4" height="5" rx="2" fill="#FF6B35" opacity="0.4"/><rect x="76" y="40" width="4" height="5" rx="2" fill="#FF6B35" opacity="0.4"/><path d="M24,50 H20" stroke="#FF6B35" stroke-width="0.6" opacity="0.3"/><path d="M76,50 H80" stroke="#FF6B35" stroke-width="0.6" opacity="0.3"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="jde-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D0A28"/>
+      <stop offset="100%" stop-color="#050316"/>
+    </radialGradient>
+    <radialGradient id="jde-skin" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#AABEFF"/>
+      <stop offset="100%" stop-color="#667EEA"/>
+    </radialGradient>
+    <filter id="jde-glow">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="url(#jde-bg)"/>
+  <!-- Messy left antenna - bent/crooked -->
+  <path d="M37,23 Q28,16 32,8" stroke="#AABEFF" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="32" cy="7" r="2" fill="#C4B5FD" filter="url(#jde-glow)"/>
+  <!-- Messy right antenna - bent other way -->
+  <path d="M63,23 Q74,14 70,8" stroke="#AABEFF" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="70" cy="7" r="2" fill="#C4B5FD" filter="url(#jde-glow)"/>
+  <!-- Wide youthful face -->
+  <ellipse cx="50" cy="54" rx="31" ry="28" fill="url(#jde-skin)" stroke="#667EEA" stroke-width="1.8"/>
+  <!-- Left eye socket - big -->
+  <ellipse cx="36" cy="51" rx="9.5" ry="10" fill="#070416" stroke="#AABEFF" stroke-width="1.2"/>
+  <!-- Left iris - question mark pupil -->
+  <circle cx="36" cy="51" r="7" fill="#0F0830"/>
+  <text x="36" y="55" font-family="serif" font-size="11" font-weight="bold" fill="#AABEFF" text-anchor="middle" opacity="0.9">?</text>
+  <circle cx="36" cy="51" r="0.8" fill="#0F0830" opacity="0"/>
+  <circle cx="34" cy="49" r="0.9" fill="white" opacity="0.5"/>
+  <!-- Right eye socket - big -->
+  <ellipse cx="64" cy="51" rx="9.5" ry="10" fill="#070416" stroke="#AABEFF" stroke-width="1.2"/>
+  <!-- Right iris - question mark -->
+  <circle cx="64" cy="51" r="7" fill="#0F0830"/>
+  <text x="64" y="55" font-family="serif" font-size="11" font-weight="bold" fill="#AABEFF" text-anchor="middle" opacity="0.9">?</text>
+  <circle cx="62" cy="49" r="0.9" fill="white" opacity="0.5"/>
+  <!-- Eager smile -->
+  <path d="M38,69 Q50,78 62,69" stroke="#4A63C8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Messy data dots floating around head -->
+  <circle cx="19" cy="40" r="1.5" fill="#AABEFF" opacity="0.4"/>
+  <circle cx="22" cy="52" r="1" fill="#667EEA" opacity="0.35"/>
+  <circle cx="81" cy="40" r="1.5" fill="#AABEFF" opacity="0.4"/>
+  <circle cx="78" cy="52" r="1" fill="#667EEA" opacity="0.35"/>
+  <!-- Tiny nose -->
+  <ellipse cx="50" cy="62" rx="2" ry="1.2" fill="#4A63C8" opacity="0.5"/>
+  <!-- Cheek blush -->
+  <ellipse cx="27" cy="60" r="4" fill="#AABEFF" opacity="0.3"/>
+  <ellipse cx="73" cy="60" r="4" fill="#AABEFF" opacity="0.3"/>
+</svg>

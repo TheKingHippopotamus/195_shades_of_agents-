@@ -1,52 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
-    <!-- Heavy dual antenna (backend server vibe) -->
-    <line x1="42" y1="22" x2="42" y2="10" stroke="#00D9FF" stroke-width="1.8"/>
-    <line x1="58" y1="22" x2="58" y2="10" stroke="#00D9FF" stroke-width="1.8"/>
-    <rect x="38" y="8" width="8" height="4" rx="1" fill="#00D9FF" opacity="0.8"/>
-    <rect x="54" y="8" width="8" height="4" rx="1" fill="#00D9FF" opacity="0.8"/>
-
-    <!-- Wide robust rect head -->
-    <rect x="16" y="22" width="68" height="56" rx="5" fill="#080E14" stroke="#00D9FF" stroke-width="2.5"/>
-
-    <!-- Server stack symbol in display (3 horizontal server bars + status dots) -->
-    <rect x="22" y="27" width="56" height="32" rx="2" fill="#040912" stroke="#00D9FF" stroke-width="1.2"/>
-    <!-- Server bar 1 -->
-    <rect x="26" y="30" width="44" height="8" rx="2" fill="#0F1C30" stroke="#00D9FF" stroke-width="1"/>
-    <circle cx="62" cy="34" r="2" fill="#22C55E"/>
-    <circle cx="66" cy="34" r="2" fill="#00D9FF" opacity="0.7"/>
-    <rect x="29" y="32.5" width="20" height="3" rx="1" fill="#00D9FF" opacity="0.3"/>
-    <text x="39" y="35.5" text-anchor="middle" fill="#00D9FF" font-size="3.5" font-family="monospace" opacity="0.7">PRIMARY</text>
-    <!-- Server bar 2 -->
-    <rect x="26" y="41" width="44" height="8" rx="2" fill="#0F1C30" stroke="#00D9FF" stroke-width="1"/>
-    <circle cx="62" cy="45" r="2" fill="#22C55E"/>
-    <circle cx="66" cy="45" r="2" fill="#00D9FF" opacity="0.7"/>
-    <rect x="29" y="43.5" width="20" height="3" rx="1" fill="#00D9FF" opacity="0.3"/>
-    <text x="39" y="46.5" text-anchor="middle" fill="#00D9FF" font-size="3.5" font-family="monospace" opacity="0.7">REPLICA</text>
-    <!-- Server bar 3 -->
-    <rect x="26" y="52" width="44" height="8" rx="2" fill="#0F1C30" stroke="#00D9FF" stroke-width="1"/>
-    <circle cx="62" cy="56" r="2" fill="#F97316"/>
-    <circle cx="66" cy="56" r="2" fill="#00D9FF" opacity="0.4"/>
-    <rect x="29" y="54.5" width="20" height="3" rx="1" fill="#00D9FF" opacity="0.3"/>
-    <text x="39" y="57.5" text-anchor="middle" fill="#00D9FF" font-size="3.5" font-family="monospace" opacity="0.7">STANDBY</text>
-
-    <!-- Dense PCB traces (many paths) -->
-    <path d="M16,32 H8 V36 H12" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
-    <path d="M16,40 H6 V46 H10" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
-    <path d="M16,50 H8 V55 H12" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
-    <path d="M16,60 H8 V65 H14" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
-    <circle cx="12" cy="36" r="1" fill="#00D9FF" opacity="0.7"/>
-    <circle cx="10" cy="46" r="1" fill="#00D9FF" opacity="0.7"/>
-    <circle cx="12" cy="55" r="1" fill="#00D9FF" opacity="0.7"/>
-    <path d="M84,32 H92 V36 H88" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
-    <path d="M84,40 H94 V46 H90" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
-    <path d="M84,50 H92 V55 H88" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
-    <path d="M84,60 H92 V65 H86" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
-    <circle cx="88" cy="36" r="1" fill="#00D9FF" opacity="0.7"/>
-    <circle cx="90" cy="46" r="1" fill="#00D9FF" opacity="0.7"/>
-    <circle cx="88" cy="55" r="1" fill="#00D9FF" opacity="0.7"/>
-
-    <!-- Bottom dense traces -->
-    <path d="M30,78 V86 H38 V82 H44 V88" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
-    <path d="M55,78 V84 H63 V80" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
-    <circle cx="44" cy="88" r="1" fill="#00D9FF" opacity="0.7"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-sem-be" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071a18"/>
+      <stop offset="100%" stop-color="#020c0b"/>
+    </radialGradient>
+    <radialGradient id="face-sem-be" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#00695C"/>
+      <stop offset="60%" stop-color="#004D40"/>
+      <stop offset="100%" stop-color="#002820"/>
+    </radialGradient>
+    <radialGradient id="iris-be" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="40%" stop-color="#007c91"/>
+      <stop offset="100%" stop-color="#003040"/>
+    </radialGradient>
+    <filter id="glow-sem-be">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-sem-be)" rx="12"/>
+  <!-- Narrow face -->
+  <ellipse cx="50" cy="56" rx="27" ry="35" fill="url(#face-sem-be)" stroke="#00897B" stroke-width="1.5"/>
+  <!-- Heavy brow - focused look -->
+  <path d="M25,44 Q50,40 75,44" stroke="#002820" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Narrow eyes -->
+  <ellipse cx="37" cy="50" rx="8" ry="5" fill="#002820" stroke="#00897B" stroke-width="1"/>
+  <ellipse cx="63" cy="50" rx="8" ry="5" fill="#002820" stroke="#00897B" stroke-width="1"/>
+  <!-- Scrolling text iris -->
+  <ellipse cx="37" cy="50" rx="6.5" ry="4" fill="url(#iris-be)"/>
+  <ellipse cx="63" cy="50" rx="6.5" ry="4" fill="url(#iris-be)"/>
+  <!-- Text lines in iris (scrolling text effect) -->
+  <line x1="31" y1="49" x2="43" y2="49" stroke="#00E5FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="31" y1="51" x2="43" y2="51" stroke="#00E5FF" stroke-width="0.5" opacity="0.5"/>
+  <line x1="57" y1="49" x2="69" y2="49" stroke="#00E5FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="57" y1="51" x2="69" y2="51" stroke="#00E5FF" stroke-width="0.5" opacity="0.5"/>
+  <!-- Pupils -->
+  <ellipse cx="37" cy="50" rx="2" ry="2.5" fill="#000d0c"/>
+  <ellipse cx="63" cy="50" rx="2" ry="2.5" fill="#000d0c"/>
+  <!-- { } forehead marking -->
+  <text x="50" y="33" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#00E5FF" filter="url(#glow-sem-be)" opacity="0.9">&#123; &#125;</text>
+  <!-- Server rack marks on cheeks -->
+  <rect x="18" y="52" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.8"/>
+  <rect x="18" y="55" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.6"/>
+  <rect x="18" y="58" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.4"/>
+  <rect x="74" y="52" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.8"/>
+  <rect x="74" y="55" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.6"/>
+  <rect x="74" y="58" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.4"/>
+  <!-- Nose bridge -->
+  <line x1="50" y1="55" x2="50" y2="60" stroke="#00695C" stroke-width="1.2"/>
+  <!-- Thin focused mouth -->
+  <path d="M38,68 Q50,72 62,68" stroke="#00695C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Chin circuit -->
+  <path d="M40,76 H50 V80 H60" stroke="#00897B" stroke-width="0.8" fill="none" opacity="0.6"/>
+  <circle cx="50" cy="76" r="1" fill="#00E5FF" opacity="0.8"/>
+  <!-- Label -->
+  <rect x="22" y="90" width="56" height="8" rx="3" fill="#020c0b" stroke="#00E5FF" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#00E5FF">SEM-BE</text>
+</svg>
