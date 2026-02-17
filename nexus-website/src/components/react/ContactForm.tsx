@@ -30,7 +30,7 @@ export default function ContactForm() {
         _template: "table",
         _captcha: "false",
         _honey: "",
-        _webhook: "https://contact-submission-receiver.PLACEHOLDER.workers.dev",
+        _webhook: "https://contact-submission-receiver.king-hippopotamus.workers.dev",
       };
 
       const res = await fetch("https://formsubmit.co/ajax/NexusAI.Agents@proton.me", {
