@@ -1,13 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a1f3a"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
-<line x1="67.7" y1="30.3" x2="77.6" y2="20.4" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="77.57716446627535,20.422835533724648 80.57716446627535,17.422835533724648 78.57716446627535,22.422835533724648" fill="#F97316" opacity="0.7"/><line x1="74.1" y1="54.5" x2="86.7" y2="57.8" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="86.70518139898459,57.83512371389578 89.70518139898459,54.83512371389578 87.70518139898459,59.83512371389578" fill="#F97316" opacity="0.7"/><line x1="56.5" y1="72.1" x2="60.6" y2="87.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="60.611580849203364,87.60295887785179 63.611580849203364,84.60295887785179 61.611580849203364,89.60295887785179" fill="#F97316" opacity="0.7"/><line x1="32.3" y1="65.7" x2="23.1" y2="74.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="23.129942314911197,74.87005768508881 26.129942314911197,71.87005768508881 24.129942314911197,76.87005768508881" fill="#F97316" opacity="0.7"/><line x1="25.9" y1="41.5" x2="12.3" y2="37.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="12.328892774726334,37.906057241001704 15.328892774726334,34.906057241001704 13.328892774726334,39.906057241001704" fill="#F97316" opacity="0.7"/><line x1="43.5" y1="23.9" x2="37.8" y2="2.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="37.83550488018153,2.6014861644137923 40.83550488018153,-0.3985138355862077 38.83550488018153,4.601486164413792" fill="#F97316" opacity="0.7"/>
-<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
-<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
-<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
-<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
-<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
-<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
-<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
-<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>
+<!-- ambient ring -->
+  <circle cx="50" cy="50" r="35" fill="rgba(249,115,22,0.07)" stroke="#F97316" stroke-width="0.4" opacity="0.35"/>
+  <!-- U arch body -->
+  <path d="M34,26 L34,56 Q34,76 50,76 Q66,76 66,56 L66,26"
+        stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- N cap -->
+  <rect x="27" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="34" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">N</text>
+  <!-- S cap -->
+  <rect x="59" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="66" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">S</text>
+  <circle cx="50" cy="50" r="13" fill="#0d0800" stroke="#F97316" stroke-width="1.5"/>
+  <!-- key ring -->
+  <circle cx="47" cy="48" r="4.5" fill="none" stroke="#F97316" stroke-width="2"/>
+  <!-- key blade -->
+  <line x1="51" y1="49" x2="60" y2="55" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- key teeth -->
+  <line x1="55" y1="52.2" x2="55" y2="55.2" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="58" y1="54" x2="58" y2="57" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="67.0" y1="50.0" x2="80.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.6"/>
+<polygon points="76.0,52.0 76.0,48.0 80.0,50.0" fill="#F97316" opacity="0.6"/>
+<line x1="50.0" y1="67.0" x2="50.0" y2="80.0" stroke="#F97316" stroke-width="1.4" opacity="0.6"/>
+<polygon points="48.0,76.0 52.0,76.0 50.0,80.0" fill="#F97316" opacity="0.6"/>
+<line x1="33.0" y1="50.0" x2="20.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.6"/>
+<polygon points="24.0,48.0 24.0,52.0 20.0,50.0" fill="#F97316" opacity="0.6"/>
+<line x1="50.0" y1="33.0" x2="50.0" y2="20.0" stroke="#F97316" stroke-width="1.4" opacity="0.6"/>
+<polygon points="52.0,24.0 48.0,24.0 50.0,20.0" fill="#F97316" opacity="0.6"/>
+</svg>

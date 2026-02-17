@@ -1,13 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a1f3a"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
-<line x1="67.7" y1="30.3" x2="82.5" y2="15.5" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="82.5269119345812,15.473088065418814 85.5269119345812,12.473088065418814 83.5269119345812,17.473088065418814" fill="#F97316" opacity="0.7"/><line x1="74.1" y1="54.5" x2="93.5" y2="59.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="93.46666218300808,59.64685702961343 96.46666218300808,56.64685702961343 94.46666218300808,61.64685702961343" fill="#F97316" opacity="0.7"/><line x1="56.5" y1="72.1" x2="61.1" y2="89.5" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="61.1292189394084,89.53481053042992 64.1292189394084,86.53481053042992 62.1292189394084,91.53481053042992" fill="#F97316" opacity="0.7"/><line x1="32.3" y1="65.7" x2="19.6" y2="78.4" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="19.59440840897846,78.40559159102155 22.59440840897846,75.40559159102155 20.59440840897846,80.40559159102155" fill="#F97316" opacity="0.7"/><line x1="25.9" y1="41.5" x2="11.4" y2="37.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="11.362966948437261,37.647238195899185 14.362966948437261,34.647238195899185 12.362966948437261,39.647238195899185" fill="#F97316" opacity="0.7"/><line x1="43.5" y1="23.9" x2="39.4" y2="8.4" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="39.38841915079665,8.397041122148202 42.38841915079665,5.397041122148202 40.38841915079665,10.397041122148202" fill="#F97316" opacity="0.7"/>
-<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
-<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
-<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
-<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
-<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
-<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
-<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
-<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>
+<!-- ambient ring -->
+  <circle cx="50" cy="50" r="36" fill="rgba(249,115,22,0.07)" stroke="#F97316" stroke-width="0.4" opacity="0.35"/>
+  <!-- U arch body -->
+  <path d="M34,26 L34,56 Q34,76 50,76 Q66,76 66,56 L66,26"
+        stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- N cap -->
+  <rect x="27" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="34" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">N</text>
+  <!-- S cap -->
+  <rect x="59" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="66" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">S</text>
+  <circle cx="50" cy="50" r="14" fill="#0d0800" stroke="#F97316" stroke-width="1.5"/>
+  <!-- gear outer ring -->
+  <circle cx="50" cy="50" r="9" fill="none" stroke="#F97316" stroke-width="2" opacity="0.5" stroke-dasharray="4 2"/>
+  <!-- gear teeth via small rects around circumference -->
+  <circle cx="59.0" cy="50.0" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="56.4" cy="56.4" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="50.0" cy="59.0" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="43.6" cy="56.4" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="41.0" cy="50.0" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="43.6" cy="43.6" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="50.0" cy="41.0" r="1.8" fill="#F97316" opacity="0.85"/>
+  <circle cx="56.4" cy="43.6" r="1.8" fill="#F97316" opacity="0.85"/>
+  <!-- inner hub -->
+  <circle cx="50" cy="50" r="5" fill="#0d0800"/>
+  <!-- dollar sign -->
+  <text x="50" y="53.5" text-anchor="middle" fill="#F97316"
+        font-size="7.5" font-weight="bold" font-family="monospace">$</text>
+  <line x1="66.7" y1="56.7" x2="79.7" y2="62.0" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="75.2,62.3 76.7,58.6 79.7,62.0" fill="#F97316" opacity="0.65"/>
+<line x1="43.3" y1="66.7" x2="38.0" y2="79.7" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="37.7,75.2 41.4,76.7 38.0,79.7" fill="#F97316" opacity="0.65"/>
+<line x1="33.3" y1="43.3" x2="20.3" y2="38.0" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="24.8,37.7 23.3,41.4 20.3,38.0" fill="#F97316" opacity="0.65"/>
+<line x1="56.7" y1="33.3" x2="62.0" y2="20.3" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="62.3,24.8 58.6,23.3 62.0,20.3" fill="#F97316" opacity="0.65"/>
+</svg>

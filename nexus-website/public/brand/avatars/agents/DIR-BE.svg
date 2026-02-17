@@ -1,12 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<path d="M50,25 L50,15 L44,10 M50,15 L56,10" stroke="#00D9FF" stroke-width="1.5" fill="none"/>
-<rect x="22" y="25" width="56" height="52" rx="4" fill="#0F172A" stroke="#00D9FF" stroke-width="2"/>
-<rect x="26" y="29" width="48" height="44" rx="2" fill="#1E293B" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
-<polygon points="42,41 47,46 42,51 37,46" fill="#00D9FF" opacity="0.9"/><polygon points="58,41 63,46 58,51 53,46" fill="#00D9FF" opacity="0.9"/>
-<rect x="32" y="57" width="36" height="8" rx="2" fill="#030108" stroke="#00D9FF" stroke-width="0.5"/>
-<text x="50" y="63.5" text-anchor="middle" fill="#00D9FF" font-size="5" font-family="monospace">10110100</text>
-<path d="M26,55 H34 V52 H42" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="42" cy="52" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M24,60 H32 V57 H40" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="40" cy="57" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M24,65 H32 V62 H40" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="40" cy="62" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M24,70 H32 V67 H40" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="40" cy="67" r="1.2" fill="#00D9FF" opacity="0.7"/>
-<rect x="18" y="38" width="4" height="3" rx="1" fill="#00D9FF" opacity="0.6"/>
-<rect x="78" y="38" width="4" height="3" rx="1" fill="#00D9FF" opacity="0.6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <!-- Antenna with server dot -->
+    <line x1="50" y1="22" x2="50" y2="10" stroke="#FF6B35" stroke-width="1.5"/>
+    <rect x="46" y="8" width="8" height="4" rx="1" fill="#FF6B35"/>
+
+    <!-- Rect head -->
+    <rect x="21" y="22" width="58" height="54" rx="4" fill="#0D0A06" stroke="#00D9FF" stroke-width="2"/>
+    <!-- Orange accent border right -->
+    <rect x="76" y="22" width="3" height="54" rx="2" fill="#FF6B35" opacity="0.5"/>
+
+    <!-- Display screen with Database Cylinder -->
+    <rect x="26" y="26" width="48" height="30" rx="2" fill="#0A0704" stroke="#FF6B35" stroke-width="1"/>
+    <!-- DB Cylinder top ellipse -->
+    <ellipse cx="50" cy="32" rx="14" ry="4" fill="none" stroke="#00D9FF" stroke-width="1.5"/>
+    <ellipse cx="50" cy="32" rx="14" ry="4" fill="#1a0e06" stroke="#00D9FF" stroke-width="0.5"/>
+    <!-- DB Cylinder body -->
+    <line x1="36" y1="32" x2="36" y2="48" stroke="#00D9FF" stroke-width="1.5"/>
+    <line x1="64" y1="32" x2="64" y2="48" stroke="#00D9FF" stroke-width="1.5"/>
+    <!-- DB Cylinder bottom ellipse -->
+    <ellipse cx="50" cy="48" rx="14" ry="4" fill="#1a0e06" stroke="#00D9FF" stroke-width="1.5"/>
+    <!-- Data lines inside cylinder -->
+    <line x1="40" y1="37" x2="60" y2="37" stroke="#FF6B35" stroke-width="0.8" opacity="0.7"/>
+    <line x1="40" y1="41" x2="60" y2="41" stroke="#FF6B35" stroke-width="0.8" opacity="0.7"/>
+    <line x1="40" y1="45" x2="60" y2="45" stroke="#FF6B35" stroke-width="0.8" opacity="0.7"/>
+
+    <!-- API symbol bottom -->
+    <rect x="26" y="60" width="48" height="12" rx="2" fill="#0A0704" stroke="#FF6B35" stroke-width="0.8"/>
+    <text x="50" y="68.5" text-anchor="middle" fill="#FF6B35" font-size="6" font-family="monospace" font-weight="bold">API</text>
+
+    <!-- Orange PCB traces left/right -->
+    <path d="M21,40 H13 V47 H17" stroke="#FF6B35" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <circle cx="17" cy="47" r="1.2" fill="#FF6B35" opacity="0.8"/>
+    <path d="M79,40 H87 V47 H83" stroke="#FF6B35" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <circle cx="83" cy="47" r="1.2" fill="#FF6B35" opacity="0.8"/>
+  </svg>

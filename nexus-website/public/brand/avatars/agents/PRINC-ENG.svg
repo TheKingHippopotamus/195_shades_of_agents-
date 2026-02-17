@@ -1,12 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<line x1="50" y1="25" x2="50" y2="15" stroke="#00D9FF" stroke-width="1.5"/><ellipse cx="50" cy="13" rx="5" ry="3" fill="none" stroke="#00D9FF" stroke-width="1"/>
-<rect x="22" y="25" width="56" height="52" rx="4" fill="#0F172A" stroke="#00D9FF" stroke-width="2"/>
-<rect x="26" y="29" width="48" height="44" rx="2" fill="#1E293B" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
-<rect x="35" y="42" width="10" height="7" rx="1" fill="#00D9FF" opacity="0.9"/><rect x="55" y="42" width="10" height="7" rx="1" fill="#00D9FF" opacity="0.9"/>
-<rect x="32" y="57" width="36" height="8" rx="2" fill="#030108" stroke="#00D9FF" stroke-width="0.5"/>
-<text x="50" y="63.5" text-anchor="middle" fill="#00D9FF" font-size="5" font-family="monospace">10110100</text>
-<path d="M22,55 H30 V52 H38" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="38" cy="52" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M26,60 H34 V57 H42" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="42" cy="57" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M26,65 H34 V62 H42" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="42" cy="62" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M22,70 H30 V67 H38" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="38" cy="67" r="1.2" fill="#00D9FF" opacity="0.7"/>
-<rect x="18" y="38" width="4" height="3" rx="1" fill="#00D9FF" opacity="0.6"/>
-<rect x="78" y="38" width="4" height="3" rx="1" fill="#00D9FF" opacity="0.6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <!-- Principal star badge (top-right, prominent) -->
+    <polygon points="82,12 84,18 90,18 85.5,22 87,28 82,24 77,28 78.5,22 74,18 80,18" fill="#00D9FF" opacity="0.9"/>
+    <polygon points="82,14 83.5,18.5 88,18.5 84.5,21 85.5,25.5 82,23 78.5,25.5 79.5,21 76,18.5 80.5,18.5" fill="#030108" opacity="0.5"/>
+
+    <!-- Tall rect head -->
+    <rect x="16" y="14" width="60" height="70" rx="4" fill="#08100C" stroke="#00D9FF" stroke-width="2.2"/>
+
+    <!-- Atom symbol in display center -->
+    <rect x="20" y="18" width="52" height="40" rx="2" fill="#040A06" stroke="#00D9FF" stroke-width="1"/>
+    <!-- Atom nucleus -->
+    <circle cx="46" cy="38" r="4" fill="#1a2a1a" stroke="#00D9FF" stroke-width="1.5"/>
+    <circle cx="46" cy="38" r="1.8" fill="#00D9FF" opacity="0.9"/>
+    <!-- Orbit 1 (horizontal ellipse) -->
+    <ellipse cx="46" cy="38" rx="16" ry="6" fill="none" stroke="#00D9FF" stroke-width="1.2"/>
+    <!-- Orbit 2 (rotated 60deg) -->
+    <ellipse cx="46" cy="38" rx="16" ry="6" fill="none" stroke="#00D9FF" stroke-width="1.2" transform="rotate(60,46,38)"/>
+    <!-- Orbit 3 (rotated 120deg) -->
+    <ellipse cx="46" cy="38" rx="16" ry="6" fill="none" stroke="#00D9FF" stroke-width="1.2" transform="rotate(120,46,38)"/>
+    <!-- Electron dots -->
+    <circle cx="62" cy="38" r="1.5" fill="#00D9FF" opacity="0.9"/>
+    <circle cx="38" cy="30" r="1.5" fill="#00D9FF" opacity="0.9"/>
+    <circle cx="38" cy="46" r="1.5" fill="#00D9FF" opacity="0.9"/>
+
+    <!-- PRINCIPAL label -->
+    <text x="46" y="53" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace" opacity="0.8">PRINCIPAL</text>
+
+    <!-- Most complex PCB — 12+ trace paths -->
+    <!-- Left side traces (6) -->
+    <path d="M16,22 H7 V28 H11" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="11" cy="28" r="1" fill="#00D9FF" opacity="0.7"/>
+    <path d="M16,32 H5 V38 H9" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="9" cy="38" r="1" fill="#00D9FF" opacity="0.7"/>
+    <path d="M16,42 H7 V48 H11" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="11" cy="48" r="1" fill="#00D9FF" opacity="0.7"/>
+    <path d="M16,52 H4 V60 H8" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+    <circle cx="8" cy="60" r="1" fill="#00D9FF" opacity="0.6"/>
+    <path d="M16,62 H8 V68 H12" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+    <path d="M16,70 H6 V75" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.4"/>
+    <!-- Right side traces (6) -->
+    <path d="M76,22 H85 V28 H81" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="81" cy="28" r="1" fill="#00D9FF" opacity="0.7"/>
+    <path d="M76,32 H87 V38 H83" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="83" cy="38" r="1" fill="#00D9FF" opacity="0.7"/>
+    <path d="M76,42 H85 V48 H81" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="81" cy="48" r="1" fill="#00D9FF" opacity="0.7"/>
+    <path d="M76,52 H88 V60 H84" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+    <circle cx="84" cy="60" r="1" fill="#00D9FF" opacity="0.6"/>
+    <path d="M76,62 H84 V68 H80" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+    <path d="M76,70 H86 V75" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.4"/>
+
+    <!-- Bottom traces -->
+    <path d="M24,84 V92 H32 V88 H40 V94" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+    <path d="M52,84 V90 H60 V86" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+    <circle cx="40" cy="94" r="1.2" fill="#00D9FF" opacity="0.7"/>
+
+    <!-- Status LED panel bottom of head -->
+    <rect x="20" y="60" width="52" height="20" rx="2" fill="#040A06" stroke="#00D9FF" stroke-width="0.8"/>
+    <circle cx="26" cy="65" r="2" fill="#22C55E"/>
+    <circle cx="33" cy="65" r="2" fill="#00D9FF" opacity="0.8"/>
+    <circle cx="40" cy="65" r="2" fill="#22C55E"/>
+    <circle cx="47" cy="65" r="2" fill="#00D9FF" opacity="0.8"/>
+    <circle cx="54" cy="65" r="2" fill="#22C55E"/>
+    <circle cx="61" cy="65" r="2" fill="#F97316"/>
+    <circle cx="68" cy="65" r="2" fill="#00D9FF" opacity="0.8"/>
+    <text x="46" y="77" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace" opacity="0.7">LEVEL 10 ACCESS</text>
+  </svg>

@@ -1,17 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<line x1="35" y1="22" x2="32" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/><circle cx="32" cy="10" r="1.5" fill="#7C3AED"/><line x1="45" y1="22" x2="44" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/><circle cx="44" cy="10" r="1.5" fill="#7C3AED"/><line x1="55" y1="22" x2="52" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.7"/><circle cx="52" cy="10" r="1.5" fill="#7C3AED"/><line x1="65" y1="22" x2="64" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.8"/><circle cx="64" cy="10" r="1.5" fill="#7C3AED"/>
-<ellipse cx="50" cy="40" rx="28" ry="18" fill="#1E293B" stroke="#7C3AED" stroke-width="1.5"/>
-<ellipse cx="36" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
-<ellipse cx="64" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
-<circle cx="44" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/><circle cx="56" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/>
-<circle cx="44" cy="40" r="1.5" fill="#030108"/><circle cx="56" cy="40" r="1.5" fill="#030108"/>
-<path d="M44,48 Q50,52 56,48" stroke="#7C3AED" stroke-width="1.5" fill="none"/>
-<rect x="32" y="58" width="36" height="22" rx="2" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
-<line x1="32" y1="64" x2="68" y2="64" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
-<line x1="32" y1="70" x2="68" y2="70" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
-<line x1="32" y1="76" x2="68" y2="76" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
-<circle cx="62" cy="61.5" r="1.5" fill="#22C55E"/>
-<circle cx="62" cy="67.5" r="1.5" fill="#7C3AED"/>
-<circle cx="62" cy="73.5" r="1.5" fill="#EF4444"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <defs>
+      <radialGradient id="sp-cg" cx="50%" cy="40%" r="55%">
+        <stop offset="0%" stop-color="#8B5CF6"/>
+        <stop offset="100%" stop-color="#4C1D95"/>
+      </radialGradient>
+    </defs>
+    <!-- Uplink -->
+    <line x1="50" y1="10" x2="50" y2="28" stroke="#7C3AED" stroke-width="1" opacity="0.6"/>
+    <circle cx="50" cy="9" r="1.5" fill="#A78BFA"/>
+    <!-- Cloud body (slightly smaller/cleaner) -->
+    <ellipse cx="50" cy="50" rx="24" ry="11.5" fill="url(#sp-cg)" stroke="#7C3AED" stroke-width="1.3"/>
+    <ellipse cx="38" cy="44" rx="11" ry="8.5" fill="url(#sp-cg)" stroke="#7C3AED" stroke-width="1.1"/>
+    <ellipse cx="58" cy="44" rx="12" ry="9" fill="url(#sp-cg)" stroke="#7C3AED" stroke-width="1.1"/>
+    <ellipse cx="50" cy="40" rx="8.5" ry="6.5" fill="url(#sp-cg)" stroke="#7C3AED" stroke-width="0.9"/>
+    <!-- Gear inside cloud (8-tooth) -->
+    <g transform="translate(50,47) scale(0.85)">
+      <circle cx="0" cy="0" r="5.5" fill="#2e1065" stroke="#C4B5FD" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="2.5" fill="#1e1b4b" stroke="#C4B5FD" stroke-width="0.6"/>
+      <!-- Gear teeth -->
+      <rect x="-1.2" y="-8" width="2.4" height="3" rx="0.5" fill="#C4B5FD"/>
+      <rect x="-1.2" y="5" width="2.4" height="3" rx="0.5" fill="#C4B5FD"/>
+      <rect x="-8" y="-1.2" width="3" height="2.4" rx="0.5" fill="#C4B5FD"/>
+      <rect x="5" y="-1.2" width="3" height="2.4" rx="0.5" fill="#C4B5FD"/>
+      <rect x="-6.5" y="-5.5" width="2.4" height="3" rx="0.5" fill="#C4B5FD" transform="rotate(-45)"/>
+      <rect x="4" y="-5.5" width="2.4" height="3" rx="0.5" fill="#C4B5FD" transform="rotate(45)"/>
+      <rect x="-6.5" y="2.5" width="2.4" height="3" rx="0.5" fill="#C4B5FD" transform="rotate(45)"/>
+      <rect x="4" y="2.5" width="2.4" height="3" rx="0.5" fill="#C4B5FD" transform="rotate(-45)"/>
+    </g>
+    <!-- Label -->
+    <text x="50" y="64" font-family="monospace" font-size="5" fill="#DDD6FE" text-anchor="middle" font-weight="bold">PLATFORM</text>
+    <!-- Single server rack -->
+    <rect x="36" y="68" width="28" height="18" rx="3" fill="#1e1b4b" stroke="#7C3AED" stroke-width="1"/>
+    <rect x="39" y="71" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
+    <rect x="39" y="76" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
+    <rect x="39" y="81" width="22" height="2" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
+    <circle cx="57" cy="72.5" r="1" fill="#22C55E"/>
+    <circle cx="57" cy="77.5" r="1" fill="#22C55E"/>
+    <circle cx="57" cy="82" r="1" fill="#F59E0B"/>
+  </svg>

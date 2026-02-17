@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="ctdesBlobGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8EB5"/>
+      <stop offset="55%" stop-color="#FF2D78"/>
+      <stop offset="100%" stop-color="#A8004F"/>
+    </radialGradient>
+    <clipPath id="ctdesBlobClip">
+      <path d="M 78.1 50.0 Q 67.0 67.0 72.5 58.5 Q 50.0 78.6 58.5 72.8 Q 32.6 67.4 41.3 73.0 Q 22.2 50.0 27.4 58.7 Q 33.2 33.2 27.7 41.6 Q 50.0 21.1 41.6 27.2 Q 67.2 32.8 58.6 27.0 Q 78.1 50.0 72.6 41.4 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
+  <circle cx="14" cy="20" r="2.5" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="83" cy="18" r="2" fill="#FF8EB5" opacity="0.45"/>
+  <circle cx="12" cy="70" r="2" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="84" cy="72" r="2.5" fill="#FF6B35" opacity="0.45"/>
+  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.38"/>
+  <path d="M 78.1 50.0 Q 67.0 67.0 72.5 58.5 Q 50.0 78.6 58.5 72.8 Q 32.6 67.4 41.3 73.0 Q 22.2 50.0 27.4 58.7 Q 33.2 33.2 27.7 41.6 Q 50.0 21.1 41.6 27.2 Q 67.2 32.8 58.6 27.0 Q 78.1 50.0 72.6 41.4 Z" fill="url(#ctdesBlobGrad)"/>
+  <!-- LARGE SERIF LETTER "A" inside blob (editorial typography) -->
+  <g clip-path="url(#ctdesBlobClip)">
+    <!-- The letter A in a large editorial serif style -->
+    <text x="50" y="61" font-size="28" fill="#FFD1B8" text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif" font-weight="bold" opacity="0.95">A</text>
+    <!-- Decorative underline rule -->
+    <line x1="35" y1="64" x2="65" y2="64" stroke="#FF8EB5" stroke-width="1" opacity="0.7"/>
+    <!-- Tiny secondary text lines (editorial layout feel) -->
+    <line x1="36" y1="67" x2="60" y2="67" stroke="#FF8EB5" stroke-width="0.5" opacity="0.5"/>
+    <line x1="36" y1="70" x2="52" y2="70" stroke="#FF8EB5" stroke-width="0.5" opacity="0.4"/>
+  </g>
+</svg>

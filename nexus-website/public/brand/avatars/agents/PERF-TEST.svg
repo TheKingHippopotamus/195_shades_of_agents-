@@ -1,10 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<ellipse cx="50" cy="94" rx="22" ry="4" fill="rgba(34,197,94,0.2)"/>
-
-<path d="M50,18 L75,28 L75,55 Q75,78 50,88 Q25,78 25,55 L25,28 Z" fill="#0F2A18" stroke="#22C55E" stroke-width="2"/>
-<path d="M50,24 L69,32 L69,55 Q69,73 50,82 Q31,73 31,55 L31,32 Z" fill="#1a3a20" stroke="#22C55E" stroke-width="0.5" opacity="0.5"/>
-<path d="M36,53 L45,63 L66,40" stroke="#22C55E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="50" cy="34" r="5" fill="#030108" stroke="#22C55E" stroke-width="1"/>
-<text x="50" y="37" text-anchor="middle" fill="#22C55E" font-size="6" font-family="monospace">QA</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <defs>
+      <linearGradient id="pt-sg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#4ADE80"/>
+        <stop offset="100%" stop-color="#14532D"/>
+      </linearGradient>
+    </defs>
+    <!-- Performance speed lines upper right -->
+    <line x1="68" y1="12" x2="82" y2="10" stroke="#EF4444" stroke-width="1.2" opacity="0.7"/>
+    <line x1="70" y1="16" x2="84" y2="16" stroke="#EF4444" stroke-width="1.4" opacity="0.8"/>
+    <line x1="68" y1="20" x2="82" y2="22" stroke="#EF4444" stroke-width="1.2" opacity="0.7"/>
+    <!-- Shield -->
+    <path d="M50,16 L69,23 L69,50 Q69,65 50,77 Q31,65 31,50 L31,23 Z" fill="url(#pt-sg)" stroke="#22C55E" stroke-width="1.6"/>
+    <!-- Speedometer gauge inside shield (replaces checkmark) -->
+    <!-- Gauge background arc -->
+    <path d="M34,55 A18,18 0 0,1 66,55" fill="none" stroke="#0f2d1a" stroke-width="6" stroke-linecap="round"/>
+    <!-- Red zone left -->
+    <path d="M34,55 A18,18 0 0,1 41,40" fill="none" stroke="#EF4444" stroke-width="6" stroke-linecap="butt" opacity="0.85"/>
+    <!-- Yellow zone center -->
+    <path d="M41,40 A18,18 0 0,1 59,40" fill="none" stroke="#F59E0B" stroke-width="6" stroke-linecap="butt" opacity="0.85"/>
+    <!-- Green zone right -->
+    <path d="M59,40 A18,18 0 0,1 66,55" fill="none" stroke="#22C55E" stroke-width="6" stroke-linecap="butt" opacity="0.85"/>
+    <!-- Inner arc cover -->
+    <path d="M36,55 A16,16 0 0,1 64,55" fill="none" stroke="#14532D" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <!-- Needle pointing to red (high performance stress) -->
+    <line x1="50" y1="55" x2="37" y2="43" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="50" cy="55" r="2.8" fill="#FFFFFF"/>
+    <!-- Speed ticks -->
+    <line x1="34" y1="55" x2="36.5" y2="55" stroke="#EDE9FE" stroke-width="1" opacity="0.8"/>
+    <line x1="50" y1="37" x2="50" y2="39.5" stroke="#EDE9FE" stroke-width="1" opacity="0.8"/>
+    <line x1="66" y1="55" x2="63.5" y2="55" stroke="#EDE9FE" stroke-width="1" opacity="0.8"/>
+    <!-- MAX text at needle tip -->
+    <text x="37" y="40" font-family="monospace" font-size="3.5" fill="#EF4444" text-anchor="middle">MAX</text>
+    <!-- Label -->
+    <text x="50" y="88" font-family="monospace" font-size="4.5" fill="#86EFAC" text-anchor="middle" font-weight="bold">PERF-TEST</text>
+  </svg>

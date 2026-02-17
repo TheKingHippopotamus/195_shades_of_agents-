@@ -1,12 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="50" r="42" fill="rgba(239,68,68,0.05)"/>
-<path d="M50,10 L70,25 L75,60 L68,85 L50,90 L32,85 L25,60 L30,25 Z" fill="#150010" stroke="#EF4444" stroke-width="1.5"/>
-<ellipse cx="50" cy="30" rx="22" ry="16" fill="#0a0008" opacity="0.8"/>
-<rect x="34" y="35" width="32" height="7" rx="3" fill="#030108" stroke="#EF4444" stroke-width="1"/>
-<rect x="36" y="36.5" width="28" height="4" rx="2" fill="#EF4444" opacity="0.7"/>
-<circle cx="43" cy="38" r="3" fill="#EF4444" opacity="0.5"/><circle cx="57" cy="38" r="3" fill="#EF4444" opacity="0.5"/>
-<path d="M38,55 Q50,60 62,55" stroke="#EF4444" stroke-width="0.5" opacity="0.3"/>
-<path d="M62,68 L62,72 L68,72 L68,68 L65,65 Z" fill="#EF4444" opacity="0.8"/><rect x="62" y="72" width="6" height="5" rx="1" fill="#EF4444" opacity="0.8"/>
-<ellipse cx="50" cy="93" rx="20" ry="3" fill="rgba(239,68,68,0.3)"/></svg>
+
+  
+  <defs>
+    <filter id="sr-sec-eng" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="secbg-sr-sec-eng" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#060000"/>
+    </radialGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#secbg-sr-sec-eng)" rx="8"/>
+  <g filter="url(#sr-sec-eng)">
+    
+  <!-- Cloak body -->
+  <path d="M26.9,42.4 L20,95 L80,95 L73.1,42.4 Z"
+        fill="#0d0000" stroke="#B91C1C" stroke-width="0.5"/>
+  <!-- Inner cloak shadow -->
+  <path d="M35.3,44.4 L32,95 L68,95 L64.7,44.4 Z"
+        fill="#050000" opacity="0.7"/>
+  <!-- Neck -->
+  <rect x="45" y="36.4" width="10" height="8" fill="#080000"/>
+  <!-- Hood outer -->
+  <ellipse cx="50" cy="30.35" rx="12.285000000000002" ry="10.395000000000001" fill="#0d0000" stroke="#B91C1C" stroke-width="0.6"/>
+  <!-- Hood inner shadow -->
+  <ellipse cx="50" cy="32.35" rx="8.0325" ry="6.615" fill="#020000"/>
+  <!-- Visor glow -->
+  <ellipse cx="50" cy="31.295" rx="5.197500000000001" ry="2.079" fill="#EF4444" opacity="0.9"/>
+  <ellipse cx="50" cy="31.295" rx="5.197500000000001" ry="2.079" fill="none" stroke="#EF4444" stroke-width="0.5" opacity="0.5"/>
+  <!-- Chest area -->
+  
+    <!-- Firewall bars -->
+    <rect x="44" y="56" width="1.5" height="8" fill="#EF4444" opacity="0.5" rx="0.3"/><rect x="47" y="58" width="1.5" height="6" fill="#EF4444" opacity="0.55" rx="0.3"/><rect x="50" y="56" width="1.5" height="8" fill="#EF4444" opacity="0.6" rx="0.3"/><rect x="53" y="58" width="1.5" height="6" fill="#EF4444" opacity="0.65" rx="0.3"/><rect x="56" y="56" width="1.5" height="8" fill="#EF4444" opacity="0.7" rx="0.3"/>
+    <rect x="43" y="55" width="15" height="12" fill="none" stroke="#EF4444" stroke-width="0.6" opacity="0.4"/>
+  <!-- Tool -->
+  
+    <!-- Lock -->
+    <rect x="72" y="58" width="10" height="8" rx="1" fill="#1a0000" stroke="#EF4444" stroke-width="0.8"/>
+    <path d="M74,58 L74,55 Q77,51 80,55 L80,58" fill="none" stroke="#EF4444" stroke-width="0.8"/>
+    <circle cx="77" cy="62" r="1.5" fill="#EF4444" opacity="0.7"/>
+    <!-- Handle -->
+    <line x1="77" y1="62" x2="82" y2="85" stroke="#B91C1C" stroke-width="1"/>
+  <!-- Extras -->
+  
+  </g>
+  <rect x="25" y="4" width="50" height="8" rx="2" fill="#1a0000" stroke="#EF4444" stroke-width="0.7"/>
+  <text x="50" y="9.8" font-family="monospace" font-size="4" fill="#EF4444" text-anchor="middle">SR · SEC ENG</text>
+</svg>

@@ -1,17 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<line x1="35" y1="22" x2="32" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/><circle cx="32" cy="10" r="1.5" fill="#7C3AED"/><line x1="65" y1="22" x2="67" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/><circle cx="67" cy="10" r="1.5" fill="#7C3AED"/>
-<ellipse cx="50" cy="40" rx="28" ry="18" fill="#1E293B" stroke="#7C3AED" stroke-width="1.5"/>
-<ellipse cx="36" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
-<ellipse cx="64" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
-<circle cx="44" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/><circle cx="56" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/>
-<circle cx="44" cy="40" r="1.5" fill="#030108"/><circle cx="56" cy="40" r="1.5" fill="#030108"/>
-<path d="M44,48 Q50,52 56,48" stroke="#7C3AED" stroke-width="1.5" fill="none"/>
-<rect x="32" y="58" width="36" height="22" rx="2" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
-<line x1="32" y1="64" x2="68" y2="64" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
-<line x1="32" y1="70" x2="68" y2="70" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
-<line x1="32" y1="76" x2="68" y2="76" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
-<circle cx="62" cy="61.5" r="1.5" fill="#22C55E"/>
-<circle cx="62" cy="67.5" r="1.5" fill="#7C3AED"/>
-<circle cx="62" cy="73.5" r="1.5" fill="#EF4444"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <defs>
+      <radialGradient id="md-cg" cx="50%" cy="40%" r="55%">
+        <stop offset="0%" stop-color="#8B5CF6"/>
+        <stop offset="100%" stop-color="#4C1D95"/>
+      </radialGradient>
+    </defs>
+    <!-- Uplink beam -->
+    <line x1="50" y1="12" x2="50" y2="28" stroke="#7C3AED" stroke-width="1.2" opacity="0.7"/>
+    <circle cx="50" cy="10" r="2" fill="#A78BFA"/>
+    <!-- Cloud body -->
+    <ellipse cx="50" cy="52" rx="27" ry="12.5" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1.4"/>
+    <ellipse cx="37" cy="46" rx="12.5" ry="9" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1.2"/>
+    <ellipse cx="60" cy="45" rx="13" ry="9.5" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1.2"/>
+    <ellipse cx="50" cy="41" rx="9.5" ry="7" fill="url(#md-cg)" stroke="#7C3AED" stroke-width="1"/>
+    <!-- Infinity / DevOps cycle inside cloud -->
+    <!-- Left loop -->
+    <path d="M37,52 C34,48 28,48 28,52 C28,56 34,56 37,52" fill="none" stroke="#EDE9FE" stroke-width="2" stroke-linecap="round"/>
+    <!-- Right loop -->
+    <path d="M37,52 C40,56 46,56 46,52 C46,48 40,48 37,52" fill="none" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round"/>
+    <!-- Actually draw the ∞ symbol centered -->
+    <!-- Redrawn: true infinity sign centered at 50,50 -->
+    <path d="M42,50 C42,45.5 36,43 33,47 C30,51 33,55 38,53 C43,51 47,49 52,49 C57,49 62,53 59,57 C56,61 50,58 50,54" fill="none" stroke="#EDE9FE" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M42,50 C42,54.5 36,57 33,53 C30,49 33,45 38,47 C43,49 47,51 52,51 C57,51 62,47 59,43 C56,39 50,42 50,46" fill="none" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Arrow tips on the loops -->
+    <polygon points="50,53.5 53,50 50,47" fill="#F59E0B" opacity="0.8"/>
+    <!-- DevOps label -->
+    <text x="50" y="66" font-family="monospace" font-size="5" fill="#DDD6FE" text-anchor="middle" font-weight="bold">DEVOPS</text>
+    <!-- Server rack -->
+    <rect x="36" y="70" width="28" height="18" rx="3" fill="#1e1b4b" stroke="#7C3AED" stroke-width="1"/>
+    <rect x="39" y="73" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
+    <rect x="39" y="78" width="22" height="3" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
+    <rect x="39" y="83" width="22" height="2" rx="1" fill="#4C1D95" stroke="#7C3AED" stroke-width="0.5"/>
+    <circle cx="58" cy="74.5" r="1" fill="#22C55E"/>
+    <circle cx="58" cy="79.5" r="1" fill="#22C55E"/>
+    <circle cx="58" cy="84" r="1" fill="#F59E0B"/>
+  </svg>

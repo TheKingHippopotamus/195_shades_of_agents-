@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="tpmDiamondGrad" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#FFD1B8"/>
+      <stop offset="50%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#CC3D00"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0A00"/>
+  <g opacity="0.2" stroke="#FF6B35" stroke-width="0.5">
+    <line x1="50" y1="8" x2="50" y2="0"/>
+    <line x1="50" y1="92" x2="50" y2="100"/>
+    <line x1="8" y1="50" x2="0" y2="50"/>
+    <line x1="92" y1="50" x2="100" y2="50"/>
+    <line x1="21" y1="21" x2="14" y2="14"/>
+    <line x1="79" y1="21" x2="86" y2="14"/>
+    <line x1="21" y1="79" x2="14" y2="86"/>
+    <line x1="79" y1="79" x2="86" y2="86"/>
+  </g>
+  <path d="M 50 22 L 75 50 L 50 75 L 25 50 Z" fill="url(#tpmDiamondGrad)" stroke="#FFD1B8" stroke-width="0.8"/>
+  <path d="M 50 22 L 67 50 L 50 44 L 33 50 Z" fill="#FFB085" opacity="0.35"/>
+  <!-- CODE SYMBOL: < /> -->
+  <!-- Left angle bracket < -->
+  <polyline points="38,44 32,50 38,56" fill="none" stroke="#FFD1B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right angle bracket > -->
+  <polyline points="56,44 62,50 56,56" fill="none" stroke="#FFD1B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Forward slash / -->
+  <line x1="47" y1="56" x2="51" y2="44" stroke="#FFB085" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Small tech dot accent (circuit board feel) -->
+  <circle cx="50" cy="67" r="1.5" fill="#FF9B65" opacity="0.8"/>
+  <line x1="50" y1="65.5" x2="50" y2="63" stroke="#FF9B65" stroke-width="0.7"/>
+  <line x1="48" y1="63" x2="52" y2="63" stroke="#FF9B65" stroke-width="0.7"/>
+</svg>

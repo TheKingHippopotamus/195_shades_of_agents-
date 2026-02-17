@@ -1,12 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="50" r="42" fill="rgba(239,68,68,0.05)"/>
-<path d="M50,10 L70,25 L75,60 L68,85 L50,90 L32,85 L25,60 L30,25 Z" fill="#150010" stroke="#EF4444" stroke-width="1.5"/>
-<ellipse cx="50" cy="30" rx="22" ry="16" fill="#0a0008" opacity="0.8"/>
-<rect x="34" y="35" width="32" height="7" rx="3" fill="#030108" stroke="#EF4444" stroke-width="1"/>
-<rect x="36" y="36.5" width="28" height="4" rx="2" fill="#EF4444" opacity="0.7"/>
-<circle cx="43" cy="38" r="3" fill="#EF4444" opacity="0.5"/><circle cx="57" cy="38" r="3" fill="#EF4444" opacity="0.5"/>
-<path d="M38,55 Q50,60 62,55" stroke="#EF4444" stroke-width="0.5" opacity="0.3"/>
-<path d="M62,68 L62,72 L68,72 L68,68 L65,65 Z" fill="#EF4444" opacity="0.8"/><rect x="62" y="72" width="6" height="5" rx="1" fill="#EF4444" opacity="0.8"/>
-<ellipse cx="50" cy="93" rx="20" ry="3" fill="rgba(239,68,68,0.3)"/></svg>
+
+  
+  <defs>
+    <filter id="dir-sec" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="secbg-dir-sec" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#060000"/>
+    </radialGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#secbg-dir-sec)" rx="8"/>
+  <g filter="url(#dir-sec)">
+    
+  <!-- Cloak body -->
+  <path d="M22.5,44 L20,95 L80,95 L77.5,44 Z"
+        fill="#0d0000" stroke="#B91C1C" stroke-width="0.5"/>
+  <!-- Inner cloak shadow -->
+  <path d="M32.5,46 L32,95 L68,95 L67.5,46 Z"
+        fill="#050000" opacity="0.7"/>
+  <!-- Neck -->
+  <rect x="45" y="38" width="10" height="8" fill="#080000"/>
+  <!-- Hood outer -->
+  <ellipse cx="50" cy="27.75" rx="14.625" ry="12.375000000000002" fill="#0d0000" stroke="#B91C1C" stroke-width="0.6"/>
+  <!-- Hood inner shadow -->
+  <ellipse cx="50" cy="29.75" rx="9.5625" ry="7.874999999999999" fill="#020000"/>
+  <!-- Visor glow -->
+  <ellipse cx="50" cy="28.875" rx="6.187500000000001" ry="2.475" fill="#EF4444" opacity="0.9"/>
+  <ellipse cx="50" cy="28.875" rx="6.187500000000001" ry="2.475" fill="none" stroke="#EF4444" stroke-width="0.5" opacity="0.5"/>
+  <!-- Chest area -->
+  
+    <!-- Shield -->
+    <path d="M44,55 L50,52 L56,55 L56,66 Q50,70 44,66 Z" fill="#1a0000" stroke="#EF4444" stroke-width="0.9"/>
+    <path d="M46,57 L50,55 L54,57 L54,64 Q50,67 46,64 Z" fill="#B91C1C" opacity="0.4"/>
+    <!-- Sword on shield -->
+    <line x1="50" y1="54" x2="50" y2="67" stroke="#FCA5A5" stroke-width="0.7"/>
+    <line x1="47" y1="58" x2="53" y2="58" stroke="#FCA5A5" stroke-width="0.7"/>
+  <!-- Tool -->
+  
+    <!-- Director staff/sword -->
+    <line x1="70" y1="35" x2="78" y2="88" stroke="#B91C1C" stroke-width="1.4"/>
+    <path d="M66,36 L72,30 L78,36 L74,40 L68,40 Z" fill="#EF4444" opacity="0.85"/>
+  <!-- Extras -->
+  
+    <!-- Director badge -->
+    <rect x="28" y="4" width="44" height="8" rx="2" fill="#1a0000" stroke="#EF4444" stroke-width="0.9"/>
+    <text x="50" y="9.8" font-family="monospace" font-size="4.5" fill="#EF4444" text-anchor="middle" letter-spacing="0.3">DIR · SEC</text>
+    <!-- Menace aura -->
+    <line x1="50" y1="10" x2="50" y2="6" stroke="#EF4444" stroke-width="0.7" opacity="0.5"/><line x1="62.12435565298214" y1="17" x2="65.5884572681199" y2="15" stroke="#EF4444" stroke-width="0.7" opacity="0.5"/><line x1="62.124355652982146" y1="30.999999999999996" x2="65.5884572681199" y2="33" stroke="#EF4444" stroke-width="0.7" opacity="0.5"/><line x1="50" y1="38" x2="50" y2="42" stroke="#EF4444" stroke-width="0.7" opacity="0.5"/><line x1="37.87564434701786" y1="31.000000000000004" x2="34.411542731880104" y2="33.00000000000001" stroke="#EF4444" stroke-width="0.7" opacity="0.5"/><line x1="37.87564434701786" y1="17" x2="34.411542731880104" y2="14.999999999999998" stroke="#EF4444" stroke-width="0.7" opacity="0.5"/>
+  </g>
+</svg>

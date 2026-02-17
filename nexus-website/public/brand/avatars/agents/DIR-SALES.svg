@@ -1,13 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a1f3a"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
-<line x1="67.7" y1="30.3" x2="83.2" y2="14.8" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="83.23401871576775,14.765981284232268 86.23401871576775,11.765981284232268 84.23401871576775,16.765981284232268" fill="#F97316" opacity="0.7"/><line x1="74.8" y1="50.8" x2="88.8" y2="52.4" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="88.75477618583646,52.36661456802901 91.75477618583646,49.36661456802901 89.75477618583646,54.36661456802901" fill="#F97316" opacity="0.7"/><line x1="63.3" y1="69.2" x2="71.3" y2="81.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="71.28128306061346,81.86896796913136 74.28128306061346,78.86896796913136 72.28128306061346,83.86896796913136" fill="#F97316" opacity="0.7"/><line x1="41.7" y1="71.6" x2="35.5" y2="89.5" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="35.46772127397266,89.53086653356817 38.46772127397266,86.53086653356817 36.46772127397266,91.53086653356817" fill="#F97316" opacity="0.7"/><line x1="26.4" y1="56.3" x2="11.3" y2="61.5" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="11.300783457356928,61.541441540161856 14.300783457356928,58.541441540161856 12.300783457356928,63.541441540161856" fill="#F97316" opacity="0.7"/><line x1="28.8" y1="34.7" x2="15.3" y2="26.2" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="15.284307831640348,26.186684862871203 18.284307831640348,23.186684862871203 16.284307831640348,28.186684862871203" fill="#F97316" opacity="0.7"/><line x1="47.2" y1="23.2" x2="44.7" y2="1.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="44.73766962314452,1.295526135017596 47.73766962314452,-1.704473864982404 45.73766962314452,3.295526135017596" fill="#F97316" opacity="0.7"/>
-<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
-<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
-<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
-<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
-<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
-<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
-<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
-<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>
+<!-- ambient ring -->
+  <circle cx="50" cy="50" r="37" fill="rgba(249,115,22,0.07)" stroke="#F97316" stroke-width="0.4" opacity="0.35"/>
+  <!-- U arch body -->
+  <path d="M34,26 L34,56 Q34,76 50,76 Q66,76 66,56 L66,26"
+        stroke="#F97316" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <!-- N cap -->
+  <rect x="27" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="34" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">N</text>
+  <!-- S cap -->
+  <rect x="59" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="66" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">S</text>
+  <circle cx="50" cy="50" r="14" fill="#0d0800" stroke="#F97316" stroke-width="1.5"/>
+  <!-- bullseye -->
+  <circle cx="50" cy="50" r="10" fill="none" stroke="#F97316" stroke-width="1"/>
+  <circle cx="50" cy="50" r="6" fill="none" stroke="#F97316" stroke-width="1.2"/>
+  <circle cx="50" cy="50" r="2.5" fill="#F97316" opacity="0.95"/>
+  <line x1="62.7" y1="62.7" x2="73.3" y2="73.3" stroke="#F97316" stroke-width="1.4" opacity="0.7"/>
+<polygon points="69.1,71.9 71.9,69.1 73.3,73.3" fill="#F97316" opacity="0.7"/>
+<line x1="37.3" y1="62.7" x2="26.7" y2="73.3" stroke="#F97316" stroke-width="1.4" opacity="0.7"/>
+<polygon points="28.1,69.1 30.9,71.9 26.7,73.3" fill="#F97316" opacity="0.7"/>
+<line x1="37.3" y1="37.3" x2="26.7" y2="26.7" stroke="#F97316" stroke-width="1.4" opacity="0.7"/>
+<polygon points="30.9,28.1 28.1,30.9 26.7,26.7" fill="#F97316" opacity="0.7"/>
+<line x1="62.7" y1="37.3" x2="73.3" y2="26.7" stroke="#F97316" stroke-width="1.4" opacity="0.7"/>
+<polygon points="71.9,30.9 69.1,28.1 73.3,26.7" fill="#F97316" opacity="0.7"/>
+</svg>

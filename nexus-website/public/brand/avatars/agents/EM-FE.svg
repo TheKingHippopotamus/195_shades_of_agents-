@@ -1,12 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<line x1="50" y1="25" x2="50" y2="15" stroke="#00D9FF" stroke-width="1.5"/><ellipse cx="50" cy="13" rx="5" ry="3" fill="none" stroke="#00D9FF" stroke-width="1"/>
-<rect x="22" y="25" width="56" height="52" rx="4" fill="#0F172A" stroke="#00D9FF" stroke-width="2"/>
-<rect x="26" y="29" width="48" height="44" rx="2" fill="#1E293B" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
-<rect x="35" y="42" width="10" height="7" rx="1" fill="#00D9FF" opacity="0.9"/><rect x="55" y="42" width="10" height="7" rx="1" fill="#00D9FF" opacity="0.9"/>
-<rect x="32" y="57" width="36" height="8" rx="2" fill="#030108" stroke="#00D9FF" stroke-width="0.5"/>
-<text x="50" y="63.5" text-anchor="middle" fill="#00D9FF" font-size="5" font-family="monospace">10110100</text>
-<path d="M26,55 H34 V52 H42" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="42" cy="52" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M23,60 H31 V57 H39" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="39" cy="57" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M23,65 H31 V62 H39" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="39" cy="62" r="1.2" fill="#00D9FF" opacity="0.7"/><path d="M22,70 H30 V67 H38" stroke="#00D9FF" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="38" cy="67" r="1.2" fill="#00D9FF" opacity="0.7"/>
-<rect x="18" y="38" width="4" height="3" rx="1" fill="#00D9FF" opacity="0.6"/>
-<rect x="78" y="38" width="4" height="3" rx="1" fill="#00D9FF" opacity="0.6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <!-- Antenna with crown (manager) -->
+    <line x1="50" y1="22" x2="50" y2="12" stroke="#22C55E" stroke-width="1.5"/>
+    <polygon points="50,9 53,13 50,14 47,13" fill="#22C55E"/>
+
+    <!-- Rect head -->
+    <rect x="22" y="22" width="56" height="54" rx="4" fill="#071410" stroke="#00D9FF" stroke-width="2"/>
+
+    <!-- Display: team org nodes (3 circles connected) -->
+    <rect x="27" y="27" width="46" height="30" rx="2" fill="#040D08" stroke="#22C55E" stroke-width="1"/>
+    <!-- Manager node (top center) -->
+    <circle cx="50" cy="35" r="5" fill="#0D1F12" stroke="#22C55E" stroke-width="1.5"/>
+    <circle cx="50" cy="35" r="2" fill="#22C55E" opacity="0.9"/>
+    <!-- Report lines -->
+    <line x1="44" y1="38" x2="38" y2="46" stroke="#00D9FF" stroke-width="1.2" opacity="0.8"/>
+    <line x1="50" y1="40" x2="50" y2="46" stroke="#00D9FF" stroke-width="1.2" opacity="0.8"/>
+    <line x1="56" y1="38" x2="62" y2="46" stroke="#00D9FF" stroke-width="1.2" opacity="0.8"/>
+    <!-- Team member nodes -->
+    <circle cx="38" cy="50" r="4" fill="#0D1F12" stroke="#00D9FF" stroke-width="1.2"/>
+    <text x="38" y="52" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace">FE</text>
+    <circle cx="50" cy="50" r="4" fill="#0D1F12" stroke="#00D9FF" stroke-width="1.2"/>
+    <text x="50" y="52" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace">FE</text>
+    <circle cx="62" cy="50" r="4" fill="#0D1F12" stroke="#00D9FF" stroke-width="1.2"/>
+    <text x="62" y="52" text-anchor="middle" fill="#00D9FF" font-size="4" font-family="monospace">FE</text>
+
+    <!-- Manager badge -->
+    <rect x="29" y="60" width="42" height="7" rx="2" fill="#22C55E" opacity="0.2" stroke="#22C55E" stroke-width="0.8"/>
+    <text x="50" y="65.5" text-anchor="middle" fill="#22C55E" font-size="4.5" font-family="monospace">ENG MANAGER</text>
+
+    <!-- Bottom traces -->
+    <path d="M33,76 V82 H41 V78" stroke="#22C55E" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <circle cx="41" cy="78" r="1.2" fill="#22C55E" opacity="0.7"/>
+    <path d="M67,76 V82 H59 V78" stroke="#22C55E" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <circle cx="59" cy="78" r="1.2" fill="#22C55E" opacity="0.7"/>
+
+    <!-- Port connectors -->
+    <rect x="16" y="40" width="6" height="4" rx="1" fill="#030108" stroke="#22C55E" stroke-width="0.8"/>
+    <rect x="78" y="40" width="6" height="4" rx="1" fill="#030108" stroke="#22C55E" stroke-width="0.8"/>
+  </svg>

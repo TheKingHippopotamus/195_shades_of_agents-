@@ -1,13 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a1f3a"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
-<line x1="67.7" y1="30.3" x2="78.3" y2="19.7" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="78.2842712474619,19.7157287525381 81.2842712474619,16.7157287525381 79.2842712474619,21.7157287525381" fill="#F97316" opacity="0.7"/><line x1="67.7" y1="65.7" x2="76.9" y2="74.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="76.87005768508881,74.8700576850888 79.87005768508881,71.8700576850888 77.87005768508881,76.8700576850888" fill="#F97316" opacity="0.7"/><line x1="32.3" y1="65.7" x2="22.4" y2="75.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="22.422835533724648,75.57716446627535 25.422835533724648,72.57716446627535 23.422835533724648,77.57716446627535" fill="#F97316" opacity="0.7"/><line x1="32.3" y1="30.3" x2="18.2" y2="16.2" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="18.180194846605353,16.180194846605364 21.180194846605353,13.180194846605364 19.180194846605353,18.180194846605364" fill="#F97316" opacity="0.7"/>
-<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
-<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
-<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
-<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
-<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
-<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
-<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
-<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>
+<!-- ambient ring -->
+  <circle cx="50" cy="50" r="35" fill="rgba(249,115,22,0.07)" stroke="#F97316" stroke-width="0.4" opacity="0.35"/>
+  <!-- U arch body -->
+  <path d="M34,26 L34,56 Q34,76 50,76 Q66,76 66,56 L66,26"
+        stroke="#F97316" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+  <!-- N cap -->
+  <rect x="27" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="34" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">N</text>
+  <!-- S cap -->
+  <rect x="59" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="66" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">S</text>
+  <circle cx="50" cy="50" r="13" fill="#0d0800" stroke="#F97316" stroke-width="1.5"/>
+  <!-- phone handset -->
+  <path d="M43,44 Q43,41 46,41 L48,43 Q48,45 46,46 Q48,50 54,52 Q55,50 57,50 L59,52 Q59,55 56,55 Q50,55 46,51 Q42,47 43,44 Z"
+        fill="#F97316" opacity="0.95"/>
+  <!-- call arc -->
+  <path d="M58,44 Q64,50 58,56" stroke="#F97316" stroke-width="1.3" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <line x1="67.0" y1="50.0" x2="82.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="78.0,52.0 78.0,48.0 82.0,50.0" fill="#F97316" opacity="0.75"/>
+<line x1="62.0" y1="62.0" x2="72.6" y2="72.6" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="68.4,71.2 71.2,68.4 72.6,72.6" fill="#F97316" opacity="0.75"/>
+<line x1="50.0" y1="67.0" x2="50.0" y2="82.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="48.0,78.0 52.0,78.0 50.0,82.0" fill="#F97316" opacity="0.75"/>
+<line x1="38.0" y1="62.0" x2="27.4" y2="72.6" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="28.8,68.4 31.6,71.2 27.4,72.6" fill="#F97316" opacity="0.75"/>
+<line x1="33.0" y1="50.0" x2="18.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="22.0,48.0 22.0,52.0 18.0,50.0" fill="#F97316" opacity="0.75"/>
+<line x1="38.0" y1="38.0" x2="27.4" y2="27.4" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="31.6,28.8 28.8,31.6 27.4,27.4" fill="#F97316" opacity="0.75"/>
+<line x1="50.0" y1="33.0" x2="50.0" y2="18.0" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="52.0,22.0 48.0,22.0 50.0,18.0" fill="#F97316" opacity="0.75"/>
+<line x1="62.0" y1="38.0" x2="72.6" y2="27.4" stroke="#F97316" stroke-width="1.4" opacity="0.75"/>
+<polygon points="71.2,31.6 68.4,28.8 72.6,27.4" fill="#F97316" opacity="0.75"/>
+</svg>

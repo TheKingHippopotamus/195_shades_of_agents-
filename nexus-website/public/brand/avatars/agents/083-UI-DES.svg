@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="uidesBlobGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8EB5"/>
+      <stop offset="55%" stop-color="#FF2D78"/>
+      <stop offset="100%" stop-color="#A8004F"/>
+    </radialGradient>
+    <clipPath id="uidesBlobClip">
+      <path d="M 76.0 50.0 Q 66.7 66.7 71.4 58.4 Q 50.0 77.6 58.4 72.1 Q 34.0 66.0 42.0 71.8 Q 23.2 50.0 28.6 58.0 Q 33.1 33.1 28.2 41.5 Q 50.0 22.7 41.5 27.9 Q 66.4 33.6 58.2 28.2 Q 76.0 50.0 71.2 41.8 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
+  <circle cx="14" cy="20" r="2" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="83" cy="18" r="2" fill="#FF8EB5" opacity="0.4"/>
+  <circle cx="12" cy="70" r="2" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="84" cy="72" r="2" fill="#FF6B35" opacity="0.4"/>
+  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.36"/>
+  <path d="M 76.0 50.0 Q 66.7 66.7 71.4 58.4 Q 50.0 77.6 58.4 72.1 Q 34.0 66.0 42.0 71.8 Q 23.2 50.0 28.6 58.0 Q 33.1 33.1 28.2 41.5 Q 50.0 22.7 41.5 27.9 Q 66.4 33.6 58.2 28.2 Q 76.0 50.0 71.2 41.8 Z" fill="url(#uidesBlobGrad)"/>
+  <!-- PIXEL GRID: 5x5 grid of small squares -->
+  <g clip-path="url(#uidesBlobClip)">
+    <!-- Grid squares arranged 5x5, some filled to form a heart shape -->
+    <!-- Row 1 (top) -->
+    <rect x="35" y="37" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <rect x="40" y="37" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
+    <rect x="45" y="37" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <rect x="50" y="37" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
+    <rect x="55" y="37" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <!-- Row 2 -->
+    <rect x="35" y="42" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
+    <rect x="40" y="42" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
+    <rect x="45" y="42" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
+    <rect x="50" y="42" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
+    <rect x="55" y="42" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.8"/>
+    <!-- Row 3 -->
+    <rect x="35" y="47" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <rect x="40" y="47" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
+    <rect x="45" y="47" width="4" height="4" rx="0.3" fill="#FF2D78" opacity="0.9"/>
+    <rect x="50" y="47" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
+    <rect x="55" y="47" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <!-- Row 4 -->
+    <rect x="35" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.2"/>
+    <rect x="40" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <rect x="45" y="52" width="4" height="4" rx="0.3" fill="#FFD1B8" opacity="0.9"/>
+    <rect x="50" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <rect x="55" y="52" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.2"/>
+    <!-- Row 5 (bottom) -->
+    <rect x="35" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
+    <rect x="40" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
+    <rect x="45" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.3"/>
+    <rect x="50" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
+    <rect x="55" y="57" width="4" height="4" rx="0.3" fill="#FF8EB5" opacity="0.1"/>
+    <!-- Grid lines overlay -->
+    <line x1="39" y1="36" x2="39" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="44" y1="36" x2="44" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="49" y1="36" x2="49" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="54" y1="36" x2="54" y2="62" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="34" y1="41" x2="60" y2="41" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="34" y1="46" x2="60" y2="46" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="34" y1="51" x2="60" y2="51" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+    <line x1="34" y1="56" x2="60" y2="56" stroke="#FFD1B8" stroke-width="0.3" opacity="0.3"/>
+  </g>
+</svg>

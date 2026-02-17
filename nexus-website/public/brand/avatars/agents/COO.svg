@@ -1,13 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<polygon points="25.454545454545453,30 30.909090909090907,30 28.18181818181818,4" fill="#FFD700" opacity="0.9"/><circle cx="28.18181818181818" cy="2" r="2.5" fill="#FF6B35"/><polygon points="40.36363636363636,30 45.81818181818181,30 43.090909090909086,12" fill="#FFD700" opacity="0.9"/><polygon points="55.272727272727266,30 60.72727272727272,30 57.99999999999999,4" fill="#FFD700" opacity="0.9"/><circle cx="57.99999999999999" cy="2" r="2.5" fill="#FF6B35"/><polygon points="70.18181818181819,30 75.63636363636364,30 72.90909090909092,12" fill="#FFD700" opacity="0.9"/><polygon points="85.0909090909091,30 90.54545454545455,30 87.81818181818183,4" fill="#FFD700" opacity="0.9"/><circle cx="87.81818181818183" cy="2" r="2.5" fill="#FF6B35"/>
-<path d="M50,30 L68,40 L68,62 L50,72 L32,62 L32,40 Z" fill="#1E2440" stroke="#FFD700" stroke-width="2"/>
-<rect x="32" y="30" width="36" height="6" rx="1" fill="#FFD700" opacity="0.7"/>
-<polygon points="50,28 53,32 50,36 47,32" fill="#FF6B35"/>
-<ellipse cx="42" cy="52" rx="4.5" ry="5" fill="#030108"/><ellipse cx="58" cy="52" rx="4.5" ry="5" fill="#030108"/>
-<circle cx="42" cy="52" r="2.5" fill="#FF6B35"/><circle cx="58" cy="52" r="2.5" fill="#FF6B35"/>
-<circle cx="43" cy="51" r="1" fill="white" opacity="0.8"/><circle cx="59" cy="51" r="1" fill="white" opacity="0.8"/>
-<path d="M43,60 Q50,57 57,60" stroke="#FFD700" stroke-width="1.5" fill="none"/>
-<path d="M32,70 L25,85 L50,80 L75,85 L68,70 Z" fill="#1E2440" stroke="#FFD700" stroke-width="1"/>
-<ellipse cx="50" cy="95" rx="25" ry="4" fill="rgba(255,215,0,0.2)"/></svg>
+
+<defs>
+  <radialGradient id="coo-gear" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#9CA3AF"/><stop offset="100%" stop-color="#374151"/></radialGradient>
+  <filter id="coo-glow"><feGaussianBlur stdDeviation="0.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- 3 spikes: solid, mechanical style -->
+<polygon points="35,37 40,37 37.5,13" fill="#9CA3AF" opacity="0.9"/>
+<polygon points="47,36 53,36 50,8"   fill="#FFD700" opacity="0.95"/>
+<polygon points="60,37 65,37 62.5,13" fill="#9CA3AF" opacity="0.9"/>
+<!-- hex head -->
+<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="#111827" stroke="#9CA3AF" stroke-width="2"/>
+<rect x="32" y="34" width="36" height="5" rx="1" fill="#9CA3AF" opacity="0.8"/>
+<!-- center accent line gold -->
+<rect x="47" y="34" width="6" height="5" rx="1" fill="#FFD700" opacity="0.9"/>
+<!-- large gear left -->
+<circle cx="42" cy="52" r="8" fill="none" stroke="#9CA3AF" stroke-width="1.2"/>
+<circle cx="42" cy="52" r="5" fill="url(#coo-gear)"/>
+<circle cx="42" cy="52" r="2" fill="#1F2937"/>
+<!-- gear teeth left (8 teeth) -->
+<rect x="40.5" y="42.5" width="3" height="2" rx="0.4" fill="#9CA3AF"/>
+<rect x="40.5" y="59.5" width="3" height="2" rx="0.4" fill="#9CA3AF"/>
+<rect x="33.5" y="50.5" width="2" height="3" rx="0.4" fill="#9CA3AF"/>
+<rect x="49.5" y="50.5" width="2" height="3" rx="0.4" fill="#9CA3AF"/>
+<rect x="36" y="44.5" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 37 45.5)"/>
+<rect x="46.5" y="44.5" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 47.5 45.5)"/>
+<rect x="36" y="58" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 37 59)"/>
+<rect x="46.5" y="58" width="2" height="2" rx="0.4" fill="#9CA3AF" transform="rotate(45 47.5 59)"/>
+<!-- small gear right (interlocking) -->
+<circle cx="58" cy="52" r="5.5" fill="none" stroke="#FFD700" stroke-width="1"/>
+<circle cx="58" cy="52" r="3.5" fill="#2A2F20"/>
+<circle cx="58" cy="52" r="1.4" fill="#1F2937"/>
+<!-- small gear teeth -->
+<rect x="56.7" y="45.5" width="2.6" height="1.8" rx="0.3" fill="#FFD700"/>
+<rect x="56.7" y="57" width="2.6" height="1.8" rx="0.3" fill="#FFD700"/>
+<rect x="51.2" y="50.6" width="1.8" height="2.6" rx="0.3" fill="#FFD700"/>
+<rect x="63" y="50.6" width="1.8" height="2.6" rx="0.3" fill="#FFD700"/>
+<!-- gear mesh contact indicator -->
+<circle cx="50.5" cy="52" r="0.7" fill="#FFD700" opacity="0.8"/>
+<!-- mechanical eyes (visor slits) -->
+<rect x="38" y="48" width="5" height="2" rx="0.8" fill="#4B5563"/>
+<rect x="57" y="48" width="5" height="2" rx="0.8" fill="#4B5563"/>
+<rect x="39" y="48.3" width="3" height="1.4" rx="0.5" fill="#FFD700" opacity="0.7"/>
+<rect x="58" y="48.3" width="3" height="1.4" rx="0.5" fill="#FFD700" opacity="0.7"/>
+<!-- flat operational mouth -->
+<line x1="44" y1="65" x2="56" y2="65" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+<!-- body: mechanical chassis -->
+<path d="M32,75 L28,90 L50,87 L72,90 L68,75 Z" fill="#111827" stroke="#9CA3AF" stroke-width="1"/>
+<!-- bolt detail -->
+<circle cx="36" cy="82" r="1.5" fill="none" stroke="#9CA3AF" stroke-width="0.8"/>
+<circle cx="64" cy="82" r="1.5" fill="none" stroke="#9CA3AF" stroke-width="0.8"/>
+<ellipse cx="50" cy="96" rx="22" ry="3" fill="rgba(156,163,175,0.15)"/>
+</svg>

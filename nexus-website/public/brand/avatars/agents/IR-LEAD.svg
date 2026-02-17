@@ -1,12 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="50" r="42" fill="rgba(239,68,68,0.05)"/>
-<path d="M50,10 L70,25 L75,60 L68,85 L50,90 L32,85 L25,60 L30,25 Z" fill="#150010" stroke="#EF4444" stroke-width="1.5"/>
-<ellipse cx="50" cy="30" rx="22" ry="16" fill="#0a0008" opacity="0.8"/>
-<rect x="34" y="35" width="32" height="7" rx="3" fill="#030108" stroke="#EF4444" stroke-width="1"/>
-<rect x="36" y="36.5" width="28" height="4" rx="2" fill="#EF4444" opacity="0.7"/>
-<circle cx="43" cy="38" r="3" fill="#EF4444" opacity="0.5"/><circle cx="57" cy="38" r="3" fill="#EF4444" opacity="0.5"/>
-<path d="M38,55 Q50,60 62,55" stroke="#EF4444" stroke-width="0.5" opacity="0.3"/>
-<ellipse cx="65" cy="68" rx="5" ry="3" fill="#030108" stroke="#EF4444" stroke-width="1"/><ellipse cx="65" cy="68" rx="2" ry="2" fill="#EF4444"/>
-<ellipse cx="50" cy="93" rx="20" ry="3" fill="rgba(239,68,68,0.3)"/></svg>
+
+  
+  <defs>
+    <filter id="ir-lead" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="secbg-ir-lead" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#060000"/>
+    </radialGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#secbg-ir-lead)" rx="8"/>
+  <g filter="url(#ir-lead)">
+    
+  <!-- Cloak body -->
+  <path d="M26.9,42.4 L20,95 L80,95 L73.1,42.4 Z"
+        fill="#0d0000" stroke="#B91C1C" stroke-width="0.5"/>
+  <!-- Inner cloak shadow -->
+  <path d="M35.3,44.4 L32,95 L68,95 L64.7,44.4 Z"
+        fill="#050000" opacity="0.7"/>
+  <!-- Neck -->
+  <rect x="45" y="36.4" width="10" height="8" fill="#080000"/>
+  <!-- Hood outer -->
+  <ellipse cx="50" cy="30.35" rx="12.285000000000002" ry="10.395000000000001" fill="#0d0000" stroke="#B91C1C" stroke-width="0.6"/>
+  <!-- Hood inner shadow -->
+  <ellipse cx="50" cy="32.35" rx="8.0325" ry="6.615" fill="#020000"/>
+  <!-- Visor glow -->
+  <ellipse cx="50" cy="31.295" rx="5.197500000000001" ry="2.079" fill="#EF4444" opacity="0.9"/>
+  <ellipse cx="50" cy="31.295" rx="5.197500000000001" ry="2.079" fill="none" stroke="#EF4444" stroke-width="0.5" opacity="0.5"/>
+  <!-- Chest area -->
+  
+    <!-- Fire symbol -->
+    <path d="M50,55 Q46,60 48,66 Q44,62 45,68 Q48,72 50,71 Q52,72 55,68 Q56,62 52,66 Q54,60 50,55 Z"
+          fill="#EF4444" opacity="0.8"/>
+    <path d="M50,59 Q48,63 49,66 Q50,68 51,66 Q52,63 50,59 Z" fill="#FCA5A5" opacity="0.6"/>
+  <!-- Tool -->
+  
+    <!-- Fire axe / incident response tool -->
+    <line x1="69" y1="48" x2="78" y2="85" stroke="#B91C1C" stroke-width="1.2"/>
+    <path d="M65,44 L72,40 L76,46 L70,50 Z" fill="#EF4444" opacity="0.85"/>
+    <path d="M72,40 L78,36 L80,42 L76,46 Z" fill="#FCA5A5" opacity="0.6"/>
+  <!-- Extras -->
+  <line x1="66" y1="26" x2="72" y2="26" stroke="#EF4444" stroke-width="0.6" opacity="0.6"/><line x1="63.85640646055102" y1="34" x2="69.05255888325766" y2="37" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="58" y1="39.856406460551014" x2="61" y2="45.052558883257646" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="50" y1="42" x2="50" y2="48" stroke="#EF4444" stroke-width="0.6" opacity="0.6"/><line x1="42" y1="39.85640646055102" x2="39.00000000000001" y2="45.05255888325765" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="36.14359353944898" y1="34" x2="30.947441116742347" y2="37" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="34" y1="26.000000000000004" x2="28" y2="26.000000000000004" stroke="#EF4444" stroke-width="0.6" opacity="0.6"/><line x1="36.143593539448986" y1="18" x2="30.94744111674235" y2="14.999999999999998" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="41.99999999999999" y1="12.143593539448984" x2="38.999999999999986" y2="6.947441116742354" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="50" y1="10" x2="49.99999999999999" y2="4" stroke="#EF4444" stroke-width="0.6" opacity="0.6"/><line x1="58" y1="12.143593539448982" x2="61" y2="6.94744111674235" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/><line x1="63.856406460551014" y1="17.999999999999993" x2="69.05255888325765" y2="14.99999999999999" stroke="#EF4444" stroke-width="0.6" opacity="0.3"/>
+  </g>
+  <rect x="29" y="4" width="42" height="8" rx="2" fill="#1a0000" stroke="#EF4444" stroke-width="0.7"/>
+  <text x="50" y="9.8" font-family="monospace" font-size="4.5" fill="#EF4444" text-anchor="middle">IR · LEAD</text>
+</svg>

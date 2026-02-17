@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="gpmDiamondGrad" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#FFD1B8"/>
+      <stop offset="50%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#CC3D00"/>
+    </radialGradient>
+    <clipPath id="gpmDiamondClip">
+      <path d="M 50 22 L 75 50 L 50 75 L 25 50 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0A00"/>
+  <g opacity="0.2" stroke="#FF6B35" stroke-width="0.5">
+    <line x1="50" y1="8" x2="50" y2="0"/>
+    <line x1="50" y1="92" x2="50" y2="100"/>
+    <line x1="8" y1="50" x2="0" y2="50"/>
+    <line x1="92" y1="50" x2="100" y2="50"/>
+    <line x1="21" y1="21" x2="14" y2="14"/>
+    <line x1="79" y1="21" x2="86" y2="14"/>
+    <line x1="21" y1="79" x2="14" y2="86"/>
+    <line x1="79" y1="79" x2="86" y2="86"/>
+  </g>
+  <path d="M 50 22 L 75 50 L 50 75 L 25 50 Z" fill="url(#gpmDiamondGrad)" stroke="#FFD1B8" stroke-width="0.8"/>
+  <path d="M 50 22 L 67 50 L 50 45 L 33 50 Z" fill="#FFB085" opacity="0.35"/>
+  <!-- GLOBE: circle with lat/lon grid lines, clipped to diamond -->
+  <g clip-path="url(#gpmDiamondClip)">
+    <!-- Globe circle -->
+    <circle cx="50" cy="50" r="15" fill="none" stroke="#FFD1B8" stroke-width="1.2"/>
+    <!-- Equator -->
+    <ellipse cx="50" cy="50" rx="15" ry="4" fill="none" stroke="#FFD1B8" stroke-width="0.8"/>
+    <!-- Upper latitude -->
+    <ellipse cx="50" cy="44" rx="11" ry="3" fill="none" stroke="#FFD1B8" stroke-width="0.6" opacity="0.7"/>
+    <!-- Lower latitude -->
+    <ellipse cx="50" cy="56" rx="11" ry="3" fill="none" stroke="#FFD1B8" stroke-width="0.6" opacity="0.7"/>
+    <!-- Meridian vertical -->
+    <ellipse cx="50" cy="50" rx="3" ry="15" fill="none" stroke="#FFD1B8" stroke-width="0.8"/>
+    <!-- Second meridian -->
+    <ellipse cx="50" cy="50" rx="10" ry="15" fill="none" stroke="#FFD1B8" stroke-width="0.5" opacity="0.6"/>
+  </g>
+</svg>

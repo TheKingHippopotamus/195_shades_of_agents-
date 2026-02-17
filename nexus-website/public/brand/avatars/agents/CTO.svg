@@ -1,13 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<polygon points="25.454545454545453,30 30.909090909090907,30 28.18181818181818,3" fill="#FFD700" opacity="0.9"/><circle cx="28.18181818181818" cy="1" r="2.5" fill="#FF6B35"/><polygon points="40.36363636363636,30 45.81818181818181,30 43.090909090909086,11" fill="#FFD700" opacity="0.9"/><polygon points="55.272727272727266,30 60.72727272727272,30 57.99999999999999,3" fill="#FFD700" opacity="0.9"/><circle cx="57.99999999999999" cy="1" r="2.5" fill="#FF6B35"/><polygon points="70.18181818181819,30 75.63636363636364,30 72.90909090909092,11" fill="#FFD700" opacity="0.9"/><polygon points="85.0909090909091,30 90.54545454545455,30 87.81818181818183,3" fill="#FFD700" opacity="0.9"/><circle cx="87.81818181818183" cy="1" r="2.5" fill="#FF6B35"/>
-<path d="M50,30 L68,40 L68,62 L50,72 L32,62 L32,40 Z" fill="#1E2440" stroke="#FFD700" stroke-width="2"/>
-<rect x="32" y="30" width="36" height="6" rx="1" fill="#FFD700" opacity="0.7"/>
-<polygon points="50,28 53,32 50,36 47,32" fill="#FF6B35"/>
-<ellipse cx="42" cy="52" rx="4.5" ry="5" fill="#030108"/><ellipse cx="58" cy="52" rx="4.5" ry="5" fill="#030108"/>
-<circle cx="42" cy="52" r="2.5" fill="#FF6B35"/><circle cx="58" cy="52" r="2.5" fill="#FF6B35"/>
-<circle cx="43" cy="51" r="1" fill="white" opacity="0.8"/><circle cx="59" cy="51" r="1" fill="white" opacity="0.8"/>
-<path d="M43,60 Q50,57 57,60" stroke="#FFD700" stroke-width="1.5" fill="none"/>
-<path d="M32,70 L25,85 L50,80 L75,85 L68,70 Z" fill="#1E2440" stroke="#FFD700" stroke-width="1"/>
-<ellipse cx="50" cy="95" rx="25" ry="4" fill="rgba(255,215,0,0.2)"/></svg>
+
+<defs>
+  <radialGradient id="cto-eye" cx="40%" cy="40%" r="55%"><stop offset="0%" stop-color="#00FFFF"/><stop offset="100%" stop-color="#0066AA"/></radialGradient>
+  <filter id="cto-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- antenna top-right -->
+<line x1="67" y1="34" x2="75" y2="18" stroke="#00D9FF" stroke-width="1.2"/>
+<circle cx="75" cy="17" r="2.5" fill="#00D9FF" filter="url(#cto-glow)"/>
+<rect x="73" y="15" width="4" height="4" rx="0.5" fill="none" stroke="#00D9FF" stroke-width="0.8"/>
+<!-- 3 circuit-traced spikes -->
+<polygon points="36,36 42,36 39,10" fill="#FFD700" opacity="0.9"/>
+<polygon points="47,36 53,36 50,20" fill="#FFD700" opacity="0.85"/>
+<polygon points="59,36 65,36 62,10" fill="#FFD700" opacity="0.9"/>
+<!-- circuit trace lines on spike faces -->
+<line x1="39" y1="28" x2="39" y2="22" stroke="#00D9FF" stroke-width="0.7"/>
+<line x1="37" y1="25" x2="41" y2="25" stroke="#00D9FF" stroke-width="0.5"/>
+<line x1="50" y1="30" x2="50" y2="24" stroke="#00D9FF" stroke-width="0.7"/>
+<circle cx="39" cy="22" r="0.9" fill="#00D9FF"/>
+<circle cx="50" cy="24" r="0.9" fill="#00D9FF"/>
+<circle cx="62" cy="22" r="0.9" fill="#00D9FF"/>
+<line x1="62" y1="28" x2="62" y2="22" stroke="#00D9FF" stroke-width="0.7"/>
+<!-- hex head -->
+<path d="M50,34 L68,44 L68,66 L50,76 L32,66 L32,44 Z" fill="#0D1220" stroke="#FFD700" stroke-width="1.8"/>
+<rect x="32" y="34" width="36" height="5" rx="1" fill="#FFD700" opacity="0.75"/>
+<!-- circuit traces ON the hex face -->
+<line x1="36" y1="55" x2="42" y2="55" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
+<line x1="42" y1="55" x2="42" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
+<line x1="42" y1="60" x2="48" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
+<line x1="58" y1="55" x2="64" y2="55" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
+<line x1="58" y1="55" x2="58" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
+<line x1="52" y1="60" x2="58" y2="60" stroke="#00D9FF" stroke-width="0.6" opacity="0.8"/>
+<!-- small circuit nodes -->
+<rect x="35" y="54.2" width="1.6" height="1.6" fill="#00D9FF" opacity="0.9"/>
+<rect x="63.4" y="54.2" width="1.6" height="1.6" fill="#00D9FF" opacity="0.9"/>
+<!-- square LED eyes -->
+<rect x="38" y="47" width="8" height="8" rx="1" fill="#0A0A1A" stroke="#00D9FF" stroke-width="1.2"/>
+<rect x="54" y="47" width="8" height="8" rx="1" fill="#0A0A1A" stroke="#00D9FF" stroke-width="1.2"/>
+<rect x="40.5" y="49.5" width="3" height="3" rx="0.3" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<rect x="56.5" y="49.5" width="3" height="3" rx="0.3" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<!-- LED scan line -->
+<line x1="39.5" y1="51" x2="45.5" y2="51" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
+<line x1="55.5" y1="51" x2="61.5" y2="51" stroke="#00D9FF" stroke-width="0.5" opacity="0.5"/>
+<!-- flat mouth / terminal line -->
+<line x1="44" y1="64" x2="56" y2="64" stroke="#00D9FF" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="48" y="62.5" width="4" height="3" rx="0.5" fill="none" stroke="#00D9FF" stroke-width="0.6"/>
+<!-- body: tech chassis -->
+<path d="M32,75 L28,90 L50,87 L72,90 L68,75 Z" fill="#0D1220" stroke="#FFD700" stroke-width="1"/>
+<line x1="38" y1="80" x2="62" y2="80" stroke="#00D9FF" stroke-width="0.6" opacity="0.6"/>
+<rect x="46" y="82" width="8" height="3" rx="0.5" fill="none" stroke="#00D9FF" stroke-width="0.6" opacity="0.7"/>
+<ellipse cx="50" cy="96" rx="22" ry="3" fill="rgba(0,217,255,0.15)"/>
+</svg>

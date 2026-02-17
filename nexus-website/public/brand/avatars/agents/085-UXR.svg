@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="uxrBlobGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8EB5"/>
+      <stop offset="55%" stop-color="#FF2D78"/>
+      <stop offset="100%" stop-color="#A8004F"/>
+    </radialGradient>
+    <radialGradient id="uxrTealGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="uxrBlobClip">
+      <path d="M 77.8 50.0 Q 67.2 67.2 72.5 58.6 Q 50.0 78.9 58.6 73.0 Q 33.4 66.6 41.7 72.7 Q 22.5 50.0 27.9 58.3 Q 32.2 32.2 27.4 41.1 Q 50.0 21.4 41.1 26.8 Q 66.8 33.2 58.4 27.3 Q 77.8 50.0 72.3 41.6 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
+  <!-- Teal scientific glow -->
+  <circle cx="50" cy="50" r="30" fill="url(#uxrTealGlow)"/>
+  <circle cx="14" cy="20" r="2.5" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="83" cy="18" r="2.5" fill="#06B6D4" opacity="0.45"/>
+  <circle cx="12" cy="70" r="2" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="84" cy="72" r="2.5" fill="#06B6D4" opacity="0.45"/>
+  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.38"/>
+  <path d="M 77.8 50.0 Q 67.2 67.2 72.5 58.6 Q 50.0 78.9 58.6 73.0 Q 33.4 66.6 41.7 72.7 Q 22.5 50.0 27.9 58.3 Q 32.2 32.2 27.4 41.1 Q 50.0 21.4 41.1 26.8 Q 66.8 33.2 58.4 27.3 Q 77.8 50.0 72.3 41.6 Z" fill="url(#uxrBlobGrad)"/>
+  <!-- MICROSCOPE inside blob -->
+  <g clip-path="url(#uxrBlobClip)">
+    <!-- Microscope base -->
+    <rect x="43" y="62" width="14" height="2" rx="1" fill="#06B6D4" opacity="0.8"/>
+    <!-- Arm post -->
+    <rect x="49" y="40" width="2.5" height="22" rx="0.5" fill="#06B6D4" opacity="0.8"/>
+    <!-- Horizontal arm -->
+    <rect x="44" y="40" width="12" height="2" rx="0.5" fill="#06B6D4" opacity="0.8"/>
+    <!-- Eyepiece tube -->
+    <rect x="51" y="34" width="2" height="8" rx="0.5" fill="#FFD1B8"/>
+    <!-- Objective lens barrel -->
+    <rect x="45.5" y="56" width="9" height="4" rx="1" fill="#06B6D4" opacity="0.9"/>
+    <!-- Lens element (circle) -->
+    <circle cx="50" cy="62" r="2.5" fill="#06B6D4" opacity="0.5" stroke="#FFD1B8" stroke-width="0.6"/>
+    <!-- Stage platform -->
+    <rect x="43" y="56" width="14" height="1.5" rx="0.5" fill="#FFD1B8" opacity="0.7"/>
+    <!-- Sample dot on stage -->
+    <circle cx="50" cy="56" r="1.5" fill="#FF2D78" opacity="0.9"/>
+  </g>
+</svg>

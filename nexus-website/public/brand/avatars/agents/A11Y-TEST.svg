@@ -1,10 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<ellipse cx="50" cy="94" rx="22" ry="4" fill="rgba(34,197,94,0.2)"/>
-
-<path d="M50,18 L75,28 L75,55 Q75,78 50,88 Q25,78 25,55 L25,28 Z" fill="#0F2A18" stroke="#22C55E" stroke-width="2"/>
-<path d="M50,24 L69,32 L69,55 Q69,73 50,82 Q31,73 31,55 L31,32 Z" fill="#1a3a20" stroke="#22C55E" stroke-width="0.5" opacity="0.5"/>
-<path d="M36,53 L45,63 L66,40" stroke="#22C55E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="50" cy="34" r="5" fill="#030108" stroke="#22C55E" stroke-width="1"/>
-<text x="50" y="37" text-anchor="middle" fill="#22C55E" font-size="6" font-family="monospace">QA</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+    <defs>
+      <linearGradient id="at-sg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#4ADE80"/>
+        <stop offset="100%" stop-color="#14532D"/>
+      </linearGradient>
+    </defs>
+    <!-- Shield -->
+    <path d="M50,15 L70,23 L70,51 Q70,67 50,79 Q30,67 30,51 L30,23 Z" fill="url(#at-sg)" stroke="#22C55E" stroke-width="1.7"/>
+    <!-- Orange accent ring around accessibility symbol -->
+    <circle cx="50" cy="50" r="20" fill="#052e16" stroke="#F97316" stroke-width="1.5" opacity="0.9"/>
+    <!-- Universal accessibility icon (person in circle with extending arms) -->
+    <!-- Person head -->
+    <circle cx="50" cy="35" r="4" fill="#F97316"/>
+    <!-- Person body -->
+    <line x1="50" y1="39" x2="50" y2="55" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Extended arms (universal access style) -->
+    <line x1="50" y1="43" x2="35" y2="39" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="50" y1="43" x2="65" y2="39" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="50" y1="55" x2="41" y2="65" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="50" y1="55" x2="59" y2="65" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Outer accessibility circle ring -->
+    <circle cx="50" cy="50" r="18" fill="none" stroke="#F97316" stroke-width="1.2" opacity="0.6"/>
+    <!-- A11Y tag -->
+    <rect x="27" y="82" width="46" height="9" rx="3" fill="#052e16" stroke="#F97316" stroke-width="0.9"/>
+    <text x="50" y="88.5" font-family="monospace" font-size="5" fill="#F97316" text-anchor="middle" font-weight="bold">A11Y-TEST</text>
+  </svg>

@@ -1,4 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<line x1="50" y1="30" x2="51" y2="50" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="50" y1="30" x2="42" y2="48" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="50" y1="30" x2="62" y2="35" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="50" y1="30" x2="45" y2="38" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="50" y1="30" x2="50" y2="18" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="51" y1="50" x2="59" y2="68" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="42" y1="48" x2="53" y2="68" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="51" y1="50" x2="53" y2="68" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="42" y1="48" x2="59" y2="68" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="59" y1="68" x2="44" y2="82" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="62" y1="35" x2="45" y2="38" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="51" y1="50" x2="70" y2="55" stroke="#00FF88" stroke-width="1" opacity="0.4"/><line x1="42" y1="48" x2="30" y2="55" stroke="#00FF88" stroke-width="1" opacity="0.4"/><circle cx="50" cy="30" r="13.200000000000001" fill="#00FF88" opacity="0.1"/><circle cx="50" cy="30" r="6" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="50" cy="30" r="3" fill="#00FF88"/><circle cx="51" cy="50" r="4" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="42" cy="48" r="4" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="59" cy="68" r="3.5" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="53" cy="68" r="3.5" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="62" cy="35" r="3" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="45" cy="38" r="3" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="44" cy="82" r="3" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="50" cy="18" r="4" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="70" cy="55" r="2.5" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><circle cx="30" cy="55" r="2.5" fill="#030108" stroke="#00FF88" stroke-width="1.5"/><text x="50" y="97" text-anchor="middle" fill="#00FF88" font-size="5" font-family="monospace" opacity="0.5">NEURAL</text></svg>
+
+  
+  <defs>
+    <filter id="ai-ethics" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="bg-ai-ethics" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1a0f"/>
+      <stop offset="100%" stop-color="#040c07"/>
+    </radialGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-ai-ethics)" rx="8"/>
+  <g filter="url(#ai-ethics)">
+    <line x1="24" y1="30" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="18" y1="50" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="24" y1="70" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="36" y1="40" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="36" y1="60" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="76" y1="30" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="82" y1="50" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="76" y1="70" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="64" y1="40" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="64" y1="60" x2="50" y2="50" stroke="#00FF88" stroke-width="0.6" opacity="0.35"/>
+    <line x1="50" y1="22" x2="50" y2="50" stroke="#EAB308" stroke-width="0.8" opacity="0.5"/>
+    <line x1="50" y1="78" x2="50" y2="50" stroke="#EAB308" stroke-width="0.8" opacity="0.5"/>
+    <line x1="24" y1="30" x2="36" y2="40" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
+    <line x1="36" y1="40" x2="36" y2="60" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
+    <line x1="36" y1="60" x2="24" y2="70" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
+    <line x1="18" y1="50" x2="24" y2="30" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
+    <line x1="18" y1="50" x2="24" y2="70" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
+    <line x1="76" y1="30" x2="64" y2="40" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
+    <line x1="64" y1="40" x2="64" y2="60" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
+    <line x1="64" y1="60" x2="76" y2="70" stroke="#00FF88" stroke-width="0.6" opacity="0.3"/>
+    <line x1="82" y1="50" x2="76" y2="30" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
+    <line x1="82" y1="50" x2="76" y2="70" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
+    <circle cx="24" cy="30" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="18" cy="50" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="24" cy="70" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="36" cy="40" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="36" cy="60" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="76" cy="30" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="82" cy="50" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="76" cy="70" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="64" cy="40" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="64" cy="60" r="2.5" fill="#00FF88" opacity="0.8"/>
+    <circle cx="50" cy="22" r="3" fill="#00FF88" opacity="0.9"/>
+    <circle cx="50" cy="50" r="4" fill="#EAB308" opacity="0.9"/>
+    <circle cx="50" cy="78" r="3" fill="#00FF88" opacity="0.9"/>
+    
+    <line x1="30" y1="50" x2="70" y2="50" stroke="#EAB308" stroke-width="1" opacity="0.6"/>
+    <circle cx="50" cy="50" r="1.5" fill="#EAB308" opacity="0.9"/>
+    <!-- Left scale pan -->
+    <line x1="30" y1="50" x2="22" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
+    <line x1="22" y1="62" x2="30" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
+    <!-- Right scale pan -->
+    <line x1="70" y1="50" x2="78" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
+    <line x1="70" y1="62" x2="78" y2="62" stroke="#EAB308" stroke-width="0.7" opacity="0.5"/>
+  </g>
+  <rect x="24" y="4" width="52" height="8" rx="2" fill="#001a0a" stroke="#EAB308" stroke-width="0.7"/>
+  <text x="50" y="9.8" font-family="monospace" font-size="4" fill="#EAB308" text-anchor="middle" letter-spacing="0.3">AI · ETHICS</text>
+</svg>

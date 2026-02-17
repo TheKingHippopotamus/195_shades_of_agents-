@@ -1,13 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a1f3a"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+</defs>
 <rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
-<line x1="67.7" y1="30.3" x2="79.7" y2="18.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="79.698484809835,18.301515190165006 82.698484809835,15.301515190165006 80.698484809835,20.301515190165006" fill="#F97316" opacity="0.7"/><line x1="74.8" y1="50.8" x2="93.7" y2="52.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="93.72333723530267,52.92643694854554 96.72333723530267,49.92643694854554 94.72333723530267,54.92643694854554" fill="#F97316" opacity="0.7"/><line x1="63.3" y1="69.2" x2="71.3" y2="81.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="71.28128306061346,81.86896796913136 74.28128306061346,78.86896796913136 72.28128306061346,83.86896796913136" fill="#F97316" opacity="0.7"/><line x1="41.7" y1="71.6" x2="35.8" y2="88.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="35.79800033592782,88.5869832032598 38.79800033592782,85.5869832032598 36.79800033592782,90.5869832032598" fill="#F97316" opacity="0.7"/><line x1="26.4" y1="56.3" x2="7.5" y2="62.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="7.525250136123461,62.862557787982524 10.52525013612346,59.862557787982524 8.52525013612346,64.86255778798252" fill="#F97316" opacity="0.7"/><line x1="28.8" y1="34.7" x2="12.7" y2="24.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="12.744135233955497,24.590588633325197 15.744135233955497,21.590588633325197 13.744135233955497,26.590588633325197" fill="#F97316" opacity="0.7"/><line x1="47.2" y1="23.2" x2="45.0" y2="3.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="44.96159857535114,3.2829505548040814 47.96159857535114,0.2829505548040814 45.96159857535114,5.282950554804081" fill="#F97316" opacity="0.7"/>
-<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
-<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
-<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
-<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
-<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
-<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
-<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
-<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>
+<!-- ambient ring -->
+  <circle cx="50" cy="50" r="35" fill="rgba(249,115,22,0.07)" stroke="#F97316" stroke-width="0.4" opacity="0.35"/>
+  <!-- U arch body -->
+  <path d="M34,26 L34,56 Q34,76 50,76 Q66,76 66,56 L66,26"
+        stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- N cap -->
+  <rect x="27" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="34" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">N</text>
+  <!-- S cap -->
+  <rect x="59" y="21" width="14" height="9" rx="2.5" fill="#F97316"/>
+  <text x="66" y="28.5" text-anchor="middle" fill="#0d0800"
+        font-size="5.5" font-weight="bold" font-family="monospace">S</text>
+  <circle cx="50" cy="50" r="13" fill="#0d0800" stroke="#F97316" stroke-width="1.5"/>
+  <!-- handshake — two hands meeting in centre -->
+  <!-- left hand -->
+  <path d="M38,50 Q42,47 47,49 L49,51" stroke="#F97316" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- right hand -->
+  <path d="M62,50 Q58,47 53,49 L51,51" stroke="#F97316" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- clasp centre -->
+  <circle cx="50" cy="50" r="2.5" fill="#F97316" opacity="0.95"/>
+  <!-- fingers left -->
+  <line x1="45" y1="47" x2="43" y2="44" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="47" y1="46" x2="46" y2="43" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <!-- fingers right -->
+  <line x1="55" y1="47" x2="57" y2="44" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="53" y1="46" x2="54" y2="43" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="67.0" y1="50.0" x2="80.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="76.0,52.0 76.0,48.0 80.0,50.0" fill="#F97316" opacity="0.65"/>
+<line x1="50.0" y1="67.0" x2="50.0" y2="80.0" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="48.0,76.0 52.0,76.0 50.0,80.0" fill="#F97316" opacity="0.65"/>
+<line x1="33.0" y1="50.0" x2="20.0" y2="50.0" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="24.0,48.0 24.0,52.0 20.0,50.0" fill="#F97316" opacity="0.65"/>
+<line x1="50.0" y1="33.0" x2="50.0" y2="20.0" stroke="#F97316" stroke-width="1.4" opacity="0.65"/>
+<polygon points="52.0,24.0 48.0,24.0 50.0,20.0" fill="#F97316" opacity="0.65"/>
+</svg>

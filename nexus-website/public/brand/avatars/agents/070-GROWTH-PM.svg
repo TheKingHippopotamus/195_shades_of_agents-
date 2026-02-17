@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="grpmDiamondGrad" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#FFD1B8"/>
+      <stop offset="50%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#CC3D00"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0A00"/>
+  <g opacity="0.2" stroke="#FF6B35" stroke-width="0.5">
+    <line x1="50" y1="8" x2="50" y2="0"/>
+    <line x1="50" y1="92" x2="50" y2="100"/>
+    <line x1="8" y1="50" x2="0" y2="50"/>
+    <line x1="92" y1="50" x2="100" y2="50"/>
+    <line x1="21" y1="21" x2="14" y2="14"/>
+    <line x1="79" y1="21" x2="86" y2="14"/>
+    <line x1="21" y1="79" x2="14" y2="86"/>
+    <line x1="79" y1="79" x2="86" y2="86"/>
+  </g>
+  <!-- Yellow accent glow -->
+  <circle cx="50" cy="50" r="28" fill="#FFD700" opacity="0.06"/>
+  <path d="M 50 22 L 75 50 L 50 75 L 25 50 Z" fill="url(#grpmDiamondGrad)" stroke="#FFD1B8" stroke-width="0.8"/>
+  <path d="M 50 22 L 67 50 L 50 44 L 33 50 Z" fill="#FFB085" opacity="0.35"/>
+  <!-- ASCENDING BAR CHART with upward trend line -->
+  <!-- Baseline -->
+  <line x1="32" y1="59" x2="68" y2="59" stroke="#FFD1B8" stroke-width="0.8"/>
+  <!-- Bars (ascending) -->
+  <rect x="33" y="56" width="5" height="3" fill="#FF9B65" rx="0.5"/>
+  <rect x="40" y="53" width="5" height="6" fill="#FF9B65" rx="0.5"/>
+  <rect x="47" y="49" width="5" height="10" fill="#FFD700" rx="0.5"/>
+  <rect x="54" y="44" width="5" height="15" fill="#FFD700" rx="0.5"/>
+  <rect x="61" y="39" width="5" height="20" fill="#FFD700" rx="0.5"/>
+  <!-- Upward arrow on last bar -->
+  <polygon points="63.5,36 66,41 61,41" fill="#FFD700"/>
+</svg>
