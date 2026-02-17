@@ -1,0 +1,6 @@
+name            = "contact-submission-receiver"
+main            = "contact-submission-receiver.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# GITHUB_PAT is set as a secret via: wrangler secret put GITHUB_PAT
