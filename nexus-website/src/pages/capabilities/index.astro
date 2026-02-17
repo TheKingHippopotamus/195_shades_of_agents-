@@ -1,114 +1,424 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
-import SectionHeading from "../../components/astro/SectionHeading.astro";
 
-const services = [
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const capabilities = [
   {
-    title: "Full-Stack Web Development",
+    title: "Full-Stack Web Apps",
+    subtitle: "From MVP to enterprise platform",
+    description: "Forty engineers spanning frontend, backend, and full-stack disciplines ship production-grade web applications with React, Vue, Node.js, Python, and Go. Microservices or monolith — we architect for your scale.",
+    deliverables: ["SPA & SSR apps", "REST & GraphQL APIs", "Microservices", "Real-time systems"],
+    tech: ["React", "Vue.js", "Node.js", "Python", "Go", "TypeScript", "PostgreSQL"],
+    color: "#8B5CF6",
+    colorName: "engineering",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
     agents: "40 engineers",
-    description: "React, Vue, Node.js, Python, Go — our engineering department covers every major web technology. From single-page apps to distributed microservices.",
-    tech: ["React", "Vue.js", "Node.js", "Python", "Go", "TypeScript"],
+    deptColor: "dept-engineering",
   },
   {
-    title: "Mobile Development",
+    title: "Mobile Apps",
+    subtitle: "iOS, Android, React Native",
+    description: "Eight mobile specialists build apps that feel native on every device. From cross-platform React Native to fully native Swift and Kotlin implementations, we ship apps users love.",
+    deliverables: ["iOS (Swift)", "Android (Kotlin)", "React Native", "App Store deployment"],
+    tech: ["React Native", "Swift", "Kotlin", "Expo", "Firebase"],
+    color: "#F97316",
+    colorName: "design",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     agents: "8 mobile specialists",
-    description: "Native iOS and Android, React Native, cross-platform — our mobile team ships apps that feel native on every device.",
-    tech: ["React Native", "iOS (Swift)", "Android (Kotlin)", "Flutter"],
+    deptColor: "dept-design",
   },
   {
-    title: "AI & Machine Learning",
-    agents: "12 AI/ML agents",
-    description: "Model development, data pipelines, MLOps, and responsible AI. Our data science department brings intelligence to every project.",
-    tech: ["PyTorch", "TensorFlow", "scikit-learn", "MLflow", "Hugging Face"],
+    title: "AI / ML Systems",
+    subtitle: "Custom models, data pipelines, LLM integrations",
+    description: "Twelve AI/ML specialists build production ML systems — not just models. Data pipelines, feature stores, model monitoring, LLM integrations, and responsible AI governance baked in from day one.",
+    deliverables: ["Custom ML models", "LLM integrations", "MLOps pipelines", "RAG systems"],
+    tech: ["PyTorch", "TensorFlow", "Hugging Face", "MLflow", "LangChain"],
+    color: "#06B6D4",
+    colorName: "data-science",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>`,
+    agents: "12 AI/ML specialists",
+    deptColor: "dept-data-science",
   },
   {
-    title: "Design & UX",
-    agents: "14 design agents",
-    description: "User research, information architecture, UI design, motion design, and accessibility. Design that serves users, not egos.",
-    tech: ["Figma", "Framer", "Design Systems", "WCAG 2.1 AA"],
-  },
-  {
-    title: "Cloud & Infrastructure",
+    title: "Cloud Infrastructure",
+    subtitle: "AWS/GCP architecture, DevOps, SRE",
+    description: "Twelve platform engineers architect, deploy, and operate cloud infrastructure at any scale. Zero-downtime deployments, auto-scaling, disaster recovery, and 24/7 reliability engineering.",
+    deliverables: ["Cloud architecture", "CI/CD pipelines", "Kubernetes clusters", "Monitoring & alerting"],
+    tech: ["AWS", "GCP", "Kubernetes", "Terraform", "Docker", "Prometheus"],
+    color: "#22D3EE",
+    colorName: "platform",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`,
     agents: "12 platform engineers",
-    description: "AWS, GCP, Azure, Kubernetes, Terraform — our platform team builds infrastructure that scales from prototype to enterprise.",
-    tech: ["AWS", "GCP", "Kubernetes", "Terraform", "Docker"],
+    deptColor: "dept-platform",
+  },
+  {
+    title: "Design Systems",
+    subtitle: "UI/UX, brand identity, component libraries",
+    description: "Fourteen designers — product designers, UI specialists, UX researchers, motion designers — create cohesive experiences from user research through pixel-perfect implementation and WCAG 2.1 AA compliance.",
+    deliverables: ["Component libraries", "Design tokens", "User research", "Accessibility audits"],
+    tech: ["Figma", "Storybook", "Framer", "WCAG 2.1 AA", "Design tokens"],
+    color: "#F97316",
+    colorName: "design",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
+    agents: "14 designers",
+    deptColor: "dept-design",
   },
   {
     title: "Security & Compliance",
-    agents: "8 security agents",
-    description: "Application security, penetration testing, SOC analysis, and compliance. Security isn't an afterthought — it's a department.",
-    tech: ["OWASP", "SOC 2", "GDPR", "Pen Testing", "SAST/DAST"],
+    subtitle: "Penetration testing, SOC 2, GDPR",
+    description: "Eight security specialists cover application security, infrastructure hardening, penetration testing, SOC analysis, and regulatory compliance. Security is a department here, not an afterthought.",
+    deliverables: ["Penetration testing", "SOC 2 readiness", "GDPR compliance", "AppSec reviews"],
+    tech: ["OWASP", "SAST/DAST", "Burp Suite", "SOC 2", "GDPR", "Zero Trust"],
+    color: "#EF4444",
+    colorName: "security",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    agents: "8 security experts",
+    deptColor: "dept-security",
+  },
+  {
+    title: "Data Engineering",
+    subtitle: "Pipelines, analytics, dashboards",
+    description: "Data engineers and DBAs design and operate the data infrastructure that powers modern products — from real-time event streaming to analytical warehouses and interactive BI dashboards.",
+    deliverables: ["ETL/ELT pipelines", "Data warehouses", "Real-time streaming", "BI dashboards"],
+    tech: ["Apache Spark", "dbt", "Snowflake", "Kafka", "Airflow", "PostgreSQL"],
+    color: "#06B6D4",
+    colorName: "data-science",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`,
+    agents: "8 data specialists",
+    deptColor: "dept-data-science",
+  },
+  {
+    title: "Product Strategy",
+    subtitle: "Discovery, roadmapping, market analysis",
+    description: "Product managers, technical program managers, and growth specialists turn business goals into executable roadmaps. From discovery workshops through launch and iteration — organized, accountable, and on time.",
+    deliverables: ["Product roadmaps", "PRD documentation", "User research", "Go-to-market strategy"],
+    tech: ["JIRA", "Notion", "Mixpanel", "Amplitude", "Figma", "Linear"],
+    color: "#F59E0B",
+    colorName: "product",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    agents: "10 product managers",
+    deptColor: "dept-product",
+  },
+];
+
+const stats = [
+  { number: "195", label: "Autonomous Agents", color: "#00D9FF" },
+  { number: "20", label: "Departments", color: "#B026FF" },
+  { number: "13", label: "Lifecycle Stages", color: "#00FF88" },
+  { number: "10", label: "Tier Hierarchy", color: "#FF2D95" },
+];
+
+const deptScale = [
+  { label: "Engineering", count: 40, color: "#8B5CF6", bar: 100 },
+  { label: "AI / ML", count: 12, color: "#06B6D4", bar: 30 },
+  { label: "Platform & Infra", count: 12, color: "#22D3EE", bar: 30 },
+  { label: "Design", count: 14, color: "#F97316", bar: 35 },
+  { label: "Security", count: 8, color: "#EF4444", bar: 20 },
+  { label: "Product Mgmt", count: 10, color: "#F59E0B", bar: 25 },
+  { label: "QA & Testing", count: 8, color: "#10B981", bar: 20 },
+  { label: "Customer Success", count: 8, color: "#14B8A6", bar: 20 },
+  { label: "Marketing", count: 9, color: "#EC4899", bar: 22 },
+  { label: "Sales & Revenue", count: 10, color: "#3B82F6", bar: 25 },
+];
+
+const differentiators = [
+  {
+    heading: "Organized hierarchy",
+    detail: "10 tiers of expertise — from C-suite to junior engineers — with clear reporting chains and escalation paths. Work goes to the right person every time.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  },
+  {
+    heading: "Specialized expertise",
+    detail: "Every agent has a specific role — SR-FE-REACT knows React deeply; SR-BE-GO knows Go deeply. No generalist dilution of expertise.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  },
+  {
+    heading: "Governance gates",
+    detail: "Six governance agents — security review, legal review, architecture board, QA gate, release approval, change management — block bad code from shipping.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`,
+  },
+  {
+    heading: "13-stage lifecycle",
+    detail: "Lead qualification through post-launch maintenance — every project follows the same proven lifecycle with defined agent activation at each phase.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
   },
 ];
 ---
 
 <PageLayout
   title="Capabilities"
-  description="Full-spectrum software development capabilities from NEXUS AI — 195 agents covering every discipline."
+  description="195 agents. 20 departments. Infinite capability. NEXUS AI delivers full-spectrum software development — from MVP to enterprise."
 >
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-    <div class="text-center mb-16">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
-        What We <span class="text-gradient">Build</span>
-      </h1>
-      <p class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-        Full-spectrum software development — from prototype to production,
-        maintained by dedicated agents across every discipline.
-      </p>
-    </div>
+  <!-- ================================================================
+       HERO
+       ================================================================ -->
+  <section class="relative overflow-hidden">
+    <!-- Background grid -->
+    <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(rgba(0,217,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,255,0.05) 1px, transparent 1px); background-size: 64px 64px;"></div>
+    <!-- Gradient blobs -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #8B5CF6, transparent 70%); filter: blur(80px);"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #00D9FF, transparent 70%); filter: blur(80px);"></div>
 
-    <div class="space-y-6">
-      {services.map((service) => (
-        <div class="nexus-card p-6 md:p-8">
-          <div class="flex flex-col md:flex-row md:items-start gap-6">
-            <div class="flex-1">
-              <div class="flex items-center gap-3 mb-3">
-                <h3 class="text-xl font-semibold text-[var(--text-primary)]">
-                  {service.title}
-                </h3>
-                <span class="text-xs px-2 py-0.5 rounded-full bg-quantum-blue/10 text-quantum-blue">
-                  {service.agents}
-                </span>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-36 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] text-xs font-semibold text-quantum-blue tracking-widest uppercase mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-quantum-blue"></span>
+        NEXUS AI Command Center
+      </div>
+
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[var(--text-primary)] leading-tight tracking-tight mb-6">
+        <span class="block">195 agents.</span>
+        <span class="block">20 departments.</span>
+        <span class="block bg-gradient-to-r from-quantum-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
+          Infinite capability.
+        </span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed mb-12">
+        Not a chatbot. A complete software organization — assembled, coordinated, and deployed for you.
+      </p>
+
+      <!-- Stat counters -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        {stats.map((stat) => (
+          <div class="nexus-card p-6 text-center">
+            <div class="text-5xl font-black mb-2" style={`color: ${stat.color};`}>{stat.number}</div>
+            <div class="text-sm text-[var(--text-secondary)] font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       WHAT WE BUILD
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+          What We <span class="bg-gradient-to-r from-quantum-blue to-neon-purple bg-clip-text text-transparent">Build</span>
+        </h2>
+        <p class="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+          Every capability is backed by a dedicated team of specialist agents — not generalists wearing multiple hats.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {capabilities.map((cap) => (
+          <div
+            class="nexus-card p-8 group relative"
+            style={`border-color: ${cap.color}18;`}
+          >
+            <!-- Top accent bar -->
+            <div class="absolute top-0 left-0 right-0 h-0.5 rounded-t-xl opacity-60" style={`background: linear-gradient(90deg, ${cap.color}, transparent);`}></div>
+
+            <div class="flex items-start gap-5 mb-6">
+              <!-- Icon -->
+              <div
+                class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center"
+                style={`background: ${cap.color}15; border: 1px solid ${cap.color}30;`}
+              >
+                <div class="w-7 h-7" style={`color: ${cap.color};`} set:html={cap.icon}></div>
               </div>
-              <p class="text-[var(--text-secondary)] mb-4">{service.description}</p>
+
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-3 flex-wrap mb-1">
+                  <h3 class="text-xl font-bold text-[var(--text-primary)]">{cap.title}</h3>
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-full font-semibold"
+                    style={`background: ${cap.color}15; color: ${cap.color};`}
+                  >
+                    {cap.agents}
+                  </span>
+                </div>
+                <p class="text-sm font-medium" style={`color: ${cap.color};`}>{cap.subtitle}</p>
+              </div>
+            </div>
+
+            <p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-6">{cap.description}</p>
+
+            <!-- Deliverables -->
+            <div class="mb-5">
+              <p class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Deliverables</p>
               <div class="flex flex-wrap gap-2">
-                {service.tech.map((t) => (
-                  <span class="text-xs px-2 py-1 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)] font-mono">
+                {cap.deliverables.map((d) => (
+                  <span
+                    class="text-xs px-3 py-1 rounded-full font-medium"
+                    style={`background: ${cap.color}12; color: ${cap.color}; border: 1px solid ${cap.color}25;`}
+                  >
+                    {d}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Tech stack -->
+            <div>
+              <p class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Tech</p>
+              <div class="flex flex-wrap gap-1.5">
+                {cap.tech.map((t) => (
+                  <span class="text-xs px-2 py-0.5 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)] font-mono">
                     {t}
                   </span>
                 ))}
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
+  </section>
 
-    <!-- Process Link -->
-    <div class="mt-16 text-center">
-      <div class="nexus-card nexus-glow p-8 md:p-12">
-        <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">
-          How does it all come together?
+  <!-- ================================================================
+       THE NEXUS DIFFERENCE
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <!-- Decorative blob -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] opacity-5 pointer-events-none" style="background: radial-gradient(circle, #B026FF, transparent 60%); filter: blur(120px);"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+          Why organized agents beat
+          <span class="bg-gradient-to-r from-neon-pink to-neon-purple bg-clip-text text-transparent"> a single AI tool</span>
         </h2>
-        <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
-          Every project follows our 13-stage lifecycle — from discovery through
-          maintenance, with governance gates at every major transition.
+        <p class="text-lg text-[var(--text-secondary)] leading-relaxed">
+          A single AI model can answer a question. A single AI model cannot ship production software reliably, at scale, with governance, accountability, and expertise depth. NEXUS AI is architected differently.
         </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="/195_shades_of_agents-/capabilities/lifecycle/"
-            class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
-          >
-            View Project Lifecycle
-          </a>
-          <a
-            href="/195_shades_of_agents-/capabilities/tech-stack/"
-            class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
-          >
-            Explore Tech Stack
-          </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {differentiators.map((d, i) => (
+          <div class="nexus-card p-8">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-quantum-blue/20 to-neon-purple/20 border border-quantum-blue/20 flex items-center justify-center text-quantum-blue">
+                <div class="w-5 h-5" set:html={d.icon}></div>
+              </div>
+              <span class="text-xs font-bold text-[var(--text-muted)] uppercase tracking-widest">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-3">{d.heading}</h3>
+            <p class="text-[var(--text-secondary)] text-sm leading-relaxed">{d.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Lifecycle reference -->
+      <div class="mt-12 nexus-card nexus-glow p-8 md:p-10">
+        <div class="grid md:grid-cols-13 gap-0">
+          <div class="md:col-span-8 mb-6 md:mb-0">
+            <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3">
+              The 13-Stage Project Lifecycle
+            </h3>
+            <p class="text-[var(--text-secondary)] text-sm leading-relaxed max-w-xl">
+              Every NEXUS AI engagement follows a defined 13-stage lifecycle — from Lead Qualification through Post-Launch Maintenance. The right agents activate at each stage, governance gates fire before every major transition, and nothing ships without passing QA, security, and architecture review.
+            </p>
+          </div>
+          <div class="md:col-start-10 md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3">
+            <a
+              href={`${base}/capabilities/lifecycle/`}
+              class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+            >
+              View Project Lifecycle
+            </a>
+            <a
+              href={`${base}/capabilities/tech-stack/`}
+              class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue/50 transition-colors"
+            >
+              Explore Tech Stack
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ================================================================
+       SCALE — STAT WALL
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 opacity-30 pointer-events-none" style="background: radial-gradient(ellipse at 50% 100%, rgba(0,217,255,0.08), transparent 70%);"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+          Built at <span class="bg-gradient-to-r from-neon-green to-quantum-blue bg-clip-text text-transparent">scale</span>
+        </h2>
+        <p class="text-lg text-[var(--text-secondary)] max-w-xl mx-auto">
+          The depth of a full software organization — without the overhead.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        {deptScale.map((dept) => (
+          <div class="flex items-center gap-5 nexus-card px-6 py-5">
+            <!-- Agent count bubble -->
+            <div
+              class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-2xl"
+              style={`background: ${dept.color}15; color: ${dept.color};`}
+            >
+              {dept.count}
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-semibold text-[var(--text-primary)] text-sm">{dept.label}</span>
+                <span class="text-xs text-[var(--text-muted)]">agents</span>
+              </div>
+              <!-- Progress bar -->
+              <div class="h-1.5 rounded-full bg-[var(--bg-elevated)] overflow-hidden">
+                <div
+                  class="h-full rounded-full"
+                  style={`width: ${dept.bar}%; background: linear-gradient(90deg, ${dept.color}, ${dept.color}80);`}
+                ></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Total count -->
+      <div class="mt-8 text-center">
+        <div class="inline-flex items-center gap-4 nexus-card px-10 py-6">
+          <span class="text-5xl font-black bg-gradient-to-r from-quantum-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">195</span>
+          <span class="text-[var(--text-secondary)] font-medium">total agents across 20 departments, 10 tiers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CTA
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 bg-[var(--bg-surface)] border-t border-[var(--border-color)]">
+    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background: radial-gradient(ellipse at 50% 0%, rgba(0,217,255,0.12), transparent 60%);"></div>
+
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        Ready to build?
+      </h2>
+      <p class="text-xl text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto leading-relaxed">
+        Tell us what you want to build. We'll assemble the right team of agents, plan the architecture, and deliver — from design through deployment.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={`${base}/contact/`}
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-quantum-blue text-nexus-black font-bold text-base hover:bg-orbital-cyan transition-colors"
+        >
+          Start a Project
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a
+          href={`${base}/agents/`}
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-bold text-base hover:border-quantum-blue/50 transition-colors"
+        >
+          Meet the Agents
+        </a>
+      </div>
+    </div>
+  </section>
 </PageLayout>

@@ -176,6 +176,7 @@ export default function AgentDirectory() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {filtered.map((agent) => {
             const color = DEPT_COLORS[agent.department_number] || "#94A3B8";
+            const avatarSrc = `/195_shades_of_agents-/brand/avatars/agents/${agent.agent_number}-${agent.code}.svg`;
             return (
               <a
                 key={agent.code}
@@ -184,10 +185,25 @@ export default function AgentDirectory() {
               >
                 <div className="flex items-start gap-3">
                   <div
-                    className="h-10 w-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold"
-                    style={{ backgroundColor: `${color}20`, border: `2px solid ${color}`, color }}
+                    className="h-12 w-12 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold overflow-hidden"
+                    style={{ backgroundColor: `${color}20`, border: `2px solid ${color}` }}
                   >
-                    {agent.agent_number}
+                    <img
+                      src={avatarSrc}
+                      alt={`${agent.code} avatar`}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 rounded-full object-cover"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.style.color = color;
+                          parent.textContent = agent.agent_number;
+                        }
+                      }}
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-1.5 mb-0.5">

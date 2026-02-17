@@ -1,0 +1,342 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+let agents: any[] = [];
+let departments: any[] = [];
+try {
+  const agentData = await import("../data/agents.json");
+  agents = agentData.default;
+  const deptData = await import("../data/departments.json");
+  departments = deptData.default;
+} catch {}
+
+const totalAgents = agents.length || 195;
+const totalDepts = departments.length || 20;
+
+// Tier breakdown for visual showcase
+const tiers = [
+  { number: 0, label: "C-Suite", agents: 11, description: "CEO, CTO, CPO, COO, CFO, CMO, CRO, CHRO, CISO, CLO, CAIO", color: "#FFD700" },
+  { number: 1, label: "VPs", agents: 13, description: "VP-ENG, VP-PROD, VP-DES, VP-AI, VP-SALES, VP-INFRA, VP-MKT...", color: "#C0C0C0" },
+  { number: 2, label: "Directors", agents: 14, description: "DIR-FE, DIR-BE, DIR-CLOUD, DIR-SRE, DIR-QA, DIR-SEC...", color: "#CD7F32" },
+  { number: 3, label: "Managers", agents: 10, description: "SEM-FE, EM-BE, MGR-DEVOPS, GPM, MGR-QA, MGR-SRE...", color: "#8B5CF6" },
+  { number: 4, label: "Staff+ ICs", agents: 8, description: "DIST-ENG, PRINC-ENG, STAFF-FE, STAFF-BE, STAFF-PM...", color: "#3B82F6" },
+  { number: 5, label: "Senior ICs", agents: 35, description: "SR-FE-REACT, SR-BE-PY, SR-MOB-RN, PENTEST, SR-PM...", color: "#14B8A6" },
+  { number: 6, label: "Mid-Level", agents: 38, description: "FE-ENG, BE-ENG, MOB-ENG, QA-ENG, SEC-ENG, PM...", color: "#22C55E" },
+  { number: 7, label: "Junior ICs", agents: 30, description: "JR-FE, JR-BE, JR-MOB, APM, JR-QA, BDR, JR-DATA-ENG...", color: "#06B6D4" },
+  { number: 8, label: "Governance", agents: 6, description: "ARB-AGENT, SEC-REVIEW, LEGAL-REVIEW, QA-GATE, REL-APPROVE...", color: "#94A3B8" },
+  { number: 9, label: "Special Agents", agents: 9, description: "DISC-AGENT, EST-AGENT, DEMO-AGENT, NEXUS-ORCHESTRATOR...", color: "#FBBF24" },
+];
+
+const howItWorks = [
+  {
+    step: "01",
+    heading: "You share your vision",
+    detail: "Tell us what you want to build — a web app, a mobile product, an AI system, a design overhaul. No RFP required. A conversation is enough.",
+    color: "#00D9FF",
+  },
+  {
+    step: "02",
+    heading: "We assemble the right team",
+    detail: "Based on your project type, the right agents activate. Frontend engineers, backend specialists, designers, QA, security — the exact team your project needs, not a generic pod.",
+    color: "#B026FF",
+  },
+  {
+    step: "03",
+    heading: "We deliver",
+    detail: "From discovery through deployment and maintenance — with architecture reviews, governance gates, and full documentation. Production-ready, not prototype-quality.",
+    color: "#00FF88",
+  },
+];
+
+const problems = [
+  "Single AI models have no organizational structure",
+  "No accountability — no one owns the outcome",
+  "No specialization — a generalist answering everything",
+  "No governance — bad code ships with no review gate",
+  "No lifecycle — outputs have no context of what came before",
+  "No memory — each session starts from zero",
+];
+
+const solutions = [
+  "195 specialized agents, each with a defined role",
+  "Clear reporting chains and ownership at every level",
+  "Deep expertise per domain — not shallow generalism",
+  "6 governance gates block bad decisions before they ship",
+  "13-stage lifecycle tracks every project from start to end",
+  "NEXUS-ORCHESTRATOR maintains context across all agents",
+];
+---
+
+<PageLayout
+  title="Product"
+  description="Meet NEXUS AI — the world's first AI software agency. 195 autonomous agents, 20 specialized departments, one complete software organization."
+>
+  <!-- ================================================================
+       HERO
+       ================================================================ -->
+  <section class="relative overflow-hidden">
+    <!-- Background effects -->
+    <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(rgba(0,217,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,255,0.04) 1px, transparent 1px); background-size: 48px 48px;"></div>
+    <div class="absolute top-0 left-0 w-[800px] h-[800px] opacity-8 pointer-events-none" style="background: radial-gradient(circle at 20% 30%, #B026FF, transparent 55%); filter: blur(100px);"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] opacity-8 pointer-events-none" style="background: radial-gradient(circle at 80% 80%, #00D9FF, transparent 55%); filter: blur(100px);"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] text-xs font-semibold text-quantum-blue tracking-widest uppercase mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-quantum-blue"></span>
+          Product Overview
+        </div>
+
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[var(--text-primary)] leading-tight tracking-tight mb-8">
+          Meet NEXUS AI —<br />
+          <span class="bg-gradient-to-r from-quantum-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
+            The World's First
+          </span>
+          <br />
+          AI Software Agency
+        </h1>
+
+        <p class="text-xl md:text-2xl text-[var(--text-secondary)] leading-relaxed mb-10 max-w-3xl">
+          {totalAgents} autonomous agents. {totalDepts} specialized departments. One complete software organization — with the hierarchy, accountability, and governance of a real company.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href={`${base}/agents/`}
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-quantum-blue text-nexus-black font-bold text-base hover:bg-orbital-cyan transition-colors"
+          >
+            Explore the Agents
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a
+            href={`${base}/contact/`}
+            class="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-bold text-base hover:border-quantum-blue/50 transition-colors"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       THE PROBLEM
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Problem column -->
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-error/10 border border-error/20 text-error text-xs font-semibold uppercase tracking-widest mb-6">
+            The Problem
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+            AI tools are powerful.<br />
+            <span class="text-[var(--text-secondary)]">But they're shallow.</span>
+          </h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed mb-8">
+            Most companies use AI tools — single models, generic chatbots, disconnected assistants. Each interaction is stateless. There's no organizational structure, no specialization, no accountability, no governance. The model does its best, but there's no one to own the outcome.
+          </p>
+          <ul class="space-y-3">
+            {problems.map((p) => (
+              <li class="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-error/15 flex items-center justify-center mt-0.5">
+                  <svg class="w-3 h-3 text-error" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </span>
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Solution column -->
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-green/10 border border-neon-green/20 text-neon-green text-xs font-semibold uppercase tracking-widest mb-6">
+            The NEXUS Solution
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+            A complete AI<br />
+            <span class="bg-gradient-to-r from-neon-green to-quantum-blue bg-clip-text text-transparent">software organization.</span>
+          </h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed mb-8">
+            NEXUS AI is architected as a company, not a tool. Every agent has a role, a reporting chain, decision authority, and specific expertise. The system operates like a real tech company — because it is one.
+          </p>
+          <ul class="space-y-3">
+            {solutions.map((s) => (
+              <li class="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-neon-green/15 flex items-center justify-center mt-0.5">
+                  <svg class="w-3 h-3 text-neon-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                {s}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       HOW IT WORKS
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] opacity-4 pointer-events-none" style="background: radial-gradient(circle, #00D9FF, transparent 55%); filter: blur(140px);"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+          How it <span class="bg-gradient-to-r from-quantum-blue to-neon-purple bg-clip-text text-transparent">works</span>
+        </h2>
+        <p class="text-lg text-[var(--text-secondary)] max-w-xl mx-auto">
+          Three steps from idea to delivered software.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <!-- Connecting line (desktop) -->
+        <div class="hidden md:block absolute top-[3.5rem] left-1/6 right-1/6 h-px bg-gradient-to-r from-transparent via-[var(--border-color)] to-transparent pointer-events-none"></div>
+
+        {howItWorks.map((step) => (
+          <div class="nexus-card p-8 text-center relative">
+            <div
+              class="w-16 h-16 rounded-2xl mx-auto mb-6 flex items-center justify-center font-black text-2xl"
+              style={`background: ${step.color}15; border: 2px solid ${step.color}30; color: ${step.color};`}
+            >
+              {step.step}
+            </div>
+            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-3">{step.heading}</h3>
+            <p class="text-[var(--text-secondary)] text-sm leading-relaxed">{step.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       THE AGENT SYSTEM — TIER VISUALIZATION
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 bg-[var(--bg-surface)] border-y border-[var(--border-color)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border-color)] bg-[var(--bg-elevated)] text-xs font-semibold text-quantum-blue uppercase tracking-widest mb-6">
+            The Agent System
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+            10 tiers.<br />
+            <span class="bg-gradient-to-r from-quantum-blue to-neon-purple bg-clip-text text-transparent">{totalAgents} specialists.</span>
+          </h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed mb-6">
+            Every agent has a specific role in the hierarchy. C-suite executives set strategy. VPs own their departments. Directors manage teams. Senior engineers execute with deep expertise. Governance agents enforce quality gates. Special agents handle lifecycle transitions.
+          </p>
+          <p class="text-[var(--text-secondary)] leading-relaxed mb-8">
+            The NEXUS-ORCHESTRATOR (Agent 195) is always active — routing messages, tracking project lifecycle health, and monitoring escalations across all agents.
+          </p>
+          <a
+            href={`${base}/about/org-chart/`}
+            class="inline-flex items-center gap-2 text-quantum-blue font-semibold text-sm hover:text-orbital-cyan transition-colors"
+          >
+            View the full org chart
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Tier stack visualization -->
+        <div class="space-y-2">
+          {tiers.map((tier) => (
+            <div
+              class="flex items-center gap-4 nexus-card px-5 py-4 group"
+              style={`border-color: ${tier.color}20;`}
+            >
+              <!-- Tier badge -->
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center font-black text-sm"
+                style={`background: ${tier.color}15; color: ${tier.color};`}
+              >
+                T{tier.number}
+              </div>
+
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <span class="font-semibold text-[var(--text-primary)] text-sm">{tier.label}</span>
+                  <span
+                    class="text-xs px-2 py-0.5 rounded-full font-semibold"
+                    style={`background: ${tier.color}15; color: ${tier.color};`}
+                  >
+                    {tier.agents}
+                  </span>
+                </div>
+                <p class="text-xs text-[var(--text-muted)] truncate">{tier.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       WHY IT MATTERS — MANIFESTO
+       ================================================================ -->
+  <section class="relative py-24 lg:py-40 overflow-hidden">
+    <div class="absolute inset-0 opacity-15 pointer-events-none" style="background: radial-gradient(ellipse at 50% 50%, rgba(176,38,255,0.2), transparent 60%);"></div>
+
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neon-purple/30 bg-neon-purple/10 text-neon-purple text-xs font-semibold uppercase tracking-widest mb-10">
+        Why It Matters
+      </div>
+
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-tight mb-10">
+        AI should work like
+        <span class="bg-gradient-to-r from-neon-purple via-neon-pink to-quantum-blue bg-clip-text text-transparent"> a company,</span><br />
+        not like a magic box.
+      </h2>
+
+      <div class="space-y-8 text-left max-w-3xl mx-auto">
+        <p class="text-lg text-[var(--text-secondary)] leading-relaxed">
+          The future of software development is not a single model that does everything. It's an organized system of specialized intelligences — each knowing their domain deeply, communicating through structured protocols, governed by checks and balances, and accountable for outcomes.
+        </p>
+        <p class="text-lg text-[var(--text-secondary)] leading-relaxed">
+          When you hire a software agency, you don't get one person who writes code, designs interfaces, manages infrastructure, handles security, and runs the project simultaneously. You get a team. NEXUS AI is that team — available now, scalable instantly, and organized from day one.
+        </p>
+        <p class="text-lg text-[var(--text-secondary)] leading-relaxed">
+          This is not the future of AI. This is AI working the way it should have always worked — with structure, accountability, and the organizational intelligence of a real company behind every deliverable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CTA
+       ================================================================ -->
+  <section class="relative py-24 lg:py-32 bg-[var(--bg-surface)] border-t border-[var(--border-color)]">
+    <div class="absolute inset-0 opacity-15 pointer-events-none" style="background: radial-gradient(ellipse at 50% 0%, rgba(0,217,255,0.1), transparent 60%);"></div>
+
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-6">
+        Ready to see it in action?
+      </h2>
+      <p class="text-xl text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto leading-relaxed">
+        Explore all 195 agents, browse the 20 departments, or reach out to start building.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={`${base}/agents/`}
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-quantum-blue text-nexus-black font-bold text-base hover:bg-orbital-cyan transition-colors"
+        >
+          Explore the Agents
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a
+          href={`${base}/contact/`}
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-bold text-base hover:border-quantum-blue/50 transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

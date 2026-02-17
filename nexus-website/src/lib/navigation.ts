@@ -9,6 +9,10 @@ const BASE = "/195_shades_of_agents-";
 
 export const MAIN_NAV: NavItem[] = [
   {
+    label: "Product",
+    href: `${BASE}/product/`,
+  },
+  {
     label: "About",
     href: `${BASE}/about/`,
     children: [
@@ -58,6 +62,7 @@ export const FOOTER_NAV = {
     { label: "Press", href: `${BASE}/press/` },
   ],
   product: [
+    { label: "Product", href: `${BASE}/product/` },
     { label: "Capabilities", href: `${BASE}/capabilities/` },
     { label: "Tech Stack", href: `${BASE}/capabilities/tech-stack/` },
     { label: "Project Lifecycle", href: `${BASE}/capabilities/lifecycle/` },

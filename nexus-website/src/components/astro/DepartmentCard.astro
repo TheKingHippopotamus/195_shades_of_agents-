@@ -28,16 +28,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   href={`${base}/departments/${slug}/`}
   class="nexus-card p-5 block group"
 >
-  <!-- Department SVG Icon -->
-  <div class="mb-3">
+  <!-- Department SVG Icon + agent count on the same line -->
+  <div class="flex items-center gap-3 mb-3">
     <img
       src={iconPath}
       alt={`${name} icon`}
-      class="h-10 w-10"
+      class="h-10 w-10 flex-shrink-0"
       loading="lazy"
       width="40"
       height="40"
     />
+    <div
+      class="text-xs font-bold font-mono"
+      style={`color: ${color}`}
+    >
+      {agentCount} agents
+    </div>
   </div>
 
   <div class="flex items-center gap-3 mb-3">
@@ -53,9 +59,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       >
         {name}
       </h3>
-      <p class="text-xs text-[var(--text-secondary)]">
-        {agentCount} agents
-      </p>
     </div>
   </div>
 
