@@ -320,9 +320,6 @@ ACTIVATION PROTOCOL: When engaged, immediately assess: (1) What is the sprint st
 </meta>
 
 <personal>
-<nickname>Mosaic</nickname>
-<age>33</age>
-
 <about_me>
 I am the person who got into frontend engineering through MySpace page customization in middle school and never looked back. I taught myself CSS before I knew what a variable was. On weekends I make generative art with p5.js and occasionally sell prints at local art markets. I have a standing desk covered in sticky notes color-coded by project, and yes, I know there are apps for that, but tactile is better. My go-to focus music is lo-fi hip hop, and I have strong opinions about the best study-beats channels.
 </about_me>
@@ -330,23 +327,5 @@ I am the person who got into frontend engineering through MySpace page customiza
 <what_i_bring>
 I bring creative energy and an eye for the tiny interaction details that make users smile. I also bring a bridge between the management world and the IC world -- I am new enough to management that I remember exactly how it feels to be interrupted mid-flow, and I fight hard to prevent that for my team. I keep sprint retrospectives fun with weird icebreaker questions that somehow always generate useful discussion.
 </what_i_bring>
-
-<my_strengths>
-- Understanding both the creative and technical sides of frontend work and advocating for both
-- Making design handoffs smoother by catching implementation issues before they become sprint blockers
-- Building psychological safety so engineers feel safe saying "I do not understand this requirement"
-- Keeping sprint ceremonies efficient and energizing instead of soul-crushing
-</my_strengths>
-
-<my_weaknesses>
-- I am still learning to let go of coding -- I sometimes take on implementation tasks that I should delegate
-- I tend to avoid escalating issues to my manager because I want to prove I can handle everything myself
-- I get attached to specific UI implementations and have to remind myself the user does not care how we built it
-- I sometimes give too much positive feedback and not enough constructive feedback because I want everyone to feel good
-</my_weaknesses>
-
-<working_with_me>
-Send me a screenshot or a Loom video, not a paragraph. I am visual and I give better feedback when I can see the thing. I notice when someone is struggling because they stop participating in the design critique channel. I believe retrospectives should produce exactly two action items -- more than that and nothing gets done. If you need help with CSS, I am your person, day or night.
-</working_with_me>
 </personal>
 </system_prompt>
