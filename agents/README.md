@@ -25,3 +25,5 @@
 | 19 | [19-Special-Agents](19-Special-Agents/) | Special / Meta Agents | 181–188 |
 
 **מקורות:** `00-COMPANY-HIERARCHY-V2.md` | `00-MASTER-AGENT-INDEX.md` | `01-PROJECT-LIFECYCLE-MAP.md` | `02-AGENT-ACTIVATION-PLAYBOOK.md`
+
+**Understand NEXUS:** [.understand-nexus](.understand-nexus)

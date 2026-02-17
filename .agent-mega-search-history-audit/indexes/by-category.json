@@ -1,0 +1,116 @@
+{
+  "architecture": [
+    "arch-overview-001",
+    "arch-auth-002",
+    "arch-db-schema-003",
+    "arch-startup-004",
+    "arch-startup-summary-005",
+    "arch-terminology-006",
+    "arch-workflows-007",
+    "arch-decisions-008"
+  ],
+  "api": [
+    "api-readme-009",
+    "api-logging-010",
+    "api-logging-examples-011",
+    "api-test-results-012",
+    "api-test-deep-dive-013",
+    "api-test-summary-014",
+    "api-testing-plan-015"
+  ],
+  "archive": [
+    "archive-arch-restructure-022",
+    "archive-audit-institutions-023",
+    "archive-bug-tracker-024",
+    "archive-deals-arch-025",
+    "archive-deals-audit-026",
+    "archive-deals-impl-027",
+    "archive-deploy-readiness-028",
+    "archive-deployment-029",
+    "archive-doc-index-030",
+    "archive-exec-summary-qa-031",
+    "archive-form-enhancement-032",
+    "archive-lookup-tables-033",
+    "archive-manual-testing-034",
+    "archive-p0-verification-035",
+    "archive-p0-exec-summary-036",
+    "archive-p0-fix-summary-037",
+    "archive-pre-deploy-checklist-038",
+    "archive-qa-test-report-039",
+    "archive-quick-start-040",
+    "archive-readme-deployment-041",
+    "archive-task-ux-polish-042",
+    "archive-test-lead-conversion-043",
+    "archive-testing-infra-044",
+    "archive-ux-design-045"
+  ],
+  "development": [
+    "dev-adding-entities-001",
+    "dev-coding-standards-001",
+    "dev-contributing-001",
+    "dev-seed-files-001",
+    "dev-seeding-architecture-001",
+    "dev-seeding-guide-001",
+    "dev-seeding-quickref-001"
+  ],
+  "setup": [
+    "setup-database-001",
+    "setup-development-001",
+    "setup-environment-variables-001",
+    "setup-testing-001"
+  ],
+  "deployment": [
+    "deploy-production-001"
+  ],
+  "implementation": [
+    "impl-implementation-summary-001",
+    "impl-forgot-password-001",
+    "impl-zustand-migration-001"
+  ],
+  "changelog": [
+    "changelog-boomerang-001"
+  ],
+  "security": [
+    "sec-audit-consolidated-001",
+    "sec-audit-detailed-002",
+    "sec-action-required-003",
+    "sec-remediation-004",
+    "sec-headers-005"
+  ],
+  "operations": [
+    "ops-cleanup-006",
+    "ops-doc-audit-007",
+    "ops-doc-reorg-008",
+    "ops-kb-cleanup-009",
+    "ops-task-cleanup-010",
+    "ops-task-docarch-011",
+    "ops-task-seeding-012",
+    "ops-task-institutions-013",
+    "ops-task-startup-014",
+    "summary-docquality-020",
+    "summary-docstandards-021"
+  ],
+  "user-guide": [
+    "guide-readme-001",
+    "guide-login-002",
+    "guide-interface-003",
+    "guide-institutions-004",
+    "guide-businesses-005",
+    "guide-students-006",
+    "guide-vouchers-007",
+    "guide-banks-008",
+    "guide-insurance-009",
+    "guide-groups-010",
+    "guide-lotteries-011",
+    "guide-partners-012",
+    "guide-support-013",
+    "guide-reports-014",
+    "guide-troubleshooting-015"
+  ],
+  "summary": [
+    "summary-work-016",
+    "summary-exec-017",
+    "summary-quickref-018",
+    "summary-taskdoc-019"
+  ]
+}

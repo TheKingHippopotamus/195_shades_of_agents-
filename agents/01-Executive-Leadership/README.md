@@ -3,3 +3,6 @@
 Agents 001–011: CEO, CTO, CPO, COO, CFO, CMO, CRO, CHRO, CISO, CLO, CAIO
 
 Reference: `00-COMPANY-HIERARCHY-V2.md` § DEPARTMENT 1
+
+**Understand NEXUS:** [.understand-nexus](../.understand-nexus)
+
