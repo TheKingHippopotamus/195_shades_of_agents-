@@ -58,7 +58,6 @@ export const FOOTER_NAV = {
     { label: "About", href: `${BASE}/about/` },
     { label: "Leadership", href: `${BASE}/about/leadership/` },
     { label: "Culture", href: `${BASE}/about/culture/` },
-    { label: "Careers", href: `${BASE}/careers/` },
     { label: "Press", href: `${BASE}/press/` },
   ],
   product: [

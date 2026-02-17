@@ -377,6 +377,7 @@ export default function NetworkGraph() {
         ref={containerRef}
         className="w-full overflow-hidden rounded-xl relative"
         style={{
+          minHeight: "700px",
           border: "1px solid rgba(0, 229, 255, 0.12)",
           background: "linear-gradient(135deg, #0a0a1a 0%, #0d1117 50%, #0a0f1e 100%)",
         }}

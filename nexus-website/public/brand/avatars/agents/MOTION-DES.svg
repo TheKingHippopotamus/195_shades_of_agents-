@@ -1,13 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="15" cy="15" r="4" fill="#FFD700" opacity="0.7"/><circle cx="70" cy="78" r="2" fill="#7C3AED" opacity="0.7"/><circle cx="55" cy="26" r="2" fill="#7C3AED" opacity="0.7"/><circle cx="43" cy="48" r="5" fill="#FFD700" opacity="0.7"/><circle cx="40" cy="65" r="3" fill="#7C3AED" opacity="0.7"/>
-<path d="M50,20 C61.284,18 72,28 74,40 C76,52 70,65 58,70 C46,75 30,70 26,58 C22,46 28,30 36.716,22 C42,19 46,20 50,20 Z" fill="#1E293B" stroke="#FF2D78" stroke-width="2"/>
-<path d="M58,70 C65,78 68,85 65,90" stroke="#FF2D78" stroke-width="3" fill="none" stroke-linecap="round"/>
-<ellipse cx="64" cy="91" rx="4" ry="2" fill="#FF2D78" opacity="0.8"/>
-<circle cx="42" cy="44" r="7" fill="white"/><circle cx="58" cy="44" r="7" fill="white"/>
-<circle cx="42" cy="44" r="4" fill="#FF2D78"/><circle cx="58" cy="44" r="4" fill="#FF2D78"/>
-<circle cx="44" cy="42" r="1.5" fill="white"/><circle cx="60" cy="42" r="1.5" fill="white"/>
-<path d="M36,37 Q42,33 48,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
-<path d="M52,37 Q58,33 64,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
-<path d="M40,57 Q50,64 60,57" stroke="#FF2D78" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  <defs>
+    <radialGradient id="motdesBlobGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8EB5"/>
+      <stop offset="55%" stop-color="#FF2D78"/>
+      <stop offset="100%" stop-color="#A8004F"/>
+    </radialGradient>
+    <filter id="motBlur">
+      <feGaussianBlur stdDeviation="1.5" in="SourceGraphic" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="motdesBlobClip">
+      <path d="M 78.3 50.0 Q 66.8 66.8 72.6 58.4 Q 50.0 79.4 58.4 73.1 Q 33.6 66.4 41.8 72.9 Q 21.9 50.0 27.8 58.2 Q 32.6 32.6 27.3 41.3 Q 50.0 21.1 41.3 26.9 Q 66.6 33.4 58.3 27.3 Q 78.3 50.0 72.5 41.7 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
+  <circle cx="14" cy="20" r="3" fill="#FF2D78" opacity="0.55"/>
+  <circle cx="83" cy="18" r="2.5" fill="#FF8EB5" opacity="0.5"/>
+  <circle cx="12" cy="70" r="2.5" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="84" cy="72" r="3" fill="#FF6B35" opacity="0.5"/>
+  <circle cx="30" cy="86" r="2" fill="#FF2D78" opacity="0.4"/>
+  <!-- Dynamic brush tail (wider) -->
+  <path d="M 62 68 Q 78 76 83 90 Q 86 97 81 96 Q 76 95 71 83 Q 67 73 62 68 Z" fill="#FF2D78" opacity="0.42"/>
+  <path d="M 78.3 50.0 Q 66.8 66.8 72.6 58.4 Q 50.0 79.4 58.4 73.1 Q 33.6 66.4 41.8 72.9 Q 21.9 50.0 27.8 58.2 Q 32.6 32.6 27.3 41.3 Q 50.0 21.1 41.3 26.9 Q 66.6 33.4 58.3 27.3 Q 78.3 50.0 72.5 41.7 Z" fill="url(#motdesBlobGrad)"/>
+  <!-- ANIMATION FRAMES: 3 sequential keyframe boxes with motion trail -->
+  <g clip-path="url(#motdesBlobClip)">
+    <!-- Motion trail (ghost frame 1 — leftmost, most faded) -->
+    <rect x="28" y="43" width="12" height="14" rx="1.5" fill="#FF2D78" opacity="0.15" filter="url(#motBlur)"/>
+    <!-- Ghost frame 2 (middle) -->
+    <rect x="40" y="43" width="12" height="14" rx="1.5" fill="#FF2D78" opacity="0.35" filter="url(#motBlur)"/>
+    <!-- Current/active frame 3 (rightmost, crisp) -->
+    <rect x="52" y="40" width="16" height="18" rx="1.5" fill="#FF2D78" opacity="0.8" stroke="#FFD1B8" stroke-width="0.9"/>
+    <!-- Play triangle inside active frame -->
+    <polygon points="57,47 66,49 57,51" fill="#FFD1B8"/>
+    <!-- Motion lines connecting frames -->
+    <line x1="40" y1="50" x2="42" y2="50" stroke="#FFD1B8" stroke-width="0.7" opacity="0.6"/>
+    <line x1="52" y1="50" x2="54" y2="50" stroke="#FFD1B8" stroke-width="0.7" opacity="0.4"/>
+    <!-- Speed lines (horizontal dashes for velocity feel) -->
+    <line x1="26" y1="46" x2="30" y2="46" stroke="#FF8EB5" stroke-width="0.6" opacity="0.5"/>
+    <line x1="26" y1="50" x2="29" y2="50" stroke="#FF8EB5" stroke-width="0.6" opacity="0.4"/>
+    <line x1="26" y1="54" x2="30" y2="54" stroke="#FF8EB5" stroke-width="0.6" opacity="0.5"/>
+  </g>
+</svg>

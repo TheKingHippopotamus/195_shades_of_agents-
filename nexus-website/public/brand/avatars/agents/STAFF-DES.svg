@@ -1,13 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
-<rect width="100" height="100" rx="18" fill="url(#bg)"/>
-<circle cx="83" cy="81" r="4" fill="#00D9FF" opacity="0.7"/><circle cx="22" cy="10" r="3" fill="#FF2D78" opacity="0.7"/><circle cx="59" cy="82" r="5" fill="#FF2D78" opacity="0.7"/><circle cx="23" cy="48" r="2" fill="#7C3AED" opacity="0.7"/><circle cx="79" cy="50" r="2" fill="#00FF88" opacity="0.7"/>
-<path d="M50,20 C60.09,18 72,28 74,40 C76,52 70,65 58,70 C46,75 30,70 26,58 C22,46 28,30 37.91,22 C42,19 46,20 50,20 Z" fill="#1E293B" stroke="#FF2D78" stroke-width="2"/>
-<path d="M58,70 C65,78 68,85 65,90" stroke="#FF2D78" stroke-width="3" fill="none" stroke-linecap="round"/>
-<ellipse cx="64" cy="91" rx="4" ry="2" fill="#FF2D78" opacity="0.8"/>
-<circle cx="42" cy="44" r="7" fill="white"/><circle cx="58" cy="44" r="7" fill="white"/>
-<circle cx="42" cy="44" r="4" fill="#FF2D78"/><circle cx="58" cy="44" r="4" fill="#FF2D78"/>
-<circle cx="44" cy="42" r="1.5" fill="white"/><circle cx="60" cy="42" r="1.5" fill="white"/>
-<path d="M36,37 Q42,33 48,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
-<path d="M52,37 Q58,33 64,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
-<path d="M40,57 Q50,64 60,57" stroke="#FF2D78" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  <defs>
+    <radialGradient id="stdesBlobGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8EB5"/>
+      <stop offset="50%" stop-color="#FF2D78"/>
+      <stop offset="100%" stop-color="#A8004F"/>
+    </radialGradient>
+    <clipPath id="stdesBlobClip">
+      <path d="M 79.7 50.0 Q 68.0 68.0 73.8 59.0 Q 50.0 80.8 59.0 74.4 Q 32.6 67.4 41.3 74.1 Q 20.9 50.0 26.7 58.7 Q 31.6 31.6 26.2 40.8 Q 50.0 20.0 40.8 25.8 Q 67.6 32.4 58.8 26.2 Q 79.7 50.0 73.7 41.2 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
+  <!-- Most complex: 6 splatters -->
+  <circle cx="13" cy="18" r="3" fill="#FF2D78" opacity="0.55"/>
+  <circle cx="85" cy="15" r="2.5" fill="#FF8EB5" opacity="0.5"/>
+  <circle cx="10" cy="65" r="2.5" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="85" cy="70" r="3" fill="#FF6B35" opacity="0.5"/>
+  <circle cx="25" cy="88" r="2" fill="#FF2D78" opacity="0.4"/>
+  <circle cx="72" cy="88" r="2" fill="#A855F7" opacity="0.4"/>
+  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.42"/>
+  <path d="M 79.7 50.0 Q 68.0 68.0 73.8 59.0 Q 50.0 80.8 59.0 74.4 Q 32.6 67.4 41.3 74.1 Q 20.9 50.0 26.7 58.7 Q 31.6 31.6 26.2 40.8 Q 50.0 20.0 40.8 25.8 Q 67.6 32.4 58.8 26.2 Q 79.7 50.0 73.7 41.2 Z" fill="url(#stdesBlobGrad)"/>
+  <!-- DESIGN SYSTEM GRID: 2x2 grid of component boxes -->
+  <g clip-path="url(#stdesBlobClip)">
+    <!-- Grid background -->
+    <rect x="33" y="37" width="34" height="26" rx="1.5" fill="#1A0010" opacity="0.5"/>
+    <!-- Top-left: Typography component (A) -->
+    <rect x="34" y="38" width="15" height="11" rx="1" fill="#FF2D78" opacity="0.3" stroke="#FF8EB5" stroke-width="0.7"/>
+    <text x="41.5" y="46" font-size="7" fill="#FFD1B8" text-anchor="middle" font-family="Georgia, serif" font-weight="bold">A</text>
+    <!-- Top-right: Button component -->
+    <rect x="50" y="38" width="15" height="11" rx="1" fill="#FF2D78" opacity="0.3" stroke="#FF8EB5" stroke-width="0.7"/>
+    <rect x="52.5" y="41.5" width="10" height="4" rx="1.5" fill="#FF2D78" opacity="0.8"/>
+    <!-- Bottom-left: Color swatch component -->
+    <rect x="34" y="50" width="15" height="11" rx="1" fill="#FF2D78" opacity="0.3" stroke="#FF8EB5" stroke-width="0.7"/>
+    <circle cx="38" cy="55.5" r="2.5" fill="#FF2D78"/>
+    <circle cx="43.5" cy="55.5" r="2.5" fill="#FFD700"/>
+    <circle cx="39" cy="57.5" r="0" fill="none"/>
+    <!-- Bottom-right: Icon component -->
+    <rect x="50" y="50" width="15" height="11" rx="1" fill="#FF2D78" opacity="0.3" stroke="#FF8EB5" stroke-width="0.7"/>
+    <polygon points="57.5,52 60,57.5 55,57.5" fill="#FF8EB5" opacity="0.9"/>
+    <!-- Grid line dividers -->
+    <line x1="33" y1="49.5" x2="67" y2="49.5" stroke="#FF8EB5" stroke-width="0.5" opacity="0.5"/>
+    <line x1="49.5" y1="37" x2="49.5" y2="63" stroke="#FF8EB5" stroke-width="0.5" opacity="0.5"/>
+  </g>
+</svg>

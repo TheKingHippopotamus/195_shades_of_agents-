@@ -176,7 +176,7 @@ export default function AgentDirectory() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {filtered.map((agent) => {
             const color = DEPT_COLORS[agent.department_number] || "#94A3B8";
-            const avatarSrc = `/195_shades_of_agents-/brand/avatars/agents/${agent.agent_number}-${agent.code}.svg`;
+            const avatarSrc = `/195_shades_of_agents-/brand/avatars/agents/${agent.code}.svg`;
             return (
               <a
                 key={agent.code}
