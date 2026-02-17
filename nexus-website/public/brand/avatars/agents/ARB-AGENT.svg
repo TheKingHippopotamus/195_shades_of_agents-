@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
+  <title>ARB-AGENT — Gatekeeper</title>
+  <desc>NEXUS AI Agent 181: ARB-AGENT, Gatekeeper, Age 40</desc>
+
+  <!-- Department color background ring -->
+  <circle cx="60" cy="60" r="58" fill="#EF4444" opacity="0.08"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#EF4444" stroke-width="2.5"/>
+
+  <!-- Inner background -->
+  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
+
+  <!-- Neck -->
+  <rect x="48" y="90" width="24" height="22" rx="4" fill="#D4A574"/>
+  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#BC8D5C" opacity="0.4"/>
+
+  <!-- Shoulders hint -->
+  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
+        fill="#BC8D5C" opacity="0.5"/>
+
+  <!-- Hair (behind face) -->
+  
+        <!-- Hair: long -->
+        <ellipse cx="60" cy="48" rx="36" ry="26" fill="#6B4A32"/>
+        <path d="M24,76 L20,118 Q22,123 26,118 L28,76" fill="#6B4A32"/>
+        <path d="M96,76 L100,118 Q98,123 94,118 L92,76" fill="#6B4A32"/>
+        <path d="M24,64 Q60,20 96,64" fill="#6B4A32"/>
+
+  <!-- Face oval -->
+  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#D4A574"/>
+
+  <!-- Facial shadow / cheek depth -->
+  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#BC8D5C" opacity="0.08"/>
+
+  <!-- Ears -->
+  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#D4A574"/>
+  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
+  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#D4A574"/>
+  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
+
+  <!-- Eyebrows -->
+  <path d="M35,44 Q42,38 53,46" fill="none" stroke="#6B4A32" stroke-width="3" stroke-linecap="round"/>
+                   <path d="M67,46 Q78,38 85,44" fill="none" stroke="#6B4A32" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  
+        <ellipse cx="44" cy="54" rx="9" ry="6" fill="#E8D8C8" opacity="0.5"/>
+        <ellipse cx="44" cy="54" rx="9" ry="6" fill="white"/>
+        <circle  cx="44" cy="54" r="5" fill="#C4872A"/>
+        <circle  cx="44" cy="54" r="3" fill="#0A0A0A"/>
+        <circle  cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
+        <ellipse cx="76" cy="54" rx="9" ry="6" fill="white"/>
+        <circle  cx="76" cy="54" r="5" fill="#C4872A"/>
+        <circle  cx="76" cy="54" r="3" fill="#0A0A0A"/>
+        <circle  cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
+
+  <!-- Nose -->
+  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#BC8D5C" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Mouth -->
+  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#B06A50" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Accessories -->
+  
+
+  <!-- Tier badge -->
+  
+    <!-- Tier badge -->
+    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#EF4444" stroke-width="2"/>
+    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
+          fill="#EF4444" text-anchor="middle">T8</text>
+
+  <!-- Agent code label -->
+  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
+        fill="#EF4444" text-anchor="middle" opacity="0.9">ARB-AGENT</text>
+</svg>

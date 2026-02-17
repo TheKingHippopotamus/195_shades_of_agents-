@@ -76,11 +76,25 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
 
     <!-- Header -->
     <div class="flex items-start gap-6 mb-10">
-      <div
-        class="h-20 w-20 rounded-2xl flex-shrink-0 flex items-center justify-center text-white font-bold text-xl"
-        style={`background-color: ${deptColor}20; border: 2px solid ${deptColor}`}
-      >
-        {agent.agent_number}
+      <!-- Unique Agent Avatar -->
+      <div class="flex-shrink-0 relative">
+        <img
+          src={`/195_shades_of_agents-/brand/avatars/agents/${agent.code}.svg`}
+          alt={`${agent.personal?.nickname || agent.code} — NEXUS AI Agent`}
+          class="h-24 w-24 rounded-2xl"
+          style={`border: 2.5px solid ${deptColor}; background-color: ${deptColor}08;`}
+          width="96"
+          height="96"
+          loading="eager"
+          onerror={`this.src='/195_shades_of_agents-/brand/avatars/tier-${agent.tier?.number ?? 5}-${(['csuite','vp','director','manager','staff-plus','senior','mid','junior','governance','special'])[agent.tier?.number ?? 5]}.svg'; this.onerror=null;`}
+        />
+        <!-- Agent number badge -->
+        <div
+          class="absolute -bottom-2 -right-2 h-7 w-7 rounded-full flex items-center justify-center text-[10px] font-mono font-bold"
+          style={`background-color: ${deptColor}; color: #030108;`}
+        >
+          {String(agent.agent_number).padStart(3,'0').slice(-3)}
+        </div>
       </div>
 
       <div class="flex-1">

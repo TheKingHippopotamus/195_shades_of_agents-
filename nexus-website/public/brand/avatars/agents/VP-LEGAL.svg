@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
+  <title>VP-LEGAL — The Shield</title>
+  <desc>NEXUS AI Agent 157: VP-LEGAL, The Shield, Age 44</desc>
+
+  <!-- Department color background ring -->
+  <circle cx="60" cy="60" r="58" fill="#6366F1" opacity="0.08"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#6366F1" stroke-width="2.5"/>
+
+  <!-- Inner background -->
+  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
+
+  <!-- Neck -->
+  <rect x="48" y="90" width="24" height="22" rx="4" fill="#C8956C"/>
+  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#B07A54" opacity="0.4"/>
+
+  <!-- Shoulders hint -->
+  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
+        fill="#B07A54" opacity="0.5"/>
+
+  <!-- Hair (behind face) -->
+  
+        <!-- Hair: short neat -->
+        <ellipse cx="60" cy="46" rx="34" ry="22" fill="#4A3728"/>
+        <rect x="26" y="46" width="68" height="18" rx="0" fill="#4A3728"/>
+        <path d="M26,64 Q60,22 94,64" fill="#4A3728"/>
+
+  <!-- Face oval -->
+  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#C8956C"/>
+
+  <!-- Facial shadow / cheek depth -->
+  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#B07A54" opacity="0.08"/>
+
+  <!-- Ears -->
+  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#C8956C"/>
+  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#B07A54" opacity="0.4"/>
+  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#C8956C"/>
+  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#B07A54" opacity="0.4"/>
+
+  <!-- Eyebrows -->
+  <path d="M35,43 Q44,37 53,44" fill="none" stroke="#4A3728" stroke-width="2" stroke-linecap="round"/>
+             <path d="M67,44 Q76,37 85,43" fill="none" stroke="#4A3728" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  
+        <ellipse cx="44" cy="54" rx="9" ry="4.5" fill="white"/>
+        <circle  cx="44" cy="54" r="4" fill="#6B4A32"/>
+        <circle  cx="44" cy="54" r="2.5" fill="#0A0A0A"/>
+        <circle  cx="45.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
+        <ellipse cx="76" cy="54" rx="9" ry="4.5" fill="white"/>
+        <circle  cx="76" cy="54" r="4" fill="#6B4A32"/>
+        <circle  cx="76" cy="54" r="2.5" fill="#0A0A0A"/>
+        <circle  cx="77.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
+
+  <!-- Nose -->
+  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#B07A54" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Mouth -->
+  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#A05A45" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Accessories -->
+  
+      <!-- Glasses -->
+      <rect x="33" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <rect x="65" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <line x1="55" y1="54" x2="65" y2="54" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <line x1="33" y1="54" x2="28" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <line x1="87" y1="54" x2="92" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Tier badge -->
+  
+    <!-- Tier badge -->
+    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#00D9FF" stroke-width="2"/>
+    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
+          fill="#00D9FF" text-anchor="middle">T1</text>
+
+  <!-- Agent code label -->
+  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
+        fill="#6366F1" text-anchor="middle" opacity="0.9">VP-LEGAL</text>
+</svg>

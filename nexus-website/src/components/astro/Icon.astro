@@ -1,0 +1,37 @@
+---
+/**
+ * NEXUS AI Brand Icon Component
+ * Renders SVG icons from the brand icon library.
+ * Available icons: code, brain, palette, shield, check, workflow,
+ *   agents, network, department, tier, star, lightning, globe,
+ *   arrow-right, external
+ */
+interface Props {
+  name: string;
+  class?: string;
+  size?: number;
+  style?: string;
+  alt?: string;
+}
+
+const {
+  name,
+  class: className = '',
+  size = 24,
+  style = '',
+  alt = name,
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<img
+  src={`${base}/brand/icons/${name}.svg`}
+  alt={alt}
+  class={`inline-block ${className}`}
+  width={size}
+  height={size}
+  loading="lazy"
+  aria-hidden={alt ? undefined : 'true'}
+  style={style}
+/>

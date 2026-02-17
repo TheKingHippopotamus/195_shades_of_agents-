@@ -12,17 +12,15 @@ const currentPath = Astro.url.pathname;
   <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
-      <a href="/195_shades_of_agents-/" class="flex items-center gap-3 group">
-        <div
-          class="h-8 w-8 rounded-lg bg-gradient-to-br from-quantum-blue to-orbital-cyan flex items-center justify-center"
-        >
-          <span class="text-nexus-black font-bold text-sm">N</span>
-        </div>
-        <span
-          class="text-lg font-bold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors"
-        >
-          NEXUS AI
-        </span>
+      <a href="/195_shades_of_agents-/" class="flex items-center group">
+        <img
+          src="/195_shades_of_agents-/brand/logo-full.svg"
+          alt="NEXUS AI"
+          class="h-9 w-auto transition-opacity group-hover:opacity-90"
+          width="228"
+          height="36"
+          loading="eager"
+        />
       </a>
 
       <!-- Desktop Nav -->

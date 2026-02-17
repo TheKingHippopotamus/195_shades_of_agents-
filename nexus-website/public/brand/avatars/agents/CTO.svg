@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
+  <title>CTO — Blueprint</title>
+  <desc>NEXUS AI Agent 2: CTO, Blueprint, Age 45</desc>
+
+  <!-- Department color background ring -->
+  <circle cx="60" cy="60" r="58" fill="#00D9FF" opacity="0.08"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#00D9FF" stroke-width="2.5"/>
+
+  <!-- Inner background -->
+  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
+
+  <!-- Neck -->
+  <rect x="48" y="90" width="24" height="22" rx="4" fill="#D4A574"/>
+  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#BC8D5C" opacity="0.4"/>
+
+  <!-- Shoulders hint -->
+  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
+        fill="#BC8D5C" opacity="0.5"/>
+
+  <!-- Hair (behind face) -->
+  
+        <!-- Hair: updo bun -->
+        <ellipse cx="60" cy="50" rx="34" ry="20" fill="#6B4A32"/>
+        <path d="M26,70 Q60,24 94,70" fill="#6B4A32"/>
+        <!-- Bun top -->
+        <circle cx="60" cy="22" r="11" fill="#6B4A32"/>
+        <ellipse cx="60" cy="22" rx="9" ry="7" fill="#6B4A32" opacity="0.7"/>
+
+  <!-- Face oval -->
+  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#D4A574"/>
+
+  <!-- Facial shadow / cheek depth -->
+  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#BC8D5C" opacity="0.08"/>
+
+  <!-- Ears -->
+  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#D4A574"/>
+  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
+  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#D4A574"/>
+  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
+
+  <!-- Eyebrows -->
+  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#6B4A32" stroke-width="2.5" stroke-linecap="round"/>
+                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#6B4A32" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  
+        <ellipse cx="44" cy="54" rx="9" ry="4.5" fill="white"/>
+        <circle  cx="44" cy="54" r="4" fill="#5C7A3E"/>
+        <circle  cx="44" cy="54" r="2.5" fill="#0A0A0A"/>
+        <circle  cx="45.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
+        <ellipse cx="76" cy="54" rx="9" ry="4.5" fill="white"/>
+        <circle  cx="76" cy="54" r="4" fill="#5C7A3E"/>
+        <circle  cx="76" cy="54" r="2.5" fill="#0A0A0A"/>
+        <circle  cx="77.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
+
+  <!-- Nose -->
+  <line x1="60" y1="62" x2="60" y2="72" stroke="#BC8D5C" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                   <path d="M55,72 Q60,76 65,72" fill="none" stroke="#BC8D5C" stroke-width="1.25" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Mouth -->
+  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#B06A50" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Accessories -->
+  
+      <!-- Glasses -->
+      <rect x="33" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <rect x="65" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <line x1="55" y1="54" x2="65" y2="54" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <line x1="33" y1="54" x2="28" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+      <line x1="87" y1="54" x2="92" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Tier badge -->
+  
+    <!-- Tier badge -->
+    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#F59E0B" stroke-width="2"/>
+    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
+          fill="#F59E0B" text-anchor="middle">C0</text>
+
+  <!-- Agent code label -->
+  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
+        fill="#00D9FF" text-anchor="middle" opacity="0.9">CTO</text>
+</svg>

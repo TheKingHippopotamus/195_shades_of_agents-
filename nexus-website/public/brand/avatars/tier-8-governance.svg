@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
+  <title>Tier 8 — Governance</title>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield -->
+  <path d="M40,6 L68,18 L68,42 Q68,62 40,74 Q12,62 12,42 L12,18 Z"
+        fill="none" stroke="url(#g)" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Inner shield -->
+  <path d="M40,14 L60,23 L60,42 Q60,57 40,66 Q20,57 20,42 L20,23 Z"
+        fill="none" stroke="url(#g)" stroke-width="1" opacity="0.3"/>
+  <!-- Padlock body center -->
+  <rect x="30" y="38" width="20" height="17" rx="3" fill="none" stroke="url(#g)" stroke-width="2"/>
+  <!-- Padlock shackle -->
+  <path d="M34,38 L34,32 Q34,26 40,26 Q46,26 46,32 L46,38"
+        fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Keyhole -->
+  <circle cx="40" cy="45" r="3" fill="none" stroke="url(#g)" stroke-width="1.5"/>
+  <line x1="40" y1="48" x2="40" y2="52" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Top vertex -->
+  <circle cx="40" cy="6" r="3" fill="#EF4444"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
+  <title>Tier 6 — Mid-Level</title>
+  <circle cx="40" cy="40" r="34" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
+  <circle cx="40" cy="40" r="24" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.35"/>
+  <!-- 2 proficiency dots -->
+  <circle cx="32" cy="40" r="6" fill="#3B82F6"/>
+  <circle cx="48" cy="40" r="6" fill="#3B82F6"/>
+  <line x1="38" y1="40" x2="42" y2="40" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+  <!-- 4 cardinal dots on outer ring -->
+  <circle cx="40" cy="6"  r="2.5" fill="#3B82F6" opacity="0.7"/>
+  <circle cx="74" cy="40" r="2.5" fill="#3B82F6" opacity="0.7"/>
+  <circle cx="40" cy="74" r="2.5" fill="#3B82F6" opacity="0.7"/>
+  <circle cx="6"  cy="40" r="2.5" fill="#3B82F6" opacity="0.7"/>
+</svg>

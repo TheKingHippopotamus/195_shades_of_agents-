@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img">
+  <title>Executive Leadership</title>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Crown base -->
+  <rect x="6" y="34" width="36" height="7" rx="1.5" fill="none" stroke="url(#g)" stroke-width="2"/>
+  <!-- Crown body with 3 peaks -->
+  <polyline points="6,34 6,26 14,34 19,14 24,8 29,14 34,34 42,26 42,34"
+            fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Center diamond gem -->
+  <polygon points="24,18 28,22 24,26 20,22" fill="url(#g)" opacity="0.8"/>
+  <!-- Left gem -->
+  <circle cx="14" cy="31" r="1.5" fill="#00D9FF" opacity="0.7"/>
+  <!-- Right gem -->
+  <circle cx="34" cy="31" r="1.5" fill="#00D9FF" opacity="0.7"/>
+  <!-- Top dots on peaks -->
+  <circle cx="24" cy="7"  r="1.5" fill="#00F0FF"/>
+  <circle cx="19" cy="13" r="1"   fill="#00D9FF" opacity="0.8"/>
+  <circle cx="29" cy="13" r="1"   fill="#00D9FF" opacity="0.8"/>
+</svg>

@@ -25,7 +25,19 @@ export async function getStaticPaths() {
 }
 
 const { department, deptAgents } = Astro.props;
+const dept = department;
 const color = department.color;
+
+const DEPT_ICON_MAP: Record<string, string> = {
+  "1": "executive", "2": "engineering", "3": "platform", "4": "product",
+  "5": "design", "6": "data-ai", "7": "qa", "8": "security",
+  "9": "sales", "10": "marketing", "11": "customer", "12": "people",
+  "13": "finance", "14": "legal", "15": "it", "16": "devrel",
+  "17": "program", "18": "governance", "19": "special", "20": "documentation",
+};
+const iconNum = String(parseInt(dept.number || "1")).padStart(2, "0");
+const iconSlug = DEPT_ICON_MAP[String(parseInt(dept.number || "1"))] || dept.slug;
+const deptIconPath = `/195_shades_of_agents-/brand/departments/${iconNum}-${iconSlug}.svg`;
 ---
 
 <PageLayout
@@ -44,11 +56,21 @@ const color = department.color;
 
     <!-- Header -->
     <div class="flex items-center gap-4 mb-10">
-      <div
-        class="h-14 w-14 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-        style={`background-color: ${color}`}
-      >
-        {department.number}
+      <div class="flex flex-col items-center gap-2">
+        <img
+          src={deptIconPath}
+          alt={`${dept.name} icon`}
+          class="h-16 w-16 mb-4"
+          loading="eager"
+          width="64"
+          height="64"
+        />
+        <div
+          class="h-14 w-14 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+          style={`background-color: ${color}`}
+        >
+          {department.number}
+        </div>
       </div>
       <div>
         <h1 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">

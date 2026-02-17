@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
+  <title>PARALEGAL — Backbone</title>
+  <desc>NEXUS AI Agent 163: PARALEGAL, Backbone, Age 27</desc>
+
+  <!-- Department color background ring -->
+  <circle cx="60" cy="60" r="58" fill="#6366F1" opacity="0.08"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#6366F1" stroke-width="2.5"/>
+
+  <!-- Inner background -->
+  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
+
+  <!-- Neck -->
+  <rect x="48" y="90" width="24" height="22" rx="4" fill="#8D5524"/>
+  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#6B3E1A" opacity="0.4"/>
+
+  <!-- Shoulders hint -->
+  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
+        fill="#6B3E1A" opacity="0.5"/>
+
+  <!-- Hair (behind face) -->
+  
+        <!-- Hair: medium waves -->
+        <ellipse cx="60" cy="50" rx="36" ry="26" fill="#2C1810"/>
+        <path d="M24,76 L24,50 Q60,20 96,50 L96,76" fill="#2C1810"/>
+        <path d="M24,68 Q30,78 24,88" fill="#2C1810" stroke="#2C1810" stroke-width="4"/>
+        <path d="M96,68 Q90,78 96,88" fill="#2C1810" stroke="#2C1810" stroke-width="4"/>
+
+  <!-- Face oval -->
+  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#8D5524"/>
+
+  <!-- Facial shadow / cheek depth -->
+  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#6B3E1A" opacity="0.08"/>
+
+  <!-- Ears -->
+  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#8D5524"/>
+  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
+  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#8D5524"/>
+  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
+
+  <!-- Eyebrows -->
+  <path d="M35,44 Q42,38 53,46" fill="none" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
+                   <path d="M67,46 Q78,38 85,44" fill="none" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  
+        <ellipse cx="44" cy="54" rx="9" ry="4.5" fill="white"/>
+        <circle  cx="44" cy="54" r="4" fill="#C4872A"/>
+        <circle  cx="44" cy="54" r="2.5" fill="#0A0A0A"/>
+        <circle  cx="45.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
+        <ellipse cx="76" cy="54" rx="9" ry="4.5" fill="white"/>
+        <circle  cx="76" cy="54" r="4" fill="#C4872A"/>
+        <circle  cx="76" cy="54" r="2.5" fill="#0A0A0A"/>
+        <circle  cx="77.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
+
+  <!-- Nose -->
+  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#6B3E1A" stroke-width="1.25" opacity="0.5"/>
+
+  <!-- Mouth -->
+  <path d="M50,74 Q60,84 70,74" fill="none" stroke="#7A3422" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M52,75 Q60,83 68,75" fill="#7A3422" opacity="0.25"/>
+
+  <!-- Accessories -->
+  
+
+  <!-- Tier badge -->
+  
+    <!-- Tier badge -->
+    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
+    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
+          fill="#3B82F6" text-anchor="middle">T6</text>
+
+  <!-- Agent code label -->
+  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
+        fill="#6366F1" text-anchor="middle" opacity="0.9">PARALEGAL</text>
+</svg>

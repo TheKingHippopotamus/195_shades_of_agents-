@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img">
+  <title>Agents</title>
+  <!-- 9-node grid of agent nodes -->
+  <circle cx="5"  cy="5"  r="2"/>
+  <circle cx="12" cy="5"  r="2"/>
+  <circle cx="19" cy="5"  r="2"/>
+  <circle cx="5"  cy="12" r="2"/>
+  <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/>
+  <circle cx="19" cy="12" r="2"/>
+  <circle cx="5"  cy="19" r="2"/>
+  <circle cx="12" cy="19" r="2"/>
+  <circle cx="19" cy="19" r="2"/>
+  <!-- Connections to center -->
+  <line x1="7"  y1="5"  x2="10" y2="5"  stroke-width="1.25" opacity="0.5"/>
+  <line x1="14" y1="5"  x2="17" y2="5"  stroke-width="1.25" opacity="0.5"/>
+  <line x1="5"  y1="7"  x2="5"  y2="10" stroke-width="1.25" opacity="0.5"/>
+  <line x1="12" y1="7"  x2="12" y2="9.5" stroke-width="1.25" opacity="0.6"/>
+  <line x1="12" y1="14.5" x2="12" y2="17" stroke-width="1.25" opacity="0.6"/>
+</svg>

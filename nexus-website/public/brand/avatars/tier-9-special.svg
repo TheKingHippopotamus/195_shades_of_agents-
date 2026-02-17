@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
+  <title>Tier 9 — Special Agents</title>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Outer orbit ring -->
+  <circle cx="40" cy="40" r="36" fill="none" stroke="url(#g)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+  <!-- Diagonal orbit ring -->
+  <ellipse cx="40" cy="40" rx="36" ry="16" fill="none" stroke="url(#g)" stroke-width="1.5" transform="rotate(-35,40,40)" opacity="0.6"/>
+  <ellipse cx="40" cy="40" rx="36" ry="16" fill="none" stroke="url(#g)" stroke-width="1.5" transform="rotate(35,40,40)" opacity="0.6"/>
+  <!-- Center star (5-pointed) -->
+  <polygon points="40,16 44.7,31.1 60.4,31.1 47.8,40.8 52.6,55.9 40,46.2 27.4,55.9 32.2,40.8 19.6,31.1 35.3,31.1"
+           fill="url(#g)" opacity="0.9" filter="url(#glow)"/>
+  <!-- Orbital planets -->
+  <circle cx="6"  cy="40" r="4" fill="#7C3AED" filter="url(#glow)"/>
+  <circle cx="74" cy="40" r="4" fill="#00D9FF" filter="url(#glow)"/>
+  <circle cx="40" cy="4"  r="3" fill="#7C3AED" opacity="0.8"/>
+  <circle cx="40" cy="76" r="3" fill="#00D9FF" opacity="0.8"/>
+</svg>

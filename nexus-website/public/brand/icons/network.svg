@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img">
+  <title>Network</title>
+  <!-- Hexagonal mesh network -->
+  <!-- Center hex center (12,12), r=5 -->
+  <polygon points="12,7 16.33,9.5 16.33,14.5 12,17 7.67,14.5 7.67,9.5"/>
+  <!-- 6 outer nodes -->
+  <circle cx="12"  cy="2"  r="1.5" fill="currentColor" stroke="none"/>
+  <circle cx="21"  cy="7"  r="1.5" fill="currentColor" stroke="none"/>
+  <circle cx="21"  cy="17" r="1.5" fill="currentColor" stroke="none"/>
+  <circle cx="12"  cy="22" r="1.5" fill="currentColor" stroke="none"/>
+  <circle cx="3"   cy="17" r="1.5" fill="currentColor" stroke="none"/>
+  <circle cx="3"   cy="7"  r="1.5" fill="currentColor" stroke="none"/>
+  <!-- Connection lines -->
+  <line x1="12" y1="7"   x2="12"  y2="3.5"  stroke-width="1.5"/>
+  <line x1="16.33" y1="9.5"  x2="19.5" y2="7.5"  stroke-width="1.5"/>
+  <line x1="16.33" y1="14.5" x2="19.5" y2="16.5" stroke-width="1.5"/>
+  <line x1="12"  y1="17"  x2="12"  y2="20.5" stroke-width="1.5"/>
+  <line x1="7.67" y1="14.5" x2="4.5"  y2="16.5" stroke-width="1.5"/>
+  <line x1="7.67" y1="9.5"  x2="4.5"  y2="7.5"  stroke-width="1.5"/>
+</svg>

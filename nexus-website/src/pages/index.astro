@@ -139,14 +139,15 @@ const capabilities = [
         capabilities.map((cap) => (
           <div class="nexus-card p-6">
             <div class="h-10 w-10 rounded-lg bg-quantum-blue/10 flex items-center justify-center mb-4">
-              <span class="text-quantum-blue text-lg font-bold">
-                {cap.icon === "code" && "</>"}
-                {cap.icon === "brain" && "AI"}
-                {cap.icon === "palette" && "UX"}
-                {cap.icon === "shield" && "Sec"}
-                {cap.icon === "check" && "QA"}
-                {cap.icon === "workflow" && "PM"}
-              </span>
+              <img
+                src={`/195_shades_of_agents-/brand/icons/${cap.icon}.svg`}
+                alt={cap.title}
+                class="h-6 w-6"
+                width="24"
+                height="24"
+                loading="lazy"
+                style="filter: invert(0.85) sepia(1) saturate(5) hue-rotate(165deg);"
+              />
             </div>
             <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
               {cap.title}

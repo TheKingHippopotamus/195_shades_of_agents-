@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
+  <title>Tier 0 — C-Suite</title>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Octagonal outer ring -->
+  <polygon points="40,4 61.2,10.8 74,28 74,52 61.2,69.2 40,76 18.8,69.2 6,52 6,28 18.8,10.8"
+           fill="none" stroke="url(#g)" stroke-width="2" filter="url(#glow)"/>
+  <!-- Inner octagon -->
+  <polygon points="40,12 57.1,17.4 68,30 68,50 57.1,62.6 40,68 22.9,62.6 12,50 12,30 22.9,17.4"
+           fill="none" stroke="url(#g)" stroke-width="1" opacity="0.4"/>
+  <!-- Crown shape inside -->
+  <polyline points="22,52 22,40 30,48 36,30 40,24 44,30 50,48 58,40 58,52"
+            fill="none" stroke="url(#g)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Crown base -->
+  <line x1="22" y1="52" x2="58" y2="52" stroke="url(#g)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Center gemstone -->
+  <polygon points="40,36 44,40 40,44 36,40" fill="url(#g)" opacity="0.9"/>
+  <!-- Top vertex dot -->
+  <circle cx="40" cy="4" r="3" fill="#F59E0B" filter="url(#glow)"/>
+  <!-- 8 octagon vertex dots -->
+  <circle cx="61.2" cy="10.8" r="2" fill="#00D9FF" opacity="0.8"/>
+  <circle cx="18.8" cy="10.8" r="2" fill="#00D9FF" opacity="0.8"/>
+  <circle cx="74"   cy="28"   r="2" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="6"    cy="28"   r="2" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="74"   cy="52"   r="2" fill="#7C3AED" opacity="0.8"/>
+  <circle cx="6"    cy="52"   r="2" fill="#7C3AED" opacity="0.8"/>
+  <circle cx="61.2" cy="69.2" r="2" fill="#7C3AED" opacity="0.8"/>
+  <circle cx="18.8" cy="69.2" r="2" fill="#7C3AED" opacity="0.8"/>
+  <!-- Bottom dot -->
+  <circle cx="40"   cy="76"   r="3" fill="#7C3AED" filter="url(#glow)"/>
+</svg>
