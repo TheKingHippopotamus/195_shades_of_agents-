@@ -1,18 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
-  <title>Tier 4 — Staff+</title>
-  <!-- Outer circle -->
-  <circle cx="40" cy="40" r="34" fill="none" stroke="#10B981" stroke-width="2.5"/>
-  <!-- Inner circle -->
-  <circle cx="40" cy="40" r="24" fill="none" stroke="#10B981" stroke-width="1" opacity="0.35"/>
-  <!-- 4-pointed star (staff+) -->
-  <!-- 4-star: points at N,E,S,W with narrow inner radius -->
-  <polygon points="40,10 43.5,36.5 70,40 43.5,43.5 40,70 36.5,43.5 10,40 36.5,36.5"
-           fill="#10B981" opacity="0.25" stroke="#10B981" stroke-width="2"/>
-  <!-- Center circle -->
-  <circle cx="40" cy="40" r="5" fill="#10B981"/>
-  <!-- Vertex dots at 4 points -->
-  <circle cx="40" cy="6"  r="3" fill="#10B981"/>
-  <circle cx="74" cy="40" r="3" fill="#10B981"/>
-  <circle cx="40" cy="74" r="3" fill="#10B981"/>
-  <circle cx="6"  cy="40" r="3" fill="#10B981"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<line x1="80.0" y1="45.0" x2="96.0" y2="45.0" stroke="#FF6B35" stroke-width="1" opacity="0.4"/><line x1="68.7" y1="68.5" x2="78.1" y2="80.2" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="43.3" y1="74.2" x2="39.5" y2="90.8" stroke="#00D9FF" stroke-width="1" opacity="0.4"/><line x1="23.0" y1="58.0" x2="5.0" y2="66.7" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="23.0" y1="32.0" x2="9.5" y2="25.5" stroke="#FF6B35" stroke-width="1" opacity="0.4"/><line x1="43.3" y1="15.8" x2="39.3" y2="-1.8" stroke="#FF6B35" stroke-width="1" opacity="0.4"/><line x1="68.7" y1="21.5" x2="80.6" y2="6.7" stroke="#00D9FF" stroke-width="1" opacity="0.4"/>
+<path d="M50,15 L72,45 L50,72 L28,45 Z" fill="rgba(255,107,53,0.15)" stroke="#FF6B35" stroke-width="2"/>
+<path d="M50,22 L66,45 L50,65 L34,45 Z" fill="rgba(255,107,53,0.25)" stroke="#FF6B35" stroke-width="0.5" opacity="0.5"/>
+<circle cx="50" cy="45" r="8" fill="rgba(255,107,53,0.5)"/>
+<circle cx="50" cy="45" r="4" fill="#FF6B35" opacity="0.9"/>
+<circle cx="52" cy="43" r="1.5" fill="white" opacity="0.8"/>
+<line x1="44" y1="22" x2="50" y2="15" stroke="white" stroke-width="1.5" opacity="0.4"/>
+<line x1="50" y1="73" x2="50" y2="85" stroke="#FF6B35" stroke-width="1" opacity="0.6"/>
+<polygon points="50,88 56,82 50,79 44,82" fill="#FF6B35" opacity="0.7"/></svg>

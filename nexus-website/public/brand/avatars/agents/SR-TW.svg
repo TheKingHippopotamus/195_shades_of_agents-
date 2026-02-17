@@ -1,74 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>SR-TW — Wordsmith</title>
-  <desc>NEXUS AI Agent 178: SR-TW, Wordsmith, Age 34</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#6B7280" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#6B7280" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#C8956C"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#B07A54" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#B07A54" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: undercut -->
-        <ellipse cx="60" cy="42" rx="32" ry="18" fill="#5C3D2E"/>
-        <path d="M28,60 Q60,20 92,60" fill="#5C3D2E"/>
-        <line x1="26" y1="60" x2="26" y2="76" stroke="#5C3D2E" stroke-width="4"/>
-        <line x1="94" y1="60" x2="94" y2="76" stroke="#5C3D2E" stroke-width="4"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#C8956C"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#B07A54" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#C8956C"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#B07A54" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#C8956C"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#B07A54" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <line x1="35" y1="46" x2="53" y2="43" stroke="#5C3D2E" stroke-width="2.5" stroke-linecap="round"/>
-                   <line x1="67" y1="43" x2="85" y2="46" stroke="#5C3D2E" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="44" cy="54" r="5.5" fill="#6B4A32"/>
-        <circle  cx="44" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="46.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-        <ellipse cx="76" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="76" cy="54" r="5.5" fill="#6B4A32"/>
-        <circle  cx="76" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="78.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#B07A54" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <path d="M48,76 Q60,82 72,76" fill="none" stroke="#A05A45" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#F59E0B" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#F59E0B" text-anchor="middle">T5</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#6B7280" text-anchor="middle" opacity="0.9">SR-TW</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<rect x="47" y="22" width="6" height="68" rx="1" fill="rgba(217,119,6,0.5)" stroke="#D97706" stroke-width="1"/>
+<rect x="15" y="22" width="32" height="68" rx="3" fill="#0f1500" stroke="#D97706" stroke-width="1.5"/>
+<rect x="53" y="22" width="32" height="68" rx="3" fill="#0f1500" stroke="#D97706" stroke-width="1.5"/>
+<line x1="25" y1="45" x2="56" y2="45" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="45" x2="79" y2="45" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="51" x2="42" y2="51" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="51" x2="85" y2="51" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="57" x2="41" y2="57" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="57" x2="79" y2="57" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="63" x2="42" y2="63" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="63" x2="74" y2="63" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="69" x2="41" y2="69" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="69" x2="85" y2="69" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="75" x2="50" y2="75" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="75" x2="85" y2="75" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="81" x2="57" y2="81" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="81" x2="77" y2="81" stroke="#D97706" stroke-width="1" opacity="0.5"/>
+<path d="M68,25 C80,22 85,35 70,55 C65,40 62,30 68,25 Z" fill="#D97706" opacity="0.7"/>
+<line x1="68" y1="25" x2="62" y2="60" stroke="#D97706" stroke-width="0.8" opacity="0.5"/>
+<rect x="18" y="26" width="22" height="4" rx="1" fill="#D97706" opacity="0.5"/>
+<rect x="56" y="26" width="22" height="4" rx="1" fill="#D97706" opacity="0.5"/>
+<circle cx="30" cy="35" r="4" fill="#030108" stroke="#D97706" stroke-width="1"/>
+<circle cx="30" cy="35" r="2" fill="#D97706"/></svg>

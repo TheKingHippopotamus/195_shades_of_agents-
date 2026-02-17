@@ -1,76 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>EVENTS-MGR — Ringmaster</title>
-  <desc>NEXUS AI Agent 134: EVENTS-MGR, Ringmaster, Age 29</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#EC4899" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#EC4899" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#D4A574"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#BC8D5C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#BC8D5C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: long -->
-        <ellipse cx="60" cy="48" rx="36" ry="26" fill="#1E3A5F"/>
-        <path d="M24,76 L20,118 Q22,123 26,118 L28,76" fill="#1E3A5F"/>
-        <path d="M96,76 L100,118 Q98,123 94,118 L92,76" fill="#1E3A5F"/>
-        <path d="M24,64 Q60,20 96,64" fill="#1E3A5F"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#D4A574"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#BC8D5C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#D4A574"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#D4A574"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,44 Q42,38 53,46" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
-                   <path d="M67,46 Q78,38 85,44" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#5C7A3E"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#5C7A3E"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <line x1="60" y1="62" x2="60" y2="72" stroke="#BC8D5C" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                   <path d="M55,72 Q60,76 65,72" fill="none" stroke="#BC8D5C" stroke-width="1.25" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,74 Q60,84 70,74" fill="none" stroke="#B06A50" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M52,75 Q60,83 68,75" fill="#B06A50" opacity="0.25"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#3B82F6" text-anchor="middle">T6</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#EC4899" text-anchor="middle" opacity="0.9">EVENTS-MGR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="35" cy="52" r="20" fill="none" stroke="#A855F7" stroke-width="1.5" opacity="0.6" stroke-dasharray="0 1"/><circle cx="35" cy="52" r="30" fill="none" stroke="#A855F7" stroke-width="1.2" opacity="0.44999999999999996" stroke-dasharray="2 2"/><circle cx="35" cy="52" r="40" fill="none" stroke="#A855F7" stroke-width="0.9" opacity="0.3" stroke-dasharray="4 3"/>
+<path d="M38,35 L65,22 L65,70 L38,58 Z" fill="#1a0a1f" stroke="#A855F7" stroke-width="2"/>
+<ellipse cx="65" cy="46" rx="5" ry="24" fill="#1a0a1f" stroke="#A855F7" stroke-width="1.5"/>
+<rect x="28" y="40" width="10" height="18" rx="3" fill="#1a0a1f" stroke="#A855F7" stroke-width="1.5"/>
+<circle cx="52" cy="46" r="5" fill="#030108" stroke="#A855F7" stroke-width="1"/>
+<circle cx="52" cy="46" r="2.5" fill="#A855F7"/><circle cx="53.5" cy="44.5" r="1" fill="white" opacity="0.7"/>
+<line x1="70" y1="30" x2="80" y2="20" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/>
+<line x1="72" y1="46" x2="85" y2="46" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/>
+<line x1="70" y1="62" x2="80" y2="72" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/></svg>

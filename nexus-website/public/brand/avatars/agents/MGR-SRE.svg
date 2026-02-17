@@ -1,75 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>MGR-SRE — Nightwatch</title>
-  <desc>NEXUS AI Agent 57: MGR-SRE, Nightwatch, Age 35</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#3B82F6" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#D4A574"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#BC8D5C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#BC8D5C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: updo bun -->
-        <ellipse cx="60" cy="50" rx="34" ry="20" fill="#4A3728"/>
-        <path d="M26,70 Q60,24 94,70" fill="#4A3728"/>
-        <!-- Bun top -->
-        <circle cx="60" cy="22" r="11" fill="#4A3728"/>
-        <ellipse cx="60" cy="22" rx="9" ry="7" fill="#4A3728" opacity="0.7"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#D4A574"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#BC8D5C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#D4A574"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#D4A574"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#4A3728" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#4A3728" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="44" cy="54" r="4.5"       fill="#4A90D9"/>
-        <circle  cx="44" cy="54" r="2.5"       fill="#0A0A0A"/>
-        <circle  cx="46" cy="52.5" r="1.5" fill="white" opacity="0.8"/>
-        <ellipse cx="76" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="76" cy="54" r="4.5"       fill="#4A90D9"/>
-        <circle  cx="76" cy="54" r="2.5"       fill="#0A0A0A"/>
-        <circle  cx="78" cy="52.5" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#BC8D5C" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M48,76 Q60,82 72,76" fill="none" stroke="#B06A50" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#06B6D4" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#06B6D4" text-anchor="middle">T3</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#3B82F6" text-anchor="middle" opacity="0.9">MGR-SRE</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<line x1="35" y1="22" x2="34" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/><circle cx="34" cy="10" r="1.5" fill="#7C3AED"/><line x1="45" y1="22" x2="44" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/><circle cx="44" cy="10" r="1.5" fill="#7C3AED"/><line x1="55" y1="22" x2="53" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.7"/><circle cx="53" cy="10" r="1.5" fill="#7C3AED"/><line x1="65" y1="22" x2="61" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.8"/><circle cx="61" cy="10" r="1.5" fill="#7C3AED"/>
+<ellipse cx="50" cy="40" rx="28" ry="18" fill="#1E293B" stroke="#7C3AED" stroke-width="1.5"/>
+<ellipse cx="36" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
+<ellipse cx="64" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
+<circle cx="44" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/><circle cx="56" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/>
+<circle cx="44" cy="40" r="1.5" fill="#030108"/><circle cx="56" cy="40" r="1.5" fill="#030108"/>
+<path d="M44,48 Q50,52 56,48" stroke="#7C3AED" stroke-width="1.5" fill="none"/>
+<rect x="32" y="58" width="36" height="22" rx="2" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+<line x1="32" y1="64" x2="68" y2="64" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<line x1="32" y1="70" x2="68" y2="70" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<line x1="32" y1="76" x2="68" y2="76" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<circle cx="62" cy="61.5" r="1.5" fill="#22C55E"/>
+<circle cx="62" cy="67.5" r="1.5" fill="#7C3AED"/>
+<circle cx="62" cy="73.5" r="1.5" fill="#EF4444"/></svg>

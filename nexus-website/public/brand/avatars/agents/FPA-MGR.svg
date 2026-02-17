@@ -1,80 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>FPA-MGR — Crystal Ball</title>
-  <desc>NEXUS AI Agent 151: FPA-MGR, Crystal Ball, Age 35</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#10B981" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#10B981" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#E8B89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#D49A7C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: undercut -->
-        <ellipse cx="60" cy="42" rx="32" ry="18" fill="#1A1A1A"/>
-        <path d="M28,60 Q60,20 92,60" fill="#1A1A1A"/>
-        <line x1="26" y1="60" x2="26" y2="76" stroke="#1A1A1A" stroke-width="4"/>
-        <line x1="94" y1="60" x2="94" y2="76" stroke="#1A1A1A" stroke-width="4"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#E8B89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#D49A7C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <line x1="35" y1="46" x2="53" y2="43" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-                   <line x1="67" y1="43" x2="85" y2="46" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#6B4A32"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#6B4A32"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#D49A7C" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M48,76 Q60,82 72,76" fill="none" stroke="#C4725A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-      <!-- Glasses -->
-      <rect x="33" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <rect x="65" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="55" y1="54" x2="65" y2="54" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="33" y1="54" x2="28" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="87" y1="54" x2="92" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#06B6D4" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#06B6D4" text-anchor="middle">T3</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#10B981" text-anchor="middle" opacity="0.9">FPA-MGR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="50" cy="50" r="42" fill="#0a0f0a" stroke="#84CC16" stroke-width="2.5"/>
+<line x1="86.0" y1="50.0" x2="90.0" y2="50.0" stroke="#84CC16" stroke-width="1.5"/><line x1="77.6" y1="73.1" x2="80.6" y2="75.7" stroke="#84CC16" stroke-width="1.5"/><line x1="56.3" y1="85.5" x2="56.9" y2="89.4" stroke="#84CC16" stroke-width="1.5"/><line x1="32.0" y1="81.2" x2="30.0" y2="84.6" stroke="#84CC16" stroke-width="1.5"/><line x1="16.2" y1="62.3" x2="12.4" y2="63.7" stroke="#84CC16" stroke-width="1.5"/><line x1="16.2" y1="37.7" x2="12.4" y2="36.3" stroke="#84CC16" stroke-width="1.5"/><line x1="32.0" y1="18.8" x2="30.0" y2="15.4" stroke="#84CC16" stroke-width="1.5"/><line x1="56.3" y1="14.5" x2="56.9" y2="10.6" stroke="#84CC16" stroke-width="1.5"/><line x1="77.6" y1="26.9" x2="80.6" y2="24.3" stroke="#84CC16" stroke-width="1.5"/>
+<circle cx="50" cy="50" r="35" fill="#0f1a0f" stroke="#84CC16" stroke-width="2"/>
+<circle cx="50" cy="50" r="18" fill="#0a0f0a" stroke="#84CC16" stroke-width="1.5"/>
+<circle cx="50" cy="32" r="2" fill="#84CC16"/><circle cx="68" cy="50" r="2" fill="#84CC16"/>
+<circle cx="50" cy="68" r="2" fill="#84CC16"/><circle cx="32" cy="50" r="2" fill="#84CC16"/>
+<line x1="50" y1="50" x2="50" y2="35" stroke="#84CC16" stroke-width="2" stroke-linecap="round"/>
+<rect x="34" y="50.5" width="5" height="7.5" fill="#84CC16" opacity="0.5"/><rect x="41" y="46.75" width="5" height="11.25" fill="#84CC16" opacity="0.6"/><rect x="48" y="44.25" width="5" height="13.75" fill="#84CC16" opacity="0.7"/><rect x="55" y="48" width="5" height="10" fill="#84CC16" opacity="0.8"/><rect x="62" y="43" width="5" height="15" fill="#84CC16" opacity="0.9"/><circle cx="50" cy="50" r="5" fill="#030108" stroke="#84CC16" stroke-width="2"/>
+<circle cx="50" cy="18" r="3" fill="#84CC16" opacity="0.6"/><circle cx="82" cy="50" r="3" fill="#84CC16" opacity="0.6"/>
+<circle cx="50" cy="82" r="3" fill="#84CC16" opacity="0.6"/><circle cx="18" cy="50" r="3" fill="#84CC16" opacity="0.6"/></svg>

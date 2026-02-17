@@ -1,74 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>UI-DES — Component</title>
-  <desc>NEXUS AI Agent 83: UI-DES, Component, Age 28</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#EC4899" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#EC4899" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#F4C89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#E8A87C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#E8A87C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: short side-part -->
-        <ellipse cx="60" cy="48" rx="36" ry="24" fill="#1A1A1A"/>
-        <rect x="24" y="48" width="72" height="20" rx="0" fill="#1A1A1A"/>
-        <path d="M24,68 Q26,43 60,26 Q94,43 96,68" fill="#1A1A1A"/>
-        <path d="M24,56 Q30,28 55,24" stroke="#1A1A1A" stroke-width="6" fill="none"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#F4C89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#E8A87C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#F4C89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#E8A87C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#F4C89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#E8A87C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#5C7A3E"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#5C7A3E"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#E8A87C" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#D4826A" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#3B82F6" text-anchor="middle">T6</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#EC4899" text-anchor="middle" opacity="0.9">UI-DES</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="84" cy="79" r="3" fill="#7C3AED" opacity="0.7"/><circle cx="39" cy="63" r="3" fill="#FF6B35" opacity="0.7"/><circle cx="40" cy="79" r="4" fill="#FFD700" opacity="0.7"/><circle cx="45" cy="38" r="2" fill="#FFD700" opacity="0.7"/><circle cx="28" cy="49" r="4" fill="#FF2D78" opacity="0.7"/>
+<path d="M50,20 C60.534,18 72,28 74,40 C76,52 70,65 58,70 C46,75 30,70 26,58 C22,46 28,30 37.466,22 C42,19 46,20 50,20 Z" fill="#1E293B" stroke="#FF2D78" stroke-width="2"/>
+<path d="M58,70 C65,78 68,85 65,90" stroke="#FF2D78" stroke-width="3" fill="none" stroke-linecap="round"/>
+<ellipse cx="64" cy="91" rx="4" ry="2" fill="#FF2D78" opacity="0.8"/>
+<circle cx="42" cy="44" r="7" fill="white"/><circle cx="58" cy="44" r="7" fill="white"/>
+<circle cx="42" cy="44" r="4" fill="#FF2D78"/><circle cx="58" cy="44" r="4" fill="#FF2D78"/>
+<circle cx="44" cy="42" r="1.5" fill="white"/><circle cx="60" cy="42" r="1.5" fill="white"/>
+<path d="M36,37 Q42,33 48,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
+<path d="M52,37 Q58,33 64,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
+<path d="M40,57 Q50,64 60,57" stroke="#FF2D78" stroke-width="2" fill="none" stroke-linecap="round"/></svg>

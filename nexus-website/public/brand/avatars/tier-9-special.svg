@@ -1,26 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
-  <title>Tier 9 — Special Agents</title>
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#00D9FF"/>
-    </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <!-- Outer orbit ring -->
-  <circle cx="40" cy="40" r="36" fill="none" stroke="url(#g)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
-  <!-- Diagonal orbit ring -->
-  <ellipse cx="40" cy="40" rx="36" ry="16" fill="none" stroke="url(#g)" stroke-width="1.5" transform="rotate(-35,40,40)" opacity="0.6"/>
-  <ellipse cx="40" cy="40" rx="36" ry="16" fill="none" stroke="url(#g)" stroke-width="1.5" transform="rotate(35,40,40)" opacity="0.6"/>
-  <!-- Center star (5-pointed) -->
-  <polygon points="40,16 44.7,31.1 60.4,31.1 47.8,40.8 52.6,55.9 40,46.2 27.4,55.9 32.2,40.8 19.6,31.1 35.3,31.1"
-           fill="url(#g)" opacity="0.9" filter="url(#glow)"/>
-  <!-- Orbital planets -->
-  <circle cx="6"  cy="40" r="4" fill="#7C3AED" filter="url(#glow)"/>
-  <circle cx="74" cy="40" r="4" fill="#00D9FF" filter="url(#glow)"/>
-  <circle cx="40" cy="4"  r="3" fill="#7C3AED" opacity="0.8"/>
-  <circle cx="40" cy="76" r="3" fill="#00D9FF" opacity="0.8"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="50" cy="50" r="18" fill="none" stroke="#FF4444" stroke-width="0.8" opacity="0.3"/><circle cx="48.4" cy="32.1" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="66.1" cy="41.9" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="50" cy="50" r="27" fill="none" stroke="#FF4444" stroke-width="0.8" opacity="0.4"/><circle cx="34.8" cy="72.3" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="77.0" cy="49.0" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="73.6" cy="36.9" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="50" cy="50" r="36" fill="none" stroke="#FF4444" stroke-width="0.8" opacity="0.5"/><circle cx="85.4" cy="43.3" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="23.0" cy="26.2" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="53.8" cy="85.8" r="2.5" fill="#FF4444" opacity="0.8"/><circle cx="81.1" cy="31.9" r="2.5" fill="#FF4444" opacity="0.8"/><circle cx="50" cy="50" r="45" fill="none" stroke="#FF4444" stroke-width="0.8" opacity="0.6000000000000001"/><circle cx="79.3" cy="84.1" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="7.8" cy="65.5" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="5.0" cy="51.1" r="2.5" fill="#FF4444" opacity="0.8"/><circle cx="73.4" cy="88.4" r="2.5" fill="#FF4444" opacity="0.8"/><circle cx="34.2" cy="92.1" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="50" cy="50" r="54" fill="none" stroke="#FF4444" stroke-width="0.8" opacity="0.7"/><circle cx="76.3" cy="2.8" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="1.2" cy="26.8" r="2.5" fill="#FF4444" opacity="0.8"/><circle cx="23.9" cy="97.3" r="2.5" fill="#FF4444" opacity="0.8"/><circle cx="77.8" cy="96.3" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="93.1" cy="82.5" r="1.5" fill="#FF4444" opacity="0.8"/><circle cx="74.6" cy="1.9" r="1.5" fill="#FF4444" opacity="0.8"/><ellipse cx="50" cy="50" rx="10" ry="12" fill="#030108" stroke="#FF4444" stroke-width="2"/><ellipse cx="50" cy="50" rx="5" ry="6" fill="#FF4444" opacity="0.8"/><circle cx="52" cy="48" r="2" fill="white" opacity="0.6"/><circle cx="50" cy="50" r="8" fill="rgba(255,68,68,0.1)"/></svg>

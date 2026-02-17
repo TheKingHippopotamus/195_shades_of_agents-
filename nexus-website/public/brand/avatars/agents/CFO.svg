@@ -1,73 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>CFO — Fortress</title>
-  <desc>NEXUS AI Agent 5: CFO, Fortress, Age 48</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#00D9FF" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#00D9FF" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#E8B89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#D49A7C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: short wavy -->
-        <ellipse cx="60" cy="44" rx="35" ry="21" fill="#555555"/>
-        <path d="M25,65 Q60,20 95,65" fill="#555555"/>
-        <path d="M26,62 Q34,58 40,63 Q46,68 52,63" fill="none" stroke="#555555" stroke-width="3"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#E8B89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#D49A7C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <line x1="35" y1="46" x2="53" y2="43" stroke="#555555" stroke-width="2.5" stroke-linecap="round"/>
-                   <line x1="67" y1="43" x2="85" y2="46" stroke="#555555" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#5A6A7A"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#5A6A7A"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#D49A7C" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <line x1="50" y1="76" x2="70" y2="76" stroke="#C4725A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#F59E0B" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#F59E0B" text-anchor="middle">C0</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#00D9FF" text-anchor="middle" opacity="0.9">CFO</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<polygon points="25.454545454545453,30 30.909090909090907,30 28.18181818181818,11" fill="#FFD700" opacity="0.9"/><circle cx="28.18181818181818" cy="9" r="2.5" fill="#00D9FF"/><polygon points="40.36363636363636,30 45.81818181818181,30 43.090909090909086,19" fill="#FFD700" opacity="0.9"/><polygon points="55.272727272727266,30 60.72727272727272,30 57.99999999999999,11" fill="#FFD700" opacity="0.9"/><circle cx="57.99999999999999" cy="9" r="2.5" fill="#00D9FF"/><polygon points="70.18181818181819,30 75.63636363636364,30 72.90909090909092,19" fill="#FFD700" opacity="0.9"/><polygon points="85.0909090909091,30 90.54545454545455,30 87.81818181818183,11" fill="#FFD700" opacity="0.9"/><circle cx="87.81818181818183" cy="9" r="2.5" fill="#00D9FF"/>
+<path d="M50,30 L68,40 L68,62 L50,72 L32,62 L32,40 Z" fill="#1E2440" stroke="#FFD700" stroke-width="2"/>
+<rect x="32" y="30" width="36" height="6" rx="1" fill="#FFD700" opacity="0.7"/>
+<polygon points="50,28 53,32 50,36 47,32" fill="#00D9FF"/>
+<ellipse cx="42" cy="52" rx="4.5" ry="5" fill="#030108"/><ellipse cx="58" cy="52" rx="4.5" ry="5" fill="#030108"/>
+<circle cx="42" cy="52" r="2.5" fill="#00D9FF"/><circle cx="58" cy="52" r="2.5" fill="#00D9FF"/>
+<circle cx="43" cy="51" r="1" fill="white" opacity="0.8"/><circle cx="59" cy="51" r="1" fill="white" opacity="0.8"/>
+<path d="M43,60 Q50,57 57,60" stroke="#FFD700" stroke-width="1.5" fill="none"/>
+<path d="M32,70 L25,85 L50,80 L75,85 L68,70 Z" fill="#1E2440" stroke="#FFD700" stroke-width="1"/>
+<ellipse cx="50" cy="95" rx="25" ry="4" fill="rgba(255,215,0,0.2)"/></svg>

@@ -1,82 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>KB-MGR — Librarian</title>
-  <desc>NEXUS AI Agent 180: KB-MGR, Librarian, Age 29</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#6B7280" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#6B7280" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#8D5524"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#6B3E1A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: medium waves -->
-        <ellipse cx="60" cy="50" rx="36" ry="26" fill="#2C1810"/>
-        <path d="M24,76 L24,50 Q60,20 96,50 L96,76" fill="#2C1810"/>
-        <path d="M24,68 Q30,78 24,88" fill="#2C1810" stroke="#2C1810" stroke-width="4"/>
-        <path d="M96,68 Q90,78 96,88" fill="#2C1810" stroke="#2C1810" stroke-width="4"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#8D5524"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#6B3E1A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,44 Q42,38 53,46" fill="none" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
-                   <path d="M67,46 Q78,38 85,44" fill="none" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="44" cy="54" r="4.5"       fill="#4A90D9"/>
-        <circle  cx="44" cy="54" r="2.5"       fill="#0A0A0A"/>
-        <circle  cx="46" cy="52.5" r="1.5" fill="white" opacity="0.8"/>
-        <ellipse cx="76" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="76" cy="54" r="4.5"       fill="#4A90D9"/>
-        <circle  cx="76" cy="54" r="2.5"       fill="#0A0A0A"/>
-        <circle  cx="78" cy="52.5" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <line x1="60" y1="62" x2="60" y2="72" stroke="#6B3E1A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                   <path d="M55,72 Q60,76 65,72" fill="none" stroke="#6B3E1A" stroke-width="1.25" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,74 Q60,84 70,74" fill="none" stroke="#7A3422" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M52,75 Q60,83 68,75" fill="#7A3422" opacity="0.25"/>
-
-  <!-- Accessories -->
-  
-      <!-- Glasses -->
-      <rect x="33" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <rect x="65" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="55" y1="54" x2="65" y2="54" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="33" y1="54" x2="28" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="87" y1="54" x2="92" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#3B82F6" text-anchor="middle">T6</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#6B7280" text-anchor="middle" opacity="0.9">KB-MGR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<rect x="47" y="22" width="6" height="68" rx="1" fill="rgba(217,119,6,0.5)" stroke="#D97706" stroke-width="1"/>
+<rect x="15" y="22" width="32" height="68" rx="3" fill="#0f1500" stroke="#D97706" stroke-width="1.5"/>
+<rect x="53" y="22" width="32" height="68" rx="3" fill="#0f1500" stroke="#D97706" stroke-width="1.5"/>
+<line x1="25" y1="45" x2="55" y2="45" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="45" x2="75" y2="45" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="51" x2="56" y2="51" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="51" x2="71" y2="51" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="57" x2="43" y2="57" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="57" x2="74" y2="57" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="63" x2="56" y2="63" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="63" x2="74" y2="63" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="69" x2="42" y2="69" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="69" x2="73" y2="69" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="25" y1="75" x2="50" y2="75" stroke="#D97706" stroke-width="1" opacity="0.5"/><line x1="53" y1="75" x2="85" y2="75" stroke="#D97706" stroke-width="1" opacity="0.5"/>
+<path d="M68,25 C80,22 85,35 70,55 C65,40 62,30 68,25 Z" fill="#D97706" opacity="0.7"/>
+<line x1="68" y1="25" x2="62" y2="60" stroke="#D97706" stroke-width="0.8" opacity="0.5"/>
+<rect x="18" y="26" width="22" height="4" rx="1" fill="#D97706" opacity="0.5"/>
+<rect x="56" y="26" width="22" height="4" rx="1" fill="#D97706" opacity="0.5"/>
+<circle cx="30" cy="35" r="4" fill="#030108" stroke="#D97706" stroke-width="1"/>
+<circle cx="30" cy="35" r="2" fill="#D97706"/></svg>

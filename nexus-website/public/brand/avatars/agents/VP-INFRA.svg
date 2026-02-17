@@ -1,74 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>VP-INFRA — The Bedrock</title>
-  <desc>NEXUS AI Agent 52: VP-INFRA, The Bedrock, Age 45</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#3B82F6" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#E8B89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#D49A7C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: undercut -->
-        <ellipse cx="60" cy="42" rx="32" ry="18" fill="#555555"/>
-        <path d="M28,60 Q60,20 92,60" fill="#555555"/>
-        <line x1="26" y1="60" x2="26" y2="76" stroke="#555555" stroke-width="4"/>
-        <line x1="94" y1="60" x2="94" y2="76" stroke="#555555" stroke-width="4"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#E8B89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#D49A7C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <line x1="35" y1="46" x2="53" y2="43" stroke="#555555" stroke-width="2.5" stroke-linecap="round"/>
-                   <line x1="67" y1="43" x2="85" y2="46" stroke="#555555" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#6B4A32"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#6B4A32"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#D49A7C" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,78 Q60,75 70,78" fill="none" stroke="#C4725A" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#00D9FF" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#00D9FF" text-anchor="middle">T1</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#3B82F6" text-anchor="middle" opacity="0.9">VP-INFRA</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<line x1="35" y1="22" x2="35" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/><circle cx="35" cy="10" r="1.5" fill="#7C3AED"/><line x1="50" y1="22" x2="49" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/><circle cx="49" cy="10" r="1.5" fill="#7C3AED"/><line x1="65" y1="22" x2="69" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.7"/><circle cx="69" cy="10" r="1.5" fill="#7C3AED"/>
+<ellipse cx="50" cy="40" rx="28" ry="18" fill="#1E293B" stroke="#7C3AED" stroke-width="1.5"/>
+<ellipse cx="36" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
+<ellipse cx="64" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
+<circle cx="44" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/><circle cx="56" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/>
+<circle cx="44" cy="40" r="1.5" fill="#030108"/><circle cx="56" cy="40" r="1.5" fill="#030108"/>
+<path d="M44,48 Q50,52 56,48" stroke="#7C3AED" stroke-width="1.5" fill="none"/>
+<rect x="32" y="58" width="36" height="22" rx="2" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+<line x1="32" y1="64" x2="68" y2="64" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<line x1="32" y1="70" x2="68" y2="70" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<line x1="32" y1="76" x2="68" y2="76" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<circle cx="62" cy="61.5" r="1.5" fill="#22C55E"/>
+<circle cx="62" cy="67.5" r="1.5" fill="#7C3AED"/>
+<circle cx="62" cy="73.5" r="1.5" fill="#EF4444"/></svg>

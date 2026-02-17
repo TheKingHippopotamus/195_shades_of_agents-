@@ -1,75 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>ACCT-MGR — Velvet Rope</title>
-  <desc>NEXUS AI Agent 124: ACCT-MGR, Velvet Rope, Age 30</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#F59E0B" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#F4C89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#E8A87C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#E8A87C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: long -->
-        <ellipse cx="60" cy="48" rx="36" ry="26" fill="#3D2B1F"/>
-        <path d="M24,76 L20,118 Q22,123 26,118 L28,76" fill="#3D2B1F"/>
-        <path d="M96,76 L100,118 Q98,123 94,118 L92,76" fill="#3D2B1F"/>
-        <path d="M24,64 Q60,20 96,64" fill="#3D2B1F"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#F4C89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#E8A87C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#F4C89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#E8A87C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#F4C89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#E8A87C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,44 Q42,38 53,46" fill="none" stroke="#3D2B1F" stroke-width="3" stroke-linecap="round"/>
-                   <path d="M67,46 Q78,38 85,44" fill="none" stroke="#3D2B1F" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="9" ry="4.5" fill="white"/>
-        <circle  cx="44" cy="54" r="4" fill="#C4872A"/>
-        <circle  cx="44" cy="54" r="2.5" fill="#0A0A0A"/>
-        <circle  cx="45.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
-        <ellipse cx="76" cy="54" rx="9" ry="4.5" fill="white"/>
-        <circle  cx="76" cy="54" r="4" fill="#C4872A"/>
-        <circle  cx="76" cy="54" r="2.5" fill="#0A0A0A"/>
-        <circle  cx="77.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <line x1="60" y1="62" x2="60" y2="72" stroke="#E8A87C" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                   <path d="M55,72 Q60,76 65,72" fill="none" stroke="#E8A87C" stroke-width="1.25" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <line x1="50" y1="76" x2="70" y2="76" stroke="#D4826A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#3B82F6" text-anchor="middle">T6</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#F59E0B" text-anchor="middle" opacity="0.9">ACCT-MGR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
+<line x1="67.7" y1="30.3" x2="77.6" y2="20.4" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="77.57716446627535,20.422835533724648 80.57716446627535,17.422835533724648 78.57716446627535,22.422835533724648" fill="#F97316" opacity="0.7"/><line x1="74.1" y1="54.5" x2="86.7" y2="57.8" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="86.70518139898459,57.83512371389578 89.70518139898459,54.83512371389578 87.70518139898459,59.83512371389578" fill="#F97316" opacity="0.7"/><line x1="56.5" y1="72.1" x2="60.6" y2="87.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="60.611580849203364,87.60295887785179 63.611580849203364,84.60295887785179 61.611580849203364,89.60295887785179" fill="#F97316" opacity="0.7"/><line x1="32.3" y1="65.7" x2="23.1" y2="74.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="23.129942314911197,74.87005768508881 26.129942314911197,71.87005768508881 24.129942314911197,76.87005768508881" fill="#F97316" opacity="0.7"/><line x1="25.9" y1="41.5" x2="12.3" y2="37.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="12.328892774726334,37.906057241001704 15.328892774726334,34.906057241001704 13.328892774726334,39.906057241001704" fill="#F97316" opacity="0.7"/><line x1="43.5" y1="23.9" x2="37.8" y2="2.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="37.83550488018153,2.6014861644137923 40.83550488018153,-0.3985138355862077 38.83550488018153,4.601486164413792" fill="#F97316" opacity="0.7"/>
+<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
+<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
+<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
+<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
+<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
+<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
+<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>

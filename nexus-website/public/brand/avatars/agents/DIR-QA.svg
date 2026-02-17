@@ -1,75 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>DIR-QA — The Gatekeeper</title>
-  <desc>NEXUS AI Agent 100: DIR-QA, The Gatekeeper, Age 41</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#10B981" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#10B981" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#D4A574"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#BC8D5C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#BC8D5C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: updo bun -->
-        <ellipse cx="60" cy="50" rx="34" ry="20" fill="#6B4A32"/>
-        <path d="M26,70 Q60,24 94,70" fill="#6B4A32"/>
-        <!-- Bun top -->
-        <circle cx="60" cy="22" r="11" fill="#6B4A32"/>
-        <ellipse cx="60" cy="22" rx="9" ry="7" fill="#6B4A32" opacity="0.7"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#D4A574"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#BC8D5C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#D4A574"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#D4A574"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#BC8D5C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#6B4A32" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#6B4A32" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="44" cy="54" r="5.5" fill="#C4872A"/>
-        <circle  cx="44" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="46.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-        <ellipse cx="76" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="76" cy="54" r="5.5" fill="#C4872A"/>
-        <circle  cx="76" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="78.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#BC8D5C" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#B06A50" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#8B5CF6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#8B5CF6" text-anchor="middle">T2</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#10B981" text-anchor="middle" opacity="0.9">DIR-QA</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<ellipse cx="50" cy="94" rx="22" ry="4" fill="rgba(34,197,94,0.2)"/>
+<line x1="43" y1="22" x2="38" y2="12" stroke="#22C55E" stroke-width="1.5"/><line x1="57" y1="22" x2="62" y2="12" stroke="#22C55E" stroke-width="1.5"/><circle cx="38" cy="11" r="2.5" fill="#22C55E"/><circle cx="62" cy="11" r="2.5" fill="#22C55E"/>
+<path d="M50,18 L75,28 L75,55 Q75,78 50,88 Q25,78 25,55 L25,28 Z" fill="#0F2A18" stroke="#22C55E" stroke-width="2"/>
+<path d="M50,24 L69,32 L69,55 Q69,73 50,82 Q31,73 31,55 L31,32 Z" fill="#1a3a20" stroke="#22C55E" stroke-width="0.5" opacity="0.5"/>
+<path d="M36,53 L45,63 L66,40" stroke="#22C55E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="50" cy="34" r="5" fill="#030108" stroke="#22C55E" stroke-width="1"/>
+<text x="50" y="37" text-anchor="middle" fill="#22C55E" font-size="6" font-family="monospace">QA</text></svg>

@@ -1,72 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>GROWTH-PM — The Loop</title>
-  <desc>NEXUS AI Agent 70: GROWTH-PM, The Loop, Age 30</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#8B5CF6" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#E8B89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#D49A7C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: crew cut -->
-        <ellipse cx="60" cy="44" rx="33" ry="18" fill="#1A1A1A"/>
-        <path d="M27,62 Q60,22 93,62" fill="#1A1A1A"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#E8B89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#D49A7C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,43 Q44,37 53,44" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-             <path d="M67,44 Q76,37 85,43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#6B4A32"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#6B4A32"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#D49A7C" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <line x1="50" y1="76" x2="70" y2="76" stroke="#C4725A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#F59E0B" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#F59E0B" text-anchor="middle">T5</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#8B5CF6" text-anchor="middle" opacity="0.9">GROWTH-PM</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<line x1="80.0" y1="45.0" x2="102.0" y2="45.0" stroke="#FF2D78" stroke-width="1" opacity="0.4"/><line x1="65.0" y1="71.0" x2="73.5" y2="85.7" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="35.0" y1="71.0" x2="26.0" y2="86.6" stroke="#FF2D78" stroke-width="1" opacity="0.4"/><line x1="20.0" y1="45.0" x2="3.0" y2="45.0" stroke="#00D9FF" stroke-width="1" opacity="0.4"/><line x1="35.0" y1="19.0" x2="24.0" y2="-0.0" stroke="#00D9FF" stroke-width="1" opacity="0.4"/><line x1="65.0" y1="19.0" x2="73.5" y2="4.3" stroke="#7C3AED" stroke-width="1" opacity="0.4"/>
+<path d="M50,15 L72,45 L50,72 L28,45 Z" fill="rgba(255,107,53,0.15)" stroke="#FF6B35" stroke-width="2"/>
+<path d="M50,22 L66,45 L50,65 L34,45 Z" fill="rgba(255,107,53,0.25)" stroke="#FF6B35" stroke-width="0.5" opacity="0.5"/>
+<circle cx="50" cy="45" r="8" fill="rgba(255,107,53,0.5)"/>
+<circle cx="50" cy="45" r="4" fill="#FF6B35" opacity="0.9"/>
+<circle cx="52" cy="43" r="1.5" fill="white" opacity="0.8"/>
+<line x1="44" y1="22" x2="50" y2="15" stroke="white" stroke-width="1.5" opacity="0.4"/>
+<line x1="50" y1="73" x2="50" y2="85" stroke="#FF6B35" stroke-width="1" opacity="0.6"/>
+<polygon points="50,88 56,82 50,79 44,82" fill="#FF6B35" opacity="0.7"/></svg>

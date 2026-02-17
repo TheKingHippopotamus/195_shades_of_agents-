@@ -1,80 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>JR-DES — Fresh Eyes</title>
-  <desc>NEXUS AI Agent 84: JR-DES, Fresh Eyes, Age 23</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#EC4899" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#EC4899" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#FDD9B5"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#F0C49A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#F0C49A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: undercut -->
-        <ellipse cx="60" cy="42" rx="32" ry="18" fill="#4A3728"/>
-        <path d="M28,60 Q60,20 92,60" fill="#4A3728"/>
-        <line x1="26" y1="60" x2="26" y2="76" stroke="#4A3728" stroke-width="4"/>
-        <line x1="94" y1="60" x2="94" y2="76" stroke="#4A3728" stroke-width="4"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#FDD9B5"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#F0C49A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#FDD9B5"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#F0C49A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#FDD9B5"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#F0C49A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <line x1="35" y1="46" x2="53" y2="43" stroke="#4A3728" stroke-width="2.5" stroke-linecap="round"/>
-                   <line x1="67" y1="43" x2="85" y2="46" stroke="#4A3728" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="44" cy="54" r="5.5" fill="#2E7D52"/>
-        <circle  cx="44" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="46.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-        <ellipse cx="76" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="76" cy="54" r="5.5" fill="#2E7D52"/>
-        <circle  cx="76" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="78.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#F0C49A" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <path d="M50,78 Q60,75 70,78" fill="none" stroke="#D4876B" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-      <!-- Glasses -->
-      <rect x="33" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <rect x="65" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="55" y1="54" x2="65" y2="54" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="33" y1="54" x2="28" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="87" y1="54" x2="92" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#9CA3AF" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#9CA3AF" text-anchor="middle">T7</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#EC4899" text-anchor="middle" opacity="0.9">JR-DES</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="25" cy="52" r="3" fill="#00FF88" opacity="0.7"/><circle cx="83" cy="65" r="4" fill="#00D9FF" opacity="0.7"/><circle cx="61" cy="33" r="4" fill="#FF6B35" opacity="0.7"/><circle cx="28" cy="28" r="3" fill="#FF2D78" opacity="0.7"/><circle cx="25" cy="13" r="4" fill="#FF6B35" opacity="0.7"/>
+<path d="M50,20 C60.252,18 72,28 74,40 C76,52 70,65 58,70 C46,75 30,70 26,58 C22,46 28,30 37.748,22 C42,19 46,20 50,20 Z" fill="#1E293B" stroke="#FF2D78" stroke-width="2"/>
+<path d="M58,70 C65,78 68,85 65,90" stroke="#FF2D78" stroke-width="3" fill="none" stroke-linecap="round"/>
+<ellipse cx="64" cy="91" rx="4" ry="2" fill="#FF2D78" opacity="0.8"/>
+<circle cx="42" cy="44" r="7" fill="white"/><circle cx="58" cy="44" r="7" fill="white"/>
+<circle cx="42" cy="44" r="4" fill="#FF2D78"/><circle cx="58" cy="44" r="4" fill="#FF2D78"/>
+<circle cx="44" cy="42" r="1.5" fill="white"/><circle cx="60" cy="42" r="1.5" fill="white"/>
+<path d="M36,37 Q42,33 48,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
+<path d="M52,37 Q58,33 64,37" stroke="#FF2D78" stroke-width="1.5" fill="none"/>
+<path d="M40,57 Q50,64 60,57" stroke="#FF2D78" stroke-width="2" fill="none" stroke-linecap="round"/></svg>

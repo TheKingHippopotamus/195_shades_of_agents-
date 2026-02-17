@@ -1,74 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>DIR-PROD — The Whisperer</title>
-  <desc>NEXUS AI Agent 65: DIR-PROD, The Whisperer, Age 39</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#8B5CF6" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#8D5524"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#6B3E1A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: medium waves -->
-        <ellipse cx="60" cy="50" rx="36" ry="26" fill="#2C1810"/>
-        <path d="M24,76 L24,50 Q60,20 96,50 L96,76" fill="#2C1810"/>
-        <path d="M24,68 Q30,78 24,88" fill="#2C1810" stroke="#2C1810" stroke-width="4"/>
-        <path d="M96,68 Q90,78 96,88" fill="#2C1810" stroke="#2C1810" stroke-width="4"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#8D5524"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#6B3E1A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,44 Q42,38 53,46" fill="none" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
-                   <path d="M67,46 Q78,38 85,44" fill="none" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#5C7A3E"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#5C7A3E"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#6B3E1A" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <line x1="50" y1="76" x2="70" y2="76" stroke="#7A3422" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#8B5CF6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#8B5CF6" text-anchor="middle">T2</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#8B5CF6" text-anchor="middle" opacity="0.9">DIR-PROD</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<line x1="80.0" y1="45.0" x2="96.0" y2="45.0" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="71.2" y1="66.2" x2="81.8" y2="76.8" stroke="#FF6B35" stroke-width="1" opacity="0.4"/><line x1="50.0" y1="75.0" x2="50.0" y2="96.0" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="28.8" y1="66.2" x2="13.9" y2="81.1" stroke="#FF6B35" stroke-width="1" opacity="0.4"/><line x1="20.0" y1="45.0" x2="2.0" y2="45.0" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="28.8" y1="23.8" x2="17.5" y2="12.5" stroke="#7C3AED" stroke-width="1" opacity="0.4"/><line x1="50.0" y1="15.0" x2="50.0" y2="-4.0" stroke="#FF2D78" stroke-width="1" opacity="0.4"/><line x1="71.2" y1="23.8" x2="82.5" y2="12.5" stroke="#00D9FF" stroke-width="1" opacity="0.4"/>
+<path d="M50,15 L72,45 L50,72 L28,45 Z" fill="rgba(255,107,53,0.15)" stroke="#FF6B35" stroke-width="2"/>
+<path d="M50,22 L66,45 L50,65 L34,45 Z" fill="rgba(255,107,53,0.25)" stroke="#FF6B35" stroke-width="0.5" opacity="0.5"/>
+<circle cx="50" cy="45" r="8" fill="rgba(255,107,53,0.5)"/>
+<circle cx="50" cy="45" r="4" fill="#FF6B35" opacity="0.9"/>
+<circle cx="52" cy="43" r="1.5" fill="white" opacity="0.8"/>
+<line x1="44" y1="22" x2="50" y2="15" stroke="white" stroke-width="1.5" opacity="0.4"/>
+<line x1="50" y1="73" x2="50" y2="85" stroke="#FF6B35" stroke-width="1" opacity="0.6"/>
+<polygon points="50,88 56,82 50,79 44,82" fill="#FF6B35" opacity="0.7"/></svg>

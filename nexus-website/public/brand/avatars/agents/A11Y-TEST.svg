@@ -1,80 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>A11Y-TEST — Screen Reader</title>
-  <desc>NEXUS AI Agent 107: A11Y-TEST, Screen Reader, Age 30</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<ellipse cx="50" cy="94" rx="22" ry="4" fill="rgba(34,197,94,0.2)"/>
 
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#10B981" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#10B981" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#8D5524"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#6B3E1A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: short side-part -->
-        <ellipse cx="60" cy="48" rx="36" ry="24" fill="#2C1810"/>
-        <rect x="24" y="48" width="72" height="20" rx="0" fill="#2C1810"/>
-        <path d="M24,68 Q26,43 60,26 Q94,43 96,68" fill="#2C1810"/>
-        <path d="M24,56 Q30,28 55,24" stroke="#2C1810" stroke-width="6" fill="none"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#8D5524"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#6B3E1A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#2C1810" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#2C1810" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="9" ry="4.5" fill="white"/>
-        <circle  cx="44" cy="54" r="4" fill="#5C7A3E"/>
-        <circle  cx="44" cy="54" r="2.5" fill="#0A0A0A"/>
-        <circle  cx="45.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
-        <ellipse cx="76" cy="54" rx="9" ry="4.5" fill="white"/>
-        <circle  cx="76" cy="54" r="4" fill="#5C7A3E"/>
-        <circle  cx="76" cy="54" r="2.5" fill="#0A0A0A"/>
-        <circle  cx="77.5" cy="53" r="1.2" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#6B3E1A" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#7A3422" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-      <!-- Glasses -->
-      <rect x="33" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <rect x="65" y="47" width="22" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="55" y1="54" x2="65" y2="54" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="33" y1="54" x2="28" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-      <line x1="87" y1="54" x2="92" y2="53" stroke="#888" stroke-width="1.5" opacity="0.7"/>
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#F59E0B" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#F59E0B" text-anchor="middle">T5</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#10B981" text-anchor="middle" opacity="0.9">A11Y-TEST</text>
-</svg>
+<path d="M50,18 L75,28 L75,55 Q75,78 50,88 Q25,78 25,55 L25,28 Z" fill="#0F2A18" stroke="#22C55E" stroke-width="2"/>
+<path d="M50,24 L69,32 L69,55 Q69,73 50,82 Q31,73 31,55 L31,32 Z" fill="#1a3a20" stroke="#22C55E" stroke-width="0.5" opacity="0.5"/>
+<path d="M36,53 L45,63 L66,40" stroke="#22C55E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="50" cy="34" r="5" fill="#030108" stroke="#22C55E" stroke-width="1"/>
+<text x="50" y="37" text-anchor="middle" fill="#22C55E" font-size="6" font-family="monospace">QA</text></svg>

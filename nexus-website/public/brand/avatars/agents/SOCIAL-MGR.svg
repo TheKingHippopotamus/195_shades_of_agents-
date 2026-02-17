@@ -1,75 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>SOCIAL-MGR — The Voice</title>
-  <desc>NEXUS AI Agent 132: SOCIAL-MGR, The Voice, Age 26</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#EC4899" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#EC4899" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#F4C89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#E8A87C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#E8A87C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: updo bun -->
-        <ellipse cx="60" cy="50" rx="34" ry="20" fill="#1A1A1A"/>
-        <path d="M26,70 Q60,24 94,70" fill="#1A1A1A"/>
-        <!-- Bun top -->
-        <circle cx="60" cy="22" r="11" fill="#1A1A1A"/>
-        <ellipse cx="60" cy="22" rx="9" ry="7" fill="#1A1A1A" opacity="0.7"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#F4C89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#E8A87C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#F4C89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#E8A87C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#F4C89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#E8A87C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#4A90D9"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#4A90D9"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M58,62 L55,74 Q60,76 65,74 L62,62" fill="none" stroke="#E8A87C" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Mouth -->
-  <path d="M50,78 Q60,75 70,78" fill="none" stroke="#D4826A" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#3B82F6" text-anchor="middle">T6</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#EC4899" text-anchor="middle" opacity="0.9">SOCIAL-MGR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="35" cy="52" r="20" fill="none" stroke="#A855F7" stroke-width="1.5" opacity="0.6" stroke-dasharray="0 1"/><circle cx="35" cy="52" r="30" fill="none" stroke="#A855F7" stroke-width="1.2" opacity="0.44999999999999996" stroke-dasharray="2 2"/><circle cx="35" cy="52" r="40" fill="none" stroke="#A855F7" stroke-width="0.9" opacity="0.3" stroke-dasharray="4 3"/><circle cx="35" cy="52" r="50" fill="none" stroke="#A855F7" stroke-width="0.6000000000000001" opacity="0.15000000000000002" stroke-dasharray="6 4"/><circle cx="35" cy="52" r="60" fill="none" stroke="#A855F7" stroke-width="0.30000000000000004" opacity="0" stroke-dasharray="8 5"/>
+<path d="M38,35 L65,22 L65,70 L38,58 Z" fill="#1a0a1f" stroke="#A855F7" stroke-width="2"/>
+<ellipse cx="65" cy="46" rx="5" ry="24" fill="#1a0a1f" stroke="#A855F7" stroke-width="1.5"/>
+<rect x="28" y="40" width="10" height="18" rx="3" fill="#1a0a1f" stroke="#A855F7" stroke-width="1.5"/>
+<circle cx="52" cy="46" r="5" fill="#030108" stroke="#A855F7" stroke-width="1"/>
+<circle cx="52" cy="46" r="2.5" fill="#A855F7"/><circle cx="53.5" cy="44.5" r="1" fill="white" opacity="0.7"/>
+<line x1="70" y1="30" x2="80" y2="20" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/>
+<line x1="72" y1="46" x2="85" y2="46" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/>
+<line x1="70" y1="62" x2="80" y2="72" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/></svg>

@@ -1,74 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>DIR-PLATFORM — Golden Path</title>
-  <desc>NEXUS AI Agent 55: DIR-PLATFORM, Golden Path, Age 37</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#3B82F6" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#8D5524"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#6B3E1A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: short side-part -->
-        <ellipse cx="60" cy="48" rx="36" ry="24" fill="#2C1810"/>
-        <rect x="24" y="48" width="72" height="20" rx="0" fill="#2C1810"/>
-        <path d="M24,68 Q26,43 60,26 Q94,43 96,68" fill="#2C1810"/>
-        <path d="M24,56 Q30,28 55,24" stroke="#2C1810" stroke-width="6" fill="none"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#8D5524"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#6B3E1A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#2C1810" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#2C1810" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <circle cx="44" cy="54" r="8" fill="white"/>
-        <circle cx="44" cy="54" r="5" fill="#C4872A"/>
-        <circle cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <circle cx="76" cy="54" r="8" fill="white"/>
-        <circle cx="76" cy="54" r="5" fill="#C4872A"/>
-        <circle cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#6B3E1A" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <line x1="50" y1="76" x2="70" y2="76" stroke="#7A3422" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#8B5CF6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#8B5CF6" text-anchor="middle">T2</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#3B82F6" text-anchor="middle" opacity="0.9">DIR-PLATFORM</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<line x1="35" y1="22" x2="32" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/><circle cx="32" cy="10" r="1.5" fill="#7C3AED"/><line x1="50" y1="22" x2="47" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/><circle cx="47" cy="10" r="1.5" fill="#7C3AED"/><line x1="65" y1="22" x2="67" y2="10" stroke="#7C3AED" stroke-width="1.5" opacity="0.7"/><circle cx="67" cy="10" r="1.5" fill="#7C3AED"/>
+<ellipse cx="50" cy="40" rx="28" ry="18" fill="#1E293B" stroke="#7C3AED" stroke-width="1.5"/>
+<ellipse cx="36" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
+<ellipse cx="64" cy="45" rx="14" ry="10" fill="#1E293B" stroke="#7C3AED" stroke-width="1"/>
+<circle cx="44" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/><circle cx="56" cy="40" r="3.5" fill="#7C3AED" opacity="0.8"/>
+<circle cx="44" cy="40" r="1.5" fill="#030108"/><circle cx="56" cy="40" r="1.5" fill="#030108"/>
+<path d="M44,48 Q50,52 56,48" stroke="#7C3AED" stroke-width="1.5" fill="none"/>
+<rect x="32" y="58" width="36" height="22" rx="2" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+<line x1="32" y1="64" x2="68" y2="64" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<line x1="32" y1="70" x2="68" y2="70" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<line x1="32" y1="76" x2="68" y2="76" stroke="#7C3AED" stroke-width="0.5" opacity="0.5"/>
+<circle cx="62" cy="61.5" r="1.5" fill="#22C55E"/>
+<circle cx="62" cy="67.5" r="1.5" fill="#7C3AED"/>
+<circle cx="62" cy="73.5" r="1.5" fill="#EF4444"/></svg>

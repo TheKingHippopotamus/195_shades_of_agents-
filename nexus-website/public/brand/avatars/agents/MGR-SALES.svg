@@ -1,73 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>MGR-SALES — Coach</title>
-  <desc>NEXUS AI Agent 118: MGR-SALES, Coach, Age 34</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#F59E0B" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#E8B89A"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#D49A7C" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: short wavy -->
-        <ellipse cx="60" cy="44" rx="35" ry="21" fill="#1A1A1A"/>
-        <path d="M25,65 Q60,20 95,65" fill="#1A1A1A"/>
-        <path d="M26,62 Q34,58 40,63 Q46,68 52,63" fill="none" stroke="#1A1A1A" stroke-width="3"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#E8B89A"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#D49A7C" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#E8B89A"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#D49A7C" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <line x1="35" y1="46" x2="53" y2="43" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-                   <line x1="67" y1="43" x2="85" y2="46" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="44" cy="54" r="4.5"       fill="#6B4A32"/>
-        <circle  cx="44" cy="54" r="2.5"       fill="#0A0A0A"/>
-        <circle  cx="46" cy="52.5" r="1.5" fill="white" opacity="0.8"/>
-        <ellipse cx="76" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="76" cy="54" r="4.5"       fill="#6B4A32"/>
-        <circle  cx="76" cy="54" r="2.5"       fill="#0A0A0A"/>
-        <circle  cx="78" cy="52.5" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#D49A7C" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,78 Q60,75 70,78" fill="none" stroke="#C4725A" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#06B6D4" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#06B6D4" text-anchor="middle">T3</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#F59E0B" text-anchor="middle" opacity="0.9">MGR-SALES</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
+<line x1="67.7" y1="30.3" x2="76.9" y2="21.1" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="76.87005768508881,21.129942314911197 79.87005768508881,18.129942314911197 77.87005768508881,23.129942314911197" fill="#F97316" opacity="0.7"/><line x1="74.8" y1="50.8" x2="96.7" y2="53.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="96.7044738649824,53.262330376855466 99.7044738649824,50.262330376855466 97.7044738649824,55.262330376855466" fill="#F97316" opacity="0.7"/><line x1="63.3" y1="69.2" x2="71.3" y2="81.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="71.28128306061346,81.86896796913136 74.28128306061346,78.86896796913136 72.28128306061346,83.86896796913136" fill="#F97316" opacity="0.7"/><line x1="41.7" y1="71.6" x2="37.1" y2="84.8" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="37.119116583748486,84.81144988202634 40.119116583748486,81.81144988202634 38.119116583748486,86.81144988202634" fill="#F97316" opacity="0.7"/><line x1="26.4" y1="56.3" x2="9.4" y2="62.2" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="9.413016796740195,62.20199966407219 12.413016796740195,59.20199966407219 10.413016796740195,64.20199966407219" fill="#F97316" opacity="0.7"/><line x1="28.8" y1="34.7" x2="11.1" y2="23.5" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="11.050686835498922,23.526524480294523 14.050686835498922,20.526524480294523 12.050686835498922,25.526524480294523" fill="#F97316" opacity="0.7"/><line x1="47.2" y1="23.2" x2="45.1" y2="4.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="45.07356305145444,4.276662764697328 48.07356305145444,1.2766627646973276 46.07356305145444,6.276662764697328" fill="#F97316" opacity="0.7"/>
+<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
+<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
+<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
+<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
+<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
+<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
+<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>

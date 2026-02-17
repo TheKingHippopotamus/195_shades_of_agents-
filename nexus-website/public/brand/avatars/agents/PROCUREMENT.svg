@@ -1,74 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>PROCUREMENT — The Negotiator</title>
-  <desc>NEXUS AI Agent 155: PROCUREMENT, The Negotiator, Age 34</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#10B981" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#10B981" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#FDD9B5"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#F0C49A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#F0C49A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: short neat -->
-        <ellipse cx="60" cy="46" rx="34" ry="22" fill="#6B4A32"/>
-        <rect x="26" y="46" width="68" height="18" rx="0" fill="#6B4A32"/>
-        <path d="M26,64 Q60,22 94,64" fill="#6B4A32"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#FDD9B5"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#F0C49A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#FDD9B5"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#F0C49A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#FDD9B5"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#F0C49A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,43 Q44,37 53,44" fill="none" stroke="#6B4A32" stroke-width="2" stroke-linecap="round"/>
-             <path d="M67,44 Q76,37 85,43" fill="none" stroke="#6B4A32" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="9" ry="6" fill="#E8D8C8" opacity="0.5"/>
-        <ellipse cx="44" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="44" cy="54" r="5" fill="#5A6A7A"/>
-        <circle  cx="44" cy="54" r="3" fill="#0A0A0A"/>
-        <circle  cx="46" cy="52" r="1.5" fill="white" opacity="0.8"/>
-        <ellipse cx="76" cy="54" rx="9" ry="6" fill="white"/>
-        <circle  cx="76" cy="54" r="5" fill="#5A6A7A"/>
-        <circle  cx="76" cy="54" r="3" fill="#0A0A0A"/>
-        <circle  cx="78" cy="52" r="1.5" fill="white" opacity="0.8"/>
-
-  <!-- Nose -->
-  <path d="M57,67 Q55,74 60,75 Q65,74 63,67" fill="none" stroke="#F0C49A" stroke-width="1.25" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,78 Q60,75 70,78" fill="none" stroke="#D4876B" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#F59E0B" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#F59E0B" text-anchor="middle">T5</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#10B981" text-anchor="middle" opacity="0.9">PROCUREMENT</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="50" cy="50" r="42" fill="#0a0f0a" stroke="#84CC16" stroke-width="2.5"/>
+<line x1="86.0" y1="50.0" x2="90.0" y2="50.0" stroke="#84CC16" stroke-width="1.5"/><line x1="80.3" y1="69.5" x2="83.7" y2="71.6" stroke="#84CC16" stroke-width="1.5"/><line x1="65.0" y1="82.7" x2="66.6" y2="86.4" stroke="#84CC16" stroke-width="1.5"/><line x1="44.9" y1="85.6" x2="44.3" y2="89.6" stroke="#84CC16" stroke-width="1.5"/><line x1="26.4" y1="77.2" x2="23.8" y2="80.2" stroke="#84CC16" stroke-width="1.5"/><line x1="15.5" y1="60.1" x2="11.6" y2="61.3" stroke="#84CC16" stroke-width="1.5"/><line x1="15.5" y1="39.9" x2="11.6" y2="38.7" stroke="#84CC16" stroke-width="1.5"/><line x1="26.4" y1="22.8" x2="23.8" y2="19.8" stroke="#84CC16" stroke-width="1.5"/><line x1="44.9" y1="14.4" x2="44.3" y2="10.4" stroke="#84CC16" stroke-width="1.5"/><line x1="65.0" y1="17.3" x2="66.6" y2="13.6" stroke="#84CC16" stroke-width="1.5"/><line x1="80.3" y1="30.5" x2="83.7" y2="28.4" stroke="#84CC16" stroke-width="1.5"/>
+<circle cx="50" cy="50" r="35" fill="#0f1a0f" stroke="#84CC16" stroke-width="2"/>
+<circle cx="50" cy="50" r="18" fill="#0a0f0a" stroke="#84CC16" stroke-width="1.5"/>
+<circle cx="50" cy="32" r="2" fill="#84CC16"/><circle cx="68" cy="50" r="2" fill="#84CC16"/>
+<circle cx="50" cy="68" r="2" fill="#84CC16"/><circle cx="32" cy="50" r="2" fill="#84CC16"/>
+<line x1="50" y1="50" x2="50" y2="35" stroke="#84CC16" stroke-width="2" stroke-linecap="round"/>
+<rect x="34" y="50.5" width="5" height="7.5" fill="#84CC16" opacity="0.5"/><rect x="41" y="46.75" width="5" height="11.25" fill="#84CC16" opacity="0.6"/><rect x="48" y="44.25" width="5" height="13.75" fill="#84CC16" opacity="0.7"/><rect x="55" y="48" width="5" height="10" fill="#84CC16" opacity="0.8"/><rect x="62" y="43" width="5" height="15" fill="#84CC16" opacity="0.9"/><circle cx="50" cy="50" r="5" fill="#030108" stroke="#84CC16" stroke-width="2"/>
+<circle cx="50" cy="18" r="3" fill="#84CC16" opacity="0.6"/><circle cx="82" cy="50" r="3" fill="#84CC16" opacity="0.6"/>
+<circle cx="50" cy="82" r="3" fill="#84CC16" opacity="0.6"/><circle cx="18" cy="50" r="3" fill="#84CC16" opacity="0.6"/></svg>

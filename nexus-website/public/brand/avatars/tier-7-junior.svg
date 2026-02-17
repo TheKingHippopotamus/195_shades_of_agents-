@@ -1,13 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img">
-  <title>Tier 7 — Junior</title>
-  <circle cx="40" cy="40" r="34" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,4"/>
-  <circle cx="40" cy="40" r="22" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
-  <!-- 1 single dot (just starting) -->
-  <circle cx="40" cy="40" r="7" fill="none" stroke="#9CA3AF" stroke-width="2"/>
-  <circle cx="40" cy="40" r="2.5" fill="#9CA3AF"/>
-  <!-- 4 cardinal notches -->
-  <circle cx="40" cy="6"  r="2" fill="#9CA3AF" opacity="0.5"/>
-  <circle cx="74" cy="40" r="2" fill="#9CA3AF" opacity="0.5"/>
-  <circle cx="40" cy="74" r="2" fill="#9CA3AF" opacity="0.5"/>
-  <circle cx="6"  cy="40" r="2" fill="#9CA3AF" opacity="0.5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<ellipse cx="50" cy="94" rx="22" ry="4" fill="rgba(34,197,94,0.2)"/>
+
+<path d="M50,18 L75,28 L75,55 Q75,78 50,88 Q25,78 25,55 L25,28 Z" fill="#0F2A18" stroke="#22C55E" stroke-width="2"/>
+<path d="M50,24 L69,32 L69,55 Q69,73 50,82 Q31,73 31,55 L31,32 Z" fill="#1a3a20" stroke="#22C55E" stroke-width="0.5" opacity="0.5"/>
+<path d="M36,53 L45,63 L66,40" stroke="#22C55E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="50" cy="34" r="5" fill="#030108" stroke="#22C55E" stroke-width="1"/>
+<text x="50" y="37" text-anchor="middle" fill="#22C55E" font-size="6" font-family="monospace">QA</text></svg>

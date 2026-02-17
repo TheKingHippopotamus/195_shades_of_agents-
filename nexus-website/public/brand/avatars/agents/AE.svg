@@ -1,76 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
-  <title>AE — Handshake</title>
-  <desc>NEXUS AI Agent 120: AE, Handshake, Age 28</desc>
-
-  <!-- Department color background ring -->
-  <circle cx="60" cy="60" r="58" fill="#F59E0B" opacity="0.08"/>
-  <circle cx="60" cy="60" r="58" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
-
-  <!-- Inner background -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E27" opacity="0.7"/>
-
-  <!-- Neck -->
-  <rect x="48" y="90" width="24" height="22" rx="4" fill="#8D5524"/>
-  <rect x="48" y="90" width="24" height="4"  rx="0" fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Shoulders hint -->
-  <path d="M28,120 Q28,120 48,112 L72,112 Q92,120 92,120"
-        fill="#6B3E1A" opacity="0.5"/>
-
-  <!-- Hair (behind face) -->
-  
-        <!-- Hair: updo bun -->
-        <ellipse cx="60" cy="50" rx="34" ry="20" fill="#2C1810"/>
-        <path d="M26,70 Q60,24 94,70" fill="#2C1810"/>
-        <!-- Bun top -->
-        <circle cx="60" cy="22" r="11" fill="#2C1810"/>
-        <ellipse cx="60" cy="22" rx="9" ry="7" fill="#2C1810" opacity="0.7"/>
-
-  <!-- Face oval -->
-  <ellipse cx="60" cy="58" rx="36" ry="42" fill="#8D5524"/>
-
-  <!-- Facial shadow / cheek depth -->
-  <ellipse cx="60" cy="66" rx="36" ry="34" fill="#6B3E1A" opacity="0.08"/>
-
-  <!-- Ears -->
-  <ellipse cx="24" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="24" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-  <ellipse cx="96" cy="60" rx="5" ry="8"  fill="#8D5524"/>
-  <ellipse cx="96" cy="60" rx="3" ry="5"  fill="#6B3E1A" opacity="0.4"/>
-
-  <!-- Eyebrows -->
-  <path d="M35,45 Q44,39 53,45" fill="none" stroke="#2C1810" stroke-width="2.5" stroke-linecap="round"/>
-                   <path d="M67,45 Q76,39 85,45" fill="none" stroke="#2C1810" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Eyes -->
-  
-        <ellipse cx="44" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="44" cy="54" r="5.5" fill="#4A90D9"/>
-        <circle  cx="44" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="46.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-        <ellipse cx="76" cy="54" rx="10" ry="7" fill="white"/>
-        <circle  cx="76" cy="54" r="5.5" fill="#4A90D9"/>
-        <circle  cx="76" cy="54" r="3"   fill="#0A0A0A"/>
-        <circle  cx="78.5" cy="52" r="1.8" fill="white" opacity="0.9"/>
-
-  <!-- Nose -->
-  <line x1="60" y1="62" x2="60" y2="72" stroke="#6B3E1A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                   <path d="M55,72 Q60,76 65,72" fill="none" stroke="#6B3E1A" stroke-width="1.25" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Mouth -->
-  <path d="M50,77 Q55,81 60,78 Q65,75 70,77" fill="none" stroke="#7A3422" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Accessories -->
-  
-
-  <!-- Tier badge -->
-  
-    <!-- Tier badge -->
-    <circle cx="92" cy="92" r="12" fill="#0A0E27" stroke="#3B82F6" stroke-width="2"/>
-    <text x="92" y="97" font-family="'Arial Black',Arial,sans-serif" font-size="9" font-weight="900"
-          fill="#3B82F6" text-anchor="middle">T6</text>
-
-  <!-- Agent code label -->
-  <text x="60" y="116" font-family="'Arial',sans-serif" font-size="7" font-weight="600"
-        fill="#F59E0B" text-anchor="middle" opacity="0.9">AE</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<circle cx="50" cy="48" r="32" fill="rgba(249,115,22,0.08)" stroke="#F97316" stroke-width="0.5" opacity="0.3"/>
+<line x1="67.7" y1="30.3" x2="79.7" y2="18.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="79.698484809835,18.301515190165006 82.698484809835,15.301515190165006 80.698484809835,20.301515190165006" fill="#F97316" opacity="0.7"/><line x1="74.8" y1="50.8" x2="93.7" y2="52.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="93.72333723530267,52.92643694854554 96.72333723530267,49.92643694854554 94.72333723530267,54.92643694854554" fill="#F97316" opacity="0.7"/><line x1="63.3" y1="69.2" x2="71.3" y2="81.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="71.28128306061346,81.86896796913136 74.28128306061346,78.86896796913136 72.28128306061346,83.86896796913136" fill="#F97316" opacity="0.7"/><line x1="41.7" y1="71.6" x2="35.8" y2="88.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="35.79800033592782,88.5869832032598 38.79800033592782,85.5869832032598 36.79800033592782,90.5869832032598" fill="#F97316" opacity="0.7"/><line x1="26.4" y1="56.3" x2="7.5" y2="62.9" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="7.525250136123461,62.862557787982524 10.52525013612346,59.862557787982524 8.52525013612346,64.86255778798252" fill="#F97316" opacity="0.7"/><line x1="28.8" y1="34.7" x2="12.7" y2="24.6" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="12.744135233955497,24.590588633325197 15.744135233955497,21.590588633325197 13.744135233955497,26.590588633325197" fill="#F97316" opacity="0.7"/><line x1="47.2" y1="23.2" x2="45.0" y2="3.3" stroke="#F97316" stroke-width="1.5" opacity="0.6"/><polygon points="44.96159857535114,3.2829505548040814 47.96159857535114,0.2829505548040814 45.96159857535114,5.282950554804081" fill="#F97316" opacity="0.7"/>
+<path d="M34,28 L34,55 Q34,72 50,72 Q66,72 66,55 L66,28" stroke="#F97316" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="28" y="24" width="10" height="8" rx="2" fill="#F97316"/><rect x="62" y="24" width="10" height="8" rx="2" fill="#F97316"/>
+<text x="33" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">N</text>
+<text x="67" y="30" text-anchor="middle" fill="#030108" font-size="5" font-weight="bold">S</text>
+<circle cx="50" cy="50" r="14" fill="#1a0f00" stroke="#F97316" stroke-width="1.5"/>
+<circle cx="44" cy="48" r="3" fill="#F97316" opacity="0.9"/><circle cx="56" cy="48" r="3" fill="#F97316" opacity="0.9"/>
+<path d="M43,55 Q50,60 57,55" stroke="#F97316" stroke-width="1.5" fill="none"/>
+<text x="50" y="72" text-anchor="middle" fill="#F97316" font-size="8" opacity="0.4">$</text></svg>
