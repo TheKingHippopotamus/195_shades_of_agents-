@@ -4,6 +4,7 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMsg, setErrorMsg] = useState<string>("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,10 +16,10 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
+    setErrorMsg("");
 
     try {
-      // Formspree endpoint placeholder — replace with actual form ID
-      const res = await fetch("https://formspree.io/f/placeholder", {
+      const res = await fetch("/195_shades_of_agents-/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -28,9 +29,18 @@ export default function ContactForm() {
         setStatus("success");
         setFormData({ name: "", email: "", company: "", type: "project", message: "" });
       } else {
+        let msg = "Something went wrong. Please try again.";
+        try {
+          const body = await res.json();
+          if (body?.error) msg = body.error;
+        } catch {
+          // use default message
+        }
+        setErrorMsg(msg);
         setStatus("error");
       }
     } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
       setStatus("error");
     }
   };
@@ -48,6 +58,12 @@ export default function ContactForm() {
           Our sales team will respond within 24 hours. DISC-AGENT is already
           reviewing your inquiry.
         </p>
+        <button
+          className="mt-4 text-sm text-quantum-blue hover:underline"
+          onClick={() => setStatus("idle")}
+        >
+          Send another message
+        </button>
       </div>
     );
   }
@@ -132,7 +148,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="text-sm text-red-400">
-          Something went wrong. Please try again or email us directly.
+          {errorMsg || "Something went wrong. Please try again or email us directly."}
         </p>
       )}
 

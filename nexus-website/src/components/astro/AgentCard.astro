@@ -24,10 +24,12 @@ const {
   nickname,
   avatarUrl,
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <a
-  href={`/agents/${code.toLowerCase()}`}
+  href={`${base}/agents/${code.toLowerCase()}/`}
   class="nexus-card p-4 block group"
 >
   <div class="flex items-start gap-3">

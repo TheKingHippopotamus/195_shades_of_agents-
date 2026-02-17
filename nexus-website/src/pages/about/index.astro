@@ -2,6 +2,8 @@
 import PageLayout from "../../layouts/PageLayout.astro";
 import SectionHeading from "../../components/astro/SectionHeading.astro";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 let agents: any[] = [];
 let departments: any[] = [];
 try {
@@ -121,7 +123,7 @@ const totalDepts = departments.length;
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {cSuite.map((agent: any) => (
             <a
-              href={`/agents/${agent.code.toLowerCase()}`}
+              href={`${base}/agents/${agent.code.toLowerCase()}/`}
               class="nexus-card p-5 block group"
             >
               <div class="flex items-center gap-3 mb-3">
@@ -140,7 +142,7 @@ const totalDepts = departments.length;
                 </div>
               </div>
               <p class="text-xs text-[var(--text-secondary)] line-clamp-2">
-                {agent.personal?.about_me || agent.personality.substring(0, 120) + "..."}
+                {agent.personal?.about_me || agent.core_responsibilities?.[0] || "Executive leader at NEXUS AI."}
               </p>
             </a>
           ))}
@@ -148,7 +150,7 @@ const totalDepts = departments.length;
 
         <div class="mt-8 text-center">
           <a
-            href="/about/leadership"
+            href={`${base}/about/leadership/`}
             class="text-sm text-quantum-blue hover:underline"
           >
             View full leadership profiles &#x2192;
@@ -189,7 +191,7 @@ const totalDepts = departments.length;
         and how they work together.
       </p>
       <a
-        href="/agents"
+        href={`${base}/agents/`}
         class="inline-flex items-center px-6 py-3 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
       >
         Browse All Agents

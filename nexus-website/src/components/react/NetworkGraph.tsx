@@ -30,31 +30,29 @@ interface GraphLink extends d3.SimulationLinkDatum<GraphNode> {
   sameDept: boolean;
 }
 
-// Neon cosmic department colors
 const DEPT_COLORS: Record<string, string> = {
-  "01": "#7C3AED", // Deep violet - Executive
-  "02": "#A855F7", // Purple - Engineering
-  "03": "#00E5FF", // Bright cyan - Platform
-  "04": "#FFB800", // Gold - Product
-  "05": "#FF6B2B", // Neon orange - Design
-  "06": "#00BFFF", // Deep sky blue - Data Science
-  "07": "#00FF88", // Neon green - QA
-  "08": "#FF1744", // Neon red - Security
-  "09": "#448AFF", // Bright blue - Sales
-  "10": "#FF4081", // Hot pink - Marketing
-  "11": "#1DE9B6", // Teal - Customer Success
-  "12": "#B388FF", // Light purple - HR
-  "13": "#76FF03", // Lime green - Finance
-  "14": "#FF5252", // Red accent - Legal
-  "15": "#90A4AE", // Steel - IT Ops
-  "16": "#E040FB", // Magenta - DevRel
-  "17": "#40C4FF", // Light blue - Program Mgmt
-  "18": "#8D6E63", // Warm grey - Governance
-  "19": "#FFD740", // Amber - Special Agents
-  "20": "#64FFDA", // Aqua - Documentation
+  "01": "#7C3AED",
+  "02": "#A855F7",
+  "03": "#00E5FF",
+  "04": "#FFB800",
+  "05": "#FF6B2B",
+  "06": "#00BFFF",
+  "07": "#00FF88",
+  "08": "#FF1744",
+  "09": "#448AFF",
+  "10": "#FF4081",
+  "11": "#1DE9B6",
+  "12": "#B388FF",
+  "13": "#76FF03",
+  "14": "#FF5252",
+  "15": "#90A4AE",
+  "16": "#E040FB",
+  "17": "#40C4FF",
+  "18": "#8D6E63",
+  "19": "#FFD740",
+  "20": "#64FFDA",
 };
 
-// Department names for the legend
 const DEPT_NAMES: Record<string, string> = {
   "01": "Executive", "02": "Engineering", "03": "Platform", "04": "Product",
   "05": "Design", "06": "Data/AI/ML", "07": "QA", "08": "Security",
@@ -67,50 +65,9 @@ function tierRadius(tier: number): number {
   return [22, 17, 14, 12, 11, 10, 9, 8, 11, 12][tier] || 9;
 }
 
-// Star generation for the background
-interface Star {
-  x: number;
-  y: number;
-  r: number;
-  opacity: number;
-  twinkleSpeed: number;
-  twinklePhase: number;
-}
-
-function generateStars(width: number, height: number, count: number): Star[] {
-  const stars: Star[] = [];
-  for (let i = 0; i < count; i++) {
-    stars.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      r: Math.random() * 1.5 + 0.3,
-      opacity: Math.random() * 0.8 + 0.2,
-      twinkleSpeed: 0, // No animation
-      twinklePhase: 0,
-    });
-  }
-  return stars;
-}
-
-// Particle along a link
-interface Particle {
-  linkIndex: number;
-  t: number;        // 0..1 position along link
-  speed: number;
-  size: number;
-  opacity: number;
-}
-
-function generateParticles(linkCount: number, perLink: number): Particle[] {
-  // Disabled particles for performance
-  return [];
-}
-
 export default function NetworkGraph() {
   const svgRef = useRef<SVGSVGElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const animFrameRef = useRef<number>(0);
   const [loading, setLoading] = useState(true);
   const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null);
   const [hoveredDept, setHoveredDept] = useState<string | null>(null);
@@ -120,52 +77,10 @@ export default function NetworkGraph() {
       .then((r) => r.json())
       .then((agents: Agent[]) => {
         setLoading(false);
-        if (!svgRef.current || !containerRef.current || !canvasRef.current) return;
+        if (!svgRef.current || !containerRef.current) return;
 
         const width = containerRef.current.clientWidth;
         const height = Math.max(700, window.innerHeight - 200);
-
-        // --- Canvas starfield + nebula background ---
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext("2d")!;
-        canvas.width = width;
-        canvas.height = height;
-
-        const stars = generateStars(width, height, 100); // Reduced from 400
-
-        // Nebula blobs
-        const nebulae = [
-          { x: width * 0.2, y: height * 0.3, rx: 200, ry: 120, color: "rgba(124, 58, 237, 0.06)" },
-          { x: width * 0.75, y: height * 0.2, rx: 250, ry: 150, color: "rgba(0, 217, 255, 0.04)" },
-          { x: width * 0.5, y: height * 0.75, rx: 300, ry: 180, color: "rgba(0, 240, 255, 0.05)" },
-          { x: width * 0.85, y: height * 0.7, rx: 180, ry: 130, color: "rgba(168, 85, 247, 0.05)" },
-          { x: width * 0.1, y: height * 0.8, rx: 160, ry: 100, color: "rgba(0, 229, 255, 0.03)" },
-        ];
-
-        function drawBackground() {
-          // Deep space background
-          ctx.fillStyle = "#030614";
-          ctx.fillRect(0, 0, width, height);
-
-          // Static nebulae (no animation)
-          for (const n of nebulae) {
-            const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, Math.max(n.rx, n.ry));
-            grad.addColorStop(0, n.color);
-            grad.addColorStop(1, "transparent");
-            ctx.fillStyle = grad;
-            ctx.beginPath();
-            ctx.ellipse(n.x, n.y, n.rx, n.ry, 0, 0, Math.PI * 2);
-            ctx.fill();
-          }
-
-          // Static stars (no twinkling)
-          for (const s of stars) {
-            ctx.beginPath();
-            ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
-            ctx.fill();
-          }
-        }
 
         // Build nodes
         const nodes: GraphNode[] = agents.map((a) => ({
@@ -195,9 +110,6 @@ export default function NetworkGraph() {
             };
           });
 
-        // Particles flowing along links
-        const particles = generateParticles(links.length, 2);
-
         // Simulation
         const simulation = d3
           .forceSimulation(nodes)
@@ -218,43 +130,15 @@ export default function NetworkGraph() {
 
         // Zoom
         const g = svg.append("g");
-        let currentTransform = d3.zoomIdentity;
         const zoomBehavior = d3.zoom<SVGSVGElement, unknown>()
           .scaleExtent([0.2, 5])
           .on("zoom", (event) => {
             g.attr("transform", event.transform);
-            currentTransform = event.transform;
           });
         svg.call(zoomBehavior);
 
-        // SVG Defs: filters + gradients
+        // Edge gradients for cross-department links
         const defs = svg.append("defs");
-
-        // Glow filter for nodes
-        const nodeGlow = defs.append("filter")
-          .attr("id", "node-glow")
-          .attr("x", "-80%").attr("y", "-80%")
-          .attr("width", "260%").attr("height", "260%");
-        nodeGlow.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "4").attr("result", "blur");
-        nodeGlow.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
-
-        // Strong glow for hover
-        const nodeGlowStrong = defs.append("filter")
-          .attr("id", "node-glow-strong")
-          .attr("x", "-120%").attr("y", "-120%")
-          .attr("width", "340%").attr("height", "340%");
-        nodeGlowStrong.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "8").attr("result", "blur");
-        nodeGlowStrong.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
-
-        // Line glow filter
-        const lineGlow = defs.append("filter")
-          .attr("id", "line-glow")
-          .attr("x", "-20%").attr("y", "-20%")
-          .attr("width", "140%").attr("height", "140%");
-        lineGlow.append("feGaussianBlur").attr("in", "SourceGraphic").attr("stdDeviation", "2").attr("result", "blur");
-        lineGlow.append("feComposite").attr("in", "SourceGraphic").attr("in2", "blur").attr("operator", "over");
-
-        // Edge gradients
         links.forEach((l, i) => {
           const sNode = nodeMap.get(typeof l.source === "string" ? l.source : (l.source as GraphNode).id)!;
           const tNode = nodeMap.get(typeof l.target === "string" ? l.target : (l.target as GraphNode).id)!;
@@ -262,8 +146,8 @@ export default function NetworkGraph() {
             const grad = defs.append("linearGradient")
               .attr("id", `edge-grad-${i}`)
               .attr("gradientUnits", "userSpaceOnUse");
-            grad.append("stop").attr("offset", "0%").attr("stop-color", sNode.color).attr("stop-opacity", "0.8");
-            grad.append("stop").attr("offset", "100%").attr("stop-color", tNode.color).attr("stop-opacity", "0.8");
+            grad.append("stop").attr("offset", "0%").attr("stop-color", sNode.color).attr("stop-opacity", "0.7");
+            grad.append("stop").attr("offset", "100%").attr("stop-color", tNode.color).attr("stop-opacity", "0.7");
           }
         });
 
@@ -286,20 +170,7 @@ export default function NetworkGraph() {
           return `url(#edge-grad-${i})`;
         }
 
-        // --- ENERGY BEAM CONNECTIONS ---
-        // Background glow layer (wider, more transparent)
-        const linkGlowLayer = g.append("g").attr("class", "link-glow-layer");
-        const linkGlow = linkGlowLayer
-          .selectAll("line")
-          .data(links)
-          .join("line")
-          .attr("stroke", (l, i) => edgeColor(l, i))
-          .attr("stroke-opacity", (l) => edgeOpacity(l) * 0.4)
-          .attr("stroke-width", (l) => edgeWidth(l) + 3)
-          .attr("stroke-linecap", "round")
-          .attr("filter", "url(#line-glow)");
-
-        // Core beam layer
+        // Link layer
         const linkLayer = g.append("g").attr("class", "link-layer");
         const link = linkLayer
           .selectAll("line")
@@ -325,7 +196,6 @@ export default function NetworkGraph() {
               .attr("fill", "#00E5FF")
               .attr("font-size", "10px")
               .attr("font-family", "'JetBrains Mono', monospace")
-              .attr("filter", "url(#line-glow)")
               .text(`${s.code} -> ${t.code}`);
           })
           .on("mouseout", function (_event, d) {
@@ -335,65 +205,40 @@ export default function NetworkGraph() {
             g.selectAll(".edge-tooltip").remove();
           });
 
-        // --- PARTICLE LAYER ---
-        const particleLayer = g.append("g").attr("class", "particle-layer");
-        const particleCircles = particleLayer
-          .selectAll("circle")
-          .data(particles)
-          .join("circle")
-          .attr("r", (p) => p.size)
-          .attr("fill", "#00E5FF")
-          .attr("opacity", (p) => p.opacity);
-
-        // --- COSMIC NODES ---
+        // Node layer
         const nodeLayer = g.append("g").attr("class", "node-layer");
 
-        // Outer orbital ring (subtle pulsing ring around each node)
+        // Orbital rings (subtle dashes around each node)
         const orbitalRings = nodeLayer
           .selectAll<SVGCircleElement, GraphNode>("circle.orbital")
           .data(nodes)
           .join("circle")
           .attr("class", "orbital")
-          .attr("r", (d) => d.radius + 6)
+          .attr("r", (d) => d.radius + 5)
           .attr("fill", "none")
           .attr("stroke", (d) => d.color)
           .attr("stroke-width", 0.5)
-          .attr("stroke-opacity", 0.3)
+          .attr("stroke-opacity", 0.25)
           .attr("stroke-dasharray", "3 3");
 
-        // Node glow halo
-        const nodeHalos = nodeLayer
-          .selectAll<SVGCircleElement, GraphNode>("circle.halo")
-          .data(nodes)
-          .join("circle")
-          .attr("class", "halo")
-          .attr("r", (d) => d.radius + 2)
-          .attr("fill", (d) => d.color)
-          .attr("fill-opacity", 0.15)
-          .attr("filter", "url(#node-glow)");
-
-        // Core planet/star node
+        // Core node circles
         const node = nodeLayer
           .selectAll<SVGCircleElement, GraphNode>("circle.core-node")
           .data(nodes)
           .join("circle")
           .attr("class", "core-node")
           .attr("r", (d) => d.radius)
-          .attr("fill", (d) => {
-            // Radial gradient feel via CSS
-            return d.color;
-          })
-          .attr("fill-opacity", 0.85)
+          .attr("fill", (d) => d.color)
+          .attr("fill-opacity", 0.82)
           .attr("stroke", (d) => d.color)
           .attr("stroke-width", 1.5)
-          .attr("stroke-opacity", 0.6)
+          .attr("stroke-opacity", 0.55)
           .attr("cursor", "pointer")
-          .attr("filter", "url(#node-glow)")
           .on("click", (_event, d) => {
             const agent = agents.find((a) => a.code === d.id);
             if (agent) setSelectedAgent(agent);
 
-            // Ripple effect
+            // Click ripple
             const ripple = nodeLayer.append("circle")
               .attr("cx", d.x!).attr("cy", d.y!)
               .attr("r", d.radius)
@@ -401,42 +246,23 @@ export default function NetworkGraph() {
               .attr("stroke", d.color)
               .attr("stroke-width", 2)
               .attr("stroke-opacity", 0.8);
-            ripple.transition().duration(800).ease(d3.easeCubicOut)
-              .attr("r", d.radius + 40)
+            ripple.transition().duration(700).ease(d3.easeCubicOut)
+              .attr("r", d.radius + 35)
               .attr("stroke-opacity", 0)
-              .attr("stroke-width", 0.5)
-              .remove();
-            // Second ripple wave
-            const ripple2 = nodeLayer.append("circle")
-              .attr("cx", d.x!).attr("cy", d.y!)
-              .attr("r", d.radius)
-              .attr("fill", "none")
-              .attr("stroke", d.color)
-              .attr("stroke-width", 1.5)
-              .attr("stroke-opacity", 0.5);
-            ripple2.transition().delay(150).duration(800).ease(d3.easeCubicOut)
-              .attr("r", d.radius + 60)
-              .attr("stroke-opacity", 0)
-              .attr("stroke-width", 0.3)
               .remove();
           })
           .on("mouseover", function (_event, d) {
-            // Brighten hovered node
             d3.select(this)
               .attr("fill-opacity", 1)
               .attr("stroke-opacity", 1)
-              .attr("stroke-width", 3)
-              .attr("filter", "url(#node-glow-strong)");
+              .attr("stroke-width", 3);
 
-            // Highlight same department - fade others
+            // Fade non-department nodes
             node
-              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.95 : 0.15)
-              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.8 : 0.05);
-            nodeHalos
-              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.2 : 0.02);
+              .attr("fill-opacity", (n) => n.deptNum === d.deptNum ? 0.95 : 0.12)
+              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.8 : 0.04);
             orbitalRings
-              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.5 : 0.03);
-
+              .attr("stroke-opacity", (n) => n.deptNum === d.deptNum ? 0.4 : 0.03);
             link
               .attr("stroke-opacity", (l) => {
                 const s = l.source as GraphNode;
@@ -449,16 +275,9 @@ export default function NetworkGraph() {
                 return s.deptNum === d.deptNum || t.deptNum === d.deptNum
                   ? edgeWidth(l) + 1.5 : edgeWidth(l) * 0.3;
               });
-            linkGlow
-              .attr("stroke-opacity", (l) => {
-                const s = l.source as GraphNode;
-                const t = l.target as GraphNode;
-                return s.deptNum === d.deptNum || t.deptNum === d.deptNum ? 0.3 : 0.01;
-              });
 
-            // Cosmic tooltip with glow
+            // Tooltip
             const tooltipG = g.append("g").attr("class", "tooltip-group");
-            // Background pill
             const label = `${d.code} -- ${d.role}`;
             tooltipG.append("rect")
               .attr("x", d.x! + d.radius + 8)
@@ -466,10 +285,10 @@ export default function NetworkGraph() {
               .attr("width", label.length * 6.2 + 16)
               .attr("height", 22)
               .attr("rx", 4)
-              .attr("fill", "rgba(3, 6, 20, 0.85)")
+              .attr("fill", "rgba(10, 14, 30, 0.88)")
               .attr("stroke", d.color)
               .attr("stroke-width", 0.5)
-              .attr("stroke-opacity", 0.6);
+              .attr("stroke-opacity", 0.5);
             tooltipG.append("text")
               .attr("x", d.x! + d.radius + 16)
               .attr("y", d.y! + 4)
@@ -480,17 +299,13 @@ export default function NetworkGraph() {
           })
           .on("mouseout", function () {
             node
-              .attr("fill-opacity", 0.85)
-              .attr("stroke-opacity", 0.6)
-              .attr("stroke-width", 1.5)
-              .attr("filter", "url(#node-glow)");
-            nodeHalos.attr("fill-opacity", 0.15);
-            orbitalRings.attr("stroke-opacity", 0.3);
+              .attr("fill-opacity", 0.82)
+              .attr("stroke-opacity", 0.55)
+              .attr("stroke-width", 1.5);
+            orbitalRings.attr("stroke-opacity", 0.25);
             link
               .attr("stroke-opacity", (l) => edgeOpacity(l))
               .attr("stroke-width", (l) => edgeWidth(l));
-            linkGlow
-              .attr("stroke-opacity", (l) => edgeOpacity(l) * 0.4);
             g.selectAll(".tooltip-group").remove();
           })
           .call(
@@ -511,19 +326,9 @@ export default function NetworkGraph() {
               })
           );
 
-        // --- ANIMATED DASH OFFSET for energy beams ---
-        let dashOffset = 0;
-
-        // --- TICK ---
+        // Tick — update positions
         simulation.on("tick", () => {
-          // Update link positions
           link
-            .attr("x1", (d) => (d.source as GraphNode).x!)
-            .attr("y1", (d) => (d.source as GraphNode).y!)
-            .attr("x2", (d) => (d.target as GraphNode).x!)
-            .attr("y2", (d) => (d.target as GraphNode).y!);
-
-          linkGlow
             .attr("x1", (d) => (d.source as GraphNode).x!)
             .attr("y1", (d) => (d.source as GraphNode).y!)
             .attr("x2", (d) => (d.target as GraphNode).x!)
@@ -540,38 +345,12 @@ export default function NetworkGraph() {
             }
           });
 
-          // Update node positions
           node.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
-          nodeHalos.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
           orbitalRings.attr("cx", (d) => d.x!).attr("cy", (d) => d.y!);
-
-          // Update particles
-          particles.forEach((p) => {
-            p.t = (p.t + p.speed) % 1;
-          });
-          particleCircles
-            .attr("cx", (p) => {
-              const l = links[p.linkIndex];
-              const s = l.source as GraphNode;
-              const t = l.target as GraphNode;
-              return (s.x || 0) + ((t.x || 0) - (s.x || 0)) * p.t;
-            })
-            .attr("cy", (p) => {
-              const l = links[p.linkIndex];
-              const s = l.source as GraphNode;
-              const t = l.target as GraphNode;
-              return (s.y || 0) + ((t.y || 0) - (s.y || 0)) * p.t;
-            });
         });
-
-        // Draw background once (no continuous animation)
-        drawBackground();
-
-        // No continuous animation loop for better performance
 
         return () => {
           simulation.stop();
-          cancelAnimationFrame(animFrameRef.current);
         };
       })
       .catch(() => setLoading(false));
@@ -583,10 +362,13 @@ export default function NetworkGraph() {
         <div className="flex items-center justify-center py-20">
           <div className="relative">
             <div className="h-10 w-10 border-2 border-[#00E5FF] border-t-transparent rounded-full animate-spin" />
-            <div className="absolute inset-0 h-10 w-10 border-2 border-[#7C3AED] border-b-transparent rounded-full animate-spin" style={{ animationDirection: "reverse", animationDuration: "1.5s" }} />
+            <div
+              className="absolute inset-0 h-10 w-10 border-2 border-[#7C3AED] border-b-transparent rounded-full animate-spin"
+              style={{ animationDirection: "reverse", animationDuration: "1.5s" }}
+            />
           </div>
           <span className="ml-4 text-[#94A3B8] font-mono text-sm tracking-wider">
-            Initializing 195 agents across the cosmos...
+            Connecting 195 agents...
           </span>
         </div>
       )}
@@ -595,44 +377,33 @@ export default function NetworkGraph() {
         ref={containerRef}
         className="w-full overflow-hidden rounded-xl relative"
         style={{
-          border: "1px solid rgba(0, 229, 255, 0.15)",
-          boxShadow: "0 0 40px rgba(0, 229, 255, 0.06), 0 0 80px rgba(124, 58, 237, 0.04), inset 0 0 60px rgba(0, 0, 0, 0.3)",
+          border: "1px solid rgba(0, 229, 255, 0.12)",
+          background: "linear-gradient(135deg, #0a0a1a 0%, #0d1117 50%, #0a0f1e 100%)",
         }}
       >
-        {/* Canvas starfield (behind SVG) */}
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full"
-          style={{ zIndex: 0 }}
-        />
-        {/* SVG network (on top) */}
         <svg
           ref={svgRef}
-          className="w-full relative"
-          style={{ zIndex: 1, background: "transparent" }}
+          className="w-full"
+          style={{ background: "transparent" }}
         />
       </div>
 
-      {/* Cosmic Department Legend */}
+      {/* Department Legend */}
       <div className="mt-4 flex flex-wrap gap-1.5 justify-center">
         {Object.entries(DEPT_COLORS).map(([num, color]) => (
           <button
             key={num}
             className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-mono transition-all duration-200"
             style={{
-              background: hoveredDept === num ? `${color}20` : "rgba(3, 6, 20, 0.6)",
+              background: hoveredDept === num ? `${color}18` : "rgba(10, 14, 30, 0.6)",
               border: `1px solid ${hoveredDept === num ? color : "rgba(255,255,255,0.06)"}`,
-              boxShadow: hoveredDept === num ? `0 0 12px ${color}40` : "none",
             }}
             onMouseEnter={() => setHoveredDept(num)}
             onMouseLeave={() => setHoveredDept(null)}
           >
             <span
               className="h-2 w-2 rounded-full flex-shrink-0"
-              style={{
-                backgroundColor: color,
-                boxShadow: `0 0 6px ${color}80`,
-              }}
+              style={{ backgroundColor: color }}
             />
             <span style={{ color: hoveredDept === num ? color : "#64748B" }}>
               {DEPT_NAMES[num] || num}
@@ -641,15 +412,14 @@ export default function NetworkGraph() {
         ))}
       </div>
 
-      {/* Selected Agent Detail Card - Cosmic Glass */}
+      {/* Selected Agent Card */}
       {selectedAgent && (
         <div
           className="absolute top-4 right-4 p-4 max-w-xs z-10 rounded-xl"
           style={{
-            background: "rgba(3, 6, 20, 0.9)",
-            backdropFilter: "blur(20px)",
-            border: `1px solid ${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}40`,
-            boxShadow: `0 0 30px ${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}15, 0 8px 32px rgba(0, 0, 0, 0.4)`,
+            background: "rgba(10, 14, 30, 0.92)",
+            backdropFilter: "blur(12px)",
+            border: `1px solid ${DEPT_COLORS[selectedAgent.department_number] || "#00E5FF"}35`,
           }}
         >
           <div className="flex items-start justify-between mb-2">
@@ -687,7 +457,7 @@ export default function NetworkGraph() {
             )}
           </p>
           <a
-            href={`/195_shades_of_agents-/agents/${selectedAgent.code.toLowerCase()}`}
+            href={`/195_shades_of_agents-/agents/${selectedAgent.code.toLowerCase()}/`}
             className="text-xs font-mono hover:underline transition-colors"
             style={{ color: DEPT_COLORS[selectedAgent.department_number] || "#00E5FF" }}
           >
@@ -697,7 +467,7 @@ export default function NetworkGraph() {
       )}
 
       <p className="mt-3 text-[10px] text-[#475569] text-center font-mono tracking-wider uppercase">
-        Drag to reposition celestial bodies &middot; Scroll to traverse the cosmos &middot; Click to inspect agents
+        Drag to reposition &middot; Scroll to zoom &middot; Click to inspect agents
       </p>
     </div>
   );

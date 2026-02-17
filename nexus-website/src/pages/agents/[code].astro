@@ -9,6 +9,17 @@ import { marked } from "marked";
 // Helper to render markdown inline (for lists and text with formatting)
 const renderMd = (text: string) => marked.parseInline(text);
 
+// Filter helper: remove raw markdown section headers and bold-only lines
+// that come from agents.json where the build captured entire raw prompt text
+const isReadableLine = (line: string): boolean => {
+  const trimmed = line.trim();
+  if (!trimmed) return false;
+  if (trimmed.startsWith("#")) return false; // markdown headers
+  if (/^\*\*[^*]+\*\*:?\s*$/.test(trimmed)) return false; // bold-only header lines
+  if (/^[A-Z][A-Z\s]+:?\*\*$/.test(trimmed)) return false; // ALL CAPS header lines
+  return true;
+};
+
 export async function getStaticPaths() {
   let agents: any[] = [];
   try {
@@ -40,7 +51,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
 
 <PageLayout
   title={`${agent.code} — ${agent.role}`}
-  description={`${agent.role} at NEXUS AI. ${agent.personal?.about_me || agent.personality.substring(0, 150)}`}
+  description={`${agent.role} at NEXUS AI. ${agent.personal?.about_me || agent.core_responsibilities?.[0] || "AI agent at NEXUS AI."}`}
 >
   <JsonLd data={{
     "@context": "https://schema.org",
@@ -48,7 +59,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
     "name": agent.role,
     "alternateName": agent.code,
     "jobTitle": agent.role,
-    "description": agent.personal?.about_me || agent.personality?.substring(0, 200),
+    "description": agent.personal?.about_me || agent.core_responsibilities?.[0] || `${agent.role} at NEXUS AI.`,
     "worksFor": { "@type": "Organization", "name": "NEXUS AI" },
     "memberOf": { "@type": "OrganizationRole", "roleName": agent.department },
   }} />
@@ -109,11 +120,11 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
       <!-- Personality section removed per user request -->
 
       <!-- Core Responsibilities -->
-      {agent.core_responsibilities.length > 0 && (
+      {(agent.core_responsibilities?.length ?? 0) > 0 && (
         <section class="nexus-card p-6">
           <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Core Responsibilities</h2>
           <ul class="space-y-2">
-            {agent.core_responsibilities.map((r: string) => (
+            {agent.core_responsibilities.filter(isReadableLine).map((r: string) => (
               <li class="flex items-start gap-2 text-[var(--text-secondary)]">
                 <span class="text-quantum-blue mt-1 flex-shrink-0">&#x2022;</span>
                 <span set:html={renderMd(r)} />
@@ -124,40 +135,54 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
       )}
 
       <!-- Decision Authority -->
-      <section class="nexus-card p-6">
-        <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Decision Authority</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 class="text-sm font-medium text-emerald-400 mb-2">Can Decide</h3>
-            <ul class="space-y-1.5">
-              {agent.decision_authority.can_decide.map((d: string) => (
-                <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
-                  <span class="text-emerald-400 mt-0.5 flex-shrink-0">&#10003;</span>
-                  <span set:html={renderMd(d)} />
-                </li>
-              ))}
-            </ul>
+      {agent.decision_authority && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Decision Authority</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            {(agent.decision_authority.can_decide?.length ?? 0) > 0 && (
+              <div>
+                <h3 class="text-sm font-medium text-emerald-400 mb-2">Can Decide</h3>
+                <ul class="space-y-1.5">
+                  {agent.decision_authority.can_decide.filter(isReadableLine).slice(0, 10).map((d: string) => (
+                    <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                      <span class="text-emerald-400 mt-0.5 flex-shrink-0">&#10003;</span>
+                      <span set:html={renderMd(d)} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {(agent.decision_authority.must_escalate?.length ?? 0) > 0 && (
+              <div>
+                <h3 class="text-sm font-medium text-amber-400 mb-2">Must Escalate</h3>
+                <ul class="space-y-1.5">
+                  {agent.decision_authority.must_escalate.filter(isReadableLine).slice(0, 8).map((e: string) => (
+                    <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                      <span class="text-amber-400 mt-0.5 flex-shrink-0">&#x2191;</span>
+                      <span set:html={renderMd(e)} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          <div>
-            <h3 class="text-sm font-medium text-amber-400 mb-2">Must Escalate</h3>
-            <ul class="space-y-1.5">
-              {agent.decision_authority.must_escalate.map((e: string) => (
-                <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
-                  <span class="text-amber-400 mt-0.5 flex-shrink-0">&#x2191;</span>
-                  <span set:html={renderMd(e)} />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      <!-- What I Bring -->
+      {agent.personal?.what_i_bring && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">What I Bring</h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed">{agent.personal.what_i_bring}</p>
+        </section>
+      )}
 
       <!-- Personal Strengths & Weaknesses -->
-      {agent.personal && (agent.personal.my_strengths?.length > 0 || agent.personal.my_weaknesses?.length > 0) && (
+      {agent.personal && ((agent.personal.my_strengths?.length ?? 0) > 0 || (agent.personal.my_weaknesses?.length ?? 0) > 0) && (
         <section class="nexus-card p-6">
           <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Strengths & Growth Areas</h2>
           <div class="grid md:grid-cols-2 gap-6">
-            {agent.personal.my_strengths?.length > 0 && (
+            {(agent.personal.my_strengths?.length ?? 0) > 0 && (
               <div>
                 <h3 class="text-sm font-medium text-emerald-400 mb-2">Strengths</h3>
                 <ul class="space-y-1.5">
@@ -167,7 +192,7 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
                 </ul>
               </div>
             )}
-            {agent.personal.my_weaknesses?.length > 0 && (
+            {(agent.personal.my_weaknesses?.length ?? 0) > 0 && (
               <div>
                 <h3 class="text-sm font-medium text-amber-400 mb-2">Growth Areas</h3>
                 <ul class="space-y-1.5">
@@ -178,6 +203,14 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
               </div>
             )}
           </div>
+        </section>
+      )}
+
+      <!-- Working With Me -->
+      {agent.personal?.working_with_me && (
+        <section class="nexus-card p-6">
+          <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Working With Me</h2>
+          <p class="text-[var(--text-secondary)] leading-relaxed">{agent.personal.working_with_me}</p>
         </section>
       )}
 
@@ -219,14 +252,14 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
       </section>
 
       <!-- Success Metrics -->
-      {agent.success_metrics.length > 0 && (
+      {(agent.success_metrics?.length ?? 0) > 0 && (
         <section class="nexus-card p-6">
           <h2 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Success Metrics</h2>
           <ul class="space-y-1.5">
-            {agent.success_metrics.map((m: string) => (
+            {agent.success_metrics.filter(isReadableLine).slice(0, 12).map((m: string) => (
               <li class="text-sm text-[var(--text-secondary)] flex items-start gap-2">
                 <span class="text-quantum-blue mt-0.5 flex-shrink-0">&#x2022;</span>
-                <span>{m}</span>
+                <span set:html={renderMd(m)} />
               </li>
             ))}
           </ul>

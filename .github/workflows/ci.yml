@@ -72,6 +72,8 @@ jobs:
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
+          # Add RESEND_API_KEY to GitHub repo secrets: Settings > Secrets > Actions
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       - name: Generate search index
         run: npx pagefind --site dist
         continue-on-error: true
@@ -124,6 +126,8 @@ jobs:
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
+          # Add RESEND_API_KEY to GitHub repo secrets: Settings > Secrets > Actions
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       - run: npx pagefind --site dist
         continue-on-error: true
       - run: npx playwright install --with-deps

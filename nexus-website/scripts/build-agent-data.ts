@@ -8,6 +8,7 @@ const AGENTS_DIR = resolve(PROJECT_ROOT, "agents");
 const SRC_DATA_DIR = resolve(import.meta.dirname, "../src/data");
 const PUBLIC_DATA_DIR = resolve(import.meta.dirname, "../public/data");
 
+// PUBLIC-SAFE agent data — system prompt internals are excluded
 interface AgentData {
   agent_number: string;
   code: string;
@@ -18,13 +19,12 @@ interface AgentData {
   reports_to: string;
   direct_reports?: string[];
   tier: { number: number; label: string };
-  personality: string;
+  // Public summary only — NOT the full personality or output_standards text
   core_responsibilities: string[];
   decision_authority: {
     can_decide: string[];
     must_escalate: string[];
   };
-  output_standards: string;
   success_metrics: string[];
   personal?: {
     nickname: string;
@@ -124,6 +124,27 @@ function parsePersonal(content: string): AgentData["personal"] | undefined {
   };
 }
 
+/**
+ * Sanitize a list of decision authority items for public display.
+ * Each item is truncated to 80 characters max.
+ */
+function sanitizeDecisionItems(items: string[]): string[] {
+  return items.map((item) =>
+    item.length > 80 ? item.substring(0, 77) + "..." : item
+  );
+}
+
+/**
+ * Extract first 2 core responsibility items as brief public summaries.
+ * Each item is limited to 150 characters.
+ */
+function extractPublicResponsibilities(responsibilitiesText: string): string[] {
+  const items = parseListItems(responsibilitiesText);
+  return items
+    .slice(0, 2)
+    .map((item) => (item.length > 150 ? item.substring(0, 147) + "..." : item));
+}
+
 function parseAgentFile(filePath: string): AgentData {
   const content = readFileSync(filePath, "utf-8");
   const systemPrompt = extractBetweenTags(content, "system_prompt");
@@ -140,14 +161,17 @@ function parseAgentFile(filePath: string): AgentData {
   const folderName = basename(dirname(filePath));
   const deptNum = folderName.substring(0, 2);
 
-  const personality = extractBetweenTags(systemPrompt, "personality");
+  // PRIVACY: Extract only safe public fields — NOT personality, NOT output_standards
   const responsibilities = extractBetweenTags(systemPrompt, "core_responsibilities");
   const decisionAuth = extractBetweenTags(systemPrompt, "decision_authority");
-  const outputStandards = extractBetweenTags(systemPrompt, "output_standards");
   const successMetrics = extractBetweenTags(systemPrompt, "success_metrics");
 
-  const canDecide = parseListItems(extractBetweenTags(decisionAuth, "can_decide"));
-  const mustEscalate = parseListItems(extractBetweenTags(decisionAuth, "must_escalate"));
+  const canDecide = sanitizeDecisionItems(
+    parseListItems(extractBetweenTags(decisionAuth, "can_decide"))
+  );
+  const mustEscalate = sanitizeDecisionItems(
+    parseListItems(extractBetweenTags(decisionAuth, "must_escalate"))
+  );
 
   const personal = parsePersonal(systemPrompt);
 
@@ -160,16 +184,17 @@ function parseAgentFile(filePath: string): AgentData {
     department_slug: slugify(department),
     reports_to: reportsTo,
     tier: parseTier(tierStr),
-    personality,
-    core_responsibilities: parseListItems(responsibilities),
+    // Public summary: first 2 responsibilities only, 150 chars each max
+    core_responsibilities: extractPublicResponsibilities(responsibilities),
     decision_authority: {
       can_decide: canDecide,
       must_escalate: mustEscalate,
     },
-    output_standards: outputStandards,
+    // success_metrics are safe to show in full
     success_metrics: parseListItems(successMetrics),
     personal,
     avatar_url: `/avatars/${agentNumber.padStart(3, "0")}-${code}.svg`,
+    // EXCLUDED (privacy): personality, output_standards
   };
 }
 
@@ -226,6 +251,7 @@ function buildDepartments(agents: AgentData[]): DepartmentData[] {
 // ---- MAIN ----
 console.log("Building agent data...");
 console.log(`Scanning: ${AGENTS_DIR}`);
+console.log("PRIVACY: Excluding personality, output_standards from output.");
 
 const files = globSync(`${AGENTS_DIR}/*/*.md`);
 console.log(`Found ${files.length} agent files`);
@@ -280,6 +306,7 @@ console.log(`\nResults:`);
 console.log(`  Agents parsed: ${agents.length}`);
 console.log(`  Departments: ${departments.length}`);
 console.log(`  Errors: ${errors.length}`);
+console.log(`  Privacy fields excluded: personality, output_standards`);
 
 if (errors.length > 0) {
   console.log("\nWarnings:");

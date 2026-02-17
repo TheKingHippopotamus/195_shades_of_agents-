@@ -1,83 +1,475 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const stages = [
-  { num: 1, name: "Lead Qualification", agents: ["BDR", "AE"], desc: "Evaluate inbound leads, assess fit, qualify opportunity." },
-  { num: 2, name: "Discovery", agents: ["DISC-AGENT", "PM", "CTO"], desc: "Deep-dive into requirements, constraints, success criteria." },
-  { num: 3, name: "Estimation", agents: ["EST-AGENT", "VP-ENG", "TPM"], desc: "Effort sizing, team composition, timeline, and risk analysis." },
-  { num: 4, name: "Architecture", agents: ["VP-ARCH", "ARB-AGENT", "CTO"], desc: "System design, technology selection, ADRs, architecture review gate." },
-  { num: 5, name: "Design", agents: ["VP-DES", "SR-UID", "SR-UXD"], desc: "Wireframes, design system, prototypes, user testing." },
-  { num: 6, name: "Sprint Planning", agents: ["SCRUM", "PM", "SEM-FE"], desc: "Backlog refinement, capacity planning, sprint commitment." },
-  { num: 7, name: "Development", agents: ["40+ engineers"], desc: "Iterative sprints. Frontend, backend, mobile, data — all in parallel." },
-  { num: 8, name: "QA & Testing", agents: ["DIR-QA", "SR-QA-AUTO", "QA-GATE"], desc: "Automated testing, manual review, performance profiling, quality gate." },
-  { num: 9, name: "Security Review", agents: ["CISO", "SEC-REVIEW", "PENTEST"], desc: "Security audit, penetration testing, vulnerability scanning." },
-  { num: 10, name: "UAT", agents: ["PM", "CSM", "DEMO-AGENT"], desc: "User acceptance testing with stakeholders, demo, feedback." },
-  { num: 11, name: "Pre-Production", agents: ["REL-APPROVE", "CHANGE-MGR"], desc: "Release approval gate, change management, deployment checklist." },
-  { num: 12, name: "Launch", agents: ["SR-SRE", "VP-MKT", "CMO"], desc: "Production deployment, monitoring, marketing campaign." },
-  { num: 13, name: "Maintenance", agents: ["MAINT-AGENT", "SR-SRE"], desc: "Ongoing support, bug fixes, performance monitoring, SLA compliance." },
+  {
+    num: 1,
+    name: "Lead Qualification",
+    departments: ["Sales-Revenue", "Marketing"],
+    deptNums: ["09", "10"],
+    agents: ["BDR", "AE", "CMO"],
+    deliverable: "Qualified opportunity brief",
+    next: "Discovery kickoff scheduled",
+    desc: "Inbound leads scored, fit assessed, budget and timeline validated. BDR and AE qualify against NEXUS ICP criteria before engaging the delivery machine.",
+  },
+  {
+    num: 2,
+    name: "Discovery",
+    departments: ["Special-Agents", "Product-Management", "Executive-Leadership"],
+    deptNums: ["19", "04", "01"],
+    agents: ["DISC-AGENT", "PM", "CTO", "CPO"],
+    deliverable: "Discovery report + stakeholder map",
+    next: "Effort estimation begins",
+    desc: "Deep-dive into requirements, constraints, and success criteria. DISC-AGENT runs structured discovery sessions. CTO assesses technical feasibility. CPO validates product-market alignment.",
+  },
+  {
+    num: 3,
+    name: "Estimation",
+    departments: ["Special-Agents", "Engineering", "Program-Management"],
+    deptNums: ["19", "02", "17"],
+    agents: ["EST-AGENT", "VP-ENG", "TPM", "PRINC-ENG"],
+    deliverable: "Effort estimate + team roster + timeline",
+    next: "Architecture design begins",
+    desc: "EST-AGENT runs structured sizing. Principal engineers estimate complexity. TPM builds the timeline. Risk-adjusted estimates with confidence intervals, not point estimates.",
+  },
+  {
+    num: 4,
+    name: "Architecture",
+    departments: ["Engineering", "Governance", "Platform-Infrastructure"],
+    deptNums: ["02", "18", "03"],
+    agents: ["VP-ARCH", "ARB-AGENT", "CTO", "DIST-ENG"],
+    deliverable: "Architecture Decision Records (ADRs) + system diagram",
+    next: "Design system activated",
+    desc: "System design, technology selection, ADRs, and architecture review gate. ARB-AGENT chairs the review board. No code is written until architecture is approved.",
+  },
+  {
+    num: 5,
+    name: "Design",
+    departments: ["Design", "Product-Management"],
+    deptNums: ["05", "04"],
+    agents: ["VP-DES", "SR-UID", "SR-UXD", "PROD-DES", "PM"],
+    deliverable: "Design system + high-fidelity prototypes + user test results",
+    next: "Sprint planning with finalized designs",
+    desc: "Wireframes, design system components, high-fidelity prototypes, and usability testing. 14 design agents ensure every pixel meets accessibility and brand standards.",
+  },
+  {
+    num: 6,
+    name: "Sprint Planning",
+    departments: ["Program-Management", "Engineering", "Product-Management"],
+    deptNums: ["17", "02", "04"],
+    agents: ["SCRUM", "GPM", "SEM-FE", "SEM-BE", "PM"],
+    deliverable: "Sprint backlog + capacity plan + acceptance criteria",
+    next: "Development sprints begin",
+    desc: "Backlog refinement, capacity planning, sprint commitment, and acceptance criteria. SCRUM facilitates. GPM tracks cross-team dependencies. Zero ambiguity before engineers write a line.",
+  },
+  {
+    num: 7,
+    name: "Development",
+    departments: ["Engineering", "Platform-Infrastructure", "Data-Science-AI-ML"],
+    deptNums: ["02", "03", "06"],
+    agents: ["40+ engineers", "SR-DEVOPS", "SR-MLE", "SR-FS"],
+    deliverable: "Production-ready code + CI/CD pipelines + test coverage",
+    next: "QA gate activated",
+    desc: "Iterative 2-week sprints. 40 engineers across frontend, backend, mobile, data, and AI/ML work in parallel. SR-DEVOPS owns the deployment pipeline. All code reviewed before merge.",
+  },
+  {
+    num: 8,
+    name: "QA & Testing",
+    departments: ["Quality-Assurance", "Governance"],
+    deptNums: ["07", "18"],
+    agents: ["DIR-QA", "SR-QA-AUTO", "QA-GATE", "PERF-TEST", "A11Y-TEST"],
+    deliverable: "QA report + performance benchmark + accessibility audit",
+    next: "Security review initiated",
+    desc: "Automated test suites, manual exploratory testing, performance profiling, and accessibility audit. QA-GATE is a hard stop — nothing advances without passing all criteria.",
+  },
+  {
+    num: 9,
+    name: "Security Review",
+    departments: ["Security", "Governance"],
+    deptNums: ["08", "18"],
+    agents: ["CISO", "SEC-REVIEW", "PENTEST", "SEC-ENG"],
+    deliverable: "Security audit report + penetration test findings + remediation log",
+    next: "UAT with stakeholders",
+    desc: "Full security audit, penetration testing, vulnerability scanning, and OWASP compliance check. SEC-REVIEW is a non-negotiable governance gate. No exceptions.",
+  },
+  {
+    num: 10,
+    name: "UAT",
+    departments: ["Product-Management", "Customer-Success-Support", "Special-Agents"],
+    deptNums: ["04", "11", "19"],
+    agents: ["PM", "CSM", "DEMO-AGENT", "CAM"],
+    deliverable: "UAT sign-off + client feedback report",
+    next: "Release approved",
+    desc: "User acceptance testing with client stakeholders, live demo facilitated by DEMO-AGENT, and structured feedback sessions. CSM ensures client satisfaction before release.",
+  },
+  {
+    num: 11,
+    name: "Pre-Production",
+    departments: ["Governance", "Platform-Infrastructure"],
+    deptNums: ["18", "03"],
+    agents: ["REL-APPROVE", "CHANGE-MGR", "SR-SRE", "MGR-DEVOPS"],
+    deliverable: "Release approval + deployment runbook + rollback plan",
+    next: "Production launch",
+    desc: "Release approval gate, change management review, deployment checklist, and rollback plan. REL-APPROVE signs off. CHANGE-MGR coordinates all teams. Blue/green deployment ready.",
+  },
+  {
+    num: 12,
+    name: "Launch",
+    departments: ["Platform-Infrastructure", "Marketing", "Executive-Leadership"],
+    deptNums: ["03", "10", "01"],
+    agents: ["SR-SRE", "VP-MKT", "CMO", "DEVOPS-ENG"],
+    deliverable: "Live production system + launch campaign + monitoring dashboards",
+    next: "Maintenance mode activated",
+    desc: "Zero-downtime production deployment, 24/7 monitoring activated, and coordinated marketing launch. SR-SRE owns incident response. CMO coordinates market announcement.",
+  },
+  {
+    num: 13,
+    name: "Maintenance",
+    departments: ["Special-Agents", "Platform-Infrastructure", "Customer-Success-Support"],
+    deptNums: ["19", "03", "11"],
+    agents: ["MAINT-AGENT", "SR-SRE", "CSM", "RETRO-AGENT"],
+    deliverable: "Monthly health reports + SLA compliance + retrospective action items",
+    next: "Continuous improvement cycle",
+    desc: "Ongoing support, bug triage, performance monitoring, SLA compliance, and quarterly retrospectives. RETRO-AGENT drives continuous improvement. MAINT-AGENT coordinates long-term health.",
+  },
+];
+
+const DEPT_COLORS: Record<string, string> = {
+  "01": "#6366F1", "02": "#8B5CF6", "03": "#22D3EE", "04": "#F59E0B",
+  "05": "#F97316", "06": "#06B6D4", "07": "#10B981", "08": "#EF4444",
+  "09": "#3B82F6", "10": "#EC4899", "11": "#14B8A6", "12": "#A855F7",
+  "13": "#84CC16", "14": "#F43F5E", "15": "#94A3B8", "16": "#D946EF",
+  "17": "#0EA5E9", "18": "#78716C", "19": "#FBBF24", "20": "#2DD4BF",
+};
+
+const departments = [
+  { num: "01", name: "Executive Leadership", stages: [1, 2, 3, 12] },
+  { num: "02", name: "Engineering", stages: [3, 4, 6, 7] },
+  { num: "03", name: "Platform & Infrastructure", stages: [4, 7, 11, 12, 13] },
+  { num: "04", name: "Product Management", stages: [2, 5, 6, 10] },
+  { num: "05", name: "Design", stages: [5] },
+  { num: "06", name: "Data Science & AI/ML", stages: [7] },
+  { num: "07", name: "Quality Assurance", stages: [8] },
+  { num: "08", name: "Security", stages: [9] },
+  { num: "09", name: "Sales & Revenue", stages: [1] },
+  { num: "10", name: "Marketing", stages: [1, 12] },
+  { num: "11", name: "Customer Success", stages: [10, 13] },
+  { num: "12", name: "People & HR", stages: [] },
+  { num: "13", name: "Finance & Accounting", stages: [] },
+  { num: "14", name: "Legal & Compliance", stages: [] },
+  { num: "15", name: "IT Operations", stages: [] },
+  { num: "16", name: "Developer Relations", stages: [12] },
+  { num: "17", name: "Program Management", stages: [3, 6] },
+  { num: "18", name: "Governance", stages: [4, 8, 9, 11] },
+  { num: "19", name: "Special Agents", stages: [2, 3, 10, 13] },
+  { num: "20", name: "Documentation", stages: [7, 13] },
+];
+
+const capabilities = [
+  {
+    title: "Full-Stack Engineering",
+    detail: "React, Node.js, Python, Go, React Native",
+    count: "40",
+    unit: "engineers",
+    color: "#8B5CF6",
+  },
+  {
+    title: "AI/ML Integration",
+    detail: "Model training, NLP, MLOps, feature stores",
+    count: "12",
+    unit: "AI/ML agents",
+    color: "#06B6D4",
+  },
+  {
+    title: "Enterprise Security",
+    detail: "Penetration testing, OWASP, compliance, AppSec",
+    count: "8",
+    unit: "security agents",
+    color: "#EF4444",
+  },
+  {
+    title: "Product Design",
+    detail: "Full design system, UX research, accessibility",
+    count: "14",
+    unit: "design agents",
+    color: "#F97316",
+  },
+  {
+    title: "Data Science & Analytics",
+    detail: "ETL pipelines, data modeling, dashboards",
+    count: "12",
+    unit: "data agents",
+    color: "#10B981",
+  },
+  {
+    title: "DevOps & Cloud",
+    detail: "CI/CD, SRE, multi-cloud, infrastructure as code",
+    count: "12",
+    unit: "platform agents",
+    color: "#22D3EE",
+  },
+  {
+    title: "Legal & Compliance",
+    detail: "GDPR, IP, contracts, privacy review",
+    count: "7",
+    unit: "legal agents",
+    color: "#F43F5E",
+  },
+  {
+    title: "Customer Success",
+    detail: "Onboarding, CSM, support, retention",
+    count: "8",
+    unit: "CS agents",
+    color: "#14B8A6",
+  },
+  {
+    title: "Governance Checkpoints",
+    detail: "Architecture, security, QA, legal, release, change",
+    count: "6",
+    unit: "gate agents",
+    color: "#78716C",
+  },
+  {
+    title: "Program Management",
+    detail: "Scrum, agile delivery, cross-team coordination",
+    count: "4",
+    unit: "PMO agents",
+    color: "#0EA5E9",
+  },
 ];
 ---
 
 <PageLayout
-  title="Project Lifecycle — 13 Stages"
-  description="The NEXUS AI 13-stage project lifecycle — from lead qualification to long-term maintenance."
+  title="The NEXUS Delivery System — 13 Lifecycle Stages"
+  description="13 lifecycle stages. 20 departments. 195 agents. One seamless pipeline from idea to production software."
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+
+    <!-- Breadcrumbs -->
     <nav class="mb-8 text-sm text-[var(--text-secondary)]">
-      <a href="/195_shades_of_agents-/" class="hover:text-quantum-blue">Home</a>
+      <a href={`${base}/`} class="hover:text-quantum-blue">Home</a>
       <span class="mx-2">/</span>
-      <a href="/195_shades_of_agents-/capabilities/" class="hover:text-quantum-blue">Capabilities</a>
+      <a href={`${base}/capabilities/`} class="hover:text-quantum-blue">Capabilities</a>
       <span class="mx-2">/</span>
       <span class="text-[var(--text-primary)]">Lifecycle</span>
     </nav>
 
-    <div class="max-w-3xl mb-16">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
-        <span class="text-gradient">13</span> Stages. Zero Shortcuts.
+    <!-- Hero -->
+    <div class="mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-4">
+        The <span class="text-gradient">NEXUS</span> Delivery System
       </h1>
-      <p class="text-xl text-[var(--text-secondary)]">
-        Every NEXUS AI project follows the same rigorous lifecycle — from first
-        contact to long-term maintenance. Governance gates at stages 4, 8, 9,
-        and 11 ensure nothing ships without review.
+      <p class="text-lg md:text-xl text-[var(--text-secondary)] max-w-3xl mb-10">
+        13 lifecycle stages. 20 departments. 195 agents. One seamless pipeline from idea to production.
+        Every stage has named owners, defined deliverables, and a clear handoff to the next.
       </p>
-    </div>
 
-    <div class="relative">
-      <!-- Timeline line -->
-      <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-quantum-blue via-quantum-blue/50 to-quantum-blue/10 hidden md:block"></div>
-
-      <div class="space-y-6">
-        {stages.map((stage) => (
-          <div class="flex gap-6">
-            <!-- Stage number -->
-            <div class="flex-shrink-0 relative hidden md:flex">
-              <div class="h-12 w-12 rounded-full bg-quantum-blue/10 border border-quantum-blue/30 flex items-center justify-center z-10">
-                <span class="text-quantum-blue font-bold text-sm">{stage.num}</span>
-              </div>
-            </div>
-
-            <!-- Content -->
-            <div class="nexus-card p-5 flex-1">
-              <div class="flex items-center gap-3 mb-2">
-                <span class="md:hidden text-xs font-mono text-quantum-blue bg-quantum-blue/10 px-2 py-0.5 rounded">
-                  Stage {stage.num}
-                </span>
-                <h3 class="text-lg font-semibold text-[var(--text-primary)]">
-                  {stage.name}
-                </h3>
-              </div>
-              <p class="text-sm text-[var(--text-secondary)] mb-3">{stage.desc}</p>
-              <div class="flex flex-wrap gap-1.5">
-                {stage.agents.map((agent) => (
-                  <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-quantum-blue">
-                    {agent}
-                  </span>
-                ))}
-              </div>
-            </div>
+      <!-- Stats row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {[
+          { value: "13", label: "Lifecycle Stages", sub: "Discovery to Maintenance" },
+          { value: "20", label: "Departments", sub: "Full organizational coverage" },
+          { value: "195", label: "Agents", sub: "Each with defined authority" },
+          { value: "Zero", label: "Handoff Gaps", sub: "Every stage connects" },
+        ].map((s) => (
+          <div class="nexus-card p-5 text-center">
+            <div class="text-3xl md:text-4xl font-bold text-gradient">{s.value}</div>
+            <div class="text-sm font-semibold text-[var(--text-primary)] mt-1">{s.label}</div>
+            <div class="text-xs text-[var(--text-secondary)] mt-0.5">{s.sub}</div>
           </div>
         ))}
       </div>
     </div>
+
+    <!-- Stage-by-stage timeline -->
+    <section class="mb-24">
+      <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-2">
+        Stage-by-Stage Breakdown
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-10">
+        Every NEXUS project follows this exact sequence. Governance gates at stages 4, 8, 9, and 11 are hard stops — nothing advances without sign-off.
+      </p>
+
+      <div class="relative">
+        <!-- Timeline connector line -->
+        <div class="absolute left-7 top-8 bottom-8 w-px bg-gradient-to-b from-quantum-blue via-quantum-blue/40 to-quantum-blue/10 hidden md:block"></div>
+
+        <div class="space-y-5">
+          {stages.map((stage) => {
+            const isGate = [4, 8, 9, 11].includes(stage.num);
+            return (
+              <div class="flex gap-5 md:gap-8">
+                <!-- Stage circle -->
+                <div class="flex-shrink-0 hidden md:flex flex-col items-center">
+                  <div
+                    class={`h-14 w-14 rounded-full flex items-center justify-center z-10 font-bold text-sm ${isGate ? "bg-amber-500/15 border-2 border-amber-500/60 text-amber-400" : "bg-quantum-blue/10 border border-quantum-blue/30 text-quantum-blue"}`}
+                  >
+                    {stage.num}
+                  </div>
+                </div>
+
+                <!-- Content card -->
+                <div class={`nexus-card p-5 flex-1 ${isGate ? "border-amber-500/20" : ""}`}>
+                  <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <span class="md:hidden text-xs font-mono text-quantum-blue bg-quantum-blue/10 px-2 py-0.5 rounded">
+                      {stage.num}
+                    </span>
+                    <h3 class="text-base md:text-lg font-semibold text-[var(--text-primary)]">
+                      {stage.name}
+                    </h3>
+                    {isGate && (
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                        GOVERNANCE GATE
+                      </span>
+                    )}
+                  </div>
+
+                  <p class="text-sm text-[var(--text-secondary)] mb-3">{stage.desc}</p>
+
+                  <div class="grid sm:grid-cols-3 gap-3 mb-3">
+                    <!-- Departments -->
+                    <div>
+                      <p class="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider mb-1.5">Departments</p>
+                      <div class="flex flex-wrap gap-1">
+                        {stage.deptNums.map((num, i) => (
+                          <span
+                            class="text-[10px] px-2 py-0.5 rounded-full font-medium"
+                            style={`background-color: ${DEPT_COLORS[num]}18; color: ${DEPT_COLORS[num]}; border: 1px solid ${DEPT_COLORS[num]}30`}
+                          >
+                            {stage.departments[i]}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <!-- Agents -->
+                    <div>
+                      <p class="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider mb-1.5">Key Agents</p>
+                      <div class="flex flex-wrap gap-1">
+                        {stage.agents.map((agent) => (
+                          <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-quantum-blue">
+                            {agent}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <!-- Deliverable -->
+                    <div>
+                      <p class="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider mb-1.5">Deliverable</p>
+                      <p class="text-xs text-[var(--text-primary)]">{stage.deliverable}</p>
+                      <p class="text-[10px] text-[var(--text-secondary)] mt-1">Next: {stage.next}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Department Coverage Matrix -->
+    <section class="mb-24">
+      <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-2">
+        Department Coverage
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8">
+        All 20 departments and which lifecycle stages they are active in. No department sits idle — even Finance, Legal, and HR run parallel advisory roles throughout delivery.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+        {departments.map((dept) => (
+          <div
+            class="nexus-card p-4"
+            style={`border-color: ${DEPT_COLORS[dept.num]}20`}
+          >
+            <div class="flex items-center gap-2 mb-2.5">
+              <div
+                class="h-8 w-8 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                style={`background-color: ${DEPT_COLORS[dept.num]}25; border: 1px solid ${DEPT_COLORS[dept.num]}40; color: ${DEPT_COLORS[dept.num]}`}
+              >
+                {dept.num}
+              </div>
+              <h3 class="text-xs font-semibold text-[var(--text-primary)] leading-tight">{dept.name}</h3>
+            </div>
+            {dept.stages.length > 0 ? (
+              <div class="flex flex-wrap gap-1">
+                {dept.stages.map((s) => (
+                  <span
+                    class="text-[10px] font-mono px-1.5 py-0.5 rounded"
+                    style={`background-color: ${DEPT_COLORS[dept.num]}15; color: ${DEPT_COLORS[dept.num]}`}
+                  >
+                    S{s}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <p class="text-[10px] text-[var(--text-secondary)] italic">Advisory — all stages</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- What We're Proud Of -->
+    <section>
+      <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-2">
+        What We're Proud Of
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8">
+        195 agents covering every discipline a modern software agency needs — from first line of code to long-term maintenance.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {capabilities.map((cap) => (
+          <div
+            class="nexus-card p-5 group relative overflow-hidden"
+            style={`border-color: ${cap.color}20`}
+          >
+            <!-- Color accent bar -->
+            <div
+              class="absolute top-0 left-0 right-0 h-0.5"
+              style={`background: linear-gradient(90deg, ${cap.color}, transparent)`}
+            />
+
+            <div class="flex items-baseline gap-1.5 mb-2">
+              <span class="text-2xl font-bold" style={`color: ${cap.color}`}>{cap.count}</span>
+              <span class="text-xs text-[var(--text-secondary)]">{cap.unit}</span>
+            </div>
+
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">{cap.title}</h3>
+            <p class="text-xs text-[var(--text-secondary)]">{cap.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="mt-12 nexus-card p-8 text-center">
+        <h3 class="text-xl font-bold text-[var(--text-primary)] mb-3">
+          Ready to see the full team?
+        </h3>
+        <p class="text-[var(--text-secondary)] mb-6 max-w-xl mx-auto text-sm">
+          Browse all 195 agents, their roles, decision authority, and how they connect across the org chart.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a
+            href={`${base}/agents/`}
+            class="inline-flex items-center px-5 py-2.5 rounded-lg bg-quantum-blue text-nexus-black font-semibold text-sm hover:bg-orbital-cyan transition-colors"
+          >
+            Browse All Agents
+          </a>
+          <a
+            href={`${base}/departments/`}
+            class="inline-flex items-center px-5 py-2.5 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-quantum-blue transition-colors"
+          >
+            View All Departments
+          </a>
+        </div>
+      </div>
+    </section>
+
   </div>
 </PageLayout>
