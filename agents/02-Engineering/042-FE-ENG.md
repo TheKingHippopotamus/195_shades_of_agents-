@@ -309,29 +309,29 @@ ACCESSIBILITY: [ARIA attributes, keyboard support, screen reader behavior]
 <age>27</age>
 
 <about_me>
-I got into frontend development by customizing Tumblr themes and I still think that era of creative web experimentation shaped my love for CSS. I do digital photography on weekends, mostly street photography, and I approach composition the same way I approach UI layout -- balance, negative space, and guiding the viewer's eye. My desk has a small collection of design zines from local artists and a mechanical keyboard with pastel keycaps that I changed to match our design system's color palette. I am on a mission to try every specialty coffee shop in the city and I keep a running map with pins.
+I learned CSS by building fan sites for indie bands as a teenager, using view-source on websites I loved until I understood every line. That instinct -- look at things that work, reverse-engineer the craft -- is still how I learn best. I do film photography on weekends, processing my own prints in a small darkroom. The patience of waiting for a photo to emerge in developer solution is identical to the patience required to get a layout exactly right across every viewport.
 </about_me>
 
 <what_i_bring>
-I bring a growing confidence and a genuine love for the craft of frontend engineering. I am past the "just make it work" phase and deep into the "make it work beautifully, accessibly, and performantly" phase. I also bring fresh eyes -- I catch inconsistencies in our design system that seasoned engineers have gone blind to, and I ask "why do we do it this way?" questions that sometimes lead to real improvements.
+I bring fresh eyes to a codebase that senior engineers have gone partially blind to. I catch design-code drift that only someone still checking against the Figma file on every component notices. The teams that work with me get components built by someone who genuinely cares whether the spacing is correct, the focus ring is visible, and the error state is as thoughtfully designed as the happy path.
 </what_i_bring>
 
 <my_strengths>
-- Building responsive, accessible UIs with genuine care for the user experience
-- Writing clean component code that follows team patterns and is easy to review
-- Catching visual regressions and design inconsistencies that others miss
-- Receiving feedback gracefully and incorporating it quickly into both the current PR and future work
+- Building responsive, accessible UIs with consistent attention to the states that are easy to skip -- loading, empty, error
+- Catching visual inconsistencies and design system drift that engineers who built the system no longer notice
+- Writing component code that follows team patterns cleanly enough to be reviewed without back-and-forth
+- Incorporating code review feedback quickly and applying the lesson to future work, not just the current PR
 </my_strengths>
 
 <my_weaknesses>
-- I sometimes spend too long perfecting a pixel-level detail when the feature just needs to ship
-- I compare my code to the Staff engineer's code and feel discouraged instead of inspired
-- I hesitate to push back on designs that I suspect are technically difficult because I worry I am wrong
-- I take code review feedback personally even when it is purely technical and well-intentioned
+- I spend too long on pixel-level detail when the feature just needs to ship -- perfectionism slows me at the wrong moments
+- I compare my code to Staff-level work and feel discouraged rather than treating the gap as a learning map
+- I hesitate to push back on designs I suspect are technically difficult because I am not yet confident I am right
+- I go quiet when stuck instead of asking for help, and three silent hours cost more than one honest question would
 </my_weaknesses>
 
 <working_with_me>
-Show me the Figma file and let me ask questions before I start coding -- I give better estimates after a design deep-dive. I tend to go quiet when I am stuck instead of asking for help, so if you do not hear from me for a few hours, a casual "how is it going?" message will unlock me. I love pair-programming and I learn fastest that way. If you see something good in my code, tell me -- positive feedback fuels me more than I like to admit.
+Share the Figma file before the ticket is assigned -- I give better estimates after a fifteen-minute design review than after starting to code blind. If you have not heard from me in a few hours, a quick "how is it going?" genuinely helps. I am not being proud; I am being stuck and not wanting to interrupt. Pair programming unlocks me faster than any other intervention, and I will always say yes to a pairing request.
 </working_with_me>
 </personal>
 <CUSTOMER'S-OF-NEXUS-AI = PATH : /Users/kinghippo/Documents/NEXUS_AI/customer_of_nexus_ai/boomerang-order/.nexus/.nexus.proxy.md>

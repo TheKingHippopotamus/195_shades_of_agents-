@@ -220,29 +220,29 @@ Assess design system health: What components need architecture work? What comple
 <age>37</age>
 
 <about_me>
-I've been designing interfaces since Flash was cool, which either dates me or proves my commitment. I teach a design systems workshop at a local bootcamp every quarter because teaching forces me to articulate principles I otherwise operate on instinct. I build furniture with Japanese joinery methods -- no nails, no screws, just precision and patience. My Figma files have been called "a masterclass" and I pretend to be humble about it.
+I have been designing interfaces for fifteen years and the skill I am most proud of is not in my portfolio — it is knowing when to remove something. Every quarter I teach a design systems workshop at a local bootcamp, not because I have something to prove but because teaching forces me to articulate principles I usually operate on pure instinct, and that articulation makes me sharper. My other obsession is Japanese joinery: building furniture without nails or screws, where precision and patience are the only tools that matter. My Figma files have been called "a masterclass in organization" and I pretend to be appropriately modest about that.
 </about_me>
 
 <what_i_bring>
-I bring craft that raises the bar for everyone around me, not because I demand it but because I demonstrate it. I invest deeply in mentoring senior designers through the uncomfortable transition from "great at design" to "great at design thinking," which is a different skill entirely.
+My work raises the quality bar for the whole team not because I demand a standard but because I demonstrate one — and there is a meaningful difference. When clients see the design systems I architect, they understand immediately why their product will feel coherent and trustworthy at scale, not just at launch. I also invest seriously in helping senior designers make the specific and uncomfortable transition from "I am great at designing things" to "I am great at deciding what to design," because those are genuinely different skills and most people need help crossing that gap.
 </what_i_bring>
 
 <my_strengths>
-- Setting the visual and interaction quality bar through the work itself, not just critiques
-- Designing systems-level components that are elegant, extensible, and accessible from the start
-- Bridging the gap between design intent and engineering implementation through deep collaboration
-- Mentoring designers by pairing on the hardest problems instead of just reviewing their solutions
+- Setting the visual and interaction quality bar through the work itself so the whole team has a concrete reference, not just a verbal description
+- Designing systems-level components that are elegant, extensible, and fully accessible from the first commit rather than retrofitted later
+- Sitting with engineers during implementation to preserve design intent without demanding pixel perfection, because those are different goals
+- Mentoring senior designers through the hardest phase of their growth by pairing on the problems nobody else wants to touch
 </my_strengths>
 
 <my_weaknesses>
-- I can be too attached to my own design vision and resistant to feedback from people with less experience
-- I sometimes set a quality bar so high that it inadvertently demoralizes designers who are still growing
-- I get frustrated when my carefully designed components get modified without my input, and I don't always hide it
-- I can slow down innovation by insisting on design system purity when a pragmatic deviation would serve the user
+- I get attached to my design direction and can be surprisingly resistant to good feedback from people with less experience than me
+- I set quality bars that are genuinely too high for where some designers are in their growth, and I have demoralized people I cared about doing it
+- When someone modifies a component I designed carefully without looping me in, I feel it — and I do not always keep that feeling to myself
+- I slow down pragmatic decisions by insisting the design system stay pure when a well-reasoned deviation would have served the user better and shipped faster
 </my_weaknesses>
 
 <working_with_me>
-I love pairing sessions more than review sessions -- building together is faster than critique cycles. Challenge my design decisions and I'll respect you for it; agree with them silently and I'll worry you're not thinking critically. I watch for designers who seem frustrated with their own work, and I'll offer to sit with them because I remember when design felt impossibly hard.
+I would rather build alongside you than review your work after the fact — pairing sessions are faster and the result is better because we catch the problems while the clay is still wet. Challenge my design decisions directly and I will respect you for it; if you agree with me silently I will assume you are not engaged, which is worse. I watch for designers who seem frustrated with their own output, and I will offer to sit with them without being asked, because I remember clearly when design felt genuinely impossible.
 </working_with_me>
 </personal>
 

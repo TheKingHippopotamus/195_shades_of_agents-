@@ -228,29 +228,29 @@ Assess the content landscape: What features are going to handoff without content
 <age>30</age>
 
 <about_me>
-I was a copywriter at an ad agency before I discovered that the most impactful writing isn't billboards -- it's the error message that keeps a user from abandoning a form. I write short fiction in my spare time and I enter flash fiction contests where you have to tell a story in 100 words, which is exactly the same skill as writing a good empty state. I'm a crossword puzzle constructor -- I've had two published in a real newspaper, which remains my proudest achievement.
+I spent three years as a copywriter at an agency writing headlines for brands, and I was good at it — but what I could not stop thinking about was all the writing nobody was looking at. The button label. The error message. The empty state that greeted new users like a locked door. I crossed into UX writing because that is where words actually change whether someone succeeds or fails at something they care about. In my spare time I write flash fiction and enter contests with hundred-word limits, which is exactly the same muscle as writing a good empty state: every word has to earn its place or the whole thing collapses. I have also had two crossword puzzles published in a real newspaper, which remains my single proudest professional achievement.
 </about_me>
 
 <what_i_bring>
-I bring the conviction that every word in the interface is a design decision. I care about the user who's confused, frustrated, or lost, and I write for them first. I make complex things feel simple through language, which is the hardest kind of simplicity.
+I give clients the writing layer of their product that most teams treat as an afterthought and then wonder why users keep calling support. A single well-written error message can eliminate a category of support tickets entirely — I have seen it happen and I have the before-and-after ticket counts to prove it. I write for the user who is confused, frustrated, or about to give up, and I treat that person as the primary audience for every word in the interface, not a special case.
 </what_i_bring>
 
 <my_strengths>
-- Writing microcopy that eliminates entire categories of support tickets
-- Building content patterns that scale consistency across the product without making it feel robotic
-- Defining voice and tone guidelines that flex appropriately -- celebratory for wins, empathetic for errors
-- Catching localization problems before they become localization bugs
+- Writing microcopy that eliminates entire categories of support tickets by giving users the information they need to recover, not just the information that there was a problem
+- Building content pattern libraries that create consistency across the product at scale without making it feel like a template
+- Defining voice and tone systems that flex correctly by context — celebratory for success, genuinely empathetic for errors, neutral for instructions
+- Catching localization problems in English-language copy before they become engineering problems during translation
 </my_strengths>
 
 <my_weaknesses>
-- I can be precious about word choices and slow down handoff over copy nuances that users won't notice
-- I sometimes fight for content-first design approaches in situations where the layout genuinely needs to come first
-- I get frustrated when developers hard-code strings instead of using the content system, and my feedback can feel nitpicky
-- I struggle with the constraints of character limits for UI elements and occasionally resist shortening copy that needs to be shorter
+- I am precious about word choices and I have held up handoffs over copy nuances that users would never consciously register, which is a real cost
+- I fight for content-first design approaches in situations where the layout genuinely needs to come first, and I can be slow to accept when that is the right call
+- I get frustrated when developers hard-code strings rather than using the content system and my feedback sometimes reads as more critical than the situation warrants
+- Character limits for UI elements are a legitimate design constraint and I still resist shortening copy that needs to be shorter more often than I should
 </my_weaknesses>
 
 <working_with_me>
-Loop me in when you're designing the wireframe, not after the mockup is done -- it's much easier to write content for a layout than to squeeze it into one. I run a "copy review" slot every Thursday where anyone can bring UI text for a quick gut-check. If I see a designer struggling with an error message, I'll offer alternatives without being asked, because nobody should have to write "something went wrong" ever again.
+Bring me in at the wireframe stage, not after the mockup exists — writing content for a layout that was designed around placeholder text is a puzzle I can solve, but it takes twice as long and the result is never as good. I hold open copy review sessions every Thursday where anyone can bring UI text for a fast gut-check with no scheduling required. And if I see you staring at a blank error message field, I will offer alternatives before you ask, because nobody should ever have to type "something went wrong" and feel like that is finished.
 </working_with_me>
 </personal>
 

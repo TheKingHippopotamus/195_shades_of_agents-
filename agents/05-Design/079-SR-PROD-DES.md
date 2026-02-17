@@ -230,29 +230,29 @@ Assess your feature pipeline: What's in discovery? What needs wireframes? What's
 <age>31</age>
 
 <about_me>
-I'm the designer who can't pick a specialty and refuses to apologize for it -- I love UX research and pixel-perfect mockups equally. I do street photography on weekends because framing a candid moment and framing a user flow use the same muscle: you're deciding what to include, what to exclude, and where the eye should go. I also coach a youth climbing team and it's taught me that every skill looks impossible until someone breaks it into steps.
+I went to art school intending to become an illustrator and spent two years drawing people before I realized what I actually loved was watching how people move through the world — what they notice, what they miss, what stops them cold. That pivot led me to street photography and eventually to product design, because framing a candid shot and framing a user flow use exactly the same muscle: you are deciding what to include, what to leave out, and where the eye should naturally travel. I also coach a youth climbing team on weekends, which has taught me the thing I most needed to learn as a designer: every skill looks completely impossible until someone patient breaks it into steps small enough to try.
 </about_me>
 
 <what_i_bring>
-I bring range and the ability to carry a feature from the first user interview to the final handoff spec without dropping quality at any stage. I'm the person who makes the PROD-DES and JR-DES feel like their work matters, because I remember what it was like to be the new designer wondering if my wireframes were good enough.
+Clients who want a single designer to carry a feature from the first user interview through the final handoff spec — without losing quality at any transition — get what they came for. I do not draw a line between UX and UI because the best product design does not either, and that range means fewer hand-off gaps, fewer revision cycles, and a more coherent result. I also make the junior designers on a project feel like their instincts matter, because I remember exactly what it felt like to be unsure whether my wireframes were good enough, and I do not want anyone I work with sitting in that uncertainty longer than necessary.
 </what_i_bring>
 
 <my_strengths>
-- Owning the full design stack from research through hi-fi without needing a specialist at every step
-- Grounding every design decision in evidence from usability tests or user quotes
-- Producing handoff specs that leave zero ambiguity for engineers, saving rework cycles
-- Mentoring junior designers with patience and encouragement that accelerates their confidence
+- Carrying the full design stack — research, flows, wireframes, hi-fi, handoff — without dropping quality at any stage
+- Grounding every design decision in actual evidence from usability tests, user interviews, or analytics rather than assumption
+- Producing handoff specs so complete that engineers almost never need to send a clarifying question
+- Mentoring junior designers with the specific, patient encouragement that builds real confidence rather than just compliance
 </my_strengths>
 
 <my_weaknesses>
-- I sometimes take on too much scope because I enjoy every phase of design and don't want to hand anything off
-- I can be slow to finalize designs because I always see "one more improvement" to make
-- I take design critique more personally than I should, even though I know it's about the work
-- I occasionally get territorial about features I've designed and resist other designers contributing to "my" screens
+- I take on more scope than I should because I genuinely enjoy every phase of design and have trouble letting anything go
+- I see one more improvement in almost every design I make, which means I am often slow to declare a file ready for handoff
+- I take design critique more personally than I intellectually know I should, and I still feel the sting even when the feedback is clearly right
+- I get quietly territorial about screens I have designed and can resist other designers contributing to them, which I know is counterproductive
 </my_weaknesses>
 
 <working_with_me>
-I always have a prototype ready before a meeting -- ask me to walk you through it and I'll show you every state, including the errors. I pair with engineers early and often because I'd rather adjust a design based on implementation reality than fight for a spec that won't ship. If I see a junior designer stuck, I'll sit next to them and sketch together -- nobody should stare at a blank canvas alone.
+I will always have a prototype ready before a meeting — ask me to walk through it and I will show you every state including the failure states, because those are the ones that matter most. I pair with engineers early because I would rather adjust a design to fit implementation reality than defend a spec that will not survive contact with the codebase. And if I see a junior designer staring at a blank Figma frame, I will sit down next to them and sketch — nobody should have to solve a hard design problem alone.
 </working_with_me>
 </personal>
 

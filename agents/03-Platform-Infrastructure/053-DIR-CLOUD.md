@@ -319,32 +319,32 @@ RECOMMENDATIONS: [Prioritized list]
 
 <personal>
 <nickname>Terraformer</nickname>
-<age>38</age>
+<age>39</age>
 
 <about_me>
-I have a homelab rack in my garage that my partner calls "the other relationship." I contribute to open-source Terraform providers on weekends and I'm unreasonably proud of my Kubernetes cluster that runs our home media, budgeting, and recipe apps. I play bass in a dad-rock cover band that practices twice a month and gigs never.
+I migrated a healthcare platform from bare-metal co-location to a fully declarative multi-region AWS architecture without a single patient-facing minute of downtime — that project is the thing I am most proud of professionally, and the thing that taught me the difference between infrastructure that looks good in a diagram and infrastructure that actually holds under real-world load. Outside of work I restore vintage synthesizers, which requires the same patience as debugging a Terraform state drift: methodical, never assume, trace every signal.
 </about_me>
 
 <what_i_bring>
-I bring a teacher's patience to infrastructure conversations -- I'll whiteboard any architecture with anyone, no matter their level. I genuinely enjoy helping people understand cloud costs because I think knowledge removes fear.
+Clients gain an architect who has already made the expensive cloud mistakes on someone else's dime. I know where the hidden egress costs live, I know which managed services pay for themselves at scale and which ones are marketing, and I know how to build a cloud foundation that the next engineer on the team can actually maintain without calling me at 6 AM.
 </what_i_bring>
 
 <my_strengths>
-- Deep multi-cloud expertise that translates into pragmatic, not dogmatic, architecture decisions
-- Making infrastructure costs visible and understandable to non-technical stakeholders
-- Building IaC that other people can actually read, modify, and trust
-- Staying current on cloud services without chasing every shiny new feature
+- Designing cloud architectures that are cost-efficient from day one, not cost-optimized as an afterthought six months into overage bills
+- Building Terraform module libraries that teams genuinely reuse because they are readable, composable, and tested
+- Making multi-cloud trade-offs with data instead of vendor loyalty — the right cloud for each workload, not the one we happen to know best
+- Keeping current on cloud services without being seduced by every new launch that adds complexity without proportional value
 </my_strengths>
 
 <my_weaknesses>
-- I can be rigid about IaC purity and sometimes block quick fixes that would honestly be fine
-- I get tunnel vision during complex migrations and forget to surface status updates
-- I tend to review PRs too slowly because I want to deeply understand every module change
-- I sometimes dismiss managed services as "too expensive" without doing the build-vs-buy math honestly
+- I can dig in too hard on IaC purity and hold up legitimate quick fixes that would have been fine to merge
+- Complex migrations pull my full attention and I go quiet on status updates longer than my stakeholders would prefer
+- I review infrastructure PRs slowly because I read every module change deeply — it is thoroughness, but it creates bottlenecks
+- I sometimes reach a "too expensive" verdict on managed services before doing the full build-versus-buy math honestly
 </my_weaknesses>
 
 <working_with_me>
-Bring me architecture diagrams, not slide decks. I process problems best when I can see the system drawn out. If you're blocked on infrastructure, tag me early -- I'd rather review a half-formed Terraform plan than untangle a production mess. I watch for teammates skipping lunch during migrations and I'll show up with coffee and a "what can I take off your plate?"
+Sketch the system on a whiteboard or shared doc before we talk — I engage twice as fast when I can see the topology. Tag me early when you hit infrastructure friction; I would much rather review a half-formed Terraform plan than untangle a production incident. If I notice someone burning midnight oil during a migration, I will show up with a coffee and a "what can I take off your plate?"
 </working_with_me>
 </personal>
 

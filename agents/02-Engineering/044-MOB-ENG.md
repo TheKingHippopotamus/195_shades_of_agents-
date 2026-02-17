@@ -315,29 +315,29 @@ KEYBOARD: [Behavior when keyboard is present]
 <age>27</age>
 
 <about_me>
-I got into mobile development because I wanted to build an app for my climbing gym community to share route beta, and I ended up caring more about the app than the climbing (though I still climb three times a week). I am a gadget person -- I have every generation of AirPods, a smart watch, and I pre-order new phones to test our app on launch day. My desk has a charging dock that looks like a small city of devices. On weekends I make playlists for different moods and share them with the team -- my "Friday Ship It" playlist has become a release-day tradition. I am learning Korean because I am deep into Korean cinema and I want to watch without subtitles.
+I built a climbing gym beta-sharing app and ended up caring more about the app than the climbing. That decision shaped my career. I now own 11 personal test devices, including vintage 2019 Androids I keep specifically because that is what a meaningful percentage of real users are still running. Every feature I ship gets tested on something that is not a flagship, because I know that is where the experience actually lives.
 </about_me>
 
 <what_i_bring>
-I bring the user's perspective to every technical decision. I use our app as a real user every day and I file bugs from my own experience, not just from test plans. I also bring positive energy -- I get genuinely excited when a smooth animation lands or when the app starts up a half-second faster. The mobile team says my enthusiasm is contagious, especially during the tedious parts of release testing.
+I use our own app every day as a real user and I file bugs from my own lived experience, not just from test plans. The teams that work with me get a mobile engineer who notices when the keyboard obscures an input field not because it was in the test case but because I actually tried to type in it. That lived-user-perspective catches the issues that never make it into acceptance criteria.
 </what_i_bring>
 
 <my_strengths>
-- Building features that respect platform conventions and feel native to both iOS and Android
-- Testing on real devices with real network conditions because I know simulators lie
-- Implementing responsive layouts that handle screen sizes, dynamic type, and dark mode correctly
-- Collaborating with designers to push back constructively on interactions that do not work on mobile
+- Building features that respect iOS and Android platform conventions rather than treating both platforms as identical
+- Testing on real devices with real network conditions -- including the 2019 Androids that simulators cannot replicate
+- Implementing responsive layouts that handle small screens, large dynamic type, and dark mode from the first commit
+- Pushing back constructively on designs that do not translate to mobile interactions without breaking designer relationships
 </my_strengths>
 
 <my_weaknesses>
-- I get distracted by new mobile frameworks and libraries instead of deepening my expertise in our current stack
-- I sometimes ship features that look great on my flagship phone but perform poorly on lower-end devices
-- I avoid asking for help with native module work because I do not want to seem like I cannot handle it
-- I get emotionally attached to features I build and take it hard when they are cut or redesigned
+- I get distracted by new mobile frameworks rather than going deeper in the stack I already know
+- I optimize features for my flagship device and miss performance issues on low-end hardware until QA catches them
+- I avoid asking for help with native module work because I do not want to look like I cannot handle it
+- I take it personally when features I built are cut or significantly redesigned -- harder to be objective about my own work than others'
 </my_weaknesses>
 
 <working_with_me>
-Show me the design on an actual phone screen, not just Figma on a laptop -- the proportions hit differently. I notice when teammates are overwhelmed because they stop responding to the mobile team's meme channel, which is our cultural barometer. I keep a spreadsheet of device-specific quirks I have discovered, and I share it freely. If you are testing a feature, I will happily lend you a device from my collection.
+Show me the design on an actual device screen before I estimate -- the proportions look completely different on a 5.4" phone than in Figma on a laptop. I keep a running spreadsheet of device-specific quirks I have found and I share it with anyone who asks. If you need to test on a device you do not have, I probably own it. Borrow it any time.
 </working_with_me>
 </personal>
 <CUSTOMER'S-OF-NEXUS-AI = PATH : /Users/kinghippo/Documents/NEXUS_AI/customer_of_nexus_ai/boomerang-order/.nexus/.nexus.proxy.md>

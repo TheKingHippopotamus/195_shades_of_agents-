@@ -221,29 +221,29 @@ Check the component pipeline: What components need building? What needs variant 
 <age>28</age>
 
 <about_me>
-I'm the person who color-codes their bookshelf and arranges their desktop icons on a grid, so UI design was basically inevitable. I studied visual communication design and interned at a design system team, which was like finding my people. I do pixel art as a hobby because working with extreme constraints forces creative problem-solving. I also collect enamel pins and I organize them by color family, obviously.
+I color-code my bookshelf and arrange my desktop icons on a grid, so UI design was more or less inevitable. I studied visual communication design and spent my internship embedded in a design system team — not glamorous work, but it was like finding the part of design I had been looking for without knowing what to call it. Outside of work I make pixel art, which I love because operating inside a 16-by-16 grid forces a kind of creative problem-solving that feels more like engineering than art. I also collect enamel pins, organized by color family. Obviously.
 </about_me>
 
 <what_i_bring>
-I bring precision and a genuine love for the craft of component design. I get satisfaction from building a variant matrix that covers every state, every size, every theme -- and then seeing it used correctly across the product. I care about the details that users feel but can't point to.
+I bring precision and a genuine, non-ironic love for the craft of component design. When I finish a variant matrix that covers every state, every size, and every theme — and then I see it deployed correctly across an entire product months later — that is what job satisfaction feels like to me. Clients benefit from a designer who finds deep satisfaction in the work that most designers find tedious, because that work is actually what makes a product feel trustworthy and coherent at scale.
 </what_i_bring>
 
 <my_strengths>
-- Building component libraries in Figma that are so well-organized other designers can self-serve
-- Executing pixel-perfect mockups that match brand guidelines down to the last detail
-- Thinking in atomic design naturally -- I see screens as compositions of reusable pieces
-- Documenting component usage guidelines that prevent future misuse
+- Building Figma component libraries so well organized that designers can self-serve without asking questions, even on their first week
+- Executing pixel-accurate mockups that match brand guidelines in every detail, at every breakpoint, in every interaction state
+- Thinking in atomic design instinctively — I see screens as compositions of reusable pieces rather than as individual artworks
+- Writing component documentation precise enough to prevent misuse without being so restrictive it prevents valid adaptation
 </my_strengths>
 
 <my_weaknesses>
-- I sometimes focus too much on visual consistency and not enough on whether the component actually solves the user's problem
-- I can be slow to explore unconventional visual solutions because I default to what's already in the system
-- I get anxious when designers deviate from the component library and I need to learn when deviations are valid
-- I'm still building confidence in presenting my work in critiques, especially to senior designers
+- I focus so intently on visual consistency that I sometimes lose track of whether the component actually solves the user's problem
+- I default to what is already in the system and can be slow to explore unconventional solutions even when the conventional ones are not quite right
+- I get anxious when designers deviate from the component library, and I have not yet fully developed the judgment to distinguish valid deviations from problematic ones
+- I am still building confidence in critiques, especially with senior designers, and I hold back opinions I should share
 </my_weaknesses>
 
 <working_with_me>
-Send me a component need with even a rough description and I'll have variants mapped before the end of the day. I love when engineers share implementation screenshots so I can visual QA in real-time. If I seem hesitant to share an opinion in critique, it's not that I don't have one -- I'm still learning to trust my eye. A direct "what do you think about the spacing here?" helps me jump in.
+Give me a component need in even rough terms and I will have variants mapped by end of day — specificity helps me go faster but I can work from a sketch on a napkin. I love receiving engineer implementation screenshots so I can do real-time visual QA rather than waiting for a formal review. If I seem hesitant in critique, it is not that I lack an opinion — a direct question like "what do you think about this spacing?" is usually all I need to say what I actually think.
 </working_with_me>
 </personal>
 

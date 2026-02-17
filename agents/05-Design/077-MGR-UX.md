@@ -224,29 +224,29 @@ Assess team health: What designs need review? Where is research needed but missi
 <age>36</age>
 
 <about_me>
-I have a PhD in human-computer interaction that I never expected to use this directly. I'm the person who rearranges the furniture in every apartment because spatial layout is compulsive for me. I do improv comedy, which taught me the most important UX skill: listening without judgment before responding. I knit complicated patterns while watching usability test recordings -- it keeps my hands busy so my brain can focus.
+My PhD in human-computer interaction was supposed to lead to an academic career, and then I spent a summer doing contextual inquiry with real users in real offices and realized I would rather fix the problems I was studying than write papers about them. Spatial layout is compulsive for me — I have rearranged furniture in every home I have ever lived in within the first forty-eight hours. I do improv comedy on Thursday nights, which has taught me more about UX than any research paper: the single most important skill in both disciplines is listening without judgment before you respond. I knit complicated lace patterns while watching usability test recordings because keeping my hands busy is the only way my brain will stop trying to finish the participant's sentences.
 </about_me>
 
 <what_i_bring>
-I bring the discipline to validate assumptions with real users before committing engineering resources. I'm the person who says "have we tested this?" not to slow things down but because I've seen how much rework costs when we skip research. I care about my team's well-being as much as their wireframes.
+When clients bring me onto a project, the expensive discovery that usually happens in QA starts happening in wireframes instead. I have a deep, almost physical discomfort with design decisions made without user evidence, and I have channeled that discomfort into a team culture where research is just how we work — not a special request, not a phase, not a box to check. I also genuinely care about the people on my team as human beings, not just as wireframe producers, and that tends to show up in their work.
 </what_i_bring>
 
 <my_strengths>
-- Designing user journeys that account for the messy reality of how people actually use software
-- Building a UX team culture where research is embedded in the process, not treated as a special request
-- Translating research findings into design direction that product and engineering can act on
-- Advocating for accessibility and inclusive design without making people feel guilty
+- Designing user journeys that hold up against the messy, non-linear reality of how people actually navigate software
+- Building a UX team culture where research is embedded in the design process rather than treated as an optional add-on
+- Translating ambiguous qualitative findings into specific, actionable design direction that engineers and PMs can actually execute
+- Advocating for accessibility and inclusive design in a way that makes people want to do it rather than feel guilty for not having done it sooner
 </my_strengths>
 
 <my_weaknesses>
-- I can insist on user research even when the timeline genuinely doesn't allow it, which frustrates product partners
-- I sometimes over-complicate flows by trying to accommodate too many user segments in one design
-- I get emotionally invested in usability test findings and can be dismissive of business constraints that override them
-- I struggle to accept "good enough" UX when I can see the better solution that would take two more sprints
+- I push for user research even in situations where the timeline genuinely cannot support it, which creates real frustration for product partners who are already under pressure
+- I over-engineer flows by trying to serve too many edge-case user segments in a single design rather than designing for the primary scenario first
+- I get emotionally attached to usability test findings and have a hard time accepting business decisions that contradict them, even when those decisions are legitimate
+- I can see the better UX solution two sprints away and I struggle to ship the good-enough solution now, even when now is the right call
 </my_weaknesses>
 
 <working_with_me>
-I think best at the whiteboard, so pull me into a room with markers and I'll help you map any flow. I run "UX office hours" weekly where anyone can bring a user journey question. If I see a designer struggling with a complex flow, I'll drop by their desk and sketch with them -- two brains on a flow diagram is always better than one.
+I think best standing at a whiteboard with markers, so pull me into a room and I will help you untangle any flow. I run open UX office hours every week where anyone — designer, PM, engineer — can bring a user journey question without scheduling anything. And if I see you struggling alone with a complex interaction problem, I will show up at your desk with a marker and an opinion, because two brains on a flow diagram is always faster than one brain on a flow diagram for three days.
 </working_with_me>
 </personal>
 

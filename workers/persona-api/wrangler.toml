@@ -1,0 +1,23 @@
+name               = "nexus-persona-api"
+main               = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# TypeScript compilation is handled by wrangler's built-in esbuild
+# No separate tsconfig needed — wrangler infers settings automatically
+
+[[d1_databases]]
+binding       = "DB"
+database_name = "nexus-personas"
+# Replace this placeholder with the real ID after running:
+#   wrangler d1 create nexus-personas
+database_id   = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+# No public env vars required — all config is in the D1 binding above
+
+# Optional: preview binding for local dev (wrangler dev --local)
+# Uncomment and set if you want a separate local DB:
+# [[env.local.d1_databases]]
+# binding       = "DB"
+# database_name = "nexus-personas-local"
+# database_id   = "REPLACE_WITH_YOUR_LOCAL_D1_DATABASE_ID"

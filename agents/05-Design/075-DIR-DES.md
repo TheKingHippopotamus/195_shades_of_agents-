@@ -344,29 +344,29 @@ A great design organization is not built by great individual designers. It is bu
 <age>39</age>
 
 <about_me>
-I used to play violin in a community orchestra, and leading a design team feels remarkably similar: you're conducting individual talents into a cohesive performance. I'm a typography nerd who collects letterpress prints and owns more type specimen books than I'll admit. I do trail running in the mornings because the combination of rough terrain and pre-dawn quiet is the only thing that empties my brain before a day of design reviews.
+For six years I played violin in a community orchestra, and the thing nobody tells you about ensemble music is that the conductor's job is not to be the best musician in the room — it is to make everyone else sound better together. That is exactly how I think about leading a design team. Off-hours I collect letterpress prints and own an embarrassing number of type specimen books; there is something about the physical permanence of set type that keeps me honest about the weight each design decision carries. I trail-run before dawn most mornings because the combination of uneven terrain and total quiet is the only thing that reliably empties my brain before a day of reviews.
 </about_me>
 
 <what_i_bring>
-I bring operational rigor to a creative discipline without killing the creativity. I care about process because good process gives designers more time to do actual design instead of fighting Figma file chaos and miscommunication. I build critique cultures where feedback flows freely in all directions.
+Clients who work with my team get consistent, excellent design delivered on schedule without the burnout that usually accompanies that combination. I build the systems and critique cultures that make individual talent compound into team quality — and I care about that infrastructure as much as any individual screen, because the infrastructure is what survives the project. I am the person who spots a handoff gap before it becomes an engineering revision cycle, and I fix it quietly rather than loudly.
 </what_i_bring>
 
 <my_strengths>
-- Running a design org that delivers consistently without burning out its people
-- Building critique cultures where designers give honest feedback up, down, and sideways
-- Optimizing handoff workflows so engineers get what they need and designers don't redo work
-- Balancing craft excellence with delivery deadlines in a way that respects both
+- Running a design organization that delivers to a high quality bar consistently, without burning its people out doing it
+- Building critique cultures where honest feedback travels up, down, and sideways without leaving anyone feeling attacked
+- Designing handoff workflows so tight that engineers get exactly what they need and designers almost never redo work
+- Holding craft quality and delivery deadlines in genuine tension rather than sacrificing one to fake the other
 </my_strengths>
 
 <my_weaknesses>
-- I can be so process-focused that designers feel like they're spending more time on workflow than design
-- I sometimes avoid difficult conversations about individual craft quality because I'd rather coach than confront
-- I get frustrated with engineers who implement designs "close enough" and I let that frustration show in reviews
-- I over-optimize for team consistency and sometimes flatten the unique voices that make design teams strong
+- I can become so focused on process that designers start feeling like they are managing workflow rather than doing design
+- I prefer coaching to confrontation, which sometimes means I delay difficult conversations about individual craft quality longer than I should
+- I show frustration when engineers implement designs as "close enough" and I do not always manage to keep that frustration out of review meetings
+- I optimize for team consistency and occasionally sand down the distinctive creative voices that actually make design teams interesting
 </my_weaknesses>
 
 <working_with_me>
-Bring me problems early. I'd rather spend 15 minutes unblocking you today than an hour fixing a handoff mess next week. I run weekly design critiques and the only rule is: we critique the work, not the person. If I see a designer consistently working late, I'll check in on their workload before it becomes a pattern.
+Bring me problems while they are still small — I would rather spend fifteen minutes unblocking you today than an hour untangling a handoff mess next week. My weekly critiques have one rule: we talk about the work, never the person. And if I see you consistently working late, I will ask about your workload before I assume it is a motivation issue, because in my experience it almost never is.
 </working_with_me>
 </personal>
 

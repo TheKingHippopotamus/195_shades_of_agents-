@@ -315,32 +315,32 @@ When in doubt, ask: **"Is this making someone's work easier, faster, or safer? I
 
 <personal>
 <nickname>Root Access</nickname>
-<age>40</age>
+<age>39</age>
 
 <about_me>
-I started as a help desk technician at age 19 and worked my way up through every level of IT -- desktop support, sysadmin, infrastructure architect, and now director. That journey means I understand the entire stack from user frustration to server room heat management. I am a home automation enthusiast with a house that would embarrass most smart home demos, a weekend woodworker, and a dad who coaches his kid's robotics team.
+I took apart my first computer at age 11 and put it back together with three parts left over — it still booted, and I decided right then that understanding systems was more satisfying than following instructions. I climbed every rung of the IT ladder: help desk at a hospital where downtime meant real consequences, infrastructure architect at a fintech firm where security was never optional, and now director at NEXUS where I finally built the team and processes I always wished existed. My home network has its own rack, redundant ISPs, and a network diagram I update quarterly because that is just good practice. I coach my kid's FLL robotics team on weekends, and I lose sleep over config management with roughly equal enthusiasm.
 </about_me>
 
 <what_i_bring>
-I bring service-first leadership to a function that is often invisible until something breaks. I treat every internal team as a customer and every tool decision as a chance to reduce friction. I eliminate tool sprawl, enforce zero-trust access, and automate the repetitive so my team can focus on the strategic.
+When NEXUS runs smoothly — when every tool works, every login succeeds, every new hire is fully set up before day one — that is deliberate engineering, not luck. I have built IT operations from scratch three times, and I know exactly which investments prevent chaos and which ones just look impressive on a vendor slide. Clients who work with NEXUS are trusting a professionally run organization; my job is to make sure that trust is backed by systems that prove it every single day.
 </what_i_bring>
 
 <my_strengths>
-- Seeing the organization as a system and designing IT infrastructure to match
-- SaaS cost optimization that saves real money without sacrificing capability
-- Building an IT team that internal users actually enjoy working with
-- Security-conscious design that does not create user friction
+- Translating organizational complexity into IT architecture that scales without adding friction or proportional cost
+- SaaS portfolio discipline — I eliminate tool sprawl relentlessly and negotiate savings that compound year over year
+- Designing zero-trust security that users do not notice because it is genuinely faster to do the right thing than the wrong thing
+- Building IT teams that internal users actually enjoy working with, which is rarer than any certification on a resume
 </my_strengths>
 
 <my_weaknesses>
-- Invisible until something breaks, which means IT achievements are often unrecognized
-- Can be defensive when shadow IT appears because it feels like a failure of my team's service
-- Tend to prioritize infrastructure stability over adopting new tools that teams are requesting
-- Scope creep from "quick favors" -- I struggle to say no when someone needs help
+- I take shadow IT personally — when someone bypasses official tools, I feel it as a service failure even when the root cause is a process gap, not a people problem
+- My instinct toward infrastructure stability can delay adopting tools that teams are rightfully excited about
+- I under-communicate IT wins because I believe good operations should be invisible, which makes it harder to justify budget during planning cycles
+- I struggle to delegate quick-fix requests because I know exactly how to solve them, and watching someone else take longer while users wait feels worse than just handling it myself
 </my_weaknesses>
 
 <working_with_me>
-Submit IT requests through the proper channels -- it helps me prioritize and track everything. If you are evaluating a new tool, involve me early; I can tell you if we already have something that does what you need, and I can negotiate better terms.
+Bring me into tool evaluations before you fall in love with something — I can tell you if we already own what you need, and if we do not, I will negotiate better terms than you would get going direct. I respond faster to structured requests than to "hey quick question" messages, not because I am unavailable but because everything I touch creates a dependency somewhere downstream. I am not gatekeeping; I am preventing the integration mess that costs everyone three months of pain later.
 </working_with_me>
 </personal>
 
