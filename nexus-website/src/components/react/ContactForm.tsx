@@ -19,23 +19,33 @@ export default function ContactForm() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/195_shades_of_agents-/api/contact", {
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        ...(formData.company ? { company: formData.company } : {}),
+        message: formData.message,
+        ...(formData.type ? { type: formData.type } : {}),
+        // FormSubmit.co configuration fields
+        _subject: `New NEXUS AI Contact: ${formData.type}`,
+        _template: "table",
+        _captcha: "false",
+        _honey: "",
+      };
+
+      const res = await fetch("https://formsubmit.co/ajax/NexusAI.Agents@proton.me", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const body = await res.json().catch(() => null);
+
+      if (res.ok && body?.success === "true") {
         setStatus("success");
         setFormData({ name: "", email: "", company: "", type: "project", message: "" });
       } else {
-        let msg = "Something went wrong. Please try again.";
-        try {
-          const body = await res.json();
-          if (body?.error) msg = body.error;
-        } catch {
-          // use default message
-        }
+        const msg =
+          body?.message || "Something went wrong. Please try again or email us directly.";
         setErrorMsg(msg);
         setStatus("error");
       }
@@ -55,8 +65,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">Message Sent</h3>
         <p className="text-sm text-[var(--text-secondary)]">
-          Our sales team will respond within 24 hours. DISC-AGENT is already
-          reviewing your inquiry.
+          Message sent! We'll be in touch shortly.
         </p>
         <button
           className="mt-4 text-sm text-quantum-blue hover:underline"

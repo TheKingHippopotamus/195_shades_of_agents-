@@ -66,18 +66,15 @@ jobs:
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
-          # IMPORTANT: Add RESEND_API_KEY in GitHub repo Settings > Secrets and Variables > Actions
-          # This powers the /api/contact email endpoint via Resend
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
       - name: Post-build — Generate search index
-        run: npx pagefind --site dist/client
+        run: npx pagefind --site dist
         continue-on-error: true # Pagefind not yet in dependencies
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: nexus-website/dist/client
+          path: nexus-website/dist
 
   deploy:
     needs: build
