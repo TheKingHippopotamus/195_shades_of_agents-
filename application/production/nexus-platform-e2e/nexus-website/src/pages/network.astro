@@ -134,7 +134,7 @@ const tierLabels: Record<number, string> = {
           <div class="space-y-1.5 max-h-[340px] overflow-y-auto pr-1">
             {departments.map((dept: any) => (
               <a
-                href={`/195_shades_of_agents-/departments/${dept.slug}`}
+                href={`/195_shades_of_agents-/departments/${dept.slug}/`}
                 class="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-[var(--bg-elevated)] transition-colors group"
               >
                 <span
@@ -263,7 +263,7 @@ const tierLabels: Record<number, string> = {
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {topHubs.map((hub, i) => (
         <a
-          href={`/195_shades_of_agents-/agents/${hub.code.toLowerCase()}`}
+          href={`/195_shades_of_agents-/agents/${hub.code.toLowerCase()}/`}
           class="nexus-card p-5 group"
         >
           <div class="flex items-start justify-between mb-2">
@@ -302,7 +302,7 @@ const tierLabels: Record<number, string> = {
           const pct = Math.round((dept.count / totalAgents) * 100);
           return (
             <a
-              href={`/195_shades_of_agents-/departments/${departments.find((d: any) => d.number === dept.number)?.slug || ""}`}
+              href={`/195_shades_of_agents-/departments/${departments.find((d: any) => d.number === dept.number)?.slug || ""}/`}
               class="flex items-center gap-4 group hover:bg-[var(--bg-elevated)] rounded-lg px-3 py-2 -mx-3 transition-colors"
             >
               <span
