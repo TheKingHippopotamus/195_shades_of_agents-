@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DepartmentCard from '../components/DepartmentCard.astro';
+import AgentCard from '../components/AgentCard.astro';
+import StatCounter from '../components/StatCounter.tsx';
+import { DEPARTMENTS } from '../lib/constants';
+
+const featuredAgents = [
+  { agentNumber: 1, code: 'CEO', name: 'Chief Executive Officer', department: 'Executive Leadership', tier: 0, nickname: 'The Architect', reportsTo: 'Board' },
+  { agentNumber: 2, code: 'CTO', name: 'Chief Technology Officer', department: 'Executive Leadership', tier: 0, nickname: 'Forge', reportsTo: 'CEO' },
+  { agentNumber: 3, code: 'CPO', name: 'Chief Product Officer', department: 'Executive Leadership', tier: 0, nickname: 'Compass', reportsTo: 'CEO' },
+  { agentNumber: 8, code: 'CISO', name: 'Chief Information Security Officer', department: 'Executive Leadership', tier: 0, nickname: 'Sentinel', reportsTo: 'CEO' },
+  { agentNumber: 195, code: 'NEXUS-ORCHESTRATOR', name: 'System Orchestrator', department: 'Special Agents', tier: 9, nickname: 'Maestro', reportsTo: 'CEO' },
+  { agentNumber: 12, code: 'VP-ENG', name: 'VP of Engineering', department: 'Engineering', tier: 1, nickname: 'Conductor', reportsTo: 'CTO' },
+];
+---
+
+<BaseLayout title="Home">
+  <!-- Hero Section -->
+  <section class="relative gradient-hero overflow-hidden" style="min-height: clamp(600px, 100vh, 900px)">
+    <!-- Mesh gradient overlay -->
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+
+    <div class="relative container-content flex flex-col justify-center" style="min-height: clamp(600px, 100vh, 900px)">
+      <div class="max-w-3xl pt-24">
+        <!-- Logo -->
+        <div class="mb-8 animate-fade-in">
+          <span class="text-2xl font-extrabold tracking-widest text-signal">NEXUS</span>
+          <span class="text-2xl font-extrabold tracking-widest text-quantum ml-2">AI</span>
+        </div>
+
+        <!-- Headlines -->
+        <h1 class="text-display text-signal mb-2" style="animation: fade-up 0.6s ease-out 0.1s both">
+          195 AI Agents.
+        </h1>
+        <h2 class="text-h1 text-signal mb-2" style="animation: fade-up 0.6s ease-out 0.2s both">
+          20 Departments.
+        </h2>
+        <h2 class="text-h1 text-quantum mb-8" style="animation: fade-up 0.6s ease-out 0.3s both">
+          One Autonomous Agency.
+        </h2>
+
+        <!-- Subtext -->
+        <p class="text-body-lg text-mist max-w-xl mb-10" style="animation: fade-in 0.5s ease-out 0.6s both">
+          We don't just build software. Our AI agents plan, design, develop, test, and ship it — like a real company, because we are one.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4" style="animation: fade-in 0.5s ease-out 0.8s both">
+          <a
+            href={`${import.meta.env.BASE_URL}about/`}
+            class="inline-flex items-center px-8 py-4 rounded-md bg-quantum text-nexus-black font-semibold text-base hover:bg-orbital hover:scale-[1.02] transition-all duration-150 shadow-glow-sm hover:shadow-glow-md"
+          >
+            Learn More
+          </a>
+          <a
+            href={`${import.meta.env.BASE_URL}team/`}
+            class="inline-flex items-center px-8 py-4 rounded-md border border-quantum text-quantum font-semibold text-base hover:bg-quantum/10 transition-all duration-150"
+          >
+            Meet the Team &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 md:py-24 bg-[var(--bg-tertiary)]">
+    <div class="container-content">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <StatCounter client:visible target={195} label="AI Agents" />
+        <StatCounter client:visible target={20} label="Departments" />
+        <StatCounter client:visible target={10} label="Tiers" />
+        <StatCounter client:visible target={13} label="Lifecycle Stages" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Agents Section -->
+  <section class="py-16 md:py-24">
+    <div class="container-content">
+      <div class="text-center mb-12">
+        <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-4">Meet the Leadership</h2>
+        <p class="text-body-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+          Our C-Suite and key agents drive every project from discovery to deployment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredAgents.map((agent) => (
+          <a href={`${import.meta.env.BASE_URL}team/${agent.code.toLowerCase()}/`} class="block no-underline">
+            <AgentCard
+              agentNumber={agent.agentNumber}
+              code={agent.code}
+              name={agent.name}
+              department={agent.department}
+              tier={agent.tier}
+              nickname={agent.nickname}
+              reportsTo={agent.reportsTo}
+            />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <section class="py-16 md:py-24 bg-[var(--bg-tertiary)]">
+    <div class="container-content">
+      <div class="text-center mb-12">
+        <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-4">20 Departments</h2>
+        <p class="text-body-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+          From Engineering to Legal, every department is staffed with specialized AI agents working in concert.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {DEPARTMENTS.slice(0, 6).map((dept) => (
+          <DepartmentCard
+            number={dept.number}
+            name={dept.name}
+            agentCount={dept.agentCount}
+            range={dept.range}
+          />
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a
+          href={`${import.meta.env.BASE_URL}departments/`}
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-[var(--border)] text-[var(--accent-text)] hover:text-quantum hover:border-quantum/30 font-medium transition-all duration-200"
+        >
+          View All 20 Departments &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 gradient-hero relative overflow-hidden">
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+    <div class="relative container-content text-center">
+      <h2 class="text-h2 font-bold text-signal mb-4">Ready to see 195 agents in action?</h2>
+      <p class="text-body-lg text-mist max-w-xl mx-auto mb-8">
+        Experience the future of software development with our autonomous AI agency.
+      </p>
+      <a
+        href={`${import.meta.env.BASE_URL}team/`}
+        class="inline-flex items-center px-8 py-4 rounded-md bg-quantum text-nexus-black font-semibold text-base hover:bg-orbital hover:scale-[1.02] transition-all duration-150 shadow-glow-sm hover:shadow-glow-md"
+      >
+        Explore All 195 Agents
+      </a>
+    </div>
+  </section>
+</BaseLayout>

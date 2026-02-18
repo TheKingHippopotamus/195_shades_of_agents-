@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AgentCard from '../../components/AgentCard.astro';
+import { DEPARTMENTS, DEPARTMENT_COLORS, TIER_LABELS } from '../../lib/constants';
+import agents from '../../data/agents.json';
+
+export function getStaticPaths() {
+  return DEPARTMENTS.map(dept => {
+    const slug = dept.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
+    const deptAgents = agents
+      .filter(a => a.department === dept.name)
+      .sort((a, b) => a.agentNumber - b.agentNumber);
+    return {
+      params: { slug },
+      props: { dept, agents: deptAgents },
+    };
+  });
+}
+
+interface DeptAgent {
+  agentNumber: number;
+  code: string;
+  role: string;
+  department: string;
+  tier: number;
+  tierLabel: string;
+  nickname: string | null;
+  reportsTo: string;
+  slug: string;
+}
+
+const { dept, agents: deptAgents } = Astro.props as { dept: typeof DEPARTMENTS[0]; agents: DeptAgent[] };
+const deptColor = DEPARTMENT_COLORS[dept.name] ?? '#94A3B8';
+const paddedNum = String(dept.number).padStart(2, '0');
+
+// Group by tier
+const byTier: Record<number, DeptAgent[]> = {};
+for (const a of deptAgents) {
+  if (!byTier[a.tier]) byTier[a.tier] = [];
+  byTier[a.tier].push(a);
+}
+const sortedTiers = Object.keys(byTier).map(Number).sort((a, b) => a - b);
+---
+
+<BaseLayout title={dept.name} description={`Meet the ${dept.agentCount} AI agents in the ${dept.name} department at NEXUS AI.`}>
+  <!-- Hero -->
+  <section class="gradient-hero relative overflow-hidden pt-28 pb-12">
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+    <div class="relative container-content">
+      <!-- Breadcrumb -->
+      <nav class="mb-6 text-body-sm" aria-label="Breadcrumb">
+        <a href={`${import.meta.env.BASE_URL}departments/`} class="text-mist hover:text-quantum transition-colors">Departments</a>
+        <span class="text-mist mx-2">/</span>
+        <span class="text-signal">{dept.name}</span>
+      </nav>
+
+      <div class="flex items-center gap-4 mb-4">
+        <div
+          class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-bold"
+          style={`background-color: ${deptColor}20; color: ${deptColor}`}
+        >
+          {paddedNum}
+        </div>
+        <div>
+          <h1 class="text-h2 font-bold text-signal">{dept.name}</h1>
+          <p class="text-body text-mist">
+            {dept.agentCount} Agents &middot; #{dept.range}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agents by Tier -->
+  <section class="py-12 md:py-16">
+    <div class="container-content">
+      {sortedTiers.map(tier => (
+        <div class="mb-12 last:mb-0">
+          <h2 class="text-h3 font-bold text-[var(--text-primary)] mb-2">
+            Tier {tier} — {TIER_LABELS[tier] ?? `Tier ${tier}`}
+          </h2>
+          <p class="text-body-sm text-[var(--text-muted)] mb-6">
+            {byTier[tier].length} {byTier[tier].length === 1 ? 'agent' : 'agents'}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {byTier[tier].map(agent => (
+              <a href={`${import.meta.env.BASE_URL}team/${agent.slug}/`} class="block no-underline">
+                <AgentCard
+                  agentNumber={agent.agentNumber}
+                  code={agent.code}
+                  name={agent.role}
+                  department={agent.department}
+                  tier={agent.tier}
+                  nickname={agent.nickname ?? undefined}
+                  reportsTo={agent.reportsTo}
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import { DEPARTMENT_COLORS } from '../lib/constants';
+
+interface Props {
+  number: number;
+  name: string;
+  agentCount: number;
+  range: string;
+  description?: string;
+}
+
+const { number, name, agentCount, range, description } = Astro.props;
+const deptColor = DEPARTMENT_COLORS[name] ?? '#94A3B8';
+const paddedNum = String(number).padStart(2, '0');
+---
+
+<article
+  class="group relative rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-8 transition-all duration-250 hover:shadow-lg"
+  style={`border-bottom: 3px solid ${deptColor}`}
+>
+  <!-- Department icon placeholder -->
+  <div
+    class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl font-bold"
+    style={`background-color: ${deptColor}15; color: ${deptColor}`}
+  >
+    {paddedNum}
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-h3 font-bold text-[var(--text-primary)] mb-1">{name}</h3>
+  <p class="text-body-sm text-[var(--text-muted)] mb-3">
+    {agentCount} Agents &middot; #{range}
+  </p>
+
+  <!-- Description -->
+  {description && (
+    <p class="text-body-sm text-[var(--text-secondary)] mb-4">{description}</p>
+  )}
+
+  <!-- CTA -->
+  <span class="inline-flex items-center gap-1 text-body-sm font-medium text-[var(--accent-text)] group-hover:text-quantum transition-colors">
+    Explore Department
+    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </span>
+</article>

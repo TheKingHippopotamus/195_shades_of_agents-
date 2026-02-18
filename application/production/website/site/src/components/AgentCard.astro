@@ -1,0 +1,74 @@
+---
+import { DEPARTMENT_COLORS, TIER_COLORS, TIER_LABELS } from '../lib/constants';
+
+interface Props {
+  agentNumber: number;
+  code: string;
+  name: string;
+  department: string;
+  tier: number;
+  nickname?: string;
+  reportsTo: string;
+  avatarUrl?: string;
+}
+
+const { agentNumber, code, name, department, tier, nickname, reportsTo, avatarUrl } = Astro.props;
+
+const deptColor = DEPARTMENT_COLORS[department] ?? '#94A3B8';
+const tierColor = TIER_COLORS[tier] ?? '#94A3B8';
+const tierLabel = TIER_LABELS[tier] ?? `Tier ${tier}`;
+const initials = code.slice(0, 2).toUpperCase();
+const paddedNum = String(agentNumber).padStart(3, '0');
+---
+
+<article
+  class="group relative rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6 transition-all duration-250 hover:-translate-y-0.5 hover:shadow-lg hover:border-quantum/20"
+  aria-label={`Agent ${paddedNum}: ${code}, ${name}`}
+>
+  <!-- Avatar -->
+  <div class="mb-4">
+    {avatarUrl ? (
+      <img
+        src={avatarUrl}
+        alt={`${name} avatar`}
+        class="w-16 h-16 rounded-full object-cover ring-2"
+        style={`--tw-ring-color: ${deptColor}`}
+        loading="lazy"
+      />
+    ) : (
+      <div
+        class="w-16 h-16 rounded-full flex items-center justify-center text-lg font-semibold ring-2"
+        style={`background-color: ${deptColor}20; color: ${deptColor}; --tw-ring-color: ${deptColor}`}
+      >
+        {initials}
+      </div>
+    )}
+  </div>
+
+  <!-- Name & Role -->
+  <h4 class="text-h4 font-bold text-[var(--text-primary)] mb-1">
+    {nickname ? `"${nickname}"` : code}
+  </h4>
+  <p class="text-body-sm text-[var(--text-secondary)] mb-3">{name}</p>
+
+  <!-- Badges -->
+  <div class="flex flex-wrap gap-2 mb-3">
+    <span
+      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-badge font-semibold text-white uppercase tracking-wider"
+      style={`background-color: ${deptColor}`}
+    >
+      {department}
+    </span>
+    <span
+      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-badge font-semibold uppercase tracking-wider"
+      style={`background-color: ${tierColor}; color: ${tier <= 2 ? '#0F172A' : '#FFFFFF'}`}
+    >
+      {tierLabel}
+    </span>
+  </div>
+
+  <!-- Meta -->
+  <p class="text-caption text-[var(--text-muted)] font-mono">
+    Agent #{paddedNum} &middot; Reports to: {reportsTo}
+  </p>
+</article>
