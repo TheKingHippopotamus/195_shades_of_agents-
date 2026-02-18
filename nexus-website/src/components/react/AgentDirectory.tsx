@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import GameBadgeFrame from "./GameBadgeFrame";
 
 interface Agent {
   agent_number: string;
@@ -181,28 +182,17 @@ export default function AgentDirectory() {
               <a
                 key={agent.code}
                 href={`/195_shades_of_agents-/agents/${agent.code.toLowerCase()}/`}
-                className="nexus-card p-4 block group"
+                className="nexus-card p-3 block group"
               >
-                <div className="flex items-start gap-3">
-                  <div
-                    className="h-12 w-12 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold overflow-hidden"
-                    style={{ backgroundColor: `${color}20`, border: `2px solid ${color}` }}
-                  >
-                    <img
-                      src={avatarSrc}
-                      alt={`${agent.code} avatar`}
-                      width={48}
-                      height={48}
-                      className="h-12 w-12 rounded-full object-cover"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.style.display = "none";
-                        const parent = target.parentElement;
-                        if (parent) {
-                          parent.style.color = color;
-                          parent.textContent = agent.agent_number;
-                        }
-                      }}
+                <div className="flex items-start gap-1">
+                  <div className="flex-shrink-0">
+                    <GameBadgeFrame
+                      avatarSrc={avatarSrc}
+                      agentCode={agent.code}
+                      tierNumber={agent.tier.number}
+                      departmentNumber={parseInt(agent.department_number, 10)}
+                      departmentColor={color}
+                      size="sm"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
