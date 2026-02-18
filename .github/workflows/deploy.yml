@@ -22,7 +22,7 @@ concurrency:
 
 defaults:
   run:
-    working-directory: nexus-website
+    working-directory: application/production/nexus-platform-e2e/nexus-website
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: nexus-website/package-lock.json
+          cache-dependency-path: application/production/nexus-platform-e2e/nexus-website/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -56,6 +56,7 @@ jobs:
       - name: Pre-build — Generate agent data
         run: npx tsx scripts/build-agent-data.ts
         env:
+          NEXUS_REPO_ROOT: ${{ github.workspace }}
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
@@ -63,6 +64,7 @@ jobs:
       - name: Build Astro site
         run: npm run build
         env:
+          NEXUS_REPO_ROOT: ${{ github.workspace }}
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
@@ -74,7 +76,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: nexus-website/dist
+          path: application/production/nexus-platform-e2e/nexus-website/dist
 
   deploy:
     needs: build

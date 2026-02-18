@@ -44,10 +44,10 @@ const client = createClient({
   token,
 });
 
-// Output directory — relative to the Astro project root
+// Output directory — cross-tree reference from local-dev to production nexus-website
 const OUTPUT_DIR = resolve(
   __dirname,
-  "../../website/site/src/data/sanity"
+  "../../../production/nexus-platform-e2e/nexus-website/src/data/sanity"
 );
 
 async function fetchAndWrite(): Promise<void> {

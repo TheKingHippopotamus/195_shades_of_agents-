@@ -1,14 +1,14 @@
 /**
  * NEXUS AI — Contact Submission Receiver
  * Cloudflare Worker — receives FormSubmit.co webhooks and commits
- * each submission to nexus-website/src/data/submissions.json in GitHub.
+ * each submission to application/production/nexus-platform-e2e/nexus-website/src/data/submissions.json in GitHub.
  *
  * Environment variables required (set in Cloudflare dashboard):
  *   GITHUB_PAT  — Fine-grained PAT with Contents:write on the repo
  */
 
 const REPO   = "TheKingHippopotamus/195_shades_of_agents-";
-const FILE   = "nexus-website/src/data/submissions.json";
+const FILE   = "application/production/nexus-platform-e2e/nexus-website/src/data/submissions.json";
 const BRANCH = "main";
 const API    = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
 

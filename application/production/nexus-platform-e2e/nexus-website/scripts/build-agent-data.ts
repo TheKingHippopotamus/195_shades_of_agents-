@@ -2,8 +2,8 @@ import { globSync } from "glob";
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { resolve, basename, dirname } from "path";
 
-// Resolve the agents directory relative to the project root (one level up from nexus-website)
-const PROJECT_ROOT = resolve(import.meta.dirname, "../..");
+// Resolve the repo root — nexus-website lives at application/production/nexus-platform-e2e/nexus-website/
+const PROJECT_ROOT = process.env.NEXUS_REPO_ROOT || resolve(import.meta.dirname, "../../../../..");
 const AGENTS_DIR = resolve(PROJECT_ROOT, "agents");
 const SRC_DATA_DIR = resolve(import.meta.dirname, "../src/data");
 const PUBLIC_DATA_DIR = resolve(import.meta.dirname, "../public/data");

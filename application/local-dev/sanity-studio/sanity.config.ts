@@ -7,7 +7,7 @@ export default defineConfig({
   name: "nexus-ai-corporate-website",
   title: "NEXUS AI Corporate Website",
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || "your-project-id",
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || "bpcu3ey0",
   dataset: process.env.SANITY_STUDIO_DATASET || "production",
 
   plugins: [structureTool(), visionTool()],

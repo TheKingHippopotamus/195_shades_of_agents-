@@ -376,7 +376,7 @@ function gen(a: Agent): string {
 }
 
 // ── Parse and generate ────────────────────────────────────────────────────────
-const agentsDir = join(__dirname,"../../agents");
+const agentsDir = join(__dirname,"../../../../../agents");
 const outDir = join(__dirname,"../public/brand/avatars/agents");
 mkdirSync(outDir, {recursive:true});
 
