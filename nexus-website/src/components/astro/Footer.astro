@@ -18,6 +18,237 @@ import { FOOTER_NAV } from "../../lib/navigation";
         <p class="text-sm text-[var(--text-secondary)] max-w-xs">
           195 autonomous agents. 20 departments. One complete AI organization.
         </p>
+        <!-- THE KING -->
+        <div class="mt-4 flex items-center gap-3">
+          <!-- THE MOST INSANE SVG IN THE ROOM -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="72" height="72" style="flex-shrink:0">
+            <defs>
+              <radialGradient id="khbg" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1a0040"/>
+                <stop offset="65%" stop-color="#06000f"/>
+                <stop offset="100%" stop-color="#000005"/>
+              </radialGradient>
+              <radialGradient id="khskin" cx="42%" cy="38%" r="65%">
+                <stop offset="0%" stop-color="#a09ab8"/>
+                <stop offset="45%" stop-color="#7a6b9a"/>
+                <stop offset="100%" stop-color="#4a3b6e"/>
+              </radialGradient>
+              <radialGradient id="khjaw" cx="50%" cy="20%" r="70%">
+                <stop offset="0%" stop-color="#8a7caa"/>
+                <stop offset="100%" stop-color="#5a4a78"/>
+              </radialGradient>
+              <radialGradient id="khaura" cx="50%" cy="55%" r="50%">
+                <stop offset="0%" stop-color="#ffd700" stop-opacity="0.55"/>
+                <stop offset="45%" stop-color="#ffd700" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="khcrown" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fffde0"/>
+                <stop offset="20%" stop-color="#ffd700"/>
+                <stop offset="60%" stop-color="#daa520"/>
+                <stop offset="100%" stop-color="#8b6914"/>
+              </linearGradient>
+              <filter id="khg" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="khbig" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="khsm" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <style>
+                @keyframes khspin1{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+                @keyframes khspin2{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+                @keyframes khpulse{0%,100%{opacity:.5}50%{opacity:1}}
+                @keyframes khspark{0%,100%{opacity:.15}50%{opacity:.95}}
+                @keyframes khbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.5px)}}
+                .kho1{transform-origin:60px 68px;animation:khspin1 9s linear infinite}
+                .kho2{transform-origin:60px 68px;animation:khspin2 13s linear infinite}
+                .kho3{transform-origin:60px 68px;animation:khspin1 6s linear infinite}
+                .khp{animation:khpulse 2.2s ease-in-out infinite}
+                .khs{animation:khspark 1.6s ease-in-out infinite}
+                .khb{animation:khbob 3s ease-in-out infinite}
+              </style>
+            </defs>
+
+            <!-- Background -->
+            <rect width="120" height="120" rx="18" fill="url(#khbg)"/>
+
+            <!-- Star field -->
+            <circle cx="9"  cy="9"  r=".9" fill="#ffd700" class="khs" style="animation-delay:.0s"/>
+            <circle cx="22" cy="17" r=".6" fill="#fff9c4" class="khs" style="animation-delay:.4s"/>
+            <circle cx="98" cy="8"  r=".9" fill="#ffd700" class="khs" style="animation-delay:.8s"/>
+            <circle cx="111"cy="24" r=".6" fill="#fff9c4" class="khs" style="animation-delay:1.1s"/>
+            <circle cx="7"  cy="58" r=".7" fill="#ffd700" class="khs" style="animation-delay:.6s"/>
+            <circle cx="113"cy="62" r=".7" fill="#ffd700" class="khs" style="animation-delay:1.3s"/>
+            <circle cx="14" cy="93" r=".5" fill="#fff9c4" class="khs" style="animation-delay:.9s"/>
+            <circle cx="107"cy="96" r=".8" fill="#ffd700" class="khs" style="animation-delay:.2s"/>
+            <circle cx="50" cy="4"  r=".6" fill="#fff9c4" class="khs" style="animation-delay:.7s"/>
+            <circle cx="72" cy="6"  r=".5" fill="#ffd700" class="khs" style="animation-delay:1.5s"/>
+            <circle cx="35" cy="112"r=".6" fill="#b026ff" class="khs" style="animation-delay:.3s"/>
+            <circle cx="85" cy="114"r=".6" fill="#00d9ff" class="khs" style="animation-delay:1.0s"/>
+
+            <!-- Golden aura behind head -->
+            <ellipse cx="60" cy="70" rx="50" ry="44" fill="url(#khaura)" filter="url(#khbig)"/>
+
+            <!-- Orbit ring 1 — tilted ellipse, golden -->
+            <g class="kho1">
+              <ellipse cx="60" cy="68" rx="54" ry="13" fill="none" stroke="#ffd700" stroke-width=".8" opacity=".4" stroke-dasharray="5 3"/>
+              <circle cx="114" cy="68" r="3"   fill="#ffd700" filter="url(#khg)"/>
+              <circle cx="6"   cy="68" r="2"   fill="#ffd700" opacity=".7"/>
+              <circle cx="60"  cy="55" r="2.5" fill="#fff176" filter="url(#khsm)"/>
+              <circle cx="60"  cy="81" r="2"   fill="#ffd700" opacity=".7"/>
+            </g>
+
+            <!-- Orbit ring 2 — purple, reverse -->
+            <g class="kho2">
+              <ellipse cx="60" cy="68" rx="40" ry="10" fill="none" stroke="#b026ff" stroke-width=".7" opacity=".5" stroke-dasharray="3 3" transform="rotate(-25 60 68)"/>
+              <circle cx="100" cy="68" r="2" fill="#b026ff" opacity=".9" filter="url(#khsm)"/>
+              <circle cx="20"  cy="68" r="2" fill="#00d9ff" opacity=".9" filter="url(#khsm)"/>
+            </g>
+
+            <!-- Orbit ring 3 — cyan, tiny, fast -->
+            <g class="kho3">
+              <ellipse cx="60" cy="68" rx="28" ry="7" fill="none" stroke="#00d9ff" stroke-width=".5" opacity=".4" transform="rotate(15 60 68)"/>
+              <circle cx="88" cy="68" r="1.5" fill="#00d9ff" opacity=".8" filter="url(#khsm)"/>
+              <circle cx="32" cy="68" r="1.5" fill="#ff2d55" opacity=".8" filter="url(#khsm)"/>
+            </g>
+
+            <!-- THE HIPPO (bob gently) -->
+            <g class="khb">
+
+              <!-- Lower jaw — massive hippo jaw -->
+              <path d="M 20,87 Q 18,108 60,114 Q 102,108 100,87 Q 97,78 80,76 Q 60,74 40,76 Q 25,78 20,87 Z" fill="url(#khjaw)"/>
+
+              <!-- Upper head — wide and flat on top like a real hippo -->
+              <path d="M 27,72 Q 26,40 60,36 Q 94,40 93,72 Q 93,82 78,84 Q 60,86 42,84 Q 29,82 27,72 Z" fill="url(#khskin)"/>
+
+              <!-- Ear left -->
+              <ellipse cx="29" cy="47" rx="9" ry="6" fill="#7a6b9a" transform="rotate(-22 29 47)"/>
+              <ellipse cx="29" cy="47" rx="5" ry="3" fill="#5a4a78" transform="rotate(-22 29 47)"/>
+
+              <!-- Ear right -->
+              <ellipse cx="91" cy="47" rx="9" ry="6" fill="#7a6b9a" transform="rotate(22 91 47)"/>
+              <ellipse cx="91" cy="47" rx="5" ry="3" fill="#5a4a78" transform="rotate(22 91 47)"/>
+
+              <!-- Nostrils — high up (hippo feature!) -->
+              <ellipse cx="50" cy="54" rx="7" ry="4.5" fill="#20103a"/>
+              <ellipse cx="70" cy="54" rx="7" ry="4.5" fill="#20103a"/>
+              <ellipse cx="48" cy="53" rx="2.5" ry="1.8" fill="#3a2858"/>
+              <ellipse cx="68" cy="53" rx="2.5" ry="1.8" fill="#3a2858"/>
+
+              <!-- Circuit skin etchings -->
+              <polyline points="34,66 43,66 43,73" fill="none" stroke="#6040a0" stroke-width=".5" opacity=".6"/>
+              <polyline points="86,66 77,66 77,73" fill="none" stroke="#6040a0" stroke-width=".5" opacity=".6"/>
+              <circle cx="43" cy="66" r="1.2" fill="#8060c0" opacity=".7"/>
+              <circle cx="77" cy="66" r="1.2" fill="#8060c0" opacity=".7"/>
+              <line x1="53" y1="76" x2="67" y2="76" stroke="#6040a0" stroke-width=".4" opacity=".5"/>
+
+              <!-- Eyes — small beady hippo eyes, but burning gold -->
+              <circle cx="43" cy="63" r="6.5" fill="#080015"/>
+              <circle cx="77" cy="63" r="6.5" fill="#080015"/>
+              <circle cx="43" cy="63" r="4.5" fill="#6b0000"/>
+              <circle cx="77" cy="63" r="4.5" fill="#6b0000"/>
+              <circle cx="43" cy="63" r="2.8" fill="#ffd700" filter="url(#khg)"/>
+              <circle cx="77" cy="63" r="2.8" fill="#ffd700" filter="url(#khg)"/>
+              <circle cx="43" cy="63" r="1.2" fill="#fffde0"/>
+              <circle cx="77" cy="63" r="1.2" fill="#fffde0"/>
+              <circle cx="44.5" cy="61.5" r=".8" fill="#ffffff"/>
+              <circle cx="78.5" cy="61.5" r=".8" fill="#ffffff"/>
+
+              <!-- Wide hippo mouth line -->
+              <path d="M 30,89 Q 45,95 60,96 Q 75,95 90,89" fill="none" stroke="#1a0a2e" stroke-width="2.8" stroke-linecap="round"/>
+
+              <!-- Teeth -->
+              <rect x="49" y="90" width="5.5" height="5" rx="1.2" fill="#fffde7" opacity=".95"/>
+              <rect x="57" y="91" width="5.5" height="4" rx="1.2" fill="#fffde7" opacity=".95"/>
+              <rect x="65" y="90" width="5.5" height="5" rx="1.2" fill="#fffde7" opacity=".95"/>
+
+              <!-- TUSKS — iconic hippo -->
+              <path d="M 33,95 Q 25,103 27,110 Q 31,116 35,110 Q 38,103 36,95 Z" fill="#fffde7"/>
+              <path d="M 87,95 Q 95,103 93,110 Q 89,116 85,110 Q 82,103 84,95 Z" fill="#fffde7"/>
+              <line x1="33" y1="96" x2="28" y2="109" stroke="#d4c880" stroke-width="1.2" opacity=".5"/>
+              <line x1="87" y1="96" x2="92" y2="109" stroke="#d4c880" stroke-width="1.2" opacity=".5"/>
+
+              <!-- CROWN — 7 spikes of pure glory -->
+              <!-- Spike shadows for depth -->
+              <polygon points="29,38 33,38 31,17" fill="#8b6914" opacity=".5"/>
+              <polygon points="38,38 43,38 40.5,23" fill="#8b6914" opacity=".5"/>
+              <polygon points="47,38 52,38 49.5,26" fill="#8b6914" opacity=".5"/>
+              <polygon points="56,38 64,38 60,6"   fill="#8b6914" opacity=".5"/>
+              <polygon points="68,38 73,38 70.5,26" fill="#8b6914" opacity=".5"/>
+              <polygon points="77,38 82,38 79.5,23" fill="#8b6914" opacity=".5"/>
+              <polygon points="87,38 91,38 89,17" fill="#8b6914" opacity=".5"/>
+
+              <!-- Spikes -->
+              <polygon points="27,38 33,38 30,16"   fill="url(#khcrown)" filter="url(#khg)"/>
+              <polygon points="36,38 43,38 39.5,22" fill="url(#khcrown)" filter="url(#khg)"/>
+              <polygon points="46,38 52,38 49,25"   fill="url(#khcrown)" filter="url(#khg)"/>
+              <polygon points="55,38 65,38 60,4"    fill="url(#khcrown)" filter="url(#khbig)"/>
+              <polygon points="68,38 74,38 71,25"   fill="url(#khcrown)" filter="url(#khg)"/>
+              <polygon points="77,38 84,38 80.5,22" fill="url(#khcrown)" filter="url(#khg)"/>
+              <polygon points="87,38 93,38 90,16"   fill="url(#khcrown)" filter="url(#khg)"/>
+
+              <!-- Crown base band -->
+              <rect x="23" y="36" width="74" height="13" rx="2.5" fill="url(#khcrown)" filter="url(#khg)"/>
+              <rect x="25" y="38" width="70" height="4"  rx="1"   fill="#ffd700" opacity=".45"/>
+              <rect x="25" y="43" width="70" height="2"  rx="1"   fill="#8b6914" opacity=".5"/>
+
+              <!-- Filigree circles on band -->
+              <circle cx="32" cy="42" r="2.2" fill="#ffd700" opacity=".8"/>
+              <circle cx="44" cy="42" r="2.2" fill="#ffd700" opacity=".8"/>
+              <circle cx="56" cy="42" r="2.2" fill="#ffd700" opacity=".8"/>
+              <circle cx="64" cy="42" r="2.2" fill="#ffd700" opacity=".8"/>
+              <circle cx="76" cy="42" r="2.2" fill="#ffd700" opacity=".8"/>
+              <circle cx="88" cy="42" r="2.2" fill="#ffd700" opacity=".8"/>
+
+              <!-- Royal K monogram -->
+              <text x="60" y="45" text-anchor="middle" font-size="7" font-family="Georgia,serif" font-weight="bold" fill="#060010" opacity=".75">K</text>
+
+              <!-- Gem on every spike tip — 7 different gems -->
+              <polygon points="30,16 33,20 30,24 27,20" fill="#ff2d55" filter="url(#khg)"/>
+              <polygon points="39.5,22 42.5,26 39.5,30 36.5,26" fill="#ff8c00" filter="url(#khsm)"/>
+              <polygon points="49,25 52,29 49,33 46,29"   fill="#00ff88" filter="url(#khsm)"/>
+              <!-- Centre gem — biggest, diamond white, mega glow -->
+              <polygon points="60,4 65,10 60,16 55,10" fill="#ffffff" filter="url(#khbig)"/>
+              <polygon points="60,5 64,10 60,14 56,10" fill="#e8f8ff"/>
+              <circle cx="60" cy="10" r="3.5" fill="#ffffff" filter="url(#khbig)" class="khp"/>
+              <polygon points="71,25 74,29 71,33 68,29"   fill="#0066ff" filter="url(#khsm)"/>
+              <polygon points="80.5,22 83.5,26 80.5,30 77.5,26" fill="#b026ff" filter="url(#khsm)"/>
+              <polygon points="90,16 93,20 90,24 87,20" fill="#00d9ff" filter="url(#khg)"/>
+
+              <!-- Lightning from crown centre -->
+              <path d="M 60,4 L 54,-2 L 57,-5 L 52,-10" fill="none" stroke="#ffd700" stroke-width="1.8" stroke-linecap="round" filter="url(#khg)"/>
+              <path d="M 60,4 L 66,-2 L 63,-5 L 68,-10" fill="none" stroke="#fff176" stroke-width="1.8" stroke-linecap="round" filter="url(#khg)"/>
+
+              <!-- Sparkle pulse above crown -->
+              <circle cx="60" cy="2" r="4" fill="#ffd700" filter="url(#khbig)" class="khp"/>
+
+              <!-- Royal fur/collar -->
+              <path d="M 33,108 Q 60,120 87,108" fill="none" stroke="#9b7030" stroke-width="3.5" stroke-linecap="round" opacity=".55"/>
+              <circle cx="39" cy="111" r="2.2" fill="#7b5020" opacity=".5"/>
+              <circle cx="50" cy="115" r="2.5" fill="#9b7030" opacity=".5"/>
+              <circle cx="60" cy="117" r="2.5" fill="#7b5020" opacity=".5"/>
+              <circle cx="70" cy="115" r="2.5" fill="#9b7030" opacity=".5"/>
+              <circle cx="81" cy="111" r="2.2" fill="#7b5020" opacity=".5"/>
+
+              <!-- Data streams flanking -->
+              <line x1="8"  y1="70" x2="20" y2="70" stroke="#00d9ff" stroke-width=".8" opacity=".5" stroke-dasharray="2 2"/>
+              <line x1="100"y1="70" x2="112"y2="70" stroke="#00d9ff" stroke-width=".8" opacity=".5" stroke-dasharray="2 2"/>
+              <line x1="8"  y1="74" x2="18" y2="74" stroke="#b026ff" stroke-width=".6" opacity=".4" stroke-dasharray="1 2"/>
+              <line x1="102"y1="74" x2="112"y2="74" stroke="#b026ff" stroke-width=".6" opacity=".4" stroke-dasharray="1 2"/>
+
+            </g><!-- end bob group -->
+          </svg>
+          <div>
+            <p class="text-xs text-[var(--text-secondary)] leading-tight">And ONE King.</p>
+            <p class="text-sm font-bold text-gradient leading-tight">THE Hippopotamus.</p>
+          </div>
+        </div>
       </div>
 
       <!-- Company -->
