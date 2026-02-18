@@ -207,8 +207,6 @@ function Tier2Frame({ vb }: { vb: number }) {
   const topY = y;
   const rightX = x + size;
   const bottomY = y + size;
-  const leftX = x;
-
   return (
     <>
       <defs>
@@ -638,7 +636,7 @@ interface BadgeProps {
   departmentColor: string;
 }
 
-function TierBadge({ size, tierNumber, departmentColor }: BadgeProps) {
+function TierBadge({ size, tierNumber }: BadgeProps) {
   const badgePx = size === 'sm' ? 16 : 20;
   const tierColor = TIER_COLORS[tierNumber] ?? '#94A3B8';
   const fontSize = size === 'sm' ? 5 : 6;
@@ -722,7 +720,6 @@ function SpecialtyBadge({ size, tierNumber, departmentNumber, departmentColor }:
   const fontSize = size === 'sm' ? 5 : 6;
   const bottomOffset = size === 'sm' ? -6 : -8;
   const label = DEPT_SPECIALTY[departmentNumber] ?? 'SYS';
-  const tierColor = TIER_COLORS[tierNumber] ?? '#94A3B8';
 
   // Special overrides
   const bg = tierNumber === 8 ? '#FF4655' : tierNumber === 9 ? '#8800FF' : departmentColor;
@@ -794,8 +791,6 @@ export default function GameBadgeFrame({
     8: <Tier8Frame vb={vb} />,
     9: <Tier9Frame vb={vb} />,
   };
-
-  const tierColor = TIER_COLORS[tierNumber] ?? '#94A3B8';
 
   return (
     <div
