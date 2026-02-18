@@ -3,6 +3,17 @@ import { MAIN_NAV } from "../../lib/navigation";
 import ThemeToggle from "../react/ThemeToggle.tsx";
 
 const currentPath = Astro.url.pathname;
+
+// Helper: is this nav item or any of its children the active route?
+function isActive(item: typeof MAIN_NAV[number]): boolean {
+  if (currentPath === item.href || currentPath.startsWith(item.href)) return true;
+  if (item.children) {
+    return item.children.some(
+      (c) => currentPath === c.href || currentPath.startsWith(c.href)
+    );
+  }
+  return false;
+}
 ---
 
 <header
@@ -26,19 +37,89 @@ const currentPath = Astro.url.pathname;
       <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center gap-1">
         {
-          MAIN_NAV.map((item) => (
-            <a
-              href={item.href}
-              class:list={[
-                "px-3 py-2 text-sm font-medium rounded-lg transition-colors",
-                currentPath.startsWith(item.href)
-                  ? "text-quantum-blue bg-quantum-blue/10"
-                  : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
-              ]}
-            >
-              {item.label}
-            </a>
-          ))
+          MAIN_NAV.map((item) => {
+            const active = isActive(item);
+            const hasChildren = item.children && item.children.length > 0;
+
+            if (!hasChildren) {
+              return (
+                <a
+                  href={item.href}
+                  class:list={[
+                    "px-3 py-2 text-sm font-medium rounded-lg transition-colors",
+                    active
+                      ? "text-quantum-blue bg-quantum-blue/10"
+                      : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
+                  ]}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+
+            // Item with dropdown
+            return (
+              <div class="relative group">
+                {/* Trigger button — acts as link + dropdown opener */}
+                <a
+                  href={item.href}
+                  class:list={[
+                    "inline-flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors",
+                    active
+                      ? "text-quantum-blue bg-quantum-blue/10"
+                      : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
+                  ]}
+                >
+                  {item.label}
+                  {/* Chevron */}
+                  <svg
+                    class="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </a>
+
+                {/* Dropdown panel */}
+                <div
+                  class="absolute left-0 top-full pt-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150"
+                  role="menu"
+                  aria-label={`${item.label} submenu`}
+                >
+                  <div
+                    class="min-w-[180px] rounded-xl border border-[rgba(0,217,255,0.15)] bg-[rgba(3,1,8,0.92)] backdrop-blur-xl py-1.5 shadow-xl"
+                    style="box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,217,255,0.08);"
+                  >
+                    {item.children!.map((child) => {
+                      const childActive =
+                        currentPath === child.href ||
+                        currentPath.startsWith(child.href);
+                      return (
+                        <a
+                          href={child.href}
+                          role="menuitem"
+                          class:list={[
+                            "block px-4 py-2 text-sm font-medium transition-colors",
+                            childActive
+                              ? "text-quantum-blue bg-quantum-blue/10"
+                              : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[rgba(0,217,255,0.06)]",
+                          ]}
+                        >
+                          {child.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            );
+          })
         }
       </div>
 
@@ -69,19 +150,48 @@ const currentPath = Astro.url.pathname;
   >
     <div class="px-4 py-3 space-y-1">
       {
-        MAIN_NAV.map((item) => (
-          <a
-            href={item.href}
-            class:list={[
-              "block px-3 py-2 text-sm font-medium rounded-lg transition-colors",
-              currentPath.startsWith(item.href)
-                ? "text-quantum-blue bg-quantum-blue/10"
-                : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
-            ]}
-          >
-            {item.label}
-          </a>
-        ))
+        MAIN_NAV.map((item) => {
+          const active = isActive(item);
+          const hasChildren = item.children && item.children.length > 0;
+
+          return (
+            <div>
+              <a
+                href={item.href}
+                class:list={[
+                  "block px-3 py-2 text-sm font-medium rounded-lg transition-colors",
+                  active
+                    ? "text-quantum-blue bg-quantum-blue/10"
+                    : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
+                ]}
+              >
+                {item.label}
+              </a>
+              {hasChildren && (
+                <div class="ml-4 mt-0.5 space-y-0.5 border-l border-[rgba(0,217,255,0.15)] pl-3">
+                  {item.children!.map((child) => {
+                    const childActive =
+                      currentPath === child.href ||
+                      currentPath.startsWith(child.href);
+                    return (
+                      <a
+                        href={child.href}
+                        class:list={[
+                          "block px-3 py-1.5 text-sm rounded-lg transition-colors",
+                          childActive
+                            ? "text-quantum-blue"
+                            : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
+                        ]}
+                      >
+                        {child.label}
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          );
+        })
       }
     </div>
   </div>

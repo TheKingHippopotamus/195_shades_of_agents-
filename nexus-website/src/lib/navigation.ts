@@ -19,15 +19,12 @@ export const MAIN_NAV: NavItem[] = [
       { label: "Our Story", href: `${BASE}/about/` },
       { label: "Leadership", href: `${BASE}/about/leadership/` },
       { label: "Culture", href: `${BASE}/about/culture/` },
+      { label: "Org Chart", href: `${BASE}/about/org-chart/` },
     ],
   },
   {
-    label: "Agents",
-    href: `${BASE}/agents/`,
-  },
-  {
-    label: "Departments",
-    href: `${BASE}/departments/`,
+    label: "Industries",
+    href: `${BASE}/industries/`,
   },
   {
     label: "Capabilities",
@@ -40,12 +37,12 @@ export const MAIN_NAV: NavItem[] = [
     ],
   },
   {
-    label: "How We Work",
-    href: `${BASE}/how-we-work/`,
-  },
-  {
     label: "Network",
     href: `${BASE}/network/`,
+  },
+  {
+    label: "Blog",
+    href: `${BASE}/blog/`,
   },
   {
     label: "Contact",
