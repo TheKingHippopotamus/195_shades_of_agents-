@@ -3,6 +3,7 @@ import PageLayout from "../../layouts/PageLayout.astro";
 import DepartmentBadge from "../../components/astro/DepartmentBadge.astro";
 import TierBadge from "../../components/astro/TierBadge.astro";
 import JsonLd from "../../components/astro/JsonLd.astro";
+import GameBadgeFrame from "../../components/react/GameBadgeFrame.tsx";
 import { getDepartmentColor } from "../../lib/department-colors";
 import { marked } from "marked";
 
@@ -76,26 +77,16 @@ const directReports = allAgents.filter((a: any) => a.reports_to === agent.code);
 
     <!-- Header -->
     <div class="flex items-start gap-6 mb-10">
-      <!-- Unique Agent Avatar -->
-      <div class="flex-shrink-0 relative">
-        <img
-          src={`/195_shades_of_agents-/brand/avatars/agents/${agent.code}.svg`}
-          alt={`${agent.personal?.nickname || agent.code} — NEXUS AI Agent`}
-          class="h-24 w-24 rounded-2xl"
-          style={`border: 2.5px solid ${deptColor}; background-color: ${deptColor}08;`}
-          width="96"
-          height="96"
-          loading="eager"
-          onerror={`this.src='/195_shades_of_agents-/brand/avatars/tier-${agent.tier?.number ?? 5}-${(['csuite','vp','director','manager','staff-plus','senior','mid','junior','governance','special'])[agent.tier?.number ?? 5]}.svg'; this.onerror=null;`}
-        />
-        <!-- Agent number badge -->
-        <div
-          class="absolute -bottom-2 -right-2 h-7 w-7 rounded-full flex items-center justify-center text-[10px] font-mono font-bold"
-          style={`background-color: ${deptColor}; color: #030108;`}
-        >
-          {String(agent.agent_number).padStart(3,'0').slice(-3)}
-        </div>
-      </div>
+      <!-- Unique Agent Avatar with Gaming Badge Frame -->
+      <GameBadgeFrame
+        client:load
+        avatarSrc={`/195_shades_of_agents-/brand/avatars/agents/${agent.code}.svg`}
+        agentCode={agent.code}
+        tierNumber={agent.tier?.number ?? 5}
+        departmentNumber={parseInt(agent.department_number ?? '1', 10)}
+        departmentColor={deptColor}
+        size="lg"
+      />
 
       <div class="flex-1">
         <div class="flex flex-wrap items-center gap-2 mb-2">

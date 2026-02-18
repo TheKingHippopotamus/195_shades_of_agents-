@@ -129,11 +129,22 @@ const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encod
       </nav>
 
       <!-- Category Hero Banner -->
-      <div class={`blog-hero-banner ${bannerClass}`} aria-hidden="true">
+      <div class={`blog-hero-banner ${bannerClass}`}>
         <span class="blog-hero-banner-label">{bannerLabel}</span>
         {post.category && (
           <span class="blog-hero-banner-category">{post.category}</span>
         )}
+        <!-- Center overlay: large title text -->
+        <div class="blog-hero-banner-title">
+          <div style="text-align:center;z-index:5;position:relative;padding:0 2rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;font-family:ui-monospace,monospace;color:rgba(0,217,255,0.55);margin-bottom:0.6rem;">
+              NEXUS AI — TECHNICAL BLOG
+            </div>
+            <div style="font-size:1.6rem;font-weight:800;letter-spacing:-0.01em;color:#fff;text-shadow:0 0 40px rgba(0,217,255,0.4),0 2px 8px rgba(0,0,0,0.8);line-height:1.2;max-width:680px;">
+              {post.title}
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Header -->
