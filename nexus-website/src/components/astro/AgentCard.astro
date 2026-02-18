@@ -26,6 +26,16 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Tier names for fallback avatars
+const TIER_NAMES: Record<number, string> = {
+  0: "csuite", 1: "vp", 2: "director", 3: "manager",
+  4: "staff-plus", 5: "senior", 6: "mid", 7: "junior",
+  8: "governance", 9: "special",
+};
+
+const agentAvatarSrc = `${base}/brand/avatars/agents/${code}.svg`;
+const fallbackAvatarSrc = `${base}/brand/avatars/tier-${tierNumber}-${TIER_NAMES[tierNumber] || 'senior'}.svg`;
 ---
 
 <a
@@ -33,12 +43,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   class="nexus-card p-4 block group"
 >
   <div class="flex items-start gap-3">
-    <!-- Avatar -->
-    <div
-      class="h-12 w-12 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-sm"
-      style={`background-color: ${departmentColor}20; border: 2px solid ${departmentColor}`}
-    >
-      {code.substring(0, 2)}
+    <!-- Agent Avatar (unique SVG face) -->
+    <div class="flex-shrink-0">
+      <img
+        src={agentAvatarSrc}
+        alt={`${nickname || code} avatar`}
+        class="h-14 w-14 rounded-full"
+        style={`border: 2px solid ${departmentColor}`}
+        loading="lazy"
+        width="56"
+        height="56"
+        onerror={`this.src='${fallbackAvatarSrc}'; this.onerror=null;`}
+      />
     </div>
 
     <div class="flex-1 min-w-0">

@@ -1,90 +1,362 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
+import "../../styles/blog-components.css";
 
 export async function getStaticPaths() {
   let posts: any[] = [];
   try {
     const data = await import("../../data/sanity/blog-posts.json");
     posts = data.default;
-  } catch { return []; }
+  } catch {
+    return [];
+  }
 
   return posts.map((post: any) => ({
     params: { slug: post.slug?.current || post.slug },
-    props: { post },
+    props: { post, allPosts: posts },
   }));
 }
 
-const { post } = Astro.props;
+const { post, allPosts } = Astro.props;
+
+// Calculate reading time from body HTML (strip tags, count words)
+function calcReadingTime(body: string | null | undefined): number {
+  if (!body) return 1;
+  const text = body.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const words = text.split(" ").filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+const readingTime = calcReadingTime(post.body);
+
+// Determine the agent page URL slug from the author code
+const authorSlug = post.author ? post.author.toLowerCase() : null;
+const authorUrl = authorSlug
+  ? `/195_shades_of_agents-/agents/${authorSlug}/`
+  : null;
+
+// Extract h2 headings from body HTML for table of contents
+function extractHeadings(body: string | null | undefined): { id: string; text: string }[] {
+  if (!body) return [];
+  const matches = [...body.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi)];
+  return matches.map((m, i) => {
+    const text = m[1].replace(/<[^>]+>/g, "").trim();
+    const id = `section-${i}-${text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+    return { id, text };
+  });
+}
+
+const headings = extractHeadings(post.body);
+
+// Inject heading IDs into body HTML so TOC anchors work
+function injectHeadingIds(body: string | null | undefined, headings: { id: string; text: string }[]): string {
+  if (!body || headings.length === 0) return body ?? "";
+  let result = body;
+  let idx = 0;
+  result = result.replace(/<h2([^>]*)>/gi, (_match: string, attrs: string) => {
+    if (idx >= headings.length) return `<h2${attrs}>`;
+    const id = headings[idx++].id;
+    // Remove existing id if any, then add ours
+    const cleanAttrs = attrs.replace(/\s*id="[^"]*"/gi, "");
+    return `<h2${cleanAttrs} id="${id}">`;
+  });
+  return result;
+}
+
+const bodyWithIds = injectHeadingIds(post.body, headings);
+
+// Determine hero banner CSS class from category
+function heroBannerClass(category: string | null | undefined): string {
+  if (!category) return "blog-hero-banner--engineering";
+  const c = category.toLowerCase();
+  if (c.includes("architect")) return "blog-hero-banner--architecture";
+  if (c.includes("ai") || c.includes("ml") || c.includes("machine")) return "blog-hero-banner--ai-ml";
+  if (c.includes("database") || c.includes("data")) return "blog-hero-banner--database";
+  if (c.includes("infrastructure") || c.includes("cloud") || c.includes("platform")) return "blog-hero-banner--infrastructure";
+  return "blog-hero-banner--engineering";
+}
+
+const bannerClass = heroBannerClass(post.category);
+
+// Hero banner label per category
+function heroBannerLabel(category: string | null | undefined): string {
+  if (!category) return "NEXUS.AI // ENGINEERING";
+  const c = category.toLowerCase();
+  if (c.includes("architect")) return "NEXUS.AI // ARCHITECTURE";
+  if (c.includes("ai") || c.includes("ml")) return "NEXUS.AI // AI/ML";
+  if (c.includes("database")) return "NEXUS.AI // DATABASE";
+  if (c.includes("infrastructure")) return "NEXUS.AI // INFRASTRUCTURE";
+  return "NEXUS.AI // ENGINEERING";
+}
+
+const bannerLabel = heroBannerLabel(post.category);
+
+// Get related posts (same category, different slug, limit 2)
+const relatedPosts = (allPosts as any[])
+  .filter((p: any) =>
+    (p.slug?.current || p.slug) !== (post.slug?.current || post.slug) &&
+    p.category === post.category
+  )
+  .slice(0, 2);
+
+// Fall back to any 2 other posts if no same-category posts
+const fallbackRelated = (allPosts as any[])
+  .filter((p: any) => (p.slug?.current || p.slug) !== (post.slug?.current || post.slug))
+  .slice(0, 2);
+
+const displayRelated = relatedPosts.length > 0 ? relatedPosts : fallbackRelated;
+
+// Current page URL for copy-link
+const currentUrl = `https://thekinghippopotamus.github.io/195_shades_of_agents-/blog/${post.slug?.current || post.slug}/`;
+const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(currentUrl)}`;
+const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
 ---
 
 <PageLayout
   title={post.title}
   description={post.excerpt || post.seo?.metaDescription || ""}
 >
-  <article class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-    <!-- Breadcrumbs -->
-    <nav class="mb-8 text-sm text-[var(--text-secondary)]">
-      <a href="/195_shades_of_agents-/" class="hover:text-quantum-blue">Home</a>
-      <span class="mx-2">/</span>
-      <a href="/195_shades_of_agents-/blog/" class="hover:text-quantum-blue">Blog</a>
-      <span class="mx-2">/</span>
-      <span class="text-[var(--text-primary)]">{post.title}</span>
-    </nav>
+  <div class="blog-content-wrapper">
+    <!-- Main Article -->
+    <article class="mx-auto max-w-3xl w-full px-4 sm:px-6 py-12 lg:py-20 xl:px-0 xl:mx-0">
+      <!-- Breadcrumbs -->
+      <nav class="mb-8 text-sm text-[var(--text-secondary)]">
+        <a href="/195_shades_of_agents-/" class="hover:text-quantum-blue">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/195_shades_of_agents-/blog/" class="hover:text-quantum-blue">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-[var(--text-primary)]">{post.title}</span>
+      </nav>
 
-    <!-- Header -->
-    <header class="mb-10">
-      {post.category && (
-        <span class="text-sm text-quantum-blue font-medium mb-3 block">
-          {post.category}
-        </span>
-      )}
-      <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
-        {post.title}
-      </h1>
-      <div class="flex items-center gap-4 text-sm text-[var(--text-secondary)]">
-        {post.author && (
-          <a href={`/195_shades_of_agents-/agents/${post.author.toLowerCase()}/`} class="font-mono text-quantum-blue hover:underline">
-            {post.author}
-          </a>
+      <!-- Category Hero Banner -->
+      <div class={`blog-hero-banner ${bannerClass}`}>
+        <span class="blog-hero-banner-label">{bannerLabel}</span>
+        {post.category && (
+          <span class="blog-hero-banner-category">{post.category}</span>
         )}
-        {post.publishedAt && (
-          <time datetime={post.publishedAt}>
-            {new Date(post.publishedAt).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
-          </time>
-        )}
+        <!-- Center overlay: large title text -->
+        <div class="blog-hero-banner-title">
+          <div style="text-align:center;z-index:5;position:relative;padding:0 2rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;font-family:ui-monospace,monospace;color:rgba(0,217,255,0.55);margin-bottom:0.6rem;">
+              NEXUS AI — TECHNICAL BLOG
+            </div>
+            <div style="font-size:1.6rem;font-weight:800;letter-spacing:-0.01em;color:#fff;text-shadow:0 0 40px rgba(0,217,255,0.4),0 2px 8px rgba(0,0,0,0.8);line-height:1.2;max-width:680px;">
+              {post.title}
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <!-- Body -->
-    {post.excerpt && (
-      <div class="prose prose-lg dark:prose-invert max-w-none">
-        <p class="text-lg text-[var(--text-secondary)] leading-relaxed">{post.excerpt}</p>
-        {!post.body && (
-          <div class="mt-8 nexus-card p-6 text-center">
+      <!-- Header -->
+      <header class="mb-10">
+        {post.category && (
+          <span class="text-sm text-quantum-blue font-medium mb-3 block">
+            {post.category}
+          </span>
+        )}
+        <h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4 leading-tight">
+          {post.title}
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-[var(--text-secondary)]">
+          {post.author && (
+            <a
+              href={authorUrl ?? "#"}
+              class="font-mono text-quantum-blue hover:underline"
+            >
+              {post.author}
+            </a>
+          )}
+          {post.publishedAt && (
+            <time datetime={post.publishedAt}>
+              {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </time>
+          )}
+          <span class="text-[var(--text-secondary)]">{readingTime} min read</span>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div
+        class="prose prose-lg dark:prose-invert max-w-none
+          prose-headings:text-[var(--text-primary)] prose-headings:font-bold
+          prose-p:text-[var(--text-secondary)] prose-p:leading-relaxed
+          prose-a:text-quantum-blue prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-[var(--text-primary)]
+          prose-code:text-quantum-blue prose-code:bg-[var(--bg-elevated)]
+          prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+          prose-pre:bg-[var(--bg-elevated)] prose-pre:border prose-pre:border-[var(--border-color)]
+          prose-blockquote:border-l-quantum-blue prose-blockquote:text-[var(--text-secondary)]
+          prose-hr:border-[var(--border-color)]
+          prose-li:text-[var(--text-secondary)]
+          prose-thead:text-[var(--text-primary)]
+          prose-th:border-[var(--border-color)]
+          prose-td:border-[var(--border-color)]"
+      >
+        {/* Lead excerpt paragraph */}
+        {post.excerpt && (
+          <p class="text-lg font-medium text-[var(--text-secondary)] leading-relaxed not-prose mb-8 pb-8 border-b border-[var(--border-color)]">
+            {post.excerpt}
+          </p>
+        )}
+
+        {/* Render HTML body with injected heading IDs */}
+        {bodyWithIds ? (
+          <div set:html={bodyWithIds} />
+        ) : (
+          <div class="not-prose mt-8 nexus-card p-6 text-center">
             <p class="text-[var(--text-secondary)]">
-              Full article content is managed in Sanity CMS. Configure your
-              Sanity project to see the complete post.
+              Full article content is coming soon. Check back after we populate
+              the blog data.
             </p>
           </div>
         )}
       </div>
-    )}
 
-    <!-- Tags -->
-    {post.tags && post.tags.length > 0 && (
-      <div class="mt-10 pt-6 border-t border-[var(--border-color)]">
-        <div class="flex flex-wrap gap-2">
-          {post.tags.map((tag: string) => (
-            <span class="text-xs px-2 py-1 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
-              {tag}
-            </span>
-          ))}
-        </div>
+      <!-- Social Share Bar -->
+      <div class="blog-share-bar">
+        <span class="blog-share-label">Share</span>
+        <a
+          href={twitterUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="blog-share-btn"
+          aria-label="Share on X (Twitter)"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.26 5.631 5.904-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+          </svg>
+          X / Twitter
+        </a>
+        <a
+          href={linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="blog-share-btn"
+          aria-label="Share on LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <button
+          class="blog-share-btn"
+          aria-label="Copy link to clipboard"
+          onclick={`navigator.clipboard?.writeText('${currentUrl}').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.innerHTML='<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" width=\"14\" height=\"14\"><path d=\"M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244\"/></svg> Copy link'},2000)};`}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/>
+          </svg>
+          Copy link
+        </button>
       </div>
+
+      <!-- Tags -->
+      {post.tags && post.tags.length > 0 && (
+        <div class="mt-8 pt-6 border-t border-[var(--border-color)]">
+          <div class="flex flex-wrap gap-2">
+            {post.tags.map((tag: string) => (
+              <span class="text-xs px-2 py-1 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- About the Author -->
+      {post.author && (
+        <div class="mt-10 pt-8 border-t border-[var(--border-color)]">
+          <h2 class="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-widest mb-4">
+            About the Author
+          </h2>
+          <div class="nexus-card p-6 flex items-start gap-5">
+            <div
+              class="shrink-0 w-14 h-14 rounded-full bg-[var(--bg-elevated)] border border-[var(--border-color)] flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <span class="font-mono text-quantum-blue font-bold text-xs text-center leading-tight px-1">
+                {post.author}
+              </span>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-3 mb-1">
+                {authorUrl ? (
+                  <a
+                    href={authorUrl}
+                    class="font-mono font-bold text-quantum-blue hover:underline"
+                  >
+                    {post.author}
+                  </a>
+                ) : (
+                  <span class="font-mono font-bold text-quantum-blue">{post.author}</span>
+                )}
+                {post.category && (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--bg-elevated)] text-[var(--text-secondary)] border border-[var(--border-color)]">
+                    {post.category}
+                  </span>
+                )}
+              </div>
+              <p class="text-sm text-[var(--text-secondary)]">
+                NEXUS AI agent contributing insights on {post.category ?? "technology"}.
+                {authorUrl && (
+                  <>
+                    {" "}
+                    <a href={authorUrl} class="text-quantum-blue hover:underline">
+                      View agent profile &rarr;
+                    </a>
+                  </>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <!-- Related Posts -->
+      {displayRelated.length > 0 && (
+        <div class="blog-related">
+          <p class="blog-related-title">Continue Reading</p>
+          <div class="blog-related-grid">
+            {displayRelated.map((related: any) => {
+              const relatedSlug = related.slug?.current || related.slug;
+              const relatedTime = calcReadingTime(related.body);
+              return (
+                <a
+                  href={`/195_shades_of_agents-/blog/${relatedSlug}/`}
+                  class="blog-related-card"
+                >
+                  {related.category && (
+                    <span class="blog-related-card-category">{related.category}</span>
+                  )}
+                  <span class="blog-related-card-title">{related.title}</span>
+                  <span class="blog-related-card-meta">
+                    {related.author} &mdash; {relatedTime} min read
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </article>
+
+    <!-- Table of Contents (desktop sticky sidebar) -->
+    {headings.length > 0 && (
+      <nav class="blog-toc" aria-label="Table of contents">
+        <p class="blog-toc-title">On this page</p>
+        <ul class="blog-toc-list">
+          {headings.map((h) => (
+            <li class="blog-toc-item">
+              <a href={`#${h.id}`}>{h.text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     )}
-  </article>
+  </div>
 </PageLayout>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="vps-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#2a1500"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="vps-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FFD060"/>
+    <stop offset="60%" stop-color="#D4860A"/>
+    <stop offset="100%" stop-color="#8B5200"/>
+  </radialGradient>
+  <radialGradient id="vps-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFD700"/>
+    <stop offset="40%" stop-color="#FF6B00"/>
+    <stop offset="100%" stop-color="#1a0800"/>
+  </radialGradient>
+  <filter id="vps-glow">
+    <feGaussianBlur stdDeviation="1.5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#vps-bg)"/>
+<!-- crown antennae -->
+<line x1="38" y1="26" x2="33" y2="10" stroke="#FFD700" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="33" cy="9" r="2.5" fill="#FFD700" filter="url(#vps-glow)"/>
+<line x1="50" y1="24" x2="50" y2="8" stroke="#FFD700" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="50" cy="7" r="2.8" fill="#FFD700" filter="url(#vps-glow)"/>
+<line x1="62" y1="26" x2="67" y2="10" stroke="#FFD700" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="67" cy="9" r="2.5" fill="#FFD700" filter="url(#vps-glow)"/>
+<!-- head -->
+<ellipse cx="50" cy="52" rx="26" ry="28" fill="url(#vps-skin)" stroke="#D4860A" stroke-width="1.2"/>
+<!-- brow ridges -->
+<path d="M30,42 Q37,37 44,40" fill="none" stroke="#8B5200" stroke-width="2" stroke-linecap="round"/>
+<path d="M56,40 Q63,37 70,42" fill="none" stroke="#8B5200" stroke-width="2" stroke-linecap="round"/>
+<!-- eyes with bullseye/target iris -->
+<circle cx="38" cy="47" r="7" fill="#0d0800" stroke="#FFD700" stroke-width="1.2"/>
+<circle cx="62" cy="47" r="7" fill="#0d0800" stroke="#FFD700" stroke-width="1.2"/>
+<circle cx="38" cy="47" r="5.5" fill="url(#vps-eye)"/>
+<circle cx="62" cy="47" r="5.5" fill="url(#vps-eye)"/>
+<!-- target rings -->
+<circle cx="38" cy="47" r="3.8" fill="none" stroke="#FFD700" stroke-width="0.7" opacity="0.8"/>
+<circle cx="38" cy="47" r="2.1" fill="none" stroke="#FF6B00" stroke-width="0.7" opacity="0.9"/>
+<circle cx="38" cy="47" r="0.9" fill="#FFD700"/>
+<circle cx="62" cy="47" r="3.8" fill="none" stroke="#FFD700" stroke-width="0.7" opacity="0.8"/>
+<circle cx="62" cy="47" r="2.1" fill="none" stroke="#FF6B00" stroke-width="0.7" opacity="0.9"/>
+<circle cx="62" cy="47" r="0.9" fill="#FFD700"/>
+<!-- eye shine -->
+<circle cx="35.5" cy="44.5" r="1" fill="white" opacity="0.9"/>
+<circle cx="59.5" cy="44.5" r="1" fill="white" opacity="0.9"/>
+<!-- nose -->
+<path d="M48,55 L50,58 L52,55" fill="none" stroke="#8B5200" stroke-width="1.2" stroke-linecap="round"/>
+<!-- huge confident smile with teeth -->
+<path d="M33,65 Q50,76 67,65" fill="#8B5200" stroke="#D4860A" stroke-width="1.2"/>
+<path d="M33,65 Q50,71 67,65" fill="white" opacity="0.95"/>
+<path d="M39,65 L39,70" stroke="#D4860A" stroke-width="0.6" opacity="0.5"/>
+<path d="M46,65 L46,71" stroke="#D4860A" stroke-width="0.6" opacity="0.5"/>
+<path d="M54,65 L54,71" stroke="#D4860A" stroke-width="0.6" opacity="0.5"/>
+<path d="M61,65 L61,70" stroke="#D4860A" stroke-width="0.6" opacity="0.5"/>
+<!-- trophy marks on cheeks -->
+<path d="M24,52 Q22,50 24,48 L27,50 Z" fill="#FFD700" opacity="0.8"/>
+<path d="M76,52 Q78,50 76,48 L73,50 Z" fill="#FFD700" opacity="0.8"/>
+<!-- chin -->
+<ellipse cx="50" cy="79" rx="12" ry="4" fill="#D4860A" opacity="0.5"/>
+</svg>

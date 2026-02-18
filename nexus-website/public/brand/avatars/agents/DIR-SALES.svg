@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="ds-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1e0d00"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="ds-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#E8A030"/>
+    <stop offset="60%" stop-color="#B06010"/>
+    <stop offset="100%" stop-color="#6B3500"/>
+  </radialGradient>
+  <radialGradient id="ds-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#90EE90"/>
+    <stop offset="50%" stop-color="#228B22"/>
+    <stop offset="100%" stop-color="#0a1a0a"/>
+  </radialGradient>
+  <filter id="ds-glow">
+    <feGaussianBlur stdDeviation="1.2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#ds-bg)"/>
+<!-- antennae -->
+<line x1="42" y1="26" x2="36" y2="11" stroke="#E8A030" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="36" cy="10" r="2.2" fill="#E8A030" filter="url(#ds-glow)"/>
+<line x1="58" y1="26" x2="64" y2="11" stroke="#E8A030" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="64" cy="10" r="2.2" fill="#E8A030" filter="url(#ds-glow)"/>
+<!-- oval head -->
+<ellipse cx="50" cy="53" rx="24" ry="27" fill="url(#ds-skin)" stroke="#B06010" stroke-width="1.2"/>
+<!-- brow ridges -->
+<path d="M31,43 Q38,38 45,41" fill="none" stroke="#6B3500" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M55,41 Q62,38 69,43" fill="none" stroke="#6B3500" stroke-width="1.8" stroke-linecap="round"/>
+<!-- eyes with revenue-chart iris (trending up arrow) -->
+<circle cx="39" cy="48" r="6.5" fill="#0a0800" stroke="#E8A030" stroke-width="1.1"/>
+<circle cx="61" cy="48" r="6.5" fill="#0a0800" stroke="#E8A030" stroke-width="1.1"/>
+<circle cx="39" cy="48" r="5" fill="url(#ds-eye)"/>
+<circle cx="61" cy="48" r="5" fill="url(#ds-eye)"/>
+<!-- chart arrow up inside eye -->
+<polyline points="36,51 39,47 42,49 44,46" fill="none" stroke="#FFD700" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="58,51 61,47 64,49 66,46" fill="none" stroke="#FFD700" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="37" cy="45.5" r="0.9" fill="white" opacity="0.9"/>
+<circle cx="59" cy="45.5" r="0.9" fill="white" opacity="0.9"/>
+<!-- deal-sign marks on cheeks -->
+<text x="25" y="52" font-size="6" fill="#E8A030" opacity="0.85" font-family="monospace" font-weight="bold">$</text>
+<text x="70" y="52" font-size="6" fill="#E8A030" opacity="0.85" font-family="monospace" font-weight="bold">$</text>
+<!-- nose -->
+<ellipse cx="50" cy="57" rx="2.5" ry="1.5" fill="#6B3500" opacity="0.6"/>
+<!-- persuasive grin -->
+<path d="M35,65 Q50,74 65,65" fill="#6B3500" stroke="#B06010" stroke-width="1"/>
+<path d="M35,65 Q50,70 65,65" fill="white" opacity="0.85"/>
+<path d="M41,65 L41,69" stroke="#B06010" stroke-width="0.6" opacity="0.5"/>
+<path d="M50,65 L50,70" stroke="#B06010" stroke-width="0.6" opacity="0.5"/>
+<path d="M59,65 L59,69" stroke="#B06010" stroke-width="0.6" opacity="0.5"/>
+<!-- chin accent -->
+<ellipse cx="50" cy="79" rx="10" ry="3" fill="#B06010" opacity="0.4"/>
+</svg>

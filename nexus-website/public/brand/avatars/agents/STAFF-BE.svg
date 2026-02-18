@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-staff-be" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#060e1c"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+    <radialGradient id="face-staff-be" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="60%" stop-color="#0D1465"/>
+      <stop offset="100%" stop-color="#060a38"/>
+    </radialGradient>
+    <filter id="glow-staff-be">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-staff-be)" rx="12"/>
+  <!-- Antennae bent at 90 degrees -->
+  <path d="M38,24 L38,12 L28,12" stroke="#5C6BC0" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28" cy="12" r="2" fill="#5C6BC0" filter="url(#glow-staff-be)"/>
+  <path d="M62,24 L62,12 L72,12" stroke="#5C6BC0" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="12" r="2" fill="#5C6BC0" filter="url(#glow-staff-be)"/>
+  <!-- Compact round face -->
+  <circle cx="50" cy="57" r="31" fill="url(#face-staff-be)" stroke="#3949AB" stroke-width="1.5"/>
+  <!-- Focused brow -->
+  <path d="M25,48 Q36,44 44,48" stroke="#060a38" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M56,48 Q64,44 75,48" stroke="#060a38" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Eyes with server-rack iris -->
+  <ellipse cx="35" cy="54" rx="9" ry="8" fill="#060a38" stroke="#3949AB" stroke-width="1.2"/>
+  <ellipse cx="65" cy="54" rx="9" ry="8" fill="#060a38" stroke="#3949AB" stroke-width="1.2"/>
+  <!-- Server rack lines in iris -->
+  <rect x="27" y="47" width="16" height="14" rx="1.5" fill="#0a1252"/>
+  <rect x="57" y="47" width="16" height="14" rx="1.5" fill="#0a1252"/>
+  <rect x="28" y="48.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.9"/>
+  <rect x="28" y="51.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.7"/>
+  <rect x="28" y="54.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.5"/>
+  <rect x="28" y="57.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.3"/>
+  <rect x="58" y="48.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.9"/>
+  <rect x="58" y="51.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.7"/>
+  <rect x="58" y="54.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.5"/>
+  <rect x="58" y="57.5" width="14" height="2" rx="0.5" fill="#3949AB" opacity="0.3"/>
+  <!-- Status lights -->
+  <circle cx="39" cy="49.5" r="1" fill="#00FF41" opacity="0.9"/>
+  <circle cx="69" cy="49.5" r="1" fill="#00FF41" opacity="0.9"/>
+  <!-- Pupils -->
+  <circle cx="35" cy="54" r="2.5" fill="#020610"/>
+  <circle cx="65" cy="54" r="2.5" fill="#020610"/>
+  <!-- Nose -->
+  <path d="M46,63 Q50,67 54,63" stroke="#1A237E" stroke-width="1.2" fill="none"/>
+  <!-- Mouth -->
+  <path d="M33,72 Q50,79 67,72" stroke="#3949AB" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Label -->
+  <rect x="18" y="90" width="64" height="8" rx="3" fill="#020810" stroke="#5C6BC0" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#5C6BC0">STAFF-BE</text>
+</svg>

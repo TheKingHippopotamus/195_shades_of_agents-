@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="de-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071a1a"/>
+      <stop offset="100%" stop-color="#020c0c"/>
+    </radialGradient>
+    <radialGradient id="de-skin" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#2ECFCF"/>
+      <stop offset="100%" stop-color="#0A8B8B"/>
+    </radialGradient>
+    <filter id="de-glow">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="url(#de-bg)"/>
+  <!-- Left antenna with data-node tip -->
+  <line x1="35" y1="23" x2="25" y2="10" stroke="#2ECFCF" stroke-width="1.5"/>
+  <circle cx="25" cy="9" r="3" fill="#0A8B8B" stroke="#2ECFCF" stroke-width="1"/>
+  <circle cx="21" cy="9" r="1.2" fill="#2ECFCF" filter="url(#de-glow)"/>
+  <circle cx="29" cy="9" r="1.2" fill="#2ECFCF" filter="url(#de-glow)"/>
+  <!-- Right antenna with data-node tip -->
+  <line x1="65" y1="23" x2="75" y2="10" stroke="#2ECFCF" stroke-width="1.5"/>
+  <circle cx="75" cy="9" r="3" fill="#0A8B8B" stroke="#2ECFCF" stroke-width="1"/>
+  <circle cx="71" cy="9" r="1.2" fill="#2ECFCF" filter="url(#de-glow)"/>
+  <circle cx="79" cy="9" r="1.2" fill="#2ECFCF" filter="url(#de-glow)"/>
+  <!-- Wide head -->
+  <ellipse cx="50" cy="52" rx="33" ry="27" fill="url(#de-skin)" stroke="#0A8B8B" stroke-width="1.8"/>
+  <!-- Left eye socket -->
+  <ellipse cx="36" cy="50" rx="8.5" ry="8" fill="#030F0F" stroke="#2ECFCF" stroke-width="1.2"/>
+  <!-- Left iris - pipeline/flow arrows -->
+  <circle cx="36" cy="50" r="6" fill="#071A1A"/>
+  <path d="M29,50 L33,47 L33,49 L39,49 L39,51 L33,51 L33,53Z" fill="#2ECFCF" opacity="0.8"/>
+  <circle cx="36" cy="50" r="1.5" fill="#00FFFF" opacity="0.9"/>
+  <circle cx="36" cy="50" r="0.6" fill="#030F0F"/>
+  <!-- Right eye socket -->
+  <ellipse cx="64" cy="50" rx="8.5" ry="8" fill="#030F0F" stroke="#2ECFCF" stroke-width="1.2"/>
+  <!-- Right iris - pipeline arrows -->
+  <circle cx="64" cy="50" r="6" fill="#071A1A"/>
+  <path d="M57,50 L61,47 L61,49 L67,49 L67,51 L61,51 L61,53Z" fill="#2ECFCF" opacity="0.8"/>
+  <circle cx="64" cy="50" r="1.5" fill="#00FFFF" opacity="0.9"/>
+  <circle cx="64" cy="50" r="0.6" fill="#030F0F"/>
+  <!-- Pipeline tube across chin -->
+  <rect x="22" y="68" width="56" height="5" rx="2.5" fill="#071A1A" stroke="#2ECFCF" stroke-width="1"/>
+  <circle cx="28" cy="70.5" r="1.5" fill="#2ECFCF" opacity="0.7"/>
+  <circle cx="36" cy="70.5" r="1.5" fill="#2ECFCF" opacity="0.7"/>
+  <circle cx="44" cy="70.5" r="1.5" fill="#2ECFCF" opacity="0.7"/>
+  <line x1="29.5" y1="70.5" x2="34.5" y2="70.5" stroke="#2ECFCF" stroke-width="0.8" opacity="0.5"/>
+  <line x1="37.5" y1="70.5" x2="42.5" y2="70.5" stroke="#2ECFCF" stroke-width="0.8" opacity="0.5"/>
+  <!-- Neutral expression line -->
+  <path d="M38,64 Q50,66 62,64" stroke="#0A8B8B" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Nose mark -->
+  <ellipse cx="50" cy="60" rx="2.5" ry="1.5" fill="#0A8B8B" opacity="0.6"/>
+  <!-- Pipeline side connectors -->
+  <line x1="22" y1="68" x2="16" y2="68" stroke="#2ECFCF" stroke-width="1"/>
+  <circle cx="15" cy="68" r="1.5" fill="#2ECFCF" opacity="0.7"/>
+  <line x1="78" y1="68" x2="84" y2="68" stroke="#2ECFCF" stroke-width="1"/>
+  <circle cx="85" cy="68" r="1.5" fill="#2ECFCF" opacity="0.7"/>
+</svg>

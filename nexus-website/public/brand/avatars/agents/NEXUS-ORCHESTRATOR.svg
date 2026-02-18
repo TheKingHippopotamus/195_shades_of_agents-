@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="16" fill="url(#bg)"/>
+
+<defs>
+  <radialGradient id="nex-bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0a0518"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="nex-nebula" cx="40%" cy="60%" r="60%"><stop offset="0%" stop-color="#4c1d95" stop-opacity="0.6"/><stop offset="50%" stop-color="#1e3a8a" stop-opacity="0.3"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <radialGradient id="nex-nebula2" cx="65%" cy="35%" r="50%"><stop offset="0%" stop-color="#831843" stop-opacity="0.5"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <filter id="nex-glow-sm"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="nex-glow-lg"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <radialGradient id="nex-core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="30%" stop-color="#c4b5fd"/><stop offset="70%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#000"/></radialGradient>
+</defs>
+
+<!-- cosmic void-black head -->
+<ellipse cx="50" cy="50" rx="30" ry="33" fill="url(#nex-bg)"/>
+
+<!-- nebula swirls on skin -->
+<ellipse cx="42" cy="58" rx="20" ry="16" fill="url(#nex-nebula)"/>
+<ellipse cx="60" cy="38" rx="18" ry="14" fill="url(#nex-nebula2)"/>
+
+<!-- nebula cloud wisps -->
+<path d="M28,42 Q35,38 40,44 Q45,50 38,52 Q32,54 28,48 Z" fill="#4c1d95" opacity="0.25"/>
+<path d="M60,52 Q68,48 72,56 Q74,62 66,64 Q58,62 60,52 Z" fill="#1e3a8a" opacity="0.2"/>
+
+<!-- outer orbital ring 1 (tilted) -->
+<ellipse cx="50" cy="50" rx="46" ry="12" fill="none" stroke="#7c3aed" stroke-width="0.8" opacity="0.4" transform="rotate(-20,50,50)"/>
+<!-- outer orbital ring 2 -->
+<ellipse cx="50" cy="50" rx="44" ry="10" fill="none" stroke="#db2777" stroke-width="0.6" opacity="0.3" transform="rotate(30,50,50)"/>
+<!-- outer orbital ring 3 -->
+<ellipse cx="50" cy="50" rx="42" ry="8" fill="none" stroke="#0891b2" stroke-width="0.5" opacity="0.25" transform="rotate(-50,50,50)"/>
+
+<!-- constellation marks: dots forming pattern on face -->
+<circle cx="34" cy="34" r="0.8" fill="#c4b5fd" opacity="0.8"/>
+<circle cx="40" cy="30" r="0.6" fill="#c4b5fd" opacity="0.6"/>
+<circle cx="38" cy="37" r="0.6" fill="#c4b5fd" opacity="0.6"/>
+<line x1="34" y1="34" x2="40" y2="30" stroke="#c4b5fd" stroke-width="0.3" opacity="0.4"/>
+<line x1="40" y1="30" x2="38" y2="37" stroke="#c4b5fd" stroke-width="0.3" opacity="0.4"/>
+<circle cx="66" cy="34" r="0.8" fill="#f0abfc" opacity="0.8"/>
+<circle cx="60" cy="30" r="0.6" fill="#f0abfc" opacity="0.6"/>
+<circle cx="62" cy="37" r="0.6" fill="#f0abfc" opacity="0.6"/>
+<line x1="66" y1="34" x2="60" y2="30" stroke="#f0abfc" stroke-width="0.3" opacity="0.4"/>
+<line x1="60" y1="30" x2="62" y2="37" stroke="#f0abfc" stroke-width="0.3" opacity="0.4"/>
+
+<!-- data streams emanating from sides -->
+<line x1="22" y1="42" x2="8" y2="38" stroke="#7c3aed" stroke-width="0.7" opacity="0.5" stroke-dasharray="2,2"/>
+<line x1="22" y1="50" x2="6" y2="50" stroke="#0891b2" stroke-width="0.7" opacity="0.4" stroke-dasharray="2,2"/>
+<line x1="22" y1="58" x2="8" y2="62" stroke="#db2777" stroke-width="0.7" opacity="0.5" stroke-dasharray="2,2"/>
+<line x1="78" y1="42" x2="92" y2="38" stroke="#7c3aed" stroke-width="0.7" opacity="0.5" stroke-dasharray="2,2"/>
+<line x1="78" y1="50" x2="94" y2="50" stroke="#0891b2" stroke-width="0.7" opacity="0.4" stroke-dasharray="2,2"/>
+<line x1="78" y1="58" x2="92" y2="62" stroke="#db2777" stroke-width="0.7" opacity="0.5" stroke-dasharray="2,2"/>
+<line x1="50" y1="18" x2="50" y2="4" stroke="#f59e0b" stroke-width="0.7" opacity="0.5" stroke-dasharray="2,2"/>
+<line x1="50" y1="82" x2="50" y2="96" stroke="#f59e0b" stroke-width="0.7" opacity="0.4" stroke-dasharray="2,2"/>
+
+<!-- RING of 8 eyes in halo around the face center -->
+<!-- eye 1: top (indigo) -->
+<ellipse cx="50" cy="24" rx="5.5" ry="4" fill="#0a0518" stroke="#818cf8" stroke-width="1.2" filter="url(#nex-glow-sm)"/>
+<ellipse cx="50" cy="24" rx="3.5" ry="2.5" fill="#818cf8"/>
+<circle cx="50" cy="24" r="1.2" fill="#0a0518"/>
+<circle cx="49.3" cy="23.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 2: top-right (violet) -->
+<ellipse cx="64" cy="29" rx="5" ry="3.5" fill="#0a0518" stroke="#c084fc" stroke-width="1.2" filter="url(#nex-glow-sm)" transform="rotate(45,64,29)"/>
+<ellipse cx="64" cy="29" rx="3" ry="2.2" fill="#c084fc" transform="rotate(45,64,29)"/>
+<circle cx="64" cy="29" r="1.1" fill="#0a0518"/>
+<circle cx="63.3" cy="28.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 3: right (cyan) -->
+<ellipse cx="74" cy="42" rx="4" ry="5.5" fill="#0a0518" stroke="#22d3ee" stroke-width="1.2" filter="url(#nex-glow-sm)"/>
+<ellipse cx="74" cy="42" rx="2.5" ry="3.5" fill="#22d3ee"/>
+<circle cx="74" cy="42" r="1.2" fill="#0a0518"/>
+<circle cx="73.3" cy="41.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 4: bottom-right (emerald) -->
+<ellipse cx="70" cy="58" rx="5" ry="3.5" fill="#0a0518" stroke="#34d399" stroke-width="1.2" filter="url(#nex-glow-sm)" transform="rotate(-45,70,58)"/>
+<ellipse cx="70" cy="58" rx="3" ry="2.2" fill="#34d399" transform="rotate(-45,70,58)"/>
+<circle cx="70" cy="58" r="1.1" fill="#0a0518"/>
+<circle cx="69.3" cy="57.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 5: bottom (amber) -->
+<ellipse cx="50" cy="68" rx="5.5" ry="4" fill="#0a0518" stroke="#f59e0b" stroke-width="1.2" filter="url(#nex-glow-sm)"/>
+<ellipse cx="50" cy="68" rx="3.5" ry="2.5" fill="#f59e0b"/>
+<circle cx="50" cy="68" r="1.2" fill="#0a0518"/>
+<circle cx="49.3" cy="67.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 6: bottom-left (rose) -->
+<ellipse cx="30" cy="58" rx="5" ry="3.5" fill="#0a0518" stroke="#fb7185" stroke-width="1.2" filter="url(#nex-glow-sm)" transform="rotate(45,30,58)"/>
+<ellipse cx="30" cy="58" rx="3" ry="2.2" fill="#fb7185" transform="rotate(45,30,58)"/>
+<circle cx="30" cy="58" r="1.1" fill="#0a0518"/>
+<circle cx="29.3" cy="57.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 7: left (orange) -->
+<ellipse cx="26" cy="42" rx="4" ry="5.5" fill="#0a0518" stroke="#fb923c" stroke-width="1.2" filter="url(#nex-glow-sm)"/>
+<ellipse cx="26" cy="42" rx="2.5" ry="3.5" fill="#fb923c"/>
+<circle cx="26" cy="42" r="1.2" fill="#0a0518"/>
+<circle cx="25.3" cy="41.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- eye 8: top-left (sky blue) -->
+<ellipse cx="36" cy="29" rx="5" ry="3.5" fill="#0a0518" stroke="#38bdf8" stroke-width="1.2" filter="url(#nex-glow-sm)" transform="rotate(-45,36,29)"/>
+<ellipse cx="36" cy="29" rx="3" ry="2.2" fill="#38bdf8" transform="rotate(-45,36,29)"/>
+<circle cx="36" cy="29" r="1.1" fill="#0a0518"/>
+<circle cx="35.3" cy="28.3" r="0.5" fill="white" opacity="0.9"/>
+
+<!-- COSMIC CORE: pure energy center — no traditional nose/mouth -->
+<circle cx="50" cy="50" r="14" fill="none" stroke="#c4b5fd" stroke-width="0.4" opacity="0.3"/>
+<circle cx="50" cy="50" r="10" fill="none" stroke="#c4b5fd" stroke-width="0.5" opacity="0.5"/>
+<circle cx="50" cy="50" r="7" fill="none" stroke="#c4b5fd" stroke-width="0.8" opacity="0.6" filter="url(#nex-glow-sm)"/>
+<circle cx="50" cy="50" r="4.5" fill="url(#nex-core)" opacity="0.9" filter="url(#nex-glow-lg)"/>
+<circle cx="50" cy="50" r="2" fill="white" opacity="0.95"/>
+
+<!-- inner ring orbiting marks -->
+<circle cx="50" cy="39" r="1" fill="#c4b5fd" opacity="0.7"/>
+<circle cx="61" cy="50" r="1" fill="#c4b5fd" opacity="0.7"/>
+<circle cx="50" cy="61" r="1" fill="#c4b5fd" opacity="0.7"/>
+<circle cx="39" cy="50" r="1" fill="#c4b5fd" opacity="0.7"/>
+
+<!-- label -->
+<text x="50" y="91" text-anchor="middle" font-family="monospace" font-size="3" fill="#c4b5fd" opacity="0.95">NEXUS-ORCHESTRATOR</text>
+
+</svg>

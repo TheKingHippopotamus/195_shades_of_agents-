@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="auto-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#141414"/>
+    <stop offset="100%" stop-color="#060606"/>
+  </radialGradient>
+  <radialGradient id="auto-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#8a7a6a"/>
+    <stop offset="100%" stop-color="#5a4a3a"/>
+  </radialGradient>
+  <radialGradient id="auto-eye-gear" cx="35%" cy="35%" r="60%">
+    <stop offset="0%" stop-color="#fcd34d"/>
+    <stop offset="55%" stop-color="#b45309"/>
+    <stop offset="100%" stop-color="#1a0800"/>
+  </radialGradient>
+  <filter id="auto-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<!-- Background -->
+<rect width="100" height="100" fill="url(#auto-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="43" y="68" width="14" height="10" rx="3" fill="#5a4a3a"/>
+<!-- Technical face - steel amber -->
+<ellipse cx="50" cy="46" rx="24" ry="26" fill="url(#auto-skin)"/>
+<!-- Metal plate texture lines -->
+<line x1="30" y1="30" x2="70" y2="30" stroke="#7a6a5a" stroke-width="0.4" opacity="0.4"/>
+<line x1="28" y1="42" x2="72" y2="42" stroke="#7a6a5a" stroke-width="0.4" opacity="0.3"/>
+<!-- Left eye - automation gear iris -->
+<g filter="url(#auto-glow)">
+  <ellipse cx="37" cy="44" rx="7" ry="7" fill="url(#auto-eye-gear)"/>
+  <!-- Gear teeth on iris -->
+  <circle cx="37" cy="44" r="4.5" fill="none" stroke="#1a0800" stroke-width="3" stroke-dasharray="2.4 1.4"/>
+  <ellipse cx="37" cy="44" rx="2.5" ry="2.5" fill="#fcd34d" opacity="0.9"/>
+  <ellipse cx="37" cy="44" rx="1" ry="1" fill="#1a0800"/>
+  <ellipse cx="37" cy="44" rx="7" ry="7" fill="none" stroke="#fbbf24" stroke-width="0.7"/>
+</g>
+<!-- Right eye - robot reticle -->
+<g filter="url(#auto-glow)">
+  <ellipse cx="63" cy="44" rx="7" ry="7" fill="#0a1a0a"/>
+  <ellipse cx="63" cy="44" rx="7" ry="7" fill="none" stroke="#00ff88" stroke-width="0.8"/>
+  <!-- Reticle cross -->
+  <line x1="56" y1="44" x2="70" y2="44" stroke="#00ff88" stroke-width="0.6" opacity="0.9"/>
+  <line x1="63" y1="37" x2="63" y2="51" stroke="#00ff88" stroke-width="0.6" opacity="0.9"/>
+  <!-- Corner brackets -->
+  <path d="M57.5,40 L57.5,38 L59.5,38" fill="none" stroke="#00ff88" stroke-width="0.5"/>
+  <path d="M68.5,40 L68.5,38 L66.5,38" fill="none" stroke="#00ff88" stroke-width="0.5"/>
+  <path d="M57.5,48 L57.5,50 L59.5,50" fill="none" stroke="#00ff88" stroke-width="0.5"/>
+  <path d="M68.5,48 L68.5,50 L66.5,50" fill="none" stroke="#00ff88" stroke-width="0.5"/>
+  <ellipse cx="63" cy="44" rx="2" ry="2" fill="#00ff88" opacity="0.6"/>
+</g>
+<!-- Terminal chin marks -->
+<text x="42" y="66" font-family="monospace" font-size="3.5" fill="#fbbf24" opacity="0.5">&gt;_</text>
+<text x="52" y="66" font-family="monospace" font-size="3.5" fill="#00ff88" opacity="0.4">OK</text>
+<!-- Determined flat expression -->
+<path d="M40,61 L60,61" fill="none" stroke="#5a4a3a" stroke-width="1" opacity="0.7"/>
+<!-- Label -->
+<rect x="22" y="88" width="56" height="8" rx="2" fill="#0d0d0d" stroke="#fbbf24" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="3.8" fill="#fbbf24" text-anchor="middle">SR · QA · AUTO</text>
+</svg>

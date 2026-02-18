@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="cto-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0A1628"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="cto-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#2A3F5A"/><stop offset="100%" stop-color="#1C2E4A"/></radialGradient>
+  <radialGradient id="cto-eye" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#66F0FF"/><stop offset="100%" stop-color="#0099BB"/></radialGradient>
+  <filter id="cto-glow"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="cto-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#cto-bg)"/>
+<!-- Wide rounded rectangle head -->
+<rect x="18" y="15" width="64" height="60" rx="14" fill="url(#cto-skin)" stroke="#2A4A70" stroke-width="0.6"/>
+<!-- 4 antennae in arc with circuit node tips -->
+<line x1="32" y1="18" x2="28" y2="5" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="25.5" y="3" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<line x1="42" y1="16" x2="40" y2="4" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="37.5" y="2" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<line x1="58" y1="16" x2="60" y2="4" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="57.5" y="2" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<line x1="68" y1="18" x2="72" y2="5" stroke="#00D9FF" stroke-width="0.9"/>
+<rect x="69.5" y="3" width="5" height="3" rx="0.5" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<!-- Left eye -->
+<ellipse cx="35" cy="38" rx="7" ry="6" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<ellipse cx="35" cy="38" rx="3" ry="3" fill="#003344"/>
+<ellipse cx="33.5" cy="36.5" rx="1" ry="1" fill="#AAFFFF" opacity="0.8"/>
+<!-- Right eye -->
+<ellipse cx="65" cy="38" rx="7" ry="6" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<ellipse cx="65" cy="38" rx="3" ry="3" fill="#003344"/>
+<ellipse cx="63.5" cy="36.5" rx="1" ry="1" fill="#AAFFFF" opacity="0.8"/>
+<!-- Center forehead eye -->
+<ellipse cx="50" cy="26" rx="5.5" ry="4.5" fill="url(#cto-eye)" filter="url(#cto-glow)"/>
+<ellipse cx="50" cy="26" rx="2.2" ry="2.2" fill="#003344"/>
+<ellipse cx="49" cy="25" rx="0.8" ry="0.8" fill="#AAFFFF" opacity="0.8"/>
+<!-- Circuit board traces on face -->
+<path d="M20,35 L25,35 L25,32 L28,32" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M20,45 L26,45 L26,48 L30,48" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M80,35 L75,35 L75,32 L72,32" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M80,45 L74,45 L74,48 L70,48" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M40,55 L45,55 L45,58 L55,58 L55,55 L60,55" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.4"/>
+<path d="M35,48 L38,48 L38,52 L42,52" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.4"/>
+<path d="M65,48 L62,48 L62,52 L58,52" stroke="#00D9FF" stroke-width="0.4" fill="none" opacity="0.4"/>
+<!-- Neural glyph on chin (no mouth) -->
+<path d="M44,63 L50,66 L56,63" stroke="#00D9FF" stroke-width="0.7" fill="none" opacity="0.7"/>
+<circle cx="50" cy="66" r="1.2" fill="#00D9FF" filter="url(#cto-glow-sm)"/>
+<!-- Neck -->
+<rect x="44" y="73" width="12" height="5" rx="2" fill="#1C2E4A" stroke="#2A4A70" stroke-width="0.5"/>
+</svg>

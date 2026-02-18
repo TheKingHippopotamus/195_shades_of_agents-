@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<defs>
+  <radialGradient id="dev-skin" cx="45%" cy="35%" r="58%">
+    <stop offset="0%" stop-color="#81A96E"/>
+    <stop offset="60%" stop-color="#4A7036"/>
+    <stop offset="100%" stop-color="#283D1D"/>
+  </radialGradient>
+  <radialGradient id="dev-iris" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#A8C890"/>
+    <stop offset="100%" stop-color="#2E4A1E"/>
+  </radialGradient>
+  <filter id="dev-glow"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- Short straight antennae (working class) -->
+<line x1="43" y1="26" x2="41" y2="14" stroke="#81A96E" stroke-width="1.3"/>
+<circle cx="41" cy="13" r="2" fill="#4A7036" stroke="#81A96E" stroke-width="0.8"/>
+<line x1="57" y1="26" x2="59" y2="14" stroke="#81A96E" stroke-width="1.3"/>
+<circle cx="59" cy="13" r="2" fill="#4A7036" stroke="#81A96E" stroke-width="0.8"/>
+<!-- Furrowed competent brow marks -->
+<line x1="34" y1="38" x2="46" y2="36" stroke="#81A96E" stroke-width="1.5" opacity="0.7"/>
+<line x1="54" y1="36" x2="66" y2="38" stroke="#81A96E" stroke-width="1.5" opacity="0.7"/>
+<!-- Working-class oval head -->
+<ellipse cx="50" cy="48" rx="25" ry="23" fill="url(#dev-skin)" stroke="#6A9058" stroke-width="1.3"/>
+<!-- Left eye: gear-cog iris -->
+<circle cx="39" cy="45" r="7.5" fill="#142008" stroke="#6A9058" stroke-width="1.2"/>
+<circle cx="39" cy="45" r="5" fill="url(#dev-iris)"/>
+<!-- Gear cog teeth -->
+<rect x="37.5" y="39.5" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="37.5" y="48" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="33.5" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="42" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<circle cx="39" cy="45" r="2.5" fill="#1E3010" stroke="#A8C890" stroke-width="0.6"/>
+<circle cx="39" cy="44" r="1" fill="#C8E0B0" filter="url(#dev-glow)"/>
+<!-- Right eye: gear-cog iris -->
+<circle cx="61" cy="45" r="7.5" fill="#142008" stroke="#6A9058" stroke-width="1.2"/>
+<circle cx="61" cy="45" r="5" fill="url(#dev-iris)"/>
+<rect x="59.5" y="39.5" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="59.5" y="48" width="3" height="2.5" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="55.5" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<rect x="64" y="43.5" width="2.5" height="3" rx="0.5" fill="#A8C890" opacity="0.8"/>
+<circle cx="61" cy="45" r="2.5" fill="#1E3010" stroke="#A8C890" stroke-width="0.6"/>
+<circle cx="61" cy="44" r="1" fill="#C8E0B0" filter="url(#dev-glow)"/>
+<!-- Competent slight smile -->
+<path d="M42,57 Q50,61 58,57" fill="none" stroke="#81A96E" stroke-width="1.3" stroke-linecap="round"/>
+<!-- Body: sleeves-rolled-up look (wider shoulders) -->
+<path d="M28,68 L22,86 L50,84 L78,86 L72,68 Z" fill="#283D1D" stroke="#6A9058" stroke-width="1"/>
+<line x1="34" y1="74" x2="66" y2="74" stroke="#81A96E" stroke-width="0.7" opacity="0.5"/>
+<!-- Rolled sleeve marks -->
+<line x1="28" y1="70" x2="28" y2="76" stroke="#6A9058" stroke-width="1.5" opacity="0.6"/>
+<line x1="72" y1="70" x2="72" y2="76" stroke="#6A9058" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="50" cy="93" rx="22" ry="2.5" fill="rgba(129,169,110,0.12)"/>
+</svg>

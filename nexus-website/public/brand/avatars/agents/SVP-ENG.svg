@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="svpe-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#060E1A"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="svpe-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#12264A"/><stop offset="100%" stop-color="#0A1628"/></radialGradient>
+  <radialGradient id="svpe-eye" cx="35%" cy="30%" r="60%"><stop offset="0%" stop-color="#44FFFF"/><stop offset="100%" stop-color="#008899"/></radialGradient>
+  <filter id="svpe-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="svpe-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#svpe-bg)"/>
+<!-- Wide angular face -->
+<polygon points="20,18 80,18 76,72 24,72" fill="url(#svpe-skin)" stroke="#1A3A60" stroke-width="0.6"/>
+<!-- 2 square-tip antennae -->
+<line x1="38" y1="18" x2="36" y2="6" stroke="#00CCDD" stroke-width="1.1"/>
+<rect x="33" y="3.5" width="6" height="4" rx="0.5" fill="#00CCDD" filter="url(#svpe-glow-sm)"/>
+<line x1="62" y1="18" x2="64" y2="6" stroke="#00CCDD" stroke-width="1.1"/>
+<rect x="61" y="3.5" width="6" height="4" rx="0.5" fill="#00CCDD" filter="url(#svpe-glow-sm)"/>
+<!-- Left eye (cyan) -->
+<ellipse cx="35" cy="36" rx="7" ry="5.5" fill="url(#svpe-eye)" filter="url(#svpe-glow)"/>
+<ellipse cx="35" cy="36" rx="3" ry="3" fill="#001A22"/>
+<circle cx="33.5" cy="34.5" r="1" fill="#AAFFFF" opacity="0.9"/>
+<!-- Right eye (cyan) -->
+<ellipse cx="65" cy="36" rx="7" ry="5.5" fill="url(#svpe-eye)" filter="url(#svpe-glow)"/>
+<ellipse cx="65" cy="36" rx="3" ry="3" fill="#001A22"/>
+<circle cx="63.5" cy="34.5" r="1" fill="#AAFFFF" opacity="0.9"/>
+<!-- Third-eye forehead -->
+<ellipse cx="50" cy="24" rx="5" ry="4" fill="url(#svpe-eye)" filter="url(#svpe-glow)"/>
+<ellipse cx="50" cy="24" rx="2" ry="2" fill="#001A22"/>
+<circle cx="49" cy="23" r="0.7" fill="#AAFFFF" opacity="0.9"/>
+<!-- Technical grid / circuit pattern mouth -->
+<rect x="35" y="53" width="30" height="8" rx="1" fill="#0A1E3A" stroke="#00CCDD" stroke-width="0.5"/>
+<line x1="40" y1="53" x2="40" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="47" y1="53" x2="47" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="53" y1="53" x2="53" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="60" y1="53" x2="60" y2="61" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<line x1="35" y1="57" x2="65" y2="57" stroke="#00CCDD" stroke-width="0.4" opacity="0.6"/>
+<!-- Neck -->
+<rect x="44" y="72" width="12" height="5" rx="2" fill="#0A1628" stroke="#1A3A60" stroke-width="0.5"/>
+</svg>

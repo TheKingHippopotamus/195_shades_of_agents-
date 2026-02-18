@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="pdes-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#2A1015"/>
+      <stop offset="100%" stop-color="#0D0508"/>
+    </radialGradient>
+    <radialGradient id="pdes-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#FFCCA0"/>
+      <stop offset="55%" stop-color="#F09060"/>
+      <stop offset="100%" stop-color="#A84828"/>
+    </radialGradient>
+    <radialGradient id="pdes-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#E0F0FF"/>
+      <stop offset="45%" stop-color="#7090D0"/>
+      <stop offset="100%" stop-color="#203060"/>
+    </radialGradient>
+    <filter id="pdes-glow">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#pdes-bg)" rx="10"/>
+  <circle cx="11" cy="13" r="0.7" fill="#FFCCA0" opacity="0.45"/>
+  <circle cx="89" cy="10" r="0.6" fill="#7090D0" opacity="0.4"/>
+  <!-- Creative round head — peach-pink -->
+  <ellipse cx="50" cy="55" rx="23" ry="26" fill="url(#pdes-skin)"/>
+  <!-- Antennae -->
+  <line x1="43" y1="30" x2="38" y2="13" stroke="#FFCCA0" stroke-width="1.7" stroke-linecap="round"/>
+  <line x1="57" y1="30" x2="62" y2="13" stroke="#FFCCA0" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="38" cy="13" r="2.2" fill="#7090D0" filter="url(#pdes-glow)"/>
+  <circle cx="62" cy="13" r="2.2" fill="#7090D0" filter="url(#pdes-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="52" rx="7" ry="7.5" fill="#180A08"/>
+  <ellipse cx="60" cy="52" rx="7" ry="7.5" fill="#180A08"/>
+  <!-- Component-box iris left -->
+  <circle cx="40" cy="52" r="5.5" fill="url(#pdes-iris)"/>
+  <rect x="36.5" y="48.5" width="7" height="7" rx="1" fill="none" stroke="#E0F0FF" stroke-width="0.6" opacity="0.7"/>
+  <line x1="40" y1="48.5" x2="40" y2="55.5" stroke="#E0F0FF" stroke-width="0.4" opacity="0.5"/>
+  <line x1="36.5" y1="52" x2="43.5" y2="52" stroke="#E0F0FF" stroke-width="0.4" opacity="0.5"/>
+  <!-- Component-box iris right -->
+  <circle cx="60" cy="52" r="5.5" fill="url(#pdes-iris)"/>
+  <rect x="56.5" y="48.5" width="7" height="7" rx="1" fill="none" stroke="#E0F0FF" stroke-width="0.6" opacity="0.7"/>
+  <line x1="60" y1="48.5" x2="60" y2="55.5" stroke="#E0F0FF" stroke-width="0.4" opacity="0.5"/>
+  <line x1="56.5" y1="52" x2="63.5" y2="52" stroke="#E0F0FF" stroke-width="0.4" opacity="0.5"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="51" r="2" fill="#080408"/>
+  <circle cx="61" cy="51" r="2" fill="#080408"/>
+  <circle cx="42" cy="50" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="62" cy="50" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Sketch line cheek marks -->
+  <path d="M 29 58 L 34 55" stroke="#FFCCA0" stroke-width="0.9" stroke-linecap="round" opacity="0.55"/>
+  <path d="M 29 61 L 34 58" stroke="#FFCCA0" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 71 58 L 66 55" stroke="#FFCCA0" stroke-width="0.9" stroke-linecap="round" opacity="0.55"/>
+  <path d="M 71 61 L 66 58" stroke="#FFCCA0" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#A84828" opacity="0.5"/>
+  <!-- Creative open smile -->
+  <path d="M 42 68 Q 50 75 58 68" fill="none" stroke="#F09060" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

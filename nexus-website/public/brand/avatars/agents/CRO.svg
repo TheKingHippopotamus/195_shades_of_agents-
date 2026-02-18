@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="cro-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#1A1400"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="cro-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#D4A030"/><stop offset="100%" stop-color="#8B6010"/></radialGradient>
+  <radialGradient id="cro-eye" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#66FF88"/><stop offset="100%" stop-color="#009922"/></radialGradient>
+  <filter id="cro-glow"><feGaussianBlur stdDeviation="1.3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#cro-bg)"/>
+<!-- Elongated oval head -->
+<ellipse cx="50" cy="48" rx="26" ry="35" fill="url(#cro-skin)" stroke="#A07820" stroke-width="0.6"/>
+<!-- Fin-like ear extensions -->
+<path d="M24,38 L16,28 L18,42 L24,44" fill="#8B6010" stroke="#A07820" stroke-width="0.5"/>
+<path d="M76,38 L84,28 L82,42 L76,44" fill="#8B6010" stroke="#A07820" stroke-width="0.5"/>
+<!-- Left diamond eye -->
+<polygon points="34,35 40,40 34,45 28,40" fill="url(#cro-eye)" filter="url(#cro-glow)"/>
+<polygon points="34,37 38,40 34,43 30,40" fill="#004410"/>
+<circle cx="33" cy="39" r="0.8" fill="#AAFFCC" opacity="0.9"/>
+<!-- Right diamond eye -->
+<polygon points="66,35 72,40 66,45 60,40" fill="url(#cro-eye)" filter="url(#cro-glow)"/>
+<polygon points="66,37 70,40 66,43 62,40" fill="#004410"/>
+<circle cx="65" cy="39" r="0.8" fill="#AAFFCC" opacity="0.9"/>
+<!-- Wide predatory grin -->
+<path d="M35,60 Q50,70 65,60" fill="#6B4010" stroke="#8B5010" stroke-width="0.5"/>
+<path d="M37,61 Q50,67 63,61" fill="#FFDDAA"/>
+<!-- Sharp canine teeth -->
+<polygon points="40,61 43,61 41.5,65" fill="white"/>
+<rect x="44" y="61" width="4" height="3.5" rx="0.3" fill="white"/>
+<rect x="49" y="61" width="3" height="3.5" rx="0.3" fill="white"/>
+<rect x="53" y="61" width="4" height="3.5" rx="0.3" fill="white"/>
+<polygon points="57,61 60,61 58.5,65" fill="white"/>
+<!-- Diagonal slash war paint markings -->
+<line x1="28" y1="30" x2="38" y2="36" stroke="#6B4010" stroke-width="1.5" opacity="0.7"/>
+<line x1="30" y1="34" x2="38" y2="39" stroke="#5A3008" stroke-width="0.8" opacity="0.5"/>
+<line x1="62" y1="30" x2="72" y2="36" stroke="#6B4010" stroke-width="1.5" opacity="0.7"/>
+<line x1="62" y1="34" x2="70" y2="39" stroke="#5A3008" stroke-width="0.8" opacity="0.5"/>
+<!-- Forehead marking -->
+<line x1="44" y1="18" x2="56" y2="24" stroke="#6B4010" stroke-width="1.2" opacity="0.6"/>
+</svg>

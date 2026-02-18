@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="ceo-bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#2D1459"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="ceo-eye" cx="35%" cy="35%" r="60%"><stop offset="0%" stop-color="#FFE566"/><stop offset="100%" stop-color="#B8860B"/></radialGradient>
+  <radialGradient id="ceo-skin" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#2A1245"/><stop offset="100%" stop-color="#1A0A2E"/></radialGradient>
+  <filter id="ceo-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="ceo-glow-sm"><feGaussianBlur stdDeviation="0.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#ceo-bg)"/>
+<!-- Hexagonal head shape -->
+<polygon points="50,8 72,20 72,60 50,75 28,60 28,20" fill="url(#ceo-skin)" stroke="#3D1A6E" stroke-width="0.5"/>
+<!-- 5 gold crown spikes from top -->
+<polygon points="50,8 47,2 53,2" fill="#FFD700" filter="url(#ceo-glow-sm)"/>
+<polygon points="42,13 38,5 45,8" fill="#FFD700" filter="url(#ceo-glow-sm)"/>
+<polygon points="58,13 55,8 62,5" fill="#FFD700" filter="url(#ceo-glow-sm)"/>
+<polygon points="34,19 28,12 36,16" fill="#DAA520"/>
+<polygon points="66,19 64,16 72,12" fill="#DAA520"/>
+<!-- Gold antennae -->
+<line x1="44" y1="13" x2="40" y2="5" stroke="#FFD700" stroke-width="1" filter="url(#ceo-glow-sm)"/>
+<circle cx="40" cy="5" r="1.2" fill="#FFD700" filter="url(#ceo-glow)"/>
+<line x1="56" y1="13" x2="60" y2="5" stroke="#FFD700" stroke-width="1" filter="url(#ceo-glow-sm)"/>
+<circle cx="60" cy="5" r="1.2" fill="#FFD700" filter="url(#ceo-glow)"/>
+<!-- Left almond eye -->
+<ellipse cx="38" cy="38" rx="8" ry="5" fill="url(#ceo-eye)" filter="url(#ceo-glow)"/>
+<ellipse cx="38" cy="38" rx="2" ry="4.5" fill="#1A0A2E"/>
+<ellipse cx="38" cy="38" rx="0.5" ry="4.2" fill="#FFD700" opacity="0.6"/>
+<!-- Right almond eye -->
+<ellipse cx="62" cy="38" rx="8" ry="5" fill="url(#ceo-eye)" filter="url(#ceo-glow)"/>
+<ellipse cx="62" cy="38" rx="2" ry="4.5" fill="#1A0A2E"/>
+<ellipse cx="62" cy="38" rx="0.5" ry="4.2" fill="#FFD700" opacity="0.6"/>
+<!-- Thin regal mouth -->
+<path d="M40,57 Q50,60 60,57" stroke="#8B6914" stroke-width="1.2" fill="none"/>
+<!-- Gold circuit-trace markings on cheeks -->
+<path d="M28,35 L33,35 L33,40 L36,40" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.7"/>
+<path d="M72,35 L67,35 L67,40 L64,40" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.7"/>
+<path d="M30,45 L34,45 L34,48" stroke="#FFD700" stroke-width="0.4" fill="none" opacity="0.5"/>
+<path d="M70,45 L66,45 L66,48" stroke="#FFD700" stroke-width="0.4" fill="none" opacity="0.5"/>
+<!-- Forehead gem -->
+<polygon points="50,22 53,27 50,30 47,27" fill="#C084FC" filter="url(#ceo-glow-sm)"/>
+<!-- Neck/shoulders -->
+<rect x="44" y="72" width="12" height="6" rx="2" fill="#1A0A2E" stroke="#3D1A6E" stroke-width="0.5"/>
+</svg>

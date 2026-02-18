@@ -9,21 +9,22 @@ const BASE = "/195_shades_of_agents-";
 
 export const MAIN_NAV: NavItem[] = [
   {
+    label: "Product",
+    href: `${BASE}/product/`,
+  },
+  {
     label: "About",
     href: `${BASE}/about/`,
     children: [
       { label: "Our Story", href: `${BASE}/about/` },
       { label: "Leadership", href: `${BASE}/about/leadership/` },
       { label: "Culture", href: `${BASE}/about/culture/` },
+      { label: "Org Chart", href: `${BASE}/about/org-chart/` },
     ],
   },
   {
-    label: "Agents",
-    href: `${BASE}/agents/`,
-  },
-  {
-    label: "Departments",
-    href: `${BASE}/departments/`,
+    label: "Industries",
+    href: `${BASE}/industries/`,
   },
   {
     label: "Capabilities",
@@ -36,12 +37,12 @@ export const MAIN_NAV: NavItem[] = [
     ],
   },
   {
-    label: "How We Work",
-    href: `${BASE}/how-we-work/`,
-  },
-  {
     label: "Network",
     href: `${BASE}/network/`,
+  },
+  {
+    label: "Blog",
+    href: `${BASE}/blog/`,
   },
   {
     label: "Contact",
@@ -54,10 +55,10 @@ export const FOOTER_NAV = {
     { label: "About", href: `${BASE}/about/` },
     { label: "Leadership", href: `${BASE}/about/leadership/` },
     { label: "Culture", href: `${BASE}/about/culture/` },
-    { label: "Careers", href: `${BASE}/careers/` },
     { label: "Press", href: `${BASE}/press/` },
   ],
   product: [
+    { label: "Product", href: `${BASE}/product/` },
     { label: "Capabilities", href: `${BASE}/capabilities/` },
     { label: "Tech Stack", href: `${BASE}/capabilities/tech-stack/` },
     { label: "Project Lifecycle", href: `${BASE}/capabilities/lifecycle/` },

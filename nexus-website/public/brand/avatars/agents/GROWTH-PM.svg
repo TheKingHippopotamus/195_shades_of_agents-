@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<defs>
+  <radialGradient id="grpm-skin" cx="45%" cy="35%" r="58%">
+    <stop offset="0%" stop-color="#40C8A8"/>
+    <stop offset="60%" stop-color="#1A8070"/>
+    <stop offset="100%" stop-color="#083830"/>
+  </radialGradient>
+  <radialGradient id="grpm-iris" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#80FFD8"/>
+    <stop offset="50%" stop-color="#20C090"/>
+    <stop offset="100%" stop-color="#084040"/>
+  </radialGradient>
+  <filter id="grpm-glow"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- Growth spike crown marks -->
+<polygon points="40,15 42,8 44,15" fill="#40C8A8" opacity="0.9"/>
+<polygon points="48,12 50,5 52,12" fill="#20E0B0" opacity="0.95"/>
+<polygon points="56,15 58,8 60,15" fill="#40C8A8" opacity="0.9"/>
+<!-- Tiny sparkles around crown -->
+<circle cx="36" cy="11" r="1.2" fill="#80FFD8" filter="url(#grpm-glow)" opacity="0.8"/>
+<circle cx="64" cy="11" r="1.2" fill="#80FFD8" filter="url(#grpm-glow)" opacity="0.8"/>
+<!-- Eager energetic face -->
+<ellipse cx="50" cy="51" rx="25" ry="25" fill="url(#grpm-skin)" stroke="#1AB090" stroke-width="1.4"/>
+<!-- Raised excited brows -->
+<path d="M31,38 Q39,33 46,36" fill="none" stroke="#0A6050" stroke-width="1.5"/>
+<path d="M54,36 Q61,33 69,38" fill="none" stroke="#0A6050" stroke-width="1.5"/>
+<!-- Left eye: trending-up arrow iris -->
+<circle cx="38" cy="48" r="8.5" fill="#041818" stroke="#1AB090" stroke-width="1.3"/>
+<circle cx="38" cy="48" r="6" fill="url(#grpm-iris)"/>
+<!-- Arrow trending up -->
+<polyline points="33.5,52 36,49 38,51 41,45.5" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="40,44 42.5,44.5 41.5,47" fill="#FFFFFF"/>
+<circle cx="38" cy="47" r="1" fill="#E0FFEE" filter="url(#grpm-glow)"/>
+<!-- Right eye: trending-up arrow iris -->
+<circle cx="62" cy="48" r="8.5" fill="#041818" stroke="#1AB090" stroke-width="1.3"/>
+<circle cx="62" cy="48" r="6" fill="url(#grpm-iris)"/>
+<polyline points="57.5,52 60,49 62,51 65,45.5" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="64,44 66.5,44.5 65.5,47" fill="#FFFFFF"/>
+<circle cx="62" cy="47" r="1" fill="#E0FFEE" filter="url(#grpm-glow)"/>
+<!-- Excited wide smile -->
+<path d="M36,62 Q50,72 64,62" fill="none" stroke="#40C8A8" stroke-width="2" stroke-linecap="round"/>
+<!-- Body: energetic -->
+<path d="M28,73 L23,88 L50,86 L77,88 L72,73 Z" fill="#083830" stroke="#1AB090" stroke-width="1"/>
+<line x1="33" y1="79" x2="67" y2="79" stroke="#1A8070" stroke-width="0.7" opacity="0.6"/>
+<!-- Up-arrow on chest -->
+<polygon points="50,82 54,86 46,86" fill="#40C8A8" opacity="0.8"/>
+<ellipse cx="50" cy="93" rx="21" ry="2.5" fill="rgba(64,200,168,0.15)"/>
+</svg>

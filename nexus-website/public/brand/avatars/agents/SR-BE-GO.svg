@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-go" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071820"/>
+      <stop offset="100%" stop-color="#030c12"/>
+    </radialGradient>
+    <radialGradient id="face-go" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#29C9ED"/>
+      <stop offset="50%" stop-color="#00ADD8"/>
+      <stop offset="100%" stop-color="#006e8a"/>
+    </radialGradient>
+    <radialGradient id="iris-go" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#B2EBF2"/>
+      <stop offset="100%" stop-color="#0097A7"/>
+    </radialGradient>
+    <filter id="glow-go">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-go)" rx="12"/>
+  <!-- Short flat antennae (Gopher-inspired) -->
+  <path d="M38,25 L32,18" stroke="#00ADD8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M40,24 L35,17" stroke="#006e8a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M62,25 L68,18" stroke="#00ADD8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M60,24 L65,17" stroke="#006e8a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Clean angular face -->
+  <path d="M18,32 L82,32 L78,80 L50,87 L22,80 Z" fill="url(#face-go)" stroke="#00ADD8" stroke-width="1.5"/>
+  <!-- Cheerful raised brows -->
+  <path d="M22,44 Q32,38 42,43" stroke="#006e8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M58,43 Q68,38 78,44" stroke="#006e8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Large round Gopher-style eyes -->
+  <circle cx="34" cy="52" r="11" fill="#002030" stroke="#00ADD8" stroke-width="1.5"/>
+  <circle cx="66" cy="52" r="11" fill="#002030" stroke="#00ADD8" stroke-width="1.5"/>
+  <!-- Big round irises -->
+  <circle cx="34" cy="52" r="9.5" fill="url(#iris-go)"/>
+  <circle cx="66" cy="52" r="9.5" fill="url(#iris-go)"/>
+  <!-- Pupils -->
+  <circle cx="34" cy="52" r="4.5" fill="#001018"/>
+  <circle cx="66" cy="52" r="4.5" fill="#001018"/>
+  <!-- Large eye shine -->
+  <circle cx="36.5" cy="49.5" r="2.2" fill="#ffffff" opacity="0.85"/>
+  <circle cx="68.5" cy="49.5" r="2.2" fill="#ffffff" opacity="0.85"/>
+  <!-- Nose (short angular) -->
+  <path d="M47,64 L50,68 L53,64" stroke="#006e8a" stroke-width="1.5" fill="none"/>
+  <!-- Cheerful wide smile -->
+  <path d="M26,72 Q50,84 74,72" stroke="#00ADD8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Go text on forehead -->
+  <text x="50" y="34" text-anchor="middle" font-family="monospace" font-size="5" font-weight="bold" fill="#00ADD8" opacity="0.7">Go</text>
+  <!-- Label -->
+  <rect x="17" y="90" width="66" height="8" rx="3" fill="#030c12" stroke="#00ADD8" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#00ADD8">SR-BE-GO</text>
+</svg>

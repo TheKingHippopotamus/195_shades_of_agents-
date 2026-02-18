@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="vpai-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#020820"/>
+      <stop offset="100%" stop-color="#010410"/>
+    </radialGradient>
+    <radialGradient id="vpai-skin" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#E8F4FF"/>
+      <stop offset="45%" stop-color="#90C0F0"/>
+      <stop offset="100%" stop-color="#3060A0"/>
+    </radialGradient>
+    <radialGradient id="vpai-iris" cx="40%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#80D0FF"/>
+      <stop offset="100%" stop-color="#0060C0"/>
+    </radialGradient>
+    <filter id="vpai-glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="vpai-glow-soft">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#vpai-bg)" rx="10"/>
+  <!-- Neural halo ring above head -->
+  <ellipse cx="50" cy="18" rx="20" ry="5" fill="none" stroke="#80D0FF" stroke-width="1.2" opacity="0.7" filter="url(#vpai-glow)"/>
+  <ellipse cx="50" cy="18" rx="20" ry="5" fill="none" stroke="#FFFFFF" stroke-width="0.4" opacity="0.5"/>
+  <!-- Floating geometric shapes around face -->
+  <polygon points="10,28 14,22 18,28" fill="none" stroke="#80D0FF" stroke-width="0.7" opacity="0.5"/>
+  <polygon points="82,28 86,22 90,28" fill="none" stroke="#80D0FF" stroke-width="0.7" opacity="0.5"/>
+  <rect x="8" y="62" width="8" height="8" rx="1" fill="none" stroke="#80D0FF" stroke-width="0.6" opacity="0.4" transform="rotate(20,12,66)"/>
+  <rect x="84" y="62" width="8" height="8" rx="1" fill="none" stroke="#80D0FF" stroke-width="0.6" opacity="0.4" transform="rotate(-20,88,66)"/>
+  <!-- Transcendent oval face — iridescent white-blue -->
+  <ellipse cx="50" cy="57" rx="22" ry="27" fill="url(#vpai-skin)" filter="url(#vpai-glow-soft)" opacity="0.3"/>
+  <ellipse cx="50" cy="57" rx="22" ry="27" fill="url(#vpai-skin)"/>
+  <!-- 3 eyes in vertical column -->
+  <!-- Top eye (center) -->
+  <ellipse cx="50" cy="40" rx="7" ry="7" fill="#020C28"/>
+  <circle cx="50" cy="40" r="5.5" fill="url(#vpai-iris)" filter="url(#vpai-glow)"/>
+  <circle cx="50" cy="40" r="2.5" fill="#001040"/>
+  <circle cx="51.5" cy="38.5" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Middle left eye -->
+  <ellipse cx="40" cy="52" rx="6.5" ry="7" fill="#020C28"/>
+  <circle cx="40" cy="52" r="5" fill="url(#vpai-iris)" filter="url(#vpai-glow)"/>
+  <circle cx="40" cy="52" r="2.2" fill="#001040"/>
+  <circle cx="41.5" cy="50.5" r="1" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Middle right eye -->
+  <ellipse cx="60" cy="52" rx="6.5" ry="7" fill="#020C28"/>
+  <circle cx="60" cy="52" r="5" fill="url(#vpai-iris)" filter="url(#vpai-glow)"/>
+  <circle cx="60" cy="52" r="2.2" fill="#001040"/>
+  <circle cx="61.5" cy="50.5" r="1" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="64" rx="2" ry="1.5" fill="#3060A0" opacity="0.5"/>
+  <!-- Mystical calm expression -->
+  <path d="M 43 72 Q 50 76 57 72" fill="none" stroke="#80D0FF" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

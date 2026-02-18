@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="ms-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1e0800"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="ms-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FF9040"/>
+    <stop offset="55%" stop-color="#E05000"/>
+    <stop offset="100%" stop-color="#7a2500"/>
+  </radialGradient>
+  <radialGradient id="ms-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFE580"/>
+    <stop offset="50%" stop-color="#FF8C00"/>
+    <stop offset="100%" stop-color="#1a0500"/>
+  </radialGradient>
+  <filter id="ms-glow">
+    <feGaussianBlur stdDeviation="1.3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#ms-bg)"/>
+<!-- energetic antennae with sparks -->
+<line x1="40" y1="27" x2="32" y2="12" stroke="#FF9040" stroke-width="1.8" stroke-linecap="round"/>
+<polygon points="32,8 29,13 35,13" fill="#FF9040" filter="url(#ms-glow)"/>
+<line x1="60" y1="27" x2="68" y2="12" stroke="#FF9040" stroke-width="1.8" stroke-linecap="round"/>
+<polygon points="68,8 65,13 71,13" fill="#FF9040" filter="url(#ms-glow)"/>
+<!-- round energetic head -->
+<circle cx="50" cy="54" r="27" fill="url(#ms-skin)" stroke="#E05000" stroke-width="1.2"/>
+<!-- brow ridges -->
+<path d="M30,44 Q37,39 44,42" fill="none" stroke="#7a2500" stroke-width="2" stroke-linecap="round"/>
+<path d="M56,42 Q63,39 70,44" fill="none" stroke="#7a2500" stroke-width="2" stroke-linecap="round"/>
+<!-- eyes with funnel/pipeline iris -->
+<circle cx="39" cy="50" r="7" fill="#0d0300" stroke="#FF9040" stroke-width="1.2"/>
+<circle cx="61" cy="50" r="7" fill="#0d0300" stroke="#FF9040" stroke-width="1.2"/>
+<circle cx="39" cy="50" r="5.5" fill="url(#ms-eye)"/>
+<circle cx="61" cy="50" r="5.5" fill="url(#ms-eye)"/>
+<!-- funnel shape inside eye -->
+<path d="M36,47 L42,47 L40,53 L38,53 Z" fill="#E05000" opacity="0.7"/>
+<path d="M58,47 L64,47 L62,53 L60,53 Z" fill="#E05000" opacity="0.7"/>
+<circle cx="37" cy="47" r="0.9" fill="white" opacity="0.9"/>
+<circle cx="59" cy="47" r="0.9" fill="white" opacity="0.9"/>
+<!-- nose -->
+<path d="M48,58 Q50,61 52,58" fill="none" stroke="#7a2500" stroke-width="1.2" stroke-linecap="round"/>
+<!-- motivational expression — big open smile -->
+<path d="M33,67 Q50,80 67,67" fill="#7a2500" stroke="#E05000" stroke-width="1.2"/>
+<path d="M33,67 Q50,73 67,67" fill="white" opacity="0.9"/>
+<path d="M40,67 L40,72" stroke="#E05000" stroke-width="0.6" opacity="0.5"/>
+<path d="M50,67 L50,73" stroke="#E05000" stroke-width="0.6" opacity="0.5"/>
+<path d="M60,67 L60,72" stroke="#E05000" stroke-width="0.6" opacity="0.5"/>
+<!-- cheek glow marks -->
+<circle cx="29" cy="57" r="4" fill="#FF9040" opacity="0.15"/>
+<circle cx="71" cy="57" r="4" fill="#FF9040" opacity="0.15"/>
+</svg>

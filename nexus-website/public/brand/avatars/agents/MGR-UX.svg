@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="mgux-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#5C1A2E"/>
+      <stop offset="100%" stop-color="#1A0810"/>
+    </radialGradient>
+    <radialGradient id="mgux-skin" cx="45%" cy="38%" r="58%">
+      <stop offset="0%" stop-color="#FFB8C8"/>
+      <stop offset="60%" stop-color="#E8788A"/>
+      <stop offset="100%" stop-color="#C04060"/>
+    </radialGradient>
+    <radialGradient id="mgux-iris" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#FFE0D0"/>
+      <stop offset="40%" stop-color="#FF8060"/>
+      <stop offset="100%" stop-color="#8B2000"/>
+    </radialGradient>
+    <filter id="mgux-glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="100" height="100" fill="url(#mgux-bg)" rx="10"/>
+  <!-- Soft ambient stars -->
+  <circle cx="10" cy="12" r="0.8" fill="#FF9AB0" opacity="0.5"/>
+  <circle cx="88" cy="9" r="0.6" fill="#FFD0E0" opacity="0.4"/>
+  <circle cx="92" cy="82" r="0.7" fill="#FF9AB0" opacity="0.4"/>
+  <!-- Head — warm rose oval -->
+  <ellipse cx="50" cy="54" rx="24" ry="28" fill="url(#mgux-skin)"/>
+  <!-- Flowing antennae like hair — left -->
+  <path d="M 34 32 Q 22 18 28 8 Q 30 4 33 7 Q 31 14 36 24 Q 40 30 38 35" fill="none" stroke="#FFB8C8" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Flowing antennae — right -->
+  <path d="M 66 32 Q 78 18 72 8 Q 70 4 67 7 Q 69 14 64 24 Q 60 30 62 35" fill="none" stroke="#FFB8C8" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Antennae tips (empathy orbs) -->
+  <circle cx="31" cy="7" r="3" fill="#FF6080" filter="url(#mgux-glow)"/>
+  <circle cx="69" cy="7" r="3" fill="#FF6080" filter="url(#mgux-glow)"/>
+  <!-- Left eye socket -->
+  <ellipse cx="40" cy="50" rx="8" ry="9" fill="#2A0818"/>
+  <!-- Right eye socket -->
+  <ellipse cx="60" cy="50" rx="8" ry="9" fill="#2A0818"/>
+  <!-- Left iris — user journey path -->
+  <circle cx="40" cy="50" r="6" fill="url(#mgux-iris)"/>
+  <path d="M 35 50 Q 38 47 40 50 Q 42 53 45 50" fill="none" stroke="#FFE0D0" stroke-width="0.9" stroke-linecap="round"/>
+  <circle cx="40" cy="50" r="6" fill="none" stroke="#FF9AB0" stroke-width="0.5" opacity="0.6"/>
+  <!-- Right iris -->
+  <circle cx="60" cy="50" r="6" fill="url(#mgux-iris)"/>
+  <path d="M 55 50 Q 58 47 60 50 Q 62 53 65 50" fill="none" stroke="#FFE0D0" stroke-width="0.9" stroke-linecap="round"/>
+  <!-- Eye pupils -->
+  <circle cx="41" cy="49" r="2.5" fill="#1A0408"/>
+  <circle cx="61" cy="49" r="2.5" fill="#1A0408"/>
+  <!-- Eye highlight -->
+  <circle cx="42" cy="48" r="1" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="62" cy="48" r="1" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Empathetic small smile -->
+  <path d="M 42 66 Q 50 72 58 66" fill="none" stroke="#FF8090" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Nose hint -->
+  <ellipse cx="50" cy="61" rx="3" ry="2" fill="#C04060" opacity="0.5"/>
+  <!-- Cheek blush marks -->
+  <ellipse cx="34" cy="58" rx="5" ry="3" fill="#FF6080" opacity="0.25"/>
+  <ellipse cx="66" cy="58" rx="5" ry="3" fill="#FF6080" opacity="0.25"/>
+</svg>

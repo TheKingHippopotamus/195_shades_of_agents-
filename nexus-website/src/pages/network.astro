@@ -15,19 +15,42 @@ try {
 const totalAgents = agents.length || 195;
 const totalDepts = departments.length || 20;
 
+// Build a fast code → agent lookup for O(1) resolution
+const agentByCode: Record<string, any> = {};
+agents.forEach((a: any) => { agentByCode[a.code] = a; });
+
+// Normalize a reports_to value to a single resolvable agent code.
+// Some agents use compound values like "CTO + VP-ARCH" or "EM-FE or EM-BE".
+// We extract the first code so statistics remain meaningful and the primary
+// manager is credited.
+function primaryReportsTo(raw: string | undefined): string | null {
+  if (!raw) return null;
+  // Extract first token separated by " + " or " or " (case-insensitive)
+  const first = raw.split(/\s*\+\s*|\s+or\s+/i)[0].trim();
+  // Only return if a real agent exists with that code
+  return agentByCode[first] ? first : null;
+}
+
 // Compute network statistics from live data
-const reportsToCount = agents.filter((a: any) => a.reports_to && a.reports_to !== "Board of Directors / Client (as ultimate stakeholder)").length;
+// Count only edges that resolve to a real agent (excludes Board, compound values
+// that have no primary match, and self-references)
+const agentCodes = new Set(agents.map((a: any) => a.code as string));
+const reportsToCount = agents.filter((a: any) => {
+  const primary = primaryReportsTo(a.reports_to);
+  return primary !== null && agentCodes.has(primary);
+}).length;
+
 const tierCounts: Record<number, number> = {};
 agents.forEach((a: any) => {
   const t = a.tier?.number ?? -1;
   tierCounts[t] = (tierCounts[t] || 0) + 1;
 });
 
-// Find most-connected agents (most direct reports)
+// Find most-connected agents (most direct reports) using normalized manager codes
 const reportCounts: Record<string, number> = {};
 agents.forEach((a: any) => {
-  if (a.reports_to && typeof a.reports_to === "string") {
-    const mgr = a.reports_to;
+  const mgr = primaryReportsTo(a.reports_to);
+  if (mgr) {
     reportCounts[mgr] = (reportCounts[mgr] || 0) + 1;
   }
 });
@@ -35,7 +58,7 @@ const topHubs = Object.entries(reportCounts)
   .sort((a, b) => b[1] - a[1])
   .slice(0, 6)
   .map(([code, count]) => {
-    const agent = agents.find((a: any) => a.code === code);
+    const agent = agentByCode[code];
     return { code, count, role: agent?.role || code, dept: agent?.department || "" };
   });
 
@@ -98,8 +121,8 @@ const tierLabels: Record<number, string> = {
     <div class="grid lg:grid-cols-[1fr_320px] gap-6">
 
       <!-- Graph Container -->
-      <div>
-        <NetworkGraph client:visible />
+      <div style="min-height: 700px;">
+        <NetworkGraph client:only="react" />
       </div>
 
       <!-- Sidebar -->
@@ -449,28 +472,28 @@ const tierLabels: Record<number, string> = {
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a
-        href="/195_shades_of_agents-/agents"
+        href="/195_shades_of_agents-/agents/"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-[var(--bg-primary)] font-semibold text-sm hover:opacity-90 transition-opacity"
       >
         Browse All Agents
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
       </a>
       <a
-        href="/195_shades_of_agents-/departments"
+        href="/195_shades_of_agents-/departments/"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-[var(--accent)] hover:text-[var(--accent-text)] transition-colors"
       >
         Explore Departments
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
       </a>
       <a
-        href="/195_shades_of_agents-/about/org-chart"
+        href="/195_shades_of_agents-/about/org-chart/"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-[var(--accent)] hover:text-[var(--accent-text)] transition-colors"
       >
         Org Chart
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
       </a>
       <a
-        href="/195_shades_of_agents-/how-we-work"
+        href="/195_shades_of_agents-/how-we-work/"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-semibold text-sm hover:border-[var(--accent)] hover:text-[var(--accent-text)] transition-colors"
       >
         How We Work

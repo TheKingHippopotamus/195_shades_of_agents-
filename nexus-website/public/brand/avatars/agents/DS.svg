@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="ds-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#081018"/>
+      <stop offset="100%" stop-color="#04080E"/>
+    </radialGradient>
+    <radialGradient id="ds-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#4880C0"/>
+      <stop offset="55%" stop-color="#205080"/>
+      <stop offset="100%" stop-color="#0C2840"/>
+    </radialGradient>
+    <radialGradient id="ds-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#C0E0FF"/>
+      <stop offset="50%" stop-color="#6090C0"/>
+      <stop offset="100%" stop-color="#203048"/>
+    </radialGradient>
+    <filter id="ds-glow">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#ds-bg)" rx="10"/>
+  <circle cx="9" cy="11" r="0.7" fill="#4880C0" opacity="0.45"/>
+  <circle cx="89" cy="9" r="0.6" fill="#6090C0" opacity="0.4"/>
+  <!-- Round curious medium-blue face -->
+  <ellipse cx="50" cy="55" rx="23" ry="26" fill="url(#ds-skin)"/>
+  <!-- Antennae -->
+  <line x1="43" y1="30" x2="39" y2="12" stroke="#4880C0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="57" y1="30" x2="61" y2="12" stroke="#4880C0" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="39" cy="12" r="2" fill="#6090C0" filter="url(#ds-glow)"/>
+  <circle cx="61" cy="12" r="2" fill="#6090C0" filter="url(#ds-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="52" rx="7" ry="7.5" fill="#040810"/>
+  <ellipse cx="60" cy="52" rx="7" ry="7.5" fill="#040810"/>
+  <!-- Dataset-table iris left (grid of rows/cols) -->
+  <circle cx="40" cy="52" r="5.5" fill="url(#ds-iris)"/>
+  <!-- Table header + rows -->
+  <rect x="35.5" y="48" width="9" height="8" rx="0.5" fill="none" stroke="#203048" stroke-width="0.5" opacity="0.8"/>
+  <line x1="35.5" y1="50" x2="44.5" y2="50" stroke="#203048" stroke-width="0.5" opacity="0.7"/>
+  <line x1="35.5" y1="52" x2="44.5" y2="52" stroke="#203048" stroke-width="0.5" opacity="0.6"/>
+  <line x1="35.5" y1="54" x2="44.5" y2="54" stroke="#203048" stroke-width="0.5" opacity="0.5"/>
+  <line x1="40" y1="48" x2="40" y2="56" stroke="#203048" stroke-width="0.5" opacity="0.6"/>
+  <!-- Dataset-table iris right -->
+  <circle cx="60" cy="52" r="5.5" fill="url(#ds-iris)"/>
+  <rect x="55.5" y="48" width="9" height="8" rx="0.5" fill="none" stroke="#203048" stroke-width="0.5" opacity="0.8"/>
+  <line x1="55.5" y1="50" x2="64.5" y2="50" stroke="#203048" stroke-width="0.5" opacity="0.7"/>
+  <line x1="55.5" y1="52" x2="64.5" y2="52" stroke="#203048" stroke-width="0.5" opacity="0.6"/>
+  <line x1="55.5" y1="54" x2="64.5" y2="54" stroke="#203048" stroke-width="0.5" opacity="0.5"/>
+  <line x1="60" y1="48" x2="60" y2="56" stroke="#203048" stroke-width="0.5" opacity="0.6"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="51" r="2" fill="#030608"/>
+  <circle cx="61" cy="51" r="2" fill="#030608"/>
+  <circle cx="42" cy="50" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="62" cy="50" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#0C2840" opacity="0.5"/>
+  <!-- Eager analytical expression -->
+  <path d="M 42 69 Q 50 76 58 69" fill="none" stroke="#4880C0" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

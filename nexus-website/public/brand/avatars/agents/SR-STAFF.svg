@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-sr-staff" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0d1525"/>
+      <stop offset="100%" stop-color="#050a15"/>
+    </radialGradient>
+    <radialGradient id="face-sr-staff" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#546E7A"/>
+      <stop offset="60%" stop-color="#37474F"/>
+      <stop offset="100%" stop-color="#1C2A33"/>
+    </radialGradient>
+    <radialGradient id="iris-sr-staff" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E0F7FA"/>
+      <stop offset="50%" stop-color="#00BCD4"/>
+      <stop offset="100%" stop-color="#00606A"/>
+    </radialGradient>
+    <filter id="glow-sr-staff">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-sr-staff)" rx="12"/>
+  <!-- Single centered antenna with node -->
+  <line x1="50" y1="22" x2="50" y2="8" stroke="#00BCD4" stroke-width="1.8"/>
+  <circle cx="50" cy="8" r="3.5" fill="none" stroke="#00BCD4" stroke-width="1.5" filter="url(#glow-sr-staff)"/>
+  <circle cx="50" cy="8" r="1.8" fill="#00BCD4"/>
+  <!-- Rounded face -->
+  <ellipse cx="50" cy="56" rx="30" ry="32" fill="url(#face-sr-staff)" stroke="#607D8B" stroke-width="1.5"/>
+  <!-- Calm brow -->
+  <path d="M26,46 Q36,43 44,46" stroke="#1C2A33" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M56,46 Q64,43 74,46" stroke="#1C2A33" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="36" cy="52" rx="9" ry="8.5" fill="#0a1520" stroke="#607D8B" stroke-width="1.2"/>
+  <ellipse cx="64" cy="52" rx="9" ry="8.5" fill="#0a1520" stroke="#607D8B" stroke-width="1.2"/>
+  <!-- Cyan iris -->
+  <circle cx="36" cy="52" r="7" fill="url(#iris-sr-staff)"/>
+  <circle cx="64" cy="52" r="7" fill="url(#iris-sr-staff)"/>
+  <!-- Gear markings around eyes (subtle tick marks) -->
+  <line x1="36" y1="43" x2="36" y2="41" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="43" y1="46" x2="44.5" y2="44.5" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="45" y1="52" x2="47" y2="52" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="43" y1="58" x2="44.5" y2="59.5" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="64" y1="43" x2="64" y2="41" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="71" y1="46" x2="72.5" y2="44.5" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="73" y1="52" x2="75" y2="52" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <line x1="71" y1="58" x2="72.5" y2="59.5" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+  <!-- Pupils -->
+  <circle cx="36" cy="52" r="3" fill="#020c12"/>
+  <circle cx="64" cy="52" r="3" fill="#020c12"/>
+  <circle cx="37.2" cy="50.8" r="1.2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="65.2" cy="50.8" r="1.2" fill="#ffffff" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M46,61 Q50,65 54,61" stroke="#546E7A" stroke-width="1.2" fill="none"/>
+  <!-- Professional steady mouth -->
+  <path d="M34,70 Q50,76 66,70" stroke="#607D8B" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Ear bumps -->
+  <ellipse cx="21" cy="55" rx="3.5" ry="5.5" fill="#37474F" stroke="#607D8B" stroke-width="1"/>
+  <ellipse cx="79" cy="55" rx="3.5" ry="5.5" fill="#37474F" stroke="#607D8B" stroke-width="1"/>
+  <!-- Label -->
+  <rect x="18" y="90" width="64" height="8" rx="3" fill="#050a15" stroke="#00BCD4" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#00BCD4">SR-STAFF</text>
+</svg>

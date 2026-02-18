@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<defs>
+  <radialGradient id="pe-skin" cx="45%" cy="35%" r="58%">
+    <stop offset="0%" stop-color="#B0BEC5"/>
+    <stop offset="60%" stop-color="#607D8B"/>
+    <stop offset="100%" stop-color="#2E3B47"/>
+  </radialGradient>
+  <radialGradient id="pe-iris" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#E0E8ED"/>
+    <stop offset="100%" stop-color="#37505E"/>
+  </radialGradient>
+  <filter id="pe-glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- Short straight antennae -->
+<line x1="44" y1="26" x2="40" y2="13" stroke="#90A4AE" stroke-width="1.2"/>
+<circle cx="39" cy="12" r="2.2" fill="#B0BEC5" stroke="#78909C" stroke-width="0.8"/>
+<line x1="56" y1="26" x2="60" y2="13" stroke="#90A4AE" stroke-width="1.2"/>
+<circle cx="61" cy="12" r="2.2" fill="#B0BEC5" stroke="#78909C" stroke-width="0.8"/>
+<!-- Tool belt marks around chin area (small wrench shapes) -->
+<g opacity="0.7">
+  <line x1="33" y1="67" x2="36" y2="70" stroke="#90A4AE" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="33" y1="70" x2="36" y2="67" stroke="#90A4AE" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="64" y1="67" x2="67" y2="70" stroke="#90A4AE" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="64" y1="70" x2="67" y2="67" stroke="#90A4AE" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="46" y1="71" x2="48" y2="73" stroke="#90A4AE" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="52" y1="71" x2="54" y2="73" stroke="#90A4AE" stroke-width="1.2" stroke-linecap="round"/>
+</g>
+<!-- Compact round head -->
+<circle cx="50" cy="47" r="24" fill="url(#pe-skin)" stroke="#90A4AE" stroke-width="1.3"/>
+<!-- Forehead crease -->
+<path d="M38,33 Q50,30 62,33" fill="none" stroke="#78909C" stroke-width="0.8" opacity="0.6"/>
+<!-- Left eye: wrench-cross iris -->
+<circle cx="40" cy="46" r="7" fill="#1B2830" stroke="#90A4AE" stroke-width="1.2"/>
+<circle cx="40" cy="46" r="4.5" fill="url(#pe-iris)"/>
+<!-- Wrench cross in iris -->
+<rect x="38.5" y="43.5" width="3" height="5" rx="1" fill="#B0BEC5" opacity="0.8"/>
+<rect x="37" y="45" width="6" height="2" rx="1" fill="#B0BEC5" opacity="0.8"/>
+<circle cx="40" cy="44" r="1" fill="none" stroke="#E0E8ED" stroke-width="0.5"/>
+<circle cx="40" cy="48" r="1" fill="none" stroke="#E0E8ED" stroke-width="0.5"/>
+<circle cx="40" cy="45.5" r="0.9" fill="#FFFFFF" filter="url(#pe-glow)"/>
+<!-- Right eye: wrench-cross iris -->
+<circle cx="60" cy="46" r="7" fill="#1B2830" stroke="#90A4AE" stroke-width="1.2"/>
+<circle cx="60" cy="46" r="4.5" fill="url(#pe-iris)"/>
+<rect x="58.5" y="43.5" width="3" height="5" rx="1" fill="#B0BEC5" opacity="0.8"/>
+<rect x="57" y="45" width="6" height="2" rx="1" fill="#B0BEC5" opacity="0.8"/>
+<circle cx="60" cy="44" r="1" fill="none" stroke="#E0E8ED" stroke-width="0.5"/>
+<circle cx="60" cy="48" r="1" fill="none" stroke="#E0E8ED" stroke-width="0.5"/>
+<circle cx="60" cy="45.5" r="0.9" fill="#FFFFFF" filter="url(#pe-glow)"/>
+<!-- Competent slight frown -->
+<path d="M44,57 Q50,59 56,57" fill="none" stroke="#90A4AE" stroke-width="1.3" stroke-linecap="round"/>
+<!-- Body -->
+<path d="M30,68 L26,84 L50,82 L74,84 L70,68 Z" fill="#2E3B47" stroke="#78909C" stroke-width="1"/>
+<line x1="36" y1="75" x2="64" y2="75" stroke="#607D8B" stroke-width="0.7" opacity="0.6"/>
+<!-- Tool dots on body -->
+<circle cx="42" cy="78" r="1.5" fill="#90A4AE" opacity="0.8"/>
+<circle cx="50" cy="78" r="1.5" fill="#90A4AE" opacity="0.8"/>
+<circle cx="58" cy="78" r="1.5" fill="#90A4AE" opacity="0.8"/>
+<ellipse cx="50" cy="91" rx="20" ry="2.5" fill="rgba(144,164,174,0.12)"/>
+</svg>

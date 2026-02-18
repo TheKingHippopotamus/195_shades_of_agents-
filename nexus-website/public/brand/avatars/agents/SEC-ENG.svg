@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="seceng-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#0e0e0e"/>
+    <stop offset="100%" stop-color="#040404"/>
+  </radialGradient>
+  <radialGradient id="seceng-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#555555"/>
+    <stop offset="100%" stop-color="#2a2a2a"/>
+  </radialGradient>
+  <radialGradient id="seceng-eye" cx="30%" cy="30%" r="65%">
+    <stop offset="0%" stop-color="#fecaca"/>
+    <stop offset="55%" stop-color="#b91c1c"/>
+    <stop offset="100%" stop-color="#200000"/>
+  </radialGradient>
+  <filter id="seceng-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" fill="url(#seceng-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="43" y="69" width="14" height="9" rx="2" fill="#2a2a2a"/>
+<!-- Focused dark face - graphite -->
+<ellipse cx="50" cy="46" rx="23" ry="25" fill="url(#seceng-skin)"/>
+<!-- Shield marking on forehead -->
+<path d="M44,20 L50,17 L56,20 L56,28 Q50,32 44,28 Z" fill="#1a1a1a" stroke="#b91c1c" stroke-width="0.9"/>
+<!-- Cross on shield -->
+<line x1="50" y1="19" x2="50" y2="30" stroke="#ef4444" stroke-width="0.7"/>
+<line x1="45" y1="24" x2="55" y2="24" stroke="#ef4444" stroke-width="0.7"/>
+<!-- Left eye - firewall-brick iris -->
+<g filter="url(#seceng-glow)">
+  <ellipse cx="37" cy="45" rx="7" ry="7" fill="url(#seceng-eye)"/>
+  <!-- Brick pattern -->
+  <rect x="31" y="42" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <rect x="37" y="42" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <rect x="28.5" y="45" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <rect x="34" y="45" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <ellipse cx="37" cy="45" rx="7" ry="7" fill="none" stroke="#b91c1c" stroke-width="0.7"/>
+  <ellipse cx="37" cy="45" rx="2" ry="2" fill="#ef4444" opacity="0.7"/>
+</g>
+<!-- Right eye - firewall-brick iris -->
+<g filter="url(#seceng-glow)">
+  <ellipse cx="63" cy="45" rx="7" ry="7" fill="url(#seceng-eye)"/>
+  <rect x="57" y="42" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <rect x="63" y="42" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <rect x="54.5" y="45" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <rect x="60" y="45" width="5" height="2.5" rx="0.3" fill="#7f1d1d" opacity="0.8"/>
+  <ellipse cx="63" cy="45" rx="7" ry="7" fill="none" stroke="#b91c1c" stroke-width="0.7"/>
+  <ellipse cx="63" cy="45" rx="2" ry="2" fill="#ef4444" opacity="0.7"/>
+</g>
+<!-- Alert expression -->
+<path d="M40,63 L60,63" fill="none" stroke="#3a3a3a" stroke-width="1.2" opacity="0.8"/>
+<!-- Subtle nose -->
+<ellipse cx="50" cy="56" rx="2" ry="1.2" fill="#2a2a2a" opacity="0.4"/>
+<!-- Label -->
+<rect x="28" y="88" width="44" height="8" rx="2" fill="#0d0000" stroke="#b91c1c" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="4" fill="#b91c1c" text-anchor="middle">SEC · ENG</text>
+</svg>

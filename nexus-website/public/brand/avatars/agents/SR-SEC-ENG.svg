@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="srsec-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#111111"/>
+    <stop offset="100%" stop-color="#040404"/>
+  </radialGradient>
+  <radialGradient id="srsec-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#404040"/>
+    <stop offset="100%" stop-color="#1a1a1a"/>
+  </radialGradient>
+  <radialGradient id="srsec-eye" cx="30%" cy="30%" r="65%">
+    <stop offset="0%" stop-color="#fca5a5"/>
+    <stop offset="55%" stop-color="#dc2626"/>
+    <stop offset="100%" stop-color="#2a0000"/>
+  </radialGradient>
+  <filter id="srsec-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" fill="url(#srsec-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="44" y="68" width="12" height="10" rx="2" fill="#1a1a1a"/>
+<!-- Angular tactical face -->
+<path d="M26,36 L32,22 L50,18 L68,22 L74,36 L72,65 Q50,72 28,65 Z" fill="url(#srsec-skin)"/>
+<!-- Lock symbol on forehead -->
+<rect x="44" y="21" width="12" height="9" rx="2" fill="#0d0d0d" stroke="#dc2626" stroke-width="0.8"/>
+<path d="M44,24 Q44,19 50,19 Q56,19 56,24" fill="none" stroke="#dc2626" stroke-width="0.8"/>
+<rect x="48" y="24.5" width="4" height="3" rx="0.5" fill="#dc2626"/>
+<!-- Reticle markings (tactical) -->
+<line x1="26" y1="44" x2="30" y2="44" stroke="#dc2626" stroke-width="0.5" opacity="0.5"/>
+<line x1="70" y1="44" x2="74" y2="44" stroke="#dc2626" stroke-width="0.5" opacity="0.5"/>
+<!-- Small piercing red eyes -->
+<g filter="url(#srsec-glow)">
+  <ellipse cx="38" cy="44" rx="6" ry="5" fill="url(#srsec-eye)"/>
+  <!-- Reticle iris -->
+  <circle cx="38" cy="44" r="3" fill="none" stroke="#7f1d1d" stroke-width="0.7"/>
+  <line x1="32" y1="44" x2="44" y2="44" stroke="#7f1d1d" stroke-width="0.4" opacity="0.8"/>
+  <line x1="38" y1="38.5" x2="38" y2="49.5" stroke="#7f1d1d" stroke-width="0.4" opacity="0.8"/>
+  <ellipse cx="38" cy="44" rx="1.2" ry="1.2" fill="#ff0000" opacity="0.8"/>
+  <ellipse cx="38" cy="44" rx="6" ry="5" fill="none" stroke="#ef4444" stroke-width="0.6"/>
+</g>
+<g filter="url(#srsec-glow)">
+  <ellipse cx="62" cy="44" rx="6" ry="5" fill="url(#srsec-eye)"/>
+  <circle cx="62" cy="44" r="3" fill="none" stroke="#7f1d1d" stroke-width="0.7"/>
+  <line x1="56" y1="44" x2="68" y2="44" stroke="#7f1d1d" stroke-width="0.4" opacity="0.8"/>
+  <line x1="62" y1="38.5" x2="62" y2="49.5" stroke="#7f1d1d" stroke-width="0.4" opacity="0.8"/>
+  <ellipse cx="62" cy="44" rx="1.2" ry="1.2" fill="#ff0000" opacity="0.8"/>
+  <ellipse cx="62" cy="44" rx="6" ry="5" fill="none" stroke="#ef4444" stroke-width="0.6"/>
+</g>
+<!-- Stern expression -->
+<path d="M38,62 L62,62" fill="none" stroke="#404040" stroke-width="1.2" opacity="0.8"/>
+<path d="M38,62 L40,59" fill="none" stroke="#404040" stroke-width="0.7" opacity="0.5"/>
+<path d="M62,62 L60,59" fill="none" stroke="#404040" stroke-width="0.7" opacity="0.5"/>
+<!-- Label -->
+<rect x="22" y="88" width="56" height="8" rx="2" fill="#0d0000" stroke="#dc2626" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="3.5" fill="#dc2626" text-anchor="middle">SR · SEC · ENG</text>
+</svg>

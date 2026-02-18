@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="sruidBlobGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8EB5"/>
+      <stop offset="55%" stop-color="#FF2D78"/>
+      <stop offset="100%" stop-color="#A8004F"/>
+    </radialGradient>
+    <clipPath id="sruidBlobClip">
+      <path d="M 77.5 50.0 Q 67.6 67.6 72.6 58.8 Q 50.0 78.6 58.8 73.1 Q 33.6 66.4 41.8 72.5 Q 22.2 50.0 27.9 58.2 Q 32.6 32.6 27.4 41.3 Q 50.0 21.1 41.3 26.9 Q 66.6 33.4 58.3 27.3 Q 77.5 50.0 72.1 41.7 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="#1A0010"/>
+  <circle cx="14" cy="20" r="2.5" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="83" cy="18" r="2.5" fill="#A855F7" opacity="0.45"/>
+  <circle cx="12" cy="70" r="2" fill="#FF2D78" opacity="0.5"/>
+  <circle cx="84" cy="72" r="2.5" fill="#00BFFF" opacity="0.45"/>
+  <circle cx="50" cy="88" r="2" fill="#FFD700" opacity="0.4"/>
+  <path d="M 65 70 Q 78 78 82 90 Q 84 96 80 95 Q 76 94 72 85 Q 68 75 65 70 Z" fill="#FF2D78" opacity="0.38"/>
+  <path d="M 77.5 50.0 Q 67.6 67.6 72.6 58.8 Q 50.0 78.6 58.8 73.1 Q 33.6 66.4 41.8 72.5 Q 22.2 50.0 27.9 58.2 Q 32.6 32.6 27.4 41.3 Q 50.0 21.1 41.3 26.9 Q 66.6 33.4 58.3 27.3 Q 77.5 50.0 72.1 41.7 Z" fill="url(#sruidBlobGrad)"/>
+  <!-- COLOR WHEEL: pie slices -->
+  <g clip-path="url(#sruidBlobClip)">
+    <!-- 6 color slices of the wheel -->
+    <!-- Red/Pink -->
+    <path d="M 50 50 L 50 36 A 14 14 0 0 1 62.1 43 Z" fill="#FF2D78"/>
+    <!-- Orange -->
+    <path d="M 50 50 L 62.1 43 A 14 14 0 0 1 62.1 57 Z" fill="#FF6B35"/>
+    <!-- Yellow -->
+    <path d="M 50 50 L 62.1 57 A 14 14 0 0 1 50 64 Z" fill="#FFD700"/>
+    <!-- Green -->
+    <path d="M 50 50 L 50 64 A 14 14 0 0 1 37.9 57 Z" fill="#00FF88"/>
+    <!-- Blue -->
+    <path d="M 50 50 L 37.9 57 A 14 14 0 0 1 37.9 43 Z" fill="#00BFFF"/>
+    <!-- Purple -->
+    <path d="M 50 50 L 37.9 43 A 14 14 0 0 1 50 36 Z" fill="#A855F7"/>
+    <!-- Center white circle -->
+    <circle cx="50" cy="50" r="5" fill="#1A0010"/>
+    <circle cx="50" cy="50" r="3" fill="#FFD1B8"/>
+    <!-- Outer ring border -->
+    <circle cx="50" cy="50" r="14" fill="none" stroke="#FFD1B8" stroke-width="0.8" opacity="0.5"/>
+  </g>
+</svg>

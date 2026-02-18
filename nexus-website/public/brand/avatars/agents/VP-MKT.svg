@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="vm-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#200010"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="vm-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FF60C0"/>
+    <stop offset="55%" stop-color="#C0108080"/>
+    <stop offset="100%" stop-color="#600050"/>
+  </radialGradient>
+  <radialGradient id="vm-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="40%" stop-color="#FF80FF"/>
+    <stop offset="100%" stop-color="#400040"/>
+  </radialGradient>
+  <filter id="vm-glow">
+    <feGaussianBlur stdDeviation="1.8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#vm-bg)"/>
+<!-- megaphone antennae -->
+<line x1="38" y1="28" x2="26" y2="13" stroke="#FF60C0" stroke-width="2" stroke-linecap="round"/>
+<polygon points="22,9 22,17 30,13" fill="#FF60C0" filter="url(#vm-glow)"/>
+<line x1="62" y1="28" x2="74" y2="13" stroke="#FF60C0" stroke-width="2" stroke-linecap="round"/>
+<polygon points="78,9 78,17 70,13" fill="#FF60C0" filter="url(#vm-glow)"/>
+<!-- stunning face -->
+<ellipse cx="50" cy="54" rx="26" ry="28" fill="#FF1080" stroke="#FF60C0" stroke-width="1.4"/>
+<ellipse cx="50" cy="54" rx="25" ry="27" fill="#B01060" opacity="0.7"/>
+<!-- broadcast-signal iris: concentric circles emanating -->
+<circle cx="39" cy="49" r="7" fill="#200010" stroke="#FF60C0" stroke-width="1.3"/>
+<circle cx="61" cy="49" r="7" fill="#200010" stroke="#FF60C0" stroke-width="1.3"/>
+<circle cx="39" cy="49" r="5.5" fill="url(#vm-eye)"/>
+<circle cx="61" cy="49" r="5.5" fill="url(#vm-eye)"/>
+<!-- concentric signal rings in eyes -->
+<circle cx="39" cy="49" r="4.2" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.8"/>
+<circle cx="39" cy="49" r="2.8" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.9"/>
+<circle cx="39" cy="49" r="1.4" fill="#FF60C0" opacity="0.95"/>
+<circle cx="61" cy="49" r="4.2" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.8"/>
+<circle cx="61" cy="49" r="2.8" fill="none" stroke="#FF60C0" stroke-width="0.6" opacity="0.9"/>
+<circle cx="61" cy="49" r="1.4" fill="#FF60C0" opacity="0.95"/>
+<!-- brow ridges bold -->
+<path d="M28,41 Q37,35 45,39" fill="none" stroke="#600050" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M55,39 Q63,35 72,41" fill="none" stroke="#600050" stroke-width="2.2" stroke-linecap="round"/>
+<!-- nose -->
+<ellipse cx="50" cy="58" rx="2.5" ry="1.8" fill="#600050" opacity="0.7"/>
+<!-- bold charismatic expression -->
+<path d="M31,67 Q50,82 69,67" fill="#600050" stroke="#FF60C0" stroke-width="1.4"/>
+<path d="M31,67 Q50,74 69,67" fill="white" opacity="0.95"/>
+<path d="M38,67 L38,73" stroke="#FF60C0" stroke-width="0.7" opacity="0.5"/>
+<path d="M50,67 L50,74" stroke="#FF60C0" stroke-width="0.7" opacity="0.5"/>
+<path d="M62,67 L62,73" stroke="#FF60C0" stroke-width="0.7" opacity="0.5"/>
+<!-- glow cheeks -->
+<circle cx="26" cy="58" r="6" fill="#FF60C0" opacity="0.18"/>
+<circle cx="74" cy="58" r="6" fill="#FF60C0" opacity="0.18"/>
+</svg>

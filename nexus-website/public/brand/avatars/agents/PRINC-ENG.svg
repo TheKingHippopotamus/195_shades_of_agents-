@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-princ" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#101820"/>
+      <stop offset="100%" stop-color="#050a10"/>
+    </radialGradient>
+    <linearGradient id="face-princ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#455A64"/>
+      <stop offset="50%" stop-color="#37474F"/>
+      <stop offset="100%" stop-color="#263238"/>
+    </linearGradient>
+    <radialGradient id="iris-princ" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="50%" stop-color="#FFD600"/>
+      <stop offset="100%" stop-color="#FF6F00"/>
+    </radialGradient>
+    <filter id="glow-princ">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-princ)" rx="12"/>
+  <!-- Head crests (prominent ridges) -->
+  <path d="M22,26 L30,18 L38,24 L46,16 L54,24 L62,16 L70,24 L78,18" stroke="#FFD600" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-princ)"/>
+  <!-- Angular face -->
+  <path d="M18,32 L82,32 L78,82 L50,88 L22,82 Z" fill="url(#face-princ)" stroke="#546E7A" stroke-width="1.5"/>
+  <!-- Heavy supraorbital ridge -->
+  <path d="M20,44 L42,40 L42,44 Z" fill="#263238"/>
+  <path d="M58,40 L80,44 L58,44 Z" fill="#263238"/>
+  <path d="M20,44 Q31,40 42,44" stroke="#FFD600" stroke-width="1.5" fill="none" filter="url(#glow-princ)"/>
+  <path d="M58,44 Q69,40 80,44" stroke="#FFD600" stroke-width="1.5" fill="none" filter="url(#glow-princ)"/>
+  <!-- Angular eyes -->
+  <path d="M22,48 L42,46 L42,56 L22,58 Z" fill="#101820" stroke="#546E7A" stroke-width="1.2"/>
+  <path d="M58,46 L78,48 L78,58 L58,56 Z" fill="#101820" stroke="#546E7A" stroke-width="1.2"/>
+  <!-- Gold iris -->
+  <ellipse cx="32" cy="52" rx="7" ry="5.5" fill="url(#iris-princ)"/>
+  <ellipse cx="68" cy="52" rx="7" ry="5.5" fill="url(#iris-princ)"/>
+  <!-- Pupils -->
+  <ellipse cx="32" cy="52" rx="2.5" ry="3" fill="#050a10"/>
+  <ellipse cx="68" cy="52" rx="2.5" ry="3" fill="#050a10"/>
+  <circle cx="33.2" cy="50.8" r="1.1" fill="#ffffff" opacity="0.8"/>
+  <circle cx="69.2" cy="50.8" r="1.1" fill="#ffffff" opacity="0.8"/>
+  <!-- Strong nose ridge -->
+  <path d="M50,58 L46,65 L54,65" stroke="#546E7A" stroke-width="1.5" fill="none"/>
+  <!-- Stern set mouth -->
+  <line x1="31" y1="73" x2="69" y2="73" stroke="#546E7A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Jaw lines -->
+  <line x1="22" y1="68" x2="31" y2="73" stroke="#37474F" stroke-width="1.5"/>
+  <line x1="78" y1="68" x2="69" y2="73" stroke="#37474F" stroke-width="1.5"/>
+  <!-- Label -->
+  <rect x="16" y="90" width="68" height="8" rx="3" fill="#050a10" stroke="#FFD600" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#FFD600">PRINC-ENG</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="fs-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071420"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+    <clipPath id="fs-face-clip">
+      <ellipse cx="50" cy="52" rx="27" ry="30"/>
+    </clipPath>
+    <filter id="fs-glow">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="url(#fs-bg)"/>
+  <!-- Left antenna -->
+  <line x1="38" y1="22" x2="35" y2="10" stroke="#4AAED9" stroke-width="1.5"/>
+  <circle cx="35" cy="9" r="2.2" fill="#4AAED9" filter="url(#fs-glow)"/>
+  <!-- Right antenna -->
+  <line x1="62" y1="22" x2="65" y2="10" stroke="#52B788" stroke-width="1.5"/>
+  <circle cx="65" cy="9" r="2.2" fill="#52B788" filter="url(#fs-glow)"/>
+  <!-- Face outline -->
+  <ellipse cx="50" cy="52" rx="27" ry="30" fill="#1B4332" stroke="#40916C" stroke-width="1.8"/>
+  <!-- Top-left blue half -->
+  <polygon points="23,52 50,22 77,22 50,22" clip-path="url(#fs-face-clip)" fill="#1A5FAD"/>
+  <polygon points="23,52 23,22 77,22 50,52" clip-path="url(#fs-face-clip)" fill="#1A5FAD"/>
+  <!-- Diagonal split line -->
+  <line x1="23" y1="22" x2="77" y2="82" stroke="#FFFFFF" stroke-width="1.5" clip-path="url(#fs-face-clip)" opacity="0.6"/>
+  <!-- Face border again -->
+  <ellipse cx="50" cy="52" rx="27" ry="30" fill="none" stroke="#3A8CBF" stroke-width="1.8"/>
+  <!-- Left eye socket - blue side -->
+  <ellipse cx="37" cy="48" rx="8" ry="8" fill="#071828" stroke="#4AAED9" stroke-width="1.2"/>
+  <!-- Left iris - blue -->
+  <circle cx="37" cy="48" r="5.5" fill="#1565C0"/>
+  <circle cx="37" cy="48" r="3" fill="#1A5FAD"/>
+  <circle cx="37" cy="48" r="1.5" fill="#42A5F5"/>
+  <circle cx="37" cy="48" r="0.6" fill="#071828"/>
+  <circle cx="35" cy="46.5" r="0.9" fill="white" opacity="0.7"/>
+  <!-- Right eye socket - green side -->
+  <ellipse cx="63" cy="55" rx="8" ry="8" fill="#061208" stroke="#52B788" stroke-width="1.2"/>
+  <!-- Right iris - green -->
+  <circle cx="63" cy="55" r="5.5" fill="#1B4332"/>
+  <circle cx="63" cy="55" r="3" fill="#2D6A4F"/>
+  <circle cx="63" cy="55" r="1.5" fill="#52B788"/>
+  <circle cx="63" cy="55" r="0.6" fill="#061208"/>
+  <circle cx="61" cy="53.5" r="0.9" fill="white" opacity="0.7"/>
+  <!-- Neutral mouth -->
+  <path d="M38,70 Q50,73 62,70" stroke="#3A8CBF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="63" rx="2" ry="1.2" fill="#3A8CBF" opacity="0.5"/>
+</svg>

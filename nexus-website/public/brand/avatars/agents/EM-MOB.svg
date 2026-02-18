@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-em-mob" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071c22"/>
+      <stop offset="100%" stop-color="#020c10"/>
+    </radialGradient>
+    <radialGradient id="face-em-mob" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#00ACC1"/>
+      <stop offset="60%" stop-color="#00838F"/>
+      <stop offset="100%" stop-color="#004d58"/>
+    </radialGradient>
+    <radialGradient id="iris-em-mob" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B2EBF2"/>
+      <stop offset="50%" stop-color="#00BCD4"/>
+      <stop offset="100%" stop-color="#006064"/>
+    </radialGradient>
+    <filter id="glow-em-mob">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-em-mob)" rx="12"/>
+  <!-- Signal waves radiating from top -->
+  <path d="M50,6 Q38,12 50,16 Q62,12 50,6" stroke="#00E5FF" stroke-width="0.8" fill="none" opacity="0.7"/>
+  <path d="M50,3 Q32,12 50,20 Q68,12 50,3" stroke="#00E5FF" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M50,1 Q26,12 50,22 Q74,12 50,1" stroke="#00E5FF" stroke-width="0.5" fill="none" opacity="0.3"/>
+  <!-- Round face -->
+  <circle cx="50" cy="58" r="34" fill="url(#face-em-mob)" stroke="#00ACC1" stroke-width="1.5"/>
+  <!-- Brow -->
+  <path d="M26,48 Q36,44 44,48" stroke="#004d58" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M56,48 Q64,44 74,48" stroke="#004d58" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Round eyes -->
+  <circle cx="36" cy="54" r="9.5" fill="#003040" stroke="#00ACC1" stroke-width="1.2"/>
+  <circle cx="64" cy="54" r="9.5" fill="#003040" stroke="#00ACC1" stroke-width="1.2"/>
+  <!-- Phone screen inside iris -->
+  <circle cx="36" cy="54" r="8" fill="url(#iris-em-mob)"/>
+  <circle cx="64" cy="54" r="8" fill="url(#iris-em-mob)"/>
+  <!-- Phone rectangle inside each eye -->
+  <rect x="31" y="49" width="10" height="10" rx="2" fill="#003040" stroke="#00E5FF" stroke-width="0.8"/>
+  <rect x="59" y="49" width="10" height="10" rx="2" fill="#003040" stroke="#00E5FF" stroke-width="0.8"/>
+  <!-- Phone home button -->
+  <circle cx="36" cy="57" r="1" fill="#00E5FF" opacity="0.9"/>
+  <circle cx="64" cy="57" r="1" fill="#00E5FF" opacity="0.9"/>
+  <!-- Pupils -->
+  <circle cx="36" cy="54" r="2.5" fill="#000a10"/>
+  <circle cx="64" cy="54" r="2.5" fill="#000a10"/>
+  <!-- Shine -->
+  <circle cx="37.5" cy="52.5" r="1.1" fill="#ffffff" opacity="0.8"/>
+  <circle cx="65.5" cy="52.5" r="1.1" fill="#ffffff" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M46,63 Q50,67 54,63" stroke="#00838F" stroke-width="1.2" fill="none"/>
+  <!-- Smile -->
+  <path d="M33,72 Q50,82 67,72" stroke="#00ACC1" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Label -->
+  <rect x="22" y="90" width="56" height="8" rx="3" fill="#020c10" stroke="#00E5FF" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#00E5FF">EM-MOB</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Server-grey head — command presence, broad -->
+  <ellipse cx="50" cy="45" rx="30" ry="28" fill="#0d1117" stroke="#64748b" stroke-width="1.8"/>
+  <!-- Director crown: 3 antenna spikes -->
+  <line x1="38" y1="17" x2="38" y2="10" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="38" cy="9" r="2" fill="#64748b" opacity="0.8"/>
+  <line x1="50" y1="17" x2="50" y2="8" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="50" cy="7" r="2.5" fill="#64748b" opacity="0.9"/>
+  <line x1="62" y1="17" x2="62" y2="10" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="62" cy="9" r="2" fill="#64748b" opacity="0.8"/>
+  <!-- Brow ridge: heavy control -->
+  <path d="M20,37 L35,33 L50,35 L65,33 L80,37" fill="none" stroke="#64748b" stroke-width="1.3"/>
+  <!-- Left eye: network topology iris (nodes and links) -->
+  <ellipse cx="36" cy="46" rx="9" ry="7" fill="#050b14" stroke="#64748b" stroke-width="1.2"/>
+  <circle cx="36" cy="46" r="2" fill="none" stroke="#64748b" stroke-width="0.6"/>
+  <circle cx="32" cy="44" r="1" fill="#64748b" opacity="0.7"/>
+  <circle cx="40" cy="44" r="1" fill="#64748b" opacity="0.7"/>
+  <circle cx="36" cy="50" r="1" fill="#64748b" opacity="0.7"/>
+  <line x1="32" y1="44" x2="36" y2="46" stroke="#64748b" stroke-width="0.5" opacity="0.6"/>
+  <line x1="40" y1="44" x2="36" y2="46" stroke="#64748b" stroke-width="0.5" opacity="0.6"/>
+  <line x1="36" y1="48" x2="36" y2="50" stroke="#64748b" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="36" cy="46" r="1.2" fill="#64748b" opacity="0.9"/>
+  <!-- Right eye: network topology iris -->
+  <ellipse cx="64" cy="46" rx="9" ry="7" fill="#050b14" stroke="#64748b" stroke-width="1.2"/>
+  <circle cx="64" cy="46" r="2" fill="none" stroke="#64748b" stroke-width="0.6"/>
+  <circle cx="60" cy="44" r="1" fill="#64748b" opacity="0.7"/>
+  <circle cx="68" cy="44" r="1" fill="#64748b" opacity="0.7"/>
+  <circle cx="64" cy="50" r="1" fill="#64748b" opacity="0.7"/>
+  <line x1="60" y1="44" x2="64" y2="46" stroke="#64748b" stroke-width="0.5" opacity="0.6"/>
+  <line x1="68" y1="44" x2="64" y2="46" stroke="#64748b" stroke-width="0.5" opacity="0.6"/>
+  <line x1="64" y1="48" x2="64" y2="50" stroke="#64748b" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="64" cy="46" r="1.2" fill="#64748b" opacity="0.9"/>
+  <!-- Control panel marks: 3 buttons on chin area -->
+  <circle cx="42" cy="66" r="2" fill="none" stroke="#22c55e" stroke-width="0.8"/>
+  <circle cx="50" cy="66" r="2" fill="none" stroke="#64748b" stroke-width="0.8"/>
+  <circle cx="58" cy="66" r="2" fill="none" stroke="#ef4444" stroke-width="0.8"/>
+  <circle cx="42" cy="66" r="0.8" fill="#22c55e" opacity="0.7"/>
+  <circle cx="58" cy="66" r="0.8" fill="#ef4444" opacity="0.7"/>
+  <!-- Nose: panel ridge -->
+  <rect x="47" y="54" width="6" height="4" rx="1" fill="none" stroke="#64748b" stroke-width="0.7" opacity="0.5"/>
+  <!-- Mouth: calm operational -->
+  <path d="M35,60 Q50,58 65,60" stroke="#64748b" stroke-width="1.2" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#64748b" opacity="0.9">DIR-IT</text>
+</svg>

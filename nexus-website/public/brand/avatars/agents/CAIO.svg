@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <linearGradient id="caio-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#050A1E"/><stop offset="100%" stop-color="#000000"/></linearGradient>
+  <linearGradient id="caio-skin" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#5AA0E0"/><stop offset="50%" stop-color="#9B59B6"/><stop offset="100%" stop-color="#4A90D9"/></linearGradient>
+  <radialGradient id="caio-eye" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="60%" stop-color="#88CCFF"/><stop offset="100%" stop-color="#2244AA"/></radialGradient>
+  <filter id="caio-glow"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="caio-glow-sm"><feGaussianBlur stdDeviation="0.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#caio-bg)"/>
+<!-- Neural halo ring above head -->
+<ellipse cx="50" cy="10" rx="16" ry="4" fill="none" stroke="#88CCFF" stroke-width="1" opacity="0.8" filter="url(#caio-glow-sm)"/>
+<circle cx="34" cy="10" r="1.2" fill="#AADDFF" filter="url(#caio-glow-sm)"/>
+<circle cx="42" cy="7" r="1" fill="#AADDFF" filter="url(#caio-glow-sm)"/>
+<circle cx="50" cy="6" r="1.2" fill="#FFFFFF" filter="url(#caio-glow-sm)"/>
+<circle cx="58" cy="7" r="1" fill="#AADDFF" filter="url(#caio-glow-sm)"/>
+<circle cx="66" cy="10" r="1.2" fill="#AADDFF" filter="url(#caio-glow-sm)"/>
+<!-- 6 thin antennae like insect, each glowing -->
+<line x1="38" y1="20" x2="30" y2="8" stroke="#7799CC" stroke-width="0.7"/>
+<circle cx="30" cy="8" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+<line x1="43" y1="18" x2="38" y2="6" stroke="#7799CC" stroke-width="0.7"/>
+<circle cx="38" cy="6" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+<line x1="48" y1="17" x2="46" y2="5" stroke="#7799CC" stroke-width="0.7"/>
+<circle cx="46" cy="5" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+<line x1="52" y1="17" x2="54" y2="5" stroke="#7799CC" stroke-width="0.7"/>
+<circle cx="54" cy="5" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+<line x1="57" y1="18" x2="62" y2="6" stroke="#7799CC" stroke-width="0.7"/>
+<circle cx="62" cy="6" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+<line x1="62" y1="20" x2="70" y2="8" stroke="#7799CC" stroke-width="0.7"/>
+<circle cx="70" cy="8" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+<!-- Elongated tall oval head -->
+<ellipse cx="50" cy="52" rx="22" ry="36" fill="url(#caio-skin)" stroke="#5577AA" stroke-width="0.5"/>
+<!-- 3 eyes in vertical column (center largest) -->
+<ellipse cx="50" cy="35" rx="5" ry="4" fill="url(#caio-eye)" filter="url(#caio-glow)"/>
+<ellipse cx="50" cy="35" rx="2" ry="2" fill="#001133"/>
+<circle cx="49" cy="34" r="0.8" fill="white" opacity="0.9"/>
+<!-- Center eye (largest) -->
+<ellipse cx="50" cy="47" rx="7" ry="6" fill="url(#caio-eye)" filter="url(#caio-glow)"/>
+<ellipse cx="50" cy="47" rx="3" ry="3" fill="#001133"/>
+<circle cx="48.5" cy="45.5" r="1" fill="white" opacity="0.9"/>
+<!-- Bottom eye -->
+<ellipse cx="50" cy="60" rx="5" ry="4" fill="url(#caio-eye)" filter="url(#caio-glow)"/>
+<ellipse cx="50" cy="60" rx="2" ry="2" fill="#001133"/>
+<circle cx="49" cy="59" r="0.8" fill="white" opacity="0.9"/>
+<!-- Neural transmission glyph where mouth is -->
+<path d="M40,72 L45,69 L50,72 L55,69 L60,72" stroke="#88CCFF" stroke-width="0.8" fill="none" opacity="0.7"/>
+<circle cx="50" cy="72" r="1" fill="#88CCFF" filter="url(#caio-glow-sm)"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="cmo-bg" cx="50%" cy="40%" r="65%"><stop offset="0%" stop-color="#2D1400"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="cmo-skin" cx="50%" cy="35%" r="55%"><stop offset="0%" stop-color="#FF8C55"/><stop offset="100%" stop-color="#E05020"/></radialGradient>
+  <radialGradient id="cmo-eye" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#FF44CC"/><stop offset="100%" stop-color="#AA0077"/></radialGradient>
+  <filter id="cmo-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="cmo-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#cmo-bg)"/>
+<!-- Wide triangular-bottom face -->
+<path d="M22,20 Q50,12 78,20 L72,65 Q50,78 28,65 Z" fill="url(#cmo-skin)" stroke="#CC4400" stroke-width="0.5"/>
+<!-- Spiral spring antennae -->
+<path d="M36,22 C34,16 38,14 36,10 C34,7 38,5 36,2" stroke="#FF6B35" stroke-width="1.2" fill="none"/>
+<circle cx="36" cy="2" r="1.5" fill="#FF6B35" filter="url(#cmo-glow-sm)"/>
+<path d="M64,22 C66,16 62,14 64,10 C66,7 62,5 64,2" stroke="#FF6B35" stroke-width="1.2" fill="none"/>
+<circle cx="64" cy="2" r="1.5" fill="#FF6B35" filter="url(#cmo-glow-sm)"/>
+<!-- Left large round eye -->
+<circle cx="36" cy="40" r="9" fill="url(#cmo-eye)" filter="url(#cmo-glow)"/>
+<!-- Spotlight pupil in left eye -->
+<circle cx="36" cy="40" r="4" fill="#220011"/>
+<circle cx="34" cy="38" r="1.5" fill="#FFAAEE" opacity="0.9"/>
+<!-- Starburst from left eye -->
+<line x1="36" y1="30" x2="36" y2="33" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="27" y1="38" x2="30" y2="39" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="44" y1="42" x2="47" y2="43" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="29" y1="33" x2="31" y2="35" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="43" y1="33" x2="41" y2="35" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<!-- Right large round eye -->
+<circle cx="64" cy="40" r="9" fill="url(#cmo-eye)" filter="url(#cmo-glow)"/>
+<circle cx="64" cy="40" r="4" fill="#220011"/>
+<circle cx="62" cy="38" r="1.5" fill="#FFAAEE" opacity="0.9"/>
+<line x1="64" y1="30" x2="64" y2="33" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="55" y1="38" x2="58" y2="39" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="72" y1="42" x2="69" y2="43" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="57" y1="33" x2="59" y2="35" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<line x1="71" y1="33" x2="69" y2="35" stroke="#FF44CC" stroke-width="0.6" opacity="0.7"/>
+<!-- Huge charismatic smile -->
+<path d="M33,58 Q50,72 67,58" fill="#CC3300" stroke="#AA2200" stroke-width="0.5"/>
+<path d="M36,58 Q50,65 64,58" fill="#FFCCBB"/>
+<!-- Neat teeth rows -->
+<rect x="38" y="58" width="4" height="3" rx="0.5" fill="white"/>
+<rect x="43" y="58" width="4" height="3" rx="0.5" fill="white"/>
+<rect x="48" y="59" width="4" height="3" rx="0.5" fill="white"/>
+<rect x="53" y="58" width="4" height="3" rx="0.5" fill="white"/>
+<rect x="58" y="58" width="4" height="3" rx="0.5" fill="white"/>
+</svg>

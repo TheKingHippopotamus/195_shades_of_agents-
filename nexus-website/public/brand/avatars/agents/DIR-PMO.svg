@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Project-blue head — commanding, structured -->
+  <ellipse cx="50" cy="45" rx="27" ry="28" fill="#040c1e" stroke="#3b82f6" stroke-width="1.7"/>
+  <!-- Project timeline crown: horizontal milestone line -->
+  <line x1="28" y1="17" x2="72" y2="17" stroke="#3b82f6" stroke-width="1.2"/>
+  <circle cx="35" cy="17" r="2.5" fill="#3b82f6" opacity="0.8"/>
+  <circle cx="50" cy="17" r="2.5" fill="#3b82f6" opacity="0.9"/>
+  <circle cx="65" cy="17" r="2.5" fill="#3b82f6" opacity="0.8"/>
+  <line x1="35" y1="17" x2="35" y2="10" stroke="#3b82f6" stroke-width="0.8" opacity="0.5"/>
+  <line x1="50" y1="17" x2="50" y2="8" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
+  <line x1="65" y1="17" x2="65" y2="10" stroke="#3b82f6" stroke-width="0.8" opacity="0.5"/>
+  <!-- Brow: commanding authoritative -->
+  <path d="M23,37 L36,33 L50,35 L64,33 L77,37" fill="none" stroke="#3b82f6" stroke-width="1.2"/>
+  <!-- Left eye: gantt chart iris (horizontal bars of varying lengths) -->
+  <ellipse cx="36" cy="47" rx="9" ry="7" fill="#020810" stroke="#3b82f6" stroke-width="1.2"/>
+  <rect x="28" y="42" width="16" height="10" rx="1" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.4"/>
+  <rect x="29" y="43.5" width="12" height="2" rx="0.5" fill="#3b82f6" opacity="0.7"/>
+  <rect x="29" y="46.5" width="9" height="2" rx="0.5" fill="#3b82f6" opacity="0.8"/>
+  <rect x="29" y="49.5" width="14" height="2" rx="0.5" fill="#3b82f6" opacity="0.6"/>
+  <!-- Milestone diamond on right side of gantt iris -->
+  <path d="M43,46 L45,47 L43,48 L41,47 Z" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="36" cy="47" r="1.2" fill="#3b82f6" opacity="0.9"/>
+  <!-- Right eye: gantt chart iris -->
+  <ellipse cx="64" cy="47" rx="9" ry="7" fill="#020810" stroke="#3b82f6" stroke-width="1.2"/>
+  <rect x="56" y="42" width="16" height="10" rx="1" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.4"/>
+  <rect x="57" y="43.5" width="12" height="2" rx="0.5" fill="#3b82f6" opacity="0.7"/>
+  <rect x="57" y="46.5" width="9" height="2" rx="0.5" fill="#3b82f6" opacity="0.8"/>
+  <rect x="57" y="49.5" width="14" height="2" rx="0.5" fill="#3b82f6" opacity="0.6"/>
+  <path d="M71,46 L73,47 L71,48 L69,47 Z" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="64" cy="47" r="1.2" fill="#3b82f6" opacity="0.9"/>
+  <!-- Nose: milestone diamond -->
+  <path d="M50,55 L53,58 L50,61 L47,58 Z" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.5"/>
+  <!-- Mouth: confident delivery line -->
+  <path d="M35,66 Q50,64 65,66" stroke="#3b82f6" stroke-width="1.3" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#3b82f6" opacity="0.9">DIR-PMO</text>
+</svg>

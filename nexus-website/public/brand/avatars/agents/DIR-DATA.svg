@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="ddat-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0D0019"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="ddat-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#9030C0"/><stop offset="100%" stop-color="#6A0DAD"/></radialGradient>
+  <radialGradient id="ddat-eye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#CC88FF"/><stop offset="100%" stop-color="#7700AA"/></radialGradient>
+  <filter id="ddat-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#ddat-bg)"/>
+<!-- Wide flat oval head -->
+<ellipse cx="50" cy="52" rx="34" ry="28" fill="url(#ddat-skin)" stroke="#8800CC" stroke-width="0.6"/>
+<!-- Y-shaped antennae (branch at top into 2 each) -->
+<line x1="38" y1="26" x2="38" y2="14" stroke="#AA44DD" stroke-width="1.1"/>
+<line x1="38" y1="14" x2="32" y2="6" stroke="#AA44DD" stroke-width="1"/>
+<circle cx="32" cy="6" r="1.5" fill="#CC88FF" filter="url(#ddat-glow-sm)"/>
+<line x1="38" y1="14" x2="44" y2="6" stroke="#AA44DD" stroke-width="1"/>
+<circle cx="44" cy="6" r="1.5" fill="#CC88FF" filter="url(#ddat-glow-sm)"/>
+<line x1="62" y1="26" x2="62" y2="14" stroke="#AA44DD" stroke-width="1.1"/>
+<line x1="62" y1="14" x2="56" y2="6" stroke="#AA44DD" stroke-width="1"/>
+<circle cx="56" cy="6" r="1.5" fill="#CC88FF" filter="url(#ddat-glow-sm)"/>
+<line x1="62" y1="14" x2="68" y2="6" stroke="#AA44DD" stroke-width="1"/>
+<circle cx="68" cy="6" r="1.5" fill="#CC88FF" filter="url(#ddat-glow-sm)"/>
+<!-- Database cylinder symbol on forehead -->
+<ellipse cx="50" cy="32" rx="7" ry="2.5" fill="#CC88FF" opacity="0.7"/>
+<rect x="43" y="32" width="14" height="5" fill="#9030C0" stroke="#CC88FF" stroke-width="0.4"/>
+<ellipse cx="50" cy="37" rx="7" ry="2.5" fill="none" stroke="#CC88FF" stroke-width="0.5" opacity="0.7"/>
+<!-- Left eye with data-stream vertical lines -->
+<ellipse cx="34" cy="50" rx="8" ry="7" fill="url(#ddat-eye)"/>
+<line x1="29" y1="43" x2="29" y2="57" stroke="#330055" stroke-width="0.7"/>
+<line x1="32" y1="43" x2="32" y2="57" stroke="#330055" stroke-width="0.7"/>
+<line x1="35" y1="43" x2="35" y2="57" stroke="#330055" stroke-width="0.7"/>
+<line x1="38" y1="43" x2="38" y2="57" stroke="#330055" stroke-width="0.7"/>
+<circle cx="34" cy="50" r="3" fill="#220033"/>
+<circle cx="32.5" cy="48.5" r="1" fill="#EECCFF" opacity="0.9"/>
+<!-- Right eye -->
+<ellipse cx="66" cy="50" rx="8" ry="7" fill="url(#ddat-eye)"/>
+<line x1="61" y1="43" x2="61" y2="57" stroke="#330055" stroke-width="0.7"/>
+<line x1="64" y1="43" x2="64" y2="57" stroke="#330055" stroke-width="0.7"/>
+<line x1="67" y1="43" x2="67" y2="57" stroke="#330055" stroke-width="0.7"/>
+<line x1="70" y1="43" x2="70" y2="57" stroke="#330055" stroke-width="0.7"/>
+<circle cx="66" cy="50" r="3" fill="#220033"/>
+<circle cx="64.5" cy="48.5" r="1" fill="#EECCFF" opacity="0.9"/>
+<!-- Narrow horizontal data-pipe line mouth -->
+<rect x="38" y="64" width="24" height="3" rx="1.5" fill="#330055" stroke="#AA44DD" stroke-width="0.5"/>
+<line x1="40" y1="65.5" x2="62" y2="65.5" stroke="#CC88FF" stroke-width="0.4" opacity="0.5"/>
+<!-- Neck -->
+<rect x="44" y="78" width="12" height="5" rx="2" fill="#6A0DAD" stroke="#8800CC" stroke-width="0.5"/>
+</svg>

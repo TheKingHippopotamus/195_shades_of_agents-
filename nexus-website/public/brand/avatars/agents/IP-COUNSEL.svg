@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Patent blue head — fiercely protective, slightly squared jaw -->
+  <path d="M24,38 Q25,18 50,16 Q75,18 76,38 L76,62 Q75,78 50,80 Q25,78 24,62 Z" fill="#0a1530" stroke="#60a5fa" stroke-width="1.5"/>
+  <!-- Brow: protective lowered -->
+  <path d="M24,40 Q36,34 50,36 Q64,34 76,40" fill="none" stroke="#60a5fa" stroke-width="1.2"/>
+  <!-- IP shield marks on forehead -->
+  <path d="M44,26 Q50,22 56,26 L57,33 Q50,37 43,33 Z" fill="none" stroke="#60a5fa" stroke-width="1"/>
+  <text x="50" y="33" text-anchor="middle" font-family="monospace" font-size="5" fill="#60a5fa" opacity="0.8">IP</text>
+  <!-- Left eye -->
+  <ellipse cx="36" cy="48" rx="8" ry="6" fill="#040c22" stroke="#60a5fa" stroke-width="1.2"/>
+  <!-- Left iris: copyright circle with C -->
+  <circle cx="36" cy="48" r="4.5" fill="none" stroke="#60a5fa" stroke-width="0.8"/>
+  <text x="36" y="50" text-anchor="middle" font-family="monospace" font-size="5" fill="#60a5fa" opacity="0.9">©</text>
+  <!-- Right eye -->
+  <ellipse cx="64" cy="48" rx="8" ry="6" fill="#040c22" stroke="#60a5fa" stroke-width="1.2"/>
+  <!-- Right iris: patent P circle -->
+  <circle cx="64" cy="48" r="4.5" fill="none" stroke="#60a5fa" stroke-width="0.8"/>
+  <text x="64" y="50" text-anchor="middle" font-family="monospace" font-size="5" fill="#60a5fa" opacity="0.9">℗</text>
+  <!-- Chin: sharp protective jaw lines -->
+  <line x1="30" y1="70" x2="40" y2="76" stroke="#60a5fa" stroke-width="0.8" opacity="0.5"/>
+  <line x1="70" y1="70" x2="60" y2="76" stroke="#60a5fa" stroke-width="0.8" opacity="0.5"/>
+  <!-- Nose -->
+  <path d="M47,55 Q50,60 53,55" stroke="#60a5fa" stroke-width="0.8" fill="none" opacity="0.6"/>
+  <!-- Mouth: determined tight -->
+  <path d="M37,66 Q50,64 63,66" stroke="#60a5fa" stroke-width="1.1" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#60a5fa" opacity="0.9">IP-COUNSEL</text>
+</svg>

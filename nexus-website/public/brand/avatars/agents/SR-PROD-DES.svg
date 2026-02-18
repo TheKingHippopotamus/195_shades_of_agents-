@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="srpd-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#3A1020"/>
+      <stop offset="100%" stop-color="#120608"/>
+    </radialGradient>
+    <radialGradient id="srpd-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#FFB890"/>
+      <stop offset="55%" stop-color="#E87050"/>
+      <stop offset="100%" stop-color="#A03828"/>
+    </radialGradient>
+    <radialGradient id="srpd-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#C0E8FF"/>
+      <stop offset="50%" stop-color="#6090C0"/>
+      <stop offset="100%" stop-color="#203858"/>
+    </radialGradient>
+    <filter id="srpd-glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#srpd-bg)" rx="10"/>
+  <circle cx="12" cy="14" r="0.8" fill="#FFB890" opacity="0.4"/>
+  <circle cx="88" cy="10" r="0.6" fill="#C0E8FF" opacity="0.4"/>
+  <!-- Refined oval head — coral-pink -->
+  <ellipse cx="50" cy="54" rx="23" ry="27" fill="url(#srpd-skin)"/>
+  <!-- Clean antennae -->
+  <line x1="43" y1="28" x2="39" y2="12" stroke="#FFB890" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="57" y1="28" x2="61" y2="12" stroke="#FFB890" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="39" cy="12" r="2.2" fill="#6090C0" filter="url(#srpd-glow)"/>
+  <circle cx="61" cy="12" r="2.2" fill="#6090C0" filter="url(#srpd-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7" ry="8" fill="#1A0810"/>
+  <ellipse cx="60" cy="51" rx="7" ry="8" fill="#1A0810"/>
+  <!-- Wireframe-grid iris left -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#srpd-iris)"/>
+  <line x1="36" y1="51" x2="44" y2="51" stroke="#C0E8FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="40" y1="47" x2="40" y2="55" stroke="#C0E8FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="37" y1="48.5" x2="43" y2="48.5" stroke="#C0E8FF" stroke-width="0.3" opacity="0.4"/>
+  <line x1="37" y1="53.5" x2="43" y2="53.5" stroke="#C0E8FF" stroke-width="0.3" opacity="0.4"/>
+  <!-- Wireframe-grid iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#srpd-iris)"/>
+  <line x1="56" y1="51" x2="64" y2="51" stroke="#C0E8FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="60" y1="47" x2="60" y2="55" stroke="#C0E8FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="57" y1="48.5" x2="63" y2="48.5" stroke="#C0E8FF" stroke-width="0.3" opacity="0.4"/>
+  <line x1="57" y1="53.5" x2="63" y2="53.5" stroke="#C0E8FF" stroke-width="0.3" opacity="0.4"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#0A0414"/>
+  <circle cx="61" cy="50" r="2" fill="#0A0414"/>
+  <circle cx="42" cy="49" r="0.8" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="62" cy="49" r="0.8" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="61" rx="2.5" ry="1.8" fill="#A03828" opacity="0.5"/>
+  <!-- Thoughtful expression — slight asymmetric smile -->
+  <path d="M 43 67 Q 50 73 57 68" fill="none" stroke="#E87050" stroke-width="1.7" stroke-linecap="round"/>
+  <!-- Cheek marks — sketch lines -->
+  <line x1="28" y1="55" x2="34" y2="52" stroke="#FFB890" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+  <line x1="66" y1="52" x2="72" y2="55" stroke="#FFB890" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+</svg>

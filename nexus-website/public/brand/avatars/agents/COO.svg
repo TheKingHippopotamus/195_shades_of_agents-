@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="coo-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0A1400"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="coo-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#3D6428"/><stop offset="100%" stop-color="#2D4A1E"/></radialGradient>
+  <radialGradient id="coo-eye" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#FFAA44"/><stop offset="100%" stop-color="#CC5500"/></radialGradient>
+  <filter id="coo-glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#coo-bg)"/>
+<!-- Perfect circle head -->
+<circle cx="50" cy="47" r="30" fill="url(#coo-skin)" stroke="#3D6428" stroke-width="0.7"/>
+<!-- 2x2 grid of 4 scanning eyes (orange) -->
+<ellipse cx="38" cy="38" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="38" cy="38" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<ellipse cx="62" cy="38" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="62" cy="38" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<ellipse cx="38" cy="48" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="38" cy="48" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<ellipse cx="62" cy="48" rx="5.5" ry="4" fill="url(#coo-eye)" filter="url(#coo-glow)"/>
+<ellipse cx="62" cy="48" rx="1.5" ry="3.5" fill="#1A0A00"/>
+<!-- Straight horizontal mouth -->
+<line x1="40" y1="60" x2="60" y2="60" stroke="#1A2E0A" stroke-width="1.5"/>
+<!-- Mandible extensions from jaw -->
+<path d="M35,63 L28,68 L32,72 L38,66" fill="#2D4A1E" stroke="#3D6428" stroke-width="0.5"/>
+<path d="M65,63 L72,68 L68,72 L62,66" fill="#2D4A1E" stroke="#3D6428" stroke-width="0.5"/>
+<!-- Tactical crosshair on forehead -->
+<circle cx="50" cy="26" r="4" fill="none" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="50" y1="20" x2="50" y2="23" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="50" y1="29" x2="50" y2="32" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="44" y1="26" x2="47" y2="26" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<line x1="53" y1="26" x2="56" y2="26" stroke="#FF8C00" stroke-width="0.6" opacity="0.8"/>
+<!-- Ridge marks on skull -->
+<path d="M30,25 Q50,18 70,25" stroke="#1E3A14" stroke-width="1" fill="none" opacity="0.7"/>
+<path d="M34,22 Q50,16 66,22" stroke="#1E3A14" stroke-width="0.6" fill="none" opacity="0.4"/>
+<!-- Neck -->
+<rect x="44" y="75" width="12" height="5" rx="2" fill="#2D4A1E" stroke="#3D6428" stroke-width="0.5"/>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="clo-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0A0F19"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="clo-skin" cx="50%" cy="35%" r="55%"><stop offset="0%" stop-color="#D0DCEE"/><stop offset="100%" stop-color="#A0B4CC"/></radialGradient>
+  <radialGradient id="clo-eye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#99CCEE"/><stop offset="100%" stop-color="#4466AA"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#clo-bg)"/>
+<!-- Perfect oval head -->
+<ellipse cx="50" cy="48" rx="27" ry="33" fill="url(#clo-skin)" stroke="#B0C4DE" stroke-width="0.5"/>
+<!-- Bilateral symmetry mark: vertical line down center of face -->
+<line x1="50" y1="18" x2="50" y2="76" stroke="#8899AA" stroke-width="0.6" opacity="0.5"/>
+<!-- 2 rigid antennae pointing straight up -->
+<line x1="42" y1="18" x2="42" y2="4" stroke="#99AABB" stroke-width="1.2"/>
+<circle cx="42" cy="3" r="1.8" fill="#B0C4DE"/>
+<line x1="58" y1="18" x2="58" y2="4" stroke="#99AABB" stroke-width="1.2"/>
+<circle cx="58" cy="3" r="1.8" fill="#B0C4DE"/>
+<!-- Left eye with scales/balance motif in iris -->
+<circle cx="36" cy="40" r="8.5" fill="url(#clo-eye)"/>
+<!-- Balance scale lines inside left eye -->
+<line x1="36" y1="33" x2="36" y2="47" stroke="#334455" stroke-width="0.6" opacity="0.7"/>
+<line x1="29" y1="38" x2="43" y2="38" stroke="#334455" stroke-width="0.6" opacity="0.7"/>
+<circle cx="30" cy="38" r="2" fill="none" stroke="#334455" stroke-width="0.5"/>
+<circle cx="42" cy="38" r="2" fill="none" stroke="#334455" stroke-width="0.5"/>
+<circle cx="36" cy="40" r="3" fill="#1A2A44"/>
+<circle cx="34.5" cy="38.5" r="1" fill="#AACCEE" opacity="0.9"/>
+<!-- Right eye -->
+<circle cx="64" cy="40" r="8.5" fill="url(#clo-eye)"/>
+<line x1="64" y1="33" x2="64" y2="47" stroke="#334455" stroke-width="0.6" opacity="0.7"/>
+<line x1="57" y1="38" x2="71" y2="38" stroke="#334455" stroke-width="0.6" opacity="0.7"/>
+<circle cx="58" cy="38" r="2" fill="none" stroke="#334455" stroke-width="0.5"/>
+<circle cx="70" cy="38" r="2" fill="none" stroke="#334455" stroke-width="0.5"/>
+<circle cx="64" cy="40" r="3" fill="#1A2A44"/>
+<circle cx="62.5" cy="38.5" r="1" fill="#AACCEE" opacity="0.9"/>
+<!-- Stern pursed slightly downturned mouth -->
+<path d="M38,60 Q50,62 62,60" stroke="#7A8DA0" stroke-width="1.3" fill="none"/>
+<path d="M40,62 Q50,60 60,62" stroke="#6A7D90" stroke-width="0.6" fill="none" opacity="0.5"/>
+</svg>

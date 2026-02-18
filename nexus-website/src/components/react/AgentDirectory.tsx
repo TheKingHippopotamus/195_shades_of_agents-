@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import GameBadgeFrame from "./GameBadgeFrame";
 
 interface Agent {
   agent_number: string;
@@ -176,18 +177,23 @@ export default function AgentDirectory() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {filtered.map((agent) => {
             const color = DEPT_COLORS[agent.department_number] || "#94A3B8";
+            const avatarSrc = `/195_shades_of_agents-/brand/avatars/agents/${agent.code}.svg`;
             return (
               <a
                 key={agent.code}
                 href={`/195_shades_of_agents-/agents/${agent.code.toLowerCase()}/`}
-                className="nexus-card p-4 block group"
+                className="nexus-card p-3 block group"
               >
-                <div className="flex items-start gap-3">
-                  <div
-                    className="h-10 w-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold"
-                    style={{ backgroundColor: `${color}20`, border: `2px solid ${color}`, color }}
-                  >
-                    {agent.agent_number}
+                <div className="flex items-start gap-1">
+                  <div className="flex-shrink-0">
+                    <GameBadgeFrame
+                      avatarSrc={avatarSrc}
+                      agentCode={agent.code}
+                      tierNumber={agent.tier.number}
+                      departmentNumber={parseInt(agent.department_number, 10)}
+                      departmentColor={color}
+                      size="sm"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-1.5 mb-0.5">

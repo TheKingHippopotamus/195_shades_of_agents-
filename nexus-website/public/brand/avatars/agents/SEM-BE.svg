@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="bg-sem-be" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071a18"/>
+      <stop offset="100%" stop-color="#020c0b"/>
+    </radialGradient>
+    <radialGradient id="face-sem-be" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#00695C"/>
+      <stop offset="60%" stop-color="#004D40"/>
+      <stop offset="100%" stop-color="#002820"/>
+    </radialGradient>
+    <radialGradient id="iris-be" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="40%" stop-color="#007c91"/>
+      <stop offset="100%" stop-color="#003040"/>
+    </radialGradient>
+    <filter id="glow-sem-be">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-sem-be)" rx="12"/>
+  <!-- Narrow face -->
+  <ellipse cx="50" cy="56" rx="27" ry="35" fill="url(#face-sem-be)" stroke="#00897B" stroke-width="1.5"/>
+  <!-- Heavy brow - focused look -->
+  <path d="M25,44 Q50,40 75,44" stroke="#002820" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Narrow eyes -->
+  <ellipse cx="37" cy="50" rx="8" ry="5" fill="#002820" stroke="#00897B" stroke-width="1"/>
+  <ellipse cx="63" cy="50" rx="8" ry="5" fill="#002820" stroke="#00897B" stroke-width="1"/>
+  <!-- Scrolling text iris -->
+  <ellipse cx="37" cy="50" rx="6.5" ry="4" fill="url(#iris-be)"/>
+  <ellipse cx="63" cy="50" rx="6.5" ry="4" fill="url(#iris-be)"/>
+  <!-- Text lines in iris (scrolling text effect) -->
+  <line x1="31" y1="49" x2="43" y2="49" stroke="#00E5FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="31" y1="51" x2="43" y2="51" stroke="#00E5FF" stroke-width="0.5" opacity="0.5"/>
+  <line x1="57" y1="49" x2="69" y2="49" stroke="#00E5FF" stroke-width="0.5" opacity="0.7"/>
+  <line x1="57" y1="51" x2="69" y2="51" stroke="#00E5FF" stroke-width="0.5" opacity="0.5"/>
+  <!-- Pupils -->
+  <ellipse cx="37" cy="50" rx="2" ry="2.5" fill="#000d0c"/>
+  <ellipse cx="63" cy="50" rx="2" ry="2.5" fill="#000d0c"/>
+  <!-- { } forehead marking -->
+  <text x="50" y="33" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#00E5FF" filter="url(#glow-sem-be)" opacity="0.9">&#123; &#125;</text>
+  <!-- Server rack marks on cheeks -->
+  <rect x="18" y="52" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.8"/>
+  <rect x="18" y="55" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.6"/>
+  <rect x="18" y="58" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.4"/>
+  <rect x="74" y="52" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.8"/>
+  <rect x="74" y="55" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.6"/>
+  <rect x="74" y="58" width="8" height="1.5" rx="0.5" fill="#00897B" opacity="0.4"/>
+  <!-- Nose bridge -->
+  <line x1="50" y1="55" x2="50" y2="60" stroke="#00695C" stroke-width="1.2"/>
+  <!-- Thin focused mouth -->
+  <path d="M38,68 Q50,72 62,68" stroke="#00695C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Chin circuit -->
+  <path d="M40,76 H50 V80 H60" stroke="#00897B" stroke-width="0.8" fill="none" opacity="0.6"/>
+  <circle cx="50" cy="76" r="1" fill="#00E5FF" opacity="0.8"/>
+  <!-- Label -->
+  <rect x="22" y="90" width="56" height="8" rx="3" fill="#020c0b" stroke="#00E5FF" stroke-width="0.6"/>
+  <text x="50" y="96" text-anchor="middle" font-family="monospace" font-size="4" fill="#00E5FF">SEM-BE</text>
+</svg>

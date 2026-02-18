@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="cfo-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#0F1419"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <linearGradient id="cfo-skin" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#AAB8C8"/><stop offset="100%" stop-color="#8898AA"/></linearGradient>
+  <radialGradient id="cfo-eye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C8D8E8"/><stop offset="100%" stop-color="#7090AA"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#cfo-bg)"/>
+<!-- Pentagon head shape -->
+<polygon points="50,12 74,28 70,68 30,68 26,28" fill="url(#cfo-skin)" stroke="#99AABB" stroke-width="0.6"/>
+<!-- Math grid overlay on skin (very faint) -->
+<line x1="30" y1="30" x2="70" y2="30" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="40" x2="70" y2="40" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="50" x2="70" y2="50" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="60" x2="70" y2="60" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="36" y1="20" x2="36" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="44" y1="15" x2="44" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="52" y1="13" x2="52" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<line x1="60" y1="15" x2="60" y2="68" stroke="#667788" stroke-width="0.3" opacity="0.3"/>
+<!-- Left rectangular eye with data lines inside -->
+<rect x="28" y="33" width="14" height="9" rx="1.5" fill="url(#cfo-eye)"/>
+<line x1="28" y1="35.5" x2="42" y2="35.5" stroke="#445566" stroke-width="0.5"/>
+<line x1="28" y1="38" x2="42" y2="38" stroke="#445566" stroke-width="0.5"/>
+<line x1="28" y1="40.5" x2="42" y2="40.5" stroke="#445566" stroke-width="0.5"/>
+<!-- Right rectangular eye with data lines -->
+<rect x="58" y="33" width="14" height="9" rx="1.5" fill="url(#cfo-eye)"/>
+<line x1="58" y1="35.5" x2="72" y2="35.5" stroke="#445566" stroke-width="0.5"/>
+<line x1="58" y1="38" x2="72" y2="38" stroke="#445566" stroke-width="0.5"/>
+<line x1="58" y1="40.5" x2="72" y2="40.5" stroke="#445566" stroke-width="0.5"/>
+<!-- Monocle ring around right eye -->
+<rect x="56.5" y="31.5" width="17" height="12" rx="2.5" fill="none" stroke="#BBCCDD" stroke-width="1.2"/>
+<line x1="73.5" y1="37.5" x2="76" y2="40" stroke="#BBCCDD" stroke-width="0.9"/>
+<!-- Compressed thin mouth -->
+<line x1="39" y1="57" x2="61" y2="57" stroke="#556677" stroke-width="1.2"/>
+<line x1="41" y1="59" x2="59" y2="59" stroke="#445566" stroke-width="0.5" opacity="0.5"/>
+<!-- Neck -->
+<rect x="44" y="67" width="12" height="6" rx="2" fill="#8898AA" stroke="#99AABB" stroke-width="0.5"/>
+</svg>

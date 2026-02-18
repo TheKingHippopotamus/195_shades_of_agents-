@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="ae-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1a0e00"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="ae-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FFA040"/>
+    <stop offset="55%" stop-color="#D06010"/>
+    <stop offset="100%" stop-color="#7a3500"/>
+  </radialGradient>
+  <radialGradient id="ae-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#A0FFB0"/>
+    <stop offset="50%" stop-color="#20A040"/>
+    <stop offset="100%" stop-color="#001508"/>
+  </radialGradient>
+  <filter id="ae-glow">
+    <feGaussianBlur stdDeviation="1.1" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#ae-bg)"/>
+<!-- friendly antennae -->
+<line x1="42" y1="27" x2="37" y2="13" stroke="#FFA040" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="37" cy="12" r="2" fill="#FFA040" filter="url(#ae-glow)"/>
+<line x1="58" y1="27" x2="63" y2="13" stroke="#FFA040" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="63" cy="12" r="2" fill="#FFA040" filter="url(#ae-glow)"/>
+<!-- warm friendly head -->
+<ellipse cx="50" cy="53" rx="24" ry="26" fill="url(#ae-skin)" stroke="#D06010" stroke-width="1.2"/>
+<!-- brow ridges -->
+<path d="M31,43 Q38,39 44,42" fill="none" stroke="#7a3500" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M56,42 Q63,39 70,43" fill="none" stroke="#7a3500" stroke-width="1.8" stroke-linecap="round"/>
+<!-- eyes with deal-flow iris -->
+<circle cx="39" cy="49" r="6.5" fill="#001508" stroke="#FFA040" stroke-width="1.1"/>
+<circle cx="61" cy="49" r="6.5" fill="#001508" stroke="#FFA040" stroke-width="1.1"/>
+<circle cx="39" cy="49" r="5" fill="url(#ae-eye)"/>
+<circle cx="61" cy="49" r="5" fill="url(#ae-eye)"/>
+<!-- deal flow arrows -->
+<path d="M36,51 L38,47 L40,49 L42,46" fill="none" stroke="#D06010" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M58,51 L60,47 L62,49 L64,46" fill="none" stroke="#D06010" stroke-width="0.9" stroke-linecap="round"/>
+<circle cx="37" cy="46.5" r="0.9" fill="white" opacity="0.9"/>
+<circle cx="59" cy="46.5" r="0.9" fill="white" opacity="0.9"/>
+<!-- nose -->
+<path d="M48,57 L50,60 L52,57" fill="none" stroke="#7a3500" stroke-width="1.1" stroke-linecap="round"/>
+<!-- engaging open expression -->
+<path d="M34,66 Q50,77 66,66" fill="#7a3500" stroke="#D06010" stroke-width="1.1"/>
+<path d="M34,66 Q50,72 66,66" fill="white" opacity="0.9"/>
+<path d="M41,66 L41,71" stroke="#D06010" stroke-width="0.6" opacity="0.5"/>
+<path d="M50,66 L50,72" stroke="#D06010" stroke-width="0.6" opacity="0.5"/>
+<path d="M59,66 L59,71" stroke="#D06010" stroke-width="0.6" opacity="0.5"/>
+<!-- cheek glow -->
+<circle cx="28" cy="56" r="4" fill="#FFA040" opacity="0.15"/>
+<circle cx="72" cy="56" r="4" fill="#FFA040" opacity="0.15"/>
+</svg>

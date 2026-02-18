@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="stdes-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#2D0040"/>
+      <stop offset="100%" stop-color="#0D0018"/>
+    </radialGradient>
+    <radialGradient id="stdes-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#E060C0"/>
+      <stop offset="55%" stop-color="#A0208A"/>
+      <stop offset="100%" stop-color="#601060"/>
+    </radialGradient>
+    <radialGradient id="stdes-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#FFE840"/>
+      <stop offset="45%" stop-color="#D4A800"/>
+      <stop offset="100%" stop-color="#6B5000"/>
+    </radialGradient>
+    <filter id="stdes-glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#stdes-bg)" rx="10"/>
+  <!-- Stars -->
+  <circle cx="8" cy="15" r="0.7" fill="#E060C0" opacity="0.5"/>
+  <circle cx="91" cy="11" r="0.5" fill="#FFE840" opacity="0.4"/>
+  <circle cx="89" cy="88" r="0.6" fill="#E060C0" opacity="0.35"/>
+  <!-- Elegant head — deep magenta -->
+  <ellipse cx="50" cy="55" rx="22" ry="27" fill="url(#stdes-skin)"/>
+  <!-- Slender antennae -->
+  <line x1="42" y1="29" x2="36" y2="10" stroke="#E060C0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="58" y1="29" x2="64" y2="10" stroke="#E060C0" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="36" cy="10" r="2.5" fill="#FFE840" filter="url(#stdes-glow)"/>
+  <circle cx="64" cy="10" r="2.5" fill="#FFE840" filter="url(#stdes-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8.5" fill="#18001A"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8.5" fill="#18001A"/>
+  <!-- Golden-ratio spiral iris left -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#stdes-iris)"/>
+  <path d="M 40 51 Q 41.5 49.5 43 51 Q 41.5 52.5 40 51" fill="none" stroke="#FFFACC" stroke-width="0.7" opacity="0.8"/>
+  <circle cx="40" cy="51" r="3" fill="none" stroke="#FFFACC" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="40" cy="51" r="1.5" fill="none" stroke="#FFFACC" stroke-width="0.4" opacity="0.4"/>
+  <!-- Golden-ratio spiral iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#stdes-iris)"/>
+  <path d="M 60 51 Q 61.5 49.5 63 51 Q 61.5 52.5 60 51" fill="none" stroke="#FFFACC" stroke-width="0.7" opacity="0.8"/>
+  <circle cx="60" cy="51" r="3" fill="none" stroke="#FFFACC" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="60" cy="51" r="1.5" fill="none" stroke="#FFFACC" stroke-width="0.4" opacity="0.4"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#0A0010"/>
+  <circle cx="61" cy="50" r="2" fill="#0A0010"/>
+  <!-- Highlights -->
+  <circle cx="42" cy="49" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="62" cy="49" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Artistic flourish marks on cheeks -->
+  <path d="M 30 56 Q 33 52 30 48" fill="none" stroke="#FFE840" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 70 56 Q 67 52 70 48" fill="none" stroke="#FFE840" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#601060" opacity="0.6"/>
+  <!-- Composed slight smile -->
+  <path d="M 43 69 Q 50 74 57 69" fill="none" stroke="#E060C0" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

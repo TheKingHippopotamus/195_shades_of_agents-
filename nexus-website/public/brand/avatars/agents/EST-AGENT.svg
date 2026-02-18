@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="16" fill="url(#bg)"/>
+
+<defs>
+  <radialGradient id="est-skin" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#2a3520"/><stop offset="100%" stop-color="#0a0f08"/></radialGradient>
+  <radialGradient id="est-iris" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#86efac"/><stop offset="50%" stop-color="#16a34a"/><stop offset="100%" stop-color="#052e16"/></radialGradient>
+</defs>
+<!-- graph-paper skin head -->
+<ellipse cx="50" cy="49" rx="26" ry="30" fill="url(#est-skin)"/>
+<!-- fine grid on skin -->
+<line x1="25" y1="28" x2="75" y2="28" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="25" y1="38" x2="75" y2="38" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="25" y1="48" x2="75" y2="48" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="25" y1="58" x2="75" y2="58" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="25" y1="68" x2="75" y2="68" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="30" y1="20" x2="30" y2="78" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="40" y1="20" x2="40" y2="78" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="50" y1="20" x2="50" y2="78" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="60" y1="20" x2="60" y2="78" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<line x1="70" y1="20" x2="70" y2="78" stroke="#4ade80" stroke-width="0.3" opacity="0.3"/>
+<!-- left eye -->
+<ellipse cx="37" cy="46" rx="9" ry="7" fill="#0a0f08" stroke="#4ade80" stroke-width="1.3"/>
+<ellipse cx="37" cy="46" rx="7" ry="5.5" fill="url(#est-iris)"/>
+<!-- bell curve iris left -->
+<path d="M30,49 Q33,43 37,43 Q41,43 44,49" fill="none" stroke="#052e16" stroke-width="1" opacity="0.8"/>
+<line x1="37" y1="42" x2="37" y2="49" stroke="#052e16" stroke-width="0.7" opacity="0.7"/>
+<circle cx="37" cy="46" r="2" fill="#0a0f08"/>
+<circle cx="36" cy="45" r="0.7" fill="white" opacity="0.9"/>
+<!-- right eye -->
+<ellipse cx="63" cy="46" rx="9" ry="7" fill="#0a0f08" stroke="#4ade80" stroke-width="1.3"/>
+<ellipse cx="63" cy="46" rx="7" ry="5.5" fill="url(#est-iris)"/>
+<path d="M56,49 Q59,43 63,43 Q67,43 70,49" fill="none" stroke="#052e16" stroke-width="1" opacity="0.8"/>
+<line x1="63" y1="42" x2="63" y2="49" stroke="#052e16" stroke-width="0.7" opacity="0.7"/>
+<circle cx="63" cy="46" r="2" fill="#0a0f08"/>
+<circle cx="62" cy="45" r="0.7" fill="white" opacity="0.9"/>
+<!-- brows -->
+<path d="M28,38 Q37,35 46,38" fill="none" stroke="#4ade80" stroke-width="1.7"/>
+<path d="M54,38 Q63,35 72,38" fill="none" stroke="#4ade80" stroke-width="1.7"/>
+<!-- abacus beads floating near face -->
+<line x1="18" y1="36" x2="18" y2="60" stroke="#4ade80" stroke-width="0.8" opacity="0.5"/>
+<circle cx="18" cy="40" r="2" fill="#4ade80" opacity="0.7"/>
+<circle cx="18" cy="47" r="2" fill="#4ade80" opacity="0.6"/>
+<circle cx="18" cy="54" r="2" fill="#4ade80" opacity="0.5"/>
+<line x1="82" y1="36" x2="82" y2="60" stroke="#4ade80" stroke-width="0.8" opacity="0.5"/>
+<circle cx="82" cy="40" r="2" fill="#4ade80" opacity="0.7"/>
+<circle cx="82" cy="47" r="2" fill="#4ade80" opacity="0.6"/>
+<!-- calculator marks on chin -->
+<rect x="42" y="66" width="16" height="10" rx="1.5" fill="none" stroke="#4ade80" stroke-width="0.9" opacity="0.6"/>
+<line x1="42" y1="70" x2="58" y2="70" stroke="#4ade80" stroke-width="0.6" opacity="0.5"/>
+<circle cx="46" cy="73" r="1" fill="#4ade80" opacity="0.7"/>
+<circle cx="50" cy="73" r="1" fill="#4ade80" opacity="0.7"/>
+<circle cx="54" cy="73" r="1" fill="#4ade80" opacity="0.7"/>
+<!-- contemplative slight smile -->
+<path d="M42,63 Q50,65 58,63" fill="none" stroke="#4ade80" stroke-width="1.3"/>
+<!-- label -->
+<text x="50" y="91" text-anchor="middle" font-family="monospace" font-size="3.8" fill="#4ade80" opacity="0.9">EST-AGENT</text>
+
+</svg>

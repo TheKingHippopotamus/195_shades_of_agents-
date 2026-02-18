@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="uxr-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#101A10"/>
+      <stop offset="100%" stop-color="#050A05"/>
+    </radialGradient>
+    <radialGradient id="uxr-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#A8C890"/>
+      <stop offset="55%" stop-color="#608850"/>
+      <stop offset="100%" stop-color="#2A4820"/>
+    </radialGradient>
+    <radialGradient id="uxr-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#E0F0E0"/>
+      <stop offset="50%" stop-color="#70A870"/>
+      <stop offset="100%" stop-color="#204020"/>
+    </radialGradient>
+    <filter id="uxr-glow">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#uxr-bg)" rx="10"/>
+  <circle cx="10" cy="12" r="0.7" fill="#A8C890" opacity="0.45"/>
+  <circle cx="88" cy="10" r="0.6" fill="#70A870" opacity="0.4"/>
+  <!-- Thoughtful oval — sage-green -->
+  <ellipse cx="50" cy="54" rx="23" ry="27" fill="url(#uxr-skin)"/>
+  <!-- Antennae -->
+  <line x1="43" y1="28" x2="40" y2="11" stroke="#A8C890" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="57" y1="28" x2="60" y2="11" stroke="#A8C890" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="40" cy="11" r="2.2" fill="#70A870" filter="url(#uxr-glow)"/>
+  <circle cx="60" cy="11" r="2.2" fill="#70A870" filter="url(#uxr-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8.5" fill="#0A1008"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8.5" fill="#0A1008"/>
+  <!-- Magnifying-glass iris left -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#uxr-iris)"/>
+  <!-- Magnifying glass shape -->
+  <circle cx="39" cy="50" r="3" fill="none" stroke="#E0F0E0" stroke-width="0.8" opacity="0.8"/>
+  <line x1="41.5" y1="52.5" x2="43.5" y2="54.5" stroke="#E0F0E0" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+  <!-- Magnifying-glass iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#uxr-iris)"/>
+  <circle cx="59" cy="50" r="3" fill="none" stroke="#E0F0E0" stroke-width="0.8" opacity="0.8"/>
+  <line x1="61.5" y1="52.5" x2="63.5" y2="54.5" stroke="#E0F0E0" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+  <!-- Pupils -->
+  <circle cx="40" cy="50" r="2" fill="#060A06"/>
+  <circle cx="60" cy="50" r="2" fill="#060A06"/>
+  <circle cx="41" cy="49" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="61" cy="49" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Clipboard / research marks on cheeks -->
+  <rect x="28" y="54" width="6" height="7" rx="0.8" fill="none" stroke="#A8C890" stroke-width="0.7" opacity="0.5"/>
+  <line x1="29.5" y1="56" x2="32.5" y2="56" stroke="#A8C890" stroke-width="0.5" opacity="0.5"/>
+  <line x1="29.5" y1="57.5" x2="32.5" y2="57.5" stroke="#A8C890" stroke-width="0.5" opacity="0.4"/>
+  <rect x="66" y="54" width="6" height="7" rx="0.8" fill="none" stroke="#A8C890" stroke-width="0.7" opacity="0.5"/>
+  <line x1="67.5" y1="56" x2="70.5" y2="56" stroke="#A8C890" stroke-width="0.5" opacity="0.5"/>
+  <line x1="67.5" y1="57.5" x2="70.5" y2="57.5" stroke="#A8C890" stroke-width="0.5" opacity="0.4"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="61" rx="2.5" ry="1.8" fill="#2A4820" opacity="0.55"/>
+  <!-- Analytical measured expression -->
+  <path d="M 43 68 Q 50 72 57 68" fill="none" stroke="#608850" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

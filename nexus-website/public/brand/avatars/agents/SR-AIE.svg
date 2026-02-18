@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="aie-bg" cx="50%" cy="45%" r="55%">
+    <stop offset="0%" stop-color="#2a1040"/>
+    <stop offset="100%" stop-color="#0d0520"/>
+  </radialGradient>
+  <radialGradient id="aie-skin" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#5a2d8a"/>
+    <stop offset="100%" stop-color="#3a1060"/>
+  </radialGradient>
+  <radialGradient id="aie-eye-l" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#e8d4ff"/>
+    <stop offset="60%" stop-color="#9b5fe0"/>
+    <stop offset="100%" stop-color="#1a0040"/>
+  </radialGradient>
+  <radialGradient id="aie-eye-r" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#e8d4ff"/>
+    <stop offset="60%" stop-color="#9b5fe0"/>
+    <stop offset="100%" stop-color="#1a0040"/>
+  </radialGradient>
+  <filter id="aie-glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<!-- Background -->
+<rect width="100" height="100" fill="url(#aie-bg)" rx="8"/>
+<!-- Neck -->
+<rect x="43" y="68" width="14" height="10" rx="3" fill="#3a1060"/>
+<!-- Head shape - elongated ethereal -->
+<ellipse cx="50" cy="46" rx="24" ry="28" fill="url(#aie-skin)"/>
+<!-- Subtle face sheen -->
+<ellipse cx="50" cy="36" rx="16" ry="12" fill="#7a40b0" opacity="0.25"/>
+<!-- Circuit antennae left -->
+<line x1="38" y1="20" x2="28" y2="8" stroke="#c084fc" stroke-width="1" opacity="0.9"/>
+<circle cx="28" cy="8" r="2" fill="#c084fc" opacity="0.9"/>
+<line x1="28" y1="8" x2="22" y2="11" stroke="#c084fc" stroke-width="0.7" opacity="0.7"/>
+<line x1="28" y1="8" x2="25" y2="3" stroke="#c084fc" stroke-width="0.7" opacity="0.7"/>
+<rect x="21" y="10" width="3" height="2" rx="0.5" fill="#c084fc" opacity="0.7"/>
+<!-- Circuit antennae right -->
+<line x1="62" y1="20" x2="72" y2="8" stroke="#c084fc" stroke-width="1" opacity="0.9"/>
+<circle cx="72" cy="8" r="2" fill="#c084fc" opacity="0.9"/>
+<line x1="72" y1="8" x2="78" y2="11" stroke="#c084fc" stroke-width="0.7" opacity="0.7"/>
+<line x1="72" y1="8" x2="75" y2="3" stroke="#c084fc" stroke-width="0.7" opacity="0.7"/>
+<rect x="76" y="10" width="3" height="2" rx="0.5" fill="#c084fc" opacity="0.7"/>
+<!-- Left eye (transformer iris: stacked rectangles) -->
+<g filter="url(#aie-glow)">
+  <ellipse cx="38" cy="44" rx="7" ry="7" fill="url(#aie-eye-l)"/>
+  <rect x="33.5" y="41.5" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <rect x="33.5" y="43.2" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <rect x="33.5" y="44.9" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <rect x="33.5" y="46.6" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <ellipse cx="38" cy="44" rx="7" ry="7" fill="none" stroke="#c084fc" stroke-width="0.8"/>
+  <ellipse cx="38" cy="44" rx="2" ry="2" fill="#ffffff" opacity="0.7"/>
+</g>
+<!-- Right eye (transformer iris: stacked rectangles) -->
+<g filter="url(#aie-glow)">
+  <ellipse cx="62" cy="44" rx="7" ry="7" fill="url(#aie-eye-r)"/>
+  <rect x="57.5" y="41.5" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <rect x="57.5" y="43.2" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <rect x="57.5" y="44.9" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <rect x="57.5" y="46.6" width="9" height="1.2" rx="0.4" fill="#1a0040" opacity="0.85"/>
+  <ellipse cx="62" cy="44" rx="7" ry="7" fill="none" stroke="#c084fc" stroke-width="0.8"/>
+  <ellipse cx="62" cy="44" rx="2" ry="2" fill="#ffffff" opacity="0.7"/>
+</g>
+<!-- Nose hint -->
+<ellipse cx="50" cy="56" rx="2.5" ry="1.5" fill="#2a0050" opacity="0.5"/>
+<!-- Subtle mouth - composed expression -->
+<path d="M43,63 Q50,65 57,63" fill="none" stroke="#7a40b0" stroke-width="1" opacity="0.6"/>
+<!-- Label -->
+<rect x="28" y="88" width="44" height="8" rx="2" fill="#1a0040" stroke="#c084fc" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="4" fill="#c084fc" text-anchor="middle">SR · AIE</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="dmob-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#000D1F"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+  <radialGradient id="dmob-skin" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#3AAFFF"/><stop offset="100%" stop-color="#0066CC"/></radialGradient>
+  <radialGradient id="dmob-eye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#DDEEFF"/><stop offset="100%" stop-color="#4488BB"/></radialGradient>
+  <filter id="dmob-glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="dmob-glow-sm"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#dmob-bg)"/>
+<!-- Phone-screen shaped head: rounded rectangle -->
+<rect x="24" y="12" width="52" height="72" rx="12" fill="url(#dmob-skin)" stroke="#2288CC" stroke-width="0.6"/>
+<!-- Signal arc radiating from head top (no antennae) -->
+<path d="M42,14 Q50,8 58,14" stroke="#AADDFF" stroke-width="0.9" fill="none" opacity="0.9" filter="url(#dmob-glow-sm)"/>
+<path d="M38,10 Q50,2 62,10" stroke="#AADDFF" stroke-width="0.7" fill="none" opacity="0.7"/>
+<path d="M35,6 Q50,-3 65,6" stroke="#AADDFF" stroke-width="0.5" fill="none" opacity="0.4"/>
+<!-- Left eye with home-button circle iris -->
+<circle cx="37" cy="40" r="8.5" fill="url(#dmob-eye)"/>
+<circle cx="37" cy="40" r="5" fill="#1155AA"/>
+<circle cx="37" cy="40" r="3" fill="none" stroke="#AADDFF" stroke-width="0.8"/>
+<circle cx="35.5" cy="38.5" r="1" fill="#DDEEFF" opacity="0.9"/>
+<!-- Right eye with home-button circle iris -->
+<circle cx="63" cy="40" r="8.5" fill="url(#dmob-eye)"/>
+<circle cx="63" cy="40" r="5" fill="#1155AA"/>
+<circle cx="63" cy="40" r="3" fill="none" stroke="#AADDFF" stroke-width="0.8"/>
+<circle cx="61.5" cy="38.5" r="1" fill="#DDEEFF" opacity="0.9"/>
+<!-- Slide-to-unlock line across mouth area -->
+<rect x="32" y="58" width="36" height="7" rx="3.5" fill="#0044AA" stroke="#AADDFF" stroke-width="0.5"/>
+<circle cx="40" cy="61.5" r="3" fill="#AADDFF" opacity="0.8"/>
+<line x1="45" y1="61.5" x2="62" y2="61.5" stroke="#AADDFF" stroke-width="0.7" opacity="0.5"/>
+<!-- Home button at bottom of phone-face -->
+<circle cx="50" cy="76" r="4" fill="none" stroke="#AADDFF" stroke-width="1"/>
+<circle cx="50" cy="76" r="2" fill="#2288CC"/>
+</svg>

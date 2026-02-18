@@ -5,7 +5,17 @@ let posts: any[] = [];
 try {
   const data = await import("../../data/sanity/blog-posts.json");
   posts = data.default;
-} catch {}
+} catch {
+  posts = [];
+}
+
+// Calculate reading time from body HTML (strip tags, count words)
+function calcReadingTime(body: string | null | undefined): number {
+  if (!body) return 1;
+  const text = body.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const words = text.split(" ").filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
 ---
 
 <PageLayout
@@ -25,55 +35,59 @@ try {
 
     {posts.length > 0 ? (
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map((post: any) => (
-          <a
-            href={`/blog/${post.slug?.current || post.slug}`}
-            class="nexus-card p-6 block group"
-          >
-            {post.category && (
-              <span class="text-xs text-quantum-blue font-medium mb-2 block">
-                {post.category}
-              </span>
-            )}
-            <h2 class="text-lg font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors mb-2">
-              {post.title}
-            </h2>
-            {post.excerpt && (
-              <p class="text-sm text-[var(--text-secondary)] line-clamp-3 mb-3">
-                {post.excerpt}
-              </p>
-            )}
-            <div class="flex items-center gap-3 text-xs text-[var(--text-secondary)]">
-              {post.author && (
-                <span class="font-mono text-quantum-blue">{post.author}</span>
-              )}
-              {post.publishedAt && (
-                <span>
-                  {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
+        {posts.map((post: any) => {
+          const readingTime = calcReadingTime(post.body);
+          return (
+            <a
+              href={`/195_shades_of_agents-/blog/${post.slug?.current || post.slug}/`}
+              class="nexus-card p-6 block group"
+            >
+              {post.category && (
+                <span class="text-xs text-quantum-blue font-medium mb-2 block">
+                  {post.category}
                 </span>
               )}
-            </div>
-            {post.tags && post.tags.length > 0 && (
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                {post.tags.map((tag: string) => (
-                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
-                    {tag}
+              <h2 class="text-lg font-semibold text-[var(--text-primary)] group-hover:text-quantum-blue transition-colors mb-2">
+                {post.title}
+              </h2>
+              {post.excerpt && (
+                <p class="text-sm text-[var(--text-secondary)] line-clamp-3 mb-3">
+                  {post.excerpt}
+                </p>
+              )}
+              <div class="flex items-center gap-3 text-xs text-[var(--text-secondary)]">
+                {post.author && (
+                  <span class="font-mono text-quantum-blue">{post.author}</span>
+                )}
+                {post.publishedAt && (
+                  <span>
+                    {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
                   </span>
-                ))}
+                )}
+                <span>{readingTime} min read</span>
               </div>
-            )}
-          </a>
-        ))}
+              {post.tags && post.tags.length > 0 && (
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                  {post.tags.map((tag: string) => (
+                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-[var(--bg-elevated)] text-[var(--text-secondary)]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </a>
+          );
+        })}
       </div>
     ) : (
       <div class="text-center py-16 nexus-card p-8">
         <p class="text-lg text-[var(--text-secondary)]">Blog posts coming soon.</p>
         <p class="text-sm text-[var(--text-secondary)] mt-2">
-          Content is managed via Sanity CMS and fetched at build time.
+          Content is managed via Sanity CMS or local JSON and fetched at build time.
         </p>
       </div>
     )}

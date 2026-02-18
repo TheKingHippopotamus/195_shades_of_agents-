@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img">
+  <title>People &amp; HR</title>
+  <!-- Left figure head -->
+  <circle cx="14" cy="12" r="6" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  <!-- Left figure body -->
+  <path d="M6,34 Q6,24 14,24 Q22,24 22,34" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right figure head -->
+  <circle cx="34" cy="12" r="6" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  <!-- Right figure body -->
+  <path d="M26,34 Q26,24 34,24 Q42,24 42,34" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+  <!-- Connection arc between them (bond/relationship) -->
+  <path d="M20,10 Q24,4 28,10" fill="none" stroke="#8B5CF6" stroke-width="1.75" stroke-linecap="round" opacity="0.7"/>
+  <!-- Connection dot center top -->
+  <circle cx="24" cy="6" r="2" fill="#8B5CF6" opacity="0.8"/>
+  <!-- Heart below (care) -->
+  <path d="M20,40 Q20,36 24,36 Q28,36 28,40 Q28,44 24,46 Q20,44 20,40 Z"
+        fill="#8B5CF6" opacity="0.35" stroke="#8B5CF6" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Agile purple head — energetic, dynamic -->
+  <ellipse cx="50" cy="46" rx="26" ry="28" fill="#0e0618" stroke="#a855f7" stroke-width="1.5"/>
+  <!-- Sprint velocity marks: upward arrows on forehead -->
+  <path d="M38,28 L38,20 M36,22 L38,20 L40,22" stroke="#a855f7" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <path d="M50,26 L50,17 M48,19 L50,17 L52,19" stroke="#a855f7" stroke-width="1.4" fill="none" opacity="0.9"/>
+  <path d="M62,28 L62,20 M60,22 L62,20 L64,22" stroke="#a855f7" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <!-- Brow: facilitative, open -->
+  <path d="M24,38 Q37,33 50,35 Q63,33 76,38" fill="none" stroke="#a855f7" stroke-width="1.1"/>
+  <!-- Left eye: sprint burndown chart iris -->
+  <ellipse cx="35" cy="48" rx="9" ry="7.5" fill="#07030f" stroke="#a855f7" stroke-width="1.2"/>
+  <rect x="27" y="42" width="16" height="11" rx="1" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/>
+  <!-- Ideal burndown: straight diagonal -->
+  <line x1="28" y1="43" x2="42" y2="52" stroke="#a855f7" stroke-width="0.6" opacity="0.4" stroke-dasharray="1.5,1"/>
+  <!-- Actual burndown: stepped line -->
+  <polyline points="28,43 30,43 30,46 33,46 33,44 36,44 36,49 39,49 39,47 42,47" stroke="#22c55e" stroke-width="0.8" fill="none" opacity="0.8"/>
+  <circle cx="35" cy="48" r="1.2" fill="#a855f7" opacity="0.9"/>
+  <!-- Right eye: sprint burndown iris -->
+  <ellipse cx="65" cy="48" rx="9" ry="7.5" fill="#07030f" stroke="#a855f7" stroke-width="1.2"/>
+  <rect x="57" y="42" width="16" height="11" rx="1" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/>
+  <line x1="58" y1="43" x2="72" y2="52" stroke="#a855f7" stroke-width="0.6" opacity="0.4" stroke-dasharray="1.5,1"/>
+  <polyline points="58,43 60,43 60,46 63,46 63,44 66,44 66,49 69,49 69,47 72,47" stroke="#22c55e" stroke-width="0.8" fill="none" opacity="0.8"/>
+  <circle cx="65" cy="48" r="1.2" fill="#a855f7" opacity="0.9"/>
+  <!-- Nose: agile circle -->
+  <circle cx="50" cy="57" r="2" fill="none" stroke="#a855f7" stroke-width="0.8" opacity="0.6"/>
+  <!-- Mouth: energetic facilitator smile -->
+  <path d="M36,66 Q50,72 64,66" stroke="#a855f7" stroke-width="1.4" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#a855f7" opacity="0.9">SCRUM</text>
+</svg>

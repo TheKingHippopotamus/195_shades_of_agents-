@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" width="380" height="80" role="img">
+  <title>NEXUS AI</title>
+  <desc>NEXUS AI — 195 Autonomous AI Agents across 20 Departments</desc>
+  <defs>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="hexGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Hex background fill -->
+  <!-- Pointy-top hex: center (40,40), circumradius=30 -->
+  <!-- Vertices: (40,10),(65.98,25),(65.98,55),(40,70),(14.02,55),(14.02,25) -->
+  <polygon points="40,10 65.98,25 65.98,55 40,70 14.02,55 14.02,25"
+           fill="url(#hexGlow)" stroke="none"/>
+
+  <!-- Outer hex ring (glow) -->
+  <polygon points="40,10 65.98,25 65.98,55 40,70 14.02,55 14.02,25"
+           fill="none" stroke="#00D9FF" stroke-width="0.5" opacity="0.4" filter="url(#softGlow)"/>
+
+  <!-- Hex outline crisp -->
+  <polygon points="40,10 65.98,25 65.98,55 40,70 14.02,55 14.02,25"
+           fill="none" stroke="url(#hexGrad)" stroke-width="1.5"/>
+
+  <!-- N internal geometry: three lines forming the letter N -->
+  <g filter="url(#glow)">
+    <line x1="23" y1="26" x2="23" y2="54" stroke="#00D9FF" stroke-width="3" stroke-linecap="round"/>
+    <line x1="23" y1="26" x2="57" y2="54" stroke="url(#hexGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <line x1="57" y1="26" x2="57" y2="54" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- 6 vertex connector dots -->
+  <circle cx="40"    cy="10"    r="2.5" fill="#00D9FF" filter="url(#glow)"/>
+  <circle cx="65.98" cy="25"    r="2.5" fill="#00D9FF" opacity="0.75"/>
+  <circle cx="65.98" cy="55"    r="2.5" fill="#7C3AED" opacity="0.75"/>
+  <circle cx="40"    cy="70"    r="2.5" fill="#7C3AED" filter="url(#glow)"/>
+  <circle cx="14.02" cy="55"    r="2.5" fill="#7C3AED" opacity="0.75"/>
+  <circle cx="14.02" cy="25"    r="2.5" fill="#00D9FF" opacity="0.75"/>
+
+  <!-- Network connection lines from hex (suggesting 195-agent web) -->
+  <line x1="65.98" y1="25" x2="80"    y2="18" stroke="#00D9FF" stroke-width="1" opacity="0.25"/>
+  <line x1="65.98" y1="55" x2="80"    y2="62" stroke="#7C3AED" stroke-width="1" opacity="0.25"/>
+  <line x1="40"    cy="10" x2="40"    y2="2"  stroke="#00D9FF" stroke-width="1" opacity="0.2"/>
+  <line x1="40"    cy="70" x2="40"    y2="78" stroke="#7C3AED" stroke-width="1" opacity="0.2"/>
+
+  <!-- Vertical separator -->
+  <line x1="90" y1="18" x2="90" y2="62" stroke="#00D9FF" stroke-width="0.75" opacity="0.3"/>
+
+  <!-- NEXUS wordmark -->
+  <text x="104" y="48"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-size="29"
+        font-weight="900"
+        fill="#E8F4F8"
+        letter-spacing="5">NEXUS</text>
+
+  <!-- AI accent — quantum blue -->
+  <text x="267" y="48"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-size="29"
+        font-weight="900"
+        fill="url(#hexGrad)"
+        letter-spacing="3">AI</text>
+
+  <!-- Tagline -->
+  <text x="104" y="64"
+        font-family="Arial,sans-serif"
+        font-size="9"
+        font-weight="400"
+        fill="#00D9FF"
+        letter-spacing="5"
+        opacity="0.7">195 AUTONOMOUS AGENTS</text>
+</svg>

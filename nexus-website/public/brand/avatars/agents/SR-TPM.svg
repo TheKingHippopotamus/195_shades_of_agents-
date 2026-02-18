@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Deep blue head — technical programmatic -->
+  <ellipse cx="50" cy="46" rx="26" ry="28" fill="#030a1a" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Milestone marks on forehead: two diamonds -->
+  <path d="M39,26 L43,22 L47,26 L43,30 Z" fill="none" stroke="#2563eb" stroke-width="1"/>
+  <path d="M53,26 L57,22 L61,26 L57,30 Z" fill="none" stroke="#2563eb" stroke-width="1"/>
+  <line x1="47" y1="26" x2="53" y2="26" stroke="#2563eb" stroke-width="0.8"/>
+  <!-- Brow: technical precise -->
+  <path d="M24,38 Q37,33 50,35 Q63,33 76,38" fill="none" stroke="#2563eb" stroke-width="1.1"/>
+  <!-- Left eye: dependency-graph iris (nodes + arrows) -->
+  <ellipse cx="35" cy="48" rx="9" ry="7" fill="#020610" stroke="#2563eb" stroke-width="1.2"/>
+  <!-- Node A, B with arrow -->
+  <circle cx="30" cy="46" r="2" fill="#2563eb" opacity="0.7"/>
+  <circle cx="40" cy="50" r="2" fill="#2563eb" opacity="0.7"/>
+  <line x1="32" y1="47" x2="38" y2="49" stroke="#2563eb" stroke-width="0.8"/>
+  <!-- Arrow head -->
+  <path d="M37,48 L40,50 L37,51.5" fill="none" stroke="#2563eb" stroke-width="0.6"/>
+  <circle cx="35" cy="48" r="1" fill="#2563eb" opacity="0.9"/>
+  <!-- Right eye: dependency-graph iris -->
+  <ellipse cx="65" cy="48" rx="9" ry="7" fill="#020610" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="60" cy="46" r="2" fill="#2563eb" opacity="0.7"/>
+  <circle cx="70" cy="50" r="2" fill="#2563eb" opacity="0.7"/>
+  <line x1="62" y1="47" x2="68" y2="49" stroke="#2563eb" stroke-width="0.8"/>
+  <path d="M67,48 L70,50 L67,51.5" fill="none" stroke="#2563eb" stroke-width="0.6"/>
+  <circle cx="65" cy="48" r="1" fill="#2563eb" opacity="0.9"/>
+  <!-- Nose -->
+  <path d="M47,55 L50,60 L53,55" stroke="#2563eb" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <!-- Mouth: systematic -->
+  <path d="M37,66 Q50,64 63,66" stroke="#2563eb" stroke-width="1.1" fill="none"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#2563eb" opacity="0.9">SR-TPM</text>
+</svg>

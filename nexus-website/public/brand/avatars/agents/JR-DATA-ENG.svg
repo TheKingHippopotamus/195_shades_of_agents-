@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="jde-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D0A28"/>
+      <stop offset="100%" stop-color="#050316"/>
+    </radialGradient>
+    <radialGradient id="jde-skin" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#AABEFF"/>
+      <stop offset="100%" stop-color="#667EEA"/>
+    </radialGradient>
+    <filter id="jde-glow">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="url(#jde-bg)"/>
+  <!-- Messy left antenna - bent/crooked -->
+  <path d="M37,23 Q28,16 32,8" stroke="#AABEFF" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="32" cy="7" r="2" fill="#C4B5FD" filter="url(#jde-glow)"/>
+  <!-- Messy right antenna - bent other way -->
+  <path d="M63,23 Q74,14 70,8" stroke="#AABEFF" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="70" cy="7" r="2" fill="#C4B5FD" filter="url(#jde-glow)"/>
+  <!-- Wide youthful face -->
+  <ellipse cx="50" cy="54" rx="31" ry="28" fill="url(#jde-skin)" stroke="#667EEA" stroke-width="1.8"/>
+  <!-- Left eye socket - big -->
+  <ellipse cx="36" cy="51" rx="9.5" ry="10" fill="#070416" stroke="#AABEFF" stroke-width="1.2"/>
+  <!-- Left iris - question mark pupil -->
+  <circle cx="36" cy="51" r="7" fill="#0F0830"/>
+  <text x="36" y="55" font-family="serif" font-size="11" font-weight="bold" fill="#AABEFF" text-anchor="middle" opacity="0.9">?</text>
+  <circle cx="36" cy="51" r="0.8" fill="#0F0830" opacity="0"/>
+  <circle cx="34" cy="49" r="0.9" fill="white" opacity="0.5"/>
+  <!-- Right eye socket - big -->
+  <ellipse cx="64" cy="51" rx="9.5" ry="10" fill="#070416" stroke="#AABEFF" stroke-width="1.2"/>
+  <!-- Right iris - question mark -->
+  <circle cx="64" cy="51" r="7" fill="#0F0830"/>
+  <text x="64" y="55" font-family="serif" font-size="11" font-weight="bold" fill="#AABEFF" text-anchor="middle" opacity="0.9">?</text>
+  <circle cx="62" cy="49" r="0.9" fill="white" opacity="0.5"/>
+  <!-- Eager smile -->
+  <path d="M38,69 Q50,78 62,69" stroke="#4A63C8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Messy data dots floating around head -->
+  <circle cx="19" cy="40" r="1.5" fill="#AABEFF" opacity="0.4"/>
+  <circle cx="22" cy="52" r="1" fill="#667EEA" opacity="0.35"/>
+  <circle cx="81" cy="40" r="1.5" fill="#AABEFF" opacity="0.4"/>
+  <circle cx="78" cy="52" r="1" fill="#667EEA" opacity="0.35"/>
+  <!-- Tiny nose -->
+  <ellipse cx="50" cy="62" rx="2" ry="1.2" fill="#4A63C8" opacity="0.5"/>
+  <!-- Cheek blush -->
+  <ellipse cx="27" cy="60" r="4" fill="#AABEFF" opacity="0.3"/>
+  <ellipse cx="73" cy="60" r="4" fill="#AABEFF" opacity="0.3"/>
+</svg>

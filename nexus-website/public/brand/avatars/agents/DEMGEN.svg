@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="dg-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1e0008"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="dg-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#FF5050"/>
+    <stop offset="50%" stop-color="#CC0040"/>
+    <stop offset="100%" stop-color="#6a0020"/>
+  </radialGradient>
+  <radialGradient id="dg-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#FFFF40"/>
+    <stop offset="50%" stop-color="#FF8000"/>
+    <stop offset="100%" stop-color="#1a0600"/>
+  </radialGradient>
+  <filter id="dg-glow">
+    <feGaussianBlur stdDeviation="2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#dg-bg)"/>
+<!-- explosion burst marks on forehead -->
+<path d="M50,26 L48,22 L50,18 L52,22 Z" fill="#FFFF40" opacity="0.9"/>
+<path d="M44,28 L40,25 L41,21 L45,24 Z" fill="#FF8000" opacity="0.8"/>
+<path d="M56,28 L60,25 L59,21 L55,24 Z" fill="#FF8000" opacity="0.8"/>
+<!-- burst antennae -->
+<line x1="40" y1="28" x2="29" y2="14" stroke="#FF5050" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="25,10 25,18 33,14" fill="#FF5050" filter="url(#dg-glow)"/>
+<line x1="60" y1="28" x2="71" y2="14" stroke="#FF5050" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="75,10 75,18 67,14" fill="#FF5050" filter="url(#dg-glow)"/>
+<!-- explosive face -->
+<ellipse cx="50" cy="55" rx="27" ry="27" fill="url(#dg-skin)" stroke="#FF5050" stroke-width="1.5"/>
+<!-- brow ridges intense downward -->
+<path d="M28,44 Q37,40 45,43" fill="none" stroke="#6a0020" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M55,43 Q63,40 72,44" fill="none" stroke="#6a0020" stroke-width="2.5" stroke-linecap="round"/>
+<!-- eyes with demand-wave iris -->
+<circle cx="39" cy="50" r="7" fill="#1a0600" stroke="#FF5050" stroke-width="1.3"/>
+<circle cx="61" cy="50" r="7" fill="#1a0600" stroke="#FF5050" stroke-width="1.3"/>
+<circle cx="39" cy="50" r="5.5" fill="url(#dg-eye)"/>
+<circle cx="61" cy="50" r="5.5" fill="url(#dg-eye)"/>
+<!-- demand wave in iris -->
+<path d="M35,52 Q36,49 37,51 Q38,48 39,50 Q40,48 41,51 Q42,49 43,52" fill="none" stroke="#CC0040" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M57,52 Q58,49 59,51 Q60,48 61,50 Q62,48 63,51 Q64,49 65,52" fill="none" stroke="#CC0040" stroke-width="0.9" stroke-linecap="round"/>
+<circle cx="37" cy="47" r="1" fill="white" opacity="0.9"/>
+<circle cx="59" cy="47" r="1" fill="white" opacity="0.9"/>
+<!-- high energy wide expression -->
+<path d="M30,68 Q50,84 70,68" fill="#6a0020" stroke="#FF5050" stroke-width="1.5"/>
+<path d="M30,68 Q50,75 70,68" fill="white" opacity="0.95"/>
+<path d="M37,68 L37,74" stroke="#FF5050" stroke-width="0.7" opacity="0.5"/>
+<path d="M50,68 L50,75" stroke="#FF5050" stroke-width="0.7" opacity="0.5"/>
+<path d="M63,68 L63,74" stroke="#FF5050" stroke-width="0.7" opacity="0.5"/>
+</svg>

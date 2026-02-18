@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a1f3a"/><stop offset="100%" stop-color="#030108"/></radialGradient></defs><rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <!-- Regulation grey head — angular hexagonal feel -->
+  <path d="M26,35 L30,20 L70,20 L74,35 L74,65 L70,76 L30,76 L26,65 Z" fill="#111825" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Policy book forehead mark: open book icon -->
+  <path d="M42,27 Q50,24 58,27" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="50" y1="27" x2="50" y2="33" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="42" y1="29" x2="50" y2="29" stroke="#94a3b8" stroke-width="0.6" opacity="0.6"/>
+  <line x1="50" y1="29" x2="58" y2="29" stroke="#94a3b8" stroke-width="0.6" opacity="0.6"/>
+  <line x1="42" y1="31" x2="50" y2="31" stroke="#94a3b8" stroke-width="0.6" opacity="0.5"/>
+  <line x1="50" y1="31" x2="58" y2="31" stroke="#94a3b8" stroke-width="0.6" opacity="0.5"/>
+  <!-- Brow: rigid straight lines -->
+  <line x1="26" y1="38" x2="44" y2="38" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="56" y1="38" x2="74" y2="38" stroke="#94a3b8" stroke-width="1.2"/>
+  <!-- Left eye -->
+  <rect x="28" y="40" width="16" height="12" rx="2" fill="#060c18" stroke="#94a3b8" stroke-width="1"/>
+  <!-- Left iris: checklist 3 lines with check marks -->
+  <line x1="34" y1="43" x2="42" y2="43" stroke="#94a3b8" stroke-width="0.6"/>
+  <line x1="34" y1="46" x2="42" y2="46" stroke="#94a3b8" stroke-width="0.6"/>
+  <line x1="34" y1="49" x2="40" y2="49" stroke="#94a3b8" stroke-width="0.6"/>
+  <path d="M30,42.5 L31.5,44 L33.5,41" stroke="#22c55e" stroke-width="0.8" fill="none"/>
+  <path d="M30,45.5 L31.5,47 L33.5,44" stroke="#22c55e" stroke-width="0.8" fill="none"/>
+  <circle cx="36" cy="46" r="1.2" fill="#94a3b8" opacity="0.8"/>
+  <!-- Right eye -->
+  <rect x="56" y="40" width="16" height="12" rx="2" fill="#060c18" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="62" y1="43" x2="70" y2="43" stroke="#94a3b8" stroke-width="0.6"/>
+  <line x1="62" y1="46" x2="70" y2="46" stroke="#94a3b8" stroke-width="0.6"/>
+  <line x1="62" y1="49" x2="68" y2="49" stroke="#94a3b8" stroke-width="0.6"/>
+  <path d="M58,42.5 L59.5,44 L61.5,41" stroke="#22c55e" stroke-width="0.8" fill="none"/>
+  <path d="M58,45.5 L59.5,47 L61.5,44" stroke="#22c55e" stroke-width="0.8" fill="none"/>
+  <circle cx="64" cy="46" r="1.2" fill="#94a3b8" opacity="0.8"/>
+  <!-- Nose: rectangular bumps -->
+  <rect x="47" y="55" width="6" height="4" rx="1" fill="none" stroke="#94a3b8" stroke-width="0.7" opacity="0.5"/>
+  <!-- Mouth: flat regulatory line -->
+  <line x1="36" y1="64" x2="64" y2="64" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="38" y1="66" x2="62" y2="66" stroke="#94a3b8" stroke-width="0.6" opacity="0.4"/>
+  <text x="50" y="93" text-anchor="middle" font-family="monospace" font-size="4" fill="#94a3b8" opacity="0.9">COMPLIANCE</text>
+</svg>

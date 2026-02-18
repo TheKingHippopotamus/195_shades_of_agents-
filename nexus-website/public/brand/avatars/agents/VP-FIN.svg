@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#0e1018"/>
+    <stop offset="100%" stop-color="#030408"/>
+  </radialGradient>
+  <radialGradient id="faceGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#bg)"/>
+<ellipse cx="50" cy="53" rx="30" ry="28" fill="url(#faceGlow)"/>
+<!-- authoritative dark charcoal angular head -->
+<rect x="28" y="29" width="44" height="48" rx="12" fill="#080a10" stroke="#6366f1" stroke-width="2"/>
+<!-- balance-sheet ledger iris left — column lines -->
+<circle cx="39" cy="47" r="8.5" fill="#040614" stroke="#6366f1" stroke-width="1.4"/>
+<line x1="35" y1="42" x2="35" y2="52" stroke="#6366f1" stroke-width="0.8" opacity="0.8"/>
+<line x1="39" y1="42" x2="39" y2="52" stroke="#6366f1" stroke-width="0.8" opacity="0.8"/>
+<line x1="43" y1="42" x2="43" y2="52" stroke="#6366f1" stroke-width="0.8" opacity="0.8"/>
+<line x1="33" y1="44.5" x2="45" y2="44.5" stroke="#6366f1" stroke-width="0.7" opacity="0.7"/>
+<line x1="33" y1="47" x2="45" y2="47" stroke="#6366f1" stroke-width="0.7" opacity="0.7"/>
+<line x1="33" y1="49.5" x2="45" y2="49.5" stroke="#6366f1" stroke-width="0.7" opacity="0.7"/>
+<!-- highlight top-right cell -->
+<rect x="39" y="42" width="4" height="2.5" rx="0" fill="#818cf8" opacity="0.5"/>
+<!-- balance-sheet ledger iris right -->
+<circle cx="61" cy="47" r="8.5" fill="#040614" stroke="#6366f1" stroke-width="1.4"/>
+<line x1="57" y1="42" x2="57" y2="52" stroke="#6366f1" stroke-width="0.8" opacity="0.8"/>
+<line x1="61" y1="42" x2="61" y2="52" stroke="#6366f1" stroke-width="0.8" opacity="0.8"/>
+<line x1="65" y1="42" x2="65" y2="52" stroke="#6366f1" stroke-width="0.8" opacity="0.8"/>
+<line x1="55" y1="44.5" x2="67" y2="44.5" stroke="#6366f1" stroke-width="0.7" opacity="0.7"/>
+<line x1="55" y1="47" x2="67" y2="47" stroke="#6366f1" stroke-width="0.7" opacity="0.7"/>
+<line x1="55" y1="49.5" x2="67" y2="49.5" stroke="#6366f1" stroke-width="0.7" opacity="0.7"/>
+<rect x="61" y="42" width="4" height="2.5" rx="0" fill="#818cf8" opacity="0.5"/>
+<!-- dollar/currency mark forehead -->
+<text x="50" y="39" text-anchor="middle" font-size="7" fill="#6366f1" opacity="0.9" font-family="monospace">$</text>
+<!-- stern precise expression — flat line -->
+<line x1="42" y1="63" x2="58" y2="63" stroke="#6366f1" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+<!-- strong brow lines -->
+<line x1="33" y1="38" x2="42" y2="37" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+<line x1="58" y1="37" x2="67" y2="38" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+<!-- nose -->
+<path d="M48,55 Q50,58 52,55" fill="none" stroke="#6366f1" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+</svg>

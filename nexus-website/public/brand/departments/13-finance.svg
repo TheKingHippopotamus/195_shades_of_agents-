@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img">
+  <title>Finance &amp; Accounting</title>
+  <!-- Axes -->
+  <line x1="6"  y1="40" x2="44" y2="40" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  <line x1="6"  y1="6"  x2="6"  y2="40" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bars -->
+  <rect x="10" y="30" width="7" height="10" rx="1" fill="#10B981" opacity="0.35"/>
+  <rect x="20" y="22" width="7" height="18" rx="1" fill="#10B981" opacity="0.5"/>
+  <rect x="30" y="16" width="7" height="24" rx="1" fill="#10B981" opacity="0.7"/>
+  <!-- Trend line -->
+  <polyline points="6,28 13.5,25 23.5,19 33.5,14"
+            fill="none" stroke="#10B981" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,2"/>
+  <!-- Coin/$ circle top-right -->
+  <circle cx="38" cy="10" r="7" fill="none" stroke="#10B981" stroke-width="1.75"/>
+  <text x="38" y="14" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#10B981" text-anchor="middle">$</text>
+  <!-- Up tick arrow -->
+  <line x1="36" y1="6" x2="40" y2="4" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="res-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1a0a30"/>
+    <stop offset="100%" stop-color="#080215"/>
+  </radialGradient>
+  <radialGradient id="res-skin" cx="50%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#6b35a0" stop-opacity="1"/>
+    <stop offset="40%" stop-color="#4a1880"/>
+    <stop offset="100%" stop-color="#2a0850"/>
+  </radialGradient>
+  <radialGradient id="res-nebula" cx="30%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#9b3fc8" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#1a0040" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="res-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<!-- Background with nebula hint -->
+<rect width="100" height="100" fill="url(#res-bg)" rx="8"/>
+<ellipse cx="30" cy="30" rx="35" ry="30" fill="url(#res-nebula)"/>
+<!-- Neck -->
+<rect x="43" y="70" width="14" height="9" rx="3" fill="#2a0850"/>
+<!-- Head shape - otherworldly elongated oval -->
+<ellipse cx="50" cy="46" rx="25" ry="30" fill="url(#res-skin)"/>
+<!-- Nebula texture on face -->
+<ellipse cx="40" cy="38" rx="12" ry="8" fill="#7b2fbe" opacity="0.2"/>
+<ellipse cx="62" cy="52" rx="10" ry="7" fill="#a855f7" opacity="0.12"/>
+<!-- Three eyes in triangle formation -->
+<!-- Top eye (apex of triangle) - white glowing -->
+<g filter="url(#res-glow)">
+  <ellipse cx="50" cy="36" rx="6" ry="6" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="50" cy="36" rx="3" ry="3" fill="#e8d4ff"/>
+  <ellipse cx="50" cy="36" rx="1.5" ry="1.5" fill="#000010"/>
+  <ellipse cx="50" cy="36" rx="6" ry="6" fill="none" stroke="#e8d4ff" stroke-width="1" opacity="0.8"/>
+</g>
+<!-- Bottom left eye -->
+<g filter="url(#res-glow)">
+  <ellipse cx="37" cy="52" rx="6" ry="6" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="37" cy="52" rx="3" ry="3" fill="#e8d4ff"/>
+  <ellipse cx="37" cy="52" rx="1.5" ry="1.5" fill="#000010"/>
+  <ellipse cx="37" cy="52" rx="6" ry="6" fill="none" stroke="#e8d4ff" stroke-width="1" opacity="0.8"/>
+</g>
+<!-- Bottom right eye -->
+<g filter="url(#res-glow)">
+  <ellipse cx="63" cy="52" rx="6" ry="6" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="63" cy="52" rx="3" ry="3" fill="#e8d4ff"/>
+  <ellipse cx="63" cy="52" rx="1.5" ry="1.5" fill="#000010"/>
+  <ellipse cx="63" cy="52" rx="6" ry="6" fill="none" stroke="#e8d4ff" stroke-width="1" opacity="0.8"/>
+</g>
+<!-- Research paper glyph floating near head (right side) -->
+<g opacity="0.8">
+  <rect x="72" y="22" width="10" height="13" rx="1" fill="#1a0040" stroke="#a78bfa" stroke-width="0.7"/>
+  <line x1="74" y1="26" x2="80" y2="26" stroke="#a78bfa" stroke-width="0.5" opacity="0.8"/>
+  <line x1="74" y1="28" x2="80" y2="28" stroke="#a78bfa" stroke-width="0.5" opacity="0.8"/>
+  <line x1="74" y1="30" x2="78" y2="30" stroke="#a78bfa" stroke-width="0.5" opacity="0.8"/>
+  <text x="77" y="24.5" font-family="monospace" font-size="2.5" fill="#a78bfa" text-anchor="middle">R</text>
+</g>
+<!-- Subtle nose -->
+<ellipse cx="50" cy="62" rx="2" ry="1.2" fill="#2a0850" opacity="0.4"/>
+<!-- Thin serene mouth -->
+<path d="M44,68 Q50,70 56,68" fill="none" stroke="#7b2fbe" stroke-width="0.8" opacity="0.5"/>
+<!-- Label -->
+<rect x="28" y="88" width="44" height="8" rx="2" fill="#1a0040" stroke="#a78bfa" stroke-width="0.7"/>
+<text x="50" y="93.8" font-family="monospace" font-size="4" fill="#a78bfa" text-anchor="middle">AI · RES</text>
+</svg>

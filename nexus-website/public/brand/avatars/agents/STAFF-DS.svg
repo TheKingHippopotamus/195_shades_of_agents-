@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="stds-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#100820"/>
+      <stop offset="100%" stop-color="#060410"/>
+    </radialGradient>
+    <radialGradient id="stds-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#7060C0"/>
+      <stop offset="55%" stop-color="#402880"/>
+      <stop offset="100%" stop-color="#180C40"/>
+    </radialGradient>
+    <radialGradient id="stds-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#D8D0FF"/>
+      <stop offset="50%" stop-color="#8068C0"/>
+      <stop offset="100%" stop-color="#281848"/>
+    </radialGradient>
+    <filter id="stds-glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#stds-bg)" rx="10"/>
+  <circle cx="9" cy="11" r="0.7" fill="#7060C0" opacity="0.5"/>
+  <circle cx="89" cy="9" r="0.6" fill="#8068C0" opacity="0.4"/>
+  <!-- Analytical indigo face -->
+  <ellipse cx="50" cy="54" rx="23" ry="27" fill="url(#stds-skin)"/>
+  <!-- Antennae -->
+  <line x1="43" y1="28" x2="39" y2="11" stroke="#7060C0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="57" y1="28" x2="61" y2="11" stroke="#7060C0" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="39" cy="11" r="2.2" fill="#8068C0" filter="url(#stds-glow)"/>
+  <circle cx="61" cy="11" r="2.2" fill="#8068C0" filter="url(#stds-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7" ry="8" fill="#08040E"/>
+  <ellipse cx="60" cy="51" rx="7" ry="8" fill="#08040E"/>
+  <!-- Probability-wave iris left -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#stds-iris)"/>
+  <path d="M 35 51 Q 37 48 39 51 Q 41 54 43 51 Q 44 49.5 45 51" fill="none" stroke="#281848" stroke-width="0.8" opacity="0.85"/>
+  <!-- Probability-wave iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#stds-iris)"/>
+  <path d="M 55 51 Q 57 48 59 51 Q 61 54 63 51 Q 64 49.5 65 51" fill="none" stroke="#281848" stroke-width="0.8" opacity="0.85"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#040208"/>
+  <circle cx="61" cy="50" r="2" fill="#040208"/>
+  <circle cx="42" cy="49" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="62" cy="49" r="0.9" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Bar chart cheek marks -->
+  <rect x="28" y="59" width="2" height="5" fill="#7060C0" opacity="0.5"/>
+  <rect x="31" y="56" width="2" height="8" fill="#7060C0" opacity="0.5"/>
+  <rect x="34" y="58" width="2" height="6" fill="#7060C0" opacity="0.4"/>
+  <rect x="64" y="59" width="2" height="5" fill="#7060C0" opacity="0.5"/>
+  <rect x="67" y="56" width="2" height="8" fill="#7060C0" opacity="0.5"/>
+  <rect x="70" y="58" width="2" height="6" fill="#7060C0" opacity="0.4"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#180C40" opacity="0.5"/>
+  <!-- Composed analytical expression -->
+  <path d="M 43 68 Q 50 72 57 68" fill="none" stroke="#7060C0" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

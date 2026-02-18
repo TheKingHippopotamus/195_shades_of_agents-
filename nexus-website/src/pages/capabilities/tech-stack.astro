@@ -1,139 +1,839 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 
-const categories = [
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STATUS DEFINITIONS
+// ─────────────────────────────────────────────────────────────────────────────
+const statuses: Record<string, { color: string; label: string; letter: string; desc: string }> = {
+  ADOPT:  { color: "#10B981", label: "ADOPT",  letter: "A",  desc: "Production standard" },
+  TRIAL:  { color: "#F59E0B", label: "TRIAL",  letter: "T",  desc: "Approved for projects" },
+  ASSESS: { color: "#3B82F6", label: "ASSESS", letter: "As", desc: "Under evaluation" },
+  HOLD:   { color: "#EF4444", label: "HOLD",   letter: "H",  desc: "Deprecated / avoid" },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DEPARTMENTS WITH FULL TECH STACKS
+// ─────────────────────────────────────────────────────────────────────────────
+type TechItem = { name: string; status: keyof typeof statuses; note?: string };
+type Department = {
+  num: string;
+  name: string;
+  agents: number;
+  color: string;
+  tech: TechItem[];
+};
+
+const departments: Department[] = [
   {
-    name: "Frontend",
-    items: [
-      { tech: "React", status: "ADOPT", notes: "Primary UI framework" },
-      { tech: "Vue.js", status: "ADOPT", notes: "Alternative for specific use cases" },
-      { tech: "TypeScript", status: "ADOPT", notes: "Mandatory for all new code" },
-      { tech: "Next.js", status: "ADOPT", notes: "React meta-framework" },
-      { tech: "Astro", status: "TRIAL", notes: "Content-heavy sites" },
-      { tech: "Tailwind CSS", status: "ADOPT", notes: "Utility-first styling" },
+    num: "01",
+    name: "Executive Leadership",
+    agents: 11,
+    color: "#7C3AED",
+    tech: [
+      { name: "Notion",       status: "ADOPT", note: "Knowledge management" },
+      { name: "Linear",       status: "ADOPT", note: "Strategic issue tracking" },
+      { name: "Slack",        status: "ADOPT", note: "Team communication" },
+      { name: "Zoom",         status: "ADOPT", note: "Meetings & all-hands" },
+      { name: "Loom",         status: "ADOPT", note: "Async video updates" },
+      { name: "Superhuman",   status: "ADOPT", note: "Executive email" },
+      { name: "Figma",        status: "ADOPT", note: "Strategy & vision boards" },
+      { name: "Miro",         status: "ADOPT", note: "Collaborative whiteboarding" },
+      { name: "DocuSign",     status: "ADOPT", note: "Contract execution" },
+      { name: "Salesforce",   status: "ADOPT", note: "CRM & pipeline visibility" },
     ],
   },
   {
-    name: "Backend",
-    items: [
-      { tech: "Node.js", status: "ADOPT", notes: "Primary JS runtime" },
-      { tech: "Python", status: "ADOPT", notes: "AI/ML, data pipelines, automation" },
-      { tech: "Go", status: "ADOPT", notes: "High-performance services" },
-      { tech: "PostgreSQL", status: "ADOPT", notes: "Primary relational database" },
-      { tech: "Redis", status: "ADOPT", notes: "Caching, queues, real-time" },
-      { tech: "GraphQL", status: "ADOPT", notes: "API layer for complex data" },
+    num: "02a",
+    name: "Engineering — Frontend",
+    agents: 40,
+    color: "#00D9FF",
+    tech: [
+      { name: "React 19",       status: "ADOPT",  note: "Primary UI framework" },
+      { name: "TypeScript 5",   status: "ADOPT",  note: "Mandatory for all new code" },
+      { name: "Next.js 15",     status: "ADOPT",  note: "React meta-framework" },
+      { name: "Vue 3",          status: "ADOPT",  note: "Alternative SPA framework" },
+      { name: "Tailwind CSS 4", status: "ADOPT",  note: "Utility-first styling" },
+      { name: "Astro 4",        status: "ADOPT",  note: "Content-heavy / SSG sites" },
+      { name: "shadcn/ui",      status: "ADOPT",  note: "Accessible component primitives" },
+      { name: "Radix UI",       status: "ADOPT",  note: "Headless UI components" },
+      { name: "Vite",           status: "ADOPT",  note: "Primary build tool" },
+      { name: "ESBuild",        status: "ADOPT",  note: "Fast bundler / transpiler" },
+      { name: "Biome",          status: "ADOPT",  note: "Linting & formatting" },
+      { name: "Storybook",      status: "ADOPT",  note: "Component documentation" },
+      { name: "Framer Motion",  status: "ADOPT",  note: "Animation library" },
+      { name: "D3.js",          status: "ADOPT",  note: "Data visualization" },
+      { name: "Three.js",       status: "ADOPT",  note: "3D / WebGL rendering" },
+      { name: "Chromatic",      status: "ADOPT",  note: "Visual regression testing" },
+      { name: "Nuxt 3",         status: "TRIAL",  note: "Vue SSR framework" },
+      { name: "Remix",          status: "TRIAL",  note: "Nested routing / loaders" },
+      { name: "Svelte",         status: "TRIAL",  note: "Compiler-first UI" },
+      { name: "Webpack 5",      status: "TRIAL",  note: "Legacy project bundler" },
+      { name: "Web Components", status: "ASSESS", note: "Framework-agnostic widgets" },
+      { name: "PWA",            status: "ASSESS", note: "Offline-capable apps" },
+      { name: "WASM",           status: "ASSESS", note: "Performance-critical modules" },
+      { name: "ESLint",         status: "ADOPT",  note: "Code quality enforcement" },
     ],
   },
   {
-    name: "Infrastructure",
-    items: [
-      { tech: "AWS", status: "ADOPT", notes: "Primary cloud provider" },
-      { tech: "GCP", status: "ADOPT", notes: "AI/ML workloads" },
-      { tech: "Kubernetes", status: "ADOPT", notes: "Container orchestration" },
-      { tech: "Terraform", status: "ADOPT", notes: "Infrastructure as code" },
-      { tech: "Docker", status: "ADOPT", notes: "Containerization standard" },
-      { tech: "GitHub Actions", status: "ADOPT", notes: "CI/CD pipelines" },
+    num: "02b",
+    name: "Engineering — Backend",
+    agents: 40,
+    color: "#00C2E0",
+    tech: [
+      { name: "Node.js 22",   status: "ADOPT",  note: "Primary JS runtime" },
+      { name: "Python 3.12",  status: "ADOPT",  note: "AI/ML, data, automation" },
+      { name: "Go 1.23",      status: "ADOPT",  note: "High-performance services" },
+      { name: "FastAPI",      status: "ADOPT",  note: "Python API framework" },
+      { name: "NestJS",       status: "ADOPT",  note: "Node.js enterprise framework" },
+      { name: "PostgreSQL 16",status: "ADOPT",  note: "Primary relational DB" },
+      { name: "Redis 7",      status: "ADOPT",  note: "Caching & queues" },
+      { name: "GraphQL",      status: "ADOPT",  note: "API layer for complex data" },
+      { name: "gRPC",         status: "ADOPT",  note: "Service-to-service RPC" },
+      { name: "Kafka",        status: "ADOPT",  note: "Event streaming" },
+      { name: "Prisma",       status: "ADOPT",  note: "Type-safe ORM" },
+      { name: "Drizzle ORM",  status: "ADOPT",  note: "Lightweight SQL ORM" },
+      { name: "Elasticsearch",status: "ADOPT",  note: "Full-text search" },
+      { name: "MongoDB",      status: "ADOPT",  note: "Document store" },
+      { name: "ClickHouse",   status: "ADOPT",  note: "OLAP / analytics queries" },
+      { name: "Cassandra",    status: "TRIAL",  note: "Wide-column time-series" },
+      { name: "tRPC",         status: "TRIAL",  note: "End-to-end typesafe API" },
+      { name: "Hono",         status: "TRIAL",  note: "Lightweight edge-ready server" },
+      { name: "Bun",          status: "TRIAL",  note: "JS runtime + package manager" },
+      { name: "Rust",         status: "ASSESS", note: "Systems-level performance" },
+      { name: "Deno",         status: "ASSESS", note: "Secure JS runtime" },
+      { name: "Express",      status: "ADOPT",  note: "Lightweight Node.js server" },
+      { name: "RabbitMQ",     status: "ADOPT",  note: "Message broker" },
+      { name: "MySQL 8",      status: "TRIAL",  note: "Alternative RDBMS" },
     ],
   },
   {
-    name: "AI & Machine Learning",
-    items: [
-      { tech: "PyTorch", status: "ADOPT", notes: "Primary ML framework" },
-      { tech: "Hugging Face", status: "ADOPT", notes: "Pre-trained models, transformers" },
-      { tech: "LangChain", status: "TRIAL", notes: "LLM orchestration" },
-      { tech: "MLflow", status: "ADOPT", notes: "Experiment tracking, model registry" },
-      { tech: "scikit-learn", status: "ADOPT", notes: "Classical ML" },
-      { tech: "OpenAI API", status: "ADOPT", notes: "GPT integration" },
+    num: "02c",
+    name: "Engineering — Mobile",
+    agents: 40,
+    color: "#00A8C5",
+    tech: [
+      { name: "React Native 0.75",     status: "ADOPT",  note: "Cross-platform mobile" },
+      { name: "Expo 51",               status: "ADOPT",  note: "RN managed workflow" },
+      { name: "Swift 6",               status: "ADOPT",  note: "Native iOS development" },
+      { name: "SwiftUI",               status: "ADOPT",  note: "Declarative iOS UI" },
+      { name: "Kotlin",                status: "ADOPT",  note: "Native Android development" },
+      { name: "Jetpack Compose",       status: "ADOPT",  note: "Declarative Android UI" },
+      { name: "Fastlane",              status: "ADOPT",  note: "Mobile CI/CD automation" },
+      { name: "TestFlight",            status: "ADOPT",  note: "iOS beta distribution" },
+      { name: "App Store Connect",     status: "ADOPT",  note: "iOS release management" },
+      { name: "Firebase",              status: "ADOPT",  note: "Mobile backend services" },
+      { name: "Sentry Mobile",         status: "ADOPT",  note: "Crash reporting" },
+      { name: "Xcode 16",              status: "ADOPT",  note: "iOS IDE & toolchain" },
+      { name: "Android Studio",        status: "ADOPT",  note: "Android IDE & toolchain" },
+      { name: "Flutter 3",             status: "TRIAL",  note: "Dart cross-platform framework" },
+      { name: "Kotlin Multiplatform",  status: "TRIAL",  note: "Shared business logic" },
     ],
   },
   {
-    name: "Quality & Security",
-    items: [
-      { tech: "Jest / Vitest", status: "ADOPT", notes: "Unit testing" },
-      { tech: "Playwright", status: "ADOPT", notes: "E2E testing" },
-      { tech: "SonarQube", status: "ADOPT", notes: "Code quality analysis" },
-      { tech: "Snyk", status: "ADOPT", notes: "Dependency vulnerability scanning" },
-      { tech: "OWASP ZAP", status: "ADOPT", notes: "Security testing" },
-      { tech: "Datadog", status: "ADOPT", notes: "Monitoring and observability" },
+    num: "03",
+    name: "Platform & Infrastructure",
+    agents: 12,
+    color: "#00E5FF",
+    tech: [
+      { name: "AWS EC2/ECS/EKS",  status: "ADOPT",  note: "Primary compute platform" },
+      { name: "AWS Lambda",       status: "ADOPT",  note: "Serverless functions" },
+      { name: "AWS RDS/S3",       status: "ADOPT",  note: "Managed DB + object storage" },
+      { name: "AWS CloudFront",   status: "ADOPT",  note: "Global CDN" },
+      { name: "GCP GKE",          status: "ADOPT",  note: "Managed Kubernetes" },
+      { name: "GCP Cloud Run",    status: "ADOPT",  note: "Serverless containers" },
+      { name: "Kubernetes 1.31",  status: "ADOPT",  note: "Container orchestration" },
+      { name: "Helm 3",           status: "ADOPT",  note: "K8s package manager" },
+      { name: "Terraform 1.9",    status: "ADOPT",  note: "Infrastructure as code" },
+      { name: "Docker",           status: "ADOPT",  note: "Containerization standard" },
+      { name: "ArgoCD",           status: "ADOPT",  note: "GitOps CD for K8s" },
+      { name: "GitHub Actions",   status: "ADOPT",  note: "CI/CD pipelines" },
+      { name: "Datadog",          status: "ADOPT",  note: "Monitoring & observability" },
+      { name: "Prometheus",       status: "ADOPT",  note: "Metrics collection" },
+      { name: "Grafana",          status: "ADOPT",  note: "Metrics dashboards" },
+      { name: "PagerDuty",        status: "ADOPT",  note: "Incident alerting" },
+      { name: "Nginx",            status: "ADOPT",  note: "Reverse proxy / LB" },
+      { name: "Cloudflare",       status: "ADOPT",  note: "WAF + DNS + Zero Trust" },
+      { name: "Vault (HashiCorp)",status: "ADOPT",  note: "Secrets management" },
+      { name: "Ansible",          status: "ADOPT",  note: "Configuration management" },
+      { name: "Pulumi",           status: "TRIAL",  note: "Code-first IaC alternative" },
+      { name: "FluxCD",           status: "TRIAL",  note: "GitOps operator" },
+      { name: "Traefik",          status: "TRIAL",  note: "Cloud-native edge router" },
+      { name: "Azure",            status: "ASSESS", note: "Enterprise client environments" },
+      { name: "Podman",           status: "ASSESS", note: "Daemonless container runtime" },
+      { name: "Consul",           status: "TRIAL",  note: "Service mesh / discovery" },
+      { name: "CircleCI",         status: "TRIAL",  note: "Alternate CI platform" },
+    ],
+  },
+  {
+    num: "04",
+    name: "Product Management",
+    agents: 10,
+    color: "#FFB800",
+    tech: [
+      { name: "Linear",         status: "ADOPT",  note: "Primary project tracking" },
+      { name: "Notion",         status: "ADOPT",  note: "PRDs & documentation" },
+      { name: "Figma",          status: "ADOPT",  note: "Design collaboration" },
+      { name: "Miro",           status: "ADOPT",  note: "Product workshops" },
+      { name: "Amplitude",      status: "ADOPT",  note: "Product analytics" },
+      { name: "Mixpanel",       status: "ADOPT",  note: "User behavior analytics" },
+      { name: "Hotjar",         status: "ADOPT",  note: "Session recording & heatmaps" },
+      { name: "LaunchDarkly",   status: "ADOPT",  note: "Feature flags" },
+      { name: "Segment",        status: "ADOPT",  note: "Customer data platform" },
+      { name: "Dovetail",       status: "ADOPT",  note: "User research repository" },
+      { name: "ProductBoard",   status: "TRIAL",  note: "Roadmap prioritization" },
+      { name: "Canny",          status: "TRIAL",  note: "User feedback collection" },
+      { name: "FullStory",      status: "TRIAL",  note: "Digital experience analytics" },
+      { name: "Intercom",       status: "ADOPT",  note: "In-product messaging" },
+      { name: "Loom",           status: "ADOPT",  note: "Async video spec walkthroughs" },
+      { name: "Jira",           status: "ADOPT",  note: "Enterprise project management" },
+      { name: "Confluence",     status: "ADOPT",  note: "Enterprise documentation" },
+      { name: "Aha!",           status: "ASSESS", note: "Portfolio roadmap management" },
+    ],
+  },
+  {
+    num: "05",
+    name: "Design",
+    agents: 14,
+    color: "#FF6B2B",
+    tech: [
+      { name: "Figma",                 status: "ADOPT",  note: "Primary design & prototyping" },
+      { name: "FigJam",                status: "ADOPT",  note: "Design workshops & ideation" },
+      { name: "Storybook",             status: "ADOPT",  note: "Component design system" },
+      { name: "Chromatic",             status: "ADOPT",  note: "Visual regression for DS" },
+      { name: "Lottie",                status: "ADOPT",  note: "Production-ready animations" },
+      { name: "Adobe Illustrator",     status: "ADOPT",  note: "Vector & icon creation" },
+      { name: "Adobe Photoshop",       status: "ADOPT",  note: "Raster image editing" },
+      { name: "After Effects",         status: "ADOPT",  note: "Motion design & video" },
+      { name: "Canva",                 status: "ADOPT",  note: "Rapid marketing assets" },
+      { name: "Maze",                  status: "ADOPT",  note: "Unmoderated user testing" },
+      { name: "Optimal Workshop",      status: "ADOPT",  note: "Card sorting & IA testing" },
+      { name: "Framer",                status: "TRIAL",  note: "Code-powered prototypes" },
+      { name: "Webflow",               status: "TRIAL",  note: "No-code production sites" },
+      { name: "ProtoPie",              status: "TRIAL",  note: "Advanced interaction prototypes" },
+      { name: "Principle",             status: "TRIAL",  note: "Micro-interaction design" },
+      { name: "Spline",                status: "ASSESS", note: "3D web-native design" },
+      { name: "Blender",               status: "ASSESS", note: "3D modeling & rendering" },
+      { name: "Zeplin",                status: "HOLD",   note: "Replaced by Figma Dev Mode" },
+      { name: "Lookback",              status: "TRIAL",  note: "Moderated research sessions" },
+      { name: "Adobe Creative Suite",  status: "ADOPT",  note: "Full creative toolchain" },
+    ],
+  },
+  {
+    num: "06",
+    name: "Data Science & AI/ML",
+    agents: 12,
+    color: "#00BFFF",
+    tech: [
+      { name: "Python 3.12",             status: "ADOPT",  note: "Primary ML language" },
+      { name: "PyTorch 2.4",             status: "ADOPT",  note: "Primary deep learning framework" },
+      { name: "Hugging Face Transformers",status: "ADOPT", note: "Pre-trained LLMs & fine-tuning" },
+      { name: "LangChain",               status: "ADOPT",  note: "LLM orchestration" },
+      { name: "LlamaIndex",              status: "ADOPT",  note: "RAG / document retrieval" },
+      { name: "OpenAI API",              status: "ADOPT",  note: "GPT-4 / o1 integration" },
+      { name: "Anthropic API",           status: "ADOPT",  note: "Claude integration" },
+      { name: "MLflow",                  status: "ADOPT",  note: "Experiment tracking" },
+      { name: "Weights & Biases",        status: "ADOPT",  note: "ML experiment visualization" },
+      { name: "scikit-learn",            status: "ADOPT",  note: "Classical ML algorithms" },
+      { name: "Pandas 2",                status: "ADOPT",  note: "Tabular data manipulation" },
+      { name: "NumPy",                   status: "ADOPT",  note: "Numerical computing" },
+      { name: "Polars",                  status: "ADOPT",  note: "High-performance dataframes" },
+      { name: "Apache Spark",            status: "ADOPT",  note: "Distributed data processing" },
+      { name: "Pinecone",                status: "ADOPT",  note: "Vector database (hosted)" },
+      { name: "Weaviate",                status: "ADOPT",  note: "Vector database (self-hosted)" },
+      { name: "Jupyter",                 status: "ADOPT",  note: "Interactive exploration" },
+      { name: "Modal",                   status: "ADOPT",  note: "Serverless GPU training" },
+      { name: "Ray",                     status: "ADOPT",  note: "Distributed ML compute" },
+      { name: "TensorFlow 2.17",         status: "TRIAL",  note: "TF model serving / TFX" },
+      { name: "JAX",                     status: "TRIAL",  note: "High-performance ML research" },
+      { name: "XGBoost",                 status: "ADOPT",  note: "Gradient boosting" },
+      { name: "LightGBM",                status: "ADOPT",  note: "Fast gradient boosting" },
+      { name: "DVC",                     status: "TRIAL",  note: "Data version control" },
+      { name: "CUDA",                    status: "ADOPT",  note: "GPU acceleration" },
+      { name: "ONNX",                    status: "ADOPT",  note: "Model interoperability" },
+      { name: "Chroma",                  status: "TRIAL",  note: "Embedded vector DB" },
+      { name: "Gemini API",              status: "TRIAL",  note: "Google multimodal LLM" },
+      { name: "Triton",                  status: "ASSESS", note: "Custom GPU kernels" },
+      { name: "Dask",                    status: "TRIAL",  note: "Parallel computing in Python" },
+    ],
+  },
+  {
+    num: "07",
+    name: "Quality Assurance",
+    agents: 8,
+    color: "#00FF88",
+    tech: [
+      { name: "Playwright",    status: "ADOPT",  note: "Primary E2E testing" },
+      { name: "Jest",          status: "ADOPT",  note: "JS unit testing" },
+      { name: "Vitest",        status: "ADOPT",  note: "Vite-native unit testing" },
+      { name: "pytest",        status: "ADOPT",  note: "Python testing framework" },
+      { name: "Cypress",       status: "ADOPT",  note: "Component + E2E testing" },
+      { name: "k6",            status: "ADOPT",  note: "Performance / load testing" },
+      { name: "Lighthouse CI", status: "ADOPT",  note: "Core Web Vitals CI checks" },
+      { name: "axe-core",      status: "ADOPT",  note: "Automated a11y testing" },
+      { name: "Pa11y",         status: "ADOPT",  note: "Accessibility CLI testing" },
+      { name: "SonarQube",     status: "ADOPT",  note: "Code quality analysis" },
+      { name: "Codecov",       status: "ADOPT",  note: "Coverage reporting" },
+      { name: "Percy",         status: "ADOPT",  note: "Visual regression snapshots" },
+      { name: "BrowserStack",  status: "ADOPT",  note: "Cross-browser/device testing" },
+      { name: "TestRail",      status: "ADOPT",  note: "Test case management" },
+      { name: "Allure",        status: "ADOPT",  note: "Test reporting" },
+      { name: "Appium",        status: "ADOPT",  note: "Mobile automation" },
+      { name: "Detox",         status: "ADOPT",  note: "React Native E2E" },
+      { name: "Locust",        status: "TRIAL",  note: "Python-based load testing" },
+      { name: "Selenium",      status: "HOLD",   note: "Legacy; replaced by Playwright" },
+      { name: "WAVE",          status: "TRIAL",  note: "Browser a11y evaluation" },
+      { name: "Sauce Labs",    status: "ASSESS", note: "Alternate cross-browser service" },
+      { name: "Xray",          status: "TRIAL",  note: "Jira-native test management" },
+    ],
+  },
+  {
+    num: "08",
+    name: "Security",
+    agents: 8,
+    color: "#FF1744",
+    tech: [
+      { name: "Burp Suite Pro",      status: "ADOPT",  note: "Web application pentesting" },
+      { name: "OWASP ZAP",           status: "ADOPT",  note: "DAST / automated scanning" },
+      { name: "Snyk",                status: "ADOPT",  note: "Dependency vulnerability scanning" },
+      { name: "Semgrep",             status: "ADOPT",  note: "SAST / code security scanning" },
+      { name: "Trivy",               status: "ADOPT",  note: "Container image scanning" },
+      { name: "Vault (HashiCorp)",   status: "ADOPT",  note: "Secrets management" },
+      { name: "AWS Security Hub",    status: "ADOPT",  note: "Cloud security posture" },
+      { name: "AWS GuardDuty",       status: "ADOPT",  note: "Threat detection" },
+      { name: "Falco",               status: "ADOPT",  note: "Runtime K8s threat detection" },
+      { name: "Wiz",                 status: "ADOPT",  note: "Cloud security platform" },
+      { name: "CrowdStrike",         status: "ADOPT",  note: "Endpoint detection & response" },
+      { name: "Splunk",              status: "ADOPT",  note: "SIEM & log analytics" },
+      { name: "Elastic SIEM",        status: "ADOPT",  note: "Open-source SIEM alternative" },
+      { name: "1Password Teams",     status: "ADOPT",  note: "Enterprise password management" },
+      { name: "Metasploit",          status: "ADOPT",  note: "Penetration testing framework" },
+      { name: "Nmap",                status: "ADOPT",  note: "Network discovery & scanning" },
+      { name: "Wireshark",           status: "ADOPT",  note: "Network traffic analysis" },
+      { name: "Dependabot",          status: "ADOPT",  note: "Automated dependency updates" },
+      { name: "Bandit",              status: "ADOPT",  note: "Python SAST" },
+      { name: "Prisma Cloud",        status: "TRIAL",  note: "CNAPP / cloud workload protection" },
+      { name: "Yubikey",             status: "ADOPT",  note: "Hardware MFA standard" },
+      { name: "Vanta",               status: "ADOPT",  note: "SOC 2 compliance automation" },
+      { name: "Drata",               status: "ADOPT",  note: "Continuous compliance monitoring" },
+    ],
+  },
+  {
+    num: "09",
+    name: "Sales & Revenue",
+    agents: 10,
+    color: "#448AFF",
+    tech: [
+      { name: "Salesforce CRM",      status: "ADOPT",  note: "Primary CRM" },
+      { name: "HubSpot",             status: "ADOPT",  note: "SMB CRM & marketing" },
+      { name: "Gong",                status: "ADOPT",  note: "Revenue intelligence / call AI" },
+      { name: "Chorus",              status: "ADOPT",  note: "Conversation intelligence" },
+      { name: "Outreach",            status: "ADOPT",  note: "Sales engagement sequences" },
+      { name: "Salesloft",           status: "ADOPT",  note: "Alternate sales engagement" },
+      { name: "ZoomInfo",            status: "ADOPT",  note: "B2B contact intelligence" },
+      { name: "Apollo.io",           status: "ADOPT",  note: "Prospecting & enrichment" },
+      { name: "LinkedIn Sales Nav",  status: "ADOPT",  note: "Social selling" },
+      { name: "DocuSign",            status: "ADOPT",  note: "eSignature / contract close" },
+      { name: "PandaDoc",            status: "ADOPT",  note: "Proposal & contract automation" },
+      { name: "Stripe",              status: "ADOPT",  note: "Payment processing" },
+      { name: "Chargebee",           status: "ADOPT",  note: "Subscription billing" },
+      { name: "Clari",               status: "ADOPT",  note: "Revenue forecasting & ops" },
+      { name: "Looker",              status: "ADOPT",  note: "Revenue dashboards" },
+      { name: "Clearbit",            status: "TRIAL",  note: "Data enrichment" },
+      { name: "Boomerang",           status: "TRIAL",  note: "Email scheduling & tracking" },
+      { name: "Tableau",             status: "TRIAL",  note: "Business intelligence" },
+    ],
+  },
+  {
+    num: "10",
+    name: "Marketing",
+    agents: 9,
+    color: "#FF4081",
+    tech: [
+      { name: "HubSpot Marketing",  status: "ADOPT",  note: "Marketing automation" },
+      { name: "Webflow",            status: "ADOPT",  note: "Marketing site CMS" },
+      { name: "Contentful",         status: "ADOPT",  note: "Headless CMS" },
+      { name: "Semrush",            status: "ADOPT",  note: "SEO & competitive intel" },
+      { name: "Ahrefs",             status: "ADOPT",  note: "Backlink & keyword analysis" },
+      { name: "Google Analytics 4", status: "ADOPT",  note: "Web analytics" },
+      { name: "Amplitude",          status: "ADOPT",  note: "Product analytics" },
+      { name: "Hotjar",             status: "ADOPT",  note: "Heatmaps & session replay" },
+      { name: "Hootsuite",          status: "ADOPT",  note: "Social media scheduling" },
+      { name: "Buffer",             status: "ADOPT",  note: "Social publishing" },
+      { name: "Canva",              status: "ADOPT",  note: "Visual content creation" },
+      { name: "Adobe Express",      status: "ADOPT",  note: "Brand-compliant assets" },
+      { name: "Loom",               status: "ADOPT",  note: "Video marketing content" },
+      { name: "Wistia",             status: "ADOPT",  note: "B2B video hosting" },
+      { name: "Vidyard",            status: "TRIAL",  note: "Personalized video outreach" },
+      { name: "Customer.io",        status: "ADOPT",  note: "Behavioral email automation" },
+      { name: "Mailchimp",          status: "ADOPT",  note: "Email campaigns" },
+      { name: "Marketo",            status: "TRIAL",  note: "Enterprise marketing automation" },
+      { name: "Sanity CMS",         status: "TRIAL",  note: "Flexible headless CMS" },
+      { name: "Sprout Social",      status: "TRIAL",  note: "Social media management" },
+      { name: "Zapier",             status: "ADOPT",  note: "Marketing workflow automation" },
+      { name: "Moz",                status: "ASSESS", note: "SEO suite alternative" },
+    ],
+  },
+  {
+    num: "11",
+    name: "Customer Success",
+    agents: 8,
+    color: "#1DE9B6",
+    tech: [
+      { name: "Intercom",                  status: "ADOPT",  note: "Customer messaging & support" },
+      { name: "Zendesk",                   status: "ADOPT",  note: "Support ticket management" },
+      { name: "Gainsight",                 status: "ADOPT",  note: "CS platform & health scoring" },
+      { name: "Pendo",                     status: "ADOPT",  note: "In-app guidance & analytics" },
+      { name: "Mixpanel",                  status: "ADOPT",  note: "Customer behavior analytics" },
+      { name: "Notion",                    status: "ADOPT",  note: "Knowledge base & runbooks" },
+      { name: "Loom",                      status: "ADOPT",  note: "Customer onboarding videos" },
+      { name: "Zoom",                      status: "ADOPT",  note: "Customer calls & QBRs" },
+      { name: "Calendly",                  status: "ADOPT",  note: "Meeting scheduling" },
+      { name: "Gong",                      status: "ADOPT",  note: "Call intelligence & coaching" },
+      { name: "Chorus",                    status: "ADOPT",  note: "Conversation analysis" },
+      { name: "Salesforce Service Cloud",  status: "ADOPT",  note: "Enterprise service CRM" },
+      { name: "Statuspage",                status: "ADOPT",  note: "Incident communication" },
+      { name: "ChurnZero",                 status: "TRIAL",  note: "Churn prediction & prevention" },
+      { name: "JIRA Service Management",   status: "ADOPT",  note: "Internal escalation tracking" },
+      { name: "Amplitude",                 status: "TRIAL",  note: "Product usage tracking" },
+      { name: "Freshdesk",                 status: "ASSESS", note: "SMB support alternative" },
+    ],
+  },
+  {
+    num: "12",
+    name: "People & HR",
+    agents: 7,
+    color: "#B388FF",
+    tech: [
+      { name: "Workday",           status: "ADOPT",  note: "Core HCM & payroll" },
+      { name: "BambooHR",          status: "ADOPT",  note: "SMB HR management" },
+      { name: "Greenhouse",        status: "ADOPT",  note: "Applicant tracking system" },
+      { name: "LinkedIn Recruiter",status: "ADOPT",  note: "Talent sourcing" },
+      { name: "Lattice",           status: "ADOPT",  note: "Performance management" },
+      { name: "Culture Amp",       status: "ADOPT",  note: "Employee engagement surveys" },
+      { name: "15Five",            status: "ADOPT",  note: "Weekly check-ins & OKRs" },
+      { name: "Deel",              status: "ADOPT",  note: "Global contractor payroll" },
+      { name: "Remote",            status: "ADOPT",  note: "Global EOR employment" },
+      { name: "Carta",             status: "ADOPT",  note: "Equity management" },
+      { name: "Rippling",          status: "ADOPT",  note: "HR + IT + payroll platform" },
+      { name: "Lever",             status: "TRIAL",  note: "ATS alternative" },
+      { name: "Gusto",             status: "TRIAL",  note: "SMB payroll & benefits" },
+      { name: "Slack",             status: "ADOPT",  note: "Team collaboration" },
+      { name: "Notion",            status: "ADOPT",  note: "HR policies & handbooks" },
+      { name: "Calendly",          status: "ADOPT",  note: "Interview scheduling" },
+      { name: "Indeed",            status: "ADOPT",  note: "Job posting & sourcing" },
+    ],
+  },
+  {
+    num: "13",
+    name: "Finance & Accounting",
+    agents: 7,
+    color: "#76FF03",
+    tech: [
+      { name: "NetSuite",      status: "ADOPT",  note: "Enterprise ERP & accounting" },
+      { name: "QuickBooks",    status: "ADOPT",  note: "SMB accounting" },
+      { name: "Stripe",        status: "ADOPT",  note: "Revenue & payment data" },
+      { name: "Chargebee",     status: "ADOPT",  note: "Subscription revenue ops" },
+      { name: "Brex",          status: "ADOPT",  note: "Corporate cards & spend mgmt" },
+      { name: "Ramp",          status: "ADOPT",  note: "Spend management alternative" },
+      { name: "Carta",         status: "ADOPT",  note: "Cap table & equity accounting" },
+      { name: "Looker",        status: "ADOPT",  note: "Financial dashboards" },
+      { name: "Metabase",      status: "ADOPT",  note: "Self-serve BI" },
+      { name: "Google Sheets", status: "ADOPT",  note: "FP&A models & ad-hoc analysis" },
+      { name: "Tipalti",       status: "ADOPT",  note: "Accounts payable automation" },
+      { name: "Avalara",       status: "ADOPT",  note: "Tax compliance automation" },
+      { name: "Coupa",         status: "TRIAL",  note: "Enterprise procurement" },
+      { name: "Expensify",     status: "ADOPT",  note: "Expense reporting" },
+      { name: "Tableau",       status: "TRIAL",  note: "Advanced financial analytics" },
+      { name: "Sage",          status: "ASSESS", note: "Alternative ERP" },
+      { name: "Pulley",        status: "TRIAL",  note: "Equity modeling" },
+    ],
+  },
+  {
+    num: "14",
+    name: "Legal & Compliance",
+    agents: 7,
+    color: "#FF5252",
+    tech: [
+      { name: "Ironclad",       status: "ADOPT",  note: "Contract lifecycle management" },
+      { name: "DocuSign",       status: "ADOPT",  note: "eSignature standard" },
+      { name: "OneTrust",       status: "ADOPT",  note: "GDPR / CCPA privacy platform" },
+      { name: "Vanta",          status: "ADOPT",  note: "SOC 2 compliance automation" },
+      { name: "Drata",          status: "ADOPT",  note: "Continuous compliance" },
+      { name: "Secureframe",    status: "ADOPT",  note: "Compliance framework tooling" },
+      { name: "Jira",           status: "ADOPT",  note: "Legal ticket management" },
+      { name: "Notion",         status: "ADOPT",  note: "Legal knowledge base" },
+      { name: "Westlaw",        status: "ADOPT",  note: "Legal research database" },
+      { name: "LexisNexis",     status: "ADOPT",  note: "Alternate legal research" },
+      { name: "Relativity",     status: "TRIAL",  note: "eDiscovery & document review" },
+      { name: "Clio",           status: "TRIAL",  note: "Matter & billing management" },
+      { name: "TrustArc",       status: "TRIAL",  note: "Privacy management platform" },
+    ],
+  },
+  {
+    num: "15",
+    name: "IT Operations",
+    agents: 5,
+    color: "#90A4AE",
+    tech: [
+      { name: "Okta",                  status: "ADOPT",  note: "Identity & SSO platform" },
+      { name: "1Password Teams",       status: "ADOPT",  note: "Password & secrets management" },
+      { name: "Cloudflare Zero Trust", status: "ADOPT",  note: "Zero-trust network access" },
+      { name: "Jamf",                  status: "ADOPT",  note: "Apple device management" },
+      { name: "Intune",                status: "ADOPT",  note: "Windows / Android MDM" },
+      { name: "Datadog",               status: "ADOPT",  note: "IT infrastructure monitoring" },
+      { name: "PagerDuty",             status: "ADOPT",  note: "IT incident alerting" },
+      { name: "Zendesk",               status: "ADOPT",  note: "IT helpdesk & ticketing" },
+      { name: "Jira Service Desk",     status: "ADOPT",  note: "Internal IT request tracking" },
+      { name: "Notion",                status: "ADOPT",  note: "IT runbooks & SOPs" },
+      { name: "Ansible",               status: "ADOPT",  note: "IT automation & config mgmt" },
+      { name: "Terraform",             status: "ADOPT",  note: "IT infrastructure as code" },
+      { name: "AWS SSO",               status: "ADOPT",  note: "Cloud access management" },
+      { name: "Tailscale",             status: "ADOPT",  note: "Zero-config VPN" },
+      { name: "Kandji",                status: "TRIAL",  note: "Apple MDM alternative" },
+      { name: "JumpCloud",             status: "TRIAL",  note: "Directory-as-a-Service" },
+      { name: "Snipe-IT",              status: "ADOPT",  note: "IT asset management" },
+      { name: "Mosyle",                status: "ASSESS", note: "Education-focused MDM" },
+    ],
+  },
+  {
+    num: "16",
+    name: "Developer Relations",
+    agents: 5,
+    color: "#E040FB",
+    tech: [
+      { name: "GitHub",          status: "ADOPT",  note: "OSS contributions & repos" },
+      { name: "Mintlify",        status: "ADOPT",  note: "Developer docs platform" },
+      { name: "Docusaurus",      status: "ADOPT",  note: "Open-source docs sites" },
+      { name: "Postman",         status: "ADOPT",  note: "API documentation & testing" },
+      { name: "Swagger / OpenAPI",status: "ADOPT", note: "API specification standard" },
+      { name: "Discord",         status: "ADOPT",  note: "Developer community" },
+      { name: "YouTube",         status: "ADOPT",  note: "Tutorial & demo content" },
+      { name: "Hashnode",        status: "ADOPT",  note: "Developer blogging" },
+      { name: "Dev.to",          status: "ADOPT",  note: "Developer community posts" },
+      { name: "Substack",        status: "ADOPT",  note: "Technical newsletter" },
+      { name: "Luma",            status: "ADOPT",  note: "Event management" },
+      { name: "Algolia",         status: "ADOPT",  note: "Docs search" },
+      { name: "ReadMe",          status: "TRIAL",  note: "API developer portal" },
+      { name: "Twitch",          status: "TRIAL",  note: "Live coding streams" },
+      { name: "Obsidian",        status: "TRIAL",  note: "DevRel knowledge graph" },
+      { name: "Twitter/X",       status: "ADOPT",  note: "Technical community engagement" },
+      { name: "LinkedIn",        status: "ADOPT",  note: "Professional developer network" },
+      { name: "Hopin",           status: "ASSESS", note: "Virtual conference platform" },
+    ],
+  },
+  {
+    num: "17",
+    name: "Program Management",
+    agents: 4,
+    color: "#40C4FF",
+    tech: [
+      { name: "Linear",         status: "ADOPT",  note: "Primary project tracking" },
+      { name: "Jira",           status: "ADOPT",  note: "Enterprise project management" },
+      { name: "Notion",         status: "ADOPT",  note: "Program documentation" },
+      { name: "Confluence",     status: "ADOPT",  note: "Enterprise team documentation" },
+      { name: "Miro",           status: "ADOPT",  note: "Visual program planning" },
+      { name: "FigJam",         status: "ADOPT",  note: "Sprint retrospectives" },
+      { name: "GitHub Projects",status: "ADOPT",  note: "Engineering project boards" },
+      { name: "Slack",          status: "ADOPT",  note: "Program status communication" },
+      { name: "Zoom",           status: "ADOPT",  note: "Sprint ceremonies" },
+      { name: "Loom",           status: "ADOPT",  note: "Async stakeholder updates" },
+      { name: "Harvest",        status: "ADOPT",  note: "Time tracking" },
+      { name: "Tempo",          status: "TRIAL",  note: "Jira-native time tracking" },
+      { name: "Asana",          status: "TRIAL",  note: "Cross-team task management" },
+      { name: "Monday.com",     status: "TRIAL",  note: "Visual project boards" },
+      { name: "Smartsheet",     status: "ASSESS", note: "Gantt-heavy project planning" },
+      { name: "Airtable",       status: "TRIAL",  note: "Flexible data + project views" },
+      { name: "Retool",         status: "TRIAL",  note: "Internal tool dashboards" },
+    ],
+  },
+  {
+    num: "18",
+    name: "Governance",
+    agents: 6,
+    color: "#8D6E63",
+    tech: [
+      { name: "GitHub PRs",       status: "ADOPT",  note: "Code review & merge gates" },
+      { name: "Linear",           status: "ADOPT",  note: "Architecture decision tickets" },
+      { name: "Confluence",       status: "ADOPT",  note: "Policy & governance docs" },
+      { name: "Vanta",            status: "ADOPT",  note: "Automated compliance evidence" },
+      { name: "Drata",            status: "ADOPT",  note: "Continuous compliance monitoring" },
+      { name: "OPA (Open Policy Agent)", status: "ADOPT", note: "Policy-as-code enforcement" },
+      { name: "Checkov",          status: "ADOPT",  note: "IaC security policy scanning" },
+      { name: "tfsec",            status: "ADOPT",  note: "Terraform security analysis" },
+      { name: "Gitleaks",         status: "ADOPT",  note: "Secret scanning in repos" },
+      { name: "Styra",            status: "TRIAL",  note: "OPA policy management platform" },
+      { name: "SOC 2 Framework",  status: "ADOPT",  note: "Security & availability controls" },
+      { name: "ISO 27001",        status: "ADOPT",  note: "Information security management" },
+      { name: "NIST Framework",   status: "ADOPT",  note: "Cybersecurity risk framework" },
+      { name: "GDPR Toolkit",     status: "ADOPT",  note: "Privacy regulation compliance" },
+      { name: "Notion",           status: "ADOPT",  note: "Governance runbooks" },
+    ],
+  },
+  {
+    num: "19",
+    name: "Special Agents",
+    agents: 9,
+    color: "#FFD740",
+    tech: [
+      { name: "Anthropic API",    status: "ADOPT",  note: "Claude — primary agent backbone" },
+      { name: "OpenAI API",       status: "ADOPT",  note: "GPT-4 / o1 reasoning" },
+      { name: "LangChain",        status: "ADOPT",  note: "Agent orchestration framework" },
+      { name: "LlamaIndex",       status: "ADOPT",  note: "RAG and context retrieval" },
+      { name: "AutoGen",          status: "ADOPT",  note: "Multi-agent conversation" },
+      { name: "CrewAI",           status: "ADOPT",  note: "Role-based agent teams" },
+      { name: "n8n",              status: "ADOPT",  note: "Visual workflow automation" },
+      { name: "Temporal",         status: "ADOPT",  note: "Durable workflow engine" },
+      { name: "Inngest",          status: "ADOPT",  note: "Event-driven serverless workflows" },
+      { name: "Modal",            status: "ADOPT",  note: "Serverless agent compute" },
+      { name: "E2B",              status: "ADOPT",  note: "Agent sandboxed execution" },
+      { name: "Browserbase",      status: "ADOPT",  note: "Headless browser for agents" },
+      { name: "Semantic Kernel",  status: "TRIAL",  note: "Microsoft agent SDK" },
+      { name: "Haystack",         status: "TRIAL",  note: "NLP pipeline framework" },
+      { name: "Gemini API",       status: "TRIAL",  note: "Google multimodal agents" },
+      { name: "Zapier",           status: "ADOPT",  note: "External integration triggers" },
+      { name: "Make (Integromat)",status: "TRIAL",  note: "Complex automation flows" },
+    ],
+  },
+  {
+    num: "20",
+    name: "Documentation",
+    agents: 3,
+    color: "#64FFDA",
+    tech: [
+      { name: "Mintlify",        status: "ADOPT",  note: "Primary developer docs platform" },
+      { name: "Docusaurus",      status: "ADOPT",  note: "Open-source static docs" },
+      { name: "Confluence",      status: "ADOPT",  note: "Enterprise team documentation" },
+      { name: "Notion",          status: "ADOPT",  note: "Collaborative docs & wikis" },
+      { name: "Markdown / MDX",  status: "ADOPT",  note: "Source format for all docs" },
+      { name: "Typedoc",         status: "ADOPT",  note: "TypeScript API docs generator" },
+      { name: "JSDoc",           status: "ADOPT",  note: "JavaScript inline documentation" },
+      { name: "Storybook",       status: "ADOPT",  note: "Living component documentation" },
+      { name: "Swagger / OpenAPI",status: "ADOPT", note: "API specification docs" },
+      { name: "Postman",         status: "ADOPT",  note: "API collection documentation" },
+      { name: "Loom",            status: "ADOPT",  note: "Video walkthroughs & demos" },
+      { name: "Scribe",          status: "ADOPT",  note: "Auto-generated how-to guides" },
+      { name: "Carbon",          status: "ADOPT",  note: "Code screenshot generation" },
+      { name: "Excalidraw",      status: "ADOPT",  note: "Architecture sketch diagrams" },
+      { name: "GitBook",         status: "TRIAL",  note: "Alternate hosted docs" },
+      { name: "ReadMe",          status: "TRIAL",  note: "API developer portal" },
+      { name: "Obsidian",        status: "TRIAL",  note: "Personal knowledge management" },
     ],
   },
 ];
 
-const statusColors: Record<string, string> = {
-  ADOPT: "#10B981",
-  TRIAL: "#F59E0B",
-  ASSESS: "#3B82F6",
-  HOLD: "#EF4444",
-};
+// ─────────────────────────────────────────────────────────────────────────────
+// AGGREGATE STATS
+// ─────────────────────────────────────────────────────────────────────────────
+const totalTools = departments.reduce((sum, d) => sum + d.tech.length, 0);
+const adoptCount = departments.reduce((sum, d) => sum + d.tech.filter(t => t.status === "ADOPT").length, 0);
+const trialCount = departments.reduce((sum, d) => sum + d.tech.filter(t => t.status === "TRIAL").length, 0);
+const deptsCount = 20;
+
+// Radar bar data (tool count per dept, capped for visual width)
+const radarMax = Math.max(...departments.map(d => d.tech.length));
 ---
 
 <PageLayout
-  title="Technology Stack"
-  description="The technologies NEXUS AI agents use to build world-class software — from frontend to AI/ML."
+  title="Tech Arsenal"
+  description="Every tool, framework, and platform our 195 agents deploy — organized by department, rated by maturity."
 >
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+
+    <!-- ──────────────────────────────────────────────────────────────────────
+         BREADCRUMB
+         ────────────────────────────────────────────────────────────────────── -->
     <nav class="mb-8 text-sm text-[var(--text-secondary)]">
-      <a href="/195_shades_of_agents-/" class="hover:text-quantum-blue">Home</a>
-      <span class="mx-2">/</span>
-      <a href="/195_shades_of_agents-/capabilities/" class="hover:text-quantum-blue">Capabilities</a>
-      <span class="mx-2">/</span>
-      <span class="text-[var(--text-primary)]">Tech Stack</span>
+      <a href={`${base}/`} class="hover:text-quantum-blue transition-colors">Home</a>
+      <span class="mx-2 opacity-40">/</span>
+      <a href={`${base}/capabilities/`} class="hover:text-quantum-blue transition-colors">Capabilities</a>
+      <span class="mx-2 opacity-40">/</span>
+      <span class="text-[var(--text-primary)]">Tech Arsenal</span>
     </nav>
 
-    <div class="max-w-3xl mb-16">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
-        Tech <span class="text-gradient">Stack</span>
+    <!-- ──────────────────────────────────────────────────────────────────────
+         HERO
+         ────────────────────────────────────────────────────────────────────── -->
+    <div class="relative mb-14">
+      <!-- Background accent -->
+      <div class="absolute -top-8 -left-8 w-96 h-40 opacity-10 pointer-events-none" style="background: radial-gradient(ellipse, #00D9FF, transparent 70%); filter: blur(60px);"></div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] text-[10px] font-bold text-quantum-blue tracking-widest uppercase mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-quantum-blue animate-pulse"></span>
+        NEXUS AI Technology Radar
+      </div>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-tight tracking-tight mb-5">
+        The NEXUS AI<br />
+        <span class="bg-gradient-to-r from-quantum-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">Tech Arsenal</span>
       </h1>
-      <p class="text-xl text-[var(--text-secondary)]">
-        Our technology choices follow a radar model: ADOPT (production default),
-        TRIAL (approved for specific projects), ASSESS (evaluating), and HOLD
-        (deprecated).
+      <p class="text-lg text-[var(--text-secondary)] max-w-2xl leading-relaxed mb-8">
+        Every tool, framework, and platform our 195 agents deploy — organized by department, rated by maturity.
       </p>
-    </div>
 
-    <!-- Legend -->
-    <div class="flex flex-wrap gap-4 mb-10">
-      {Object.entries(statusColors).map(([status, color]) => (
-        <div class="flex items-center gap-2">
-          <span
-            class="h-3 w-3 rounded-full"
-            style={`background-color: ${color}`}
-          />
-          <span class="text-sm text-[var(--text-secondary)]">{status}</span>
+      <!-- Stat chips -->
+      <div class="flex flex-wrap gap-3">
+        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)]">
+          <span class="text-2xl font-black text-quantum-blue">{totalTools}</span>
+          <span class="text-xs text-[var(--text-secondary)] font-medium">Total Tools</span>
         </div>
-      ))}
+        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)]">
+          <span class="text-2xl font-black text-neon-purple">{deptsCount}</span>
+          <span class="text-xs text-[var(--text-secondary)] font-medium">Departments</span>
+        </div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)]">
+          <span class="text-2xl font-black" style="color: #10B981;">{adoptCount}</span>
+          <span class="text-xs text-[var(--text-secondary)] font-medium">ADOPT tools</span>
+        </div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)]">
+          <span class="text-2xl font-black" style="color: #F59E0B;">{trialCount}</span>
+          <span class="text-xs text-[var(--text-secondary)] font-medium">TRIAL tools</span>
+        </div>
+      </div>
     </div>
 
-    <div class="space-y-10">
-      {categories.map((cat) => (
-        <section>
-          <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">{cat.name}</h2>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {cat.items.map((item) => (
-              <div class="nexus-card p-4 flex items-center gap-3">
-                <span
-                  class="h-2.5 w-2.5 rounded-full flex-shrink-0"
-                  style={`background-color: ${statusColors[item.status]}`}
-                />
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2">
-                    <span class="text-sm font-semibold text-[var(--text-primary)]">
-                      {item.tech}
-                    </span>
+    <!-- ──────────────────────────────────────────────────────────────────────
+         STATUS LEGEND
+         ────────────────────────────────────────────────────────────────────── -->
+    <div class="mb-12 p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border-color)]">
+      <p class="text-xs font-bold text-[var(--text-muted)] uppercase tracking-widest mb-4">Status Legend</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {Object.entries(statuses).map(([key, s]) => (
+          <div class="flex items-center gap-3">
+            <div
+              class="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center text-xs font-black"
+              style={`background: ${s.color}20; color: ${s.color}; border: 1.5px solid ${s.color}40;`}
+            >
+              {s.letter}
+            </div>
+            <div>
+              <div class="text-sm font-bold" style={`color: ${s.color};`}>{s.label}</div>
+              <div class="text-[11px] text-[var(--text-muted)]">{s.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- ──────────────────────────────────────────────────────────────────────
+         RADAR OVERVIEW — CSS BAR CHART
+         ────────────────────────────────────────────────────────────────────── -->
+    <div class="mb-14 p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border-color)]">
+      <p class="text-xs font-bold text-[var(--text-muted)] uppercase tracking-widest mb-5">Radar Overview — Tools per Department</p>
+      <div class="space-y-2.5">
+        {departments.map((d) => {
+          const pct = Math.round((d.tech.length / radarMax) * 100);
+          return (
+            <div class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded flex items-center justify-center text-[9px] font-black flex-shrink-0"
+                   style={`background: ${d.color}20; color: ${d.color};`}>
+                {d.num.replace(/[ab]/, "")}
+              </div>
+              <div class="w-40 text-[11px] text-[var(--text-secondary)] truncate flex-shrink-0">{d.name}</div>
+              <div class="flex-1 h-2 rounded-full bg-[var(--bg-elevated)] overflow-hidden">
+                <div
+                  class="h-full rounded-full"
+                  style={`width: ${pct}%; background: linear-gradient(90deg, ${d.color}, ${d.color}80);`}
+                ></div>
+              </div>
+              <div class="text-[11px] font-mono font-bold w-7 text-right flex-shrink-0" style={`color: ${d.color};`}>
+                {d.tech.length}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- ──────────────────────────────────────────────────────────────────────
+         DEPARTMENT SECTIONS
+         ────────────────────────────────────────────────────────────────────── -->
+    <div class="space-y-8">
+      {departments.map((dept) => {
+        const deptAdopt = dept.tech.filter(t => t.status === "ADOPT").length;
+        return (
+          <section
+            class="rounded-2xl bg-[var(--bg-surface)] border border-[var(--border-color)] overflow-hidden"
+            style={`border-left: 4px solid ${dept.color};`}
+          >
+            <!-- Department header -->
+            <div class="px-6 py-4 flex items-center gap-4 border-b border-[var(--border-color)]"
+                 style={`background: ${dept.color}08;`}>
+              <!-- Number badge -->
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-black"
+                style={`background: ${dept.color}20; color: ${dept.color}; border: 1.5px solid ${dept.color}40;`}
+              >
+                {dept.num.replace(/[ab]/, "")}
+              </div>
+              <!-- Name + meta -->
+              <div class="flex-1 min-w-0">
+                <h2 class="text-base font-bold text-[var(--text-primary)] leading-tight">{dept.name}</h2>
+                <p class="text-xs text-[var(--text-muted)]">{dept.agents} agents &middot; {dept.tech.length} tools &middot; {deptAdopt} adopted</p>
+              </div>
+              <!-- Adopt indicator -->
+              <div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full"
+                   style={`background: ${dept.color}15; border: 1px solid ${dept.color}30;`}>
+                <span class="w-1.5 h-1.5 rounded-full" style={`background: ${dept.color};`}></span>
+                <span class="text-[11px] font-bold" style={`color: ${dept.color};`}>{dept.tech.length} tools</span>
+              </div>
+            </div>
+
+            <!-- Tech chip grid -->
+            <div class="p-5 flex flex-wrap gap-2">
+              {dept.tech.map((item) => {
+                const s = statuses[item.status];
+                return (
+                  <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border transition-all"
+                    style={`background: ${dept.color}08; border-color: ${dept.color}20;`}
+                    title={item.note ?? ""}
+                  >
+                    <!-- Tech name -->
+                    <span class="text-xs font-mono font-semibold text-[var(--text-primary)]">{item.name}</span>
+                    <!-- Status pill -->
                     <span
-                      class="text-[10px] px-1.5 py-0.5 rounded font-medium"
-                      style={`background-color: ${statusColors[item.status]}15; color: ${statusColors[item.status]}`}
+                      class="text-[9px] font-black px-1.5 py-0.5 rounded leading-none"
+                      style={`background: ${s.color}20; color: ${s.color};`}
                     >
-                      {item.status}
+                      {s.label}
                     </span>
                   </div>
-                  <p class="text-xs text-[var(--text-secondary)] truncate">{item.notes}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
     </div>
+
+    <!-- ──────────────────────────────────────────────────────────────────────
+         FOOTER CTA
+         ────────────────────────────────────────────────────────────────────── -->
+    <div class="mt-16 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border-color)] p-8 md:p-10 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-3">
+        Ready to deploy the arsenal?
+      </h2>
+      <p class="text-[var(--text-secondary)] mb-8 max-w-xl mx-auto text-sm leading-relaxed">
+        Tell us what you want to build and we'll assemble the right department, pick the right stack, and deliver — from architecture through deployment.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={`${base}/contact/`}
+          class="inline-flex items-center gap-2 px-7 py-3 rounded-lg bg-quantum-blue text-nexus-black font-bold text-sm hover:bg-orbital-cyan transition-colors"
+        >
+          Start a Project
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a
+          href={`${base}/capabilities/`}
+          class="inline-flex items-center gap-2 px-7 py-3 rounded-lg border border-[var(--border-color)] text-[var(--text-primary)] font-bold text-sm hover:border-quantum-blue/50 transition-colors"
+        >
+          Explore Capabilities
+        </a>
+      </div>
+    </div>
+
   </div>
 </PageLayout>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#030108"/></radialGradient>
+</defs>
+<rect width="100" height="100" rx="16" fill="url(#bg)"/>
+
+<defs>
+  <radialGradient id="rel-skin" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#0a1a3a"/><stop offset="100%" stop-color="#020510"/></radialGradient>
+  <radialGradient id="rel-iris" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="50%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#020510"/></radialGradient>
+</defs>
+<!-- midnight blue head -->
+<ellipse cx="50" cy="49" rx="27" ry="30" fill="url(#rel-skin)" stroke="#60a5fa" stroke-width="0.5" opacity="0.5"/>
+<!-- launch button on forehead -->
+<circle cx="50" cy="27" r="6" fill="#0a1a3a" stroke="#60a5fa" stroke-width="1.5"/>
+<circle cx="50" cy="27" r="4" fill="#1d4ed8" opacity="0.8"/>
+<circle cx="50" cy="27" r="2.5" fill="#60a5fa" opacity="0.9"/>
+<!-- launch control panel marks above eyes -->
+<rect x="32" y="34" width="4" height="3" rx="0.5" fill="#60a5fa" opacity="0.6"/>
+<rect x="39" y="34" width="4" height="3" rx="0.5" fill="#22c55e" opacity="0.7"/>
+<rect x="57" y="34" width="4" height="3" rx="0.5" fill="#22c55e" opacity="0.7"/>
+<rect x="64" y="34" width="4" height="3" rx="0.5" fill="#60a5fa" opacity="0.6"/>
+<!-- left eye -->
+<ellipse cx="37" cy="46" rx="9" ry="7" fill="#020510" stroke="#60a5fa" stroke-width="1.4"/>
+<ellipse cx="37" cy="46" rx="6.5" ry="5" fill="url(#rel-iris)"/>
+<!-- pipeline iris: stages -->
+<line x1="30" y1="46" x2="44" y2="46" stroke="#020510" stroke-width="0.8" opacity="0.8"/>
+<circle cx="32" cy="46" r="1.2" fill="#22c55e" opacity="0.8"/>
+<circle cx="37" cy="46" r="1.2" fill="#60a5fa" opacity="0.8"/>
+<circle cx="42" cy="46" r="1.2" fill="#1d4ed8" opacity="0.8"/>
+<circle cx="37" cy="46" r="2" fill="#020510"/>
+<circle cx="36" cy="45" r="0.6" fill="white" opacity="0.9"/>
+<!-- right eye -->
+<ellipse cx="63" cy="46" rx="9" ry="7" fill="#020510" stroke="#60a5fa" stroke-width="1.4"/>
+<ellipse cx="63" cy="46" rx="6.5" ry="5" fill="url(#rel-iris)"/>
+<line x1="56" y1="46" x2="70" y2="46" stroke="#020510" stroke-width="0.8" opacity="0.8"/>
+<circle cx="58" cy="46" r="1.2" fill="#22c55e" opacity="0.8"/>
+<circle cx="63" cy="46" r="1.2" fill="#60a5fa" opacity="0.8"/>
+<circle cx="68" cy="46" r="1.2" fill="#1d4ed8" opacity="0.8"/>
+<circle cx="63" cy="46" r="2" fill="#020510"/>
+<circle cx="62" cy="45" r="0.6" fill="white" opacity="0.9"/>
+<!-- brows -->
+<path d="M27,38 Q37,35 47,38" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+<path d="M53,38 Q63,35 73,38" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+<!-- nose -->
+<path d="M48,54 Q50,58 52,54" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.5"/>
+<!-- approved expression -->
+<path d="M40,65 L43,68 L60,63" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+<!-- label -->
+<text x="50" y="91" text-anchor="middle" font-family="monospace" font-size="3.5" fill="#60a5fa" opacity="0.9">REL-APPROVE</text>
+
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <radialGradient id="srmle-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#040C20"/>
+      <stop offset="100%" stop-color="#020610"/>
+    </radialGradient>
+    <radialGradient id="srmle-skin" cx="45%" cy="35%" r="58%">
+      <stop offset="0%" stop-color="#40A0F0"/>
+      <stop offset="55%" stop-color="#1060C0"/>
+      <stop offset="100%" stop-color="#083060"/>
+    </radialGradient>
+    <radialGradient id="srmle-iris" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#D0ECFF"/>
+      <stop offset="50%" stop-color="#5090D0"/>
+      <stop offset="100%" stop-color="#103058"/>
+    </radialGradient>
+    <filter id="srmle-glow">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" fill="url(#srmle-bg)" rx="10"/>
+  <circle cx="8" cy="10" r="0.7" fill="#40A0F0" opacity="0.45"/>
+  <circle cx="90" cy="11" r="0.6" fill="#5090D0" opacity="0.4"/>
+  <!-- Technical electric-blue face -->
+  <ellipse cx="50" cy="54" rx="23" ry="27" fill="url(#srmle-skin)"/>
+  <!-- Neural antennae — rounded and glowing -->
+  <path d="M 42 28 Q 36 18 38 10" fill="none" stroke="#40A0F0" stroke-width="2" stroke-linecap="round" filter="url(#srmle-glow)" opacity="0.5"/>
+  <path d="M 42 28 Q 36 18 38 10" fill="none" stroke="#40A0F0" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 58 28 Q 64 18 62 10" fill="none" stroke="#40A0F0" stroke-width="2" stroke-linecap="round" filter="url(#srmle-glow)" opacity="0.5"/>
+  <path d="M 58 28 Q 64 18 62 10" fill="none" stroke="#40A0F0" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="38" cy="10" r="2.5" fill="#D0ECFF" filter="url(#srmle-glow)"/>
+  <circle cx="62" cy="10" r="2.5" fill="#D0ECFF" filter="url(#srmle-glow)"/>
+  <!-- Eye sockets -->
+  <ellipse cx="40" cy="51" rx="7.5" ry="8.5" fill="#020610"/>
+  <ellipse cx="60" cy="51" rx="7.5" ry="8.5" fill="#020610"/>
+  <!-- Model-training graph iris left (loss curve going down) -->
+  <circle cx="40" cy="51" r="5.5" fill="url(#srmle-iris)"/>
+  <!-- Loss curve: starts high, slopes down -->
+  <path d="M 35.5 47 Q 37 49 39 50.5 Q 41 52 43 52.5 Q 44 52.7 44.5 53" fill="none" stroke="#103058" stroke-width="1" stroke-linecap="round" opacity="0.9"/>
+  <!-- Training axis lines -->
+  <line x1="35.5" y1="47" x2="35.5" y2="55" stroke="#103058" stroke-width="0.4" opacity="0.5"/>
+  <line x1="35.5" y1="55" x2="44.5" y2="55" stroke="#103058" stroke-width="0.4" opacity="0.5"/>
+  <!-- Model-training graph iris right -->
+  <circle cx="60" cy="51" r="5.5" fill="url(#srmle-iris)"/>
+  <path d="M 55.5 47 Q 57 49 59 50.5 Q 61 52 63 52.5 Q 64 52.7 64.5 53" fill="none" stroke="#103058" stroke-width="1" stroke-linecap="round" opacity="0.9"/>
+  <line x1="55.5" y1="47" x2="55.5" y2="55" stroke="#103058" stroke-width="0.4" opacity="0.5"/>
+  <line x1="55.5" y1="55" x2="64.5" y2="55" stroke="#103058" stroke-width="0.4" opacity="0.5"/>
+  <!-- Pupils -->
+  <circle cx="41" cy="50" r="2" fill="#010408"/>
+  <circle cx="61" cy="50" r="2" fill="#010408"/>
+  <circle cx="42" cy="49" r="0.9" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="62" cy="49" r="0.9" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="62" rx="2.5" ry="1.8" fill="#083060" opacity="0.5"/>
+  <!-- Focused technical expression -->
+  <path d="M 43 68 Q 50 72 57 68" fill="none" stroke="#1060C0" stroke-width="1.7" stroke-linecap="round"/>
+</svg>

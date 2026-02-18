@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+<defs>
+  <radialGradient id="mo-bg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#14001e"/>
+    <stop offset="100%" stop-color="#030108"/>
+  </radialGradient>
+  <radialGradient id="mo-skin" cx="40%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#C080D0"/>
+    <stop offset="55%" stop-color="#8030A0"/>
+    <stop offset="100%" stop-color="#3a0050"/>
+  </radialGradient>
+  <radialGradient id="mo-eye" cx="35%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#E0C0FF"/>
+    <stop offset="50%" stop-color="#9040C0"/>
+    <stop offset="100%" stop-color="#1a0028"/>
+  </radialGradient>
+  <filter id="mo-glow">
+    <feGaussianBlur stdDeviation="1.1" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="100" height="100" rx="18" fill="url(#mo-bg)"/>
+<!-- methodical antennae -->
+<line x1="43" y1="27" x2="41" y2="12" stroke="#C080D0" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="38" y="9" width="6" height="3" rx="1" fill="#C080D0" filter="url(#mo-glow)"/>
+<line x1="57" y1="27" x2="59" y2="12" stroke="#C080D0" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="56" y="9" width="6" height="3" rx="1" fill="#C080D0" filter="url(#mo-glow)"/>
+<!-- data pipe marks on sides -->
+<rect x="21" y="46" width="6" height="3" rx="1" fill="#8030A0" opacity="0.7"/>
+<rect x="21" y="51" width="6" height="3" rx="1" fill="#8030A0" opacity="0.5"/>
+<rect x="73" y="46" width="6" height="3" rx="1" fill="#8030A0" opacity="0.7"/>
+<rect x="73" y="51" width="6" height="3" rx="1" fill="#8030A0" opacity="0.5"/>
+<!-- methodical face -->
+<ellipse cx="50" cy="52" rx="24" ry="26" fill="url(#mo-skin)" stroke="#8030A0" stroke-width="1.2"/>
+<!-- brow ridges -->
+<path d="M31,42 Q38,38 44,41" fill="none" stroke="#3a0050" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M56,41 Q63,38 70,42" fill="none" stroke="#3a0050" stroke-width="1.8" stroke-linecap="round"/>
+<!-- eyes with workflow-automation iris -->
+<circle cx="39" cy="48" r="6.5" fill="#1a0028" stroke="#C080D0" stroke-width="1.1"/>
+<circle cx="61" cy="48" r="6.5" fill="#1a0028" stroke="#C080D0" stroke-width="1.1"/>
+<circle cx="39" cy="48" r="5" fill="url(#mo-eye)"/>
+<circle cx="61" cy="48" r="5" fill="url(#mo-eye)"/>
+<!-- workflow arrows in iris -->
+<path d="M36,46 L38,48 L36,50" fill="none" stroke="#3a0050" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M39,46 L41,48 L39,50" fill="none" stroke="#3a0050" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M58,46 L60,48 L58,50" fill="none" stroke="#3a0050" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M61,46 L63,48 L61,50" fill="none" stroke="#3a0050" stroke-width="0.9" stroke-linecap="round"/>
+<circle cx="37" cy="45.5" r="0.9" fill="white" opacity="0.9"/>
+<circle cx="59" cy="45.5" r="0.9" fill="white" opacity="0.9"/>
+<!-- precise technical expression -->
+<path d="M37,63 Q50,69 63,63" fill="none" stroke="#C080D0" stroke-width="2" stroke-linecap="round"/>
+<!-- chin -->
+<ellipse cx="50" cy="77" rx="10" ry="3" fill="#8030A0" opacity="0.35"/>
+</svg>

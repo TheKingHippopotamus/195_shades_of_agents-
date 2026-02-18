@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img">
+  <title>Sales &amp; Revenue</title>
+  <!-- Bar chart base -->
+  <line x1="6" y1="40" x2="42" y2="40" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="6" y1="6"  x2="6"  y2="40" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bars (growing left to right) -->
+  <rect x="10" y="32" width="7" height="8" rx="1" fill="#F59E0B" opacity="0.4"/>
+  <rect x="20" y="24" width="7" height="16" rx="1" fill="#F59E0B" opacity="0.6"/>
+  <rect x="30" y="14" width="7" height="26" rx="1" fill="#F59E0B" opacity="0.85"/>
+  <!-- Trend line -->
+  <polyline points="13.5,32 23.5,24 33.5,13" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Up arrow at trend peak -->
+  <line x1="39" y1="6" x2="39" y2="12" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="36,9 39,6 42,9" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dollar circle -->
+  <circle cx="39" cy="6" r="0" fill="none"/>
+  <circle cx="33.5" cy="13" r="3" fill="#F59E0B" opacity="0.9"/>
+</svg>
