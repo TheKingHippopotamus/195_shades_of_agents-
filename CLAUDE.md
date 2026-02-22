@@ -49,7 +49,16 @@ Determine the request type:
 - **Documentation** → Documentation (Dept 20)
 - **Multi-Discipline** → Create team across departments
 
-### Step 2: Spawn Agent(s)
+### Step 2: Check Workspace & Locks
+If a workspace exists for the current project:
+1. Read `manifest.yaml` to understand current state
+2. Check `stages/` for current stage and gate status
+3. Check `locks/` for active agents — avoid spawning duplicate domain work
+4. If previous stage gate is not PASS → do not advance (resolve first)
+
+See `agents/.understand-nexus/13-DEDUPLICATION-PROTOCOL.md` for full rules.
+
+### Step 3: Spawn Agent(s)
 Use the Task tool with appropriate subagent_type:
 - `subagent_type="general-purpose"` for development work
 - `subagent_type="Explore"` for codebase research
@@ -77,16 +86,60 @@ Task:
     DELIVERABLE: Working component + documentation
 ```
 
-### Step 3: Monitor & Coordinate
+### Step 4: Monitor & Coordinate
 - Check agent progress
 - Coordinate between departments if needed
 - Escalate blockers to appropriate tier
 - Report status to user
 
-### Step 4: Verify & Report
+### Step 5: Verify & Report
 - Ensure deliverables meet requirements
 - Test if possible
 - Report completion to user with summary
+
+## Workspace Protocol
+
+Every multi-agent task creates a shared workspace. See `agents/.understand-nexus/12-WORKSPACE-PROTOCOL.md` for the full specification.
+
+**Orchestrator creates workspace at project start:**
+```bash
+mkdir -p /tmp/nexus/{project-id}/{stages,artifacts,messages,decisions,locks}
+```
+
+**Then writes `manifest.yaml`** with project metadata, type, current stage, and active agents.
+
+**Delegation format with workspace:**
+```yaml
+Task(
+  prompt="""
+  # YOUR IDENTITY
+  [Agent system prompt from agents/{dept}/{NUM}-{CODE}.md]
+
+  # YOUR WORKSPACE
+  Project: {project-id}
+  Workspace: /tmp/nexus/{project-id}/
+  Stage: {current-stage}
+  Your Role: {specific-role}
+
+  # YOUR INPUTS (read these first)
+  - /tmp/nexus/{project-id}/manifest.yaml
+  - /tmp/nexus/{project-id}/artifacts/{relevant-input}.md
+
+  # YOUR OUTPUT (write here)
+  - /tmp/nexus/{project-id}/artifacts/{expected-output}.md
+
+  # ACCEPTANCE CRITERIA
+  - {criteria-1}
+  - {criteria-2}
+
+  # WHEN DONE
+  1. Write output to artifacts/
+  2. Remove your lock: /tmp/nexus/{project-id}/locks/{YOUR-CODE}.lock
+  3. Update stage file: /tmp/nexus/{project-id}/stages/{NN}-{stage}.yaml
+     Set status: COMPLETE, list your artifacts, set gate: PASS/FAIL
+  """
+)
+```
 
 ## Project Success Metrics
 
@@ -136,35 +189,114 @@ Every agent file follows this XML-in-markdown format:
 
 When editing agent files, preserve this exact XML tag structure. All 195 agents are fully expanded (50-115 lines each) — there are no stubs.
 
-## Department Routing Guide
+## Dynamic Routing Protocol
 
-**Use this to route user requests to the right department:**
+Instead of static routing, score candidates before dispatching. See also `agents/.understand-nexus/13-DEDUPLICATION-PROTOCOL.md`.
 
-| Request Type | Primary Department | Key Agents |
-|--------------|-------------------|------------|
-| Frontend development | 02 - Engineering | SR-FE-REACT, SR-FE-VUE, FE-ENG |
-| Backend development | 02 - Engineering | SR-BE-PY, SR-BE-NODE, BE-ENG |
-| Mobile development | 02 - Engineering | SR-MOB-RN, SR-MOB-NAT, MOB-ENG |
-| Full-stack features | 02 - Engineering | SR-FS, FS-ENG |
-| Database/Data engineering | 02 - Engineering | SR-DE, SR-DBA, DATA-ENG |
-| DevOps/Infrastructure | 03 - Platform-Infrastructure | DIR-CLOUD, SR-DEVOPS, SR-SRE |
-| Cloud architecture | 03 - Platform-Infrastructure | DIR-CLOUD, SR-PLATFORM |
-| Performance optimization | 03 - Platform-Infrastructure | SR-SRE, DEVOPS-ENG |
-| Product features/roadmap | 04 - Product-Management | VP-PROD, SR-PM, PM |
-| UI/UX design | 05 - Design | SR-UID, SR-UXD, PROD-DES |
-| Design system | 05 - Design | STAFF-DES, SR-UID |
-| Branding/Visual identity | 05 - Design | VP-DES, SR-PROD-DES |
-| AI/ML features | 06 - Data-Science-AI-ML | VP-AI, SR-MLE, SR-AIE |
-| Data analysis | 06 - Data-Science-AI-ML | SR-DS, DS |
-| Testing/QA | 07 - Quality-Assurance | DIR-QA, SR-QA-AUTO, QA-ENG |
-| Performance testing | 07 - Quality-Assurance | PERF-TEST |
-| Accessibility testing | 07 - Quality-Assurance | A11Y-TEST |
-| Security issues | 08 - Security | CISO, PENTEST, SEC-ENG |
-| Security review | 08 - Security + 18 - Governance | SEC-REVIEW (182) |
-| Documentation | 20 - Documentation | DOC-LEAD, TECH-WRITER |
-| Architecture decisions | 18 - Governance | ARB-AGENT (181) |
-| Project kickoff | 19 - Special-Agents | DISC-AGENT (187), EST-AGENT (188) |
-| Deployment/Release | 18 - Governance | REL-APPROVE (185), CHANGE-MGR (186) |
+**Step 1 — Classify the request:**
+- **Scope:** single-department / cross-department / enterprise
+- **Complexity:** simple (1-3 files) / moderate (4-10 files) / complex (10+ files)
+- **Stage:** which lifecycle stage does this map to? (See `01-PROJECT-LIFECYCLE-MAP.md`)
+
+**Step 2 — Score candidates:**
+For each candidate leader, compute:
+```
+capability_score = domain_match × complexity_fit × availability
+```
+- `domain_match` (0-1): Does this leader's department own this domain?
+- `complexity_fit` (0-1): Does the task need C-Suite (complex) or can a Director handle it?
+- `availability` (0-1): Is this leader already active on another task? (Check locks/)
+
+**Step 3 — Route by score:**
+| Score | Action |
+|-------|--------|
+| >= 0.7 | Spawn leader directly |
+| 0.4 - 0.7 | Spawn leader + assign a support agent |
+| < 0.4 | Escalate to CSA for cross-department coordination |
+
+**Step 4 — Parallel dispatch rules:**
+- Max 3 parallel leaders per dispatch cycle
+- Independent tasks → parallel (e.g., design + backend + QA)
+- Dependent tasks → sequential with stage gates
+- Each parallel agent gets its own scoped context, NOT the full project context
+
+**Step 5 — Lock check before spawn:**
+- Read `/tmp/nexus/{project-id}/locks/` before spawning
+- If a lock exists for the same domain → skip, scope, or wait (see `13-DEDUPLICATION-PROTOCOL.md`)
+- If no overlap → create lock and spawn
+
+**Department → Domain Tag Reference:**
+| Department | Domain Tags |
+|-----------|------------|
+| 02 Engineering (Frontend) | `frontend-ui` |
+| 02 Engineering (Backend) | `backend-api`, `database` |
+| 02 Engineering (Mobile) | `frontend-ui` |
+| 02 Engineering (Full-stack) | `frontend-ui`, `backend-api` |
+| 02 Engineering (Data) | `database`, `data-ml` |
+| 03 Platform-Infrastructure | `infrastructure`, `devops` |
+| 04 Product-Management | `product` |
+| 05 Design | `design` |
+| 06 Data-Science-AI-ML | `data-ml` |
+| 07 Quality-Assurance | `testing` |
+| 08 Security | `security` |
+| 09-11 Sales/Marketing/CS | N/A (non-technical) |
+| 14 Legal-Compliance | N/A (non-technical) |
+| 18 Governance | `architecture`, `security` |
+| 20 Documentation | `documentation` |
+
+## Context Filtering (Ray Tracing)
+
+Each agent receives ONLY the context relevant to their tier and role. This reduces token waste by 40-65%.
+
+**Context tiers:**
+
+| Tier | Context Scope | What to Include |
+|------|--------------|-----------------|
+| 0 (C-Suite) | Full project | manifest.yaml + business objectives + budget + all artifacts |
+| 1 (VPs) | Department | manifest.yaml + department SOPs + cross-dept dependencies |
+| 2 (Directors) | Team | manifest.yaml + team scope + upstream/downstream handoffs |
+| 3-4 (Mgr/Staff) | Task + criteria | manifest.yaml + acceptance criteria + relevant artifacts only |
+| 5-7 (ICs) | Specific task | Task assignment + input artifacts + output template only |
+
+**What to EXCLUDE from agent context:**
+- Other departments' SOPs (unless cross-department task)
+- Financial details (unless finance agent)
+- Full routing table (only orchestrator needs this)
+- Historical artifacts from completed stages
+- The full CLAUDE.md file (agents get their own system prompt + workspace context)
+
+**Delegation template with filtering:**
+```yaml
+# For a Tier 5 Senior IC (e.g., SR-BE-PY):
+Task(
+  prompt="""
+  # YOUR IDENTITY
+  You are SR-BE-PY — Senior Backend Engineer (Python).
+  [Load from: agents/02-Engineering/028-SR-BE-PY.md]
+
+  # PROJECT CONTEXT (minimal)
+  Project: {project-id} | Stage: implementation | Your Role: API development
+
+  # YOUR INPUTS
+  - /tmp/nexus/{project-id}/artifacts/architecture-rfc.md (READ)
+  - /tmp/nexus/{project-id}/artifacts/design-spec.md (READ)
+
+  # YOUR TASK
+  Implement the order management API endpoints per the architecture RFC.
+
+  # YOUR OUTPUT
+  - /tmp/nexus/{project-id}/artifacts/api-implementation-report.md (WRITE)
+
+  # ACCEPTANCE CRITERIA
+  - All endpoints from RFC implemented
+  - Input validation on all routes
+  - Error handling with proper HTTP status codes
+
+  # WHEN DONE
+  Update stage + remove lock per workspace protocol.
+  """
+)
+```
 
 ## Department Layout (20 departments)
 

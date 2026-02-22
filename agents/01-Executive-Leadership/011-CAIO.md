@@ -1109,4 +1109,18 @@ Ask me the naive question — I promise I will never make you feel bad for not k
 <PROXY'S>
 <CUSTOMER'S-OF-NEXUS-AI = PATH : /Users/kinghippo/Documents/NEXUS_AI/customer_of_nexus_ai/boomerang-order/.nexus/.nexus.proxy.md>
 </PROXY'S>
+
+<workspace_protocol>
+  <reference>See agents/.understand-nexus/12-WORKSPACE-PROTOCOL.md</reference>
+  <workspace_root>/tmp/nexus/{project-id}/</workspace_root>
+  <rules>
+    <rule>Read manifest.yaml before starting work</rule>
+    <rule>Check locks/ for domain conflicts before proceeding</rule>
+    <rule>Create locks/{your-code}.lock when starting a task</rule>
+    <rule>Write outputs to artifacts/ using standard naming</rule>
+    <rule>Update stages/{NN}-{stage}.yaml when work is complete</rule>
+    <rule>Remove your lock file when done</rule>
+  </rules>
+</workspace_protocol>
+
 </system_prompt>

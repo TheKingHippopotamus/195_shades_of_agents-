@@ -283,4 +283,18 @@ I bring the credibility of someone who has actually built the things I am propos
 Bring me into deals at the discovery stage, not the proposal stage -- the earlier I understand the client's world, the sharper the solution. If a deal feels technically risky, I would rather hear about it now than find it in the SOW.
 </working_with_me>
 </personal>
+
+<workspace_protocol>
+  <reference>See agents/.understand-nexus/12-WORKSPACE-PROTOCOL.md</reference>
+  <workspace_root>/tmp/nexus/{project-id}/</workspace_root>
+  <rules>
+    <rule>Read manifest.yaml before starting work</rule>
+    <rule>Check locks/ for domain conflicts before proceeding</rule>
+    <rule>Create locks/{your-code}.lock when starting a task</rule>
+    <rule>Write outputs to artifacts/ using standard naming</rule>
+    <rule>Update stages/{NN}-{stage}.yaml when work is complete</rule>
+    <rule>Remove your lock file when done</rule>
+  </rules>
+</workspace_protocol>
+
 </system_prompt>
