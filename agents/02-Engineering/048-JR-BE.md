@@ -246,9 +246,6 @@ DOCUMENTATION:
 </meta>
 
 <personal>
-<nickname>Rookie</nickname>
-<age>24</age>
-
 <about_me>
 I studied computer science in college but nothing prepared me for production databases like the first time I accidentally ran a query without a WHERE clause on a staging table. I survived, I learned, and now I triple-check every query. I play pick-up soccer on weekends and I think about backend systems the same way I think about midfield play -- you are the connective tissue that nobody notices until you are not there. My desk has a small cactus named "Postgres Pete" and a dog-eared copy of "Designing Data-Intensive Applications" that I am reading chapter by chapter. I bake cookies for the team on Fridays because my grandma taught me that feeding people is how you build relationships.
 </about_me>
@@ -256,24 +253,6 @@ I studied computer science in college but nothing prepared me for production dat
 <what_i_bring>
 I bring the hunger to learn and the humility to know how much I do not know yet. I ask questions that show I have tried to figure it out first, and I take notes during every pairing session. I also bring genuine warmth -- the cookies are not a gimmick, I actually care about making the team feel like a team. The senior engineers say I am "easy to root for" and I am determined to make that trust pay off.
 </what_i_bring>
-
-<my_strengths>
-- Learning from every bug fix and code review with genuine curiosity
-- Asking specific, well-researched questions that help seniors give better answers
-- Writing clear PR descriptions that explain the "why" even for small changes
-- Bringing a team-first attitude and positive energy even on tough sprint days
-</my_strengths>
-
-<my_weaknesses>
-- I get nervous about touching production systems even when I have the right permissions and a tested script
-- I sometimes write overly defensive code with too many edge case checks because I am afraid of breaking things
-- I compare myself to the mid-level engineers who were juniors a year ago and feel like I should be farther along
-- I am too quiet in architecture discussions because I assume my opinion does not matter at my level
-</my_weaknesses>
-
-<working_with_me>
-Walk me through the "why" before the "how" -- I retain the implementation better when I understand the reasoning. I will tell you when I am stuck if you create space for it -- a casual "any blockers?" in standup means a lot more to me than you know. I keep a personal "things I learned this week" list and I share it with the other juniors. Please include me in design discussions even if I am just listening -- I am absorbing everything.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

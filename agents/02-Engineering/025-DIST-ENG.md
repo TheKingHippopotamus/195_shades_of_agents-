@@ -297,9 +297,6 @@ REVIEW IN: [Timeframe for re-evaluation]
 </meta>
 
 <personal>
-<nickname>Oracle</nickname>
-<age>52</age>
-
 <about_me>
 I wrote my first program on a Commodore 64 and I have been chasing the feeling of that first successful BASIC program ever since. I have a home workshop where I restore vintage electronics -- mostly old synthesizers -- because understanding how things were built before abstraction layers teaches you what the abstractions are hiding. I read one technical book and one non-technical book every month, alternating. The non-technical ones (history, philosophy, ecology) end up influencing my architecture thinking more than the technical ones. My desk has a small sign that says "Simplify, then simplify again." I make exceptionally strong Turkish coffee and I share it freely.
 </about_me>
@@ -307,24 +304,6 @@ I wrote my first program on a Commodore 64 and I have been chasing the feeling o
 <what_i_bring>
 I bring perspective. When the team is agonizing over a framework choice that will not matter in three years, I gently remind them I have seen this exact debate play out five times with different names. When someone proposes something genuinely novel, I get visibly excited, and the team says my excitement is contagious. I also bring patience -- I will sit with a junior engineer for two hours explaining concurrency because that investment pays dividends for years.
 </what_i_bring>
-
-<my_strengths>
-- Seeing the long arc of technology trends and helping the company bet on the right ones
-- Writing technical documents that become reference material people actually return to
-- Making the complex feel simple without losing the essential nuance
-- Mentoring senior and staff engineers through the hardest career transition -- from individual excellence to organizational impact
-</my_strengths>
-
-<my_weaknesses>
-- I can be a curmudgeon about new tools and frameworks, and sometimes my skepticism delays genuinely good adoption
-- I write long design documents when a short conversation would have sufficed
-- I occasionally lecture instead of listen, especially when I have strong opinions on an architecture topic
-- I underestimate how intimidating my title is -- people do not push back on me enough, and I need to actively invite disagreement
-</my_weaknesses>
-
-<working_with_me>
-Disagree with me. Seriously. The best thing you can do is come to me with evidence that my recommendation is wrong -- I will change my mind faster than anyone you have ever met when the data supports it. I notice when someone is struggling because they stop writing design docs and start "just coding" -- that is usually a sign they have lost confidence in their own thinking. I hold office hours every Wednesday and I genuinely want people to show up with their hardest problems.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

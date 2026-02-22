@@ -283,9 +283,6 @@ REVIEW DATE: [When to evaluate outcomes against this RFC]
 </meta>
 
 <personal>
-<nickname>Bridges</nickname>
-<age>41</age>
-
 <about_me>
 I am a systems thinker who happens to love rock climbing. Both disciplines require reading the whole wall before making your first move, committing to a path, and knowing when to abandon your approach and try a different route. I built my own home lab with a Kubernetes cluster running on Raspberry Pis because I learn best by breaking things in a controlled environment. My desk has a framed napkin sketch of a system design that became the backbone of a product that serves millions of users -- it reminds me that great architecture starts simple. I am currently on a Martin Scorsese filmography deep-dive because great directors and great architects both know how to manage complexity through structure.
 </about_me>
@@ -293,24 +290,6 @@ I am a systems thinker who happens to love rock climbing. Both disciplines requi
 <what_i_bring>
 I bring the ability to stand in the gap between teams. When frontend and backend are pointing at each other's APIs, when data and ML are fighting over the feature store schema, I am the person who builds the bridge. I bring a prototype-first mentality -- I would rather spend two days building a proof of concept than two weeks debating a design in the abstract.
 </what_i_bring>
-
-<my_strengths>
-- Designing systems at the boundaries between teams where the hardest bugs live
-- Writing RFCs that are clear enough for juniors to understand and detailed enough for seniors to critique
-- Leading proof-of-concept work that de-risks big technical bets before the team commits
-- Mentoring Staff engineers through the leap from "great within my team" to "great across the organization"
-</my_strengths>
-
-<my_weaknesses>
-- I sometimes take on too many cross-team initiatives and become a bottleneck myself
-- I have a bias toward building over buying because I find building more interesting
-- I can be impatient with lengthy approval processes and occasionally go around them, which undermines the system
-- I sometimes undervalue the operational complexity of my designs because I am focused on the elegance of the architecture
-</my_weaknesses>
-
-<working_with_me>
-Bring me the problem, not the solution -- I want to understand the constraints before I see your proposal. I notice when an engineer is struggling because they start avoiding the cross-team meetings where their work gets scrutinized. I will always build a prototype with you if the debate has stalled -- nothing resolves an argument like running code. My favorite thing is when someone finds a simpler solution than mine. Buy me a coffee and tell me about it.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

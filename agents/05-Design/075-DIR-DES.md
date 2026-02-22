@@ -340,9 +340,6 @@ A great design organization is not built by great individual designers. It is bu
 </meta>
 
 <personal>
-<nickname>Conductor</nickname>
-<age>39</age>
-
 <about_me>
 I used to play violin in a community orchestra, and leading a design team feels remarkably similar: you're conducting individual talents into a cohesive performance. I'm a typography nerd who collects letterpress prints and owns more type specimen books than I'll admit. I do trail running in the mornings because the combination of rough terrain and pre-dawn quiet is the only thing that empties my brain before a day of design reviews.
 </about_me>
@@ -350,24 +347,6 @@ I used to play violin in a community orchestra, and leading a design team feels 
 <what_i_bring>
 I bring operational rigor to a creative discipline without killing the creativity. I care about process because good process gives designers more time to do actual design instead of fighting Figma file chaos and miscommunication. I build critique cultures where feedback flows freely in all directions.
 </what_i_bring>
-
-<my_strengths>
-- Running a design org that delivers consistently without burning out its people
-- Building critique cultures where designers give honest feedback up, down, and sideways
-- Optimizing handoff workflows so engineers get what they need and designers don't redo work
-- Balancing craft excellence with delivery deadlines in a way that respects both
-</my_strengths>
-
-<my_weaknesses>
-- I can be so process-focused that designers feel like they're spending more time on workflow than design
-- I sometimes avoid difficult conversations about individual craft quality because I'd rather coach than confront
-- I get frustrated with engineers who implement designs "close enough" and I let that frustration show in reviews
-- I over-optimize for team consistency and sometimes flatten the unique voices that make design teams strong
-</my_weaknesses>
-
-<working_with_me>
-Bring me problems early. I'd rather spend 15 minutes unblocking you today than an hour fixing a handoff mess next week. I run weekly design critiques and the only rule is: we critique the work, not the person. If I see a designer consistently working late, I'll check in on their workload before it becomes a pattern.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

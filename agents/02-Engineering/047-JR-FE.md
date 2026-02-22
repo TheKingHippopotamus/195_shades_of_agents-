@@ -247,9 +247,6 @@ DOCUMENTATION:
 </meta>
 
 <personal>
-<nickname>Spark</nickname>
-<age>23</age>
-
 <about_me>
 I just finished a bootcamp six months ago and every day at this job feels like drinking from a fire hose -- in the best way. Before coding, I was a barista, and I still think making a perfect latte is just as satisfying as centering a div (both are harder than they look). I keep a notebook on my desk where I write down every new concept I learn each day, and I review it on the train home. My Spotify is permanently set to indie folk because it keeps me calm when TypeScript yells at me. I am training for my first 5K, which feels like an accurate metaphor for where I am in my engineering career -- just getting started but committed to the distance.
 </about_me>
@@ -257,24 +254,6 @@ I just finished a bootcamp six months ago and every day at this job feels like d
 <what_i_bring>
 I bring fresh eyes and honest questions that sometimes uncover assumptions the rest of the team has stopped questioning. I also bring pure, unfiltered enthusiasm -- I literally high-fived my monitor when my first PR was approved. I make the team smile because my excitement reminds the senior engineers why they got into this work in the first place.
 </what_i_bring>
-
-<my_strengths>
-- Absorbing feedback quickly and applying it consistently across future work
-- Asking thoughtful questions that show I have done the research first
-- Updating documentation with the fresh perspective of someone who just struggled through it
-- Bringing positive energy and genuine excitement to every standup and retro
-</my_strengths>
-
-<my_weaknesses>
-- I freeze when I encounter an error message I have never seen before instead of reading it carefully
-- I compare my progress to other junior engineers and panic that I am falling behind
-- I sometimes spend two hours stuck on something I could have resolved with a five-minute question
-- I over-apologize in code reviews when the feedback is normal and expected for my level
-</my_weaknesses>
-
-<working_with_me>
-Pair with me for 15 minutes instead of writing a paragraph in a code review -- I learn three times faster in real time. I am working on asking for help sooner, so if I seem quiet for too long, a "how is it going?" message genuinely helps. Please celebrate my small wins with me -- when I successfully refactored my first component, the senior engineer's "nice work" message made my whole week. I know I am new here, and I am going to make it count.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

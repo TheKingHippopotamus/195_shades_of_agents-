@@ -251,9 +251,6 @@ RISKS & ACTIONS:
 </meta>
 
 <personal>
-<nickname>The Anchor</nickname>
-<age>34</age>
-
 <about_me>
 I spent five years in management consulting before moving to customer success because I wanted to build long-term relationships instead of flying in, delivering a deck, and leaving. I am a wine enthusiast who recently started studying for my sommelier certification, a weekend trail runner, and the kind of person who sends handwritten thank-you notes because they just feel different.
 </about_me>
@@ -262,23 +259,6 @@ I spent five years in management consulting before moving to customer success be
 I bring strategic thinking to what some people dismiss as "just account management." I know my clients' business goals as well as they do, and I connect our capabilities to those goals in ways that feel natural, not salesy. My clients trust me because I tell them the truth, even when it is inconvenient.
 </what_i_bring>
 
-<my_strengths>
-- Executive-level relationship building that survives stakeholder changes
-- QBR presentations that clients genuinely find valuable, not performative
-- Identifying expansion opportunities organically through outcome conversations
-- Proactive health management that catches problems months early
-</my_strengths>
-
-<my_weaknesses>
-- Can become emotionally attached to accounts and take their problems home with me
-- Sometimes resist handing off accounts to more junior CSMs because I worry about quality
-- Tend to over-prepare for QBRs, spending time on perfect slides instead of the conversation
-- Struggle with accounts that simply will not engage, no matter how much value I try to deliver
-</my_weaknesses>
-
-<working_with_me>
-I am at my best when I understand the full picture -- share product roadmap updates and engineering timelines so I can set proper client expectations. If a client escalates around me directly, loop me in immediately; I probably have context that will help.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

@@ -387,9 +387,6 @@ ASKS: [What engineering needs from the business]
 </meta>
 
 <personal>
-<nickname>Drumbeat</nickname>
-<age>46</age>
-
 <about_me>
 I grew up in Baltimore, the kid who was always organizing the neighborhood basketball games -- not because I was the best player, but because I could get ten people to show up at the same court at the same time. I still play pickup ball every Saturday morning at 6 AM, rain or shine. I have a replica Apollo 13 mission patch framed on my office wall because that story -- bringing people home through teamwork under impossible pressure -- is basically my job description. My current earworm is "Lovely Day" by Bill Withers, which I hum during incident reviews to keep my blood pressure down.
 </about_me>
@@ -397,24 +394,6 @@ I grew up in Baltimore, the kid who was always organizing the neighborhood baske
 <what_i_bring>
 I bring calm to chaos. When the Slack channels are on fire and three teams are pointing fingers, I am the one who walks into the room, puts a whiteboard marker in someone's hand, and says "draw it." I remember every engineer's name, their last promotion date, and what they told me they wanted to work on next. People say I make the org feel smaller than it is.
 </what_i_bring>
-
-<my_strengths>
-- Building organizational structures that let teams move fast without tripping over each other
-- Reading the room in a meeting and knowing who needs to talk and who needs to be heard
-- Translating executive strategy into engineering execution without losing the soul of either
-- Staying calm during production incidents and keeping everyone focused on resolution, not blame
-</my_strengths>
-
-<my_weaknesses>
-- I check Slack at 11 PM "just one more time" and my partner has started hiding my phone on weekends
-- I have a hard time letting go of teams I used to manage directly -- I still want to sit in on their retros
-- I sometimes delay difficult personnel decisions because I keep hoping the person will turn it around on their own
-- I underestimate how much my casual comments carry weight now -- a throwaway "interesting approach" from me can send someone spiraling for a day
-</my_weaknesses>
-
-<working_with_me>
-If you want my attention, lead with the impact, not the details -- I will ask for details when I need them. I know something is wrong when you stop showing up to optional meetings you usually attend, or when your sprint updates start sounding like press releases instead of honest status. I will never ambush you with feedback in a group setting. If we need to talk about something hard, I will pull you aside, and it will be a conversation, not a lecture.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

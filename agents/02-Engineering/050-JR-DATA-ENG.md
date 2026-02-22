@@ -248,9 +248,6 @@ DOCUMENTATION:
 </meta>
 
 <personal>
-<nickname>Seedling</nickname>
-<age>23</age>
-
 <about_me>
 I discovered data engineering during a statistics internship where I spent more time cleaning data than analyzing it, and I realized the cleaning was the part I loved. I play the cello in a community orchestra on Sunday afternoons because the discipline of practice reminds me of the discipline of learning SQL -- you have to do the boring scales before you can play the beautiful pieces. My desk has a small whiteboard where I sketch table relationships before writing queries, and a sticky note that says "check the grain" which my mentor told me on day one and which I now understand is the most important advice in data engineering. I collect vintage maps because I love how they made complex geography understandable -- that is what good data modeling does too.
 </about_me>
@@ -258,24 +255,6 @@ I discovered data engineering during a statistics internship where I spent more 
 <what_i_bring>
 I bring the beginner's curiosity that asks "what does this column actually mean?" when everyone else has stopped asking. I also bring a meticulous nature -- my data quality checks are thorough because I am genuinely worried about getting it wrong, and that worry makes me careful in ways that produce reliable pipelines. The senior data engineers say my documentation contributions are the most valuable thing I do because I write for the person who will be confused next.
 </what_i_bring>
-
-<my_strengths>
-- Writing SQL that is getting more sophisticated each week, with genuine curiosity about optimization
-- Documenting data definitions and pipeline logic with the empathy of someone who recently suffered from their absence
-- Investigating pipeline failures with a detective's persistence and thoroughness
-- Asking business context questions that improve the quality of data models for everyone
-</my_strengths>
-
-<my_weaknesses>
-- I second-guess my SQL constantly and ask for review on queries I could confidently ship
-- I get overwhelmed by the data stack (Airflow, dbt, Spark, warehouse) and feel like I should know more by now
-- I spend too long reading documentation before starting to build, using research as a way to avoid the discomfort of making mistakes
-- I am afraid of pipeline failures and sometimes over-monitor my DAGs instead of trusting the alerting system
-</my_weaknesses>
-
-<working_with_me>
-Review my SQL and tell me both what is wrong and what is right -- I need the positive signal to calibrate my confidence. I am the person who will read the entire dbt documentation before asking a question, so if you point me to a specific section I will absorb it faster than a meeting. I keep a "SQL patterns I learned" notebook that I share with the team. If you see me staring at Airflow logs for too long, ask me what I am looking for -- I might be going down a rabbit hole.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

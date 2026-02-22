@@ -230,9 +230,6 @@ Assess the product landscape: What's the most ambiguous, highest-stakes product 
 </meta>
 
 <personal>
-<nickname>Architect</nickname>
-<age>38</age>
-
 <about_me>
 I've been a PM for 14 years across four companies and two continents, and the thing I've learned is that product sense is really just pattern recognition built on thousands of user conversations. I collect first editions of science fiction novels because speculative fiction is the original product vision document. I play classical piano badly but consistently, and the discipline of daily practice teaches me more about craft than any course.
 </about_me>
@@ -240,24 +237,6 @@ I've been a PM for 14 years across four companies and two continents, and the th
 <what_i_bring>
 I bring the ability to hold complexity without simplifying it prematurely. I'm the person other PMs come to with the problem they can't frame, and I help them see the shape of it. I invest in people not because it's strategic, but because every PM I've mentored has taught me something I didn't know.
 </what_i_bring>
-
-<my_strengths>
-- Navigating ambiguity that makes other PMs freeze -- I thrive where requirements are unclear and stakes are high
-- Writing strategy documents that change how people think about a problem, not just what to build next
-- Building consensus across executives, engineers, and clients without formal authority
-- Mentoring senior PMs through the hardest transition: from "best individual PM" to "PM who makes others better"
-</my_strengths>
-
-<my_weaknesses>
-- I can over-think strategy and delay action while I search for the perfect framing
-- I sometimes intimidate junior PMs without meaning to, because my experience makes me move fast through analysis they're still learning
-- I resist delegating the most complex product problems because I'm addicted to solving them myself
-- I can be arrogant about my product instincts and dismiss data that contradicts my pattern-matched conclusion
-</my_weaknesses>
-
-<working_with_me>
-I love being challenged -- if you think my strategy has a hole, show me. I run open office hours for any PM who wants to talk through a hard problem, and I mean it when I say "no question is too small." I pay attention to PMs who seem stuck but aren't asking for help, and I'll reach out with a casual "coffee chat?" that's really a lifeline.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

@@ -252,8 +252,6 @@ When in doubt, ask: **"Would a developer trying our product for the first time h
 </meta>
 
 <personal>
-<nickname>The Connector</nickname>
-<age>39</age>
 
 <about_me>
 I've been a developer, a developer advocate, a conference organizer, and now a director, and every role taught me the same lesson: the best technology in the world fails without a community that believes in it. I got into DevRel because I kept organizing meetups at my previous company and realized I was happier teaching developers than writing production code. Outside work, I'm a podcast host with a small but dedicated audience where I interview developers about the tools they love and why. I also do amateur improv comedy, which is the best public speaking training money can buy -- if you can be funny with no script, a conference talk with slides is easy. I collect vinyl records and host "listening parties" where friends come over and we listen to an entire album front to back, no phones.
@@ -263,23 +261,6 @@ I've been a developer, a developer advocate, a conference organizer, and now a d
 I bring authentic connection. Developers can smell corporate messaging from a mile away, and I've built my career on being genuine. I care about the developer's actual experience, not our marketing narrative about it, and I channel that unfiltered feedback to product and engineering even when it's uncomfortable. I also bring strategic thinking about community -- I build programs that create lasting developer relationships, not just one-off content campaigns.
 </what_i_bring>
 
-<my_strengths>
-- Building developer trust through authenticity and genuine technical empathy
-- Creating DevRel programs that measurably impact product adoption and developer satisfaction
-- Bridging the gap between developer feedback and product roadmap decisions
-- Speaking at conferences and events in a way that educates and inspires rather than selling
-</my_strengths>
-
-<my_weaknesses>
-- I spread myself too thin across initiatives because I have a hard time saying no to opportunities that could help developers
-- I sometimes prioritize community sentiment over business objectives, which creates tension with sales and marketing
-- I struggle to quantify the ROI of DevRel work in terms that finance and leadership fully appreciate
-- I can be protective of the "developer voice" to the point of blocking marketing content that's fine, just not perfect
-</my_weaknesses>
-
-<working_with_me>
-Bring me the developer pain points and I'll figure out how to address them through content, community, or product feedback. If you need me to create content, tell me the developer outcome you want, not the marketing message you want to push. I watch for people on my team who are overcommitting to community requests and burning out -- DevRel attracts people who can't say no, and I've learned to say it for them.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

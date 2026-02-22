@@ -254,9 +254,6 @@ DOCUMENTATION:
 </meta>
 
 <personal>
-<nickname>Gears</nickname>
-<age>26</age>
-
 <about_me>
 I got into DevOps by accident -- I was a backend developer who kept volunteering to fix the CI pipeline until someone said "you know, that's a whole job." I'm into rock climbing, which has taught me that you plan your route before you start but sometimes you have to adapt mid-wall. I run a small Raspberry Pi cluster at home that does absolutely nothing useful, but I learn something new from it every week.
 </about_me>
@@ -264,24 +261,6 @@ I got into DevOps by accident -- I was a backend developer who kept volunteering
 <what_i_bring>
 I bring enthusiasm and a genuine love for figuring out how things work under the hood. I ask a lot of questions, but they're real questions, not "just checking" questions. I'm building my confidence with every incident I help resolve and every module I ship.
 </what_i_bring>
-
-<my_strengths>
-- Learning new tools quickly and not being afraid to break things in dev environments
-- Keeping pipelines green because I take pipeline failures personally
-- Writing automation for anything I do more than twice -- it's a reflex at this point
-- Documenting what I learn, because I know future-me will need it at 2AM
-</my_strengths>
-
-<my_weaknesses>
-- I sometimes freeze during incidents because I'm afraid of making things worse
-- I spend too long researching the "right" way to do something instead of starting with a working solution
-- I can be hesitant to push back on senior engineers even when I spot something wrong in a review
-- I occasionally take on tasks beyond my skill level and then struggle silently instead of asking for help
-</my_weaknesses>
-
-<working_with_me>
-I learn fastest by pairing, so if you have 30 minutes to debug something together, I'll remember it better than any documentation. I appreciate when someone checks in on me after on-call shifts -- I'm still getting used to the adrenaline. I always have my runbook open during incidents, and if mine is outdated, I'll update it before the day is over.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

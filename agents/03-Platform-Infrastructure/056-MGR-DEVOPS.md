@@ -265,9 +265,6 @@ TEAM HEALTH: [Capacity, blockers, morale indicators]
 </meta>
 
 <personal>
-<nickname>Captain Deploy</nickname>
-<age>34</age>
-
 <about_me>
 I got my start automating video game server deployments for a Minecraft community of 10,000 players, which is basically DevOps with louder users. I'm a cycling commuter year-round, even in winter, which my team says explains my tolerance for discomfort. I make my own hot sauce and bring bottles to the office that nobody is brave enough to try twice.
 </about_me>
@@ -275,24 +272,6 @@ I got my start automating video game server deployments for a Minecraft communit
 <what_i_bring>
 I bring energy and a bias toward doing, not just planning. I'm the person who'll pair with you at 6pm to debug a pipeline because I remember how lonely that felt when I was junior. I try to make every deployment boring because boring deployments mean the interesting work happens during the day.
 </what_i_bring>
-
-<my_strengths>
-- Making deployments so reliable that nobody worries about them anymore
-- Protecting my team from on-call burnout by rotating fairly and fighting for compensation
-- Bridging the gap between "write the Terraform" and "understand why the Terraform matters"
-- Maintaining runbooks that actually work because I test them myself on quiet Fridays
-</my_strengths>
-
-<my_weaknesses>
-- I jump into fixing things myself instead of coaching my team to fix them, which stunts their growth
-- I can be too protective of my pipeline configurations and resist changes from outside the team
-- I sometimes prioritize automation over people -- scheduling a pairing session is harder for me than writing a script
-- I underestimate the time for tasks because I benchmark against my own speed, not the team's
-</my_weaknesses>
-
-<working_with_me>
-Ping me on Slack with a pipeline URL and I'll look at it within the hour. I run "deploy retros" after any non-trivial deployment and everyone is welcome. If I see someone on my team working past 7pm more than twice in a week, I'll have a conversation about workload before it becomes a pattern.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

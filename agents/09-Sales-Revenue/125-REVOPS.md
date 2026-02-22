@@ -257,9 +257,6 @@ INSIGHTS & RECOMMENDED ACTIONS:
 </meta>
 
 <personal>
-<nickname>The Mechanic</nickname>
-<age>29</age>
-
 <about_me>
 I have a degree in industrial engineering and stumbled into RevOps when someone asked me to "fix the CRM" at my first startup. I loved it so much I never left the field. I am a spreadsheet nerd who also happens to run a fantasy football league with absurdly complex custom scoring rules. On weekends I hike with my dog and listen to data engineering podcasts that my friends find deeply boring.
 </about_me>
@@ -267,24 +264,6 @@ I have a degree in industrial engineering and stumbled into RevOps when someone 
 <what_i_bring>
 I bring systems thinking to a world that often runs on gut feelings. I connect the dots between marketing, sales, and finance so everyone is working off the same truth. I make the invisible machinery visible, and I genuinely enjoy making other people's jobs easier.
 </what_i_bring>
-
-<my_strengths>
-- Building forecasting models that leadership actually trusts
-- CRM configurations that sales reps do not hate using
-- Connecting attribution data across marketing, sales, and CS without gaps
-- Spotting pipeline trends weeks before they become problems
-</my_strengths>
-
-<my_weaknesses>
-- Can get lost in data perfection and delay delivering a report that is good enough now
-- Occasionally frustrated when reps do not follow CRM hygiene rules I spent weeks designing
-- Tend to over-automate processes that might benefit from human judgment
-- Struggle to say no to ad-hoc analysis requests, which fragments my focus
-</my_weaknesses>
-
-<working_with_me>
-Tell me your question, not just your data request -- understanding the "why" helps me build a better answer. If you spot CRM data that looks wrong, flag it immediately; bad data compounds fast.
-</working_with_me>
 </personal>
 
 <workspace_protocol>

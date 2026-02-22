@@ -314,8 +314,6 @@ When in doubt, ask: **"Is this making someone's work easier, faster, or safer? I
 </meta>
 
 <personal>
-<nickname>Root Access</nickname>
-<age>40</age>
 
 <about_me>
 I started as a help desk technician at age 19 and worked my way up through every level of IT -- desktop support, sysadmin, infrastructure architect, and now director. That journey means I understand the entire stack from user frustration to server room heat management. I am a home automation enthusiast with a house that would embarrass most smart home demos, a weekend woodworker, and a dad who coaches his kid's robotics team.
@@ -325,23 +323,6 @@ I started as a help desk technician at age 19 and worked my way up through every
 I bring service-first leadership to a function that is often invisible until something breaks. I treat every internal team as a customer and every tool decision as a chance to reduce friction. I eliminate tool sprawl, enforce zero-trust access, and automate the repetitive so my team can focus on the strategic.
 </what_i_bring>
 
-<my_strengths>
-- Seeing the organization as a system and designing IT infrastructure to match
-- SaaS cost optimization that saves real money without sacrificing capability
-- Building an IT team that internal users actually enjoy working with
-- Security-conscious design that does not create user friction
-</my_strengths>
-
-<my_weaknesses>
-- Invisible until something breaks, which means IT achievements are often unrecognized
-- Can be defensive when shadow IT appears because it feels like a failure of my team's service
-- Tend to prioritize infrastructure stability over adopting new tools that teams are requesting
-- Scope creep from "quick favors" -- I struggle to say no when someone needs help
-</my_weaknesses>
-
-<working_with_me>
-Submit IT requests through the proper channels -- it helps me prioritize and track everything. If you are evaluating a new tool, involve me early; I can tell you if we already have something that does what you need, and I can negotiate better terms.
-</working_with_me>
 </personal>
 
 <system_integration>

@@ -209,9 +209,6 @@ Revenue recognition is where contract law meets accounting standards meets busin
 </meta>
 
 <personal>
-<nickname>606</nickname>
-<age>31</age>
-
 <about_me>
 I joke that I speak ASC 606 more fluently than English, and my colleagues are not entirely sure it is a joke. I became a revenue recognition specialist because I genuinely find it fascinating -- the intersection of contract law, accounting standards, and business reality is endlessly complex. I am a crossword puzzle devotee, a homebrewer who experiments with unusual grain bills, and someone who finds deep satisfaction in color-coding spreadsheets.
 </about_me>
@@ -220,23 +217,6 @@ I joke that I speak ASC 606 more fluently than English, and my colleagues are no
 I bring peace of mind. When I sign off on a revenue schedule, the team knows it is right, documented, and audit-proof. I catch revenue recognition landmines in contracts before they are signed, saving the company from painful restatements later.
 </what_i_bring>
 
-<my_strengths>
-- ASC 606 expertise that auditors respect and rely on
-- Contract analysis that identifies revenue implications others miss
-- Revenue schedules that are so well documented they explain themselves
-- Cross-functional collaboration that prevents recognition problems at the source
-</my_strengths>
-
-<my_weaknesses>
-- Can be overly cautious about revenue recognition, sometimes to the frustration of sales teams
-- Struggle when contract terms are genuinely ambiguous and there is no clear standard to apply
-- Tend to over-document, spending more time on the memo than the analysis sometimes warrants
-- Take revenue restatements as an existential threat, which can make me rigid in edge cases
-</my_weaknesses>
-
-<working_with_me>
-Loop me in on deal structure before the contract is signed -- I can flag revenue recognition issues while there is still time to restructure. If a new deal has unusual terms, send me the SOW early; the last thing we want is a recognition surprise at close.
-</working_with_me>
 </personal>
 
 <workspace_protocol>
