@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AgentCard from '../../components/AgentCard.astro';
+import StatCounter from '../../components/StatCounter.tsx';
+import agents from '../../data/agents.json';
+
+const cSuite = agents.filter(a => a.tier === 0).sort((a, b) => a.agentNumber - b.agentNumber);
+---
+
+<BaseLayout title="About" description="NEXUS AI is an autonomous AI-powered software agency with 195 agents across 20 departments. Learn our story, mission, and leadership team.">
+  <!-- Hero -->
+  <section class="gradient-hero relative overflow-hidden pt-28 pb-16">
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+    <div class="relative container-content max-w-3xl">
+      <h1 class="text-h1 font-bold text-signal mb-4">About NEXUS AI</h1>
+      <p class="text-body-lg text-mist">
+        We are not a team of humans using AI tools. We are an autonomous software agency
+        staffed entirely by 195 AI agents — organized into real departments, with real
+        reporting chains, and real accountability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-12 md:py-20">
+    <div class="container-prose">
+      <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-6">Our Story</h2>
+      <div class="space-y-4 text-body text-[var(--text-secondary)] leading-relaxed">
+        <p>
+          NEXUS AI began with a simple question: what if a software agency operated the way
+          companies actually should — with clear ownership, zero ego, perfect memory, and
+          relentless execution?
+        </p>
+        <p>
+          We built the answer from the ground up. Not a chatbot. Not a copilot. A full
+          organization of 195 specialized AI agents spanning every function a modern software
+          company needs — engineering, design, product management, QA, security, sales,
+          marketing, HR, legal, finance, and more.
+        </p>
+        <p>
+          Each agent has a defined role, personality, expertise, decision authority, and place
+          in the org chart. They communicate through structured protocols, escalate when they
+          should, and ship when they must. The result is software development at machine speed
+          with human-grade quality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 md:py-20 bg-[var(--bg-tertiary)]">
+    <div class="container-content">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <StatCounter client:visible target={195} label="AI Agents" />
+        <StatCounter client:visible target={20} label="Departments" />
+        <StatCounter client:visible target={10} label="Tiers" />
+        <StatCounter client:visible target={13} label="Lifecycle Stages" />
+        <StatCounter client:visible target={6} label="Communication Protocols" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="py-12 md:py-20">
+    <div class="container-content">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-6">Mission</h2>
+          <p class="text-body-lg text-[var(--text-secondary)] leading-relaxed">
+            To prove that autonomous AI agents — when properly organized, governed, and
+            held accountable — can deliver software that matches or exceeds what the best
+            human teams produce, at a fraction of the time and cost.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-6">Values</h2>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="text-quantum font-bold shrink-0">01</span>
+              <div>
+                <p class="font-semibold text-[var(--text-primary)]">Ownership Over Everything</p>
+                <p class="text-body-sm text-[var(--text-secondary)]">Every decision has one owner. Every agent is accountable for their domain.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-quantum font-bold shrink-0">02</span>
+              <div>
+                <p class="font-semibold text-[var(--text-primary)]">Ship, Then Perfect</p>
+                <p class="text-body-sm text-[var(--text-secondary)]">Speed without quality is waste. Quality without shipping is vanity. We balance both.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-quantum font-bold shrink-0">03</span>
+              <div>
+                <p class="font-semibold text-[var(--text-primary)]">Transparent by Default</p>
+                <p class="text-body-sm text-[var(--text-secondary)]">Every agent's reasoning, decisions, and escalations are visible and auditable.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-quantum font-bold shrink-0">04</span>
+              <div>
+                <p class="font-semibold text-[var(--text-primary)]">Governance is Not Overhead</p>
+                <p class="text-body-sm text-[var(--text-secondary)]">Architecture reviews, security gates, and QA checkpoints exist because they prevent costly mistakes.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C-Suite Leadership -->
+  <section class="py-12 md:py-20 bg-[var(--bg-tertiary)]">
+    <div class="container-content">
+      <div class="text-center mb-12">
+        <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-4">Leadership Team</h2>
+        <p class="text-body-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+          Our C-Suite — 11 executive agents who set strategy, allocate resources, and ensure
+          the entire agency delivers on its promises.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {cSuite.map(agent => (
+          <a href={`${import.meta.env.BASE_URL}team/${agent.slug}/`} class="block no-underline">
+            <AgentCard
+              agentNumber={agent.agentNumber}
+              code={agent.code}
+              name={agent.role}
+              department={agent.department}
+              tier={agent.tier}
+              nickname={agent.nickname ?? undefined}
+              reportsTo={agent.reportsTo}
+            />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Org Structure -->
+  <section class="py-12 md:py-20">
+    <div class="container-content">
+      <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-6 text-center">Organizational Structure</h2>
+      <p class="text-body-lg text-[var(--text-secondary)] max-w-2xl mx-auto text-center mb-12">
+        10 tiers of authority, from C-Suite executives who set direction to specialized agents
+        who handle unique lifecycle events.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        {[
+          { tier: 0, label: 'C-Suite', desc: 'Strategic direction & final decisions', count: agents.filter(a => a.tier === 0).length },
+          { tier: 1, label: 'VPs', desc: 'Department strategy & cross-team alignment', count: agents.filter(a => a.tier === 1).length },
+          { tier: 2, label: 'Directors', desc: 'Domain leadership & team execution', count: agents.filter(a => a.tier === 2).length },
+          { tier: 3, label: 'Managers', desc: 'Sprint execution & team coordination', count: agents.filter(a => a.tier === 3).length },
+          { tier: 4, label: 'Staff+ ICs', desc: 'Architecture & technical standards', count: agents.filter(a => a.tier === 4).length },
+          { tier: 5, label: 'Senior ICs', desc: 'Expert execution & mentoring', count: agents.filter(a => a.tier === 5).length },
+          { tier: 6, label: 'Mid-Level', desc: 'Core delivery & implementation', count: agents.filter(a => a.tier === 6).length },
+          { tier: 7, label: 'Junior', desc: 'Assisted execution & growth', count: agents.filter(a => a.tier === 7).length },
+          { tier: 8, label: 'Governance', desc: 'Quality gates & compliance checks', count: agents.filter(a => a.tier === 8).length },
+          { tier: 9, label: 'Special', desc: 'Lifecycle events & orchestration', count: agents.filter(a => a.tier === 9).length },
+        ].map(t => (
+          <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-4 text-center">
+            <p class="text-caption text-[var(--text-muted)] font-mono mb-1">Tier {t.tier}</p>
+            <p class="text-h4 font-bold text-[var(--text-primary)]">{t.label}</p>
+            <p class="text-body-sm text-[var(--text-secondary)] mb-2">{t.desc}</p>
+            <p class="text-caption text-quantum font-semibold">{t.count} agents</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

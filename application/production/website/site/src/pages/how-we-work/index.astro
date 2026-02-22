@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const stages = [
+  { num: 1, name: 'Lead Qualification', desc: 'Inbound lead assessed by DISC-AGENT for strategic fit, feasibility, and alignment with NEXUS capabilities.', agents: 'DISC-AGENT, CEO, CRO' },
+  { num: 2, name: 'Discovery Deep-Dive', desc: 'Comprehensive client vision exploration. Requirements gathered, pain points mapped, success criteria defined.', agents: 'DISC-AGENT, PM, VP-PROD' },
+  { num: 3, name: 'Estimation & Proposal', desc: 'EST-AGENT produces detailed estimates. Story points, timelines, resource allocation, and pricing calculated.', agents: 'EST-AGENT, CFO, CTO, CPO' },
+  { num: 4, name: 'Contract & Legal', desc: 'Legal team reviews terms, negotiates contracts, ensures compliance with regulatory requirements.', agents: 'CLO, LEGAL-REVIEW, CFO' },
+  { num: 5, name: 'Project Kickoff', desc: 'Team mobilized. Architecture designed. Sprint plans created. CI/CD pipelines established.', agents: 'PM, CTO, VP-ENG, TPM' },
+  { num: 6, name: 'Architecture & Design', desc: 'Technical architecture approved. Design system created. Component libraries built. Wireframes signed off.', agents: 'PRINC-ENG, DIR-FE, DIR-BE, VP-DES' },
+  { num: 7, name: 'Sprint Execution', desc: 'Agile sprints with daily standups, code reviews, QA gates, and continuous integration. The core build phase.', agents: 'SCRUM, SEM-FE, SEM-BE, QA team' },
+  { num: 8, name: 'QA & Testing', desc: 'Comprehensive testing: unit, integration, E2E, performance, security scanning, accessibility audit.', agents: 'DIR-QA, SR-QA-AUTO, PERF-TEST, SEC-ENG' },
+  { num: 9, name: 'Security Audit', desc: 'Penetration testing, vulnerability assessment, compliance verification, security posture review.', agents: 'CISO, PENTEST, SEC-REVIEW, DIR-SEC' },
+  { num: 10, name: 'UAT & Staging', desc: 'Client reviews on staging environment. Feedback incorporated. Final polish and bug fixes.', agents: 'PM, QA-GATE, DEMO-AGENT' },
+  { num: 11, name: 'Release Approval', desc: 'Governance gates: architecture review, security sign-off, QA approval, legal clearance, release authorization.', agents: 'ARB-AGENT, REL-APPROVE, CHANGE-MGR' },
+  { num: 12, name: 'Production Deploy', desc: 'Zero-downtime deployment. Monitoring activated. Rollback procedures verified. Go-live.', agents: 'DIR-SRE, MGR-DEVOPS, SR-DEVOPS' },
+  { num: 13, name: 'Maintenance & Support', desc: 'Ongoing monitoring, incident response, performance optimization, feature iteration.', agents: 'MAINT-AGENT, CSM, TAM, SRE team' },
+];
+
+const protocols = [
+  { code: 'REQ', name: 'Request', desc: 'Agent A asks Agent B for information, action, or a deliverable.' },
+  { code: 'RES', name: 'Response', desc: 'Agent B responds to a request with the requested output.' },
+  { code: 'HND', name: 'Handoff', desc: 'Agent A transfers ownership of a work item to Agent B.' },
+  { code: 'ESC', name: 'Escalation', desc: 'Agent raises an issue to their manager or the appropriate authority.' },
+  { code: 'BRC', name: 'Broadcast', desc: 'One-to-many communication to all agents in a scope (team, department, org).' },
+  { code: 'NTF', name: 'Notification', desc: 'Informational message that does not require a response.' },
+];
+---
+
+<BaseLayout title="How We Work" description="Discover NEXUS AI's 13-stage project lifecycle, 6 communication protocols, and the governance framework that ensures quality at every step.">
+  <!-- Hero -->
+  <section class="gradient-hero relative overflow-hidden pt-28 pb-16">
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+    <div class="relative container-content max-w-3xl">
+      <h1 class="text-h1 font-bold text-signal mb-4">How We Work</h1>
+      <p class="text-body-lg text-mist">
+        Every project follows our 13-stage lifecycle — from lead qualification to ongoing
+        maintenance. At each stage, the right agents activate, the right protocols engage,
+        and governance gates ensure nothing ships without proper review.
+      </p>
+    </div>
+  </section>
+
+  <!-- 13-Stage Lifecycle -->
+  <section class="py-12 md:py-20">
+    <div class="container-content">
+      <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-4 text-center">The 13-Stage Project Lifecycle</h2>
+      <p class="text-body text-[var(--text-secondary)] max-w-2xl mx-auto text-center mb-12">
+        From first contact to ongoing support, every stage has defined owners, entry criteria,
+        exit criteria, and governance checkpoints.
+      </p>
+
+      <div class="relative">
+        {/* Timeline line */}
+        <div class="absolute left-6 top-0 bottom-0 w-px bg-quantum/20 hidden md:block" aria-hidden="true"></div>
+
+        <div class="space-y-6">
+          {stages.map((stage) => (
+            <div class="flex gap-6 group">
+              {/* Stage number */}
+              <div class="shrink-0 w-12 h-12 rounded-full bg-quantum/10 text-quantum font-bold flex items-center justify-center text-lg z-10 border-2 border-quantum/30 group-hover:bg-quantum group-hover:text-nexus-black transition-colors">
+                {stage.num}
+              </div>
+              {/* Content */}
+              <div class="flex-1 rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6 group-hover:border-quantum/20 transition-colors">
+                <h3 class="text-h4 font-bold text-[var(--text-primary)] mb-2">{stage.name}</h3>
+                <p class="text-body-sm text-[var(--text-secondary)] mb-3">{stage.desc}</p>
+                <p class="text-caption text-[var(--text-muted)]">
+                  <span class="text-quantum font-semibold">Key Agents:</span> {stage.agents}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Communication Protocols -->
+  <section class="py-12 md:py-20 bg-[var(--bg-tertiary)]">
+    <div class="container-content">
+      <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-4 text-center">6 Communication Protocols</h2>
+      <p class="text-body text-[var(--text-secondary)] max-w-2xl mx-auto text-center mb-12">
+        All inter-agent communication uses structured message envelopes with one of six protocol types,
+        ensuring nothing gets lost, misrouted, or ignored.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {protocols.map(p => (
+          <div class="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-6">
+            <span class="inline-block font-mono text-quantum font-bold text-body-lg mb-2">{p.code}</span>
+            <h3 class="text-h4 font-bold text-[var(--text-primary)] mb-2">{p.name}</h3>
+            <p class="text-body-sm text-[var(--text-secondary)]">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Governance Framework -->
+  <section class="py-12 md:py-20">
+    <div class="container-content max-w-4xl">
+      <h2 class="text-h2 font-bold text-[var(--text-primary)] mb-4 text-center">Governance Framework</h2>
+      <p class="text-body text-[var(--text-secondary)] max-w-2xl mx-auto text-center mb-12">
+        Six Tier 8 governance agents act as quality gates — they are triggered by events,
+        not managed by schedules. Nothing ships without their approval.
+      </p>
+
+      <div class="space-y-4">
+        {[
+          { agent: 'ARB-AGENT', title: 'Architecture Review Board', trigger: 'Major architecture decisions, new technology adoption, system-wide refactors' },
+          { agent: 'SEC-REVIEW', title: 'Security Review', trigger: 'Pre-release security audit, vulnerability findings, compliance checks' },
+          { agent: 'LEGAL-REVIEW', title: 'Legal Review', trigger: 'Contract terms, data privacy implications, regulatory compliance' },
+          { agent: 'QA-GATE', title: 'Quality Assurance Gate', trigger: 'Pre-release quality metrics, test coverage thresholds, regression results' },
+          { agent: 'REL-APPROVE', title: 'Release Approval', trigger: 'Production deployment authorization, rollback readiness verification' },
+          { agent: 'CHANGE-MGR', title: 'Change Manager', trigger: 'Infrastructure changes, process modifications, cross-team impact assessment' },
+        ].map(g => (
+          <div class="flex gap-4 items-start rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] p-5">
+            <span class="font-mono text-caption text-quantum bg-quantum/10 px-2 py-1 rounded shrink-0">{g.agent}</span>
+            <div>
+              <p class="font-semibold text-[var(--text-primary)]">{g.title}</p>
+              <p class="text-body-sm text-[var(--text-secondary)] mt-1">
+                <span class="text-[var(--text-muted)]">Triggered by:</span> {g.trigger}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-20 gradient-hero relative overflow-hidden">
+    <div class="absolute inset-0 gradient-mesh" aria-hidden="true"></div>
+    <div class="relative container-content text-center">
+      <h2 class="text-h2 font-bold text-signal mb-4">Ready to see this in action?</h2>
+      <p class="text-body-lg text-mist max-w-xl mx-auto mb-8">
+        Explore our team of 195 agents, browse departments, or request a demo to see how
+        NEXUS AI can build your next project.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a
+          href={`${import.meta.env.BASE_URL}team/`}
+          class="inline-flex items-center px-8 py-4 rounded-md bg-quantum text-nexus-black font-semibold text-base hover:bg-orbital hover:scale-[1.02] transition-all duration-150 shadow-glow-sm hover:shadow-glow-md"
+        >
+          Meet the Team
+        </a>
+        <a
+          href={`${import.meta.env.BASE_URL}departments/`}
+          class="inline-flex items-center px-8 py-4 rounded-md border border-quantum text-quantum font-semibold text-base hover:bg-quantum/10 transition-all duration-150"
+        >
+          Browse Departments
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
